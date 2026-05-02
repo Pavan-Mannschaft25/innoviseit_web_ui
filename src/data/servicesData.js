@@ -1,0 +1,192 @@
+// export const servicesData = [
+//   {
+//     id: 1,
+//     title: "SAP Consulting & Implementation",
+//     shortDesc: "End-to-end SAP transformation expertise",
+//     description:
+//       "Comprehensive SAP consulting services covering strategy, implementation, and optimization. Our certified consultants deliver S/4HANA migrations, ECC upgrades, and custom development with minimal business disruption.",
+//     icon: "FaCogs",
+//     features: [
+//       "S/4HANA Implementation & Migration",
+//       "SAP Cloud Platform Development",
+//       "Business Process Reengineering",
+//       "SAP Fiori UX Design",
+//       "Integration Architecture",
+//       "Post-Implementation Support",
+//     ],
+//     stats: {
+//       projects: "150+",
+//       clients: "80+",
+//       satisfaction: "98%",
+//     },
+//     color: "from-blue-600 to-blue-800",
+//   },
+//   {
+//     id: 2,
+//     title: "Application Management Services",
+//     shortDesc: "Continuous optimization of enterprise apps",
+//     description:
+//       "Proactive application management ensuring peak performance, security, and reliability. Our AMS practice combines automation, AI-powered monitoring, and expert support to maximize your IT investment.",
+//     icon: "FaTools",
+//     features: [
+//       "24/7 Monitoring & Support",
+//       "Performance Optimization",
+//       "Security Patching & Updates",
+//       "Incident Management",
+//       "Change Management",
+//       "Cost Optimization",
+//     ],
+//     stats: {
+//       applications: "500+",
+//       uptime: "99.9%",
+//       responseTime: "<15min",
+//     },
+//     color: "from-green-600 to-green-800",
+//   },
+//   {
+//     id: 3,
+//     title: "Testing & Quality Assurance",
+//     shortDesc: "AI-powered quality engineering",
+//     description:
+//       "Modern QA practices leveraging AI, automation, and shift-left methodologies. We ensure your applications meet the highest quality standards while accelerating time-to-market.",
+//     icon: "FaCheckCircle",
+//     features: [
+//       "Test Automation Frameworks",
+//       "AI-Powered Test Generation",
+//       "Performance Testing",
+//       "Security Testing (DAST/SAST)",
+//       "Mobile Testing",
+//       "API Testing",
+//     ],
+//     stats: {
+//       testCoverage: "95%+",
+//       defectReduction: "60%",
+//       automation: "85%",
+//     },
+//     color: "from-purple-600 to-purple-800",
+//   },
+//   {
+//     id: 4,
+//     title: "Cloud Solutions & Engineering",
+//     shortDesc: "Modern cloud architecture & migration",
+//     description:
+//       "End-to-end cloud transformation from strategy to execution. We architect, migrate, and manage cloud-native applications across AWS, Azure, GCP, and hybrid environments.",
+//     icon: "FaCloud",
+//     features: [
+//       "Cloud Strategy & Assessment",
+//       "Migration & Modernization",
+//       "Multi-Cloud Architecture",
+//       "Kubernetes & Containerization",
+//       "Serverless Computing",
+//       "Cloud Cost Optimization",
+//     ],
+//     stats: {
+//       migrations: "200+",
+//       costSavings: "40%",
+//       availability: "99.99%",
+//     },
+//     color: "from-cyan-600 to-cyan-800",
+//   },
+//   {
+//     id: 5,
+//     title: "Data & Analytics",
+//     shortDesc: "Transform data into competitive advantage",
+//     description:
+//       "Comprehensive data engineering and analytics services unlocking actionable insights. From data lakes to ML models, we build the foundation for data-driven decision making.",
+//     icon: "FaChartLine",
+//     features: [
+//       "Data Warehouse Design",
+//       "ETL/ELT Pipeline Development",
+//       "Business Intelligence",
+//       "Advanced Analytics",
+//       "Machine Learning Operations",
+//       "Real-time Analytics",
+//     ],
+//     stats: {
+//       dataProcessed: "10PB+",
+//       dashboards: "300+",
+//       insights: "1000+",
+//     },
+//     color: "from-orange-600 to-orange-800",
+//   },
+//   {
+//     id: 6,
+//     title: "Digital Transformation",
+//     shortDesc: "Comprehensive digital strategy & execution",
+//     description:
+//       "Holistic digital transformation programs combining technology, process, and people. We partner with enterprises to reimagine customer experiences and operational models.",
+//     icon: "FaRocket",
+//     features: [
+//       "Digital Strategy Consulting",
+//       "Process Automation (RPA)",
+//       "Legacy Modernization",
+//       "Customer Experience Design",
+//       "Innovation Labs",
+//       "Change Management",
+//     ],
+//     stats: {
+//       transformations: "100+",
+//       roi: "300%",
+//       timeToValue: "-50%",
+//     },
+//     color: "from-red-600 to-red-800",
+//   },
+// ];
+
+import img1 from "../assets/services/sap.png";
+import img2 from "../assets/services/app.png";
+import img3 from "../assets/services/ai.png";
+import img4 from "../assets/services/cloud.png";
+import img5 from "../assets/services/global.png";
+import img6 from "../assets/services/digital.png";
+
+export const servicesData = [
+  {
+    id: 1,
+    title: "SAP Transformation",
+    description:
+      "End-to-end SAP transformation including S/4HANA migration, cloud integration, and intelligent enterprise solutions.",
+    image: img1,
+    link: "/services/sap",
+  },
+  {
+    id: 2,
+    title: "Application Management",
+    description:
+      "Continuous monitoring, optimization, and support services ensuring high performance and availability.",
+    image: img2,
+    link: "/services/ams",
+  },
+  {
+    id: 3,
+    title: "AI & Automation",
+    description:
+      "Leverage AI-driven automation and intelligent workflows to accelerate business efficiency.",
+    image: img3,
+    link: "/services/ai",
+  },
+  {
+    id: 4,
+    title: "Cloud Engineering",
+    description:
+      "Modern cloud architecture, migration, and DevOps solutions across AWS, Azure, and GCP.",
+    image: img4,
+    link: "/services/cloud",
+  },
+  {
+    id: 5,
+    title: "Data & Analytics",
+    description:
+      "Transform enterprise data into actionable insights with advanced analytics and BI solutions.",
+    image: img5,
+    link: "/services/data",
+  },
+  {
+    id: 6,
+    title: "Digital Transformation",
+    description:
+      "Reimagine business models with innovative digital strategies and cutting-edge technologies.",
+    image: img6,
+    link: "/services/digital",
+  },
+];
