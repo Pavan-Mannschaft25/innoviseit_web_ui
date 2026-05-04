@@ -183,7 +183,7 @@ const HeroVideo = ({
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen overflow-hidden cursor-none"
+      className="relative w-full h-[90vh] overflow-hidden cursor-none"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setShowControls(false)}
     >
