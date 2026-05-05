@@ -6,7 +6,7 @@ import CaseStudies from "../components/sections/CaseStudies";
 import Clients from "../components/sections/Clients";
 import CTA from "../components/sections/CTA";
 import LeadershipTeam from "../components/sections/LeadershipTeam";
-import PartnerSuccessMetrics from "../components/sections/PartnerSuccessMetrics";
+// import PartnerSuccessMetrics from "../components/sections/PartnerSuccessMetrics";
 import MixedMediaText from "../components/sections/MixedMediaText";
 
 const HomePage = () => {
@@ -16,7 +16,7 @@ const HomePage = () => {
       <Services />
       <Industries />
       {/* <CaseStudies /> */}
-      <PartnerSuccessMetrics />
+      {/* <PartnerSuccessMetrics /> */}
       <LeadershipTeam />
       <Clients />
       <MixedMediaText />
