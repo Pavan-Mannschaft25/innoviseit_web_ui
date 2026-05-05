@@ -507,13 +507,13 @@ const InnoviseThinkPage = () => {
       </section>
 
       {/* ==================== BLOG POSTS SECTION ==================== */}
-      <section
+      {/* <section
         className="py-24 relative overflow-hidden"
         style={{
           background: `linear-gradient(180deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 100%)`,
         }}
       >
-        {/* Background Pattern */}
+        
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -523,7 +523,7 @@ const InnoviseThinkPage = () => {
         />
 
         <Container>
-          {/* Section Header */}
+          
           <div className="text-center mb-16">
             <AnimatedSection>
               <span
@@ -553,9 +553,9 @@ const InnoviseThinkPage = () => {
             </AnimatedSection>
           </div>
 
-          {/* Featured Post Card (Large) + Grid */}
+          
           <div className="space-y-8">
-            {/* Featured Post - Full Width */}
+            
             <AnimatedSection delay={0.3}>
               <motion.article
                 className="group relative rounded-3xl overflow-hidden cursor-pointer"
@@ -567,7 +567,7 @@ const InnoviseThinkPage = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="grid md:grid-cols-2 gap-0">
-                  {/* Image Side */}
+                  
                   <div className="relative h-64 md:h-auto min-h-[320px] overflow-hidden">
                     <img
                       src={blogPosts[0].image}
@@ -576,7 +576,7 @@ const InnoviseThinkPage = () => {
                       loading="lazy"
                     />
 
-                    {/* Gradient Overlay */}
+                    
                     <div
                       className="absolute inset-0"
                       style={{
@@ -584,7 +584,7 @@ const InnoviseThinkPage = () => {
                       }}
                     />
 
-                    {/* Category Badge */}
+                    
                     <div
                       className="absolute top-6 left-6 px-4 py-1.5 rounded-full text-xs font-bold backdrop-blur-md"
                       style={{
@@ -595,7 +595,7 @@ const InnoviseThinkPage = () => {
                       {blogPosts[0].category}
                     </div>
 
-                    {/* Play Button for Video Posts */}
+                    
                     <button
                       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full flex items-center justify-center transition-transform group-hover:scale-110"
                       style={{
@@ -610,9 +610,9 @@ const InnoviseThinkPage = () => {
                     </button>
                   </div>
 
-                  {/* Content Side */}
+                  
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    {/* Meta Info */}
+                    
                     <div className="flex items-center gap-4 mb-4">
                       <span
                         className="flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full"
@@ -635,7 +635,7 @@ const InnoviseThinkPage = () => {
                       </span>
                     </div>
 
-                    {/* Title */}
+                    
                     <h3
                       className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text transition-all duration-300"
                       style={{
@@ -652,12 +652,12 @@ const InnoviseThinkPage = () => {
                       {blogPosts[0].title}
                     </h3>
 
-                    {/* Excerpt */}
+                    
                     <p className="text-gray-400 text-base leading-relaxed mb-6 line-clamp-3">
                       {blogPosts[0].excerpt}
                     </p>
 
-                    {/* Author + CTA */}
+                    
                     <div
                       className="flex items-center justify-between pt-4"
                       style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
@@ -699,7 +699,7 @@ const InnoviseThinkPage = () => {
               </motion.article>
             </AnimatedSection>
 
-            {/* Other Posts Grid */}
+            
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {blogPosts.slice(1).map((post, index) => (
                 <AnimatedSection key={post.id} delay={0.4 + index * 0.1}>
@@ -711,7 +711,7 @@ const InnoviseThinkPage = () => {
                     }}
                     whileHover={{ y: -5 }}
                   >
-                    {/* Image */}
+                    
                     <div className="relative h-52 overflow-hidden">
                       <img
                         src={post.image}
@@ -738,9 +738,9 @@ const InnoviseThinkPage = () => {
                       </span>
                     </div>
 
-                    {/* Content */}
+                    
                     <div className="p-6 flex-1 flex flex-col">
-                      {/* Meta */}
+                      
                       <div className="flex items-center gap-3 mb-3 text-xs text-gray-400">
                         <span className="flex items-center gap-1">
                           <FaClock className="text-[10px]" /> {post.readTime}
@@ -748,7 +748,7 @@ const InnoviseThinkPage = () => {
                         <span>{post.date}</span>
                       </div>
 
-                      {/* Title */}
+                      
                       <h3
                         className="text-lg font-bold mb-2 line-clamp-2 transition-colors duration-300"
                         style={{ color: "#FFFFFF" }}
@@ -762,12 +762,12 @@ const InnoviseThinkPage = () => {
                         {post.title}
                       </h3>
 
-                      {/* Excerpt */}
+                      
                       <p className="text-sm text-gray-400 line-clamp-2 mb-4 flex-grow">
                         {post.excerpt}
                       </p>
 
-                      {/* Footer */}
+                      
                       <div
                         className="flex items-center justify-between pt-3 mt-auto"
                         style={{
@@ -803,7 +803,7 @@ const InnoviseThinkPage = () => {
               ))}
             </div>
 
-            {/* View All Button */}
+            
             <AnimatedSection delay={0.8}>
               <div className="text-center mt-12">
                 <Link
@@ -830,7 +830,7 @@ const InnoviseThinkPage = () => {
             </AnimatedSection>
           </div>
         </Container>
-      </section>
+      </section> */}
 
       <InsightsCarousel />
 

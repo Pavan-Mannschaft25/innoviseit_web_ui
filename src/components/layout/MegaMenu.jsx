@@ -20,13 +20,13 @@ const MegaMenu = ({ data, isOpen, onClose }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[100vw] max-w-[1100px] bg-white shadow-2xl border border-gray-100 overflow-hidden z-50"
+          className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[100vw] max-w-[1000px] bg-white max-h-[80vh] overflow-y-auto z-50"
           onMouseLeave={onClose}
         >
-          <div className="grid grid-cols-3 gap-0 divide-x divide-gray-100">
+          <div className="grid grid-cols-2 gap-0 divide-x divide-gray-100">
             {data.map((section, sectionIndex) => (
               <div key={sectionIndex} className="p-8">
-                <h3 className="text-sm font-bold text-[#0B2A4A] uppercase tracking-wider mb-5 pb-3 border-b border-gray-100">
+                <h3 className="text-sm font-bold text-[#0B2A4A] uppercase tracking-wider mb-2 pb-3 border-b border-gray-100">
                   {section.title}
                 </h3>
 
@@ -54,28 +54,9 @@ const MegaMenu = ({ data, isOpen, onClose }) => {
                     </li>
                   ))}
                 </ul>
-
-                {/* View all link */}
-                <Link
-                  to="#"
-                  className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-[#0B2A4A] hover:text-yellow-700 transition-colors"
-                >
-                  Explore all {section.title.toLowerCase()}
-                  <FaIcons.FaArrowRight className="text-xs" />
-                </Link>
               </div>
             ))}
           </div>
-
-          {/* Bottom bar with CTA */}
-          {/* <div className="bg-gradient-to-r from-primary-50 to-accent-50 px-8 py-4 flex items-center justify-between">
-            <p className="text-sm text-gray-700">
-              <strong>Need guidance?</strong> Talk to our solution architects
-            </p>
-            <button className="px-5 py-2 bg-primary-600 text-white text-sm font-semibold rounded-lg hover:bg-primary-700 transition-colors">
-              Schedule Consultation
-            </button>
-          </div> */}
         </motion.div>
       )}
     </AnimatePresence>
