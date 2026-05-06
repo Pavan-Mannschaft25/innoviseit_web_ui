@@ -25,6 +25,10 @@ import AutomotivePage from "../pages/industryPages/AutomotivePage";
 import ChemicalsPage from "../pages/industryPages/ChemicalsPage";
 import ConstructionRealEstatePage from "../pages/industryPages/ConstructionRealEstatePage";
 import ConsumerProductsPage from "../pages/industryPages/ConsumerProductsPage";
+import IndustrialPage from "../pages/industryPages/IndustrialPage";
+import EnergyPage from "../pages/industryPages/EnergyPage";
+import RetailPage from "../pages/industryPages/RetailPage";
+import PublicSectorPage from "../pages/industryPages/PublicSectorPage";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -79,6 +83,16 @@ const AppRoutes = () => {
           <Route
             path="/industries/consumer-products"
             element={<ConsumerProductsPage />}
+          />
+          <Route path="/industries/retail" element={<RetailPage />} />
+          <Route path="/industries/energy-utilities" element={<EnergyPage />} />
+          <Route
+            path="/industries/industrial-manufacturing"
+            element={<IndustrialPage />}
+          />
+          <Route
+            path="/industries/public-sector"
+            element={<PublicSectorPage />}
           />
           //Services Pages
           <Route

@@ -152,6 +152,30 @@ export const navData = {
           path: "/industries/aerospace-defense",
         },
         {
+          name: "Automotive",
+          desc: "Vehicle lifecycle management, connected vehicles, and future mobility solutions",
+          icon: "FaCar",
+          path: "/industries/automotive",
+        },
+        {
+          name: "Chemicals",
+          desc: "Formulation, batch management, and safe supply chain for hazardous materials",
+          icon: "FaFlask",
+          path: "/industries/chemicals",
+        },
+        {
+          name: "Construction & Real Estate",
+          desc: "Project controls, asset management, and EHS (environment, health, safety) solutions",
+          icon: "FaBuilding",
+          path: "/industries/construction-real-estate",
+        },
+        {
+          name: "Consumer Products",
+          desc: "Demand-driven supply chains, trade promotion, and omnichannel strategies",
+          icon: "FaShoppingCart",
+          path: "/industries/consumer-products",
+        },
+        {
           name: "Retail",
           desc: "Merchandise management, omnichannel commerce, and customer loyalty programs",
           icon: "FaStore",

@@ -1865,6 +1865,9 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
+import img1 from "../../assets/industry/ae1.png";
+import img2 from "../../assets/industry/ae2.png";
+
 // ============================================
 // REUSABLE COMPONENTS FOR BETTER MAINTAINABILITY
 // ============================================
@@ -2137,7 +2140,7 @@ const HeroSection = () => (
     >
       <div className="relative">
         <img
-          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758"
+          src={img1}
           className="w-full rounded-2xl shadow-2xl"
           alt="Aerospace engineering - Advanced aircraft technology and defense systems"
         />
@@ -2221,7 +2224,7 @@ const BenefitsSection = () => (
       <motion.div className="w-full lg:w-1/2" {...fadeInUp}>
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1578496479914-7ef3b0193be3"
+            src={img2}
             className="w-full rounded-2xl shadow-2xl"
             alt="Aircraft maintenance operations showing technical team working on aerospace equipment"
           />
@@ -2350,85 +2353,6 @@ const CTASection = () => (
     </div>
   </section>
 );
-
-// const Footer = () => (
-//   <footer className="px-6 lg:px-20 py-12 bg-black text-gray-400">
-//     <div className="max-w-7xl mx-auto">
-//       <div className="grid md:grid-cols-4 gap-8 mb-8">
-//         <div>
-//           <h3 className="text-white font-bold text-lg mb-4">Innovise IT</h3>
-//           <p className="text-sm leading-relaxed">
-//             Transforming aerospace and defense through innovative technology
-//             solutions.
-//           </p>
-//         </div>
-//         <div>
-//           <h4 className="text-white font-semibold mb-4">Services</h4>
-//           <ul className="space-y-2 text-sm">
-//             <li>
-//               <a href="#" className="hover:text-yellow-400 transition">
-//                 MRO Solutions
-//               </a>
-//             </li>
-//             <li>
-//               <a href="#" className="hover:text-yellow-400 transition">
-//                 SAP Consulting
-//               </a>
-//             </li>
-//             <li>
-//               <a href="#" className="hover:text-yellow-400 transition">
-//                 Data Analytics
-//               </a>
-//             </li>
-//           </ul>
-//         </div>
-//         <div>
-//           <h4 className="text-white font-semibold mb-4">Company</h4>
-//           <ul className="space-y-2 text-sm">
-//             <li>
-//               <a href="#" className="hover:text-yellow-400 transition">
-//                 About Us
-//               </a>
-//             </li>
-//             <li>
-//               <a href="#" className="hover:text-yellow-400 transition">
-//                 Careers
-//               </a>
-//             </li>
-//             <li>
-//               <a href="#" className="hover:text-yellow-400 transition">
-//                 Contact
-//               </a>
-//             </li>
-//           </ul>
-//         </div>
-//         <div>
-//           <h4 className="text-white font-semibold mb-4">Connect</h4>
-//           <ul className="space-y-2 text-sm">
-//             <li>info@innoviseit.com</li>
-//             <li>+1 (555) 123-4567</li>
-//           </ul>
-//         </div>
-//       </div>
-
-//       <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-//         <p className="text-sm">© 2026 Innovise IT. All rights reserved.</p>
-//         <div className="flex gap-6 text-sm">
-//           <a href="#" className="hover:text-yellow-400 transition">
-//             Privacy Policy
-//           </a>
-//           <a href="#" className="hover:text-yellow-400 transition">
-//             Terms of Service
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-//   </footer>
-// );
-
-// ============================================
-// MAIN COMPONENT
-// ============================================
 
 export default function AerospacePage() {
   // Memoize static content for performance
