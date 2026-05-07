@@ -16,6 +16,8 @@ import {
   FaWarehouse,
   FaArrowDown,
 } from "react-icons/fa";
+import img1 from "../../assets/industry/cam1.png";
+import img2 from "../../assets/industry/cam2.png";
 
 // ============================================
 // NAVY & GOLD COLOR CONFIGURATION
@@ -266,7 +268,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
+  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs */}
@@ -373,7 +375,7 @@ const HeroSection = () => (
         {/* Main Image Container */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
           <img
-            src="https://images.unsplash.com/photo-1581093458791-9f3c3b1a0c64"
+            src={img1}
             alt="Modern chemical plant facility with advanced safety systems and precision equipment"
             className="w-full h-[500px] object-cover"
           />
@@ -512,7 +514,7 @@ const BenefitsSection = () => (
         <div className="relative">
           <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
             <img
-              src="https://images.unsplash.com/photo-1581090700227-4c4c3f0d0c74"
+              src={img2}
               alt="State-of-the-art chemical laboratory with advanced safety equipment and quality control systems"
               className="w-full h-[450px] object-cover"
             />

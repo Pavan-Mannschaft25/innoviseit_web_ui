@@ -63,7 +63,7 @@ const AppRoutes = () => {
 
       <Navbar />
 
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
           <Route path="/think" element={<InnoviseThinkPage />} />

@@ -1218,7 +1218,7 @@ import img6 from "../../assets/leaders/TimothyWirtjes.webp";
 import img7 from "../../assets/leaders/JasbirSingh.webp";
 import img8 from "../../assets/leaders/RodrigoRecio.webp";
 
-import leaderImg from "../../assets/banners/leaders.png";
+import leaderImg from "../../assets/banners/le1.png";
 
 // ==================== BRAND COLORS (NAVY + GOLD ONLY) ====================
 const BRAND = {

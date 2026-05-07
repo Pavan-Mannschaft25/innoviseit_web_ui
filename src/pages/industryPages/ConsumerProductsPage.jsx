@@ -20,6 +20,8 @@ import {
   FaGlobe,
   FaArrowDown,
 } from "react-icons/fa";
+import img1 from "../../assets/industry/cp1.png";
+import img2 from "../../assets/industry/cp2.png";
 
 // ============================================
 // NAVY & GOLD COLOR CONFIGURATION
@@ -254,7 +256,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
+  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs */}
@@ -359,7 +361,7 @@ const HeroSection = () => (
         {/* Main Image Container */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
           <img
-            src="https://images.unsplash.com/photo-1607082349566-187342175e2f"
+            src={img1}
             alt="Modern retail environment showcasing consumer products and shopping experience"
             className="w-full h-[500px] object-cover"
           />
@@ -501,7 +503,7 @@ const BenefitsSection = () => (
         <div className="relative">
           <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
             <img
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3"
+              src={img2}
               alt="Advanced consumer analytics dashboard showing data-driven insights and metrics"
               className="w-full h-[450px] object-cover"
             />

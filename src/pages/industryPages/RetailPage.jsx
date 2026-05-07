@@ -24,6 +24,8 @@ import {
   FaLayerGroup,
   FaArrowDown,
 } from "react-icons/fa";
+import img1 from "../../assets/industry/re1.png";
+import img2 from "../../assets/industry/re2.png";
 
 // ============================================
 // NAVY & GOLD COLOR CONFIGURATION
@@ -368,7 +370,7 @@ const HeroSection = () => (
         {/* Main Image Container */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
           <img
-            src="https://images.unsplash.com/photo-1607082349566-187342175e2f"
+            src={img1}
             alt="Modern retail store showcasing seamless omnichannel shopping experience"
             className="w-full h-[500px] object-cover"
           />
@@ -510,7 +512,7 @@ const BenefitsSection = () => (
         <div className="relative">
           <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
             <img
-              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
+              src={img2}
               alt="Advanced retail analytics dashboard showing real-time insights and customer data"
               className="w-full h-[450px] object-cover"
             />

@@ -385,6 +385,7 @@ import {
   FaExclamationCircle,
 } from "react-icons/fa";
 import toast from "react-hot-toast";
+import bannerImg from "../assets/banners/contact.png";
 
 // ==================== BRAND COLORS (Same as Careers) ====================
 const BRAND = {
@@ -488,113 +489,37 @@ const useFormState = (initialState) => {
 
 // Hero Section
 const HeroSection = memo(() => (
-  <section
-    className="relative min-h-[60vh] flex items-center overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 50%, ${BRAND.navy.lighter} 100%)`,
-    }}
-    aria-label="Contact hero section"
-  >
-    {/* Background Elements */}
-    <div className="absolute inset-0" aria-hidden="true">
-      <img
-        src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&h=1080&fit=crop"
-        alt=""
-        className="w-full h-full object-cover opacity-10"
-        loading="eager"
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(135deg, ${BRAND.navy.dark}ee 0%, ${BRAND.navy.mid}aa 50%, transparent 100%)`,
-        }}
-      />
+  <section className="relative h-[70vh] overflow-hidden">
+    {/* Background Image */}
+    <img
+      src={bannerImg} // your uploaded image
+      alt="Innovise IT Think"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
 
-      {/* Animated Grid */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-          backgroundSize: "40px 40px",
-        }}
-      />
+    {/* Optional Dark Overlay (for better text visibility) */}
+    <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F2C]/90 via-[#0A0F2C]/60 to-transparent" />
 
-      {/* Floating Orbs */}
-      <motion.div
-        animate={{ y: [0, -20, 0], x: [0, 15, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 right-20 w-[400px] h-[400px] rounded-full blur-3xl opacity-[0.12]"
-        style={{ background: BRAND.gold.primary }}
-      />
-      <motion.div
-        animate={{ y: [0, 15, 0] }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2,
-        }}
-        className="absolute bottom-20 left-20 w-[300px] h-[300px] rounded-full blur-3xl opacity-[0.08]"
-        style={{ background: BRAND.navy.lighter }}
-      />
-    </div>
+    {/* LEFT SIDE TEXT */}
+    <div className="relative z-10 h-full flex items-center">
+      <div className="max-w-2xl px-6 md:px-12 lg:px-20">
+        {/* Small Label */}
+        <p className="text-sm uppercase tracking-widest text-yellow-400 mb-4">
+          Let's Connect
+        </p>
 
-    <Container className="relative z-10">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="max-w-4xl mx-auto text-center"
-      >
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-3 mb-8"
-        >
-          <span
-            className="w-12 h-[2px]"
-            style={{ background: BRAND.gold.gradient }}
-          />
-          <span
-            className="text-sm font-bold uppercase tracking-[0.25em]"
-            style={{ color: BRAND.gold.primary }}
-          >
-            Let's Connect
-          </span>
-        </motion.div>
+        {/* Main Heading */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Get in Touch
+        </h1>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.05] mb-6"
-        >
-          Get in{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Touch
-          </span>
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto"
-        >
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-white/70 leading-relaxed">
           Ready to start your transformation journey? Our team of experts is
           here to help you find the perfect solution for your business needs.
-        </motion.p>
-      </motion.div>
-    </Container>
+        </p>
+      </div>
+    </div>
   </section>
 ));
 

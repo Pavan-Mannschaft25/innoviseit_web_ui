@@ -24,6 +24,8 @@ import {
   FaCogs,
   FaArrowDown,
 } from "react-icons/fa";
+import img1 from "../../assets/industry/ps1.png";
+import img2 from "../../assets/industry/ps2.png";
 
 // ============================================
 // NAVY & GOLD COLOR CONFIGURATION
@@ -260,7 +262,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
+  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs - Authority/Trust Theme */}
@@ -380,7 +382,7 @@ const HeroSection = () => (
         {/* Main Image Container */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
           <img
-            src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe"
+            src={img1}
             alt="Modern government building representing public service excellence and digital transformation"
             className="w-full h-[500px] object-cover"
           />
@@ -522,7 +524,7 @@ const BenefitsSection = () => (
         <div className="relative">
           <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
             <img
-              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df"
+              src={img2}
               alt="Modern government office showcasing digital transformation and efficient public service delivery"
               className="w-full h-[450px] object-cover"
             />

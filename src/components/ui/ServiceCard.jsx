@@ -272,17 +272,7 @@ const ServiceCard = ({ data, index = 0 }) => {
             {/* Title */}
             <h3
               className="text-xl lg:text-2xl font-bold mb-3 leading-tight tracking-tight line-clamp-2 
-              transition-all duration-300 group-hover:text-transparent"
-              style={{
-                color: COLORS.navy.dark,
-                backgroundImage: "linear-gradient(to right, #0B1D33, #0B1D33)",
-                backgroundSize: "0% 100%",
-                backgroundRepeat: "no-repeat",
-              }}
-              onMouseEnter={(e) =>
-                (e.target.style.backgroundSize = "100% 100%")
-              }
-              onMouseLeave={(e) => (e.target.style.backgroundSize = "0% 100%")}
+              transition-all duration-300"
             >
               {data.title}
             </h3>

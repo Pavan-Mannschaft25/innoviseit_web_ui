@@ -31,6 +31,7 @@ import {
   FaClipboardCheck,
   FaCog,
 } from "react-icons/fa";
+import banner from "../../assets/services/sr33.png";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -557,7 +558,7 @@ const AnimatedProgressBar = ({ value, label, color, delay = 0 }) => (
 // Hero Section (Left Text + Right QA Dashboard Visual)
 const HeroSection = () => (
   <section
-    className="relative py-20 lg:py-28 overflow-hidden"
+    className="relative py-6 lg:py-10 overflow-hidden"
     style={{
       background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
     }}
@@ -1832,6 +1833,15 @@ const CTABannerSection = () => (
 const TestingQAPage = () => {
   return (
     <main role="main">
+      <div
+        className="relative w-full min-h-[70vh] flex items-center justify-center bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${banner})`,
+        }}
+      >
+        {/* Optional overlay */}
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
       <HeroSection />
       <ServicesSection />
       <BenefitsSection />
