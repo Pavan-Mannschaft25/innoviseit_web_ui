@@ -20,7 +20,7 @@ const MegaMenu = ({ data, isOpen, onClose }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[100vw] max-w-[1000px] bg-white max-h-[80vh] overflow-y-auto z-50"
+          className="absolute top-full left-1/2 -translate-x-1/2 mt-6 w-[100vw] max-w-[900px] bg-white max-h-[80vh] overflow-y-auto z-50"
           onMouseLeave={onClose}
         >
           <div className="grid grid-cols-2 gap-0 divide-x divide-gray-100">
