@@ -1715,7 +1715,7 @@ const DifferentiatorCard = ({ item, index }) => (
 // Hero Section
 const HeroSection = () => (
   <section
-    className="relative w-full min-h-[70vh] flex items-center justify-center bg-cover bg-center"
+    className="relative w-full min-h-[90vh] flex items-center justify-center bg-cover bg-center"
     style={{
       backgroundImage: `url(${leaderImg})`,
     }}

@@ -498,16 +498,453 @@
 
 // export default LeadershipTeam;
 
+// import React, { useRef, useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import { motion } from "framer-motion";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import {
+//   Autoplay,
+//   Navigation,
+//   Pagination,
+//   EffectCoverflow,
+// } from "swiper/modules";
+// import {
+//   FaArrowRight,
+//   FaLinkedinIn,
+//   FaTwitter,
+//   FaQuoteLeft,
+//   FaChevronLeft,
+//   FaChevronRight,
+// } from "react-icons/fa";
+
+// // Leader Images
+// import img1 from "../../assets/leaders/NishantGautam.webp";
+// import img2 from "../../assets/leaders/BobMarchand.webp";
+// import img3 from "../../assets/leaders/AlanWu.webp";
+// import img4 from "../../assets/leaders/OliverBetz.webp";
+// import img5 from "../../assets/leaders/SilvioBessa.webp";
+// import img6 from "../../assets/leaders/TimothyWirtjes.webp";
+// import img7 from "../../assets/leaders/JasbirSingh.webp";
+// import img8 from "../../assets/leaders/RodrigoRecio.webp";
+
+// // Import Swiper styles
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/effect-coverflow";
+
+// // ============================================================
+// // 🎨 NAVY & GOLD BRAND COLORS
+// // ============================================================
+// const BRAND = {
+//   navy: {
+//     dark: "#0B1D33",
+//     mid: "#0D2847",
+//     light: "#132D4B",
+//   },
+//   gold: {
+//     primary: "#FDB913",
+//     light: "#FFD54F",
+//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+//   },
+// };
+
+// const leaders = [
+//   {
+//     name: "Nishant Gautam",
+//     role: "Founder & CEO",
+//     image: img1,
+//     quote: "Building the future of digital transformation",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+//   {
+//     name: "Bob Marchand",
+//     role: "Chief Operating Officer",
+//     image: img2,
+//     quote: "Operational excellence drives our success",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+//   {
+//     name: "Alan Wu",
+//     role: "Chief Revenue Officer",
+//     image: img3,
+//     quote: "Revenue growth through innovation",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+//   {
+//     name: "Oliver Betz",
+//     role: "Board Advisor",
+//     image: img4,
+//     quote: "Strategic vision for sustainable growth",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+//   {
+//     name: "Silvio Bessa",
+//     role: "Board Advisor",
+//     image: img5,
+//     quote: "Guiding companies toward excellence",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+//   {
+//     name: "Timothy Wirtjes",
+//     role: "Guidewire Practice Lead",
+//     image: img6,
+//     quote: "Leading insurance technology solutions",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+//   {
+//     name: "Jasbir Singh",
+//     role: "Director – AMS",
+//     image: img7,
+//     quote: "Delivering managed services excellence",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+//   {
+//     name: "Rodrigo Recio",
+//     role: "Director – Testing Services",
+//     image: img8,
+//     quote: "Quality assurance at its finest",
+//     social: { linkedin: "#", twitter: "#" },
+//   },
+// ];
+
+// const LeadershipTeam = () => {
+//   const swiperRef = useRef(null);
+//   const [isBeginning, setIsBeginning] = useState(true);
+//   const [isEnd, setIsEnd] = useState(false);
+//   const [activeIndex, setActiveIndex] = useState(0);
+
+//   // Track swiper state
+//   useEffect(() => {
+//     if (swiperRef.current) {
+//       const swiper = swiperRef.current.swiper;
+
+//       const updateState = () => {
+//         setIsBeginning(swiper.isBeginning);
+//         setIsEnd(swiper.isEnd);
+//         setActiveIndex(swiper.realIndex);
+//       };
+
+//       swiper.on("slideChange", updateState);
+//       swiper.on("reachBeginning", () => setIsBeginning(true));
+//       swiper.on("reachEnd", () => setIsEnd(true));
+
+//       return () => {
+//         swiper.off("slideChange", updateState);
+//         swiper.off("reachBeginning");
+//         swiper.off("reachEnd");
+//       };
+//     }
+//   }, []);
+
+//   // Navigation handlers
+//   const goPrev = () => {
+//     if (swiperRef.current) {
+//       swiperRef.current.swiper.slidePrev();
+//     }
+//   };
+
+//   const goNext = () => {
+//     if (swiperRef.current) {
+//       swiperRef.current.swiper.slideNext();
+//     }
+//   };
+
+//   return (
+//     <section className="relative py-6 lg:py-10 bg-gradient-to-br from-white via-gray-50/50 to-white overflow-hidden">
+//       {/* ✨ Background Decorative Elements */}
+//       <div
+//         className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/[0.04] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+//         aria-hidden="true"
+//       />
+//       <div
+//         className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-900/[0.03] rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none"
+//         aria-hidden="true"
+//       />
+
+//       {/* Subtle Pattern */}
+//       <div
+//         className="absolute inset-0 opacity-[0.02]"
+//         style={{
+//           backgroundImage: `radial-gradient(circle at 1px 1px, ${BRAND.navy.dark} 1px, transparent 0)`,
+//           backgroundSize: "40px 40px",
+//         }}
+//         aria-hidden="true"
+//       />
+
+//       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+//         {/* ================================ */}
+//         {/* 📌 SECTION HEADER                */}
+//         {/* ================================ */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.8 }}
+//           className="text-center mb-6 lg:mb-10"
+//         >
+//           {/* Badge */}
+
+//           {/* Title */}
+//           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
+//             <span className="bg-gradient-to-br from-[#0B1D33] via-[#0D2847] to-[#132D4B] bg-clip-text text-transparent">
+//               Leadership
+//             </span>{" "}
+//             <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+//               Team
+//             </span>
+//           </h2>
+
+//           {/* Subtitle */}
+//           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+//             Visionary leaders driving innovation and excellence across every
+//             dimension of our organization
+//           </p>
+//         </motion.div>
+
+//         {/* ================================ */}
+//         {/* 🎠 AUTO CAROUSEL CONTAINER       */}
+//         {/* ================================ */}
+//         <div className="relative">
+//           {/* Custom Navigation Buttons */}
+//           <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 z-20 flex justify-between items-center px-2 lg:px-4 pointer-events-none">
+//             {/* Prev Button */}
+//             <button
+//               onClick={goPrev}
+//               disabled={isBeginning}
+//               className={`w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto ${
+//                 isBeginning
+//                   ? "bg-white/50 text-gray-300 cursor-not-allowed opacity-50"
+//                   : "bg-white shadow-lg hover:bg-[#0B1D33] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
+//               }`}
+//               aria-label="Previous slide"
+//             >
+//               <FaChevronLeft className="text-lg" />
+//             </button>
+
+//             {/* Next Button */}
+//             <button
+//               onClick={goNext}
+//               disabled={isEnd}
+//               className={`w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto ${
+//                 isEnd
+//                   ? "bg-white/50 text-gray-300 cursor-not-allowed opacity-50"
+//                   : "bg-white shadow-lg hover:bg-[#0B1D33] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
+//               }`}
+//               aria-label="Next slide"
+//             >
+//               <FaChevronRight className="text-lg" />
+//             </button>
+//           </div>
+
+//           {/* Swiper Carousel */}
+//           <Swiper
+//             ref={swiperRef}
+//             modules={[Autoplay, Navigation, Pagination]}
+//             spaceBetween={24}
+//             slidesPerView={1.3}
+//             centeredSlides={true}
+//             loop={true}
+//             autoplay={{
+//               delay: 3000,
+//               disableOnInteraction: false,
+//               pauseOnMouseEnter: true,
+//             }}
+//             speed={800}
+//             effect="slide"
+//             grabCursor={true}
+//             breakpoints={{
+//               480: {
+//                 slidesPerView: 2,
+//                 spaceBetween: 20,
+//                 centeredSlides: false,
+//               },
+//               768: {
+//                 slidesPerView: 3,
+//                 spaceBetween: 24,
+//                 centeredSlides: false,
+//               },
+//               1024: {
+//                 slidesPerView: 4,
+//                 spaceBetween: 28,
+//                 centeredSlides: false,
+//               },
+//               1280: {
+//                 slidesPerView: 5,
+//                 spaceBetween: 32,
+//                 centeredSlides: false,
+//               },
+//             }}
+//             className="leadership-swiper !pb-10"
+//             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+//           >
+//             {leaders.map((leader, index) => (
+//               <SwiperSlide key={leader.name} className="!h-auto">
+//                 <motion.div
+//                   whileHover={{ y: 6, scale: 1.02 }}
+//                   transition={{ duration: 0.4, ease: "easeOut" }}
+//                   className="group relative h-full"
+//                 >
+//                   {/* Card Container */}
+//                   <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
+//                     {/* Image Section */}
+//                     <div className="relative aspect-square overflow-hidden">
+//                       <img
+//                         src={leader.image}
+//                         alt={leader.name}
+//                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+//                         loading="lazy"
+//                       />
+
+//                       {/* Image Overlay Gradient */}
+//                       <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D33]/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
+
+//                       {/* Hover Social Icons */}
+//                       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-400 delay-100">
+//                         {leader.social?.linkedin && (
+//                           <a
+//                             href={leader.social.linkedin}
+//                             target="_blank"
+//                             rel="noopener noreferrer"
+//                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] hover:text-[#0B1D33] hover:scale-110 transition-all duration-300 shadow-lg"
+//                             aria-label={`${leader.name} LinkedIn`}
+//                           >
+//                             <FaLinkedinIn className="text-sm" />
+//                           </a>
+//                         )}
+//                         {leader.social?.twitter && (
+//                           <a
+//                             href={leader.social.twitter}
+//                             target="_blank"
+//                             rel="noopener noreferrer"
+//                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] hover:text-[#0B1D33] hover:scale-110 transition-all duration-300 shadow-lg"
+//                             aria-label={`${leader.name} Twitter`}
+//                           >
+//                             <FaTwitter className="text-sm" />
+//                           </a>
+//                         )}
+//                       </div>
+
+//                       {/* Quote Icon (appears on hover) */}
+//                       <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#FDB913]/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-400">
+//                         <FaQuoteLeft className="text-[#0B1D33] text-sm" />
+//                       </div>
+//                     </div>
+
+//                     {/* Content Section */}
+//                     <div className="p-5 lg:p-6 relative">
+//                       {/* Name */}
+//                       <h3 className="text-lg lg:text-xl font-bold text-[#0B1D33] mb-1 group-hover:text-[#0D2847] transition-colors truncate">
+//                         {leader.name}
+//                       </h3>
+
+//                       {/* Role */}
+//                       <p className="text-sm text-gray-500 mb-3 font-medium truncate">
+//                         {leader.role}
+//                       </p>
+
+//                       {/* Divider */}
+//                       <div className="h-[1px] bg-gradient-to-r from-[#FDB913]/40 via-transparent to-transparent mb-3" />
+
+//                       {/* Quote Text (subtle) */}
+//                       <p className="text-xs text-gray-400 italic line-clamp-2 leading-relaxed">
+//                         "{leader.quote}"
+//                       </p>
+
+//                       {/* Active Indicator Dot */}
+//                       <div
+//                         className={`absolute bottom-4 right-4 w-2 h-2 rounded-full transition-all duration-300 ${
+//                           activeIndex === index % leaders.length
+//                             ? "bg-[#FDB913] scale-125 shadow-md shadow-yellow-400/50"
+//                             : "bg-gray-200"
+//                         }`}
+//                       />
+//                     </div>
+
+//                     {/* Top Accent Line on Hover */}
+//                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
+//                   </div>
+//                 </motion.div>
+//               </SwiperSlide>
+//             ))}
+//           </Swiper>
+//         </div>
+
+//         {/* ================================ */}
+//         {/* 🎯 BOTTOM CTA SECTION             */}
+//         {/* ================================ */}
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.6, delay: 0.3 }}
+//           className="text-center mt-6 lg:mt-6"
+//         >
+//           {/* Primary CTA Button */}
+//           <Link to="/about/leadership">
+//             <motion.button
+//               whileHover={{ scale: 1.05, y: -2 }}
+//               whileTap={{ scale: 0.98 }}
+//               className="group relative inline-flex items-center gap-3 px-10 py-4.5 bg-gradient-to-r from-[#0B1D33] to-[#0D2847] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
+//             >
+//               {/* Shine Effect */}
+//               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out">
+//                 <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
+//               </span>
+
+//               <span className="relative z-10">View Full Leadership Team</span>
+//               <FaArrowRight className="relative z-10 group-hover:translate-x-1 group-hover:text-[#FFD54F] transition-all duration-300" />
+//             </motion.button>
+//           </Link>
+
+//           {/* Secondary Info Text */}
+//           <p className="mt-5 text-sm text-gray-500 tracking-wide">
+//             Discover the minds behind our success story
+//           </p>
+//         </motion.div>
+//       </div>
+
+//       {/* Bottom Accent Line */}
+//       <div
+//         className="absolute bottom-0 left-0 right-0 h-px"
+//         style={{
+//           background:
+//             "linear-gradient(to-right, transparent, rgba(253,185,19,0.3), transparent)",
+//         }}
+//       />
+
+//       {/* Custom Styles for Swiper */}
+//       <style>{`
+//         .leadership-swiper .swiper-pagination-bullet-active {
+//           background: linear-gradient(135deg, #FDB913, #FFD54F) !important;
+//           width: 32px;
+//           border-radius: 9999px;
+//         }
+
+//         .leadership-swiper .swiper-pagination-bullet {
+//           background: #e5e7eb;
+//           opacity: 1;
+//         }
+
+//         .line-clamp-2 {
+//           display: -webkit-box;
+//           -webkit-line-clamp: 2;
+//           -webkit-box-orient: vertical;
+//           overflow: hidden;
+//         }
+//       `}</style>
+//     </section>
+//   );
+// };
+
+// export default LeadershipTeam;
+
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
+
 import {
   FaArrowRight,
   FaLinkedinIn,
@@ -527,14 +964,12 @@ import img6 from "../../assets/leaders/TimothyWirtjes.webp";
 import img7 from "../../assets/leaders/JasbirSingh.webp";
 import img8 from "../../assets/leaders/RodrigoRecio.webp";
 
-// Import Swiper styles
+// Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 
 // ============================================================
-// 🎨 NAVY & GOLD BRAND COLORS
+// 🎨 BRAND COLORS
 // ============================================================
 const BRAND = {
   navy: {
@@ -610,82 +1045,48 @@ const leaders = [
 
 const LeadershipTeam = () => {
   const swiperRef = useRef(null);
-  const [isBeginning, setIsBeginning] = useState(true);
-  const [isEnd, setIsEnd] = useState(false);
+
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Track swiper state
-  useEffect(() => {
-    if (swiperRef.current) {
-      const swiper = swiperRef.current.swiper;
-
-      const updateState = () => {
-        setIsBeginning(swiper.isBeginning);
-        setIsEnd(swiper.isEnd);
-        setActiveIndex(swiper.realIndex);
-      };
-
-      swiper.on("slideChange", updateState);
-      swiper.on("reachBeginning", () => setIsBeginning(true));
-      swiper.on("reachEnd", () => setIsEnd(true));
-
-      return () => {
-        swiper.off("slideChange", updateState);
-        swiper.off("reachBeginning");
-        swiper.off("reachEnd");
-      };
-    }
-  }, []);
-
-  // Navigation handlers
   const goPrev = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev();
-    }
+    swiperRef.current?.swiper.slidePrev();
   };
 
   const goNext = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext();
-    }
+    swiperRef.current?.swiper.slideNext();
   };
 
   return (
-    <section className="relative py-6 lg:py-10 bg-gradient-to-br from-white via-gray-50/50 to-white overflow-hidden">
-      {/* ✨ Background Decorative Elements */}
+    <section className="relative py-10 lg:py-16 bg-gradient-to-br from-white via-gray-50/50 to-white overflow-hidden">
+      {/* Background Glow */}
       <div
-        className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/[0.04] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-900/[0.03] rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none"
-        aria-hidden="true"
+        className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-[0.04] -translate-x-1/2 -translate-y-1/2"
+        style={{ background: BRAND.gold.primary }}
       />
 
-      {/* Subtle Pattern */}
+      <div
+        className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full blur-3xl opacity-[0.03] translate-x-1/3 translate-y-1/3"
+        style={{ background: BRAND.navy.dark }}
+      />
+
+      {/* Pattern */}
       <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, ${BRAND.navy.dark} 1px, transparent 0)`,
           backgroundSize: "40px 40px",
         }}
-        aria-hidden="true"
       />
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* ================================ */}
-        {/* 📌 SECTION HEADER                */}
-        {/* ================================ */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-6 lg:mb-10"
+          className="text-center mb-10 lg:mb-14"
         >
-          {/* Badge */}
-
-          {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
             <span className="bg-gradient-to-br from-[#0B1D33] via-[#0D2847] to-[#132D4B] bg-clip-text text-transparent">
               Leadership
@@ -695,173 +1096,139 @@ const LeadershipTeam = () => {
             </span>
           </h2>
 
-          {/* Subtitle */}
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
             Visionary leaders driving innovation and excellence across every
             dimension of our organization
           </p>
         </motion.div>
 
-        {/* ================================ */}
-        {/* 🎠 AUTO CAROUSEL CONTAINER       */}
-        {/* ================================ */}
+        {/* Carousel */}
         <div className="relative">
-          {/* Custom Navigation Buttons */}
+          {/* Navigation Buttons */}
           <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 z-20 flex justify-between items-center px-2 lg:px-4 pointer-events-none">
-            {/* Prev Button */}
             <button
               onClick={goPrev}
-              disabled={isBeginning}
-              className={`w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto ${
-                isBeginning
-                  ? "bg-white/50 text-gray-300 cursor-not-allowed opacity-50"
-                  : "bg-white shadow-lg hover:bg-[#0B1D33] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
-              }`}
-              aria-label="Previous slide"
+              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white shadow-xl hover:bg-[#0B1D33] hover:text-[#FFD54F] transition-all duration-300 flex items-center justify-center pointer-events-auto"
             >
               <FaChevronLeft className="text-lg" />
             </button>
 
-            {/* Next Button */}
             <button
               onClick={goNext}
-              disabled={isEnd}
-              className={`w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto ${
-                isEnd
-                  ? "bg-white/50 text-gray-300 cursor-not-allowed opacity-50"
-                  : "bg-white shadow-lg hover:bg-[#0B1D33] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
-              }`}
-              aria-label="Next slide"
+              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white shadow-xl hover:bg-[#0B1D33] hover:text-[#FFD54F] transition-all duration-300 flex items-center justify-center pointer-events-auto"
             >
               <FaChevronRight className="text-lg" />
             </button>
           </div>
 
-          {/* Swiper Carousel */}
           <Swiper
             ref={swiperRef}
-            modules={[Autoplay, Navigation, Pagination]}
-            spaceBetween={24}
+            modules={[Autoplay, Pagination]}
             slidesPerView={1.3}
-            centeredSlides={true}
+            spaceBetween={24}
             loop={true}
+            speed={800}
+            grabCursor={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            speed={800}
-            effect="slide"
-            grabCursor={true}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             breakpoints={{
               480: {
                 slidesPerView: 2,
                 spaceBetween: 20,
-                centeredSlides: false,
               },
               768: {
                 slidesPerView: 3,
                 spaceBetween: 24,
-                centeredSlides: false,
               },
               1024: {
                 slidesPerView: 4,
                 spaceBetween: 28,
-                centeredSlides: false,
               },
               1280: {
                 slidesPerView: 5,
                 spaceBetween: 32,
-                centeredSlides: false,
               },
             }}
             className="leadership-swiper !pb-10"
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           >
             {leaders.map((leader, index) => (
               <SwiperSlide key={leader.name} className="!h-auto">
                 <motion.div
-                  whileHover={{ y: 6, scale: 1.02 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="group relative h-full"
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  transition={{ duration: 0.4 }}
+                  className="group relative h-full pb-2"
                 >
-                  {/* Card Container */}
-                  <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
-                    {/* Image Section */}
+                  <div className="relative bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(11,29,51,0.18)] transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
+                    {/* Image */}
                     <div className="relative aspect-square overflow-hidden">
                       <img
                         src={leader.image}
                         alt={leader.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                       />
 
-                      {/* Image Overlay Gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D33]/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D33]/80 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
 
-                      {/* Hover Social Icons */}
-                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-400 delay-100">
-                        {leader.social?.linkedin && (
-                          <a
-                            href={leader.social.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] hover:text-[#0B1D33] hover:scale-110 transition-all duration-300 shadow-lg"
-                            aria-label={`${leader.name} LinkedIn`}
-                          >
-                            <FaLinkedinIn className="text-sm" />
-                          </a>
-                        )}
-                        {leader.social?.twitter && (
-                          <a
-                            href={leader.social.twitter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] hover:text-[#0B1D33] hover:scale-110 transition-all duration-300 shadow-lg"
-                            aria-label={`${leader.name} Twitter`}
-                          >
-                            <FaTwitter className="text-sm" />
-                          </a>
-                        )}
+                      {/* Social Icons */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        <a
+                          href={leader.social.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] transition-all duration-300"
+                        >
+                          <FaLinkedinIn className="text-sm" />
+                        </a>
+
+                        <a
+                          href={leader.social.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] transition-all duration-300"
+                        >
+                          <FaTwitter className="text-sm" />
+                        </a>
                       </div>
 
-                      {/* Quote Icon (appears on hover) */}
-                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#FDB913]/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-400">
+                      {/* Quote Icon */}
+                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#FDB913]/90 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
                         <FaQuoteLeft className="text-[#0B1D33] text-sm" />
                       </div>
                     </div>
 
-                    {/* Content Section */}
+                    {/* Content */}
                     <div className="p-5 lg:p-6 relative">
-                      {/* Name */}
-                      <h3 className="text-lg lg:text-xl font-bold text-[#0B1D33] mb-1 group-hover:text-[#0D2847] transition-colors truncate">
+                      <h3 className="text-lg lg:text-xl font-bold text-[#0B1D33] mb-1 truncate">
                         {leader.name}
                       </h3>
 
-                      {/* Role */}
                       <p className="text-sm text-gray-500 mb-3 font-medium truncate">
                         {leader.role}
                       </p>
 
-                      {/* Divider */}
                       <div className="h-[1px] bg-gradient-to-r from-[#FDB913]/40 via-transparent to-transparent mb-3" />
 
-                      {/* Quote Text (subtle) */}
                       <p className="text-xs text-gray-400 italic line-clamp-2 leading-relaxed">
                         "{leader.quote}"
                       </p>
 
-                      {/* Active Indicator Dot */}
+                      {/* Active Dot */}
                       <div
                         className={`absolute bottom-4 right-4 w-2 h-2 rounded-full transition-all duration-300 ${
-                          activeIndex === index % leaders.length
+                          activeIndex === index
                             ? "bg-[#FDB913] scale-125 shadow-md shadow-yellow-400/50"
                             : "bg-gray-200"
                         }`}
                       />
                     </div>
 
-                    {/* Top Accent Line on Hover */}
+                    {/* Top Border */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
                   </div>
                 </motion.div>
@@ -870,62 +1237,43 @@ const LeadershipTeam = () => {
           </Swiper>
         </div>
 
-        {/* ================================ */}
-        {/* 🎯 BOTTOM CTA SECTION             */}
-        {/* ================================ */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-6 lg:mt-6"
+          transition={{ delay: 0.3 }}
+          className="text-center mt-10"
         >
-          {/* Primary CTA Button */}
           <Link to="/about/leadership">
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative inline-flex items-center gap-3 px-10 py-4.5 bg-gradient-to-r from-[#0B1D33] to-[#0D2847] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
+              className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#0B1D33] to-[#0D2847] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30"
             >
-              {/* Shine Effect */}
-              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out">
-                <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
-              </span>
-
               <span className="relative z-10">View Full Leadership Team</span>
+
               <FaArrowRight className="relative z-10 group-hover:translate-x-1 group-hover:text-[#FFD54F] transition-all duration-300" />
             </motion.button>
           </Link>
 
-          {/* Secondary Info Text */}
           <p className="mt-5 text-sm text-gray-500 tracking-wide">
             Discover the minds behind our success story
           </p>
         </motion.div>
       </div>
 
-      {/* Bottom Accent Line */}
+      {/* Bottom Line */}
       <div
         className="absolute bottom-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(to-right, transparent, rgba(253,185,19,0.3), transparent)",
+            "linear-gradient(to right, transparent, rgba(253,185,19,0.3), transparent)",
         }}
       />
 
-      {/* Custom Styles for Swiper */}
+      {/* Extra Styles */}
       <style>{`
-        .leadership-swiper .swiper-pagination-bullet-active {
-          background: linear-gradient(135deg, #FDB913, #FFD54F) !important;
-          width: 32px;
-          border-radius: 9999px;
-        }
-
-        .leadership-swiper .swiper-pagination-bullet {
-          background: #e5e7eb;
-          opacity: 1;
-        }
-
         .line-clamp-2 {
           display: -webkit-box;
           -webkit-line-clamp: 2;

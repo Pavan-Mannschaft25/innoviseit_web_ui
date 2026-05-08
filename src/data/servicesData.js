@@ -191,6 +191,64 @@
 //   },
 // ];
 
+// import img1 from "../assets/services/sr1.png";
+// import img2 from "../assets/services/sr2.png";
+// import img3 from "../assets/services/sr3.png";
+// import img4 from "../assets/services/sr4.png";
+// import img5 from "../assets/services/sr5.png";
+// import img6 from "../assets/services/sr6.png";
+
+// export const servicesData = [
+//   {
+//     id: 1,
+//     title: "SAP Consulting & Implementation",
+//     description:
+//       "End-to-end SAP transformation including S/4HANA migration, process optimization, and intelligent enterprise solutions.",
+//     image: img1,
+//     link: "/services/sap-consulting",
+//   },
+//   {
+//     id: 2,
+//     title: "Application Maintenance Services",
+//     description:
+//       "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
+//     image: img2,
+//     link: "/services/app-maintenance",
+//   },
+//   {
+//     id: 3,
+//     title: "Testing & Quality Assurance",
+//     description:
+//       "AI-powered testing and quality assurance solutions ensuring reliability, scalability, and performance.",
+//     image: img3,
+//     link: "/services/testing-qa",
+//   },
+//   {
+//     id: 4,
+//     title: "Data Migration & Transformation",
+//     description:
+//       "Modernize enterprise systems with seamless SAP HANA migration, data consolidation, and transformation.",
+//     image: img4,
+//     link: "/services/data-migration",
+//   },
+//   {
+//     id: 5,
+//     title: "Project Remediation",
+//     description:
+//       "Recover and optimize underperforming projects with proven remediation and recovery strategies.",
+//     image: img5,
+//     link: "/services/remediation",
+//   },
+//   {
+//     id: 6,
+//     title: "Staff Augmentation",
+//     description:
+//       "Scale your workforce with certified SAP consultants, developers, and engineering experts on demand.",
+//     image: img6,
+//     link: "/services/staff-augmentation",
+//   },
+// ];
+
 import img1 from "../assets/services/sr1.png";
 import img2 from "../assets/services/sr2.png";
 import img3 from "../assets/services/sr3.png";
@@ -201,50 +259,74 @@ import img6 from "../assets/services/sr6.png";
 export const servicesData = [
   {
     id: 1,
+    category: "SAP Solutions",
     title: "SAP Consulting & Implementation",
     description:
       "End-to-end SAP transformation including S/4HANA migration, process optimization, and intelligent enterprise solutions.",
     image: img1,
+    readTime: "Enterprise Solutions",
+    date: "Innovise IT",
+    featured: true,
     link: "/services/sap-consulting",
   },
   {
     id: 2,
+    category: "Application Support",
     title: "Application Maintenance Services",
     description:
       "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
     image: img2,
+    readTime: "24/7 Support",
+    date: "Innovise IT",
+    featured: false,
     link: "/services/app-maintenance",
   },
   {
     id: 3,
+    category: "Quality Engineering",
     title: "Testing & Quality Assurance",
     description:
       "AI-powered testing and quality assurance solutions ensuring reliability, scalability, and performance.",
     image: img3,
+    readTime: "AI Testing",
+    date: "Innovise IT",
+    featured: true,
     link: "/services/testing-qa",
   },
   {
     id: 4,
+    category: "Data Transformation",
     title: "Data Migration & Transformation",
     description:
       "Modernize enterprise systems with seamless SAP HANA migration, data consolidation, and transformation.",
     image: img4,
+    readTime: "Cloud Migration",
+    date: "Innovise IT",
+    featured: false,
     link: "/services/data-migration",
   },
   {
     id: 5,
+    category: "Project Recovery",
     title: "Project Remediation",
     description:
       "Recover and optimize underperforming projects with proven remediation and recovery strategies.",
     image: img5,
+    readTime: "Recovery Strategy",
+    date: "Innovise IT",
+    featured: true,
     link: "/services/remediation",
   },
   {
     id: 6,
+    category: "Talent Solutions",
     title: "Staff Augmentation",
     description:
       "Scale your workforce with certified SAP consultants, developers, and engineering experts on demand.",
     image: img6,
+    readTime: "Certified Experts",
+    date: "Innovise IT",
+    featured: false,
     link: "/services/staff-augmentation",
   },
 ];

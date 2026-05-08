@@ -234,113 +234,108 @@ const ServiceCard = ({ service, index }) => {
       }}
     >
       <div
-        className="relative h-full rounded-2xl overflow-hidden transition-all duration-700"
+        className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
         style={{
           background: isHovered
-            ? `linear-gradient(180deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`
-            : "white",
+            ? `linear-gradient(135deg,
+                #081C34 0%,
+                #0D2747 50%,
+                #163B66 100%)`
+            : `linear-gradient(135deg,
+                #0A1A2F 0%,
+                #102B4C 50%,
+                #163B66 100%)`,
+
           border: isHovered
-            ? `2px solid ${BRAND.gold.primary}40`
-            : "1px solid rgba(0,0,0,0.06)",
+            ? "1px solid rgba(253,185,19,0.25)"
+            : "1px solid rgba(255,255,255,0.06)",
+
           boxShadow: isHovered
-            ? `0 25px 60px ${BRAND.navy.dark}30`
-            : "0 4px 20px rgba(0,0,0,0.04)",
+            ? "0 30px 80px rgba(8,28,52,0.45)"
+            : "0 10px 35px rgba(8,28,52,0.20)",
         }}
       >
         {/* Top Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
-          style={{ background: BRAND.gold.gradient }}
+          style={{
+            background: "linear-gradient(90deg, #FDB913, transparent)",
+          }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
           transition={{ duration: 0.4 }}
         />
 
-        {/* Corner Glow */}
-        <div
-          className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-          style={{
-            background: `radial-gradient(circle at top right, ${BRAND.gold.primary}15, transparent 70%)`,
-          }}
-        />
+        {/* Status Badge */}
+        <div className="absolute top-5 right-5 z-20">
+          <span
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              color: "#FDB913",
+              border: "1px solid rgba(253,185,19,0.25)",
+            }}
+          >
+            <motion.span
+              animate={{
+                scale: [1, 1.3, 1],
+                opacity: [1, 0.5, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+              }}
+              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
+            />
+
+            {service.status}
+          </span>
+        </div>
+
+        {/* Glow Effect */}
+        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
         <div className="relative z-10 p-8 lg:p-10">
           {/* Icon */}
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
-              background: isHovered
-                ? `${BRAND.gold.primary}20`
-                : `${BRAND.gold.primary}10`,
-              border: `2px solid ${isHovered ? BRAND.gold.primary : `${BRAND.gold.primary}30`}`,
+              background: "rgba(253,185,19,0.12)",
+              border: "1px solid rgba(253,185,19,0.25)",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
-            <service.icon
-              className="text-2xl"
-              style={{ color: BRAND.gold.primary }}
-            />
+            <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
           </motion.div>
 
           {/* Title */}
-          <h3
-            className="text-xl font-bold mb-3 transition-colors duration-300"
-            style={{ color: isHovered ? "white" : BRAND.navy.dark }}
-          >
+          <h3 className="text-xl font-bold mb-3 pr-16 text-white">
             {service.title}
           </h3>
 
           {/* Description */}
-          <p
-            className="text-sm leading-relaxed mb-6 transition-colors duration-300"
-            style={{ color: isHovered ? "rgba(255,255,255,0.75)" : "#64748B" }}
-          >
+          <p className="text-sm leading-relaxed mb-6 text-white/70">
             {service.description}
           </p>
 
-          {/* Features List */}
-          <ul className="space-y-2 mb-6">
+          {/* Features */}
+          <ul className="space-y-3 mb-6">
             {service.features.map((feature, idx) => (
               <li
                 key={idx}
-                className="flex items-center gap-2 text-sm"
-                style={{
-                  color: isHovered ? "rgba(255,255,255,0.85)" : "#64748B",
-                }}
+                className="flex items-center gap-2 text-sm text-white/80"
               >
-                <FaCheckCircle
-                  className="flex-shrink-0 text-xs"
-                  style={{ color: BRAND.gold.primary }}
-                />
+                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
+
                 {feature}
               </li>
             ))}
           </ul>
-
-          {/* Learn More Link */}
-          <div
-            className="flex items-center gap-2 pt-4 transition-all duration-300 group-hover:gap-3"
-            style={{
-              borderTop: `1px solid ${isHovered ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.05)"}`,
-            }}
-          >
-            <span
-              className="text-xs font-bold uppercase tracking-wider"
-              style={{ color: BRAND.gold.primary }}
-            >
-              Explore
-            </span>
-            <FaArrowRight
-              className="text-xs transition-transform group-hover:translate-x-1"
-              style={{ color: BRAND.gold.primary }}
-            />
-          </div>
         </div>
       </div>
     </motion.div>
   );
 };
-
 // Benefit Card Component
 const BenefitCard = ({ benefit, index }) => (
   <motion.div
@@ -352,40 +347,43 @@ const BenefitCard = ({ benefit, index }) => (
       duration: ANIMATION.duration,
       ...ANIMATION.spring,
     }}
-    whileHover={{ y: -5, scale: 1.02 }}
+    whileHover={{ y: -6, scale: 1.02 }}
     className="group"
   >
     <div
-      className="p-6 rounded-xl transition-all duration-500 hover:shadow-lg"
+      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
       style={{
-        background: "white",
-        border: "1px solid rgba(0,0,0,0.05)",
-        boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
+        background:
+          "linear-gradient(135deg, #081C34 0%, #102B4C 50%, #163B66 100%)",
+
+        border: "1px solid rgba(255,255,255,0.08)",
+
+        boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
       }}
     >
-      <div className="flex items-start gap-4">
+      {/* Gold Glow */}
+      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+      <div className="relative z-10 flex items-start gap-4">
+        {/* Icon */}
         <motion.div
-          className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+          className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
-            background: `${BRAND.gold.primary}10`,
-            border: `2px solid ${BRAND.gold.primary}25`,
+            background: "rgba(253,185,19,0.12)",
+            border: "1px solid rgba(253,185,19,0.25)",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >
-          <benefit.icon
-            className="text-xl"
-            style={{ color: BRAND.gold.primary }}
-          />
+          <benefit.icon className="text-xl" style={{ color: "#FDB913" }} />
         </motion.div>
 
+        {/* Content */}
         <div>
-          <h4
-            className="font-bold text-base mb-1"
-            style={{ color: BRAND.navy.dark }}
-          >
+          <h4 className="font-bold text-base mb-2 text-white">
             {benefit.title}
           </h4>
-          <p className="text-sm" style={{ color: "#94A3B8" }}>
+
+          <p className="text-sm leading-relaxed text-white/70">
             {benefit.description}
           </p>
         </div>
@@ -393,7 +391,6 @@ const BenefitCard = ({ benefit, index }) => (
     </div>
   </motion.div>
 );
-
 // Step Component for Horizontal Stepper
 const StepComponent = ({ step, index, totalSteps }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -856,8 +853,7 @@ const HeroSection = () => (
             with Seamless{" "}
             <span
               style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #10B981 0%, #34D399 100%)",
+                backgroundImage: BRAND.gold.gradient,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -901,39 +897,6 @@ const HeroSection = () => (
                 {tag}
               </motion.span>
             ))}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="/contact"
-              className="group relative px-8 py-4 rounded-xl font-bold text-base overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              style={{
-                background: BRAND.gold.gradient,
-                color: BRAND.navy.dark,
-                boxShadow: `0 8px 30px ${BRAND.gold.primary}35`,
-              }}
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                Start Migration Assessment
-                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-              </span>
-
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
-                <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
-              </div>
-            </a>
-
-            <a
-              href="#services"
-              className="px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 hover:bg-white/5 flex items-center gap-3"
-              style={{
-                border: "1px solid rgba(255,255,255,0.2)",
-                color: "white",
-              }}
-            >
-              View Services ↓
-            </a>
           </div>
 
           {/* Trust Indicators */}
@@ -1450,7 +1413,11 @@ const BenefitsSection = () => (
 
 // Process Section (5-Step Stepper UI)
 const ProcessSection = () => (
-  <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <section className="py-20 lg:py-28 bg-[#081C34] relative overflow-hidden">
+    {/* Background Effects */}
+    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+    <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#102B4C] blur-3xl rounded-full"></div>
+
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       {/* Section Header */}
       <motion.header
@@ -1460,45 +1427,73 @@ const ProcessSection = () => (
         className="text-center max-w-3xl mx-auto mb-16"
       >
         <span
-          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: `${BRAND.gold.primary}15`,
-            color: BRAND.navy.dark,
-            border: `1px solid ${BRAND.gold.primary}30`,
+            background: "rgba(253,185,19,0.12)",
+            color: "#FDB913",
+            borderColor: "rgba(253,185,19,0.25)",
           }}
         >
           🧠 Our Approach
         </span>
 
-        <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
-          style={{ color: BRAND.navy.dark }}
-        >
-          Proven{" "}
-          <span style={{ color: BRAND.gold.primary }}>5-Step Methodology</span>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+          Proven <span style={{ color: "#FDB913" }}>5-Step Methodology</span>
         </h2>
 
-        <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
+        <p className="text-lg leading-relaxed text-white/70">
           A systematic approach ensuring secure, efficient, and accurate data
           migration every time.
         </p>
       </motion.header>
 
-      {/* Horizontal Stepper - Desktop (5 columns) */}
+      {/* Desktop */}
       <div className="hidden lg:block">
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-5 gap-5">
           {processSteps.map((step, index) => (
-            <StepComponent
+            <motion.div
               key={step.step}
-              step={step}
-              index={index}
-              totalSteps={processSteps.length}
-            />
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group relative"
+            >
+              <div className="relative h-full p-6 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+                {/* Step Number */}
+                <div className="absolute top-5 right-5 text-4xl font-black text-white/5">
+                  {step.step}
+                </div>
+
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+                  <step.icon className="text-xl text-[#081C34]" />
+                </div>
+
+                {/* Title */}
+                <h4 className="text-lg font-bold text-white mb-2">
+                  {step.title}
+                </h4>
+
+                {/* Subtitle */}
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FDB913] mb-3">
+                  {step.subtitle}
+                </p>
+
+                {/* Description */}
+                <p className="text-sm leading-relaxed text-white/70">
+                  {step.description}
+                </p>
+
+                {/* Glow Effect */}
+                <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Vertical Stepper - Mobile */}
+      {/* Mobile */}
       <div className="lg:hidden space-y-8">
         {processSteps.map((step, index) => (
           <motion.div
@@ -1507,49 +1502,30 @@ const ProcessSection = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="flex gap-6"
+            className="flex gap-5"
           >
-            {/* Step Circle */}
+            {/* Left Side */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{
-                  background: BRAND.gold.gradient,
-                  boxShadow: `0 4px 15px ${BRAND.gold.primary}30`,
-                }}
-              >
-                <step.icon className="text-lg text-white" />
+              <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
+                <step.icon className="text-lg text-[#081C34]" />
               </div>
 
-              {/* Connector Line */}
               {index < processSteps.length - 1 && (
-                <div
-                  className="w-0.5 flex-1 mt-3"
-                  style={{
-                    background: `linear-gradient(to bottom, ${BRAND.gold.primary}, rgba(148,163,184,0.2))`,
-                  }}
-                />
+                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-white/10"></div>
               )}
             </div>
 
             {/* Content */}
             <div className="pb-8">
-              <h4
-                className="font-bold text-lg mb-1"
-                style={{ color: BRAND.navy.dark }}
-              >
+              <h4 className="font-bold text-lg mb-1 text-white">
                 {step.title}
               </h4>
-              <p
-                className="text-xs font-semibold uppercase tracking-wider mb-2"
-                style={{ color: step.color }}
-              >
+
+              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
                 {step.subtitle}
               </p>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "#64748B" }}
-              >
+
+              <p className="text-sm leading-relaxed text-white/70">
                 {step.description}
               </p>
             </div>
@@ -1717,8 +1693,9 @@ const DataMigrationPage = () => {
       </div>
       <HeroSection />
       <ServicesSection />
-      <BenefitsSection />
       <ProcessSection />
+      <BenefitsSection />
+
       <CTABannerSection />
     </main>
   );

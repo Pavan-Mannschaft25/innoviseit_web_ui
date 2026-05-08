@@ -248,54 +248,59 @@ const TalentCard = ({ category, index }) => {
       }}
     >
       <div
-        className="relative h-full rounded-2xl overflow-hidden transition-all duration-700"
+        className="relative h-full rounded-3xl overflow-hidden transition-all duration-700 backdrop-blur-xl"
         style={{
           background: isHovered
-            ? `linear-gradient(180deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`
-            : "white",
+            ? `linear-gradient(135deg,
+                #081C34 0%,
+                #0D2747 50%,
+                #133B63 100%)`
+            : `linear-gradient(135deg,
+                #0A1A2F 0%,
+                #102B4C 50%,
+                #163B66 100%)`,
+
           border: isHovered
-            ? `2px solid ${category.color}40`
-            : "1px solid rgba(0,0,0,0.06)",
+            ? "1px solid rgba(253,185,19,0.25)"
+            : "1px solid rgba(255,255,255,0.06)",
+
           boxShadow: isHovered
-            ? `0 25px 60px ${BRAND.navy.dark}30`
-            : "0 4px 20px rgba(0,0,0,0.04)",
+            ? "0 30px 80px rgba(8,28,52,0.45)"
+            : "0 10px 35px rgba(8,28,52,0.20)",
         }}
       >
-        {/* Top Accent */}
+        {/* Gold Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
           style={{
-            background: `linear-gradient(90deg, ${category.color}, transparent)`,
+            background: "linear-gradient(90deg, #FDB913, transparent)",
           }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
           transition={{ duration: 0.4 }}
         />
 
-        {/* Corner Glow */}
-        <div
-          className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-          style={{
-            background: `radial-gradient(circle at top right, ${category.color}15, transparent 70%)`,
-          }}
-        />
+        {/* Glow */}
+        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
         <div className="relative z-10 p-8 lg:p-10">
-          {/* Header: Icon + Availability Badge */}
+          {/* Header */}
           <div className="flex items-start justify-between mb-6">
+            {/* Icon */}
             <motion.div
               className="w-16 h-16 rounded-2xl flex items-center justify-center"
               style={{
                 background: isHovered
-                  ? `${category.color}20`
-                  : `${category.color}10`,
-                border: `2px solid ${isHovered ? category.color : `${category.color}30`}`,
+                  ? "rgba(253,185,19,0.15)"
+                  : "rgba(253,185,19,0.10)",
+
+                border: "1px solid rgba(253,185,19,0.25)",
               }}
               whileHover={{ rotate: [0, -5, 5, 0] }}
             >
               <category.icon
                 className="text-2xl"
-                style={{ color: category.color }}
+                style={{ color: "#FDB913" }}
               />
             </motion.div>
 
@@ -303,51 +308,40 @@ const TalentCard = ({ category, index }) => {
             <span
               className="px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5"
               style={{
-                background: isHovered
-                  ? `${category.color}20`
-                  : `${category.color}08`,
-                color: category.color,
-                border: `1px solid ${isHovered ? category.color : `${category.color}25`}`,
+                background: "rgba(253,185,19,0.12)",
+                color: "#FDB913",
+                border: "1px solid rgba(253,185,19,0.25)",
               }}
             >
               <motion.span
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="w-1.5 h-1.5 rounded-full"
-                style={{ background: category.color }}
+                className="w-1.5 h-1.5 rounded-full bg-[#FDB913]"
               />
               {category.available} Available
             </span>
           </div>
 
           {/* Title */}
-          <h3
-            className="text-xl font-bold mb-3 transition-colors duration-300"
-            style={{ color: isHovered ? "white" : BRAND.navy.dark }}
-          >
+          <h3 className="text-xl font-bold mb-3 text-white">
             {category.title}
           </h3>
 
           {/* Description */}
-          <p
-            className="text-sm leading-relaxed mb-6 transition-colors duration-300"
-            style={{ color: isHovered ? "rgba(255,255,255,0.75)" : "#64748B" }}
-          >
+          <p className="text-sm leading-relaxed mb-6 text-white/70">
             {category.description}
           </p>
 
-          {/* Skills Tags */}
+          {/* Skills */}
           <div className="flex flex-wrap gap-2 mb-6">
             {category.skills.map((skill, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 rounded-lg text-xs font-medium"
+                className="px-3 py-1 rounded-lg text-xs font-medium border"
                 style={{
-                  background: isHovered
-                    ? "rgba(255,255,255,0.1)"
-                    : `${category.color}10`,
-                  color: isHovered ? "rgba(255,255,255,0.85)" : category.color,
-                  border: `1px solid ${isHovered ? "rgba(255,255,255,0.15)" : `${category.color}20`}`,
+                  background: "rgba(255,255,255,0.05)",
+                  color: "#FDB913",
+                  borderColor: "rgba(253,185,19,0.15)",
                 }}
               >
                 {skill}
@@ -355,7 +349,7 @@ const TalentCard = ({ category, index }) => {
             ))}
           </div>
 
-          {/* Avatar Row - LinkedIn Style */}
+          {/* Avatar Row */}
           <div className="flex items-center gap-2 mb-6">
             {category.avatarColors.map((color, idx) => (
               <motion.div
@@ -364,40 +358,32 @@ const TalentCard = ({ category, index }) => {
                 className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold -ml-2 first:ml-0"
                 style={{
                   background: color,
-                  border: `2px solid ${isHovered ? BRAND.navy.dark : "white"}`,
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                  border: "2px solid #081C34",
+                  boxShadow: "0 2px 10px rgba(0,0,0,0.25)",
                 }}
               >
                 {String.fromCharCode(65 + idx)}
               </motion.div>
             ))}
 
-            <span
-              className="text-xs font-medium ml-2"
-              style={{ color: isHovered ? "rgba(255,255,255,0.6)" : "#94A3B8" }}
-            >
+            <span className="text-xs font-medium ml-2 text-white/50">
               +{Math.floor(Math.random() * 30) + 20} more
             </span>
           </div>
 
-          {/* CTA Link */}
-          <div
-            className="flex items-center justify-between pt-4 transition-all duration-300 group-hover:gap-3"
+          {/* Footer */}
+          {/* <div
+            className="flex items-center justify-between pt-4"
             style={{
-              borderTop: `1px solid ${isHovered ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.05)"}`,
+              borderTop: "1px solid rgba(255,255,255,0.08)",
             }}
           >
-            <span
-              className="text-xs font-bold uppercase tracking-wider"
-              style={{ color: category.color }}
-            >
+            <span className="text-xs font-bold uppercase tracking-wider text-[#FDB913]">
               View All Profiles
             </span>
-            <FaArrowRight
-              className="text-sm transition-transform group-hover:translate-x-1"
-              style={{ color: category.color }}
-            />
-          </div>
+
+            <FaArrowRight className="text-sm transition-transform group-hover:translate-x-1 text-[#FDB913]" />
+          </div> */}
         </div>
       </div>
     </motion.div>
@@ -972,39 +958,6 @@ const HeroSection = () => (
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="/contact"
-              className="group relative px-8 py-4 rounded-xl font-bold text-base overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              style={{
-                background: BRAND.gold.gradient,
-                color: BRAND.navy.dark,
-                boxShadow: `0 8px 30px ${BRAND.gold.primary}35`,
-              }}
-            >
-              <span className="relative z-10 flex items-center gap-3">
-                Find Your Talent
-                <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-              </span>
-
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
-                <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
-              </div>
-            </a>
-
-            <a
-              href="#talent"
-              className="px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300 hover:bg-white/5 flex items-center gap-3"
-              style={{
-                border: "1px solid rgba(255,255,255,0.2)",
-                color: "white",
-              }}
-            >
-              Browse Talent ↓
-            </a>
-          </div>
-
           {/* Trust Indicators */}
           <div
             className="flex flex-wrap items-center gap-6 mt-10 pt-8"
@@ -1095,7 +1048,7 @@ const HeroSection = () => (
 const TalentSection = () => (
   <section
     id="talent"
-    className="py-20 lg:py-28 bg-white relative overflow-hidden"
+    className="py-6 lg:py-10 bg-white relative overflow-hidden"
   >
     <div
       className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-[0.03] translate-x-1/3 -translate-y-1/3"
@@ -1141,41 +1094,13 @@ const TalentSection = () => (
           <TalentCard key={category.id} category={category} index={index} />
         ))}
       </div>
-
-      {/* Sample Profiles Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-16"
-      >
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-bold" style={{ color: BRAND.navy.dark }}>
-            Available Now
-          </h3>
-          <a
-            href="/contact"
-            className="text-sm font-semibold flex items-center gap-2"
-            style={{ color: BRAND.gold.primary }}
-          >
-            View All Profiles
-            <FaArrowRight className="text-xs" />
-          </a>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {sampleProfiles.map((profile, index) => (
-            <ProfileCard key={index} profile={profile} index={index} />
-          ))}
-        </div>
-      </motion.div>
     </div>
   </section>
 );
 
 // Benefits Section
 const BenefitsSection = () => (
-  <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-gray-50 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* LEFT - Visual */}
@@ -1444,7 +1369,11 @@ const BenefitsSection = () => (
 
 // Process Section
 const ProcessSection = () => (
-  <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+    {/* Background Glow */}
+    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+    <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#0F2B4D] blur-3xl rounded-full"></div>
+
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       {/* Header */}
       <motion.header
@@ -1454,47 +1383,73 @@ const ProcessSection = () => (
         className="text-center max-w-3xl mx-auto mb-16"
       >
         <span
-          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: `${BRAND.gold.primary}15`,
-            color: BRAND.navy.dark,
-            border: `1px solid ${BRAND.gold.primary}30`,
+            background: "rgba(253,185,19,0.12)",
+            color: "#FDB913",
+            borderColor: "rgba(253,185,19,0.25)",
           }}
         >
           🧠 Our Approach
         </span>
 
-        <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
-          style={{ color: BRAND.navy.dark }}
-        >
-          How We{" "}
-          <span style={{ color: BRAND.gold.primary }}>
-            Match You With Talent
-          </span>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
+          How We <span style={{ color: "#FDB913" }}>Match You With Talent</span>
         </h2>
 
-        <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
+        <p className="text-lg leading-relaxed text-white/70">
           A streamlined 4-step process from understanding your needs to scaling
           your dream team.
         </p>
       </motion.header>
 
-      {/* Horizontal Stepper - Desktop */}
+      {/* Desktop */}
       <div className="hidden lg:block">
         <div className="grid grid-cols-4 gap-8">
           {processSteps.map((step, index) => (
-            <StepComponent
+            <motion.div
               key={step.step}
-              step={step}
-              index={index}
-              totalSteps={processSteps.length}
-            />
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="relative group"
+            >
+              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+                {/* Step Icon */}
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+                  <step.icon className="text-2xl text-[#081C34]" />
+                </div>
+
+                {/* Step Number */}
+                <div className="absolute top-6 right-6 text-5xl font-black text-white/5">
+                  {step.step}
+                </div>
+
+                {/* Title */}
+                <h4 className="text-xl font-bold text-white mb-2">
+                  {step.title}
+                </h4>
+
+                {/* Subtitle */}
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FDB913] mb-3">
+                  {step.subtitle}
+                </p>
+
+                {/* Description */}
+                <p className="text-sm leading-relaxed text-white/70">
+                  {step.description}
+                </p>
+
+                {/* Glow */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Vertical Stepper - Mobile */}
+      {/* Mobile */}
       <div className="lg:hidden space-y-8">
         {processSteps.map((step, index) => (
           <motion.div
@@ -1503,46 +1458,30 @@ const ProcessSection = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="flex gap-6"
+            className="flex gap-5"
           >
+            {/* Left Side */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{
-                  background: BRAND.gold.gradient,
-                  boxShadow: `0 4px 15px ${BRAND.gold.primary}30`,
-                }}
-              >
-                <step.icon className="text-lg text-white" />
+              <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
+                <step.icon className="text-lg text-[#081C34]" />
               </div>
 
               {index < processSteps.length - 1 && (
-                <div
-                  className="w-0.5 flex-1 mt-3"
-                  style={{
-                    background: `linear-gradient(to bottom, ${BRAND.gold.primary}, rgba(148,163,184,0.2))`,
-                  }}
-                />
+                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-white/10"></div>
               )}
             </div>
 
+            {/* Content */}
             <div className="pb-8">
-              <h4
-                className="font-bold text-lg mb-1"
-                style={{ color: BRAND.navy.dark }}
-              >
+              <h4 className="font-bold text-lg mb-1 text-white">
                 {step.title}
               </h4>
-              <p
-                className="text-xs font-semibold uppercase tracking-wider mb-2"
-                style={{ color: step.color }}
-              >
+
+              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
                 {step.subtitle}
               </p>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "#64748B" }}
-              >
+
+              <p className="text-sm leading-relaxed text-white/70">
                 {step.description}
               </p>
             </div>
@@ -1556,7 +1495,7 @@ const ProcessSection = () => (
 // CTA Banner Section
 const CTABannerSection = () => (
   <section
-    className="py-20 lg:py-28 relative overflow-hidden"
+    className="py-6 lg:py-10 relative overflow-hidden"
     style={{
       background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #0f0d29 50%, ${BRAND.navy.mid} 100%)`,
     }}
@@ -1651,7 +1590,7 @@ const CTABannerSection = () => (
             </div>
           </a>
 
-          <a
+          {/* <a
             href="/talent"
             className="px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/5 flex items-center gap-3"
             style={{
@@ -1660,7 +1599,7 @@ const CTABannerSection = () => (
             }}
           >
             Browse Talent Pool →
-          </a>
+          </a> */}
         </div>
 
         <div
@@ -1707,8 +1646,9 @@ const StaffAugmentationPage = () => {
       </div>
       <HeroSection />
       <TalentSection />
-      <BenefitsSection />
       <ProcessSection />
+      <BenefitsSection />
+
       <CTABannerSection />
     </main>
   );

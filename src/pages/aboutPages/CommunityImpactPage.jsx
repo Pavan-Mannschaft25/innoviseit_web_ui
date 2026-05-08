@@ -19,6 +19,7 @@ import {
   FaWifi,
   FaShieldAlt,
 } from "react-icons/fa";
+import banner from "../../assets/banners/community.png";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -58,8 +59,8 @@ const focusAreasData = [
       "Mentorship programs for young professionals",
       "Partnerships with educational institutions",
     ],
-    color: "#3B82F6",
-    gradient: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
+    color: "#FDB913",
+    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
     bgPattern:
       "radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%)",
     stat: { value: "500+", label: "Students Supported" },
@@ -78,8 +79,8 @@ const focusAreasData = [
       "Disaster relief and emergency response",
       "Healthcare access initiatives",
     ],
-    color: "#EC4899",
-    gradient: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)",
+    color: "#FDB913",
+    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
     bgPattern:
       "radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.08) 0%, transparent 50%)",
     stat: { value: "50+", label: "Community Events" },
@@ -98,8 +99,8 @@ const focusAreasData = [
       "Tree planting and green initiatives",
       "Sustainable supply chain partnerships",
     ],
-    color: "#10B981",
-    gradient: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
+    color: "#FDB913",
+    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
     bgPattern:
       "radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 50%)",
     stat: { value: "10K+", label: "Trees Planted" },
@@ -118,8 +119,8 @@ const focusAreasData = [
       "Open-source contributions for social good",
       "Bridging the digital divide initiatives",
     ],
-    color: "#8B5CF6",
-    gradient: "linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)",
+    color: "#FDB913",
+    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
     bgPattern:
       "radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%)",
     stat: { value: "1000+", label: "People Digitally Empowered" },
@@ -138,7 +139,7 @@ const impactStats = [
     value: "25+",
     label: "Active Initiatives",
     icon: FaSeedling,
-    color: "#10B981",
+    color: "#FDB913",
   },
   {
     value: "50+",
@@ -161,28 +162,28 @@ const contributionMethods = [
     title: "Community Outreach Programs",
     description:
       "Supporting local communities through direct engagement, volunteer work, and resource allocation.",
-    color: "#3B82F6",
+    color: "#FDB913",
   },
   {
     icon: FaHeart,
     title: "Employee Volunteer Initiatives",
     description:
       "Encouraging employee participation in social initiatives with paid volunteer time off.",
-    color: "#EC4899",
+    color: "#FDB913",
   },
   {
     icon: FaRecycle,
     title: "Sustainable Business Practices",
     description:
       "Promoting ethical and sustainable business practices across all operations.",
-    color: "#10B981",
+    color: "#FDB913",
   },
   {
     icon: FaGlobeAmericas,
     title: "Strategic Partnerships",
     description:
       "Partnering with organizations to drive meaningful change at scale.",
-    color: "#8B5CF6",
+    color: "#FDB913",
   },
 ];
 
@@ -206,113 +207,132 @@ const FocusAreaCard = ({ area, index }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="group relative"
-      style={{
-        transform: isHovered ? "translateY(-8px)" : "translateY(0)",
-      }}
+      whileHover={{ y: -8 }}
     >
       {/* Main Card */}
       <div
-        className="relative h-full rounded-2xl overflow-hidden transition-all duration-700"
+        className="relative h-full rounded-3xl overflow-hidden transition-all duration-700"
         style={{
           background: isExpanded
             ? `linear-gradient(180deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`
-            : "white",
+            : "rgba(255,255,255,0.95)",
           border:
             isHovered || isExpanded
-              ? `2px solid ${area.color}40`
-              : "1px solid rgba(0,0,0,0.06)",
+              ? `1.5px solid ${area.color}40`
+              : "1px solid rgba(15,23,42,0.06)",
           boxShadow: isHovered
-            ? `0 25px 60px ${area.color}25`
+            ? `0 25px 60px ${area.color}20`
             : isExpanded
-              ? `0 20px 40px ${BRAND.navy.dark}40`
-              : "0 4px 20px rgba(0,0,0,0.04)",
+              ? `0 20px 50px rgba(11,29,51,0.35)`
+              : "0 10px 30px rgba(15,23,42,0.06)",
+          backdropFilter: "blur(10px)",
         }}
       >
-        {/* Background Pattern */}
+        {/* Gradient Background Overlay */}
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-          style={{ background: area.bgPattern }}
-        />
-
-        {/* Top Accent Bar */}
-        <motion.div
-          className="absolute top-0 left-0 right-0 h-1.5 origin-left"
-          style={{ background: area.gradient }}
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.4 }}
-        />
-
-        {/* Corner Glow */}
-        <div
-          className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
           style={{
-            background: `radial-gradient(circle at top right, ${area.color}15, transparent 70%)`,
-            borderRadius: "0 16px 0 0",
+            background: area.bgPattern,
           }}
         />
 
-        {/* Content */}
-        <div className="relative z-10 p-8 lg:p-10">
+        {/* Animated Top Bar */}
+        <motion.div
+          className="absolute top-0 left-0 h-1.5 rounded-r-full"
+          style={{
+            background: area.gradient,
+          }}
+          initial={{ width: 0 }}
+          animate={{
+            width: isHovered || isExpanded ? "100%" : "0%",
+          }}
+          transition={{ duration: 0.5 }}
+        />
+
+        {/* Glow Effect */}
+        <div
+          className="absolute -top-20 -right-20 w-52 h-52 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-700"
+          style={{
+            background: area.color,
+          }}
+        />
+
+        {/* Card Content */}
+        <div className="relative z-10 p-7 lg:p-9">
           {/* Header */}
-          <div className="flex items-start justify-between mb-6">
+          <div className="flex items-start justify-between gap-4 mb-7">
             {/* Icon */}
             <motion.div
-              className="w-16 h-16 rounded-2xl flex items-center justify-center relative"
-              style={{
-                background: isExpanded ? `${area.color}20` : `${area.color}10`,
-                border: `2px solid ${isHovered || isExpanded ? area.color : `${area.color}30`}`,
+              whileHover={{
+                rotate: [0, -6, 6, 0],
+                scale: 1.05,
               }}
-              whileHover={{ rotate: [0, -5, 5, 0] }}
               transition={{ duration: 0.5 }}
+              className="relative w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0"
+              style={{
+                background: isExpanded
+                  ? `${area.color}20`
+                  : `linear-gradient(135deg, ${area.color}12, ${area.color}08)`,
+                border: `1.5px solid ${
+                  isHovered || isExpanded ? area.color : `${area.color}35`
+                }`,
+              }}
             >
               <area.icon
-                className="text-2xl transition-colors"
-                style={{ color: area.color }}
+                className="text-2xl"
+                style={{
+                  color: area.color,
+                }}
               />
 
-              {/* Pulse Ring on Hover */}
+              {/* Pulse Animation */}
               {isHovered && (
                 <motion.div
-                  initial={{ scale: 1, opacity: 0.5 }}
-                  animate={{ scale: 1.4, opacity: 0 }}
-                  transition={{ duration: 0.8 }}
+                  initial={{ scale: 1, opacity: 0.4 }}
+                  animate={{ scale: 1.5, opacity: 0 }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                  }}
                   className="absolute inset-0 rounded-2xl"
-                  style={{ border: `2px solid ${area.color}` }}
+                  style={{
+                    border: `2px solid ${area.color}`,
+                  }}
                 />
               )}
             </motion.div>
 
-            {/* Stat Badge */}
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 + 0.3 }}
-              className="text-right"
-            >
-              <div
-                className="text-2xl font-black"
+            {/* Stat */}
+            <div className="text-right">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.1 + 0.3,
+                }}
+                className="text-3xl font-black leading-none"
                 style={{
                   color: isExpanded ? "white" : BRAND.navy.dark,
                 }}
               >
                 {area.stat.value}
-              </div>
+              </motion.div>
+
               <div
-                className="text-xs font-medium"
+                className="text-xs mt-1 uppercase tracking-wider font-semibold"
                 style={{
                   color: isExpanded ? "rgba(255,255,255,0.6)" : "#94A3B8",
                 }}
               >
                 {area.stat.label}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Title */}
           <h3
-            className="text-xl lg:text-2xl font-bold mb-3 transition-colors duration-300"
+            className="text-2xl lg:text-[28px] font-bold leading-tight mb-4 transition-colors duration-300"
             style={{
               color: isExpanded ? "white" : BRAND.navy.dark,
             }}
@@ -322,7 +342,7 @@ const FocusAreaCard = ({ area, index }) => {
 
           {/* Description */}
           <p
-            className="text-sm leading-relaxed mb-6 transition-colors duration-300"
+            className="text-sm lg:text-[15px] leading-relaxed mb-6 transition-colors duration-300"
             style={{
               color: isExpanded ? "rgba(255,255,255,0.75)" : "#64748B",
             }}
@@ -330,50 +350,76 @@ const FocusAreaCard = ({ area, index }) => {
             {area.description}
           </p>
 
-          {/* Expandable Highlights */}
+          {/* Expand Content */}
           <motion.div
             initial={false}
             animate={{
               height: isExpanded ? "auto" : 0,
               opacity: isExpanded ? 1 : 0,
             }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.45 }}
             className="overflow-hidden"
           >
-            <ul
-              className="space-y-3 pt-4"
-              style={{ borderTop: `1px solid ${area.color}30` }}
+            <div
+              className="pt-5 mt-2"
+              style={{
+                borderTop: `1px solid ${area.color}30`,
+              }}
             >
-              {area.highlights.map((highlight, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ x: -15, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: idx * 0.08 }}
-                  className="flex items-start gap-3 text-sm"
-                  style={{ color: "rgba(255,255,255,0.85)" }}
-                >
-                  <FaCheckCircle
-                    className="flex-shrink-0 mt-0.5"
-                    style={{ color: area.color }}
-                  />
-                  <span>{highlight}</span>
-                </motion.li>
-              ))}
-            </ul>
+              <ul className="space-y-4">
+                {area.highlights.map((highlight, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ x: -15, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{
+                      delay: idx * 0.08,
+                    }}
+                    className="flex items-start gap-3"
+                  >
+                    <div
+                      className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                      style={{
+                        background: `${area.color}20`,
+                      }}
+                    >
+                      <FaCheckCircle
+                        className="text-[11px]"
+                        style={{
+                          color: area.color,
+                        }}
+                      />
+                    </div>
+
+                    <span
+                      className="text-sm leading-relaxed"
+                      style={{
+                        color: "rgba(255,255,255,0.88)",
+                      }}
+                    >
+                      {highlight}
+                    </span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
 
-          {/* Toggle Button */}
-          <button
+          {/* Button */}
+          <motion.button
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.98 }}
             onClick={() => setIsExpanded(!isExpanded)}
-            className="mt-6 w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 focus:outline-none focus:ring-2 flex items-center justify-center gap-2"
+            className="mt-7 w-full py-3.5 rounded-2xl font-bold text-sm uppercase tracking-wider transition-all duration-300 focus:outline-none flex items-center justify-center gap-2"
             style={{
               background: isExpanded
                 ? "rgba(255,255,255,0.1)"
-                : `${area.color}10`,
+                : `linear-gradient(135deg, ${area.color}15, ${area.color}08)`,
               color: isExpanded ? "white" : area.color,
-              border: `1px solid ${isExpanded ? "rgba(255,255,255,0.2)" : `${area.color}30`}`,
-              "--tw-ring-color": area.color,
+              border: `1px solid ${
+                isExpanded ? "rgba(255,255,255,0.2)" : `${area.color}25`
+              }`,
+              backdropFilter: "blur(10px)",
             }}
           >
             {isExpanded ? (
@@ -389,10 +435,10 @@ const FocusAreaCard = ({ area, index }) => {
             ) : (
               <>
                 Explore This Area
-                <FaArrowRight className="text-xs" />
+                <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform duration-300" />
               </>
             )}
-          </button>
+          </motion.button>
         </div>
       </div>
     </motion.div>
@@ -423,7 +469,7 @@ const HeroSection = () => (
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-20 right-20 w-[500px] h-[500px] rounded-full blur-3xl opacity-[0.08]"
-        style={{ background: "#10B981" }} // Green for environmental theme
+        style={{ background: "#FDB913" }} // Green for environmental theme
       />
 
       <motion.div
@@ -489,7 +535,7 @@ const HeroSection = () => (
           <span
             style={{
               backgroundImage:
-                "linear-gradient(135deg, #10B981 0%, #34D399 50%, #6EE7B7 100%)",
+                "linear-gradient(135deg, #FDB913 0%, #34D399 50%, #6EE7B7 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -519,63 +565,114 @@ const HeroSection = () => (
 
 // Focus Areas Section Component
 const FocusAreasSection = () => (
-  <section className="py-6 lg:py-12 bg-white relative overflow-hidden">
-    {/* Background Decoration */}
+  <section className="relative py-10 lg:py-16 bg-gradient-to-b from-white via-gray-50/40 to-white overflow-hidden">
+    {/* Background Glow */}
     <div
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full blur-3xl opacity-[0.03]"
-      style={{ background: BRAND.navy.lighter }}
+      className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-[0.04] -translate-x-1/2 -translate-y-1/2"
+      style={{ background: BRAND.gold.primary }}
+    />
+
+    <div
+      className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-[0.03] translate-x-1/3 translate-y-1/3"
+      style={{ background: BRAND.navy.dark }}
+    />
+
+    {/* Grid Pattern */}
+    <div
+      className="absolute inset-0 opacity-[0.02]"
+      style={{
+        backgroundImage: `radial-gradient(circle at 1px 1px, ${BRAND.navy.dark} 1px, transparent 0)`,
+        backgroundSize: "36px 36px",
+      }}
     />
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      {/* Section Header */}
+      {/* Header */}
       <motion.header
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center max-w-3xl mx-auto mb-16 lg:mb-20"
+        transition={{ duration: 0.7 }}
+        className="text-center max-w-3xl mx-auto mb-14 lg:mb-20"
       >
+        {/* Badge */}
         <span
-          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
           style={{
-            background: `${BRAND.navy.mid}08`,
+            background: `${BRAND.gold.primary}12`,
             color: BRAND.navy.dark,
-            border: `1px solid ${BRAND.navy.mid}15`,
+            border: `1px solid ${BRAND.gold.primary}25`,
+            boxShadow: `0 4px 20px ${BRAND.gold.primary}10`,
           }}
         >
           🤝 Our Focus Areas
         </span>
 
+        {/* Heading */}
         <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           style={{ color: BRAND.navy.dark }}
         >
           Where We Make the{" "}
-          <span style={{ color: "#10B981" }}>Biggest Difference</span>
+          <span
+            className="bg-clip-text text-transparent"
+            style={{
+              backgroundImage: BRAND.gold.gradient,
+            }}
+          >
+            Biggest Difference
+          </span>
         </h2>
 
-        <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
+        {/* Description */}
+        <p
+          className="text-lg leading-relaxed max-w-2xl mx-auto"
+          style={{ color: "#64748B" }}
+        >
           Our community impact spans four key areas where we believe we can
           create lasting, meaningful change. Click on any card to explore our
           initiatives in detail.
         </p>
       </motion.header>
 
-      {/* 4-Card Grid */}
+      {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         {focusAreasData.map((area, index) => (
-          <FocusAreaCard key={area.id} area={area} index={index} />
+          <motion.div
+            key={area.id}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: index * 0.12,
+              duration: 0.6,
+            }}
+            whileHover={{ y: -6 }}
+            className="h-full"
+          >
+            <FocusAreaCard area={area} index={index} />
+          </motion.div>
         ))}
       </div>
     </div>
+
+    {/* Bottom Accent Line */}
+    <div
+      className="absolute bottom-0 left-0 right-0 h-px"
+      style={{
+        background:
+          "linear-gradient(to right, transparent, rgba(253,185,19,0.3), transparent)",
+      }}
+    />
   </section>
 );
 
 // Impact Stats Section Component
 const ImpactStatsSection = () => (
   <section
-    className="py-20 lg:py-28 relative overflow-hidden"
+    className="py-6 lg:py-10 relative overflow-hidden"
     style={{
-      background: `linear-gradient(135deg, #10B981 0%, #059669 50%, #047857 100%)`,
+      background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
     }}
   >
     {/* Background Pattern */}
@@ -722,7 +819,7 @@ const ImpactStatsSection = () => (
 
 // How We Contribute Section
 const ContributionSection = () => (
-  <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-gray-50 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         {/* Left - Sticky Header */}
@@ -748,7 +845,7 @@ const ContributionSection = () => (
             style={{ color: BRAND.navy.dark }}
           >
             Turning Good Intentions Into{" "}
-            <span style={{ color: "#10B981" }}>Real Action</span>
+            <span style={{ color: "#FDB913" }}>Real Action</span>
           </h2>
 
           <p
@@ -808,7 +905,7 @@ const ContributionSection = () => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="space-y-6"
+          className="space-y-6 "
         >
           {contributionMethods.map((method, idx) => (
             <motion.div
@@ -817,8 +914,9 @@ const ContributionSection = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group p-6 lg:p-8 rounded-2xl bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              className="group p-6 lg:p-8 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
               style={{
+                background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
                 border: `1px solid rgba(0,0,0,0.05)`,
                 boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
               }}
@@ -843,7 +941,7 @@ const ContributionSection = () => (
                 <div className="flex-grow">
                   <h3
                     className="text-lg font-bold mb-2"
-                    style={{ color: BRAND.navy.dark }}
+                    style={{ color: "white" }}
                   >
                     {method.title}
                   </h3>
@@ -1032,7 +1130,7 @@ const MilestonesSection = () => {
 // Closing Section Component
 const ClosingSection = () => (
   <section
-    className="relative py-24 lg:py-32 overflow-hidden"
+    className="relative py-6 lg:py-10 overflow-hidden"
     style={{
       background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
     }}
@@ -1051,7 +1149,7 @@ const ClosingSection = () => (
       animate={{ y: [0, -20, 0] }}
       transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-[0.06]"
-      style={{ background: "#10B981" }}
+      style={{ background: "#FDB913" }}
     />
 
     <motion.div
@@ -1107,8 +1205,7 @@ const ClosingSection = () => (
           , but by the{" "}
           <span
             style={{
-              backgroundImage:
-                "linear-gradient(135deg, #10B981 0%, #34D399 100%)",
+              backgroundImage: BRAND.gold.gradient,
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -1125,9 +1222,8 @@ const ClosingSection = () => (
             href="/contact"
             className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl focus:outline-none focus:ring-2"
             style={{
-              background: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
+              background: "linear-gradient(135deg, #FDB913 0%, #FDB913 100%)",
               color: "white",
-              boxShadow: `0 8px 30px rgba(16, 185, 129, 0.35)`,
             }}
           >
             <span className="relative z-10 flex items-center gap-3">
@@ -1184,7 +1280,16 @@ const ClosingSection = () => (
 const CommunityImpactPage = () => {
   return (
     <main role="main">
-      <HeroSection />
+      <div className="relative w-full h-[90vh] bg-[#020B2D] overflow-hidden">
+        <img
+          src={banner}
+          alt="Innovise IT Banner"
+          className="w-full h-full object-fill object-center"
+        />
+
+        <div className="absolute inset-0 bg-black/10" />
+      </div>
+      {/* <HeroSection /> */}
       <FocusAreasSection />
       <ImpactStatsSection />
       <ContributionSection />

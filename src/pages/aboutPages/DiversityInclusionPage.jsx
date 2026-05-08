@@ -16,6 +16,7 @@ import {
   FaShieldAlt,
   FaChartLine,
 } from "react-icons/fa";
+import banner from "../../assets/banners/di.png";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -860,7 +861,16 @@ const ClosingSection = () => (
 const DiversityInclusionPage = () => {
   return (
     <main role="main">
-      <HeroSection />
+      <div className="relative w-full h-[90vh] bg-[#020B2D] overflow-hidden">
+        <img
+          src={banner}
+          alt="Innovise IT Banner"
+          className="w-full h-full object-fill object-center"
+        />
+
+        <div className="absolute inset-0 bg-black/10" />
+      </div>
+      {/* <HeroSection /> */}
       <CommitmentsSection />
       <WhyMattersSection />
       <PracticesSection />

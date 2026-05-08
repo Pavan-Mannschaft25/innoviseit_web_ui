@@ -473,7 +473,7 @@ const Services = () => {
   };
 
   return (
-    <section className="relative py-10 lg:py-12 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 overflow-hidden">
+    <section className="relative py-2 lg:py-4 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/10 to-purple-500/10 rounded-full blur-3xl" />
@@ -482,7 +482,7 @@ const Services = () => {
 
       <Container>
         {/* 🔥 Header Row: Title Left + Nav Buttons Right */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10 lg:mb-12">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-2 lg:mb-6">
           {/* Left Side - Heading */}
           <div className="flex-1">
             <h2 className="text-3xl lg:text-4xl font-semibold text-[#0B2A4A] leading-tight">

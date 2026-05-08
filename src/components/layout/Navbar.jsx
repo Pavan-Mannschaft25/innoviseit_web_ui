@@ -421,7 +421,7 @@ const Navbar = () => {
         }`}
       >
         <Container>
-          <nav className="flex items-center justify-between h-18 lg:h-22">
+          <nav className="flex items-center justify-between h-18 lg:h-20">
             {/* Logo */}
             <Link to="/" className="relative group flex items-center">
               <div className="relative overflow-hidden rounded-lg p-1">

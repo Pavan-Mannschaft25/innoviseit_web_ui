@@ -72,7 +72,7 @@ const sapServicesData = [
     description:
       "Re-engineer core business processes to improve agility, performance, and scalability across operations.",
     features: ["Process Mapping", "Workflow Optimization", "Best Practices"],
-    color: "#3B82F6",
+    color: "#FDB913",
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ const sapServicesData = [
     description:
       "Integrate SAP with third-party platforms, cloud services, and enterprise applications seamlessly.",
     features: ["API Integration", "Middleware Setup", "Data Synchronization"],
-    color: "#10B981",
+    color: "#FDB913",
   },
   {
     id: 4,
@@ -90,7 +90,7 @@ const sapServicesData = [
     description:
       "Enhance system performance, ensure stability, and continuously improve operations for maximum ROI.",
     features: ["Performance Tuning", "24/7 Support", "Continuous Improvement"],
-    color: "#8B5CF6",
+    color: "#FDB913",
   },
 ];
 
@@ -190,109 +190,103 @@ const ServiceCard = ({ service, index }) => {
       }}
     >
       <div
-        className="relative h-full rounded-2xl overflow-hidden transition-all duration-700"
+        className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
         style={{
           background: isHovered
-            ? `linear-gradient(180deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`
-            : "white",
+            ? `linear-gradient(135deg,
+                #081C34 0%,
+                #0D2747 50%,
+                #163B66 100%)`
+            : `linear-gradient(135deg,
+                #0A1A2F 0%,
+                #102B4C 50%,
+                #163B66 100%)`,
+
           border: isHovered
-            ? `2px solid ${service.color}40`
-            : "1px solid rgba(0,0,0,0.06)",
+            ? "1px solid rgba(253,185,19,0.25)"
+            : "1px solid rgba(255,255,255,0.06)",
+
           boxShadow: isHovered
-            ? `0 25px 60px ${BRAND.navy.dark}30`
-            : "0 4px 20px rgba(0,0,0,0.04)",
+            ? "0 30px 80px rgba(8,28,52,0.45)"
+            : "0 10px 35px rgba(8,28,52,0.20)",
         }}
       >
         {/* Top Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
           style={{
-            background: `linear-gradient(90deg, ${service.color}, transparent)`,
+            background: "linear-gradient(90deg, #FDB913, transparent)",
           }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
           transition={{ duration: 0.4 }}
         />
 
-        {/* Corner Glow */}
-        <div
-          className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-          style={{
-            background: `radial-gradient(circle at top right, ${service.color}15, transparent 70%)`,
-          }}
-        />
+        {/* Status Badge */}
+        <div className="absolute top-5 right-5 z-20">
+          <span
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              color: "#FDB913",
+              border: "1px solid rgba(253,185,19,0.25)",
+            }}
+          >
+            <motion.span
+              animate={{
+                scale: [1, 1.3, 1],
+                opacity: [1, 0.5, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+              }}
+              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
+            />
+
+            {service.status}
+          </span>
+        </div>
+
+        {/* Glow Effect */}
+        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
         <div className="relative z-10 p-8 lg:p-10">
           {/* Icon */}
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
-              background: isHovered
-                ? `${service.color}20`
-                : `${service.color}10`,
-              border: `2px solid ${isHovered ? service.color : `${service.color}30`}`,
+              background: "rgba(253,185,19,0.12)",
+              border: "1px solid rgba(253,185,19,0.25)",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
-            <service.icon
-              className="text-2xl"
-              style={{ color: service.color }}
-            />
+            <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
           </motion.div>
 
           {/* Title */}
-          <h3
-            className="text-xl font-bold mb-3 transition-colors duration-300"
-            style={{ color: isHovered ? "white" : BRAND.navy.dark }}
-          >
+          <h3 className="text-xl font-bold mb-3 pr-16 text-white">
             {service.title}
           </h3>
 
           {/* Description */}
-          <p
-            className="text-sm leading-relaxed mb-6 transition-colors duration-300"
-            style={{ color: isHovered ? "rgba(255,255,255,0.75)" : "#64748B" }}
-          >
+          <p className="text-sm leading-relaxed mb-6 text-white/70">
             {service.description}
           </p>
 
-          {/* Features List */}
-          <ul className="space-y-2 mb-6">
+          {/* Features */}
+          <ul className="space-y-3 mb-6">
             {service.features.map((feature, idx) => (
               <li
                 key={idx}
-                className="flex items-center gap-2 text-sm"
-                style={{
-                  color: isHovered ? "rgba(255,255,255,0.85)" : "#64748B",
-                }}
+                className="flex items-center gap-2 text-sm text-white/80"
               >
-                <FaCheckCircle
-                  className="flex-shrink-0 text-xs"
-                  style={{ color: service.color }}
-                />
+                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
+
                 {feature}
               </li>
             ))}
           </ul>
-
-          {/* Learn More Link */}
-          <div
-            className="flex items-center gap-2 pt-4 transition-all duration-300 group-hover:gap-3"
-            style={{
-              borderTop: `1px solid ${isHovered ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.05)"}`,
-            }}
-          >
-            <span
-              className="text-xs font-bold uppercase tracking-wider"
-              style={{ color: service.color }}
-            >
-              Explore
-            </span>
-            <FaArrowRight
-              className="text-xs transition-transform group-hover:translate-x-1"
-              style={{ color: service.color }}
-            />
-          </div>
         </div>
       </div>
     </motion.div>
@@ -310,40 +304,43 @@ const BenefitCard = ({ benefit, index }) => (
       duration: ANIMATION.duration,
       ...ANIMATION.spring,
     }}
-    whileHover={{ y: -5, scale: 1.02 }}
+    whileHover={{ y: -6, scale: 1.02 }}
     className="group"
   >
     <div
-      className="p-6 rounded-xl transition-all duration-500 hover:shadow-lg"
+      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
       style={{
-        background: "white",
-        border: "1px solid rgba(0,0,0,0.05)",
-        boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
+        background:
+          "linear-gradient(135deg, #081C34 0%, #102B4C 50%, #163B66 100%)",
+
+        border: "1px solid rgba(255,255,255,0.08)",
+
+        boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
       }}
     >
-      <div className="flex items-start gap-4">
+      {/* Gold Glow */}
+      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+      <div className="relative z-10 flex items-start gap-4">
+        {/* Icon */}
         <motion.div
-          className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+          className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
-            background: `${BRAND.gold.primary}10`,
-            border: `2px solid ${BRAND.gold.primary}25`,
+            background: "rgba(253,185,19,0.12)",
+            border: "1px solid rgba(253,185,19,0.25)",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >
-          <benefit.icon
-            className="text-xl"
-            style={{ color: BRAND.gold.primary }}
-          />
+          <benefit.icon className="text-xl" style={{ color: "#FDB913" }} />
         </motion.div>
 
+        {/* Content */}
         <div>
-          <h4
-            className="font-bold text-base mb-1"
-            style={{ color: BRAND.navy.dark }}
-          >
+          <h4 className="font-bold text-base mb-2 text-white">
             {benefit.title}
           </h4>
-          <p className="text-sm" style={{ color: "#94A3B8" }}>
+
+          <p className="text-sm leading-relaxed text-white/70">
             {benefit.description}
           </p>
         </div>
@@ -541,15 +538,7 @@ const HeroSection = () => (
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
             Transforming Enterprises with{" "}
-            <span
-              style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #00A4FD 0%, #00D4FF 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
+            <span style={{ color: BRAND.gold.primary }}>
               Intelligent SAP Solutions
             </span>
           </h1>
@@ -568,7 +557,7 @@ const HeroSection = () => (
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="/contact"
               className="group relative px-8 py-4 rounded-xl font-bold text-base overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
@@ -598,7 +587,7 @@ const HeroSection = () => (
             >
               Explore Services ↓
             </a>
-          </div>
+          </div> */}
 
           {/* Trust Indicators */}
           <div
@@ -805,7 +794,7 @@ const HeroSection = () => (
 const ServicesSection = () => (
   <section
     id="services"
-    className="py-20 lg:py-28 bg-white relative overflow-hidden"
+    className="py-6 lg:py-10 bg-white relative overflow-hidden"
   >
     {/* Background Decoration */}
     <div
@@ -836,7 +825,7 @@ const ServicesSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          Comprehensive <span style={{ color: "#00A4FD" }}>SAP Services</span>
+          Comprehensive SAP Services
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
@@ -857,7 +846,7 @@ const ServicesSection = () => (
 
 // Benefits Section (Image Left + Benefits Right)
 const BenefitsSection = () => (
-  <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-gray-50 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* LEFT - Image / Visual */}
@@ -1034,7 +1023,11 @@ const BenefitsSection = () => (
 
 // Process/Approach Section (Stepper UI)
 const ApproachSection = () => (
-  <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+    {/* Background Glow */}
+    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+    <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#0F2B4D] blur-3xl rounded-full"></div>
+
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       {/* Section Header */}
       <motion.header
@@ -1044,45 +1037,76 @@ const ApproachSection = () => (
         className="text-center max-w-3xl mx-auto mb-16"
       >
         <span
-          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: `${BRAND.gold.primary}15`,
-            color: BRAND.navy.dark,
-            border: `1px solid ${BRAND.gold.primary}30`,
+            background: "rgba(253,185,19,0.12)",
+            color: "#FDB913",
+            borderColor: "rgba(253,185,19,0.25)",
           }}
         >
           🧠 Our Approach
         </span>
 
-        <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
-          style={{ color: BRAND.navy.dark }}
-        >
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
           Proven{" "}
-          <span style={{ color: "#00A4FD" }}>Implementation Methodology</span>
+          <span style={{ color: "#FDB913" }}>Implementation Methodology</span>
         </h2>
 
-        <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
+        <p className="text-lg leading-relaxed text-white/70">
           A structured approach ensuring successful SAP transformations every
           time.
         </p>
       </motion.header>
 
-      {/* Horizontal Stepper - Desktop */}
+      {/* Desktop */}
       <div className="hidden lg:block">
         <div className="grid grid-cols-4 gap-8">
           {approachSteps.map((step, index) => (
-            <StepComponent
+            <motion.div
               key={step.step}
-              step={step}
-              index={index}
-              totalSteps={approachSteps.length}
-            />
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="relative group"
+            >
+              <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+                {/* Step Number */}
+                <div className="flex items-center justify-center w-16 h-16 rounded-2xl mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+                  <span className="text-2xl font-black text-[#081C34]">
+                    {step.step}
+                  </span>
+                </div>
+
+                {/* Icon */}
+                <div className="mb-5">
+                  <step.icon className="text-3xl text-[#FDB913]" />
+                </div>
+
+                {/* Title */}
+                <h4 className="text-xl font-bold text-white mb-2">
+                  {step.title}
+                </h4>
+
+                {/* Subtitle */}
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FDB913] mb-3">
+                  {step.subtitle}
+                </p>
+
+                {/* Description */}
+                <p className="text-sm leading-relaxed text-white/70">
+                  {step.description}
+                </p>
+
+                {/* Top Glow */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Vertical Stepper - Mobile */}
+      {/* Mobile */}
       <div className="lg:hidden space-y-8">
         {approachSteps.map((step, index) => (
           <motion.div
@@ -1091,54 +1115,34 @@ const ApproachSection = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="flex gap-6"
+            className="flex gap-5"
           >
-            {/* Step Number Circle */}
+            {/* Left Step */}
             <div className="flex flex-col items-center">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center flex-shrink-0"
-                style={{
-                  background: step.color,
-                  boxShadow: `0 4px 15px ${step.color}30`,
-                }}
-              >
-                <span className="text-lg font-black text-white">
+              <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
+                <span className="text-lg font-black text-[#081C34]">
                   {step.step}
                 </span>
               </div>
 
-              {/* Connector Line */}
               {index < approachSteps.length - 1 && (
-                <div
-                  className="w-0.5 flex-1 mt-3"
-                  style={{
-                    background: `linear-gradient(to bottom, ${step.color}, rgba(148,163,184,0.2))`,
-                  }}
-                />
+                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-white/10"></div>
               )}
             </div>
 
             {/* Content */}
             <div className="pb-8">
               <div className="flex items-center gap-3 mb-2">
-                <step.icon className="text-lg" style={{ color: step.color }} />
-                <h4
-                  className="font-bold text-lg"
-                  style={{ color: BRAND.navy.dark }}
-                >
-                  {step.title}
-                </h4>
+                <step.icon className="text-lg text-[#FDB913]" />
+
+                <h4 className="font-bold text-lg text-white">{step.title}</h4>
               </div>
-              <p
-                className="text-xs font-semibold uppercase tracking-wider mb-2"
-                style={{ color: step.color }}
-              >
+
+              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
                 {step.subtitle}
               </p>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "#64748B" }}
-              >
+
+              <p className="text-sm leading-relaxed text-white/70">
                 {step.description}
               </p>
             </div>
@@ -1152,7 +1156,7 @@ const ApproachSection = () => (
 // CTA Banner Section
 const CTABannerSection = () => (
   <section
-    className="py-20 lg:py-28 relative overflow-hidden"
+    className="py-6 lg:py-10 relative overflow-hidden"
     style={{
       background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #0A1628 50%, ${BRAND.navy.mid} 100%)`,
     }}
@@ -1213,19 +1217,7 @@ const CTABannerSection = () => (
 
         {/* Main Heading */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-          Ready to Transform Your{" "}
-          <span
-            style={{
-              backgroundImage:
-                "linear-gradient(135deg, #00A4FD 0%, #00D4FF 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Enterprise with SAP
-          </span>
-          ?
+          Ready to Transform Your <span>Enterprise with SAP</span>?
         </h2>
 
         <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl mx-auto">
@@ -1253,21 +1245,6 @@ const CTABannerSection = () => (
             <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
               <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
             </div>
-          </a>
-
-          <a
-            href="/about"
-            className="px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/5 flex items-center gap-3"
-            style={{
-              border: "1px solid rgba(255,255,255,0.2)",
-              color: "white",
-            }}
-          >
-            <FaQuoteLeft
-              className="text-sm"
-              style={{ color: BRAND.gold.primary }}
-            />
-            Schedule Consultation
           </a>
         </div>
 
@@ -1310,8 +1287,8 @@ const SAPConsultingPage = () => {
       </div>
       <HeroSection />
       <ServicesSection />
-      <BenefitsSection />
       <ApproachSection />
+      <BenefitsSection />
       <CTABannerSection />
     </main>
   );
