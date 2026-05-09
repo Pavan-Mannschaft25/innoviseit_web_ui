@@ -191,35 +191,219 @@
 
 // export default HeroSliderWithContent;
 
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+// import React, { useState, useEffect } from "react";
+// import { motion } from "framer-motion";
+// import { HERO_SLIDES } from "../../data/heroSliderData";
+
+// const HeroSliderWithContent = ({ slides = HERO_SLIDES, interval = 5000 }) => {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   // Auto Slide
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setCurrentIndex((prev) => (prev + 1) % slides.length);
+//     }, interval);
+
+//     return () => clearInterval(timer);
+//   }, [slides.length, interval]);
+
+//   const currentSlide = slides[currentIndex];
+
+//   return (
+//     <section className="relative w-full h-[60vh] lg:h-[90vh] overflow-hidden">
+//       <motion.img
+//         key={currentIndex}
+//         src={currentSlide.image}
+//         alt="hero"
+//         initial={{ opacity: 0.5 }}
+//         animate={{ opacity: 1 }}
+//         transition={{ duration: 0.8 }}
+//         className="w-full h-full object-fill"
+//       />
+//     </section>
+//   );
+// };
+
+// export default HeroSliderWithContent;
+
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { HERO_SLIDES } from "../../data/heroSliderData";
 
-const HeroSliderWithContent = ({ slides = HERO_SLIDES, interval = 5000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Animation variants for consistent animations
+const slideVariants = {
+  enter: { opacity: 0, scale: 1.08 },
+  center: { opacity: 1, scale: 1 },
+  exit: { opacity: 0, scale: 0.95 },
+};
 
-  // Auto Slide
+const contentVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const HeroSliderWithContent = ({
+  slides = HERO_SLIDES,
+  interval = 5000,
+  showThumbnails = true,
+  showDots = true,
+  showProgress = true,
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  // Auto-slide with progress tracking
   useEffect(() => {
-    const timer = setInterval(() => {
+    const startTime = Date.now();
+
+    const progressTimer = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const pct = Math.min((elapsed / interval) * 100, 100);
+      setProgress(pct);
+    }, 30);
+
+    const slideTimer = setInterval(() => {
+      setDirection(1);
       setCurrentIndex((prev) => (prev + 1) % slides.length);
+      setProgress(0);
     }, interval);
 
-    return () => clearInterval(timer);
-  }, [slides.length, interval]);
+    return () => {
+      clearInterval(progressTimer);
+      clearInterval(slideTimer);
+    };
+  }, [currentIndex, slides.length, interval]);
+
+  // Manual navigation
+  const goToSlide = useCallback(
+    (index) => {
+      if (index !== currentIndex) {
+        setDirection(index > currentIndex ? 1 : -1);
+        setCurrentIndex(index);
+        setProgress(0);
+      }
+    },
+    [currentIndex],
+  );
 
   const currentSlide = slides[currentIndex];
 
+  // Pagination variants
+  const paginateVariants = {
+    active: { width: 28, background: "#ffffff" },
+    inactive: { width: 6, background: "rgba(255,255,255,0.25)" },
+  };
+
   return (
-    <section className="relative w-full h-[60vh] lg:h-[90vh] overflow-hidden">
-      <motion.img
-        key={currentIndex}
-        src={currentSlide.image}
-        alt="hero"
-        initial={{ opacity: 0.5 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="w-full h-full object-fill"
-      />
+    <section className="relative w-full h-[60vh] lg:h-[90vh] overflow-hidden bg-black">
+      {/* Google Fonts */}
+      {/* <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
+        .font-bebas { font-family: 'Bebas Neue', cursive; }
+        .font-outfit { font-family: 'Outfit', sans-serif; }
+        
+        .overlay-diagonal {
+          background: linear-gradient(110deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0.25) 75%, rgba(0,0,0,0.1) 100%);
+        }
+      `}</style> */}
+
+      {/* Background Images with AnimatePresence */}
+      <div className="absolute inset-0">
+        <AnimatePresence mode="sync" custom={direction}>
+          <motion.div
+            key={currentIndex}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            transition={{
+              duration: 0.8,
+              ease: [0.4, 0, 0.2, 1],
+            }}
+            className="absolute inset-0"
+          >
+            <img
+              src={currentSlide.image}
+              alt={currentSlide.tag || "Hero slide"}
+              className="w-full h-full object-fill"
+            />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Diagonal overlay */}
+      <div className="absolute inset-0 overlay-diagonal z-10" />
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/90 to-transparent z-10" />
+
+      {/* Slide Thumbnails (bottom right) */}
+      {/* {showThumbnails && slides.length > 1 && (
+        <div className="absolute bottom-8 right-6 z-30 flex flex-col gap-2 items-end">
+          {slides.map((slide, index) => (
+            <motion.button
+              key={index}
+              type="button"
+              onClick={() => goToSlide(index)}
+              className="group relative overflow-hidden rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              style={{
+                width: index === currentIndex ? "108px" : "72px",
+                height: "60px",
+                outline:
+                  index === currentIndex
+                    ? "2px solid rgba(255,255,255,0.6)"
+                    : "2px solid rgba(255,255,255,0.1)",
+                outlineOffset: "2px",
+              }}
+            >
+              <img
+                src={slide.image}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                alt={slide.tag || `Slide ${index + 1}`}
+              />
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors" />
+
+              {showProgress && index === currentIndex && (
+                <div
+                  className="absolute bottom-0 left-0 h-[3px] bg-white rounded-full"
+                  style={{ width: `${progress}%` }}
+                />
+              )}
+            </motion.button>
+          ))}
+        </div>
+      )} */}
+
+      {/* Dot Navigation (bottom center) */}
+      {showDots && slides.length > 1 && (
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
+          {slides.map((_, index) => (
+            <motion.button
+              key={index}
+              type="button"
+              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => goToSlide(index)}
+              variants={paginateVariants}
+              animate={index === currentIndex ? "active" : "inactive"}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              style={{
+                height: "6px",
+                borderRadius: "3px",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+              }}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 };
