@@ -5,7 +5,7 @@ import img3 from "../assets/heroImages/slider222.png";
 import img4 from "../assets/heroImages/slider333.png";
 import img5 from "../assets/heroImages/slider444.png";
 import img6 from "../assets/heroImages/slider555.png";
-import img7 from "../assets/heroImages/slider666.png";
+// import img7 from "../assets/heroImages/slider666.png";
 
 export const HERO_SLIDES = [
   // 🔹 SLIDE 1 - MAIN EVENT HERO
@@ -167,34 +167,6 @@ export const HERO_SLIDES = [
   // 🔹 SLIDE 6 - FINAL CTA
   {
     image: img6,
-
-    badge: "Don’t Miss Out",
-
-    title: "Shape the Future",
-    highlight: "With SAP",
-
-    subtitle: "Your AI Journey Starts Here",
-
-    description:
-      "Be part of the most important SAP event of the year. Discover innovation, gain insights, and transform your business with confidence.",
-
-    buttons: [
-      {
-        label: "Secure Your Spot",
-        link: "/register",
-        icon: FaArrowRight,
-        type: "primary",
-      },
-    ],
-
-    stats: [
-      { value: "Free", label: "Virtual Access" },
-      { value: "Global", label: "Participation" },
-      { value: "Future", label: "Ready" },
-    ],
-  },
-  {
-    image: img7,
 
     badge: "Don’t Miss Out",
 

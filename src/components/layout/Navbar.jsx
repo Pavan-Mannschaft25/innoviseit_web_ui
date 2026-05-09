@@ -351,9 +351,9 @@ const Navbar = () => {
   // Language Dropdown State
   const [languageOpen, setLanguageOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState({
-    name: "India",
-    code: "EN-IN",
-    flag: "🇮🇳",
+    name: "United States",
+    code: "EN-US",
+    flag: "🇺🇸",
   });
 
   const location = useLocation();
@@ -362,14 +362,14 @@ const Navbar = () => {
 
   const countries = [
     {
-      name: "India",
-      code: "EN-IN",
-      flag: "🇮🇳",
-    },
-    {
       name: "United States",
       code: "EN-US",
       flag: "🇺🇸",
+    },
+    {
+      name: "India",
+      code: "EN-IN",
+      flag: "🇮🇳",
     },
   ];
 
@@ -533,10 +533,6 @@ const Navbar = () => {
                 <FaGlobe className="text-lg group-hover:rotate-12 transition-transform text-[#0a1628]" />
 
                 <span className="text-lg">{selectedCountry.flag}</span>
-
-                <span className="font-medium text-sm">
-                  {selectedCountry.code}
-                </span>
 
                 <FaChevronDown
                   className={`text-xs transition-transform duration-300 ${
