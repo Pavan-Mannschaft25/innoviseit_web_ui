@@ -1,9 +1,7 @@
 import img1 from "../assets/heroImages/sl111.jpeg";
-import img2 from "../assets/heroImages/slider111.png";
-import img3 from "../assets/heroImages/slider222.png";
-import img4 from "../assets/heroImages/slider333.png";
-import img5 from "../assets/heroImages/slider444.png";
-import img6 from "../assets/heroImages/slider555.png";
+import img2 from "../assets/heroImages/slider44444.png";
+import img3 from "../assets/heroImages/slider3333.png";
+import img4 from "../assets/heroImages/slider1111.png";
 
 export const HERO_SLIDES = [
   // 🔹 SLIDE 1 - MAIN EVENT HERO
@@ -26,13 +24,13 @@ export const HERO_SLIDES = [
     image: img4,
   },
 
-  // 🔹 SLIDE 5 - NETWORKING
-  {
-    image: img5,
-  },
+  // // 🔹 SLIDE 5 - NETWORKING
+  // {
+  //   image: img5,
+  // },
 
-  // 🔹 SLIDE 6 - FINAL CTA
-  {
-    image: img6,
-  },
+  // // 🔹 SLIDE 6 - FINAL CTA
+  // {
+  //   image: img6,
+  // },
 ];

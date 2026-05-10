@@ -1260,7 +1260,7 @@ const leadershipData = [
       "Built global enterprise delivery models",
       "Recognized industry leader",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/nishantgautamsap/" },
     email: "nishant@innoviseit.com",
   },
   {
@@ -1278,7 +1278,7 @@ const leadershipData = [
       "Improved operational efficiency across global teams",
       "Managed multi-million delivery portfolios",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/bomarchand/" },
     email: "bob@innoviseit.com",
   },
   {
@@ -1296,7 +1296,7 @@ const leadershipData = [
       "Scaled revenue across multiple regions",
       "Built high-performing sales teams",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/alan-wu-886190" },
     email: "alan@innoviseit.com",
   },
   {
@@ -1314,7 +1314,7 @@ const leadershipData = [
       "Advised global enterprise organizations",
       "Supported long-term strategic growth initiatives",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/" },
     email: "oliver@innoviseit.com",
   },
   {
@@ -1332,7 +1332,7 @@ const leadershipData = [
       "Helped scale enterprise organizations globally",
       "Improved operational efficiency across sectors",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/silviobessa/" },
     email: "silvio@innoviseit.com",
   },
   {
@@ -1350,7 +1350,7 @@ const leadershipData = [
       "Led multiple Guidewire implementations",
       "Improved insurance platform efficiency",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/timothy-wirtjes/" },
     email: "timothy@innoviseit.com",
   },
   {
@@ -1368,7 +1368,10 @@ const leadershipData = [
       "Delivered 24/7 enterprise support models",
       "Improved SLA performance across clients",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: {
+      linkedin:
+        "https://www.linkedin.com/in/jasbir-singh-12b256b?originalSubdomain=ca",
+    },
     email: "jasbir@innoviseit.com",
   },
   {
@@ -1386,7 +1389,10 @@ const leadershipData = [
       "Built enterprise QA frameworks",
       "Reduced defects and improved release quality",
     ],
-    social: { linkedin: "#", twitter: "#" },
+    social: {
+      linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
+      twitter: "#",
+    },
     email: "rodrigo@innoviseit.com",
   },
 ];
@@ -1601,7 +1607,7 @@ const LeaderCard = ({ leader, index }) => {
                   </a>
 
                   {/* Twitter */}
-                  <a
+                  {/* <a
                     href={leader.social.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1613,10 +1619,10 @@ const LeaderCard = ({ leader, index }) => {
                     aria-label={`${leader.name} Twitter`}
                   >
                     <FaTwitter className="text-base" />
-                  </a>
+                  </a> */}
 
                   {/* Email */}
-                  <a
+                  {/* <a
                     href={`mailto:${leader.email}`}
                     className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
                     style={{
@@ -1626,7 +1632,7 @@ const LeaderCard = ({ leader, index }) => {
                     aria-label={`Email ${leader.name}`}
                   >
                     <FaEnvelope className="text-base" />
-                  </a>
+                  </a> */}
                 </motion.div>
               )}
             </AnimatePresence>

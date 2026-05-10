@@ -20,17 +20,18 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: "SAP Consulting", path: "/services/sap" },
-      { name: "Cloud Solutions", path: "/services/cloud" },
-      { name: "Data & Analytics", path: "/services/data" },
-      { name: "Digital Transformation", path: "/services/digital" },
-      { name: "Quality Engineering", path: "/services/qa" },
+      { name: "SAP Solutions", path: "/services/sap-consulting" },
+      { name: "Application Support", path: "/services/app-maintenance" },
+      { name: "Quality Engineering", path: "/services/testing-qa" },
+      { name: "Data Transformation", path: "/services/data-migration" },
+      { name: "Project Recovery", path: "/services/remediation" },
+      { name: "Talent Solutions", path: "/services/staff-augmentation" },
     ],
     company: [
       { name: "About Us", path: "/about" },
       { name: "Leadership", path: "/about/leadership" },
       { name: "Careers", path: "/careers" },
-      { name: "News & Insights", path: "/blog" },
+      { name: "What We Think", path: "/think" },
       { name: "Contact", path: "/contact" },
     ],
     resources: [

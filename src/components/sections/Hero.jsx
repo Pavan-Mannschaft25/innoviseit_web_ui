@@ -330,7 +330,7 @@ const HeroSliderWithContent = ({
             <img
               src={currentSlide.image}
               alt={currentSlide.tag || "Hero slide"}
-              className="w-full h-full object-fill"
+              className="w-full h-full object-cover"
             />
           </motion.div>
         </AnimatePresence>
@@ -340,7 +340,7 @@ const HeroSliderWithContent = ({
       <div className="absolute inset-0 overlay-diagonal z-10" />
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/90 to-transparent z-10" />
+      {/* <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/90 to-transparent z-10" /> */}
 
       {/* Slide Thumbnails (bottom right) */}
       {/* {showThumbnails && slides.length > 1 && (
@@ -382,7 +382,7 @@ const HeroSliderWithContent = ({
       )} */}
 
       {/* Dot Navigation (bottom center) */}
-      {showDots && slides.length > 1 && (
+      {/* {showDots && slides.length > 1 && (
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3">
           {slides.map((_, index) => (
             <motion.button
@@ -403,7 +403,7 @@ const HeroSliderWithContent = ({
             />
           ))}
         </div>
-      )}
+      )} */}
     </section>
   );
 };

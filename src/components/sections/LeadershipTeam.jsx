@@ -990,56 +990,59 @@ const leaders = [
     role: "Founder & CEO",
     image: img1,
     quote: "Building the future of digital transformation",
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/nishantgautamsap/" },
   },
   {
     name: "Bob Marchand",
     role: "Chief Operating Officer",
     image: img2,
     quote: "Operational excellence drives our success",
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/bomarchand/" },
   },
   {
     name: "Alan Wu",
     role: "Chief Revenue Officer",
     image: img3,
     quote: "Revenue growth through innovation",
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/alan-wu-886190" },
   },
   {
     name: "Oliver Betz",
     role: "Board Advisor",
     image: img4,
     quote: "Strategic vision for sustainable growth",
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/" },
   },
   {
     name: "Silvio Bessa",
     role: "Board Advisor",
     image: img5,
     quote: "Guiding companies toward excellence",
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/silviobessa/" },
   },
   {
     name: "Timothy Wirtjes",
     role: "Guidewire Practice Lead",
     image: img6,
     quote: "Leading insurance technology solutions",
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/timothy-wirtjes/" },
   },
   {
     name: "Jasbir Singh",
     role: "Director – AMS",
     image: img7,
     quote: "Delivering managed services excellence",
-    social: { linkedin: "#", twitter: "#" },
+    social: {
+      linkedin:
+        "https://www.linkedin.com/in/jasbir-singh-12b256b?originalSubdomain=ca",
+    },
   },
   {
     name: "Rodrigo Recio",
     role: "Director – Testing Services",
     image: img8,
     quote: "Quality assurance at its finest",
-    social: { linkedin: "#", twitter: "#" },
+    social: { linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/" },
   },
 ];
 
@@ -1186,14 +1189,14 @@ const LeadershipTeam = () => {
                           <FaLinkedinIn className="text-sm" />
                         </a>
 
-                        <a
+                        {/* <a
                           href={leader.social.twitter}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] transition-all duration-300"
                         >
                           <FaTwitter className="text-sm" />
-                        </a>
+                        </a> */}
                       </div>
 
                       {/* Quote Icon */}
