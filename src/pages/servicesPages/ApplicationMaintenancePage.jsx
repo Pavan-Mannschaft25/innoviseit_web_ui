@@ -567,7 +567,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Application Maintenance Services
+              Application Management Services
             </span>
           </div>
 
@@ -610,7 +610,7 @@ const HeroSection = () => (
 
           {/* Description */}
           <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
-            Our Application Maintenance Services go beyond traditional support.
+            Our Application Management Services go beyond traditional support.
             We provide 24/7 monitoring, proactive maintenance, and continuous
             optimization.
           </p>
@@ -1617,15 +1617,15 @@ const CTABannerSection = () => (
 const ApplicationMaintenancePage = () => {
   return (
     <main role="main">
-      <div
+      {/* <div
         className="relative w-full min-h-[70vh] flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${banner})`,
         }}
       >
-        {/* Optional overlay */}
+        
         <div className="absolute inset-0 bg-black/20" />
-      </div>
+      </div> */}
       <HeroSection />
       <ServicesSection />
       <ProcessSection />

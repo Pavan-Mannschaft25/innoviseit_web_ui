@@ -10,7 +10,25 @@ export const navData = {
           path: "/services/sap-consulting",
         },
         {
-          name: "Application Maintenance Services",
+          name: "Guidewire Services",
+          desc: "Comprehensive Guidewire implementation, integration, testing, upgrades, and support solutions",
+          icon: "FaCloud",
+          path: "/services/guidewire",
+        },
+        {
+          name: "Application Development",
+          desc: "Custom enterprise application development with scalable architecture, modern UI/UX, and cloud-ready solutions",
+          icon: "FaLaptopCode",
+          path: "/services/application-development",
+        },
+        {
+          name: "Integration Services",
+          desc: "Seamless system integration connecting applications, APIs, cloud platforms, and enterprise ecosystems",
+          icon: "FaProjectDiagram",
+          path: "/services/integration-services",
+        },
+        {
+          name: "Application Management Services",
           desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
           icon: "FaTools",
           path: "/services/app-maintenance",

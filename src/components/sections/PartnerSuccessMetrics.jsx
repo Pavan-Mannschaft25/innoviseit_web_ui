@@ -694,10 +694,10 @@ const PartnerSuccessMetrics = () => {
 
   return (
     <section
-      className="relative py-8 lg:py-12 overflow-hidden"
-      style={{
-        background: `linear-gradient(to bottom, ${BRAND.navy.dark}, ${BRAND.navy.mid}, ${BRAND.navy.lighter})`,
-      }}
+      className="relative py-8 lg:py-12 overflow-hidden bg-primary-100"
+      // style={{
+      //   background: `linear-gradient(to bottom, ${BRAND.navy.dark}, ${BRAND.navy.mid}, ${BRAND.navy.lighter})`,
+      // }}
     >
       {/* ✨ Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

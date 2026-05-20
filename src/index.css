@@ -7,16 +7,16 @@
 
 @theme {
   /* Primary Colors (Blue) */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
+  --color-primary-50: #f4f8fc;
+  --color-primary-100: #e6eef7;
+  --color-primary-200: #c7d8ea;
+  --color-primary-300: #9db9d5;
+  --color-primary-400: #6f96bc;
+  --color-primary-500: #46739f;
+  --color-primary-600: #2f5c86;
+  --color-primary-700: #1d4568;
+  --color-primary-800: #12324f;
+  --color-primary-900: #0b2a4a;
 
   /* Accent Colors (Amber/Gold) */
   --color-accent-50: #fffbeb;
@@ -29,7 +29,7 @@
   --color-accent-700: #b45309;
 
   /* Font Family */
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
 
   /* Custom Shadows */
   --shadow-card:

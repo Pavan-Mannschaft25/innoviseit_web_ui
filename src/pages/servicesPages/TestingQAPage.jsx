@@ -1732,15 +1732,15 @@ const CTABannerSection = () => (
 const TestingQAPage = () => {
   return (
     <main role="main">
-      <div
+      {/* <div
         className="relative w-full min-h-[70vh] flex items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage: `url(${banner})`,
         }}
       >
-        {/* Optional overlay */}
+        
         <div className="absolute inset-0 bg-black/20" />
-      </div>
+      </div> */}
       <HeroSection />
       <ServicesSection />
       <ProcessSection />

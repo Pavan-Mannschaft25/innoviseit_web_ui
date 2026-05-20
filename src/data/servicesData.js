@@ -209,7 +209,7 @@
 //   },
 //   {
 //     id: 2,
-//     title: "Application Maintenance Services",
+//     title: "Application Management Services",
 //     description:
 //       "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
 //     image: img2,
@@ -272,7 +272,7 @@ export const servicesData = [
   {
     id: 2,
     category: "Application Support",
-    title: "Application Maintenance Services",
+    title: "Application Management Services",
     description:
       "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
     image: img2,

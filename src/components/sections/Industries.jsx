@@ -188,18 +188,18 @@ const COLORS = {
 
 const Industries = () => {
   return (
-    <section className="relative py-6 lg:py-10 bg-gradient-to-br from-[#0B1D33] via-[#0d2240] to-[#081629] overflow-hidden">
+    <section className="relative py-6 lg:py-10 bg-primary-100 overflow-hidden">
       {/* ✨ Background Effects */}
       {/* Gold Glow Top Left */}
-      <div
+      {/* <div
         className="absolute top-0 left-0 w-[800px] h-[800px] bg-yellow-500/[0.06] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         aria-hidden="true"
-      />
+      /> */}
       {/* Navy Glow Bottom Right */}
-      <div
+      {/* <div
         className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-900/[0.15] rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none"
         aria-hidden="true"
-      />
+      /> */}
       {/* Subtle Grid Pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -217,7 +217,7 @@ const Industries = () => {
         <SectionHeader
           title={
             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] tracking-tight">
-              <span className="bg-gradient-to-br from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+              <span className="bg-black bg-clip-text text-transparent">
                 Industries We
               </span>{" "}
               <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
@@ -226,7 +226,7 @@ const Industries = () => {
             </h2>
           }
           subtitle={
-            <p className="text-lg md:text-xl text-gray-300/90 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-black max-w-3xl mx-auto leading-relaxed font-light">
               Deep domain knowledge across industries delivering scalable
               digital solutions with innovation at the core of every
               transformation journey

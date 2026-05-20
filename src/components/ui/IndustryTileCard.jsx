@@ -891,7 +891,7 @@ const IndustryTileCard = ({
         {/* Title */}
         <h3
           className={`text-xl font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
-            isDark ? "text-white" : "text-white"
+            isDark ? "text-white" : "text-[#0B1D33]"
           } group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913] group-hover:bg-clip-text group-hover:text-transparent`}
         >
           {data.title}
@@ -902,7 +902,7 @@ const IndustryTileCard = ({
           className={`text-sm leading-relaxed mb-4 transition-opacity duration-300 line-clamp-3 ${
             isDark
               ? "text-gray-400/80 group-hover:text-gray-300"
-              : "text-gray-400/70 group-hover:text-gray-300/90"
+              : "text-[#0B1D33]  group-hover:text-gray-300/90"
           }`}
         >
           {data.description}
