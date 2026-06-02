@@ -686,13 +686,13 @@ const HeroSection = () => {
                 Get Started
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button
+              {/* <button
                 onClick={() => navigate("/contact")}
                 className="border border-primary-200 hover:border-accent-400 hover:bg-primary-50 text-primary-800 px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300"
               >
                 <FaPlayCircle className="text-accent-500" />
                 Success Stories
-              </button>
+              </button> */}
             </div>
 
             {/* Stats */}
