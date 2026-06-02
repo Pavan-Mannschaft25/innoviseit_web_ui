@@ -594,6 +594,7 @@
 
 import React from "react";
 import { FaArrowRight, FaPlayCircle, FaCheckCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 // ===== IMAGES =====
 import img1 from "../../assets/leaders/NishantGautam.webp";
@@ -602,6 +603,7 @@ import img3 from "../../assets/leaders/AlanWu.webp";
 import img4 from "../../assets/leaders/OliverBetz.webp";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   // Orbital positions for images
   const orbitPositions = [
     { src: img1, pos: "top-0 left-1/2 -translate-x-1/2 -translate-y-4" },
@@ -620,12 +622,30 @@ const HeroSection = () => {
   ];
 
   const services = [
-    "SAP Consulting",
-    "Guidewire",
-    "Testing & QA",
-    "Data Migration",
-    "Cloud Services",
-    "Staff Augmentation",
+    {
+      name: "SAP",
+      path: "/services/sap-consulting",
+    },
+    {
+      name: "Guidewire",
+      path: "/services/guidewire",
+    },
+    {
+      name: "Core Engineering & AI",
+      path: "/services/core-engineering-ai",
+    },
+    // {
+    //   name: "Testing & QA",
+    //   path: "/services/testing-qa",
+    // },
+    // {
+    //   name: "Data Migration",
+    //   path: "/services/data-migration",
+    // },
+    // {
+    //   name: "Cloud Services",
+    //   path: "/services/cloud-services",
+    // },
   ];
 
   return (
@@ -659,18 +679,24 @@ const HeroSection = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <button className="group bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg">
+              <button
+                onClick={() => navigate("/contact")}
+                className="group bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
+              >
                 Get Started
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border border-primary-200 hover:border-accent-400 hover:bg-primary-50 text-primary-800 px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300">
+              <button
+                onClick={() => navigate("/contact")}
+                className="border border-primary-200 hover:border-accent-400 hover:bg-primary-50 text-primary-800 px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+              >
                 <FaPlayCircle className="text-accent-500" />
                 Success Stories
               </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0 pt-2">
+            {/* <div className="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0 pt-2">
               {stats.map((stat, i) => (
                 <div
                   key={i}
@@ -682,7 +708,7 @@ const HeroSection = () => {
                   <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT ORBITAL IMAGES */}
@@ -732,14 +758,15 @@ const HeroSection = () => {
         </div>
 
         {/* SERVICES GRID */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
           {services.map((service, i) => (
             <div
               key={i}
+              onClick={() => navigate(service.path)}
               className="bg-white border border-primary-100 rounded-2xl px-4 py-4 text-center hover:border-accent-400 hover:shadow-md transition-all duration-300 cursor-pointer group"
             >
-              <p className="text-xs font-semibold text-primary-800 group-hover:text-accent-600">
-                {service}
+              <p className="text-xs md:text-md font-semibold text-primary-800 group-hover:text-accent-600">
+                {service.name}
               </p>
             </div>
           ))}

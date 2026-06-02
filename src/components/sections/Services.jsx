@@ -922,7 +922,7 @@ const Services = () => {
               spaceBetween: 30,
             },
             1400: {
-              slidesPerView: 3.4,
+              slidesPerView: 3,
               spaceBetween: 32,
             },
           }}
@@ -952,7 +952,7 @@ const Services = () => {
       </Container>
 
       {/* Styles */}
-      <style>{`
+      {/* <style>{`
         .services-premium-swiper .swiper-slide {
           opacity: 0.5;
           transform: scale(0.92);
@@ -969,7 +969,7 @@ const Services = () => {
         .services-premium-swiper .swiper-wrapper {
           align-items: stretch;
         }
-      `}</style>
+      `}</style> */}
     </section>
   );
 };

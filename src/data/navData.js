@@ -16,6 +16,12 @@ export const navData = {
           path: "/services/guidewire",
         },
         {
+          name: "Core Engineering & AI",
+          desc: "Innovative engineering solutions, AI-driven development, automation, and advanced testing services to accelerate digital transformation and business growth.",
+          icon: "FaRobot",
+          path: "/services/core-engineering-ai",
+        },
+        {
           name: "Application Development",
           desc: "Custom enterprise application development with scalable architecture, modern UI/UX, and cloud-ready solutions",
           icon: "FaLaptopCode",
