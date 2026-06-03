@@ -33,6 +33,7 @@ import GuidewirePage from "../pages/servicesPages/GuidewirePage";
 import ApplicationDevelopmentPage from "../pages/servicesPages/ApplicationDevelopmentPage";
 import IntegrationServicesPage from "../pages/servicesPages/IntegrationServicesPage";
 import EngineeringAIPage from "../pages/servicesPages/EngineeringAIPage";
+import ProjectSupportRemediationPage from "../pages/servicesPages/ProjectSupportRemediationPage";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -102,6 +103,10 @@ const AppRoutes = () => {
           <Route
             path="/services/sap-consulting"
             element={<SAPConsultingPage />}
+          />
+          <Route
+            path="/services/project-support"
+            element={<ProjectSupportRemediationPage />}
           />
           <Route path="/services/guidewire" element={<GuidewirePage />} />
           <Route

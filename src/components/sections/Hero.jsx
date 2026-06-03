@@ -412,154 +412,162 @@
 
 // import React from "react";
 // import { FaArrowRight, FaPlayCircle, FaCheckCircle } from "react-icons/fa";
+// import { useNavigate } from "react-router-dom";
 
 // // ===== IMAGES =====
-// import img1 from "../../assets/leaders/AlanWu.webp";
-// import img2 from "../../assets/leaders/AlanWu.webp";
+// import img1 from "../../assets/leaders/NishantGautam.webp";
+// import img2 from "../../assets/leaders/BobMarchand.webp";
 // import img3 from "../../assets/leaders/AlanWu.webp";
-// import img4 from "../../assets/leaders/AlanWu.webp";
-
-// // ===== LOGO =====
-// import logo from "../../assets/images/innovise_it_logo.png";
+// import img4 from "../../assets/leaders/OliverBetz.webp";
 
 // const HeroSection = () => {
+//   const navigate = useNavigate();
+//   // Orbital positions for images
+//   const orbitPositions = [
+//     { src: img1, pos: "top-0 left-1/2 -translate-x-1/2 -translate-y-4" },
+//     { src: img2, pos: "right-0 top-1/2 -translate-y-1/2 translate-x-4" },
+//     {
+//       src: img3,
+//       pos: "bottom-0 left-1/2 -translate-x-1/2 translate-y-4",
+//     },
+//     { src: img4, pos: "left-0 top-1/2 -translate-y-1/2 -translate-x-4" },
+//   ];
+
+//   const stats = [
+//     { value: "19+", label: "Years Experience" },
+//     { value: "100+", label: "Global Clients" },
+//     { value: "25+", label: "Enterprise Solutions" },
+//   ];
+
+//   const services = [
+//     {
+//       name: "SAP",
+//       path: "/services/sap-consulting",
+//     },
+//     {
+//       name: "Guidewire",
+//       path: "/services/guidewire",
+//     },
+//     {
+//       name: "Core Engineering & AI",
+//       path: "/services/core-engineering-ai",
+//     },
+//     // {
+//     //   name: "Testing & QA",
+//     //   path: "/services/testing-qa",
+//     // },
+//     // {
+//     //   name: "Data Migration",
+//     //   path: "/services/data-migration",
+//     // },
+//     // {
+//     //   name: "Cloud Services",
+//     //   path: "/services/cloud-services",
+//     // },
+//   ];
+
 //   return (
-//     <section className="relative overflow-hidden bg-white">
-//       {/* Background Blur */}
-//       {/* <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary-100 blur-[100px] rounded-full"></div> */}
+//     <section className="relative overflow-hidden bg-white min-h-[90vh]">
+//       {/* Background Blurs */}
+//       {/* <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary-100 blur-[100px] rounded-full opacity-60"></div>
+//       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-accent-100 blur-[100px] rounded-full opacity-60"></div> */}
 
-//       {/* <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-accent-100 blur-[100px] rounded-full"></div> */}
-
-//       <div className="max-w-8xl mx-auto px-5 lg:px-8 py-10 lg:py-14 relative z-10">
-//         <div className="grid lg:grid-cols-2 gap-10 items-center">
-//           {/* ================= LEFT CONTENT ================= */}
-//           <div>
-//             {/* Logo */}
-//             {/* <img src={logo} alt="Innovise IT" className="w-[180px] mb-5" /> */}
-
+//       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-10 relative z-10">
+//         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+//           {/* LEFT CONTENT */}
+//           <div className="order-2 lg:order-1 text-center lg:text-left space-y-5 sm:space-y-6">
 //             {/* Badge */}
-//             <div className="inline-flex items-center gap-2 border border-primary-200 bg-primary-50 text-primary-800 px-4 py-2 rounded-full text-xs font-semibold mb-5">
+//             <span className="inline-flex items-center gap-2 border border-primary-200 bg-primary-50 text-primary-800 px-4 py-2 rounded-full text-xs font-semibold">
 //               <FaCheckCircle className="text-accent-500" />
 //               SAP & Guidewire Technology Partner
-//             </div>
+//             </span>
 
 //             {/* Heading */}
-//             <h1 className="text-3xl md:text-5xl font-bold leading-[1.1] text-primary-900 mb-5">
+//             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-primary-900">
 //               Transform Business with
 //               <span className="block text-accent-500">SAP & Guidewire</span>
 //             </h1>
 
 //             {/* Description */}
-//             <p className="text-gray-600 text-base leading-relaxed max-w-xl mb-7">
+//             <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
 //               Innovise IT delivers SAP consulting, Guidewire solutions, cloud
 //               transformation, testing, and enterprise modernization services for
 //               scalable growth.
 //             </p>
 
 //             {/* Buttons */}
-//             <div className="flex flex-wrap gap-3 mb-8">
-//               <button className="group bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all duration-300">
+//             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+//               <button
+//                 onClick={() => navigate("/contact")}
+//                 className="group bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
+//               >
 //                 Get Started
-//                 <FaArrowRight className="group-hover:translate-x-1 transition-all duration-300" />
+//                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
 //               </button>
-
-//               <button className="border border-primary-200 hover:border-accent-400 hover:bg-primary-50 text-primary-800 px-6 py-3 rounded-xl text-sm font-semibold flex items-center gap-2 transition-all duration-300">
+//               {/* <button
+//                 onClick={() => navigate("/contact")}
+//                 className="border border-primary-200 hover:border-accent-400 hover:bg-primary-50 text-primary-800 px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300"
+//               >
 //                 <FaPlayCircle className="text-accent-500" />
 //                 Success Stories
-//               </button>
+//               </button> */}
 //             </div>
 
 //             {/* Stats */}
-//             <div className="grid grid-cols-3 gap-3">
-//               <div className="bg-white border border-primary-100 rounded-2xl p-4 shadow-sm">
-//                 <h3 className="text-2xl font-bold text-primary-800">19+</h3>
-//                 <p className="text-xs text-gray-500 mt-1">Years Experience</p>
-//               </div>
-
-//               <div className="bg-white border border-primary-100 rounded-2xl p-4 shadow-sm">
-//                 <h3 className="text-2xl font-bold text-primary-800">100+</h3>
-//                 <p className="text-xs text-gray-500 mt-1">Global Clients</p>
-//               </div>
-
-//               <div className="bg-white border border-primary-100 rounded-2xl p-4 shadow-sm">
-//                 <h3 className="text-2xl font-bold text-primary-800">25+</h3>
-//                 <p className="text-xs text-gray-500 mt-1">
-//                   Enterprise Solutions
-//                 </p>
-//               </div>
-//             </div>
+//             {/* <div className="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0 pt-2">
+//               {stats.map((stat, i) => (
+//                 <div
+//                   key={i}
+//                   className="bg-white border border-primary-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
+//                 >
+//                   <h3 className="text-2xl font-bold text-primary-800">
+//                     {stat.value}
+//                   </h3>
+//                   <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
+//                 </div>
+//               ))}
+//             </div> */}
 //           </div>
 
-//           <div className="relative w-[500px] h-[500px] flex items-center justify-center">
-//             {/* Background glow */}
-//             <div
-//               className="absolute w-[300px] h-[300px] bg-gradient-to-br from-primary-200 to-blue-200
-//                rounded-full blur-3xl opacity-50 animate-pulse"
-//             ></div>
+//           {/* RIGHT ORBITAL IMAGES */}
+//           <div className="order-1 lg:order-2 relative w-full max-w-[500px] mx-auto aspect-square flex items-center justify-center">
+//             {/* Glow Effect */}
+//             <div className="absolute w-[60%] h-[60%] bg-gradient-to-br from-primary-200 to-blue-200 rounded-full blur-3xl opacity-50 animate-pulse"></div>
 
-//             {/* Orbital ring */}
-//             <div
-//               className="absolute w-[420px] h-[420px] border-2 border-dashed border-primary-200
-//                rounded-full animate-spin-slow"
-//             ></div>
+//             {/* Orbital Ring (hidden on mobile) */}
+//             <div className="absolute hidden md:block w-[85%] h-[85%] border-2 border-dashed border-primary-800 rounded-full animate-spin-slow"></div>
 
-//             {/* Images positioned around center */}
-//             <div
-//               className="absolute top-0 left-1/2 -translate-x-1/2 w-[140px] h-[140px]
-//                rounded-[20px] overflow-hidden shadow-2xl transform -translate-y-4
-//                hover:scale-110 hover:z-30 transition-all duration-500"
-//             >
-//               <img src={img1} alt="" className="w-full h-full object-cover" />
-//             </div>
+//             {/* Images positioned in orbit */}
+//             {orbitPositions.map((img, i) => (
+//               <div
+//                 key={i}
+//                 className={`absolute ${img.pos} w-[28%] max-w-[140px] aspect-square rounded-[20px] overflow-hidden shadow-2xl hover:scale-110 hover:z-30 transition-all duration-500 z-20`}
+//               >
+//                 <img
+//                   src={img.src}
+//                   alt=""
+//                   className="w-full h-full object-cover"
+//                   loading="lazy"
+//                 />
+//               </div>
+//             ))}
 
-//             <div
-//               className="absolute right-0 top-1/2 -translate-y-1/2 w-[140px] h-[140px]
-//                rounded-[20px] overflow-hidden shadow-2xl transform translate-x-4
-//                hover:scale-110 hover:z-30 transition-all duration-500"
-//             >
-//               <img src={img2} alt="" className="w-full h-full object-cover" />
-//             </div>
-
-//             <div
-//               className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[140px] h-[140px]
-//                rounded-[20px] overflow-hidden shadow-2xl transform translate-y-4
-//                hover:scale-110 hover:z-30 transition-all duration-500"
-//             >
-//               <img src={img3} alt="" className="w-full h-full object-cover" />
-//             </div>
-
-//             <div
-//               className="absolute left-0 top-1/2 -translate-y-1/2 w-[140px] h-[140px]
-//                rounded-[20px] overflow-hidden shadow-2xl transform -translate-x-4
-//                hover:scale-110 hover:z-30 transition-all duration-500"
-//             >
-//               <img src={img4} alt="" className="w-full h-full object-cover" />
-//             </div>
-
-//             {/* Center floating card */}
-//             <div
-//               className="relative z-40 bg-white border border-primary-300 rounded-3xl px-4 py-4
-//                shadow-2xl backdrop-blur-xl bg-white/95"
-//             >
+//             {/* Center Floating Card */}
+//             <div className="relative z-40 w-[55%] sm:w-[75%] md:w-auto md:min-w-[240px] bg-white border border-primary-300 rounded-3xl p-2 md:p-4 shadow-2xl backdrop-blur-xl">
 //               <div className="flex items-center gap-3 mb-3">
-//                 <div
-//                   className="w-12 h-12 bg-gradient-to-br from-primary-500 to-blue-600
-//                    rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg"
-//                 >
+//                 <div className="w-8 h-8 bg-gradient-to-br from-primary-700 to-primary-800 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shrink-0">
 //                   S
 //                 </div>
 //                 <div>
-//                   <p className="text-xs text-gray-500 font-medium">
-//                     Enterprise Suite
-//                   </p>
-//                   <h3 className="text-xl font-bold text-primary-900">
+//                   <p className="text-xs text-gray-500">Enterprise Suite</p>
+//                   <h3 className="text-md md:text-lg font-bold text-primary-900">
 //                     SAP • Guidewire
 //                   </h3>
 //                 </div>
 //               </div>
-//               <div className="flex items-center gap-2 bg-green-50 rounded-full px-4 py-2">
+//               <div className="inline-flex items-center gap-2 bg-green-50 rounded-full px-4 py-2">
 //                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-//                 <span className="text-sm text-green-700 font-medium">
+//                 <span className="text-xs md:text-sm text-green-700 font-medium">
 //                   Live & Scalable
 //                 </span>
 //               </div>
@@ -567,25 +575,23 @@
 //           </div>
 //         </div>
 
-//         {/* ================= SERVICES ================= */}
-//         <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-//           {[
-//             "SAP Consulting",
-//             "Guidewire",
-//             "Testing & QA",
-//             "Data Migration",
-//             "Cloud Services",
-//             "Staff Augmentation",
-//           ].map((item, index) => (
+//         {/* SERVICES GRID */}
+//         <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
+//           {services.map((service, i) => (
 //             <div
-//               key={index}
-//               className="bg-white border border-primary-100 rounded-2xl px-4 py-4 text-center hover:border-accent-400 transition-all duration-300 shadow-sm"
+//               key={i}
+//               onClick={() => navigate(service.path)}
+//               className="bg-white border border-primary-100 rounded-2xl px-4 py-4 text-center hover:border-accent-400 hover:shadow-md transition-all duration-300 cursor-pointer group"
 //             >
-//               <p className="text-xs font-semibold text-primary-800">{item}</p>
+//               <p className="text-xs md:text-md font-semibold text-primary-800 group-hover:text-accent-600">
+//                 {service.name}
+//               </p>
 //             </div>
 //           ))}
 //         </div>
 //       </div>
+
+//       <style>{`@keyframes spin-slow{to{transform:rotate(360deg)}}.animate-spin-slow{animation:spin-slow 20s linear infinite}`}</style>
 //     </section>
 //   );
 // };
@@ -593,189 +599,33 @@
 // export default HeroSection;
 
 import React from "react";
-import { FaArrowRight, FaPlayCircle, FaCheckCircle } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import banner from "../../assets/banners/home_banner.png";
 
-// ===== IMAGES =====
-import img1 from "../../assets/leaders/NishantGautam.webp";
-import img2 from "../../assets/leaders/BobMarchand.webp";
-import img3 from "../../assets/leaders/AlanWu.webp";
-import img4 from "../../assets/leaders/OliverBetz.webp";
-
-const HeroSection = () => {
-  const navigate = useNavigate();
-  // Orbital positions for images
-  const orbitPositions = [
-    { src: img1, pos: "top-0 left-1/2 -translate-x-1/2 -translate-y-4" },
-    { src: img2, pos: "right-0 top-1/2 -translate-y-1/2 translate-x-4" },
-    {
-      src: img3,
-      pos: "bottom-0 left-1/2 -translate-x-1/2 translate-y-4",
-    },
-    { src: img4, pos: "left-0 top-1/2 -translate-y-1/2 -translate-x-4" },
-  ];
-
-  const stats = [
-    { value: "19+", label: "Years Experience" },
-    { value: "100+", label: "Global Clients" },
-    { value: "25+", label: "Enterprise Solutions" },
-  ];
-
-  const services = [
-    {
-      name: "SAP",
-      path: "/services/sap-consulting",
-    },
-    {
-      name: "Guidewire",
-      path: "/services/guidewire",
-    },
-    {
-      name: "Core Engineering & AI",
-      path: "/services/core-engineering-ai",
-    },
-    // {
-    //   name: "Testing & QA",
-    //   path: "/services/testing-qa",
-    // },
-    // {
-    //   name: "Data Migration",
-    //   path: "/services/data-migration",
-    // },
-    // {
-    //   name: "Cloud Services",
-    //   path: "/services/cloud-services",
-    // },
-  ];
-
+function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white min-h-[90vh]">
-      {/* Background Blurs */}
-      {/* <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary-100 blur-[100px] rounded-full opacity-60"></div>
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-accent-100 blur-[100px] rounded-full opacity-60"></div> */}
-
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-10 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* LEFT CONTENT */}
-          <div className="order-2 lg:order-1 text-center lg:text-left space-y-5 sm:space-y-6">
-            {/* Badge */}
-            <span className="inline-flex items-center gap-2 border border-primary-200 bg-primary-50 text-primary-800 px-4 py-2 rounded-full text-xs font-semibold">
-              <FaCheckCircle className="text-accent-500" />
-              SAP & Guidewire Technology Partner
-            </span>
-
-            {/* Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-primary-900">
-              Transform Business with
-              <span className="block text-accent-500">SAP & Guidewire</span>
-            </h1>
-
-            {/* Description */}
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Innovise IT delivers SAP consulting, Guidewire solutions, cloud
-              transformation, testing, and enterprise modernization services for
-              scalable growth.
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <button
-                onClick={() => navigate("/contact")}
-                className="group bg-primary-700 hover:bg-primary-800 text-white px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300 hover:shadow-lg"
-              >
-                Get Started
-                <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
-              {/* <button
-                onClick={() => navigate("/contact")}
-                className="border border-primary-200 hover:border-accent-400 hover:bg-primary-50 text-primary-800 px-6 py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-300"
-              >
-                <FaPlayCircle className="text-accent-500" />
-                Success Stories
-              </button> */}
-            </div>
-
-            {/* Stats */}
-            {/* <div className="grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0 pt-2">
-              {stats.map((stat, i) => (
-                <div
-                  key={i}
-                  className="bg-white border border-primary-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <h3 className="text-2xl font-bold text-primary-800">
-                    {stat.value}
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
-                </div>
-              ))}
-            </div> */}
-          </div>
-
-          {/* RIGHT ORBITAL IMAGES */}
-          <div className="order-1 lg:order-2 relative w-full max-w-[500px] mx-auto aspect-square flex items-center justify-center">
-            {/* Glow Effect */}
-            <div className="absolute w-[60%] h-[60%] bg-gradient-to-br from-primary-200 to-blue-200 rounded-full blur-3xl opacity-50 animate-pulse"></div>
-
-            {/* Orbital Ring (hidden on mobile) */}
-            <div className="absolute hidden md:block w-[85%] h-[85%] border-2 border-dashed border-primary-800 rounded-full animate-spin-slow"></div>
-
-            {/* Images positioned in orbit */}
-            {orbitPositions.map((img, i) => (
-              <div
-                key={i}
-                className={`absolute ${img.pos} w-[28%] max-w-[140px] aspect-square rounded-[20px] overflow-hidden shadow-2xl hover:scale-110 hover:z-30 transition-all duration-500 z-20`}
-              >
-                <img
-                  src={img.src}
-                  alt=""
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-
-            {/* Center Floating Card */}
-            <div className="relative z-40 w-[55%] sm:w-[75%] md:w-auto md:min-w-[240px] bg-white border border-primary-300 rounded-3xl p-2 md:p-4 shadow-2xl backdrop-blur-xl">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary-700 to-primary-800 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shrink-0">
-                  S
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500">Enterprise Suite</p>
-                  <h3 className="text-md md:text-lg font-bold text-primary-900">
-                    SAP • Guidewire
-                  </h3>
-                </div>
-              </div>
-              <div className="inline-flex items-center gap-2 bg-green-50 rounded-full px-4 py-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                <span className="text-xs md:text-sm text-green-700 font-medium">
-                  Live & Scalable
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* SERVICES GRID */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              onClick={() => navigate(service.path)}
-              className="bg-white border border-primary-100 rounded-2xl px-4 py-4 text-center hover:border-accent-400 hover:shadow-md transition-all duration-300 cursor-pointer group"
-            >
-              <p className="text-xs md:text-md font-semibold text-primary-800 group-hover:text-accent-600">
-                {service.name}
-              </p>
-            </div>
-          ))}
-        </div>
+    <section className="relative bg-[#020B2D] overflow-hidden">
+      <div
+        className="
+      w-full
+      h-[35vh]
+      sm:h-[45vh]
+      md:h-[55vh]
+      lg:h-[75vh]
+      xl:h-[95vh]
+    "
+      >
+        <img
+          src={banner}
+          alt="Innovise IT Banner"
+          className="
+        w-full
+        h-full
+        object-contain rounded-3xl
+      "
+        />
       </div>
-
-      <style>{`@keyframes spin-slow{to{transform:rotate(360deg)}}.animate-spin-slow{animation:spin-slow 20s linear infinite}`}</style>
     </section>
   );
-};
+}
 
-export default HeroSection;
+export default Hero;
