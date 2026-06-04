@@ -1561,7 +1561,7 @@ const leadershipData = [
   {
     id: 8,
     name: "Rodrigo Recio",
-    role: "Director – Testing Services",
+    role: "Director – Head of Testing Services",
     image: img8,
     initials: "RR",
     color: "#EF4444",
