@@ -1120,7 +1120,7 @@ const leaders = [
 
   {
     name: "Rodrigo Recio",
-    role: "Director – Testing Services",
+    role: "Director – Head of Testing Services",
     image: img8,
     quote: "Expert in SAP testing and automation leadership.",
     social: {
@@ -1214,11 +1214,11 @@ const LeadershipTeam = () => {
             loop={true}
             speed={800}
             grabCursor={true}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
+            // autoplay={{
+            //   delay: 3000,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: true,
+            // }}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             breakpoints={{
               480: {
