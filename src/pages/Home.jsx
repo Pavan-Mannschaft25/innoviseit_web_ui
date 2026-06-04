@@ -23,7 +23,7 @@ const HomePage = () => {
       <LeadershipTeam />
       <Clients />
       <MixedMediaText />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       {/* <CTA /> */}
     </main>
   );
