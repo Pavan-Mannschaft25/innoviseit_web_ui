@@ -9,14 +9,14 @@ import LeadershipTeam from "../components/sections/LeadershipTeam";
 // import PartnerSuccessMetrics from "../components/sections/PartnerSuccessMetrics";
 import MixedMediaText from "../components/sections/MixedMediaText";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
-import ServiceNavigator from "../components/sections/ServiceNavigator";
+// import ServiceNavigator from "../components/sections/ServiceNavigator";
 
 const HomePage = () => {
   return (
     <main>
       <Hero />
       <Services />
-      <ServiceNavigator />
+      {/* <ServiceNavigator /> */}
       <Industries />
       {/* <CaseStudies /> */}
       {/* <PartnerSuccessMetrics /> */}
