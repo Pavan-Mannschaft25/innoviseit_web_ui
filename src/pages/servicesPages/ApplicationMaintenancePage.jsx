@@ -567,7 +567,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Application Management Services
+              Application Maintenance Services
             </span>
           </div>
 
@@ -610,7 +610,7 @@ const HeroSection = () => (
 
           {/* Description */}
           <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
-            Our Application Management Services go beyond traditional support.
+            Our Application Maintenance Services go beyond traditional support.
             We provide 24/7 monitoring, proactive maintenance, and continuous
             optimization.
           </p>
@@ -819,7 +819,7 @@ const HeroSection = () => (
               </div>
 
               {/* Bottom Activity Feed */}
-              <div className="grid grid-cols-2 gap-3">
+              {/* <div className="grid grid-cols-2 gap-3">
                 <div
                   className="p-3 rounded-xl"
                   style={{
@@ -915,7 +915,7 @@ const HeroSection = () => (
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Floating Stats Card */}
@@ -1000,7 +1000,7 @@ const ServicesSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          Comprehensive{" "}
+          Application{" "}
           <span
             style={{
               backgroundImage: BRAND.gold.gradient,

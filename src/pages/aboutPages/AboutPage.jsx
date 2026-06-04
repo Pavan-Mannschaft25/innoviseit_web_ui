@@ -70,7 +70,7 @@ const servicesData = [
   {
     id: 2,
     icon: FaCogs,
-    title: "Application Management Services",
+    title: "Application Maintenance Services",
     description:
       "24/7 monitoring, support, and continuous optimization of your enterprise applications.",
     features: [
