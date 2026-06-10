@@ -16,25 +16,37 @@ export const navData = {
           path: "/services/guidewire",
         },
         {
-          name: "Core Engineering & AI",
-          desc: "Innovative engineering solutions, AI-driven development, automation, and advanced testing services to accelerate digital transformation and business growth.",
+          name: "Application Development & AI",
+          desc: "Custom application development, SAP and Guidewire integrations, AI-enabled automation, and enterprise solutions that streamline operations and drive digital transformation.",
           icon: "FaRobot",
-          path: "/services/core-engineering-ai",
+          path: "/services/application-development-integration-ai",
         },
+        // {
+        //   id: 3,
+        //   category: "Application Development & AI",
+        //   title: "Application Development, Integration Services & AI",
+        //   description:
+        //     "Custom application development, SAP and Guidewire integrations, AI-enabled automation, and enterprise solutions that streamline operations and drive digital transformation.",
+        //   image: img3,
+        //   readTime: "Integration & AI",
+        //   date: "Innovise IT",
+        //   featured: true,
+        //   link: "/services/application-development-integration-ai",
+        // },
+        // {
+        //   name: "Application Development",
+        //   desc: "Custom enterprise application development with scalable architecture, modern UI/UX, and cloud-ready solutions",
+        //   icon: "FaLaptopCode",
+        //   path: "/services/application-development",
+        // },
+        // {
+        //   name: "Integration Services",
+        //   desc: "Seamless system integration connecting applications, APIs, cloud platforms, and enterprise ecosystems",
+        //   icon: "FaProjectDiagram",
+        //   path: "/services/integration-services",
+        // },
         {
-          name: "Application Development",
-          desc: "Custom enterprise application development with scalable architecture, modern UI/UX, and cloud-ready solutions",
-          icon: "FaLaptopCode",
-          path: "/services/application-development",
-        },
-        {
-          name: "Integration Services",
-          desc: "Seamless system integration connecting applications, APIs, cloud platforms, and enterprise ecosystems",
-          icon: "FaProjectDiagram",
-          path: "/services/integration-services",
-        },
-        {
-          name: "Application Maintenance Services",
+          name: "Application Management Services",
           desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
           icon: "FaTools",
           path: "/services/app-maintenance",
@@ -46,17 +58,23 @@ export const navData = {
           path: "/services/testing-qa",
         },
         {
+          name: "Code Quality & Security",
+          desc: "Comprehensive code reviews, secure coding practices, vulnerability assessments, and quality assurance to ensure reliable and secure applications",
+          icon: "FaShieldAlt",
+          path: "/services/code-quality-security",
+        },
+        {
           name: "Data Migration & Transformation",
           desc: "System consolidation, SAP HANA migration, and data modernization",
           icon: "FaDatabase",
           path: "/services/data-migration",
         },
-        {
-          name: "Project Remediation",
-          desc: "Rescue underperforming projects with proven recovery methodologies",
-          icon: "FaWrench",
-          path: "/services/remediation",
-        },
+        // {
+        //   name: "Project Remediation",
+        //   desc: "Rescue underperforming projects with proven recovery methodologies",
+        //   icon: "FaWrench",
+        //   path: "/services/remediation",
+        // },
         {
           name: "Staff Augmentation",
           desc: "On-demand access to certified SAP and engineering experts",
@@ -169,12 +187,12 @@ export const navData = {
     {
       title: "Industries",
       items: [
-        {
-          name: "Aerospace & Defense",
-          desc: "Maintenance, repair, and overhaul (MRO), project management, and regulatory compliance",
-          icon: "FaFighterJet",
-          path: "/industries/aerospace-defense",
-        },
+        // {
+        //   name: "Aerospace & Defense",
+        //   desc: "Maintenance, repair, and overhaul (MRO), project management, and regulatory compliance",
+        //   icon: "FaFighterJet",
+        //   path: "/industries/aerospace-defense",
+        // },
         {
           name: "Automotive",
           desc: "Vehicle lifecycle management, connected vehicles, and future mobility solutions",
@@ -182,17 +200,23 @@ export const navData = {
           path: "/industries/automotive",
         },
         {
-          name: "Chemicals",
-          desc: "Formulation, batch management, and safe supply chain for hazardous materials",
-          icon: "FaFlask",
-          path: "/industries/chemicals",
+          name: "Energy, Oil & Gas, Utilities & Chemicals",
+          desc: "Driving operational excellence through asset management, smart metering, energy trading, batch manufacturing, regulatory compliance, and supply chain solutions.",
+          icon: "FaBolt",
+          path: "/industries/energy-utilities",
         },
-        {
-          name: "Construction & Real Estate",
-          desc: "Project controls, asset management, and EHS (environment, health, safety) solutions",
-          icon: "FaBuilding",
-          path: "/industries/construction-real-estate",
-        },
+        // {
+        //   name: "Chemicals",
+        //   desc: "Formulation, batch management, and safe supply chain for hazardous materials",
+        //   icon: "FaFlask",
+        //   path: "/industries/chemicals",
+        // },
+        // {
+        //   name: "Construction & Real Estate",
+        //   desc: "Project controls, asset management, and EHS (environment, health, safety) solutions",
+        //   icon: "FaBuilding",
+        //   path: "/industries/construction-real-estate",
+        // },
         {
           name: "Consumer Products",
           desc: "Demand-driven supply chains, trade promotion, and omnichannel strategies",
@@ -205,12 +229,12 @@ export const navData = {
           icon: "FaStore",
           path: "/industries/retail",
         },
-        {
-          name: "Energy, Oil & Gas, Utilities",
-          desc: "Asset-intensive operations, smart metering, and energy trading systems",
-          icon: "FaBolt",
-          path: "/industries/energy-utilities",
-        },
+        // {
+        //   name: "Energy, Oil & Gas, Utilities",
+        //   desc: "Asset-intensive operations, smart metering, and energy trading systems",
+        //   icon: "FaBolt",
+        //   path: "/industries/energy-utilities",
+        // },
         {
           name: "Industrial Manufacturing & High Tech",
           desc: "Smart factories, predictive maintenance, and Industry 4.0 / IIoT solutions",

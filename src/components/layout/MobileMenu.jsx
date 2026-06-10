@@ -66,7 +66,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   Home
                 </Link>
 
-                <Link
+                {/* <Link
                   to="/think"
                   onClick={onClose}
                   className={`flex items-center gap-2 px-4 py-3 rounded-xl font-semibold transition-colors ${
@@ -77,7 +77,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                 >
                   What We Think
                   <FaIcons.FaStar className="text-xs text-accent-500" />
-                </Link>
+                </Link> */}
 
                 <Link
                   to="/careers"

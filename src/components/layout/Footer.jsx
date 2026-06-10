@@ -20,18 +20,30 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: "SAP Solutions", path: "/services/sap-consulting" },
-      { name: "Application Support", path: "/services/app-maintenance" },
-      { name: "Quality Engineering", path: "/services/testing-qa" },
-      { name: "Data Transformation", path: "/services/data-migration" },
-      { name: "Project Recovery", path: "/services/remediation" },
-      { name: "Talent Solutions", path: "/services/staff-augmentation" },
+      {
+        name: "SAP",
+        path: "/services/sap-consulting",
+      },
+      { name: "Guidewire Services", path: "/services/guidewire" },
+      {
+        name: "Application Development & AI",
+        path: "/services/application-development-integration-ai",
+      },
+      {
+        name: "AMS",
+        path: "/services/app-maintenance",
+      },
+      { name: "Testing & Quality Assurance", path: "/services/testing-qa" },
+      {
+        name: "Code Quality & Security",
+        path: "/services/code-quality-security",
+      },
     ],
     company: [
       { name: "About Us", path: "/about" },
       { name: "Leadership", path: "/about/leadership" },
       { name: "Careers", path: "/careers" },
-      { name: "What We Think", path: "/think" },
+      { name: "Our Values", path: "/culture/values" },
       { name: "Contact", path: "/contact" },
     ],
     resources: [
@@ -60,9 +72,10 @@ const Footer = () => {
               </Link>
 
               <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
-                Enterprise technology partner delivering innovative SAP, cloud,
-                and digital transformation solutions that drive measurable
-                business outcomes for global organizations.
+                Innovative technology partner delivering SAP, Guidewire, cloud,
+                AI, and digital transformation solutions that help organizations
+                modernize operations, accelerate growth, and achieve measurable
+                business outcomes.
               </p>
 
               {/* Social Links */}

@@ -34,6 +34,9 @@ import ApplicationDevelopmentPage from "../pages/servicesPages/ApplicationDevelo
 import IntegrationServicesPage from "../pages/servicesPages/IntegrationServicesPage";
 import EngineeringAIPage from "../pages/servicesPages/EngineeringAIPage";
 import ProjectSupportRemediationPage from "../pages/servicesPages/ProjectSupportRemediationPage";
+import ApplicationDevelopmentIntegrationAIPage from "../pages/servicesPages/ApplicationDevelopmentIntegrationAIPage";
+import EnergyUtilitiesChemicalsPage from "../pages/industryPages/EnergyUtilitiesChemicalsPage";
+import CodeQualitySecurityPage from "../pages/servicesPages/CodeQualitySecurityPage";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -82,6 +85,10 @@ const AppRoutes = () => {
           <Route path="/industries/automotive" element={<AutomotivePage />} />
           <Route path="/industries/chemicals" element={<ChemicalsPage />} />
           <Route
+            path="/industries/energy-utilities"
+            element={<EnergyUtilitiesChemicalsPage />}
+          />
+          <Route
             path="/industries/construction-real-estate"
             element={<ConstructionRealEstatePage />}
           />
@@ -114,6 +121,10 @@ const AppRoutes = () => {
             element={<EngineeringAIPage />}
           />
           <Route
+            path="/services/application-development-integration-ai"
+            element={<ApplicationDevelopmentIntegrationAIPage />}
+          />
+          <Route
             path="/services/application-development"
             element={<ApplicationDevelopmentPage />}
           />
@@ -126,6 +137,10 @@ const AppRoutes = () => {
             element={<ApplicationMaintenancePage />}
           />
           <Route path="/services/testing-qa" element={<TestingQAPage />} />
+          <Route
+            path="/services/code-quality-security"
+            element={<CodeQualitySecurityPage />}
+          />
           <Route
             path="/services/data-migration"
             element={<DataMigrationPage />}

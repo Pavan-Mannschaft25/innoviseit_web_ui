@@ -437,6 +437,13 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-1 xl:gap-2 text-[16px] font-medium text-[#0B1D33]">
+              <Link
+                to="/"
+                className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#0B1D33]"
+              >
+                Home
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+              </Link>
               {/* What We Do */}
               <div
                 className="relative"
@@ -466,13 +473,13 @@ const Navbar = () => {
               </div>
 
               {/* What We Think */}
-              <Link
+              {/* <Link
                 to="/think"
                 className="px-4 py-1 rounded-lg text-[#0B1D33] hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group"
               >
                 What We Think
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
-              </Link>
+              </Link> */}
 
               {/* About */}
               <div

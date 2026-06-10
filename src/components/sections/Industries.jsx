@@ -218,13 +218,23 @@ const Industries = () => {
           title={
             <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] tracking-tight">
               <span className="bg-black bg-clip-text text-transparent">
-                Industries We
+                Property And
               </span>{" "}
               <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
-                Transform
+                Casualty Insurance
               </span>
             </h2>
           }
+          // title={
+          //   <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] tracking-tight">
+          //     <span className="bg-black bg-clip-text text-transparent">
+          //       Industries We
+          //     </span>{" "}
+          //     <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+          //       Transform
+          //     </span>
+          //   </h2>
+          // }
           subtitle={
             <p className="text-lg md:text-xl text-black max-w-3xl mx-auto leading-relaxed font-light">
               Deep domain knowledge across industries delivering scalable

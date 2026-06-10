@@ -283,16 +283,28 @@ export const servicesData = [
   },
   {
     id: 3,
-    category: "Core Engineering & AI",
-    title: "Engineering, AI & Quality Assurance",
+    category: "Application Development & AI",
+    title: "Application Development, Integration Services & AI",
     description:
-      "Innovative engineering solutions, AI-driven development, automation, and advanced testing services to accelerate digital transformation and business growth.",
+      "Custom application development, SAP and Guidewire integrations, AI-enabled automation, and enterprise solutions that streamline operations and drive digital transformation.",
     image: img3,
-    readTime: "Engineering & AI",
+    readTime: "Integration & AI",
     date: "Innovise IT",
     featured: true,
-    link: "/services/core-engineering-ai",
+    link: "/services/application-development-integration-ai",
   },
+  // {
+  //   id: 3,
+  //   category: "Core Engineering & AI",
+  //   title: "Engineering, AI & Quality Assurance",
+  //   description:
+  //     "Innovative engineering solutions, AI-driven development, automation, and advanced testing services to accelerate digital transformation and business growth.",
+  //   image: img3,
+  //   readTime: "Engineering & AI",
+  //   date: "Innovise IT",
+  //   featured: true,
+  //   link: "/services/core-engineering-ai",
+  // },
   // {
   //   id: 1,
   //   category: "SAP Solutions",
