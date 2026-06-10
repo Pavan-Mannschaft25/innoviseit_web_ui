@@ -611,7 +611,7 @@ function Hero() {
       sm:h-[45vh]
       md:h-[55vh]
       lg:h-[85vh]
-      xl:h-[95vh]
+      xl:h-[90vh]
     "
       >
         <img

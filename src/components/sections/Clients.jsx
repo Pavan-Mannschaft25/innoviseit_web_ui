@@ -425,9 +425,9 @@ import img2 from "../../assets/patners/p2.png";
 import img3 from "../../assets/patners/p3.png";
 import img4 from "../../assets/patners/p4.png";
 import img5 from "../../assets/patners/p5.png";
-import img6 from "../../assets/patners/p1.png";
-import img7 from "../../assets/patners/p2.png";
-import img8 from "../../assets/patners/p3.png";
+import img6 from "../../assets/patners/p6.png";
+// import img7 from "../../assets/patners/p2.png";
+// import img8 from "../../assets/patners/p3.png";
 
 // ============================================================
 // 🎨 NAVY & GOLD BRAND COLORS
@@ -454,8 +454,8 @@ const logos = [
   { id: 4, src: img4, name: "Partner 4" },
   { id: 5, src: img5, name: "Partner 5" },
   { id: 6, src: img6, name: "Partner 6" },
-  { id: 7, src: img7, name: "Partner 7" },
-  { id: 8, src: img8, name: "Partner 8" },
+  // { id: 7, src: img7, name: "Partner 7" },
+  // { id: 8, src: img8, name: "Partner 8" },
 ];
 
 const PartnerMarquee = () => {

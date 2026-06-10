@@ -356,46 +356,17 @@ import img6 from "../assets/industry/re1.png";
 export const industriesData = [
   {
     id: 1,
-    name: "Aerospace & Defense",
-    category: "Aerospace",
-    icon: "FaFighterJet",
-    image: img1,
-    link: "/industries/aerospace-defense",
-
-    description:
-      "MRO optimization, compliance, and mission-critical operations.",
-
-    detailedDescription:
-      "Enable aerospace and defense organizations to achieve operational excellence with advanced MRO (maintenance, repair, and overhaul), project lifecycle management, and strict regulatory compliance solutions powered by SAP.",
-
-    stats: {
-      clients: "50+",
-      projects: "120+",
-      experience: "10+ years",
-    },
-
-    capabilities: [
-      "MRO Optimization",
-      "Asset Lifecycle Management",
-      "Defense Compliance",
-      "Project Systems",
-      "Predictive Maintenance",
-    ],
-  },
-
-  {
-    id: 2,
     name: "Automotive",
     category: "Automotive",
     icon: "FaCar",
-    image: img2,
+    image: img1,
     link: "/industries/automotive",
 
     description:
-      "Connected vehicles, smart manufacturing, and mobility solutions.",
+      "Vehicle lifecycle management, connected vehicles, and future mobility solutions.",
 
     detailedDescription:
-      "Drive innovation in automotive with connected vehicle platforms, smart factories, EV ecosystem integration, and end-to-end vehicle lifecycle management powered by SAP solutions.",
+      "Drive innovation across the automotive value chain with connected vehicle platforms, EV ecosystem integration, smart manufacturing, and end-to-end vehicle lifecycle management powered by SAP solutions.",
 
     stats: {
       clients: "70+",
@@ -407,84 +378,58 @@ export const industriesData = [
       "Vehicle Lifecycle Management",
       "Connected Vehicles",
       "EV & Mobility Solutions",
+      "Smart Manufacturing",
       "Supply Chain Optimization",
-      "Dealer Management Systems",
+    ],
+  },
+
+  {
+    id: 2,
+    name: "Energy, Oil & Gas, Utilities & Chemicals",
+    category: "Energy & Utilities",
+    icon: "FaBolt",
+    image: img2,
+    link: "/industries/energy-utilities",
+
+    description:
+      "Asset management, smart metering, energy trading, batch manufacturing, and compliance.",
+
+    detailedDescription:
+      "Enable operational excellence across energy, utilities, oil & gas, and chemical industries through intelligent asset management, smart metering, regulatory compliance, energy trading, and supply chain optimization.",
+
+    stats: {
+      clients: "85+",
+      projects: "180+",
+      experience: "12+ years",
+    },
+
+    capabilities: [
+      "Asset Management",
+      "Smart Metering",
+      "Energy Trading",
+      "Batch Manufacturing",
+      "Regulatory Compliance",
     ],
   },
 
   {
     id: 3,
-    name: "Chemicals",
-    category: "Chemicals",
-    icon: "FaFlask",
-    image: img3,
-    link: "/industries/chemicals",
-
-    description: "Batch processing, formulation, and hazardous supply chains.",
-
-    detailedDescription:
-      "Transform chemical operations with batch management, formulation control, regulatory compliance, and safe supply chain solutions tailored for hazardous materials handling.",
-
-    stats: {
-      clients: "40+",
-      projects: "90+",
-      experience: "9+ years",
-    },
-
-    capabilities: [
-      "Batch Management",
-      "Formulation Control",
-      "EHS Compliance",
-      "Hazardous Supply Chain",
-      "Quality Assurance",
-    ],
-  },
-
-  {
-    id: 4,
-    name: "Construction & Real Estate",
-    category: "Construction",
-    icon: "FaBuilding",
-    image: img4,
-    link: "/industries/construction-real-estate",
-
-    description: "Project lifecycle, asset tracking, and EHS management.",
-
-    detailedDescription:
-      "Deliver large-scale construction and real estate projects with advanced project controls, asset lifecycle tracking, and environment, health, and safety (EHS) compliance solutions.",
-
-    stats: {
-      clients: "60+",
-      projects: "140+",
-      experience: "10+ years",
-    },
-
-    capabilities: [
-      "Project Management",
-      "Asset Lifecycle Tracking",
-      "EHS Solutions",
-      "Cost Control",
-      "Real Estate Portfolio Management",
-    ],
-  },
-
-  {
-    id: 5,
     name: "Consumer Products",
     category: "Consumer Goods",
     icon: "FaShoppingCart",
-    image: img5,
+    image: img3,
     link: "/industries/consumer-products",
 
-    description: "Demand-driven supply chains and omnichannel growth.",
+    description:
+      "Demand-driven supply chains, trade promotion, and omnichannel strategies.",
 
     detailedDescription:
-      "Accelerate growth with demand-driven supply chains, trade promotion optimization, and omnichannel strategies that enhance customer engagement and profitability.",
+      "Accelerate growth through demand-driven supply chains, trade promotion optimization, customer insights, and omnichannel engagement strategies that improve profitability and customer satisfaction.",
 
     stats: {
       clients: "80+",
       projects: "170+",
-      experience: "8+ years",
+      experience: "10+ years",
     },
 
     capabilities: [
@@ -492,27 +437,28 @@ export const industriesData = [
       "Trade Promotion Management",
       "Omnichannel Strategy",
       "Inventory Optimization",
-      "Customer Insights",
+      "Customer Analytics",
     ],
   },
 
   {
-    id: 6,
+    id: 4,
     name: "Retail",
     category: "Retail",
     icon: "FaStore",
-    image: img6,
+    image: img4,
     link: "/industries/retail",
 
-    description: "Omnichannel commerce and customer loyalty solutions.",
+    description:
+      "Merchandise management, omnichannel commerce, and customer loyalty programs.",
 
     detailedDescription:
-      "Deliver seamless retail experiences with SAP-powered merchandise management, omnichannel commerce, personalized marketing, and customer loyalty platforms.",
+      "Deliver seamless customer experiences through SAP-powered retail solutions including merchandise planning, omnichannel commerce, customer loyalty programs, and advanced retail analytics.",
 
     stats: {
       clients: "90+",
       projects: "200+",
-      experience: "9+ years",
+      experience: "10+ years",
     },
 
     capabilities: [
@@ -521,6 +467,64 @@ export const industriesData = [
       "Customer Loyalty Programs",
       "POS Integration",
       "Retail Analytics",
+    ],
+  },
+
+  {
+    id: 5,
+    name: "Industrial Manufacturing & High Tech",
+    category: "Manufacturing",
+    icon: "FaIndustry",
+    image: img5,
+    link: "/industries/industrial-manufacturing",
+
+    description:
+      "Smart factories, predictive maintenance, and Industry 4.0 solutions.",
+
+    detailedDescription:
+      "Transform manufacturing operations with Industry 4.0 technologies, predictive maintenance, IIoT integration, production planning, and intelligent factory solutions.",
+
+    stats: {
+      clients: "95+",
+      projects: "220+",
+      experience: "13+ years",
+    },
+
+    capabilities: [
+      "Industry 4.0",
+      "Smart Factories",
+      "Predictive Maintenance",
+      "IIoT Integration",
+      "Production Planning",
+    ],
+  },
+
+  {
+    id: 6,
+    name: "Public Sector",
+    category: "Government",
+    icon: "FaLandmark",
+    image: img6,
+    link: "/industries/public-sector",
+
+    description:
+      "Government accounting, grants management, and citizen service platforms.",
+
+    detailedDescription:
+      "Empower public sector organizations with transparent governance, grants management, budgeting, citizen service delivery, and digital transformation initiatives.",
+
+    stats: {
+      clients: "45+",
+      projects: "100+",
+      experience: "9+ years",
+    },
+
+    capabilities: [
+      "Government Accounting",
+      "Grants Management",
+      "Citizen Services",
+      "Budget Planning",
+      "Digital Governance",
     ],
   },
 ];
