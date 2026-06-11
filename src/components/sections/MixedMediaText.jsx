@@ -6,8 +6,8 @@
 // // // 🎨 BRAND COLORS (Innovise IT)
 // // const BRAND = {
 // //   navy: {
-// //     dark: "#0B1D33",
-// //     mid: "#0D2847",
+// //     dark: "#12324f",
+// //     mid: "#12324f",
 // //     light: "#143A63",
 // //     lighter: "#1A4570",
 // //   },
@@ -141,7 +141,7 @@
 // //                     background:
 // //                       bgStyle === "brand"
 // //                         ? `linear-gradient(135deg, ${BRAND.navy.dark}80, transparent)`
-// //                         : "linear-gradient(135deg, #0D284780, transparent)",
+// //                         : "linear-gradient(135deg, #12324f80, transparent)",
 // //                   }}
 // //                 />
 // //               </div>
@@ -447,8 +447,8 @@
 // // 🎨 BRAND COLORS
 // const BRAND = {
 //   navy: {
-//     dark: "#0B1D33",
-//     mid: "#0D2847",
+//     dark: "#12324f",
+//     mid: "#12324f",
 //     light: "#143A63",
 //     lighter: "#1A4570",
 //   },
@@ -764,8 +764,8 @@ import career from "../../assets/industry/career.png";
 // ============================================================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#132D4B",
     lighter: "#1A4570",
   },
@@ -987,7 +987,7 @@ const MixedMediaCinematic = ({
                 transition={{ delay: 0.8, type: "spring", stiffness: 200 }}
                 className="absolute -bottom-4 -right-4 lg:bottom-6 lg:-right-6 px-5 py-2.5 bg-white rounded-xl shadow-lg border border-yellow-500/20 backdrop-blur-sm"
               >
-                <span className="text-sm font-bold text-[#0B1D33] flex items-center gap-2">
+                <span className="text-sm font-bold text-[#12324f] flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                   Open Positions
                 </span>

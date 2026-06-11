@@ -27,8 +27,8 @@ import {
 // ==================== BRAND COLORS ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#143A63",
     lighter: "#1A4570",
   },
