@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Container from "../../components/ui/Container";
+import AnimatedSection from "../../components/ui/AnimatedSection";
 import {
   FaHandshake,
   FaShieldAlt,
@@ -13,7 +15,14 @@ import {
   FaArrowRight,
   FaCheckCircle,
 } from "react-icons/fa";
+import * as FaIcons from "react-icons/fa";
 import banner from "../../assets/banners/values2.png";
+import ph1 from "../../assets/thinkImg/ph1.png";
+import ph2 from "../../assets/thinkImg/ph2.png";
+import ph3 from "../../assets/thinkImg/ph3.png";
+import ph4 from "../../assets/thinkImg/ph4.png";
+import ph5 from "../../assets/thinkImg/ph5.png";
+import ph6 from "../../assets/thinkImg/ph6.png";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -28,6 +37,17 @@ const BRAND = {
     light: "#FFD54F",
     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
   },
+};
+
+const iconMap = {
+  FaLightbulb: FaIcons.FaLightbulb,
+  FaCogs: FaIcons.FaCogs,
+  FaRobot: FaIcons.FaRobot,
+  FaCloud: FaIcons.FaCloud,
+  FaChartLine: FaIcons.FaChartLine,
+  FaSyncAlt: FaIcons.FaSyncAlt,
+  FaShieldAlt: FaIcons.FaShieldAlt,
+  FaRocket: FaIcons.FaRocket,
 };
 
 // ==================== ANIMATION CONFIG ====================
@@ -128,6 +148,77 @@ const valuesData = [
       "Measurable progress tracking",
     ],
     color: "#EC4899",
+  },
+];
+
+const thinkPhilosophy = [
+  {
+    id: 1,
+    icon: "FaLightbulb",
+    subtitle: "Innovation First",
+    title: "Innovation-Led Transformation",
+    description:
+      "We believe technology should serve business strategy, not the other way around. Every solution starts with understanding your unique challenges.",
+    principles: [
+      "Human-centered design",
+      "Agile methodology",
+      "Continuous improvement",
+    ],
+    image: ph1,
+  },
+  {
+    id: 2,
+    icon: "FaRobot",
+    subtitle: "AI & Automation",
+    title: "Intelligent Automation at Scale",
+    description:
+      "Leveraging AI and automation to eliminate repetitive tasks and unlock human potential for higher-value work.",
+    principles: [
+      "Machine Learning",
+      "Process Automation",
+      "Predictive Analytics",
+    ],
+    image: ph2,
+  },
+  {
+    id: 3,
+    icon: "FaCloud",
+    subtitle: "Cloud Native",
+    title: "Cloud-First Architecture",
+    description:
+      "Building resilient, scalable systems that leverage the full power of modern cloud infrastructure.",
+    principles: ["Microservices", "Containerization", "DevOps Culture"],
+    image: ph3,
+  },
+  {
+    id: 4,
+    icon: "FaShieldAlt",
+    subtitle: "Security by Design",
+    title: "Zero Trust Security Model",
+    description:
+      "Embedding security into every layer of architecture from code to cloud infrastructure.",
+    principles: ["Encryption", "Identity Management", "Threat Detection"],
+    image: ph4,
+  },
+  {
+    id: 5,
+    icon: "FaRocket",
+    subtitle: "Speed to Value",
+    title: "Rapid Delivery Framework",
+    description:
+      "Getting solutions to market faster without compromising quality through proven delivery methodologies.",
+    principles: ["Sprint-based", "MVP Approach", "CI/CD Pipelines"],
+    image: ph5,
+  },
+  {
+    id: 6,
+    icon: "FaChartLine",
+    subtitle: "Data-Driven Decisions",
+    title: "Analytics & Insights",
+    description:
+      "Transforming raw data into actionable intelligence that drives strategic business decisions.",
+    principles: ["Real-time Dashboards", "BI Integration", "KPI Tracking"],
+    image: ph6,
   },
 ];
 
@@ -654,6 +745,10 @@ const ClosingSection = () => (
 // Main Values Page Component
 const ValuesPage = () => {
   const [activeId, setActiveId] = useState(null);
+  const philosophyWithIcons = thinkPhilosophy.map((item) => ({
+    ...item,
+    icon: iconMap[item.icon] || FaIcons.FaLightbulb,
+  }));
 
   const handleSetActive = useCallback((id) => {
     setActiveId(id);
@@ -672,6 +767,99 @@ const ValuesPage = () => {
       </div>
       {/* <HeroSection /> */}
       <ValuesGridSection activeId={activeId} setActiveId={handleSetActive} />
+      <section className="py-10 bg-white relative overflow-hidden">
+        {/* Background Pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, ${BRAND.navy.mid} 1px, transparent 0)`,
+            backgroundSize: "30px 30px",
+          }}
+        />
+
+        <Container>
+          {/* Section Header */}
+          <div className="text-center mb-10">
+            <AnimatedSection delay={0.1}>
+              <h2
+                className="text-3xl md:text-4xl lg:text-5xl font-semibold"
+                style={{ color: BRAND.navy.dark }}
+              >
+                Our Core{" "}
+                <span style={{ color: BRAND.gold.primary }}>Philosophy</span>
+              </h2>
+            </AnimatedSection>
+          </div>
+
+          {/* Cards Grid - Bento Style */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {philosophyWithIcons.map((philosophy, index) => (
+              <AnimatedSection key={philosophy.id} delay={index * 0.1}>
+                <motion.div className="group relative h-[60vh] overflow-hidden cursor-pointer">
+                  {/* 🔥 FULL BACKGROUND IMAGE */}
+                  <img
+                    src={philosophy.image}
+                    alt={philosophy.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+
+                  {/* 🔥 DARK OVERLAY */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F2C]/95 via-[#0A0F2C]/70 to-transparent" />
+
+                  {/* 🔥 CONTENT */}
+                  <div className="relative z-10 p-6 lg:p-8 flex flex-col justify-end items-start h-full text-white text-left">
+                    {" "}
+                    {/* Badge */}
+                    {/* <div
+                      className="inline-block w-fit px-3 py-1 rounded-full text-xs font-bold mb-4"
+                      style={{
+                        background: `${BRAND.gold.primary}`,
+                        color: BRAND.navy.dark,
+                      }}
+                    >
+                      {philosophy.subtitle}
+                    </div> */}
+                    {/* Icon */}
+                    {/* <div
+                      className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
+                      style={{
+                        background: BRAND.gold.gradient,
+                      }}
+                    >
+                      <philosophy.icon className="text-white text-lg" />
+                    </div> */}
+                    {/* Title */}
+                    <h3 className="text-xl lg:text-2xl font-bold mb-2 group-hover:text-yellow-400 transition-colors uppercase">
+                      {philosophy.title}
+                    </h3>
+                    {/* Description */}
+                    <p className="text-sm text-white/70 mb-4 line-clamp-3">
+                      {philosophy.description}
+                    </p>
+                    {/* Principles */}
+                    <ul className="space-y-1 mb-4">
+                      {philosophy.principles.slice(0, 3).map((item, idx) => (
+                        <li
+                          key={idx}
+                          className="text-xs text-white/60 flex items-center gap-2"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {/* Link */}
+                    {/* <div className="flex items-center gap-2 text-sm font-semibold text-yellow-400">
+                      Learn More
+                      <FaChevronRight className="text-xs group-hover:translate-x-1 transition" />
+                    </div> */}
+                  </div>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </Container>
+      </section>
       <ClosingSection />
     </main>
   );

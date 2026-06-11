@@ -1916,7 +1916,7 @@ const HeroSection = () => (
 );
 // Team Section - UPDATED with py-10 for lg devices
 const TeamSection = () => (
-  <section className="py-10 lg:py-14 bg-gradient-to-br from-white via-gray-50/40 to-white relative overflow-hidden">
+  <section className="py-10 lg:py-4 bg-gradient-to-br from-white via-gray-50/40 to-white relative overflow-hidden">
     {/* Background Decoration */}
     <div
       className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full blur-3xl opacity-[0.03] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
@@ -1936,7 +1936,7 @@ const TeamSection = () => (
         viewport={{ once: true }}
         className="text-center max-w-3xl mx-auto mb-6 lg:mb-10"
       >
-        <span
+        {/* <span
           className="inline-block px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
           style={{
             background: `${BRAND.navy.mid}08`,
@@ -1945,7 +1945,7 @@ const TeamSection = () => (
           }}
         >
           👤 Meet Our Leaders
-        </span>
+        </span> */}
 
         <h2
           className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-5"
@@ -2450,7 +2450,7 @@ const LeadershipPage = () => {
   return (
     <main role="main">
       {/* <HeroSection /> */}
-      <AboutHeroSection />
+      {/* <AboutHeroSection /> */}
       <TeamSection />
       <PhilosophySection />
       <DifferentiatorsSection />

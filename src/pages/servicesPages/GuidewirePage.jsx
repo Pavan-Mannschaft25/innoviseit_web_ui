@@ -31,6 +31,8 @@ import {
   FaCarSide,
   FaHome,
   FaUserInjured,
+  FaUserShield,
+  FaHardHat,
 } from "react-icons/fa";
 
 // ==================== BANNER IMAGE ====================
@@ -246,10 +248,9 @@ const metricsData = [
 
 // ==================== INDUSTRIES SERVED ====================
 const industries = [
-  { name: "Personal Auto", icon: FaCarSide || FaCarSide || FaShieldAlt },
-  { name: "Homeowners", icon: FaHome || FaBuilding },
+  { name: "Personal Lines", icon: FaUserShield },
   { name: "Commercial Lines", icon: FaIndustry },
-  { name: "Workers Comp", icon: FaUserInjured || FaUsers },
+  { name: "Workers' Compensation", icon: FaHardHat },
   { name: "Specialty Lines", icon: FaStar },
 ];
 
@@ -467,7 +468,7 @@ const LiveIndicator = () => (
 // Hero Section
 const HeroSection = () => (
   <section
-    className="relative py-6 lg:py-10 overflow-hidden max-h-screen"
+    className="relative py-6 lg:py-20 overflow-hidden max-h-screen"
     style={{
       background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
     }}
@@ -582,12 +583,12 @@ const HeroSection = () => (
           </p>
 
           {/* Live Indicator */}
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <LiveIndicator />
-          </div>
+          </div> */}
 
           {/* Trust Indicators */}
-          <div
+          {/* <div
             className="flex flex-wrap items-center gap-6 mt-10 pt-8"
             style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
           >
@@ -606,7 +607,7 @@ const HeroSection = () => (
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* RIGHT - Guidewire Dashboard Visual */}
@@ -992,7 +993,7 @@ const ServicesSection = () => (
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
           Full lifecycle services spanning implementation, customization,
           integration, and ongoing support for the complete Guidewire
-          InsurancePlatform™ suite.
+          InsuranceSuite.
         </p>
       </motion.header>
 
@@ -1037,7 +1038,7 @@ const IndustriesSection = () => (
         </p>
       </motion.header>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {industries.map((industry, idx) => (
           <motion.div
             key={idx}
@@ -1362,7 +1363,7 @@ const BenefitsSection = () => (
           </div>
 
           {/* Quick Stats */}
-          <div
+          {/* <div
             className="p-6 rounded-2xl"
             style={{
               background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
@@ -1398,7 +1399,7 @@ const BenefitsSection = () => (
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
@@ -1736,7 +1737,7 @@ const GuidewirePage = () => {
       <IndustriesSection />
       <ProcessSection />
       <BenefitsSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CTABannerSection />
     </main>
   );

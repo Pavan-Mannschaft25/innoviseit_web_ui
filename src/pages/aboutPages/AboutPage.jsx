@@ -196,6 +196,33 @@ const approachSteps = [
   },
 ];
 
+const companyStats = [
+  {
+    icon: FaUsers,
+    value: "300+",
+    label: "Expert Professionals",
+    description: "Certified consultants and engineers",
+  },
+  {
+    icon: FaAward,
+    value: "15+",
+    label: "Years of Excellence",
+    description: "Delivering enterprise solutions",
+  },
+  {
+    icon: FaGlobeAmericas,
+    value: "20+",
+    label: "Countries Served",
+    description: "Global delivery capabilities",
+  },
+  {
+    icon: FaHandshake,
+    value: "98%",
+    label: "Client Retention",
+    description: "Long-term trusted partnerships",
+  },
+];
+
 // ==================== COMPONENTS ====================
 
 // Service Card Component
@@ -818,6 +845,99 @@ const ServicesSection = () => (
   </section>
 );
 
+const CompanyStatsSection = () => (
+  <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto mb-16"
+      >
+        <span
+          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          style={{
+            background: `${BRAND.gold.primary}15`,
+            color: BRAND.navy.dark,
+            border: `1px solid ${BRAND.gold.primary}25`,
+          }}
+        >
+          📊 Company At A Glance
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          style={{ color: BRAND.navy.dark }}
+        >
+          Trusted By Businesses
+          <span style={{ color: BRAND.gold.primary }}> Worldwide</span>
+        </h2>
+
+        <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
+          Delivering enterprise solutions with expertise, innovation, and
+          measurable results.
+        </p>
+      </motion.div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {companyStats.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            whileHover={{ y: -8 }}
+            className="group"
+          >
+            <div
+              className="bg-white rounded-3xl p-8 text-center h-full transition-all duration-500"
+              style={{
+                border: "1px solid rgba(0,0,0,0.06)",
+                boxShadow: "0 10px 30px rgba(0,0,0,0.04)",
+              }}
+            >
+              <div
+                className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6"
+                style={{
+                  background: `${BRAND.gold.primary}12`,
+                  border: `2px solid ${BRAND.gold.primary}25`,
+                }}
+              >
+                <item.icon
+                  className="text-2xl"
+                  style={{ color: BRAND.gold.primary }}
+                />
+              </div>
+
+              <h3
+                className="text-4xl font-black mb-2"
+                style={{ color: BRAND.navy.dark }}
+              >
+                {item.value}
+              </h3>
+
+              <h4
+                className="text-lg font-bold mb-2"
+                style={{ color: BRAND.navy.dark }}
+              >
+                {item.label}
+              </h4>
+
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: "#64748B" }}
+              >
+                {item.description}
+              </p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 // Mission & Vision Cards Section
 const MissionVisionSection = () => (
   <section
@@ -1344,7 +1464,7 @@ const ClosingSection = () => (
           {[
             { icon: FaAward, text: "SAP Certified Partner" },
             { icon: FaShieldAlt, text: "ISO Certified" },
-            { icon: FaUsers, text: "200+ Expert Consultants" },
+            { icon: FaUsers, text: "300+ Expert Consultants" },
           ].map((item, idx) => (
             <div key={idx} className="flex items-center gap-2 text-white/60">
               <item.icon
@@ -1375,7 +1495,8 @@ const AboutPage = () => {
       </div>
       {/* <HeroSection /> */}
       <WhoWeAreSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
+      <CompanyStatsSection />
       <MissionVisionSection />
       <WhyChooseUsSection />
       <ApproachSection />
