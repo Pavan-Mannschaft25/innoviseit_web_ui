@@ -108,7 +108,7 @@
 // //             >
 // //               <div className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
 // //                 {/* Top Section - Navy Blue with Photo */}
-// //                 <div className="relative pt-12 pb-24 px-6 bg-gradient-to-b from-[#0d2847] via-[#143a63] to-[#1a4570]">
+// //                 <div className="relative pt-12 pb-24 px-6 bg-gradient-to-b from-[#12324f] via-[#143a63] to-[#1a4570]">
 // //                   {/* Decorative Circle Border */}
 // //                   <div className="absolute top-8 left-1/2 -translate-x-1/2 w-32 h-32 sm:w-36 sm:h-36">
 // //                     {/* Outer rotating ring */}
@@ -538,8 +538,8 @@
 // // ============================================================
 // const BRAND = {
 //   navy: {
-//     dark: "#0B1D33",
-//     mid: "#0D2847",
+//     dark: "#12324f",
+//     mid: "#12324f",
 //     light: "#132D4B",
 //   },
 //   gold: {
@@ -687,7 +687,7 @@
 
 //           {/* Title */}
 //           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-//             <span className="bg-gradient-to-br from-[#0B1D33] via-[#0D2847] to-[#132D4B] bg-clip-text text-transparent">
+//             <span className="bg-gradient-to-br from-[#12324f] via-[#12324f] to-[#132D4B] bg-clip-text text-transparent">
 //               Leadership
 //             </span>{" "}
 //             <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
@@ -715,7 +715,7 @@
 //               className={`w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto ${
 //                 isBeginning
 //                   ? "bg-white/50 text-gray-300 cursor-not-allowed opacity-50"
-//                   : "bg-white shadow-lg hover:bg-[#0B1D33] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
+//                   : "bg-white shadow-lg hover:bg-[#12324f] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
 //               }`}
 //               aria-label="Previous slide"
 //             >
@@ -729,7 +729,7 @@
 //               className={`w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto ${
 //                 isEnd
 //                   ? "bg-white/50 text-gray-300 cursor-not-allowed opacity-50"
-//                   : "bg-white shadow-lg hover:bg-[#0B1D33] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
+//                   : "bg-white shadow-lg hover:bg-[#12324f] hover:text-[#FFD54F] hover:shadow-xl cursor-pointer"
 //               }`}
 //               aria-label="Next slide"
 //             >
@@ -797,7 +797,7 @@
 //                       />
 
 //                       {/* Image Overlay Gradient */}
-//                       <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D33]/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
+//                       <div className="absolute inset-0 bg-gradient-to-t from-[#12324f]/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 
 //                       {/* Hover Social Icons */}
 //                       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-400 delay-100">
@@ -806,7 +806,7 @@
 //                             href={leader.social.linkedin}
 //                             target="_blank"
 //                             rel="noopener noreferrer"
-//                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] hover:text-[#0B1D33] hover:scale-110 transition-all duration-300 shadow-lg"
+//                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#12324f] hover:bg-[#FDB913] hover:text-[#12324f] hover:scale-110 transition-all duration-300 shadow-lg"
 //                             aria-label={`${leader.name} LinkedIn`}
 //                           >
 //                             <FaLinkedinIn className="text-sm" />
@@ -817,7 +817,7 @@
 //                             href={leader.social.twitter}
 //                             target="_blank"
 //                             rel="noopener noreferrer"
-//                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] hover:text-[#0B1D33] hover:scale-110 transition-all duration-300 shadow-lg"
+//                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#12324f] hover:bg-[#FDB913] hover:text-[#12324f] hover:scale-110 transition-all duration-300 shadow-lg"
 //                             aria-label={`${leader.name} Twitter`}
 //                           >
 //                             <FaTwitter className="text-sm" />
@@ -827,14 +827,14 @@
 
 //                       {/* Quote Icon (appears on hover) */}
 //                       <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#FDB913]/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-400">
-//                         <FaQuoteLeft className="text-[#0B1D33] text-sm" />
+//                         <FaQuoteLeft className="text-[#12324f] text-sm" />
 //                       </div>
 //                     </div>
 
 //                     {/* Content Section */}
 //                     <div className="p-5 lg:p-6 relative">
 //                       {/* Name */}
-//                       <h3 className="text-lg lg:text-xl font-bold text-[#0B1D33] mb-1 group-hover:text-[#0D2847] transition-colors truncate">
+//                       <h3 className="text-lg lg:text-xl font-bold text-[#12324f] mb-1 group-hover:text-[#12324f] transition-colors truncate">
 //                         {leader.name}
 //                       </h3>
 
@@ -885,7 +885,7 @@
 //             <motion.button
 //               whileHover={{ scale: 1.05, y: -2 }}
 //               whileTap={{ scale: 0.98 }}
-//               className="group relative inline-flex items-center gap-3 px-10 py-4.5 bg-gradient-to-r from-[#0B1D33] to-[#0D2847] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
+//               className="group relative inline-flex items-center gap-3 px-10 py-4.5 bg-gradient-to-r from-[#12324f] to-[#12324f] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
 //             >
 //               {/* Shine Effect */}
 //               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out">
@@ -973,8 +973,8 @@ import "swiper/css/pagination";
 // ============================================================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#132D4B",
   },
   gold: {
@@ -1173,7 +1173,7 @@ const LeadershipTeam = () => {
           className="text-center mb-10 lg:mb-14"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-            <span className="bg-gradient-to-br from-[#0B1D33] via-[#0D2847] to-[#132D4B] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-br from-[#12324f] via-[#12324f] to-[#132D4B] bg-clip-text text-transparent">
               Leadership
             </span>{" "}
             <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
@@ -1193,14 +1193,14 @@ const LeadershipTeam = () => {
           <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 z-20 flex justify-between items-center px-2 lg:px-4 pointer-events-none">
             <button
               onClick={goPrev}
-              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white shadow-xl hover:bg-[#0B1D33] hover:text-[#FFD54F] transition-all duration-300 flex items-center justify-center pointer-events-auto"
+              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white shadow-xl hover:bg-[#12324f] hover:text-[#FFD54F] transition-all duration-300 flex items-center justify-center pointer-events-auto"
             >
               <FaChevronLeft className="text-lg" />
             </button>
 
             <button
               onClick={goNext}
-              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white shadow-xl hover:bg-[#0B1D33] hover:text-[#FFD54F] transition-all duration-300 flex items-center justify-center pointer-events-auto"
+              className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white shadow-xl hover:bg-[#12324f] hover:text-[#FFD54F] transition-all duration-300 flex items-center justify-center pointer-events-auto"
             >
               <FaChevronRight className="text-lg" />
             </button>
@@ -1258,7 +1258,7 @@ const LeadershipTeam = () => {
                       />
 
                       {/* Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D33]/80 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#12324f]/80 via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
 
                       {/* Social Icons */}
                       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
@@ -1266,7 +1266,7 @@ const LeadershipTeam = () => {
                           href={leader.social.linkedin}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] transition-all duration-300"
+                          className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#12324f] hover:bg-[#FDB913] transition-all duration-300"
                         >
                           <FaLinkedinIn className="text-sm" />
                         </a>
@@ -1275,7 +1275,7 @@ const LeadershipTeam = () => {
                           href={leader.social.twitter}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#0B1D33] hover:bg-[#FDB913] transition-all duration-300"
+                          className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#12324f] hover:bg-[#FDB913] transition-all duration-300"
                         >
                           <FaTwitter className="text-sm" />
                         </a> */}
@@ -1283,13 +1283,13 @@ const LeadershipTeam = () => {
 
                       {/* Quote Icon */}
                       <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#FDB913]/90 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
-                        <FaQuoteLeft className="text-[#0B1D33] text-sm" />
+                        <FaQuoteLeft className="text-[#12324f] text-sm" />
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="p-5 lg:p-6 relative">
-                      <h3 className="text-lg lg:text-xl font-bold text-[#0B1D33] mb-1 truncate">
+                      <h3 className="text-lg lg:text-xl font-bold text-[#12324f] mb-1 truncate">
                         {leader.name}
                       </h3>
 
@@ -1334,7 +1334,7 @@ const LeadershipTeam = () => {
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#0B1D33] to-[#0D2847] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30"
+              className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#12324f] to-[#12324f] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30"
             >
               <span className="relative z-10">View Full Leadership Team</span>
 

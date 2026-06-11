@@ -708,8 +708,8 @@ const COLORS = {
 
 const BRAND = {
   navy: {
-    dark: "#0B1D33", // Darkest navy
-    mid: "#0D2847", // Main navy
+    dark: "#12324f", // Darkest navy
+    mid: "#12324f", // Main navy
     light: "#143A63", // Lighter navy
     lighter: "#1A4570", // Lightest navy
   },

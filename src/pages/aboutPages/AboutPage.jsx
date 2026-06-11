@@ -33,8 +33,8 @@ import banner from "../../assets/banners/about.png";
 // ==================== BRAND COLORS (NAVY + GOLD ONLY) ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#143A63",
     lighter: "#1A4570",
   },
@@ -767,7 +767,7 @@ const WhoWeAreSection = () => (
                     className="text-xl font-black"
                     style={{ color: BRAND.gold.primary }}
                   >
-                    200+
+                    300+
                   </div>
                   <div className="text-xs text-white/60">Consultants</div>
                 </div>

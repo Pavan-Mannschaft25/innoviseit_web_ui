@@ -436,10 +436,10 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-1 xl:gap-2 text-[16px] font-medium text-[#0B1D33]">
+            <div className="hidden lg:flex items-center gap-1 xl:gap-2 text-[16px] font-medium text-[#12324f]">
               <Link
                 to="/"
-                className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#0B1D33]"
+                className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
               >
                 Home
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
@@ -475,7 +475,7 @@ const Navbar = () => {
               {/* What We Think */}
               {/* <Link
                 to="/think"
-                className="px-4 py-1 rounded-lg text-[#0B1D33] hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group"
+                className="px-4 py-1 rounded-lg text-[#12324f] hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group"
               >
                 What We Think
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
@@ -488,7 +488,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1.5 px-4 py-1 rounded-lg transition-all duration-300 text-[#0B1D33] ${
+                  className={`flex items-center gap-1.5 px-4 py-1 rounded-lg transition-all duration-300 text-[#12324f] ${
                     activeMenu === "who"
                       ? "bg-gradient-to-r from-[#0a1628] to-[#152d52] text-white shadow-lg shadow-[#0a1628]/25"
                       : "hover:bg-[#0a1628]/5 hover:text-[#0a1628]"
@@ -512,7 +512,7 @@ const Navbar = () => {
               {/* Careers */}
               <Link
                 to="/careers"
-                className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#0B1D33]"
+                className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
               >
                 Careers
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
@@ -521,7 +521,7 @@ const Navbar = () => {
               {/* Contact */}
               <Link
                 to="/contact"
-                className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#0B1D33]"
+                className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
               >
                 Contact
                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>

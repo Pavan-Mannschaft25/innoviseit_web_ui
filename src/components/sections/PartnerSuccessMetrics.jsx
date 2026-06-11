@@ -228,7 +228,7 @@
 //     <section
 //       className="relative py-8 lg:py-12 overflow-hidden"
 //       style={{
-//         background: "linear-gradient(to bottom, #0d2847, #143a63, #1a4570)",
+//         background: "linear-gradient(to bottom, #12324f, #143a63, #1a4570)",
 //       }}
 //     >
 //       {/* ✨ Background Effects */}
@@ -437,8 +437,8 @@ import {
 // 🎨 BRAND COLORS (From Innovise IT Logo)
 const BRAND = {
   navy: {
-    dark: "#0B1D33", // Darkest navy
-    mid: "#0D2847", // Main navy
+    dark: "#12324f", // Darkest navy
+    mid: "#12324f", // Main navy
     light: "#143A63", // Lighter navy
     lighter: "#1A4570", // Lightest navy
   },
