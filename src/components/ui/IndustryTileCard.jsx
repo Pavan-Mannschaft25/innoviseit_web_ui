@@ -30,7 +30,7 @@
 
 // // // //         <div className="text-sm mb-3 space-y-1">
 // // // //           <p>👥 {industry.stats.clients}</p>
-// // // //           <p>🚀 {industry.stats.projects}</p>
+// // // //           <p> {industry.stats.projects}</p>
 // // // //           <p>⏳ {industry.stats.experience}</p>
 // // // //         </div>
 
@@ -54,7 +54,7 @@
 // // // import { FaBuilding } from "react-icons/fa";
 
 // // // const IndustryHoverCard = ({ industry }) => {
-// // //   if (!industry) return null; // ✅ prevents crash
+// // //   if (!industry) return null; //  prevents crash
 
 // // //   const Icon = industry.icon || FaBuilding;
 
@@ -85,7 +85,7 @@
 
 // // //         <div className="text-sm mb-3 space-y-1">
 // // //           <p>👥 {industry.stats?.clients}</p>
-// // //           <p>🚀 {industry.stats?.projects}</p>
+// // //           <p> {industry.stats?.projects}</p>
 // // //           <p>⏳ {industry.stats?.experience}</p>
 // // //         </div>
 
@@ -140,7 +140,7 @@
 
 // //         <div className="text-sm mb-3 space-y-1">
 // //           <p>👥 {industry.stats?.clients}</p>
-// //           <p>🚀 {industry.stats?.projects}</p>
+// //           <p> {industry.stats?.projects}</p>
 // //           <p>⏳ {industry.stats?.experience}</p>
 // //         </div>
 
@@ -451,13 +451,13 @@
 //   imageType = "full",
 // }) => {
 //   // ======================================
-//   // 🛡️ STATE MANAGEMENT
+//   //  STATE MANAGEMENT
 //   // ======================================
 //   const [imageLoaded, setImageLoaded] = useState(false);
 //   const [imageError, setImageError] = useState(false);
 
 //   // ======================================
-//   // 🛡️ NULL SAFETY CHECK
+//   //  NULL SAFETY CHECK
 //   // ======================================
 //   if (!industry || typeof industry !== "object") {
 //     return (
@@ -565,7 +565,7 @@
 //       style={{ boxShadow: styles.shadow }}
 //       aria-label={`Learn more about ${data.title}`}
 //     >
-//       {/* ✨ Hover Glow Effect */}
+//       {/*  Hover Glow Effect */}
 //       <div
 //         className="absolute inset-[-2px] bg-gradient-to-br from-[#FDB913] via-[#FFD54F] to-[#FDB913] rounded-[22px] opacity-0 group-hover:opacity-25 blur-xl transition-opacity duration-500 z-[-1]"
 //         aria-hidden="true"
@@ -713,13 +713,13 @@ const IndustryTileCard = ({
   imageType = "full",
 }) => {
   // ======================================
-  // 🛡️ STATE MANAGEMENT
+  //  STATE MANAGEMENT
   // ======================================
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageError, setImageError] = useState(false);
 
   // ======================================
-  // 🛡️ NULL SAFETY CHECK
+  //  NULL SAFETY CHECK
   // ======================================
   if (!industry || typeof industry !== "object") {
     return (
@@ -757,7 +757,7 @@ const IndustryTileCard = ({
       industry.img ||
       industry.imageUrl ||
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
-    icon: industry.icon || industry.iconClass || "fas fa-building",
+    icon: industry.icon,
     tags: Array.isArray(industry.tags)
       ? industry.tags.filter((t) => t != null).map(String)
       : [],
@@ -787,7 +787,7 @@ const IndustryTileCard = ({
       }}
       aria-label={`Learn more about ${data.title}`}
     >
-      {/* ✨ Hover Glow Effect */}
+      {/*  Hover Glow Effect */}
       <div
         className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 ${
           isDark
@@ -849,14 +849,14 @@ const IndustryTileCard = ({
         />
 
         {/* Gradient Overlay */}
-        <div
+        {/* <div
           className={`absolute inset-0 transition-all duration-500 ${
             isDark
               ? "bg-gradient-to-b from-transparent via-black/40 to-[#12324f]"
               : "bg-gradient-to-b from-transparent via-black/30 to-black/70"
           }`}
           aria-hidden="true"
-        />
+        /> */}
 
         {/* Hover Icon Overlay */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
@@ -880,7 +880,7 @@ const IndustryTileCard = ({
         <div
           className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-all duration-500 relative z-10 ${
             isDark
-              ? "bg-gradient-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FDB913]/40 shadow-lg shadow-yellow-500/10"
+              ? "bg-linear-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FDB913]/40 shadow-lg shadow-yellow-500/10"
               : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-400/20"
           } group-hover:rotate-y-360 group-hover:scale-110 group-hover:shadow-xl`}
           style={{ transformStyle: "preserve-3d" }}

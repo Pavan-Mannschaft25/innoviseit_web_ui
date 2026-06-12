@@ -818,7 +818,7 @@
 // //             border: `1px solid ${BRAND.navy.mid}15`,
 // //           }}
 // //         >
-// //           💡 What We Deliver
+// //            What We Deliver
 // //         </span>
 
 // //         <h2
@@ -961,7 +961,7 @@
 // //               border: `1px solid ${BRAND.navy.mid}15`,
 // //             }}
 // //           >
-// //             🎯 Key Benefits
+// //              Key Benefits
 // //           </span>
 
 // //           <h2
@@ -1023,7 +1023,7 @@
 
 // // // Process/Approach Section (Stepper UI)
 // // const ApproachSection = () => (
-// //   <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+// //   <section className="py-6 lg:py-10 bg-primary-800  relative overflow-hidden">
 // //     {/* Background Glow */}
 // //     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
 // //     <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#0F2B4D] blur-3xl rounded-full"></div>
@@ -1044,7 +1044,7 @@
 // //             borderColor: "rgba(253,185,19,0.25)",
 // //           }}
 // //         >
-// //           🧠 Our Approach
+// //            Our Approach
 // //         </span>
 
 // //         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
@@ -2049,7 +2049,7 @@
 //         className="text-center max-w-3xl mx-auto mb-16"
 //       >
 //         <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
-//           💡 What We Deliver
+//            What We Deliver
 //         </span>
 
 //         <h2
@@ -2179,7 +2179,7 @@
 //           className="order-1 lg:order-2"
 //         >
 //           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
-//             🎯 Key Benefits
+//              Key Benefits
 //           </span>
 
 //           <h2
@@ -2243,7 +2243,7 @@
 //         className="text-center max-w-3xl mx-auto mb-16"
 //       >
 //         <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
-//           🧠 Our Approach
+//            Our Approach
 //         </span>
 
 //         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0B1D33]">
@@ -2506,11 +2506,12 @@ import {
   FaMoneyBillWave,
   FaExpandArrowsAlt,
   FaLightbulb,
-  FaQuoteLeft,
   FaStar,
   FaUsers,
   FaAward,
   FaHandshake,
+  FaUserTie,
+  FaTools,
 } from "react-icons/fa";
 import banner from "../../assets/services/sr11.png";
 
@@ -2536,50 +2537,64 @@ const ANIMATION = {
   spring: { type: "spring", stiffness: 300, damping: 25 },
 };
 
-// ==================== SERVICES DATA ====================
 const sapServicesData = [
   {
-    id: 1,
-    icon: FaRocket,
-    title: "SAP S/4HANA Implementation & Migration",
-    description:
-      "Seamless transition from legacy systems to SAP S/4HANA with minimal disruption and maximum efficiency.",
+    id: 5,
+    name: "Application Management Services",
+    status: "24/7 Support",
+    desc: "24/7 monitoring, support, and continuous improvement of enterprise SAP applications.",
+    icon: FaTools,
+    path: "/services/app-maintenance",
     features: [
-      "Greenfield Implementation",
-      "Brownfield Conversion",
-      "System Conversion",
+      "Application Monitoring",
+      "Incident Management",
+      "Performance Optimization",
+      "Release Management",
     ],
-    color: "#FDB913",
   },
   {
-    id: 2,
-    icon: FaCogs,
-    title: "Business Process Transformation",
-    description:
-      "Re-engineer core business processes to improve agility, performance, and scalability across operations.",
-    features: ["Process Mapping", "Workflow Optimization", "Best Practices"],
-    color: "#FDB913",
+    id: 6,
+    name: "Data Migration & Transformation",
+    status: "SAP HANA",
+    desc: "Seamless migration from legacy systems to SAP HANA and S/4HANA environments.",
+    icon: FaDatabase,
+    path: "/services/data-migration",
+    features: [
+      "SAP HANA Migration",
+      "Legacy Data Conversion",
+      "Data Validation",
+      "System Consolidation",
+    ],
   },
   {
-    id: 3,
-    icon: FaLayerGroup,
-    title: "System Integration",
-    description:
-      "Integrate SAP with third-party platforms, cloud services, and enterprise applications seamlessly.",
-    features: ["API Integration", "Middleware Setup", "Data Synchronization"],
-    color: "#FDB913",
+    id: 7,
+    name: "SAP Talent & Staff Augmentation",
+    status: "On Demand",
+    desc: "Access certified SAP consultants, architects, developers, and project managers.",
+    icon: FaUserTie,
+    path: "/services/staff-augmentation",
+    features: [
+      "SAP Functional Experts",
+      "SAP Technical Consultants",
+      "Project Managers",
+      "Flexible Engagement",
+    ],
   },
   {
-    id: 4,
-    icon: FaTachometerAlt,
-    title: "SAP Optimization & Support",
-    description:
-      "Enhance system performance, ensure stability, and continuously improve operations for maximum ROI.",
-    features: ["Performance Tuning", "24/7 Support", "Continuous Improvement"],
-    color: "#FDB913",
+    id: 8,
+    name: "Code Quality & Security",
+    status: "Enterprise Grade",
+    desc: "Secure, compliant, and high-quality SAP solutions with continuous validation.",
+    icon: FaShieldAlt,
+    path: "/services/code-quality-security",
+    features: [
+      "Code Reviews",
+      "Security Assessments",
+      "Compliance Validation",
+      "Risk Management",
+    ],
   },
 ];
-
 // ==================== BENEFITS DATA ====================
 const benefitsData = [
   {
@@ -2654,127 +2669,92 @@ const whyChooseUsData = [
 
 // ==================== COMPONENTS ====================
 
-// Service Card Component
 const ServiceCard = ({ service, index }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const Icon = service.icon;
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true }}
       transition={{
-        delay: index * ANIMATION.stagger,
-        duration: ANIMATION.duration,
-        ...ANIMATION.spring,
+        delay: index * 0.1,
+        duration: 0.6,
       }}
+      whileHover={{ y: -10 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="group h-full"
-      style={{
-        transform: isHovered ? "translateY(-8px)" : "translateY(0)",
-      }}
     >
-      <div
-        className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
-        style={{
-          background: isHovered
-            ? `linear-gradient(135deg,
-                #081C34 0%,
-                #0D2747 50%,
-                #163B66 100%)`
-            : `linear-gradient(135deg,
-                #0A1A2F 0%,
-                #102B4C 50%,
-                #163B66 100%)`,
-
-          border: isHovered
-            ? "1px solid rgba(253,185,19,0.25)"
-            : "1px solid rgba(255,255,255,0.06)",
-
-          boxShadow: isHovered
-            ? "0 30px 80px rgba(8,28,52,0.45)"
-            : "0 10px 35px rgba(8,28,52,0.20)",
-        }}
-      >
-        {/* Top Accent */}
-        <motion.div
-          className="absolute top-0 left-0 right-0 h-1 origin-left"
+      <motion.a href={service.path} whileHover={{ x: 5 }}>
+        {" "}
+        <div
+          className="relative h-full rounded-3xl overflow-hidden border border-white/10 bg-primary-800 backdrop-blur-xl transition-all duration-500"
           style={{
-            background: "linear-gradient(90deg, #FDB913, transparent)",
+            boxShadow: isHovered
+              ? "0 25px 60px rgba(8,28,52,0.35)"
+              : "0 10px 25px rgba(8,28,52,0.15)",
           }}
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.4 }}
-        />
+        >
+          {/* Status Badge */}
+          <div className="absolute top-5 right-5">
+            <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FDB913]/10 border border-[#FDB913]/20 text-[#FDB913]">
+              {service.status}
+            </span>
+          </div>
 
-        {/* Status Badge */}
-        <div className="absolute top-5 right-5 z-20">
-          <span
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
-            style={{
-              background: "rgba(253,185,19,0.12)",
-              color: "#FDB913",
-              border: "1px solid rgba(253,185,19,0.25)",
-            }}
-          >
-            <motion.span
-              animate={{
-                scale: [1, 1.3, 1],
-                opacity: [1, 0.5, 1],
+          {/* Glow */}
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
+
+          <div className="relative z-10 p-8">
+            {/* Icon */}
+            <motion.div
+              whileHover={{ rotate: [0, -8, 8, 0] }}
+              className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+              style={{
+                background: "rgba(253,185,19,0.12)",
+                border: "1px solid rgba(253,185,19,0.25)",
               }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-              }}
-              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
-            />
+            >
+              <Icon size={28} className="text-[#FDB913]" />
+            </motion.div>
 
-            {service.status}
-          </span>
+            {/* Title */}
+            <h3 className="text-2xl font-bold text-white mb-3">
+              {service.name}
+            </h3>
+
+            {/* Description */}
+            <p className="text-white/70 text-sm leading-relaxed mb-6">
+              {service.desc}
+            </p>
+
+            {/* Features */}
+            <div className="space-y-3 mb-8">
+              {service.features.map((feature, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 text-sm text-white/80"
+                >
+                  <FaCheckCircle className="text-[#FDB913] flex-shrink-0" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <motion.a
+              href={service.path}
+              whileHover={{ x: 5 }}
+              className="inline-flex items-center gap-2 text-[#FDB913] font-semibold"
+            >
+              Learn More
+              <FaArrowRight size={14} />
+            </motion.a>
+          </div>
         </div>
-
-        {/* Glow Effect */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-
-        <div className="relative z-10 p-8 lg:p-10">
-          {/* Icon */}
-          <motion.div
-            className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
-            style={{
-              background: "rgba(253,185,19,0.12)",
-              border: "1px solid rgba(253,185,19,0.25)",
-            }}
-            whileHover={{ rotate: [0, -5, 5, 0] }}
-          >
-            <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
-          </motion.div>
-
-          {/* Title */}
-          <h3 className="text-xl font-bold mb-3 pr-16 text-white">
-            {service.title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-sm leading-relaxed mb-6 text-white/70">
-            {service.description}
-          </p>
-
-          {/* Features */}
-          <ul className="space-y-3 mb-6">
-            {service.features.map((feature, idx) => (
-              <li
-                key={idx}
-                className="flex items-center gap-2 text-sm text-white/80"
-              >
-                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
-
-                {feature}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      </motion.a>
     </motion.div>
   );
 };
@@ -2793,17 +2773,7 @@ const BenefitCard = ({ benefit, index }) => (
     whileHover={{ y: -6, scale: 1.02 }}
     className="group"
   >
-    <div
-      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
-      style={{
-        background:
-          "linear-gradient(135deg, #081C34 0%, #102B4C 50%, #163B66 100%)",
-
-        border: "1px solid rgba(255,255,255,0.08)",
-
-        boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
-      }}
-    >
+    <div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500 bg-primary-800">
       {/* Gold Glow */}
       <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -2942,10 +2912,10 @@ const StepComponent = ({ step, index, totalSteps }) => {
 // Hero Section (Left Text + Right Visual)
 const HeroSection = () => (
   <section
-    className="relative py-6 lg:py-10 overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
+    className="relative py-6 lg:py-10 overflow-hidden bg-primary-800"
+    // style={{
+    //   background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
+    // }}
   >
     {/* Background Elements */}
     <div className="absolute inset-0" aria-hidden="true">
@@ -3036,7 +3006,7 @@ const HeroSection = () => (
             optimization services powered by SAP S/4HANA.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed mb-10 max-w-xl">
+          <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-xl">
             We combine deep domain expertise with proven methodologies to
             modernize legacy systems, streamline operations, and drive real-time
             business insights.
@@ -3343,13 +3313,7 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8 }}
           className="relative order-2 lg:order-1"
         >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.light})`,
-              border: `1px solid rgba(253,185,19,0.1)`,
-            }}
-          >
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             {/* Replace with actual image: */}
             {/* <img src="/images/sap-team.jpg" alt="SAP Team Collaboration" className="w-full h-full object-cover" /> */}
 
@@ -3475,12 +3439,7 @@ const BenefitsSection = () => (
           </div>
 
           {/* Why Choose Us Badges */}
-          <div
-            className="p-6 rounded-2xl"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-            }}
-          >
+          <div className="p-6 rounded-2xl bg-primary-800">
             <h4 className="text-white font-bold mb-4 flex items-center gap-2">
               <FaStar
                 className="text-sm"
@@ -3509,7 +3468,7 @@ const BenefitsSection = () => (
 
 // Process/Approach Section (Stepper UI)
 const ApproachSection = () => (
-  <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-primary-800 relative overflow-hidden">
     {/* Background Glow */}
     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#0F2B4D] blur-3xl rounded-full"></div>
@@ -3775,7 +3734,7 @@ const SAPConsultingPage = () => {
       <ServicesSection />
       <ApproachSection />
       <BenefitsSection />
-      <CTABannerSection />
+      {/* <CTABannerSection /> */}
     </main>
   );
 };

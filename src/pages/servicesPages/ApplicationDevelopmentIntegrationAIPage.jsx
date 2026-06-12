@@ -6539,12 +6539,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section
-      className="min-h-screen relative overflow-hidden pt-10 pb-10 px-4 md:px-8"
-      style={{
-        background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-      }}
-    >
+    <section className="min-h-screen relative overflow-hidden pt-10 pb-10 px-4 md:px-8 bg-primary-800">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -6592,7 +6587,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            <div
+            {/* <div
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full"
               style={{
                 background: "rgba(253,185,19,0.12)",
@@ -6608,6 +6603,29 @@ const HeroSection = () => {
                 style={{ color: BRAND.gold.primary }}
               >
                 Application Development • Integration Services • AI
+              </span>
+            </div> */}
+            {/* Badge */}
+            <div className="inline-flex items-center gap-3 mb-8">
+              <motion.div
+                className="w-14 h-14 rounded-xl flex items-center justify-center"
+                whileHover={{ rotate: 12 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                style={{
+                  background: `${BRAND.gold.primary}15`,
+                  border: `1px solid ${BRAND.gold.primary}30`,
+                }}
+              >
+                <FaRobot
+                  className="text-2xl"
+                  style={{ color: BRAND.gold.primary }}
+                />
+              </motion.div>
+              <span
+                className="text-sm font-bold uppercase tracking-[0.25em]"
+                style={{ color: BRAND.gold.primary }}
+              >
+                AI & Engineering Services
               </span>
             </div>
 
@@ -6643,7 +6661,7 @@ const HeroSection = () => {
               transformation.
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            {/* <div className="flex flex-wrap gap-4 pt-4">
               <button
                 className="btn-primary px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
                 style={{
@@ -6663,7 +6681,7 @@ const HeroSection = () => {
               >
                 Explore Services <FaChevronDown />
               </button>
-            </div>
+            </div> */}
 
             {/* <div
               className="flex flex-wrap gap-8 pt-8"
@@ -7000,15 +7018,7 @@ const WhyInnoviseSection = () => {
               whileHover={{ y: -8 }}
               className="group cursor-pointer"
             >
-              <div
-                className="h-full rounded-3xl p-8 overflow-hidden transition-all duration-500"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #0A1A2F 0%, #102B4C 50%, #163B66 100%)",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                  boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
-                }}
-              >
+              <div className="h-full rounded-3xl p-8 overflow-hidden transition-all duration-500 bg-primary-800">
                 <div
                   className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                   style={{ background: `${card.color}20` }}
@@ -7104,9 +7114,9 @@ const ServicesSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden"
+      className="py-28 px-4 md:px-8 relative overflow-hidden bg-primary-800"
       style={{
-        background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 100%)`,
+        // background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 100%)`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
@@ -7453,9 +7463,9 @@ const TechnologyEcosystemSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden"
+      className="py-28 px-4 md:px-8 relative overflow-hidden bg-primary-800"
       style={{
-        background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
+        // background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
@@ -7578,9 +7588,9 @@ const BusinessImpactSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden"
+      className="pb-10 px-4 md:px-8 relative overflow-hidden bg-primary-800"
       style={{
-        background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 50%, ${BRAND.navy.lighter} 100%)`,
+        // background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 50%, ${BRAND.navy.lighter} 100%)`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
@@ -7800,9 +7810,8 @@ const CaseStudiesSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden"
+      className="py-16 px-4 md:px-8 relative overflow-hidden bg-primary-800"
       style={{
-        background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
@@ -7903,12 +7912,12 @@ const CaseStudiesSection = () => {
                       ))}
                     </ul>
                   </div>
-                  <button
+                  {/* <button
                     className="mt-6 font-medium text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
                     style={{ color: caseStudy.color }}
                   >
                     Read Full Case Study <FaArrowRight />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>
@@ -7954,9 +7963,9 @@ const AIInnovationSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden"
+      className="py-12 px-4 md:px-8 relative overflow-hidden"
       style={{
-        background: BRAND.gold.gradient,
+        background: BRAND.gold.light,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
@@ -7997,7 +8006,7 @@ const AIInnovationSection = () => {
               operations, enhance decision-making, and create unprecedented
               competitive advantages.
             </p>
-            <button
+            {/* <button
               className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
               style={{
                 background: BRAND.navy.dark,
@@ -8005,7 +8014,7 @@ const AIInnovationSection = () => {
               }}
             >
               Explore AI Solutions <FaArrowRight />
-            </button>
+            </button> */}
           </div>
           <div className="grid gap-4">
             {features.map((feature, index) => (
@@ -8368,8 +8377,8 @@ const ApplicationDevelopmentIntegrationAIPage = () => {
       <IndustriesSection />
       <CaseStudiesSection />
       <AIInnovationSection />
-      <StatsSection />
-      <CTABannerSection />
+      {/* <StatsSection /> */}
+      {/* <CTABannerSection /> */}
       {/* <Footer /> */}
     </div>
   );

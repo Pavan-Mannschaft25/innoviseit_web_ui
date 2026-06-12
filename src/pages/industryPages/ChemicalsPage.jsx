@@ -92,7 +92,7 @@ const IconCard = ({ icon: Icon, title, description, delay = 0 }) => (
     {/* Gold Accent Top Border */}
     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFD700] via-[#D4AF37] to-[#FFD700] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
 
-    <div className="w-20 h-20 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
+    <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
       <Icon className="text-4xl text-[#FFD700]" />
     </div>
     <h3 className="font-bold text-xl mb-3 text-[#0a1628]">{title}</h3>
@@ -268,7 +268,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
+  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs */}
@@ -406,7 +406,7 @@ const HeroSection = () => (
         <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-6 -right-6 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
+          className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-[#FFD700]">24/7</div>
@@ -435,7 +435,7 @@ const ChallengesSection = () => (
       {CHALLENGES_DATA.map((challenge, i) => (
         <Card key={i} delay={i * 0.1}>
           <div className="flex flex-col h-full">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-xl flex items-center justify-center mb-5 shadow-lg">
+            <div className="w-14 h-14 bg-primary-800 rounded-xl flex items-center justify-center mb-5 shadow-lg">
               <challenge.icon className="text-2xl text-[#FFD700]" />
             </div>
             <h3 className="font-bold text-lg mb-3 text-[#0a1628]">
@@ -491,7 +491,7 @@ const SolutionsSection = () => (
 
 const BenefitsSection = () => (
   <SectionWrapper
-    className="bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden"
+    className="bg-primary-800 text-white relative overflow-hidden"
     id="benefits"
   >
     {/* Background Decoration */}
@@ -580,11 +580,11 @@ const BenefitsSection = () => (
             ))}
           </div>
 
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <Button variant="ghost">
               Download Safety Whitepaper <FaArrowRight />
             </Button>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
@@ -659,7 +659,7 @@ const ProcessSection = () => (
 const CTASection = () => (
   <section className="relative px-6 lg:px-20 py-28 overflow-hidden">
     {/* Rich Background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628]"></div>
+    <div className="absolute inset-0 bg-primary-800"></div>
 
     {/* Molecular Pattern Overlay */}
     <div
@@ -726,17 +726,17 @@ const CTASection = () => (
           manufacturing.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
+        {/* <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10">
           <Button size="lg" className="!px-12 !py-5 !text-lg">
             Schedule Safety Consultation <FaArrowRight />
           </Button>
           <Button variant="ghost" size="lg" className="!px-12 !py-5 !text-lg">
             Download Compliance Guide
           </Button>
-        </div>
+        </div> */}
 
         {/* Trust Indicators */}
-        <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFD700]/20">
+        {/* <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFD700]/20">
           <div className="flex items-center gap-2">
             <FaShieldAlt className="text-[#FFD700]" />
             ISO Certified
@@ -753,7 +753,7 @@ const CTASection = () => (
             <FaStar className="text-[#FFD700]" />
             24/7 Support
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </div>
   </section>
@@ -792,7 +792,7 @@ export default function ChemicalsPage() {
         {memoizedContent.solutions}
         {memoizedContent.benefits}
         {memoizedContent.process}
-        {memoizedContent.cta}
+        {/* {memoizedContent.cta} */}
       </main>
     </div>
   );

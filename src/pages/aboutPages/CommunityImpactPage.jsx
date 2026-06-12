@@ -19,7 +19,7 @@ import {
   FaWifi,
   FaShieldAlt,
 } from "react-icons/fa";
-import banner from "../../assets/banners/community.png";
+import banner from "../../assets/banners/culture_community_banner.png";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -68,7 +68,7 @@ const focusAreasData = [
   {
     id: 2,
     icon: FaHandsHelping,
-    emoji: "🌍",
+    emoji: "",
     title: "Social Responsibility",
     shortTitle: "Social",
     description:
@@ -605,7 +605,7 @@ const FocusAreasSection = () => (
             boxShadow: `0 4px 20px ${BRAND.gold.primary}10`,
           }}
         >
-          🤝 Our Focus Areas
+          Our Focus Areas
         </span>
 
         {/* Heading */}
@@ -669,12 +669,7 @@ const FocusAreasSection = () => (
 
 // Impact Stats Section Component
 const ImpactStatsSection = () => (
-  <section
-    className="py-6 lg:py-10 relative overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-    }}
-  >
+  <section className="py-6 lg:py-10 relative overflow-hidden bg-primary-800">
     {/* Background Pattern */}
     <div
       className="absolute inset-0 opacity-[0.05]"
@@ -720,7 +715,7 @@ const ImpactStatsSection = () => (
             border: "1px solid rgba(255,255,255,0.25)",
           }}
         >
-          📊 Our Impact by Numbers
+          Our Impact by Numbers
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -837,7 +832,7 @@ const ContributionSection = () => (
               border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
-            🚀 How We Contribute
+            How We Contribute
           </span>
 
           <h2
@@ -1008,7 +1003,7 @@ const MilestonesSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section className="py-6 lg:py-12 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Header */}
         <motion.header
@@ -1025,7 +1020,7 @@ const MilestonesSection = () => {
               border: `1px solid ${BRAND.gold.primary}30`,
             }}
           >
-            🏆 Our Journey
+            Our Journey
           </span>
 
           <h2
@@ -1284,7 +1279,7 @@ const CommunityImpactPage = () => {
         <img
           src={banner}
           alt="Innovise IT Banner"
-          className="w-full h-full object-fill object-center"
+          className="w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/10" />
@@ -1294,7 +1289,7 @@ const CommunityImpactPage = () => {
       <ImpactStatsSection />
       <ContributionSection />
       <MilestonesSection />
-      <ClosingSection />
+      {/* <ClosingSection /> */}
     </main>
   );
 };

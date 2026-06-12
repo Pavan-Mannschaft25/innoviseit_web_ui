@@ -451,9 +451,7 @@ const TestimonialCard = ({ testimonial, index }) => (
 const HeroSection = () => (
   <section
     className="relative min-h-screen flex items-center overflow-hidden py-16 lg:py-10"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
+    bg-primary-800
   >
     {/* Background Elements */}
     <div className="absolute inset-0" aria-hidden="true">
@@ -600,7 +598,7 @@ const HeroSection = () => (
           </div>
 
           {/* Trust Indicators */}
-          <div
+          {/* <div
             className="flex flex-wrap items-center gap-8 pt-8"
             style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
           >
@@ -640,7 +638,7 @@ const HeroSection = () => (
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* RIGHT - Dashboard Visual */}

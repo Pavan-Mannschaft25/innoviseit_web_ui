@@ -33,10 +33,13 @@ const Footer = () => {
         name: "AMS",
         path: "/services/app-maintenance",
       },
-      { name: "Testing & Quality Assurance", path: "/services/testing-qa" },
       {
-        name: "Code Quality & Security",
-        path: "/services/code-quality-security",
+        name: "Data Migration & Transformation",
+        path: "/services/data-migration",
+      },
+      {
+        name: "SAP Talent & Staff Augmentation",
+        path: "/services/staff-augmentation",
       },
     ],
     company: [
@@ -56,9 +59,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-primary-800 text-gray-300">
       {/* Main Footer Content */}
-      <div className="py-16 border-b border-gray-800">
+      <div className="py-16 border-b border-black">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
             {/* Company Info */}
@@ -82,7 +85,7 @@ const Footer = () => {
                 </div>
               </Link>
 
-              <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
+              <p className="text-white leading-relaxed mb-6 max-w-md">
                 Innovative technology partner delivering cloud, AI, engineering,
                 enterprise applications, and digital transformation solutions
                 that help organizations modernize operations, accelerate growth,
@@ -97,21 +100,21 @@ const Footer = () => {
                     href: companyData.socialLinks.linkedin,
                     label: "LinkedIn",
                   },
-                  {
-                    icon: FaTwitter,
-                    href: companyData.socialLinks.twitter,
-                    label: "Twitter",
-                  },
-                  {
-                    icon: FaFacebookF,
-                    href: companyData.socialLinks.facebook,
-                    label: "Facebook",
-                  },
-                  {
-                    icon: FaInstagram,
-                    href: companyData.socialLinks.instagram,
-                    label: "Instagram",
-                  },
+                  // {
+                  //   icon: FaTwitter,
+                  //   href: companyData.socialLinks.twitter,
+                  //   label: "Twitter",
+                  // },
+                  // {
+                  //   icon: FaFacebookF,
+                  //   href: companyData.socialLinks.facebook,
+                  //   label: "Facebook",
+                  // },
+                  // {
+                  //   icon: FaInstagram,
+                  //   href: companyData.socialLinks.instagram,
+                  //   label: "Instagram",
+                  // },
                 ].map((social, idx) => (
                   <a
                     key={idx}
@@ -119,7 +122,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 rounded-lg flex items-center justify-center bg-primary-600 text-white transition-all duration-300"
                   >
                     <social.icon className="text-sm" />
                   </a>
@@ -137,7 +140,8 @@ const Footer = () => {
                   <li key={idx}>
                     <Link
                       to={link.path}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
+                      onClick={() => window.scrollTo(0, 0)}
+                      className="text-white hover:text-white transition-colors duration-200 flex items-center gap-2 group"
                     >
                       <FaArrowRight className="text-xs opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
                       {link.name}
@@ -157,7 +161,8 @@ const Footer = () => {
                   <li key={idx}>
                     <Link
                       to={link.path}
-                      className="text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-2 group"
+                      onClick={() => window.scrollTo(0, 0)}
+                      className="text-white hover:text-white transition-colors duration-200 flex items-center gap-2 group"
                     >
                       <FaArrowRight className="text-xs opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
                       {link.name}
@@ -175,7 +180,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <FaMapMarkerAlt className="text-accent-500 mt-1 flex-shrink-0" />
-                  <span className="text-sm text-gray-400">
+                  <span className="text-sm text-white">
                     {companyData.contact.address.street}
                     <br />
                     {companyData.contact.address.city},{" "}
@@ -187,7 +192,7 @@ const Footer = () => {
                   <FaEnvelope className="text-accent-500 flex-shrink-0" />
                   <a
                     href={`mailto:${companyData.contact.email}`}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-white hover:text-white transition-colors"
                   >
                     {companyData.contact.email}
                   </a>
@@ -196,13 +201,13 @@ const Footer = () => {
                   <FaPhone className="text-accent-500 flex-shrink-0" />
                   <a
                     href={`tel:${companyData.contact.phone.replace(/\s/g, "")}`}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                    className="text-sm text-white hover:text-white transition-colors"
                   >
                     {companyData.contact.phone}
                   </a>
                 </li>
                 <li className="pt-2">
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-white">
                     {companyData.contact.hours}
                   </p>
                 </li>
@@ -216,7 +221,7 @@ const Footer = () => {
       <div className="py-6">
         <Container>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-white">
               © {currentYear} {companyData.name}. All rights reserved.
             </p>
 
@@ -238,9 +243,8 @@ const Footer = () => {
               </Link>
             </div> */}
 
-            <p className="text-sm text-gray-500 flex items-center gap-1">
-              Made with <FaHeart className="text-red-500 text-xs" /> by Innovise
-              IT Team
+            <p className="text-sm text-white flex items-center gap-1">
+              Designed & Developed by Innovise IT Team
             </p>
           </div>
         </Container>

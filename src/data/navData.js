@@ -45,42 +45,49 @@ export const navData = {
         //   icon: "FaProjectDiagram",
         //   path: "/services/integration-services",
         // },
-        {
-          name: "Application Management Services",
-          desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
-          icon: "FaTools",
-          path: "/services/app-maintenance",
-        },
+        // {
+        //   name: "Application Management Services",
+        //   desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
+        //   icon: "FaTools",
+        //   path: "/services/app-maintenance",
+        // },
+        // {
+        //   name: "Data Migration & Transformation",
+        //   desc: "System consolidation, SAP HANA migration, and data modernization",
+        //   icon: "FaDatabase",
+        //   path: "/services/data-migration",
+        // },
+        // {
+        //   name: "SAP Talent & Staff Augmentation",
+        //   desc: "Certified SAP consultants, architects, developers, and project experts on demand",
+        //   icon: "FaUserTie",
+        //   path: "/services/staff-augmentation",
+        // },
         {
           name: "Testing & Quality Assurance",
           desc: "AI-powered testing solutions ensuring reliability and performance",
           icon: "FaCheckCircle",
           path: "/services/testing-qa",
         },
-        {
-          name: "Code Quality & Security",
-          desc: "Comprehensive code reviews, secure coding practices, vulnerability assessments, and quality assurance to ensure reliable and secure applications",
-          icon: "FaShieldAlt",
-          path: "/services/code-quality-security",
-        },
-        {
-          name: "Data Migration & Transformation",
-          desc: "System consolidation, SAP HANA migration, and data modernization",
-          icon: "FaDatabase",
-          path: "/services/data-migration",
-        },
+        // {
+        //   name: "Code Quality & Security",
+        //   desc: "Comprehensive code reviews, secure coding practices, vulnerability assessments, and quality assurance to ensure reliable and secure applications",
+        //   icon: "FaShieldAlt",
+        //   path: "/services/code-quality-security",
+        // },
+
         // {
         //   name: "Project Remediation",
         //   desc: "Rescue underperforming projects with proven recovery methodologies",
         //   icon: "FaWrench",
         //   path: "/services/remediation",
         // },
-        {
-          name: "Staff Augmentation",
-          desc: "On-demand access to certified SAP and engineering experts",
-          icon: "FaUserTie",
-          path: "/services/staff-augmentation",
-        },
+        // {
+        //   name: "Staff Augmentation",
+        //   desc: "On-demand access to certified SAP and engineering experts",
+        //   icon: "FaUserTie",
+        //   path: "/services/staff-augmentation",
+        // },
       ],
     },
     // {

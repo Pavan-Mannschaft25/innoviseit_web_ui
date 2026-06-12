@@ -392,9 +392,8 @@ const ApproachStep = ({ step, index }) => {
       {/* Content Card */}
       <div className="flex-1">
         <motion.div
-          className="p-8 lg:p-10 rounded-2xl transition-all duration-500"
+          className="p-8 lg:p-10 rounded-2xl transition-all duration-500 text-white bg-primary-800"
           style={{
-            background: isHovered ? BRAND.navy.dark : "white",
             border: `1px solid ${isHovered ? `${BRAND.gold.primary}30` : "rgba(0,0,0,0.06)"}`,
             boxShadow: isHovered
               ? `0 20px 50px ${BRAND.navy.dark}25`
@@ -419,28 +418,13 @@ const ApproachStep = ({ step, index }) => {
             </motion.div>
 
             <div>
-              <h3
-                className="text-2xl font-bold"
-                style={{ color: isHovered ? "white" : BRAND.navy.dark }}
-              >
-                {step.title}
-              </h3>
-              <p
-                className="text-sm font-medium"
-                style={{ color: isHovered ? BRAND.gold.primary : "#94A3B8" }}
-              >
-                {step.subtitle}
-              </p>
+              <h3 className="text-2xl font-bold">{step.title}</h3>
+              <p className="text-sm font-medium">{step.subtitle}</p>
             </div>
           </div>
 
           {/* Description */}
-          <p
-            className="text-base leading-relaxed mb-6"
-            style={{ color: isHovered ? "rgba(255,255,255,0.8)" : "#64748B" }}
-          >
-            {step.description}
-          </p>
+          <p className="text-base leading-relaxed mb-6">{step.description}</p>
 
           {/* Activities */}
           <div className="space-y-2">
@@ -450,14 +434,7 @@ const ApproachStep = ({ step, index }) => {
                   className="text-sm flex-shrink-0"
                   style={{ color: BRAND.gold.primary }}
                 />
-                <span
-                  className="text-sm font-medium"
-                  style={{
-                    color: isHovered ? "rgba(255,255,255,0.85)" : "#475569",
-                  }}
-                >
-                  {activity}
-                </span>
+                <span className="text-sm font-medium">{activity}</span>
               </div>
             ))}
           </div>
@@ -577,7 +554,7 @@ const HeroSection = () => (
             className="text-sm font-bold uppercase tracking-[0.25em]"
             style={{ color: BRAND.gold.primary }}
           >
-            🚀 About Innovise IT
+            About Innovise IT
           </span>
           <span
             className="w-12 h-[2px]"
@@ -646,7 +623,7 @@ const WhoWeAreSection = () => (
               border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
-            🌍 Who We Are
+            Who We Are
           </span>
 
           <h2
@@ -721,13 +698,7 @@ const WhoWeAreSection = () => (
           className="relative"
         >
           {/* Main Visual Container */}
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-              border: `2px solid ${BRAND.gold.primary}20`,
-            }}
-          >
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             {/* Pattern Overlay */}
             <div
               className="absolute inset-0 opacity-[0.05]"
@@ -801,7 +772,7 @@ const WhoWeAreSection = () => (
 
 // Services Grid Section
 const ServicesSection = () => (
-  <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+  <section className="py-6 lg:py-12 bg-gray-50 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       {/* Section Header */}
       <motion.header
@@ -818,7 +789,7 @@ const ServicesSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          💡 What We Do
+          What We Do
         </span>
 
         <h2
@@ -862,7 +833,7 @@ const CompanyStatsSection = () => (
             border: `1px solid ${BRAND.gold.primary}25`,
           }}
         >
-          📊 Company At A Glance
+          Company At A Glance
         </span>
 
         <h2
@@ -941,19 +912,19 @@ const CompanyStatsSection = () => (
 // Mission & Vision Cards Section
 const MissionVisionSection = () => (
   <section
-    className="py-20 lg:py-28 relative overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-    }}
+    className="py-6 lg:py-12 relative overflow-hidden bg-primary-800"
+    // style={{
+    //   background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
+    // }}
   >
     {/* Background Pattern */}
-    <div
+    {/* <div
       className="absolute inset-0 opacity-[0.03]"
       style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
         backgroundSize: "40px 40px",
       }}
-    />
+    /> */}
 
     {/* Decorative Orbs */}
     <motion.div
@@ -1004,7 +975,7 @@ const MissionVisionSection = () => (
                 border: `1px solid ${BRAND.gold.primary}25`,
               }}
             >
-              🎯 Our Mission
+              Our Mission
             </span>
 
             {/* Title */}
@@ -1078,7 +1049,7 @@ const MissionVisionSection = () => (
                 border: `1px solid ${BRAND.gold.primary}25`,
               }}
             >
-              👁️ Our Vision
+              Our Vision
             </span>
 
             {/* Title */}
@@ -1118,7 +1089,7 @@ const MissionVisionSection = () => (
 
 // Why Choose Us Section
 const WhyChooseUsSection = () => (
-  <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <section className="py-6 lg:py-12 bg-white relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       {/* Section Header */}
       <motion.header
@@ -1135,7 +1106,7 @@ const WhyChooseUsSection = () => (
             border: `1px solid ${BRAND.gold.primary}30`,
           }}
         >
-          ⭐ Why Innovise IT
+          Why Innovise IT
         </span>
 
         <h2
@@ -1275,7 +1246,7 @@ const WhyChooseUsSection = () => (
 
 // Our Approach Section (Stepper/Timeline)
 const ApproachSection = () => (
-  <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+  <section className="py-6 lg:py-12 bg-gray-50 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       {/* Section Header */}
       <motion.header
@@ -1292,7 +1263,7 @@ const ApproachSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          🤝 Our Approach
+          Our Approach
         </span>
 
         <h2
@@ -1453,7 +1424,7 @@ const ClosingSection = () => (
         </div>
 
         {/* Trust Indicators */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -1474,7 +1445,7 @@ const ClosingSection = () => (
               <span className="text-xs font-medium">{item.text}</span>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </div>
   </section>
@@ -1488,7 +1459,7 @@ const AboutPage = () => {
         <img
           src={banner}
           alt="Innovise IT Banner"
-          className="w-full h-full object-fill object-center"
+          className="w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/10" />
@@ -1498,9 +1469,9 @@ const AboutPage = () => {
       {/* <ServicesSection /> */}
       <CompanyStatsSection />
       <MissionVisionSection />
-      <WhyChooseUsSection />
+      {/* <WhyChooseUsSection /> */}
       <ApproachSection />
-      <ClosingSection />
+      {/* <ClosingSection /> */}
     </main>
   );
 };

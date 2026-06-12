@@ -607,10 +607,10 @@ function Hero() {
       <div
         className="
       w-full
-      h-[28vh]
+      h-[24vh]
       sm:h-[40vh]
-      md:h-[65vh]
-      lg:h-[80vh]
+      md:h-[70vh]
+      lg:h-[90vh]
       xl:h-[90vh]
     "
       >

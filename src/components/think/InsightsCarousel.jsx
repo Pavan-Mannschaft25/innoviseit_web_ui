@@ -231,7 +231,7 @@
 //             boxShadow: `0 4px 15px ${BRAND.gold.primary}40`,
 //           }}
 //         >
-//           ⭐ Featured
+//            Featured
 //         </span>
 //       </motion.div>
 //     )}
@@ -829,7 +829,7 @@ const InsightsCarousel = () => {
               border: `1px solid ${BRAND.gold.primary}30`,
             }}
           >
-            🚀 What We Do
+             What We Do
           </span> */}
 
           <h2
