@@ -141,7 +141,7 @@ const CTA = ({
 
   return (
     <section
-      className={`py-24 ${currentVariant.bgClass} relative overflow-hidden`}
+      className={`py-16 ${currentVariant.bgClass} relative overflow-hidden`}
     >
       {/* Background Decorations */}
       <div className="absolute inset-0">

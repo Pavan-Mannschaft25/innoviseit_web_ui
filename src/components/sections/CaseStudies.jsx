@@ -512,7 +512,7 @@ const CaseStudiesBrand = () => {
 
   return (
     <section
-      className="relative py-20 lg:py-32 overflow-hidden"
+      className="relative py-10 lg:py-16 overflow-hidden"
       style={{
         background: `linear-gradient(to bottom, ${BRAND.navy.dark}, ${BRAND.navy.mid}, ${BRAND.navy.lighter})`,
       }}

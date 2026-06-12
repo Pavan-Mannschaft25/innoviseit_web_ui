@@ -16,8 +16,8 @@ export const navData = {
           path: "/services/guidewire",
         },
         {
-          name: "Application Development & AI",
-          desc: "Custom application development, SAP and Guidewire integrations, AI-enabled automation, and enterprise solutions that streamline operations and drive digital transformation.",
+          name: "AI & Engineering Services",
+          desc: "Delivering AI-powered solutions, intelligent automation, and engineering services that enable organizations to innovate faster, optimize operations, and achieve scalable digital transformation.",
           icon: "FaRobot",
           path: "/services/application-development-integration-ai",
         },

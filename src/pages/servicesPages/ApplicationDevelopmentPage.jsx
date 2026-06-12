@@ -424,13 +424,13 @@ const ServicesSection = () => {
                 {service.desc}
               </p>
 
-              <button
+              {/* <button
                 className="flex items-center gap-2 text-sm font-semibold"
                 style={{ color: BRAND.gold.primary }}
               >
                 Learn More
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </button> */}
             </motion.div>
           ))}
         </div>

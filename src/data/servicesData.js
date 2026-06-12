@@ -283,10 +283,10 @@ export const servicesData = [
   },
   {
     id: 3,
-    category: "Application Development & AI",
-    title: "Application Development, Integration Services & AI",
+    category: "AI & Engineering",
+    title: "AI & Engineering Services",
     description:
-      "Custom application development, SAP and Guidewire integrations, AI-enabled automation, and enterprise solutions that streamline operations and drive digital transformation.",
+      "Delivering AI-powered solutions, intelligent automation, and engineering services that enable organizations to innovate faster, optimize operations, and achieve scalable digital transformation.",
     image: img3,
     readTime: "Integration & AI",
     date: "Innovise IT",

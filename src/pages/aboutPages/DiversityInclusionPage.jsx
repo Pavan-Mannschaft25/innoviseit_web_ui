@@ -166,7 +166,7 @@ const CommitmentCard = ({ item, index }) => {
           </p>
 
           {/* Learn More Link */}
-          <div className="flex items-center gap-2 mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:gap-3">
+          {/* <div className="flex items-center gap-2 mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:gap-3">
             <span
               className="text-xs font-bold uppercase tracking-wider"
               style={{ color: item.color }}
@@ -177,7 +177,7 @@ const CommitmentCard = ({ item, index }) => {
               className="text-xs transition-transform group-hover:translate-x-1"
               style={{ color: item.color }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </motion.div>

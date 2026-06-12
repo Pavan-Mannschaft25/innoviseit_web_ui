@@ -4816,6 +4816,1546 @@
 
 // export default ApplicationDevelopmentIntegrationAIPage;
 
+// import React, { useState, useEffect, useRef } from "react";
+// import {
+//   FaLaptopCode,
+//   FaProjectDiagram,
+//   FaBrain,
+//   FaCloud,
+//   FaShieldAlt,
+//   FaCogs,
+//   FaSearch,
+//   FaPencilRuler,
+//   FaCode,
+//   FaPlug,
+//   FaRocket,
+//   FaChartLine,
+//   FaFolderOpen,
+//   FaBuilding,
+//   FaServer,
+//   FaHeadset,
+//   FaCheckCircle,
+//   FaArrowRight,
+//   FaChevronDown,
+//   FaCube,
+//   FaEnvelope,
+//   FaPhone,
+//   FaDatabase,
+//   FaLock,
+//   FaDollarSign,
+//   FaUniversity,
+//   FaHeartbeat,
+//   FaShoppingCart,
+//   FaIndustry,
+//   FaTruck,
+//   FaBolt,
+//   FaLandmark,
+//   FaRobot,
+//   FaCloudUploadAlt,
+//   FaMagic,
+//   FaUsers,
+//   FaBookOpen,
+//   FaLinkedin,
+//   FaTwitter,
+//   FaGithub,
+//   FaPlayCircle,
+//   FaHandshake,
+//   FaFlask,
+//   FaStar,
+//   FaAward,
+//   FaGlobe,
+// } from "react-icons/fa";
+// import { motion } from "framer-motion";
+
+// // ==================== BRAND COLORS (NAVY + GOLD STRICTLY) ====================
+// const BRAND = {
+//   navy: {
+//     dark: "#0B1D33", // Innovise Blue
+//     mid: "#143A63",
+//     light: "#1A4570",
+//   },
+//   gold: {
+//     primary: "#FDB913", // Innovise Yellow
+//     light: "#FFD54F",
+//     dark: "#E5A700",
+//     gradient: "linear-gradient(135deg, #E5A700 0%, #FDB913 50%, #FFD54F 100%)",
+//   },
+// };
+
+// // ==================== ANIMATION CONFIG ====================
+// const ANIMATION = {
+//   stagger: 0.12,
+//   duration: 0.6,
+//   spring: { type: "spring", stiffness: 300, damping: 25 },
+// };
+
+// // ==================== SCROLL REVEAL HOOK ====================
+// const useScrollReveal = (threshold = 0.1) => {
+//   const ref = useRef(null);
+//   const [isVisible, setIsVisible] = useState(false);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) {
+//           setIsVisible(true);
+//           observer.unobserve(entry.target);
+//         }
+//       },
+//       { threshold },
+//     );
+//     if (ref.current) observer.observe(ref.current);
+//     return () => observer.disconnect();
+//   }, [threshold]);
+
+//   return [ref, isVisible];
+// };
+
+// // ==================== HERO SECTION (Dark Anchor) ====================
+// const HeroSection = () => {
+//   const floatingCards = [
+//     {
+//       title: "AI & Analytics",
+//       icon: FaBrain,
+//       desc: "ML & Automation",
+//       position: "top-2 left-1/2 -translate-x-1/2",
+//       iconColor: "#FDB913",
+//       border: "rgba(253,185,19,0.4)",
+//       bg: "rgba(253,185,19,0.1)",
+//     },
+//     {
+//       title: "SAP",
+//       icon: FaPhone,
+//       desc: "ERP Solutions",
+//       position: "top-1/2 -translate-y-1/2 left-2",
+//       iconColor: "#FFFFFF",
+//       border: "rgba(20,58,99,0.6)",
+//       bg: "rgba(20,58,99,0.3)",
+//     },
+//     {
+//       title: "Guidewire",
+//       icon: FaShieldAlt,
+//       desc: "Insurance Platform",
+//       position: "top-1/2 -translate-y-1/2 right-2",
+//       iconColor: "#FDB913",
+//       border: "rgba(253,185,19,0.4)",
+//       bg: "rgba(253,185,19,0.1)",
+//     },
+//     {
+//       title: "Applications & APIs",
+//       icon: FaCode,
+//       desc: "Custom Development",
+//       position: "bottom-2 left-1/2 -translate-x-1/2",
+//       iconColor: "#FFFFFF",
+//       border: "rgba(20,58,99,0.6)",
+//       bg: "rgba(20,58,99,0.3)",
+//     },
+//     {
+//       title: "Cloud Services",
+//       icon: FaCloud,
+//       position: "top-1/4 left-6",
+//       iconColor: "#FDB913",
+//       border: "rgba(253,185,19,0.3)",
+//       bg: "rgba(253,185,19,0.1)",
+//       small: true,
+//     },
+//     {
+//       title: "Data Platform",
+//       icon: FaDatabase,
+//       position: "top-1/4 right-6",
+//       iconColor: "#FFFFFF",
+//       border: "rgba(20,58,99,0.5)",
+//       bg: "rgba(20,58,99,0.2)",
+//       small: true,
+//     },
+//     {
+//       title: "Security",
+//       icon: FaLock,
+//       position: "bottom-1/4 left-6",
+//       iconColor: "#FDB913",
+//       border: "rgba(253,185,19,0.3)",
+//       bg: "rgba(253,185,19,0.1)",
+//       small: true,
+//     },
+//     {
+//       title: "Analytics",
+//       icon: FaChartLine,
+//       position: "bottom-1/4 right-6",
+//       iconColor: "#FFFFFF",
+//       border: "rgba(20,58,99,0.5)",
+//       bg: "rgba(20,58,99,0.2)",
+//       small: true,
+//     },
+//   ];
+
+//   return (
+//     <section
+//       className="min-h-screen relative overflow-hidden pt-10 pb-10 px-4 md:px-8"
+//       // style={{
+//       //   background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.light} 100%)`,
+//       // }}
+//     >
+//       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+//         <div
+//           className="absolute inset-0 opacity-[0.04]"
+//           style={{
+//             backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+//             backgroundSize: "32px 32px",
+//           }}
+//         />
+//         <motion.div
+//           animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
+//           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+//           className="absolute top-20 right-20 w-[450px] h-[450px] rounded-full blur-3xl opacity-[0.1]"
+//           style={{ background: BRAND.navy.light }}
+//         />
+//         <motion.div
+//           animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
+//           transition={{
+//             duration: 10,
+//             repeat: Infinity,
+//             ease: "easeInOut",
+//             delay: 3,
+//           }}
+//           className="absolute bottom-20 left-20 w-[350px] h-[350px] rounded-full blur-3xl opacity-[0.08]"
+//           style={{ background: BRAND.gold.primary }}
+//         />
+//       </div>
+
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="grid lg:grid-cols-2 gap-16 items-center">
+//           <motion.div
+//             initial={{ opacity: 0, x: -40 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.8 }}
+//             className="space-y-2"
+//           >
+//             <div className="inline-flex items-center gap-2 py-2.5 rounded-full bg-white/5 border border-white/10">
+//               <span
+//                 className="w-2 h-2 rounded-full animate-pulse"
+//                 style={{ background: BRAND.gold.primary }}
+//               ></span>
+//               <span className="text-sm font-semibold text-black ">
+//                 Application Development • Integration Services • AI
+//               </span>
+//             </div>
+
+//             <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight text-black">
+//               Transforming Enterprises Through{" "}
+//               <span
+//                 style={{
+//                   backgroundImage: BRAND.gold.gradient,
+//                   WebkitBackgroundClip: "text",
+//                   WebkitTextFillColor: "transparent",
+//                   backgroundClip: "text",
+//                 }}
+//               >
+//                 Intelligent Applications
+//               </span>
+//               , Seamless Integrations &{" "}
+//               <span
+//                 style={{
+//                   backgroundImage: BRAND.gold.gradient,
+//                   WebkitBackgroundClip: "text",
+//                   WebkitTextFillColor: "transparent",
+//                   backgroundClip: "text",
+//                 }}
+//               >
+//                 AI-Powered Innovation
+//               </span>
+//             </h1>
+
+//             <p className="text-lg md:text-xl text-black max-w-xl leading-relaxed">
+//               Innovise delivers enterprise-grade application development, system
+//               integration, and AI solutions that help organizations modernize
+//               operations, improve customer experiences, and accelerate digital
+//               transformation.
+//             </p>
+
+//             <div className="flex flex-wrap gap-4 pt-4">
+//               <a
+//                 href="/contact"
+//                 className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+//                 style={{
+//                   background: BRAND.gold.gradient,
+//                   color: BRAND.navy.dark,
+//                 }}
+//               >
+//                 Schedule Consultation <FaArrowRight />
+//               </a>
+//               <a
+//                 href="/contact"
+//                 className="px-8 py-4 rounded-xl font-semibold text-black flex items-center gap-2 transition-all hover:-translate-y-1 hover:bg-white/10 border-2 border-[#FDB913]/30 bg-white/5"
+//               >
+//                 Explore Services
+//               </a>
+//             </div>
+
+//             {/* <div className="flex flex-wrap gap-8 pt-8 border-t border-white/10">
+//               {[
+//                 { value: "250+", label: "Projects Delivered" },
+//                 { value: "99.9%", label: "Uptime Guarantee" },
+//                 { value: "24/7", label: "Global Support" },
+//               ].map((stat, idx) => (
+//                 <div key={idx}>
+//                   <div className="text-3xl font-bold text-black">
+//                     {stat.value}
+//                   </div>
+//                   <div className="text-sm text-slate-400">{stat.label}</div>
+//                 </div>
+//               ))}
+//             </div> */}
+//           </motion.div>
+
+//           <motion.div
+//             initial={{ opacity: 0, x: 40 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.8, delay: 0.2 }}
+//             className="relative h-[650px] hidden lg:block"
+//           >
+//             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+//               <div className="relative">
+//                 <div
+//                   className="w-44 h-44 rounded-2xl flex items-center justify-center shadow-2xl"
+//                   style={{
+//                     background: BRAND.gold.gradient,
+//                     boxShadow: `0 0 80px rgba(253,185,19,0.4)`,
+//                   }}
+//                 >
+//                   <div className="text-center">
+//                     <FaGlobe
+//                       className="text-4xl mb-2 mx-auto"
+//                       style={{ color: BRAND.navy.dark }}
+//                     />
+//                     <div
+//                       className="font-bold text-base"
+//                       style={{ color: BRAND.navy.dark }}
+//                     >
+//                       Enterprise Hub
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <svg
+//               className="absolute inset-0 w-full h-full"
+//               style={{ zIndex: 10 }}
+//             >
+//               <line
+//                 x1="50%"
+//                 y1="32%"
+//                 x2="50%"
+//                 y2="12%"
+//                 stroke="#FDB913"
+//                 strokeWidth="2"
+//                 strokeDasharray="8,8"
+//                 opacity="0.4"
+//               />
+//               <line
+//                 x1="50%"
+//                 y1="68%"
+//                 x2="50%"
+//                 y2="88%"
+//                 stroke="#143A63"
+//                 strokeWidth="2"
+//                 strokeDasharray="8,8"
+//                 opacity="0.4"
+//               />
+//               <line
+//                 x1="32%"
+//                 y1="50%"
+//                 x2="12%"
+//                 y2="50%"
+//                 stroke="#FDB913"
+//                 strokeWidth="2"
+//                 strokeDasharray="8,8"
+//                 opacity="0.4"
+//               />
+//               <line
+//                 x1="68%"
+//                 y1="50%"
+//                 x2="88%"
+//                 y2="50%"
+//                 stroke="#143A63"
+//                 strokeWidth="2"
+//                 strokeDasharray="8,8"
+//                 opacity="0.4"
+//               />
+//             </svg>
+
+//             {floatingCards.map((card, index) => (
+//               <motion.div
+//                 key={index}
+//                 initial={{ opacity: 0, scale: 0.8 }}
+//                 animate={{ opacity: 1, scale: 1 }}
+//                 transition={{ delay: 0.3 + index * 0.1 }}
+//                 className={`absolute ${card.position} backdrop-blur-xl p-5 rounded-2xl cursor-pointer transition-all duration-300 hover:scale-105 bg-[#12324f]/90 border ${card.border}`}
+//                 style={{
+//                   boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+//                   animation: `float 6s ease-in-out infinite`,
+//                   animationDelay: `${index * -1}s`,
+//                 }}
+//               >
+//                 <div className="flex items-center gap-4">
+//                   <div
+//                     className="w-12 h-12 rounded-xl flex items-center justify-center"
+//                     style={{
+//                       background: card.bg,
+//                       border: `1px solid ${card.border}`,
+//                     }}
+//                   >
+//                     <card.icon
+//                       className="text-xl"
+//                       style={{ color: card.iconColor }}
+//                     />
+//                   </div>
+//                   {!card.small ? (
+//                     <div>
+//                       <div className="font-bold text-white text-sm">
+//                         {card.title}
+//                       </div>
+//                       <div className="text-xs text-white">{card.desc}</div>
+//                     </div>
+//                   ) : (
+//                     <span className="text-sm font-semibold text-slate-200">
+//                       {card.title}
+//                     </span>
+//                   )}
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </motion.div>
+//         </div>
+//       </div>
+
+//       <style>{`
+//         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+//       `}</style>
+//     </section>
+//   );
+// };
+
+// // ==================== WHY INNOVISE SECTION (LIGHT) ====================
+// const WhyInnoviseSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+
+//   const cards = [
+//     {
+//       title: "Application Development",
+//       icon: FaLaptopCode,
+//       features: [
+//         "Web Applications",
+//         "Mobile Apps",
+//         "Enterprise Platforms",
+//         "Cloud Native Solutions",
+//       ],
+//       color: BRAND.navy.dark,
+//       bg: "rgba(11, 29, 51, 0.05)",
+//       border: "rgba(11, 29, 51, 0.1)",
+//     },
+//     {
+//       title: "Integration Services",
+//       icon: FaProjectDiagram,
+//       features: [
+//         "SAP Integration",
+//         "Guidewire Integration",
+//         "API Development",
+//         "Middleware Solutions",
+//       ],
+//       color: BRAND.gold.primary,
+//       bg: "rgba(253, 185, 19, 0.1)",
+//       border: "rgba(253, 185, 19, 0.2)",
+//     },
+//     {
+//       title: "Artificial Intelligence",
+//       icon: FaBrain,
+//       features: [
+//         "Generative AI",
+//         "Automation",
+//         "Predictive Analytics",
+//         "Machine Learning",
+//       ],
+//       color: BRAND.navy.dark,
+//       bg: "rgba(11, 29, 51, 0.05)",
+//       border: "rgba(11, 29, 51, 0.1)",
+//     },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 bg-white relative overflow-hidden"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="text-center mb-16">
+//           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+//             Why Choose Innovise
+//           </span>
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold max-w-3xl mx-auto leading-tight text-[#0B1D33]">
+//             Engineering Business Growth Through{" "}
+//             <span
+//               style={{
+//                 backgroundImage: BRAND.gold.gradient,
+//                 WebkitBackgroundClip: "text",
+//                 WebkitTextFillColor: "transparent",
+//                 backgroundClip: "text",
+//               }}
+//             >
+//               Technology Excellence
+//             </span>
+//           </h2>
+//         </div>
+//         <div className="grid md:grid-cols-3 gap-8">
+//           {cards.map((card, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, y: 40 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * ANIMATION.stagger }}
+//               whileHover={{ y: -8 }}
+//               className="group cursor-pointer"
+//             >
+//               <div
+//                 className={`h-full rounded-3xl p-8 overflow-hidden transition-all duration-500 bg-white border ${card.border} shadow-sm hover:shadow-xl`}
+//               >
+//                 <div
+//                   className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+//                   style={{ background: card.bg }}
+//                 >
+//                   <card.icon
+//                     className="text-2xl"
+//                     style={{ color: card.color }}
+//                   />
+//                 </div>
+//                 <h3 className="text-2xl font-bold mb-5 text-[#0B1D33] group-hover:text-[#143A63] transition-colors">
+//                   {card.title}
+//                 </h3>
+//                 <ul className="space-y-3">
+//                   {card.features.map((feature, idx) => (
+//                     <li
+//                       key={idx}
+//                       className="flex items-center gap-3 text-black"
+//                     >
+//                       <FaCheckCircle
+//                         className="text-sm"
+//                         style={{ color: BRAND.gold.primary }}
+//                       />
+//                       <span>{feature}</span>
+//                     </li>
+//                   ))}
+//                 </ul>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== SERVICES SECTION (LIGHT) ====================
+// const ServicesSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const services = [
+//     {
+//       title: "Custom Application Development",
+//       icon: FaLaptopCode,
+//       desc: "Tailored solutions built for your unique business needs",
+//       color: BRAND.navy.dark,
+//       bg: "rgba(11, 29, 51, 0.05)",
+//     },
+//     {
+//       title: "Enterprise Integrations",
+//       icon: FaProjectDiagram,
+//       desc: "Seamless connectivity across your entire tech stack",
+//       color: BRAND.gold.primary,
+//       bg: "rgba(253, 185, 19, 0.1)",
+//     },
+//     {
+//       title: "AI & Automation",
+//       icon: FaBrain,
+//       desc: "Intelligent automation to drive efficiency and innovation",
+//       color: BRAND.navy.dark,
+//       bg: "rgba(11, 29, 51, 0.05)",
+//     },
+//     {
+//       title: "Cloud Engineering",
+//       icon: FaCloud,
+//       desc: "Scalable cloud infrastructure and migration services",
+//       color: BRAND.gold.primary,
+//       bg: "rgba(253, 185, 19, 0.1)",
+//     },
+//     {
+//       title: "Quality Assurance",
+//       icon: FaShieldAlt,
+//       desc: "Comprehensive testing for flawless performance",
+//       color: BRAND.navy.dark,
+//       bg: "rgba(11, 29, 51, 0.05)",
+//     },
+//     {
+//       title: "Managed Services",
+//       icon: FaCogs,
+//       desc: "24/7 monitoring and support for peace of mind",
+//       color: BRAND.gold.primary,
+//       bg: "rgba(253, 185, 19, 0.1)",
+//     },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 relative overflow-hidden bg-slate-50"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="text-center mb-16">
+//           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
+//             Our Services
+//           </span>
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+//             Comprehensive{" "}
+//             <span style={{ color: BRAND.navy.mid }}>Digital Solutions</span>
+//           </h2>
+//         </div>
+//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+//           {services.map((service, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, y: 40 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * ANIMATION.stagger }}
+//               whileHover={{ y: -8 }}
+//               className="group cursor-pointer"
+//             >
+//               <div className="h-full rounded-3xl overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 relative">
+//                 <div
+//                   className="absolute top-0 left-0 right-0 h-1 origin-left group-hover:scale-x-100 scale-x-0 transition-transform duration-400"
+//                   style={{
+//                     background: `linear-gradient(90deg, ${service.color}, transparent)`,
+//                   }}
+//                 />
+//                 <div className="p-8">
+//                   <div
+//                     className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}
+//                     style={{ background: service.bg }}
+//                   >
+//                     <service.icon
+//                       className="text-xl"
+//                       style={{ color: service.color }}
+//                     />
+//                   </div>
+//                   <h3 className="text-lg font-bold mb-2 text-[#0B1D33] group-hover:text-[#143A63] transition-colors">
+//                     {service.title}
+//                   </h3>
+//                   <p className="text-sm text-black/70 leading-relaxed">
+//                     {service.desc}
+//                   </p>
+//                   {/* <div className="mt-6 pt-4 flex items-center gap-2 text-sm font-medium text-slate-400 group-hover:text-[#0B1D33] transition-colors border-t border-slate-50">
+//                     Learn More <FaArrowRight className="text-xs" />
+//                   </div> */}
+//                 </div>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== TRANSFORMATION JOURNEY SECTION (LIGHT) ====================
+// const TransformationJourneySection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const steps = [
+//     {
+//       title: "Discover",
+//       icon: FaSearch,
+//       desc: "Analyze requirements and identify opportunities",
+//       color: BRAND.navy.dark,
+//     },
+//     {
+//       title: "Design",
+//       icon: FaPencilRuler,
+//       desc: "Create architecture and user experience blueprints",
+//       color: BRAND.gold.dark,
+//     },
+//     {
+//       title: "Develop",
+//       icon: FaCode,
+//       desc: "Build robust, scalable applications",
+//       color: BRAND.navy.dark,
+//     },
+//     {
+//       title: "Integrate",
+//       icon: FaPlug,
+//       desc: "Connect systems and data flows seamlessly",
+//       color: BRAND.gold.dark,
+//     },
+//     {
+//       title: "Deploy",
+//       icon: FaRocket,
+//       desc: "Launch with confidence and minimal disruption",
+//       color: BRAND.navy.dark,
+//     },
+//     {
+//       title: "Optimize",
+//       icon: FaChartLine,
+//       desc: "Continuously improve performance and ROI",
+//       color: BRAND.gold.dark,
+//     },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 bg-white relative overflow-hidden"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="text-center mb-16">
+//           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+//             Our Process
+//           </span>
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+//             Digital Transformation{" "}
+//             <span style={{ color: BRAND.navy.mid }}>Journey</span>
+//           </h2>
+//         </div>
+//         <div className="hidden lg:block">
+//           <div className="grid grid-cols-6 gap-4">
+//             {steps.map((step, index) => (
+//               <motion.div
+//                 key={index}
+//                 initial={{ opacity: 0, y: 40 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 viewport={{ once: true }}
+//                 transition={{ delay: index * 0.1 }}
+//                 className="group relative"
+//               >
+//                 <div className="h-full p-6 rounded-3xl transition-all duration-500 hover:-translate-y-2 bg-white border border-slate-100 shadow-sm hover:shadow-xl">
+//                   <div className="absolute top-4 right-4 text-4xl font-black opacity-5 text-[#0B1D33]">
+//                     {index + 1}
+//                   </div>
+//                   <div
+//                     className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-md"
+//                     style={{
+//                       background: BRAND.gold.gradient,
+//                       boxShadow: `0 8px 24px rgba(253,185,19,0.25)`,
+//                     }}
+//                   >
+//                     <step.icon className="text-xl text-[#0B1D33]" />
+//                   </div>
+//                   <h4 className="text-lg font-bold mb-1 text-[#0B1D33]">
+//                     {step.title}
+//                   </h4>
+//                   <p
+//                     className="text-xs font-semibold uppercase tracking-wider mb-2"
+//                     style={{ color: step.color }}
+//                   >
+//                     Step {index + 1}
+//                   </p>
+//                   <p className="text-sm leading-relaxed text-black/70">
+//                     {step.desc}
+//                   </p>
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//         <div className="lg:hidden space-y-8">
+//           {steps.map((step, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, x: -30 }}
+//               whileInView={{ opacity: 1, x: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * 0.1 }}
+//               className="flex gap-5"
+//             >
+//               <div className="flex flex-col items-center">
+//                 <div
+//                   className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
+//                   style={{
+//                     background: BRAND.gold.gradient,
+//                     boxShadow: `0 8px 24px rgba(253,185,19,0.25)`,
+//                   }}
+//                 >
+//                   <step.icon className="text-lg text-[#0B1D33]" />
+//                 </div>
+//                 {index < steps.length - 1 && (
+//                   <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-slate-100" />
+//                 )}
+//               </div>
+//               <div className="pb-8">
+//                 <h4 className="font-bold text-lg mb-1 text-[#0B1D33]">
+//                   {step.title}
+//                 </h4>
+//                 <p
+//                   className="text-xs font-semibold uppercase tracking-wider mb-2"
+//                   style={{ color: step.color }}
+//                 >
+//                   Step {index + 1}
+//                 </p>
+//                 <p className="text-sm leading-relaxed text-black/70">
+//                   {step.desc}
+//                 </p>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== TECHNOLOGY ECOSYSTEM SECTION (LIGHT) ====================
+// const TechnologyEcosystemSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const ecosystems = {
+//     Enterprise: ["SAP", "Guidewire", "Salesforce", "Oracle"],
+//     Development: ["React", "Angular", "Node.js", "Java", ".NET"],
+//     Cloud: ["AWS", "Azure", "Google Cloud"],
+//     AI: ["OpenAI", "Machine Learning", "Automation", "Analytics"],
+//   };
+//   const categoryIcons = {
+//     Enterprise: FaBuilding,
+//     Development: FaCode,
+//     Cloud: FaCloud,
+//     AI: FaBrain,
+//   };
+//   const categoryColors = {
+//     Enterprise: BRAND.navy.dark,
+//     Development: BRAND.gold.primary,
+//     Cloud: BRAND.navy.dark,
+//     AI: BRAND.gold.primary,
+//   };
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 relative overflow-hidden bg-slate-50"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="text-center mb-16">
+//           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
+//             Technology Stack
+//           </span>
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+//             Our Technology{" "}
+//             <span style={{ color: BRAND.navy.mid }}>Ecosystem</span>
+//           </h2>
+//         </div>
+//         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+//           {Object.entries(ecosystems).map(
+//             ([category, technologies], catIndex) => {
+//               const Icon = categoryIcons[category];
+//               const color = categoryColors[category];
+//               return (
+//                 <motion.div
+//                   key={catIndex}
+//                   initial={{ opacity: 0, y: 30 }}
+//                   whileInView={{ opacity: 1, y: 0 }}
+//                   viewport={{ once: true }}
+//                   transition={{ delay: catIndex * 0.1 }}
+//                   whileHover={{ y: -6 }}
+//                   className="rounded-2xl p-6 transition-all duration-300 bg-white border border-slate-100 shadow-sm hover:shadow-lg"
+//                 >
+//                   <div className="flex items-center gap-3 mb-5">
+//                     <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-slate-50 border border-slate-100">
+//                       <Icon className="text-base" style={{ color }} />
+//                     </div>
+//                     <h3 className="text-lg font-bold text-[#0B1D33]">
+//                       {category}
+//                     </h3>
+//                   </div>
+//                   <div className="flex flex-wrap gap-2">
+//                     {technologies.map((tech, techIndex) => (
+//                       <span
+//                         key={techIndex}
+//                         className="px-4 py-2 rounded-full text-sm cursor-default font-medium transition-all hover:scale-105 bg-slate-50 border border-slate-100 text-[#0B1D33] hover:bg-[#0B1D33] hover:text-black hover:border-[#0B1D33]"
+//                       >
+//                         {tech}
+//                       </span>
+//                     ))}
+//                   </div>
+//                 </motion.div>
+//               );
+//             },
+//           )}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== BUSINESS IMPACT SECTION (LIGHT) ====================
+// const BusinessImpactSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const metrics = [
+//     {
+//       value: "40%",
+//       label: "Faster Delivery",
+//       icon: FaRocket,
+//       iconColor: BRAND.gold.primary,
+//     },
+//     {
+//       value: "60%",
+//       label: "Reduction in Manual Processes",
+//       icon: FaCogs,
+//       iconColor: BRAND.navy.dark,
+//     },
+//     {
+//       value: "99.9%",
+//       label: "System Availability",
+//       icon: FaServer,
+//       iconColor: BRAND.gold.primary,
+//     },
+//     {
+//       value: "30%",
+//       label: "Lower Operational Costs",
+//       icon: FaDollarSign,
+//       iconColor: BRAND.navy.dark,
+//     },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 relative overflow-hidden bg-white"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="text-center mb-12">
+//           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+//             Results That Matter
+//           </span>
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+//             Delivering Measurable{" "}
+//             <span style={{ color: BRAND.navy.mid }}>Business Impact</span>
+//           </h2>
+//         </div>
+//         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+//           {metrics.map((metric, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, y: 30 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * 0.1 }}
+//               whileHover={{ y: -8, scale: 1.02 }}
+//               className="text-center rounded-3xl p-8 bg-slate-50 border border-slate-100"
+//             >
+//               <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 bg-white shadow-sm border border-slate-100">
+//                 <metric.icon
+//                   className="text-2xl"
+//                   style={{ color: metric.iconColor }}
+//                 />
+//               </div>
+//               <div
+//                 className="text-[#0B1D33] mb-2"
+//                 style={{
+//                   fontSize: "clamp(48px, 8vw, 80px)",
+//                   fontWeight: 800,
+//                   lineHeight: 1,
+//                 }}
+//               >
+//                 {metric.value}
+//               </div>
+//               <div className="text-black/70 font-medium">{metric.label}</div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== INDUSTRIES SECTION (LIGHT) ====================
+// const IndustriesSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const industries = [
+//     { name: "Insurance", icon: FaShieldAlt, color: BRAND.navy.dark },
+//     { name: "Banking", icon: FaUniversity, color: BRAND.gold.primary },
+//     { name: "Healthcare", icon: FaHeartbeat, color: BRAND.navy.dark },
+//     { name: "Retail", icon: FaShoppingCart, color: BRAND.gold.primary },
+//     { name: "Manufacturing", icon: FaIndustry, color: BRAND.navy.dark },
+//     { name: "Logistics", icon: FaTruck, color: BRAND.gold.primary },
+//     { name: "Energy", icon: FaBolt, color: BRAND.navy.dark },
+//     { name: "Public Sector", icon: FaLandmark, color: BRAND.gold.primary },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 bg-slate-50 relative overflow-hidden"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="text-center mb-16">
+//           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
+//             Industries We Serve
+//           </span>
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+//             Expertise Across{" "}
+//             <span style={{ color: BRAND.navy.mid }}>Industries</span>
+//           </h2>
+//         </div>
+//         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+//           {industries.map((industry, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, scale: 0.9 }}
+//               whileInView={{ opacity: 1, scale: 1 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * 0.08 }}
+//               whileHover={{ y: -8, scale: 1.05 }}
+//               className="group cursor-pointer"
+//             >
+//               <div className="rounded-2xl p-6 text-center transition-all duration-500 bg-white border border-slate-100 shadow-sm hover:shadow-xl">
+//                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 bg-slate-50 border border-slate-100">
+//                   <industry.icon
+//                     className="text-2xl"
+//                     style={{ color: industry.color }}
+//                   />
+//                 </div>
+//                 <h3 className="font-bold text-[#0B1D33]">{industry.name}</h3>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== CASE STUDIES SECTION (LIGHT) ====================
+// const CaseStudiesSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const cases = [
+//     {
+//       title: "Enterprise Integration Program",
+//       description:
+//         "Connected SAP, CRM and third-party systems through a centralized integration layer.",
+//       results: [
+//         "45% Faster Processing",
+//         "Reduced Data Errors",
+//         "Improved User Experience",
+//       ],
+//       icon: FaProjectDiagram,
+//       color: BRAND.navy.dark,
+//     },
+//     {
+//       title: "AI Automation Initiative",
+//       description:
+//         "Implemented intelligent automation reducing manual workload by 70% while improving accuracy.",
+//       results: [
+//         "70% Less Manual Work",
+//         "95% Accuracy Rate",
+//         "$2M Annual Savings",
+//       ],
+//       icon: FaRobot,
+//       color: BRAND.gold.dark,
+//     },
+//     {
+//       title: "Cloud Modernization Project",
+//       description:
+//         "Migrated legacy on-premise infrastructure to AWS with zero downtime.",
+//       results: [
+//         "Zero Downtime Migration",
+//         "60% Cost Reduction",
+//         "Auto-scaling Enabled",
+//       ],
+//       icon: FaCloudUploadAlt,
+//       color: BRAND.navy.dark,
+//     },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 relative overflow-hidden bg-white"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="text-center mb-16">
+//           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+//             Success Stories
+//           </span>
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+//             Featured <span style={{ color: BRAND.navy.mid }}>Case Studies</span>
+//           </h2>
+//         </div>
+//         <div className="grid md:grid-cols-3 gap-8">
+//           {cases.map((caseStudy, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, y: 40 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * 0.15 }}
+//               whileHover={{ y: -8 }}
+//               className="group cursor-pointer"
+//             >
+//               <div className="rounded-3xl overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+//                 <div
+//                   className="h-1"
+//                   style={{
+//                     background: `linear-gradient(90deg, ${caseStudy.color}, transparent)`,
+//                   }}
+//                 />
+//                 <div className="p-8">
+//                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-slate-50 border border-slate-100">
+//                     <caseStudy.icon
+//                       className="text-xl"
+//                       style={{ color: caseStudy.color }}
+//                     />
+//                   </div>
+//                   <h3 className="text-xl font-bold mb-3 text-[#0B1D33] group-hover:text-[#143A63] transition-colors">
+//                     {caseStudy.title}
+//                   </h3>
+//                   <p className="text-black/70 mb-6 text-sm leading-relaxed">
+//                     {caseStudy.description}
+//                   </p>
+//                   <div className="border-t border-slate-50 pt-4">
+//                     <p className="text-xs uppercase tracking-wider mb-3 font-semibold text-[#0B1D33]">
+//                       Key Results:
+//                     </p>
+//                     <ul className="space-y-2">
+//                       {caseStudy.results.map((result, idx) => (
+//                         <li
+//                           key={idx}
+//                           className="flex items-center gap-2 text-sm text-black"
+//                         >
+//                           <FaCheckCircle
+//                             className="text-xs"
+//                             style={{ color: BRAND.gold.primary }}
+//                           />
+//                           <span>{result}</span>
+//                         </li>
+//                       ))}
+//                     </ul>
+//                   </div>
+//                   {/* <button className="mt-6 font-medium text-sm flex items-center gap-2 group-hover:gap-3 transition-all text-[#0B1D33] hover:text-[#143A63]">
+//                     Read Full Case Study <FaArrowRight />
+//                   </button> */}
+//                 </div>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== AI INNOVATION SECTION (LIGHT GOLD ACCENT) ====================
+// const AIInnovationSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const features = [
+//     {
+//       title: "Generative AI Solutions",
+//       icon: FaMagic,
+//       desc: "Create content, code, and insights automatically",
+//     },
+//     {
+//       title: "Intelligent Automation",
+//       icon: FaRobot,
+//       desc: "Streamline workflows with smart automation",
+//     },
+//     {
+//       title: "Predictive Analytics",
+//       icon: FaChartLine,
+//       desc: "Forecast trends and make data-driven decisions",
+//     },
+//     {
+//       title: "AI-Powered Experiences",
+//       icon: FaUsers,
+//       desc: "Deliver personalized customer interactions",
+//     },
+//     {
+//       title: "Knowledge Management",
+//       icon: FaBookOpen,
+//       desc: "Organize and retrieve information intelligently",
+//     },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-24 px-4 md:px-8 relative overflow-hidden bg-[#FFFBEB]"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="grid lg:grid-cols-2 gap-16 items-center">
+//           <div>
+//             <p className="font-bold mb-4 uppercase tracking-wider text-sm text-[#0B1D33]">
+//               AI Innovation
+//             </p>
+//             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-[#0B1D33]">
+//               Unlock the Power of
+//               <br />
+//               <span style={{ color: BRAND.gold.dark }}>
+//                 Artificial Intelligence
+//               </span>
+//             </h2>
+//             <p className="text-lg mb-8 leading-relaxed text-black/80">
+//               Harness cutting-edge AI capabilities to transform your business
+//               operations, enhance decision-making, and create unprecedented
+//               competitive advantages.
+//             </p>
+//             <button className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-[#0B1D33] text-[#FDB913]">
+//               Explore AI Solutions <FaArrowRight />
+//             </button>
+//           </div>
+//           <div className="grid gap-4">
+//             {features.map((feature, index) => (
+//               <motion.div
+//                 key={index}
+//                 initial={{ opacity: 0, x: 30 }}
+//                 whileInView={{ opacity: 1, x: 0 }}
+//                 viewport={{ once: true }}
+//                 transition={{ delay: index * 0.1 }}
+//                 whileHover={{ x: -4 }}
+//                 className="rounded-xl p-5 flex items-start gap-4 cursor-pointer shadow-sm transition-all hover:shadow-md bg-white border border-[#FDB913]/20"
+//               >
+//                 <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-[#0B1D33]">
+//                   <feature.icon className="text-[#FDB913]" />
+//                 </div>
+//                 <div>
+//                   <h3 className="font-bold mb-1 text-[#0B1D33]">
+//                     {feature.title}
+//                   </h3>
+//                   <p className="text-sm text-black/70">{feature.desc}</p>
+//                 </div>
+//               </motion.div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== STATS SECTION (LIGHT) ====================
+// const StatsSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+//   const stats = [
+//     {
+//       value: "250+",
+//       label: "Projects Delivered",
+//       icon: FaFolderOpen,
+//       iconColor: BRAND.gold.primary,
+//     },
+//     {
+//       value: "50+",
+//       label: "Enterprise Clients",
+//       icon: FaBuilding,
+//       iconColor: BRAND.navy.dark,
+//     },
+//     {
+//       value: "99.9%",
+//       label: "Service Availability",
+//       icon: FaServer,
+//       iconColor: BRAND.gold.primary,
+//     },
+//     {
+//       value: "24/7",
+//       label: "Global Support",
+//       icon: FaHeadset,
+//       iconColor: BRAND.navy.dark,
+//     },
+//   ];
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-20 px-4 md:px-8 bg-white relative overflow-hidden"
+//       style={{
+//         opacity: isVisible ? 1 : 0,
+//         transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//         transition: "all 1s",
+//       }}
+//     >
+//       <div className="max-w-7xl mx-auto relative z-10">
+//         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+//           {stats.map((stat, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, y: 20 }}
+//               whileInView={{ opacity: 1, y: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ delay: index * 0.1 }}
+//               className="text-center"
+//             >
+//               <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-slate-50 border border-slate-100">
+//                 <stat.icon
+//                   className="text-3xl"
+//                   style={{ color: stat.iconColor }}
+//                 />
+//               </div>
+//               <div
+//                 className="mb-2 text-[#0B1D33]"
+//                 style={{
+//                   fontSize: "clamp(48px, 8vw, 80px)",
+//                   fontWeight: 800,
+//                   lineHeight: 1,
+//                 }}
+//               >
+//                 {stat.value}
+//               </div>
+//               <div className="text-black/70 font-medium">{stat.label}</div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== CTA SECTION (DARK ANCHOR) ====================
+// const CTABannerSection = () => {
+//   const [ref, isVisible] = useScrollReveal();
+
+//   return (
+//     <section
+//       ref={ref}
+//       className="py-16 px-4 md:px-8 relative overflow-hidden"
+//       // style={{
+//       //   background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 100%)`,
+//       //   opacity: isVisible ? 1 : 0,
+//       //   transform: isVisible ? "translateY(0)" : "translateY(10px)",
+//       //   transition: "all 1s",
+//       // }}
+//     >
+//       <div
+//         className="absolute inset-0 opacity-[0.04]"
+//         style={{
+//           backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+//           backgroundSize: "32px 32px",
+//         }}
+//       />
+//       <motion.div
+//         animate={{ y: [0, -20, 0], x: [0, 15, 0] }}
+//         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+//         className="absolute top-10 left-1/4 w-80 h-80 rounded-full blur-3xl opacity-[0.08]"
+//         style={{ background: BRAND.navy.light }}
+//       />
+//       <motion.div
+//         animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
+//         transition={{
+//           duration: 8,
+//           repeat: Infinity,
+//           ease: "easeInOut",
+//           delay: 2,
+//         }}
+//         className="absolute bottom-10 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-[0.06]"
+//         style={{ background: BRAND.gold.primary }}
+//       />
+
+//       <div className="max-w-5xl mx-auto px-4 lg:px-8 relative z-10 text-center">
+//         <motion.div
+//           initial={{ opacity: 0, y: 30 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           viewport={{ once: true }}
+//           transition={{ duration: 0.8 }}
+//         >
+//           <motion.div
+//             initial={{ scale: 0 }}
+//             whileInView={{ scale: 1 }}
+//             viewport={{ once: true }}
+//             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+//             className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-white/5 border-2 border-[#FDB913]/30"
+//           >
+//             <FaRocket className="text-3xl text-[#FDB913]" />
+//           </motion.div>
+
+//           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black leading-tight mb-6">
+//             Ready to Modernize Your{" "}
+//             <span
+//               style={{
+//                 backgroundImage: BRAND.gold.gradient,
+//                 WebkitBackgroundClip: "text",
+//                 WebkitTextFillColor: "transparent",
+//                 backgroundClip: "text",
+//               }}
+//             >
+//               Enterprise?
+//             </span>
+//           </h2>
+
+//           <p className="text-lg text-black leading-relaxed mb-10 max-w-2xl mx-auto">
+//             From application development to enterprise integrations and AI
+//             innovation, Innovise helps businesses build future-ready digital
+//             ecosystems.
+//           </p>
+
+//           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+//             <a
+//               href="/contact"
+//               className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#FDB913] text-[#0B1D33] shadow-lg"
+//             >
+//               <span className="relative z-10 flex items-center gap-3">
+//                 Talk to Our Experts{" "}
+//                 <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+//               </span>
+//             </a>
+//             <a
+//               href="/contact"
+//               className="group px-8 py-5 rounded-xl font-bold text-lg text-black flex items-center gap-3 transition-all duration-300 hover:bg-white/10 border-2 border-[#FDB913]/30 bg-white/5"
+//             >
+//               <FaPlayCircle className="text-[#FDB913]" /> Request a Consultation
+//             </a>
+//           </div>
+
+//           {/* <div className="flex flex-wrap items-center justify-center gap-8 pt-8 border-t border-white/10">
+//             {[
+//               { value: "Free Assessment", icon: FaSearch },
+//               { value: "Proof of Concept", icon: FaFlask },
+//               { value: "Flexible Engagement", icon: FaHandshake },
+//             ].map((item, idx) => (
+//               <div key={idx} className="flex items-center gap-2 text-slate-400">
+//                 <item.icon className="text-sm text-[#FDB913]" />
+//                 <span className="text-sm font-medium">{item.value}</span>
+//               </div>
+//             ))}
+//           </div> */}
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// // ==================== FOOTER ====================
+// const Footer = () => {
+//   const footerLinks = [
+//     {
+//       title: "Services",
+//       links: ["App Development", "Integration", "AI Solutions"],
+//     },
+//     { title: "Company", links: ["About Us", "Careers", "Contact"] },
+//     { title: "Resources", links: ["Case Studies", "Blog", "Documentation"] },
+//     {
+//       title: "Contact",
+//       links: ["info@innovise.com", "+1 (555) 123-4567"],
+//       icons: true,
+//     },
+//   ];
+
+//   return (
+//     <footer className="py-14 px-4 md:px-8 bg-[#0B1D33]">
+//       <div className="max-w-7xl mx-auto">
+//         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+//           <div className="flex items-center gap-3">
+//             <div
+//               className="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg"
+//               style={{ background: BRAND.gold.gradient }}
+//             >
+//               <FaCube className="text-[#0B1D33] text-lg" />
+//             </div>
+//             <span className="text-xl font-bold text-black">
+//               Innovise <span className="text-[#FDB913]">IT</span>
+//             </span>
+//           </div>
+//           <p className="text-slate-400 text-sm">
+//             © 2024 Innovise IT Solutions. All rights reserved.
+//           </p>
+//           <div className="flex gap-3">
+//             {[FaLinkedin, FaTwitter, FaGithub].map((SocialIcon, i) => (
+//               <a
+//                 key={i}
+//                 href="#"
+//                 className="w-10 h-10 rounded-full flex items-center justify-center transition-colors group bg-[#143A63] hover:bg-[#FDB913]"
+//               >
+//                 <SocialIcon className="text-black group-hover:text-[#0B1D33] transition-colors" />
+//               </a>
+//             ))}
+//           </div>
+//         </div>
+//         <div className="mt-10 pt-8 grid md:grid-cols-4 gap-8 text-center md:text-left border-t border-[#143A63]">
+//           {footerLinks.map((section, i) => (
+//             <div key={i}>
+//               <h4 className="font-semibold text-black mb-3">{section.title}</h4>
+//               <ul className="space-y-2 text-sm text-slate-400">
+//                 {section.links.map((link, j) => (
+//                   <li key={j}>
+//                     <a
+//                       href="#"
+//                       className="hover:text-[#FDB913] transition-colors flex items-center justify-center md:justify-start gap-2"
+//                     >
+//                       {section.icons && j === 0 && <FaEnvelope />}
+//                       {section.icons && j === 1 && <FaPhone />}
+//                       {link}
+//                     </a>
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// };
+
+// // ==================== MAIN PAGE COMPONENT ====================
+// const ApplicationDevelopmentIntegrationAIPage = () => {
+//   return (
+//     <div className="min-h-screen bg-white">
+//       <HeroSection />
+//       <WhyInnoviseSection />
+//       <ServicesSection />
+//       <TransformationJourneySection />
+//       <TechnologyEcosystemSection />
+//       <BusinessImpactSection />
+//       <IndustriesSection />
+//       <CaseStudiesSection />
+//       <AIInnovationSection />
+//       <StatsSection />
+//       <CTABannerSection />
+//       {/* <Footer /> */}
+//     </div>
+//   );
+// };
+
+// export default ApplicationDevelopmentIntegrationAIPage;
+
 import React, { useState, useEffect, useRef } from "react";
 import {
   FaLaptopCode,
@@ -4837,6 +6377,8 @@ import {
   FaCheckCircle,
   FaArrowRight,
   FaChevronDown,
+  FaComments,
+  FaCalendarAlt,
   FaCube,
   FaEnvelope,
   FaPhone,
@@ -4865,20 +6407,28 @@ import {
   FaAward,
   FaGlobe,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
+import {
+  FaAws,
+  FaMicrosoft,
+  FaBrain as FaBrainIcon,
+  FaShieldHalved as FaShieldIcon,
+  FaCircleCheck as FaCheckIcon,
+} from "react-icons/fa6";
+import { motion, AnimatePresence } from "framer-motion";
 
-// ==================== BRAND COLORS (NAVY + GOLD STRICTLY) ====================
+// ==================== BRAND COLORS (NAVY + GOLD) ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33", // Innovise Blue
-    mid: "#143A63",
-    light: "#1A4570",
+    dark: "#0B1D33",
+    mid: "#0D2847",
+    light: "#143A63",
+    lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913", // Innovise Yellow
+    primary: "#FDB913",
     light: "#FFD54F",
     dark: "#E5A700",
-    gradient: "linear-gradient(135deg, #E5A700 0%, #FDB913 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 
@@ -4911,7 +6461,7 @@ const useScrollReveal = (threshold = 0.1) => {
   return [ref, isVisible];
 };
 
-// ==================== HERO SECTION (Dark Anchor) ====================
+// ==================== HERO SECTION ====================
 const HeroSection = () => {
   const floatingCards = [
     {
@@ -4919,71 +6469,71 @@ const HeroSection = () => {
       icon: FaBrain,
       desc: "ML & Automation",
       position: "top-2 left-1/2 -translate-x-1/2",
-      iconColor: "#FDB913",
-      border: "rgba(253,185,19,0.4)",
-      bg: "rgba(253,185,19,0.1)",
+      color: "rgba(139,92,246,0.15)",
+      iconColor: "#A78BFA",
+      border: "rgba(139,92,246,0.3)",
     },
     {
       title: "SAP",
       icon: FaPhone,
       desc: "ERP Solutions",
       position: "top-1/2 -translate-y-1/2 left-2",
-      iconColor: "#FFFFFF",
-      border: "rgba(20,58,99,0.6)",
-      bg: "rgba(20,58,99,0.3)",
+      color: "rgba(59,130,246,0.15)",
+      iconColor: "#60A5FA",
+      border: "rgba(59,130,246,0.3)",
     },
     {
       title: "Guidewire",
       icon: FaShieldAlt,
       desc: "Insurance Platform",
       position: "top-1/2 -translate-y-1/2 right-2",
+      color: "rgba(253,185,19,0.15)",
       iconColor: "#FDB913",
-      border: "rgba(253,185,19,0.4)",
-      bg: "rgba(253,185,19,0.1)",
+      border: "rgba(253,185,19,0.3)",
     },
     {
       title: "Applications & APIs",
       icon: FaCode,
       desc: "Custom Development",
       position: "bottom-2 left-1/2 -translate-x-1/2",
-      iconColor: "#FFFFFF",
-      border: "rgba(20,58,99,0.6)",
-      bg: "rgba(20,58,99,0.3)",
+      color: "rgba(16,185,129,0.15)",
+      iconColor: "#34D399",
+      border: "rgba(16,185,129,0.3)",
     },
     {
       title: "Cloud Services",
       icon: FaCloud,
       position: "top-1/4 left-6",
-      iconColor: "#FDB913",
-      border: "rgba(253,185,19,0.3)",
-      bg: "rgba(253,185,19,0.1)",
+      iconColor: "#22D3EE",
+      color: "rgba(34,211,238,0.12)",
+      border: "rgba(34,211,238,0.25)",
       small: true,
     },
     {
       title: "Data Platform",
       icon: FaDatabase,
       position: "top-1/4 right-6",
-      iconColor: "#FFFFFF",
-      border: "rgba(20,58,99,0.5)",
-      bg: "rgba(20,58,99,0.2)",
+      iconColor: "#FBBF24",
+      color: "rgba(251,191,36,0.12)",
+      border: "rgba(251,191,36,0.25)",
       small: true,
     },
     {
       title: "Security",
       icon: FaLock,
       position: "bottom-1/4 left-6",
-      iconColor: "#FDB913",
-      border: "rgba(253,185,19,0.3)",
-      bg: "rgba(253,185,19,0.1)",
+      iconColor: "#F87171",
+      color: "rgba(248,113,113,0.12)",
+      border: "rgba(248,113,113,0.25)",
       small: true,
     },
     {
       title: "Analytics",
       icon: FaChartLine,
       position: "bottom-1/4 right-6",
-      iconColor: "#FFFFFF",
-      border: "rgba(20,58,99,0.5)",
-      bg: "rgba(20,58,99,0.2)",
+      iconColor: "#34D399",
+      color: "rgba(52,211,153,0.12)",
+      border: "rgba(52,211,153,0.25)",
       small: true,
     },
   ];
@@ -4991,23 +6541,34 @@ const HeroSection = () => {
   return (
     <section
       className="min-h-screen relative overflow-hidden pt-10 pb-10 px-4 md:px-8"
-      // style={{
-      //   background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.light} 100%)`,
-      // }}
+      style={{
+        background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
+      }}
     >
+      {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
             backgroundSize: "32px 32px",
           }}
         />
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: "80px 80px",
+          }}
+        />
         <motion.div
           animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 right-20 w-[450px] h-[450px] rounded-full blur-3xl opacity-[0.1]"
-          style={{ background: BRAND.navy.light }}
+          className="absolute top-20 right-20 w-[450px] h-[450px] rounded-full blur-3xl opacity-[0.07]"
+          style={{ background: "#3B82F6" }}
         />
         <motion.div
           animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
@@ -5017,30 +6578,40 @@ const HeroSection = () => {
             ease: "easeInOut",
             delay: 3,
           }}
-          className="absolute bottom-20 left-20 w-[350px] h-[350px] rounded-full blur-3xl opacity-[0.08]"
+          className="absolute bottom-20 left-20 w-[350px] h-[350px] rounded-full blur-3xl opacity-[0.05]"
           style={{ background: BRAND.gold.primary }}
         />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-2"
+            className="space-y-8"
           >
-            <div className="inline-flex items-center gap-2 py-2.5 rounded-full bg-white/5 border border-white/10">
+            <div
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full"
+              style={{
+                background: "rgba(253,185,19,0.12)",
+                border: "1px solid rgba(253,185,19,0.25)",
+              }}
+            >
               <span
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ background: BRAND.gold.primary }}
               ></span>
-              <span className="text-sm font-semibold text-black ">
+              <span
+                className="text-sm font-semibold"
+                style={{ color: BRAND.gold.primary }}
+              >
                 Application Development • Integration Services • AI
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight text-black">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white">
               Transforming Enterprises Through{" "}
               <span
                 style={{
@@ -5065,7 +6636,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-black max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed">
               Innovise delivers enterprise-grade application development, system
               integration, and AI solutions that help organizations modernize
               operations, improve customer experiences, and accelerate digital
@@ -5073,40 +6644,77 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <a
-                href="/contact"
-                className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+              <button
+                className="btn-primary px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
                 style={{
                   background: BRAND.gold.gradient,
                   color: BRAND.navy.dark,
+                  boxShadow: `0 10px 40px rgba(253,185,19,0.25)`,
                 }}
               >
                 Schedule Consultation <FaArrowRight />
-              </a>
-              <a
-                href="/contact"
-                className="px-8 py-4 rounded-xl font-semibold text-black flex items-center gap-2 transition-all hover:-translate-y-1 hover:bg-white/10 border-2 border-[#FDB913]/30 bg-white/5"
+              </button>
+              <button
+                className="px-8 py-4 rounded-xl font-semibold text-white flex items-center gap-2 transition-all hover:-translate-y-1"
+                style={{
+                  border: "2px solid rgba(255,255,255,0.2)",
+                  background: "rgba(255,255,255,0.05)",
+                }}
               >
-                Explore Services
-              </a>
+                Explore Services <FaChevronDown />
+              </button>
             </div>
 
-            {/* <div className="flex flex-wrap gap-8 pt-8 border-t border-white/10">
-              {[
-                { value: "250+", label: "Projects Delivered" },
-                { value: "99.9%", label: "Uptime Guarantee" },
-                { value: "24/7", label: "Global Support" },
-              ].map((stat, idx) => (
-                <div key={idx}>
-                  <div className="text-3xl font-bold text-black">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-slate-400">{stat.label}</div>
+            {/* <div
+              className="flex flex-wrap gap-8 pt-8"
+              style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
+            >
+              <div>
+                <div
+                  className="text-3xl font-bold"
+                  style={{
+                    backgroundImage: BRAND.gold.gradient,
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  250+
                 </div>
-              ))}
+                <div className="text-sm text-white/50">Projects Delivered</div>
+              </div>
+              <div>
+                <div
+                  className="text-3xl font-bold"
+                  style={{
+                    backgroundImage: BRAND.gold.gradient,
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  99.9%
+                </div>
+                <div className="text-sm text-white/50">Uptime Guarantee</div>
+              </div>
+              <div>
+                <div
+                  className="text-3xl font-bold"
+                  style={{
+                    backgroundImage: BRAND.gold.gradient,
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  24/7
+                </div>
+                <div className="text-sm text-white/50">Global Support</div>
+              </div>
             </div> */}
           </motion.div>
 
+          {/* Right Side - Enterprise Ecosystem Diagram */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -5119,14 +6727,11 @@ const HeroSection = () => {
                   className="w-44 h-44 rounded-2xl flex items-center justify-center shadow-2xl"
                   style={{
                     background: BRAND.gold.gradient,
-                    boxShadow: `0 0 80px rgba(253,185,19,0.4)`,
+                    boxShadow: "0 0 60px rgba(253,185,19,0.3)",
                   }}
                 >
                   <div className="text-center">
-                    <FaGlobe
-                      className="text-4xl mb-2 mx-auto"
-                      style={{ color: BRAND.navy.dark }}
-                    />
+                    <FaGlobe className="text-4xl text-white mb-2 mx-auto" />
                     <div
                       className="font-bold text-base"
                       style={{ color: BRAND.navy.dark }}
@@ -5135,6 +6740,13 @@ const HeroSection = () => {
                     </div>
                   </div>
                 </div>
+                <div
+                  className="absolute inset-0 rounded-2xl"
+                  style={{
+                    background: BRAND.gold.gradient,
+                    animation: "pulseRing 2s ease-out infinite",
+                  }}
+                ></div>
               </div>
             </div>
 
@@ -5157,7 +6769,7 @@ const HeroSection = () => {
                 y1="68%"
                 x2="50%"
                 y2="88%"
-                stroke="#143A63"
+                stroke="#FDB913"
                 strokeWidth="2"
                 strokeDasharray="8,8"
                 opacity="0.4"
@@ -5177,7 +6789,7 @@ const HeroSection = () => {
                 y1="50%"
                 x2="88%"
                 y2="50%"
-                stroke="#143A63"
+                stroke="#FDB913"
                 strokeWidth="2"
                 strokeDasharray="8,8"
                 opacity="0.4"
@@ -5190,9 +6802,11 @@ const HeroSection = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className={`absolute ${card.position} backdrop-blur-xl p-5 rounded-2xl cursor-pointer transition-all duration-300 hover:scale-105 bg-[#12324f]/90 border ${card.border}`}
+                className={`absolute ${card.position} backdrop-blur-xl p-5 rounded-2xl cursor-pointer transition-all duration-300 hover:scale-105`}
                 style={{
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+                  background: "rgba(11,29,51,0.85)",
+                  border: `1px solid ${card.border}`,
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
                   animation: `float 6s ease-in-out infinite`,
                   animationDelay: `${index * -1}s`,
                 }}
@@ -5201,7 +6815,7 @@ const HeroSection = () => {
                   <div
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
                     style={{
-                      background: card.bg,
+                      background: card.color,
                       border: `1px solid ${card.border}`,
                     }}
                   >
@@ -5210,15 +6824,16 @@ const HeroSection = () => {
                       style={{ color: card.iconColor }}
                     />
                   </div>
-                  {!card.small ? (
+                  {!card.small && (
                     <div>
                       <div className="font-bold text-white text-sm">
                         {card.title}
                       </div>
-                      <div className="text-xs text-white">{card.desc}</div>
+                      <div className="text-xs text-white/50">{card.desc}</div>
                     </div>
-                  ) : (
-                    <span className="text-sm font-semibold text-slate-200">
+                  )}
+                  {card.small && (
+                    <span className="text-sm font-semibold text-white/80">
                       {card.title}
                     </span>
                   )}
@@ -5230,13 +6845,64 @@ const HeroSection = () => {
       </div>
 
       <style>{`
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-15px); } }
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        @keyframes pulseRing {
+          0% { transform: scale(1); opacity: 0.6; }
+          100% { transform: scale(1.5); opacity: 0; }
+        }
+        .btn-primary { position: relative; overflow: hidden; }
+        .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.5s; }
+        .btn-primary:hover::before { left: 100%; }
       `}</style>
     </section>
   );
 };
 
-// ==================== WHY INNOVISE SECTION (LIGHT) ====================
+// ==================== TRUSTED BY SECTION ====================
+const TrustedBySection = () => {
+  const partners = [
+    { name: "SAP", icon: FaPhone },
+    { name: "Guidewire", icon: FaShieldAlt },
+    { name: "AWS", icon: FaAws },
+    { name: "Azure", icon: FaMicrosoft },
+    { name: "OpenAI", icon: FaBrainIcon },
+    { name: "Tricentis", icon: FaCheckIcon },
+    { name: "Onapsis", icon: FaShieldIcon },
+  ];
+
+  return (
+    <section
+      className="py-14 relative overflow-hidden"
+      style={{
+        background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <p className="text-center text-sm uppercase tracking-wider mb-8 font-medium text-white/40">
+          Trusted by Leading Enterprises Worldwide
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+          {partners.map((partner, index) => (
+            <div
+              key={index}
+              className="group flex items-center gap-3 opacity-40 hover:opacity-100 transition-all duration-300 cursor-pointer"
+            >
+              <partner.icon className="text-2xl md:text-3xl text-white/50 group-hover:text-[#FDB913] transition-colors" />
+              <span className="text-lg md:text-xl font-semibold text-white/50 group-hover:text-white transition-colors">
+                {partner.name}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ==================== WHY INNOVISE SECTION ====================
 const WhyInnoviseSection = () => {
   const [ref, isVisible] = useScrollReveal();
 
@@ -5250,9 +6916,8 @@ const WhyInnoviseSection = () => {
         "Enterprise Platforms",
         "Cloud Native Solutions",
       ],
-      color: BRAND.navy.dark,
-      bg: "rgba(11, 29, 51, 0.05)",
-      border: "rgba(11, 29, 51, 0.1)",
+      gradient: "linear-gradient(135deg, #3B82F6, #06B6D4)",
+      color: "#3B82F6",
     },
     {
       title: "Integration Services",
@@ -5263,9 +6928,8 @@ const WhyInnoviseSection = () => {
         "API Development",
         "Middleware Solutions",
       ],
-      color: BRAND.gold.primary,
-      bg: "rgba(253, 185, 19, 0.1)",
-      border: "rgba(253, 185, 19, 0.2)",
+      gradient: "linear-gradient(135deg, #8B5CF6, #EC4899)",
+      color: "#8B5CF6",
     },
     {
       title: "Artificial Intelligence",
@@ -5276,28 +6940,42 @@ const WhyInnoviseSection = () => {
         "Predictive Analytics",
         "Machine Learning",
       ],
-      color: BRAND.navy.dark,
-      bg: "rgba(11, 29, 51, 0.05)",
-      border: "rgba(11, 29, 51, 0.1)",
+      gradient: BRAND.gold.gradient,
+      color: BRAND.gold.primary,
     },
   ];
 
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 bg-white relative overflow-hidden"
+      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
       }}
     >
+      <div
+        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-[0.03] translate-x-1/3 -translate-y-1/3"
+        style={{ background: BRAND.navy.lighter }}
+      />
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+            style={{
+              background: "rgba(253,185,19,0.1)",
+              color: BRAND.navy.dark,
+              border: "1px solid rgba(253,185,19,0.2)",
+            }}
+          >
             Why Choose Innovise
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold max-w-3xl mx-auto leading-tight text-[#0B1D33]">
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto leading-tight"
+            style={{ color: BRAND.navy.dark }}
+          >
             Engineering Business Growth Through{" "}
             <span
               style={{
@@ -5323,25 +7001,39 @@ const WhyInnoviseSection = () => {
               className="group cursor-pointer"
             >
               <div
-                className={`h-full rounded-3xl p-8 overflow-hidden transition-all duration-500 bg-white border ${card.border} shadow-sm hover:shadow-xl`}
+                className="h-full rounded-3xl p-8 overflow-hidden transition-all duration-500"
+                style={{
+                  background:
+                    "linear-gradient(135deg, #0A1A2F 0%, #102B4C 50%, #163B66 100%)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
+                }}
               >
                 <div
-                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                  style={{ background: card.bg }}
+                  className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{ background: `${card.color}20` }}
+                />
+
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                  style={{
+                    background: `${card.color}20`,
+                    border: `1px solid ${card.color}40`,
+                  }}
                 >
                   <card.icon
                     className="text-2xl"
                     style={{ color: card.color }}
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-5 text-[#0B1D33] group-hover:text-[#143A63] transition-colors">
+                <h3 className="text-2xl font-bold mb-5 text-white group-hover:text-[#FDB913] transition-colors">
                   {card.title}
                 </h3>
                 <ul className="space-y-3">
                   {card.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-center gap-3 text-black"
+                      className="flex items-center gap-3 text-white/70"
                     >
                       <FaCheckCircle
                         className="text-sm"
@@ -5360,72 +7052,84 @@ const WhyInnoviseSection = () => {
   );
 };
 
-// ==================== SERVICES SECTION (LIGHT) ====================
+// ==================== SERVICES SECTION ====================
 const ServicesSection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const services = [
     {
       title: "Custom Application Development",
       icon: FaLaptopCode,
       desc: "Tailored solutions built for your unique business needs",
-      color: BRAND.navy.dark,
-      bg: "rgba(11, 29, 51, 0.05)",
+      color: "#3B82F6",
+      status: "DEV",
     },
     {
       title: "Enterprise Integrations",
       icon: FaProjectDiagram,
       desc: "Seamless connectivity across your entire tech stack",
-      color: BRAND.gold.primary,
-      bg: "rgba(253, 185, 19, 0.1)",
+      color: "#8B5CF6",
+      status: "CONNECT",
     },
     {
       title: "AI & Automation",
       icon: FaBrain,
       desc: "Intelligent automation to drive efficiency and innovation",
-      color: BRAND.navy.dark,
-      bg: "rgba(11, 29, 51, 0.05)",
+      color: BRAND.gold.primary,
+      status: "AI",
     },
     {
       title: "Cloud Engineering",
       icon: FaCloud,
       desc: "Scalable cloud infrastructure and migration services",
-      color: BRAND.gold.primary,
-      bg: "rgba(253, 185, 19, 0.1)",
+      color: "#06B6D4",
+      status: "CLOUD",
     },
     {
       title: "Quality Assurance",
       icon: FaShieldAlt,
       desc: "Comprehensive testing for flawless performance",
-      color: BRAND.navy.dark,
-      bg: "rgba(11, 29, 51, 0.05)",
+      color: "#10B981",
+      status: "QA",
     },
     {
       title: "Managed Services",
       icon: FaCogs,
       desc: "24/7 monitoring and support for peace of mind",
-      color: BRAND.gold.primary,
-      bg: "rgba(253, 185, 19, 0.1)",
+      color: "#F59E0B",
+      status: "ACTIVE",
     },
   ];
 
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 relative overflow-hidden bg-slate-50"
+      className="py-28 px-4 md:px-8 relative overflow-hidden"
       style={{
+        background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 100%)`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
       }}
     >
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              color: "#FDB913",
+              borderColor: "rgba(253,185,19,0.25)",
+            }}
+          >
             Our Services
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             Comprehensive{" "}
-            <span style={{ color: BRAND.navy.mid }}>Digital Solutions</span>
+            <span style={{ color: "#FDB913" }}>Digital Solutions</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -5439,30 +7143,74 @@ const ServicesSection = () => {
               whileHover={{ y: -8 }}
               className="group cursor-pointer"
             >
-              <div className="h-full rounded-3xl overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 relative">
+              <div
+                className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  boxShadow: "0 10px 35px rgba(0,0,0,0.2)",
+                }}
+              >
+                {/* Top Accent */}
                 <div
                   className="absolute top-0 left-0 right-0 h-1 origin-left group-hover:scale-x-100 scale-x-0 transition-transform duration-400"
                   style={{
                     background: `linear-gradient(90deg, ${service.color}, transparent)`,
                   }}
                 />
-                <div className="p-8">
+
+                {/* Status Badge */}
+                <div className="absolute top-5 right-5 z-20">
+                  <span
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+                    style={{
+                      background: `${service.color}15`,
+                      color: service.color,
+                      border: `1px solid ${service.color}30`,
+                    }}
+                  >
+                    <motion.span
+                      animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="w-1.5 h-1.5 rounded-full inline-block"
+                      style={{ background: service.color }}
+                    />
+                    {service.status}
+                  </span>
+                </div>
+
+                {/* Glow */}
+                <div
+                  className="absolute top-0 right-0 w-40 h-40 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                  style={{ background: `${service.color}15` }}
+                />
+
+                <div className="relative z-10 p-8 pt-16">
                   <div
-                    className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}
-                    style={{ background: service.bg }}
+                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
+                    style={{
+                      background: `${service.color}15`,
+                      border: `1px solid ${service.color}30`,
+                    }}
                   >
                     <service.icon
                       className="text-xl"
                       style={{ color: service.color }}
                     />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-[#0B1D33] group-hover:text-[#143A63] transition-colors">
+                  <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#FDB913] transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-black/70 leading-relaxed">
+                  <p className="text-sm text-white/50 leading-relaxed">
                     {service.desc}
                   </p>
-                  {/* <div className="mt-6 pt-4 flex items-center gap-2 text-sm font-medium text-slate-400 group-hover:text-[#0B1D33] transition-colors border-t border-slate-50">
+                  {/* <div
+                    className="mt-4 pt-4 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                    style={{
+                      color: service.color,
+                      borderTop: "1px solid rgba(255,255,255,0.06)",
+                    }}
+                  >
                     Learn More <FaArrowRight className="text-xs" />
                   </div> */}
                 </div>
@@ -5475,52 +7223,53 @@ const ServicesSection = () => {
   );
 };
 
-// ==================== TRANSFORMATION JOURNEY SECTION (LIGHT) ====================
+// ==================== TRANSFORMATION JOURNEY SECTION ====================
 const TransformationJourneySection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const steps = [
     {
       title: "Discover",
       icon: FaSearch,
       desc: "Analyze requirements and identify opportunities",
-      color: BRAND.navy.dark,
+      color: "#3B82F6",
     },
     {
       title: "Design",
       icon: FaPencilRuler,
       desc: "Create architecture and user experience blueprints",
-      color: BRAND.gold.dark,
+      color: "#F59E0B",
     },
     {
       title: "Develop",
       icon: FaCode,
       desc: "Build robust, scalable applications",
-      color: BRAND.navy.dark,
+      color: "#10B981",
     },
     {
       title: "Integrate",
       icon: FaPlug,
       desc: "Connect systems and data flows seamlessly",
-      color: BRAND.gold.dark,
+      color: "#8B5CF6",
     },
     {
       title: "Deploy",
       icon: FaRocket,
       desc: "Launch with confidence and minimal disruption",
-      color: BRAND.navy.dark,
+      color: BRAND.gold.primary,
     },
     {
       title: "Optimize",
       icon: FaChartLine,
       desc: "Continuously improve performance and ROI",
-      color: BRAND.gold.dark,
+      color: "#06B6D4",
     },
   ];
 
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 bg-white relative overflow-hidden"
+      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
@@ -5529,14 +7278,35 @@ const TransformationJourneySection = () => {
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+            style={{
+              background: "rgba(253,185,19,0.1)",
+              color: BRAND.navy.dark,
+              border: "1px solid rgba(253,185,19,0.2)",
+            }}
+          >
             Our Process
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold"
+            style={{ color: BRAND.navy.dark }}
+          >
             Digital Transformation{" "}
-            <span style={{ color: BRAND.navy.mid }}>Journey</span>
+            <span
+              style={{
+                backgroundImage: BRAND.gold.gradient,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Journey
+            </span>
           </h2>
         </div>
+
+        {/* Desktop View */}
         <div className="hidden lg:block">
           <div className="grid grid-cols-6 gap-4">
             {steps.map((step, index) => (
@@ -5548,29 +7318,47 @@ const TransformationJourneySection = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="h-full p-6 rounded-3xl transition-all duration-500 hover:-translate-y-2 bg-white border border-slate-100 shadow-sm hover:shadow-xl">
-                  <div className="absolute top-4 right-4 text-4xl font-black opacity-5 text-[#0B1D33]">
+                <div
+                  className="h-full p-6 rounded-3xl transition-all duration-500 hover:-translate-y-2"
+                  style={{
+                    background: "white",
+                    border: `1px solid rgba(0,0,0,0.08)`,
+                    boxShadow: "0 4px 20px rgba(11,29,51,0.06)",
+                  }}
+                >
+                  <div
+                    className="absolute top-4 right-4 text-4xl font-black opacity-5"
+                    style={{ color: BRAND.navy.dark }}
+                  >
                     {index + 1}
                   </div>
+
                   <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-md"
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg"
                     style={{
                       background: BRAND.gold.gradient,
                       boxShadow: `0 8px 24px rgba(253,185,19,0.25)`,
                     }}
                   >
-                    <step.icon className="text-xl text-[#0B1D33]" />
+                    <step.icon
+                      className="text-xl"
+                      style={{ color: BRAND.navy.dark }}
+                    />
                   </div>
-                  <h4 className="text-lg font-bold mb-1 text-[#0B1D33]">
+
+                  <h4
+                    className="text-lg font-bold mb-1"
+                    style={{ color: BRAND.navy.dark }}
+                  >
                     {step.title}
                   </h4>
                   <p
                     className="text-xs font-semibold uppercase tracking-wider mb-2"
-                    style={{ color: step.color }}
+                    style={{ color: BRAND.gold.primary }}
                   >
                     Step {index + 1}
                   </p>
-                  <p className="text-sm leading-relaxed text-black/70">
+                  <p className="text-sm leading-relaxed text-slate-500">
                     {step.desc}
                   </p>
                 </div>
@@ -5578,6 +7366,8 @@ const TransformationJourneySection = () => {
             ))}
           </div>
         </div>
+
+        {/* Mobile View */}
         <div className="lg:hidden space-y-8">
           {steps.map((step, index) => (
             <motion.div
@@ -5596,23 +7386,34 @@ const TransformationJourneySection = () => {
                     boxShadow: `0 8px 24px rgba(253,185,19,0.25)`,
                   }}
                 >
-                  <step.icon className="text-lg text-[#0B1D33]" />
+                  <step.icon
+                    className="text-lg"
+                    style={{ color: BRAND.navy.dark }}
+                  />
                 </div>
                 {index < steps.length - 1 && (
-                  <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-slate-100" />
+                  <div
+                    className="w-0.5 flex-1 mt-3"
+                    style={{
+                      background: `linear-gradient(to bottom, ${BRAND.gold.primary}, rgba(253,185,19,0.1))`,
+                    }}
+                  />
                 )}
               </div>
               <div className="pb-8">
-                <h4 className="font-bold text-lg mb-1 text-[#0B1D33]">
+                <h4
+                  className="font-bold text-lg mb-1"
+                  style={{ color: BRAND.navy.dark }}
+                >
                   {step.title}
                 </h4>
                 <p
                   className="text-xs font-semibold uppercase tracking-wider mb-2"
-                  style={{ color: step.color }}
+                  style={{ color: BRAND.gold.primary }}
                 >
                   Step {index + 1}
                 </p>
-                <p className="text-sm leading-relaxed text-black/70">
+                <p className="text-sm leading-relaxed text-slate-500">
                   {step.desc}
                 </p>
               </div>
@@ -5624,46 +7425,64 @@ const TransformationJourneySection = () => {
   );
 };
 
-// ==================== TECHNOLOGY ECOSYSTEM SECTION (LIGHT) ====================
+// ==================== TECHNOLOGY ECOSYSTEM SECTION ====================
 const TechnologyEcosystemSection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const ecosystems = {
-    Enterprise: ["SAP", "Guidewire", "Salesforce", "Oracle"],
+    Enterprise: ["SAP", "Guidewire", "Service Now"],
     Development: ["React", "Angular", "Node.js", "Java", ".NET"],
     Cloud: ["AWS", "Azure", "Google Cloud"],
     AI: ["OpenAI", "Machine Learning", "Automation", "Analytics"],
   };
+
   const categoryIcons = {
     Enterprise: FaBuilding,
     Development: FaCode,
     Cloud: FaCloud,
     AI: FaBrain,
   };
+
   const categoryColors = {
-    Enterprise: BRAND.navy.dark,
-    Development: BRAND.gold.primary,
-    Cloud: BRAND.navy.dark,
+    Enterprise: "#3B82F6",
+    Development: "#10B981",
+    Cloud: "#06B6D4",
     AI: BRAND.gold.primary,
   };
 
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 relative overflow-hidden bg-slate-50"
+      className="py-28 px-4 md:px-8 relative overflow-hidden"
       style={{
+        background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
       }}
     >
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+          backgroundSize: "32px 32px",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              color: "#FDB913",
+              borderColor: "rgba(253,185,19,0.25)",
+            }}
+          >
             Technology Stack
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
-            Our Technology{" "}
-            <span style={{ color: BRAND.navy.mid }}>Ecosystem</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            Our Technology <span style={{ color: "#FDB913" }}>Ecosystem</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -5679,13 +7498,24 @@ const TechnologyEcosystemSection = () => {
                   viewport={{ once: true }}
                   transition={{ delay: catIndex * 0.1 }}
                   whileHover={{ y: -6 }}
-                  className="rounded-2xl p-6 transition-all duration-300 bg-white border border-slate-100 shadow-sm hover:shadow-lg"
+                  className="rounded-2xl p-6 transition-all duration-300"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(255,255,255,0.08)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
+                  }}
                 >
                   <div className="flex items-center gap-3 mb-5">
-                    <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-slate-50 border border-slate-100">
+                    <div
+                      className="w-10 h-10 rounded-lg flex items-center justify-center"
+                      style={{
+                        background: `${color}15`,
+                        border: `1px solid ${color}30`,
+                      }}
+                    >
                       <Icon className="text-base" style={{ color }} />
                     </div>
-                    <h3 className="text-lg font-bold text-[#0B1D33]">
+                    <h3 className="text-lg font-bold" style={{ color }}>
                       {category}
                     </h3>
                   </div>
@@ -5693,7 +7523,12 @@ const TechnologyEcosystemSection = () => {
                     {technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-4 py-2 rounded-full text-sm cursor-default font-medium transition-all hover:scale-105 bg-slate-50 border border-slate-100 text-[#0B1D33] hover:bg-[#0B1D33] hover:text-black hover:border-[#0B1D33]"
+                        className="px-4 py-2 rounded-full text-sm cursor-default font-medium transition-all hover:scale-105"
+                        style={{
+                          background: "rgba(255,255,255,0.05)",
+                          border: "1px solid rgba(255,255,255,0.1)",
+                          color: "rgba(255,255,255,0.7)",
+                        }}
                       >
                         {tech}
                       </span>
@@ -5709,54 +7544,71 @@ const TechnologyEcosystemSection = () => {
   );
 };
 
-// ==================== BUSINESS IMPACT SECTION (LIGHT) ====================
+// ==================== BUSINESS IMPACT SECTION ====================
 const BusinessImpactSection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const metrics = [
     {
       value: "40%",
       label: "Faster Delivery",
       icon: FaRocket,
-      iconColor: BRAND.gold.primary,
+      color: BRAND.gold.primary,
     },
     {
       value: "60%",
       label: "Reduction in Manual Processes",
       icon: FaCogs,
-      iconColor: BRAND.navy.dark,
+      color: "#10B981",
     },
     {
       value: "99.9%",
       label: "System Availability",
       icon: FaServer,
-      iconColor: BRAND.gold.primary,
+      color: "#3B82F6",
     },
     {
       value: "30%",
       label: "Lower Operational Costs",
       icon: FaDollarSign,
-      iconColor: BRAND.navy.dark,
+      color: "#8B5CF6",
     },
   ];
 
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 relative overflow-hidden bg-white"
+      className="py-28 px-4 md:px-8 relative overflow-hidden"
       style={{
+        background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 50%, ${BRAND.navy.lighter} 100%)`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
       }}
     >
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+          backgroundSize: "32px 32px",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+        <div className="text-center mb-16">
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              color: "#FDB913",
+              borderColor: "rgba(253,185,19,0.25)",
+            }}
+          >
             Results That Matter
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             Delivering Measurable{" "}
-            <span style={{ color: BRAND.navy.mid }}>Business Impact</span>
+            <span style={{ color: "#FDB913" }}>Business Impact</span>
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -5768,16 +7620,23 @@ const BusinessImpactSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="text-center rounded-3xl p-8 bg-slate-50 border border-slate-100"
+              className="text-center rounded-3xl p-8 border border-white/10 backdrop-blur-xl"
+              style={{ background: "rgba(255,255,255,0.05)" }}
             >
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 bg-white shadow-sm border border-slate-100">
+              <div
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                style={{
+                  background: `${metric.color}15`,
+                  border: `1px solid ${metric.color}30`,
+                }}
+              >
                 <metric.icon
                   className="text-2xl"
-                  style={{ color: metric.iconColor }}
+                  style={{ color: metric.color }}
                 />
               </div>
               <div
-                className="text-[#0B1D33] mb-2"
+                className="text-white mb-2"
                 style={{
                   fontSize: "clamp(48px, 8vw, 80px)",
                   fontWeight: 800,
@@ -5786,7 +7645,7 @@ const BusinessImpactSection = () => {
               >
                 {metric.value}
               </div>
-              <div className="text-black/70 font-medium">{metric.label}</div>
+              <div className="text-white/50 font-medium">{metric.label}</div>
             </motion.div>
           ))}
         </div>
@@ -5795,24 +7654,25 @@ const BusinessImpactSection = () => {
   );
 };
 
-// ==================== INDUSTRIES SECTION (LIGHT) ====================
+// ==================== INDUSTRIES SECTION ====================
 const IndustriesSection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const industries = [
-    { name: "Insurance", icon: FaShieldAlt, color: BRAND.navy.dark },
-    { name: "Banking", icon: FaUniversity, color: BRAND.gold.primary },
-    { name: "Healthcare", icon: FaHeartbeat, color: BRAND.navy.dark },
-    { name: "Retail", icon: FaShoppingCart, color: BRAND.gold.primary },
-    { name: "Manufacturing", icon: FaIndustry, color: BRAND.navy.dark },
-    { name: "Logistics", icon: FaTruck, color: BRAND.gold.primary },
-    { name: "Energy", icon: FaBolt, color: BRAND.navy.dark },
-    { name: "Public Sector", icon: FaLandmark, color: BRAND.gold.primary },
+    { name: "Insurance", icon: FaShieldAlt, color: "#3B82F6" },
+    { name: "Banking", icon: FaUniversity, color: "#10B981" },
+    { name: "Healthcare", icon: FaHeartbeat, color: "#EF4444" },
+    { name: "Retail", icon: FaShoppingCart, color: "#8B5CF6" },
+    { name: "Manufacturing", icon: FaIndustry, color: "#F59E0B" },
+    { name: "Logistics", icon: FaTruck, color: "#06B6D4" },
+    { name: "Energy", icon: FaBolt, color: BRAND.gold.primary },
+    { name: "Public Sector", icon: FaLandmark, color: "#64748B" },
   ];
 
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 bg-slate-50 relative overflow-hidden"
+      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
@@ -5821,12 +7681,31 @@ const IndustriesSection = () => {
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+            style={{
+              background: "rgba(253,185,19,0.1)",
+              color: BRAND.navy.dark,
+              border: "1px solid rgba(253,185,19,0.2)",
+            }}
+          >
             Industries We Serve
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold"
+            style={{ color: BRAND.navy.dark }}
+          >
             Expertise Across{" "}
-            <span style={{ color: BRAND.navy.mid }}>Industries</span>
+            <span
+              style={{
+                backgroundImage: BRAND.gold.gradient,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Industries
+            </span>
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -5840,14 +7719,32 @@ const IndustriesSection = () => {
               whileHover={{ y: -8, scale: 1.05 }}
               className="group cursor-pointer"
             >
-              <div className="rounded-2xl p-6 text-center transition-all duration-500 bg-white border border-slate-100 shadow-sm hover:shadow-xl">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 bg-slate-50 border border-slate-100">
+              <div
+                className="rounded-2xl p-6 text-center transition-all duration-500"
+                style={{
+                  background: "white",
+                  border: "1px solid rgba(0,0,0,0.06)",
+                  boxShadow: "0 4px 20px rgba(11,29,51,0.06)",
+                }}
+              >
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
+                  style={{
+                    background: `${industry.color}12`,
+                    border: `1px solid ${industry.color}25`,
+                  }}
+                >
                   <industry.icon
                     className="text-2xl"
                     style={{ color: industry.color }}
                   />
                 </div>
-                <h3 className="font-bold text-[#0B1D33]">{industry.name}</h3>
+                <h3
+                  className="font-semibold"
+                  style={{ color: BRAND.navy.dark }}
+                >
+                  {industry.name}
+                </h3>
               </div>
             </motion.div>
           ))}
@@ -5857,9 +7754,10 @@ const IndustriesSection = () => {
   );
 };
 
-// ==================== CASE STUDIES SECTION (LIGHT) ====================
+// ==================== CASE STUDIES SECTION ====================
 const CaseStudiesSection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const cases = [
     {
       title: "Enterprise Integration Program",
@@ -5871,7 +7769,7 @@ const CaseStudiesSection = () => {
         "Improved User Experience",
       ],
       icon: FaProjectDiagram,
-      color: BRAND.navy.dark,
+      color: "#3B82F6",
     },
     {
       title: "AI Automation Initiative",
@@ -5883,7 +7781,7 @@ const CaseStudiesSection = () => {
         "$2M Annual Savings",
       ],
       icon: FaRobot,
-      color: BRAND.gold.dark,
+      color: "#8B5CF6",
     },
     {
       title: "Cloud Modernization Project",
@@ -5895,27 +7793,43 @@ const CaseStudiesSection = () => {
         "Auto-scaling Enabled",
       ],
       icon: FaCloudUploadAlt,
-      color: BRAND.navy.dark,
+      color: BRAND.gold.primary,
     },
   ];
 
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 relative overflow-hidden bg-white"
+      className="py-28 px-4 md:px-8 relative overflow-hidden"
       style={{
+        background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
       }}
     >
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+          backgroundSize: "32px 32px",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              color: "#FDB913",
+              borderColor: "rgba(253,185,19,0.25)",
+            }}
+          >
             Success Stories
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#0B1D33]">
-            Featured <span style={{ color: BRAND.navy.mid }}>Case Studies</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+            Featured <span style={{ color: "#FDB913" }}>Case Studies</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -5929,35 +7843,56 @@ const CaseStudiesSection = () => {
               whileHover={{ y: -8 }}
               className="group cursor-pointer"
             >
-              <div className="rounded-3xl overflow-hidden bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+              <div
+                className="rounded-3xl overflow-hidden backdrop-blur-xl"
+                style={{
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                  boxShadow: "0 10px 35px rgba(0,0,0,0.2)",
+                }}
+              >
+                {/* Top Accent */}
                 <div
                   className="h-1"
                   style={{
                     background: `linear-gradient(90deg, ${caseStudy.color}, transparent)`,
                   }}
                 />
+
                 <div className="p-8">
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-slate-50 border border-slate-100">
+                  <div
+                    className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                    style={{
+                      background: `${caseStudy.color}15`,
+                      border: `1px solid ${caseStudy.color}30`,
+                    }}
+                  >
                     <caseStudy.icon
                       className="text-xl"
                       style={{ color: caseStudy.color }}
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-[#0B1D33] group-hover:text-[#143A63] transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#FDB913] transition-colors">
                     {caseStudy.title}
                   </h3>
-                  <p className="text-black/70 mb-6 text-sm leading-relaxed">
+                  <p className="text-white/50 mb-6 text-sm leading-relaxed">
                     {caseStudy.description}
                   </p>
-                  <div className="border-t border-slate-50 pt-4">
-                    <p className="text-xs uppercase tracking-wider mb-3 font-semibold text-[#0B1D33]">
+                  <div
+                    style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+                    className="pt-4"
+                  >
+                    <p
+                      className="text-xs uppercase tracking-wider mb-3 font-semibold"
+                      style={{ color: BRAND.gold.primary }}
+                    >
                       Key Results:
                     </p>
                     <ul className="space-y-2">
                       {caseStudy.results.map((result, idx) => (
                         <li
                           key={idx}
-                          className="flex items-center gap-2 text-sm text-black"
+                          className="flex items-center gap-2 text-sm text-white/70"
                         >
                           <FaCheckCircle
                             className="text-xs"
@@ -5968,9 +7903,12 @@ const CaseStudiesSection = () => {
                       ))}
                     </ul>
                   </div>
-                  {/* <button className="mt-6 font-medium text-sm flex items-center gap-2 group-hover:gap-3 transition-all text-[#0B1D33] hover:text-[#143A63]">
+                  <button
+                    className="mt-6 font-medium text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
+                    style={{ color: caseStudy.color }}
+                  >
                     Read Full Case Study <FaArrowRight />
-                  </button> */}
+                  </button>
                 </div>
               </div>
             </motion.div>
@@ -5981,9 +7919,10 @@ const CaseStudiesSection = () => {
   );
 };
 
-// ==================== AI INNOVATION SECTION (LIGHT GOLD ACCENT) ====================
+// ==================== AI INNOVATION SECTION ====================
 const AIInnovationSection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const features = [
     {
       title: "Generative AI Solutions",
@@ -6015,32 +7954,56 @@ const AIInnovationSection = () => {
   return (
     <section
       ref={ref}
-      className="py-24 px-4 md:px-8 relative overflow-hidden bg-[#FFFBEB]"
+      className="py-28 px-4 md:px-8 relative overflow-hidden"
       style={{
+        background: BRAND.gold.gradient,
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
         transition: "all 1s",
       }}
     >
+      <div
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, ${BRAND.navy.dark} 1px, transparent 0)`,
+          backgroundSize: "24px 24px",
+        }}
+      />
+
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="font-bold mb-4 uppercase tracking-wider text-sm text-[#0B1D33]">
+            <p
+              className="font-bold mb-4 uppercase tracking-wider text-sm"
+              style={{ color: BRAND.navy.dark }}
+            >
               AI Innovation
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-[#0B1D33]">
+            <h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+              style={{ color: BRAND.navy.dark }}
+            >
               Unlock the Power of
               <br />
-              <span style={{ color: BRAND.gold.dark }}>
+              <span style={{ color: BRAND.navy.mid }}>
                 Artificial Intelligence
               </span>
             </h2>
-            <p className="text-lg mb-8 leading-relaxed text-black/80">
+            <p
+              className="text-lg mb-8 leading-relaxed"
+              style={{ color: BRAND.navy.light }}
+            >
               Harness cutting-edge AI capabilities to transform your business
               operations, enhance decision-making, and create unprecedented
               competitive advantages.
             </p>
-            <button className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-[#0B1D33] text-[#FDB913]">
+            <button
+              className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+              style={{
+                background: BRAND.navy.dark,
+                color: BRAND.gold.primary,
+              }}
+            >
               Explore AI Solutions <FaArrowRight />
             </button>
           </div>
@@ -6053,16 +8016,28 @@ const AIInnovationSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ x: -4 }}
-                className="rounded-xl p-5 flex items-start gap-4 cursor-pointer shadow-sm transition-all hover:shadow-md bg-white border border-[#FDB913]/20"
+                className="rounded-xl p-5 flex items-start gap-4 cursor-pointer shadow-md transition-all hover:shadow-xl"
+                style={{
+                  background: "rgba(255,255,255,0.95)",
+                  backdropFilter: "blur(8px)",
+                }}
               >
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-[#0B1D33]">
-                  <feature.icon className="text-[#FDB913]" />
+                <div
+                  className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0"
+                  style={{ background: BRAND.navy.dark }}
+                >
+                  <feature.icon style={{ color: BRAND.gold.primary }} />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1 text-[#0B1D33]">
+                  <h3
+                    className="font-bold mb-1"
+                    style={{ color: BRAND.navy.dark }}
+                  >
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-black/70">{feature.desc}</p>
+                  <p className="text-sm" style={{ color: BRAND.navy.light }}>
+                    {feature.desc}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -6073,40 +8048,41 @@ const AIInnovationSection = () => {
   );
 };
 
-// ==================== STATS SECTION (LIGHT) ====================
+// ==================== STATS SECTION ====================
 const StatsSection = () => {
   const [ref, isVisible] = useScrollReveal();
+
   const stats = [
     {
       value: "250+",
       label: "Projects Delivered",
       icon: FaFolderOpen,
-      iconColor: BRAND.gold.primary,
+      color: BRAND.gold.primary,
     },
     {
       value: "50+",
       label: "Enterprise Clients",
       icon: FaBuilding,
-      iconColor: BRAND.navy.dark,
+      color: "#3B82F6",
     },
     {
       value: "99.9%",
       label: "Service Availability",
       icon: FaServer,
-      iconColor: BRAND.gold.primary,
+      color: "#10B981",
     },
     {
       value: "24/7",
       label: "Global Support",
       icon: FaHeadset,
-      iconColor: BRAND.navy.dark,
+      color: "#8B5CF6",
     },
   ];
 
   return (
     <section
       ref={ref}
-      className="py-20 px-4 md:px-8 bg-white relative overflow-hidden"
+      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
@@ -6124,23 +8100,30 @@ const StatsSection = () => {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-slate-50 border border-slate-100">
-                <stat.icon
-                  className="text-3xl"
-                  style={{ color: stat.iconColor }}
-                />
+              <div
+                className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4"
+                style={{
+                  background: `${stat.color}12`,
+                  border: `1px solid ${stat.color}25`,
+                }}
+              >
+                <stat.icon className="text-3xl" style={{ color: stat.color }} />
               </div>
               <div
-                className="mb-2 text-[#0B1D33]"
+                className="mb-2"
                 style={{
                   fontSize: "clamp(48px, 8vw, 80px)",
                   fontWeight: 800,
                   lineHeight: 1,
+                  backgroundImage: BRAND.gold.gradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
                 }}
               >
                 {stat.value}
               </div>
-              <div className="text-black/70 font-medium">{stat.label}</div>
+              <div className="text-slate-600 font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -6149,20 +8132,20 @@ const StatsSection = () => {
   );
 };
 
-// ==================== CTA SECTION (DARK ANCHOR) ====================
+// ==================== CTA SECTION ====================
 const CTABannerSection = () => {
   const [ref, isVisible] = useScrollReveal();
 
   return (
     <section
       ref={ref}
-      className="py-16 px-4 md:px-8 relative overflow-hidden"
-      // style={{
-      //   background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 100%)`,
-      //   opacity: isVisible ? 1 : 0,
-      //   transform: isVisible ? "translateY(0)" : "translateY(10px)",
-      //   transition: "all 1s",
-      // }}
+      className="py-28 px-4 md:px-8 relative overflow-hidden"
+      style={{
+        background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #0A1628 50%, ${BRAND.navy.mid} 100%)`,
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(10px)",
+        transition: "all 1s",
+      }}
     >
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -6171,11 +8154,12 @@ const CTABannerSection = () => {
           backgroundSize: "32px 32px",
         }}
       />
+
       <motion.div
         animate={{ y: [0, -20, 0], x: [0, 15, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-10 left-1/4 w-80 h-80 rounded-full blur-3xl opacity-[0.08]"
-        style={{ background: BRAND.navy.light }}
+        style={{ background: "#3B82F6" }}
       />
       <motion.div
         animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
@@ -6201,12 +8185,19 @@ const CTABannerSection = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-white/5 border-2 border-[#FDB913]/30"
+            className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              border: "2px solid rgba(253,185,19,0.25)",
+            }}
           >
-            <FaRocket className="text-3xl text-[#FDB913]" />
+            <FaRocket
+              className="text-3xl"
+              style={{ color: BRAND.gold.primary }}
+            />
           </motion.div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
             Ready to Modernize Your{" "}
             <span
               style={{
@@ -6220,7 +8211,7 @@ const CTABannerSection = () => {
             </span>
           </h2>
 
-          <p className="text-lg text-black leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl mx-auto">
             From application development to enterprise integrations and AI
             innovation, Innovise helps businesses build future-ready digital
             ecosystems.
@@ -6229,33 +8220,53 @@ const CTABannerSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <a
               href="/contact"
-              className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#FDB913] text-[#0B1D33] shadow-lg"
+              className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              style={{
+                background: BRAND.gold.gradient,
+                color: BRAND.navy.dark,
+                boxShadow: `0 10px 40px rgba(253,185,19,0.25)`,
+              }}
             >
               <span className="relative z-10 flex items-center gap-3">
-                Talk to Our Experts{" "}
+                Talk to Our Experts
                 <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
               </span>
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
+                <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
+              </div>
             </a>
+
             <a
               href="/contact"
-              className="group px-8 py-5 rounded-xl font-bold text-lg text-black flex items-center gap-3 transition-all duration-300 hover:bg-white/10 border-2 border-[#FDB913]/30 bg-white/5"
+              className="group px-8 py-5 rounded-xl font-bold text-lg text-white flex items-center gap-3 transition-all duration-300"
+              style={{
+                border: "2px solid rgba(255,255,255,0.2)",
+                background: "rgba(255,255,255,0.05)",
+              }}
             >
-              <FaPlayCircle className="text-[#FDB913]" /> Request a Consultation
+              <FaPlayCircle style={{ color: BRAND.gold.primary }} />
+              Request a Consultation
             </a>
           </div>
 
-          {/* <div className="flex flex-wrap items-center justify-center gap-8 pt-8 border-t border-white/10">
+          <div
+            className="flex flex-wrap items-center justify-center gap-8 pt-8"
+            style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
+          >
             {[
               { value: "Free Assessment", icon: FaSearch },
               { value: "Proof of Concept", icon: FaFlask },
               { value: "Flexible Engagement", icon: FaHandshake },
             ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-slate-400">
-                <item.icon className="text-sm text-[#FDB913]" />
+              <div key={idx} className="flex items-center gap-2 text-white/60">
+                <item.icon
+                  className="text-sm"
+                  style={{ color: BRAND.gold.primary }}
+                />
                 <span className="text-sm font-medium">{item.value}</span>
               </div>
             ))}
-          </div> */}
+          </div>
         </motion.div>
       </div>
     </section>
@@ -6279,7 +8290,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-14 px-4 md:px-8 bg-[#0B1D33]">
+    <footer
+      className="py-14 px-4 md:px-8"
+      style={{ background: BRAND.navy.dark }}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-3">
@@ -6287,13 +8301,11 @@ const Footer = () => {
               className="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg"
               style={{ background: BRAND.gold.gradient }}
             >
-              <FaCube className="text-[#0B1D33] text-lg" />
+              <FaCube className="text-white text-lg" />
             </div>
-            <span className="text-xl font-bold text-black">
-              Innovise <span className="text-[#FDB913]">IT</span>
-            </span>
+            <span className="text-xl font-bold text-white">Innovise IT</span>
           </div>
-          <p className="text-slate-400 text-sm">
+          <p className="text-white/30 text-sm">
             © 2024 Innovise IT Solutions. All rights reserved.
           </p>
           <div className="flex gap-3">
@@ -6301,18 +8313,26 @@ const Footer = () => {
               <a
                 key={i}
                 href="#"
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-colors group bg-[#143A63] hover:bg-[#FDB913]"
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-colors group"
+                style={{
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.08)",
+                }}
               >
-                <SocialIcon className="text-black group-hover:text-[#0B1D33] transition-colors" />
+                <SocialIcon className="text-white/40 group-hover:text-[#FDB913] transition-colors" />
               </a>
             ))}
           </div>
         </div>
-        <div className="mt-10 pt-8 grid md:grid-cols-4 gap-8 text-center md:text-left border-t border-[#143A63]">
+
+        <div
+          className="mt-10 pt-8 grid md:grid-cols-4 gap-8 text-center md:text-left"
+          style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
+        >
           {footerLinks.map((section, i) => (
             <div key={i}>
-              <h4 className="font-semibold text-black mb-3">{section.title}</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
+              <h4 className="font-semibold text-white mb-3">{section.title}</h4>
+              <ul className="space-y-2 text-sm text-white/40">
                 {section.links.map((link, j) => (
                   <li key={j}>
                     <a
@@ -6337,8 +8357,9 @@ const Footer = () => {
 // ==================== MAIN PAGE COMPONENT ====================
 const ApplicationDevelopmentIntegrationAIPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ background: "#ffffff" }}>
       <HeroSection />
+      {/* <TrustedBySection /> */}
       <WhyInnoviseSection />
       <ServicesSection />
       <TransformationJourneySection />

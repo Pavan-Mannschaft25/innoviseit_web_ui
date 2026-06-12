@@ -392,7 +392,7 @@ const ServiceNavigator = () => {
                       </div>
 
                       {/* Learn More Button */}
-                      <div
+                      {/* <div
                         className="mt-auto pt-4 border-t flex items-center justify-between group/btn"
                         style={{ borderColor: "rgba(255,255,255,0.08)" }}
                       >
@@ -441,7 +441,7 @@ const ServiceNavigator = () => {
                             }}
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
                     {/* Hover Glow Effect - Bottom */}

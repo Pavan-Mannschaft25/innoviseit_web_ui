@@ -26,7 +26,7 @@ const Footer = () => {
       },
       { name: "Guidewire Services", path: "/services/guidewire" },
       {
-        name: "Application Development & AI",
+        name: "AI & Engineering Services",
         path: "/services/application-development-integration-ai",
       },
       {
@@ -83,10 +83,10 @@ const Footer = () => {
               </Link>
 
               <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
-                Innovative technology partner delivering SAP, Guidewire, cloud,
-                AI, and digital transformation solutions that help organizations
-                modernize operations, accelerate growth, and achieve measurable
-                business outcomes.
+                Innovative technology partner delivering cloud, AI, engineering,
+                enterprise applications, and digital transformation solutions
+                that help organizations modernize operations, accelerate growth,
+                and achieve measurable business outcomes.
               </p>
 
               {/* Social Links */}
@@ -220,7 +220,7 @@ const Footer = () => {
               © {currentYear} {companyData.name}. All rights reserved.
             </p>
 
-            <div className="flex items-center gap-6 text-sm text-gray-500">
+            {/* <div className="flex items-center gap-6 text-sm text-gray-500">
               <Link
                 to="/privacy"
                 className="hover:text-white transition-colors"
@@ -236,7 +236,7 @@ const Footer = () => {
               >
                 Cookie Policy
               </Link>
-            </div>
+            </div> */}
 
             <p className="text-sm text-gray-500 flex items-center gap-1">
               Made with <FaHeart className="text-red-500 text-xs" /> by Innovise
