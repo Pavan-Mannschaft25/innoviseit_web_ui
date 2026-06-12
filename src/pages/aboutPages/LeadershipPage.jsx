@@ -672,7 +672,7 @@
 //             border: `1px solid ${BRAND.navy.mid}15`,
 //           }}
 //         >
-//           🌟 What Sets Our Leaders Apart
+//            What Sets Our Leaders Apart
 //         </span>
 
 //         <h2
@@ -702,7 +702,7 @@
 // // Leadership Philosophy Section
 // const PhilosophySection = () => (
 //   <section
-//     className="py-20 lg:py-28 relative overflow-hidden"
+//     className="py-6 lg:py-12 relative overflow-hidden"
 //     style={{
 //       background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
 //     }}
@@ -759,7 +759,7 @@
 //             border: "1px solid rgba(255,255,255,0.15)",
 //           }}
 //         >
-//           🧑‍💼 Leadership Philosophy
+//            Leadership Philosophy
 //         </span>
 
 //         {/* Quote Text */}
@@ -823,7 +823,7 @@
 
 // // Team Grid Section
 // const TeamSection = () => (
-//   <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+//   <section className="py-6 lg:py-12 bg-gray-50 relative overflow-hidden">
 //     {/* Background Decoration */}
 //     <div
 //       className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full blur-3xl opacity-[0.03] -translate-x-1/2 -translate-y-1/2"
@@ -1859,13 +1859,7 @@ const DifferentiatorCard = ({ item, index }) => (
     whileHover={{ y: -5 }}
     className="group"
   >
-    <div
-      className="p-6 lg:p-8 rounded-2xl h-full transition-all duration-300 hover:shadow-lg"
-      style={{
-        background: index % 2 === 0 ? "white" : `${BRAND.navy.dark}`,
-        border: `1px solid ${index % 2 === 0 ? "rgba(0,0,0,0.05)" : "rgba(255,255,255,0.08)"}`,
-      }}
-    >
+    <div className="p-6 lg:p-8 rounded-2xl h-full transition-all duration-300 hover:shadow-lg bg-primary-800">
       {/* Icon */}
       <motion.div
         className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
@@ -1882,20 +1876,10 @@ const DifferentiatorCard = ({ item, index }) => (
       </motion.div>
 
       {/* Title */}
-      <h3
-        className="text-lg font-bold mb-3"
-        style={{ color: index % 2 === 0 ? BRAND.navy.dark : "white" }}
-      >
-        {item.title}
-      </h3>
+      <h3 className="text-lg font-bold mb-3 text-white">{item.title}</h3>
 
       {/* Description */}
-      <p
-        className="text-sm leading-relaxed"
-        style={{ color: index % 2 === 0 ? "#64748B" : "rgba(255,255,255,0.7)" }}
-      >
-        {item.description}
-      </p>
+      <p className="text-sm leading-relaxed text-white">{item.description}</p>
     </div>
   </motion.div>
 );
@@ -1973,12 +1957,7 @@ const TeamSection = () => (
 
 // Philosophy Section
 const PhilosophySection = () => (
-  <section
-    className="py-10 lg:py-16 relative overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-    }}
-  >
+  <section className="py-10 lg:py-16 relative overflow-hidden bg-primary-800">
     {/* Background Pattern */}
     <div
       className="absolute inset-0 opacity-[0.03]"
@@ -2031,7 +2010,7 @@ const PhilosophySection = () => (
             border: "1px solid rgba(255,255,255,0.15)",
           }}
         >
-          🧑‍💼 Leadership Philosophy
+          Leadership Philosophy
         </span>
 
         {/* Quote Text */}
@@ -2112,7 +2091,7 @@ const DifferentiatorsSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          🌟 What Sets Our Leaders Apart
+          What Sets Our Leaders Apart
         </span>
 
         <h2
@@ -2454,7 +2433,7 @@ const LeadershipPage = () => {
       <TeamSection />
       <PhilosophySection />
       <DifferentiatorsSection />
-      <ClosingSection />
+      {/* <ClosingSection /> */}
 
       {/* Optional Modal for detailed view */}
       <LeaderDetailModal

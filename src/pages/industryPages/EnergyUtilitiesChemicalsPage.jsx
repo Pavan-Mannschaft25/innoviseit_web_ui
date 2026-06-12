@@ -98,7 +98,7 @@
 //     className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl text-center group cursor-pointer border border-gray-100 relative overflow-hidden"
 //   >
 //     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFD700] via-[#D4AF37] to-[#FFD700] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-//     <div className="w-20 h-20 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
+//     <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
 //       <Icon className="text-4xl text-[#FFD700]" />
 //     </div>
 //     <h3 className="font-bold text-xl mb-3 text-[#0a1628]">{title}</h3>
@@ -274,7 +274,7 @@
 // // ============================================
 
 // const HeroSection = () => (
-//   <section className="min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
+//   <section className="min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
 //     <div className="absolute inset-0 overflow-hidden">
 //       <motion.div
 //         animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
@@ -399,7 +399,7 @@
 //         <motion.div
 //           animate={{ y: [10, -10, 10] }}
 //           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-//           className="absolute -top-6 -right-6 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
+//           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
 //         >
 //           <div className="flex items-center gap-3">
 //             <FaBolt className="text-3xl text-[#FFD700]" />
@@ -429,7 +429,7 @@
 //       {CHALLENGES_DATA.map((challenge, i) => (
 //         <Card key={i} delay={i * 0.1}>
 //           <div className="flex flex-col h-full">
-//             <div className="w-14 h-14 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-xl flex items-center justify-center mb-5 shadow-lg">
+//             <div className="w-14 h-14 bg-primary-800 rounded-xl flex items-center justify-center mb-5 shadow-lg">
 //               <challenge.icon className="text-2xl text-[#FFD700]" />
 //             </div>
 //             <h3 className="font-bold text-lg mb-3 text-[#0a1628]">
@@ -480,7 +480,7 @@
 
 // const BenefitsSection = () => (
 //   <SectionWrapper
-//     className="bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden"
+//     className="bg-primary-800 text-white relative overflow-hidden"
 //     id="benefits"
 //   >
 //     <div className="absolute inset-0">
@@ -631,7 +631,7 @@
 
 // const CTASection = () => (
 //   <section className="relative px-6 lg:px-20 py-28 overflow-hidden">
-//     <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628]"></div>
+//     <div className="absolute inset-0 bg-primary-800"></div>
 //     <div
 //       className="absolute inset-0 opacity-[0.05]"
 //       style={{
@@ -846,7 +846,7 @@ const IconCard = ({ icon: Icon, title, description, delay = 0 }) => (
     className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl text-center group cursor-pointer border border-gray-100 relative overflow-hidden"
   >
     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFD700] via-[#D4AF37] to-[#FFD700] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-    <div className="w-20 h-20 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
+    <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
       <Icon className="text-4xl text-[#FFD700]" />
     </div>
     <h3 className="font-bold text-xl mb-3 text-[#0a1628]">{title}</h3>
@@ -1022,7 +1022,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden">
+  <section className="min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     <div className="absolute inset-0 overflow-hidden">
       <motion.div
         animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
@@ -1069,7 +1069,7 @@ const HeroSection = () => (
           seamless regulatory compliance across the energy and chemical value
           chain.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 mb-12">
+        {/* <div className="flex flex-col sm:flex-row gap-4 mb-12">
           <a href="/contact" style={{ textDecoration: "none" }}>
             <Button size="lg">
               Drive Operational Excellence <FaArrowRight />
@@ -1080,7 +1080,7 @@ const HeroSection = () => (
               Explore Solutions
             </Button>
           </a>
-        </div>
+        </div> */}
         {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -1147,7 +1147,7 @@ const HeroSection = () => (
         <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-6 -right-6 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
+          className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
         >
           <div className="flex items-center gap-3">
             <FaBolt className="text-3xl text-[#FFD700]" />
@@ -1177,7 +1177,7 @@ const ChallengesSection = () => (
       {CHALLENGES_DATA.map((challenge, i) => (
         <Card key={i} delay={i * 0.1}>
           <div className="flex flex-col h-full">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#0a1628] to-[#152d52] rounded-xl flex items-center justify-center mb-5 shadow-lg">
+            <div className="w-14 h-14 bg-primary-800 rounded-xl flex items-center justify-center mb-5 shadow-lg">
               <challenge.icon className="text-2xl text-[#FFD700]" />
             </div>
             <h3 className="font-bold text-lg mb-3 text-[#0a1628]">
@@ -1223,7 +1223,7 @@ const SolutionsSection = () => (
 
 const BenefitsSection = () => (
   <SectionWrapper
-    className="bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628] text-white relative overflow-hidden"
+    className="bg-primary-800 text-white relative overflow-hidden"
     id="benefits"
   >
     <div className="absolute inset-0">
@@ -1307,13 +1307,13 @@ const BenefitsSection = () => (
               </motion.div>
             ))}
           </div>
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <a href="/contact" style={{ textDecoration: "none" }}>
               <Button variant="ghost">
                 Download Industry Whitepaper <FaArrowRight />
               </Button>
             </a>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
@@ -1376,7 +1376,7 @@ const ProcessSection = () => (
 
 const CTASection = () => (
   <section className="relative px-6 lg:px-20 py-28 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0f2140] to-[#0a1628]"></div>
+    <div className="absolute inset-0 bg-primary-800"></div>
     <div
       className="absolute inset-0 opacity-[0.05]"
       style={{
@@ -1489,7 +1489,7 @@ export default function EnergyUtilitiesChemicalsPage() {
         {memoizedContent.solutions}
         {memoizedContent.benefits}
         {memoizedContent.process}
-        {memoizedContent.cta}
+        {/* {memoizedContent.cta} */}
       </main>
     </div>
   );

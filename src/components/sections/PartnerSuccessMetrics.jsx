@@ -12,7 +12,7 @@
 //   FaStar,
 // } from "react-icons/fa";
 
-// // 📊 METRICS DATA
+// //  METRICS DATA
 // const metricsData = [
 //   {
 //     id: 1,
@@ -222,7 +222,7 @@
 //   );
 // };
 
-// // 🎯 MAIN COMPONENT
+// //  MAIN COMPONENT
 // const PartnerSuccessMetrics = () => {
 //   return (
 //     <section
@@ -231,7 +231,7 @@
 //         background: "linear-gradient(to bottom, #12324f, #143a63, #1a4570)",
 //       }}
 //     >
-//       {/* ✨ Background Effects */}
+//       {/*  Background Effects */}
 //       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 //         {/* Grid Pattern */}
 //         <div
@@ -450,7 +450,7 @@ const BRAND = {
   },
 };
 
-// 📊 METRICS DATA
+//  METRICS DATA
 const metricsData = [
   {
     id: 1,
@@ -682,7 +682,7 @@ const MetricCard = ({ metric, index }) => {
   );
 };
 
-// 🎯 MAIN COMPONENT
+//  MAIN COMPONENT
 const PartnerSuccessMetrics = () => {
   // Summary stats
   const summaryStats = [
@@ -699,7 +699,7 @@ const PartnerSuccessMetrics = () => {
       //   background: `linear-gradient(to bottom, ${BRAND.navy.dark}, ${BRAND.navy.mid}, ${BRAND.navy.lighter})`,
       // }}
     >
-      {/* ✨ Background Effects */}
+      {/*  Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Subtle Grid Pattern */}
         <div

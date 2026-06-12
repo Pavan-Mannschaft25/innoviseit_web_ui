@@ -376,7 +376,7 @@ const ValueCard = ({ value, index, isActive, onSelect }) => {
                 </ul>
 
                 {/* Action Button */}
-                <button
+                <butto
                   className="mt-6 w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 focus:outline-none focus:ring-2"
                   style={{
                     background: value.color,
@@ -387,7 +387,7 @@ const ValueCard = ({ value, index, isActive, onSelect }) => {
                   }}
                 >
                   Learn More About This Value
-                </button>
+                </butto>
               </motion.div>
             )}
           </AnimatePresence>
@@ -760,7 +760,7 @@ const ValuesPage = () => {
         <img
           src={banner}
           alt="Innovise IT Banner"
-          className="w-full h-full object-fill object-center"
+          className="w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/10" />
@@ -792,7 +792,7 @@ const ValuesPage = () => {
           </div>
 
           {/* Cards Grid - Bento Style */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {philosophyWithIcons.map((philosophy, index) => (
               <AnimatedSection key={philosophy.id} delay={index * 0.1}>
                 <motion.div className="group relative h-[60vh] overflow-hidden cursor-pointer">
@@ -804,10 +804,10 @@ const ValuesPage = () => {
                   />
 
                   {/* 🔥 DARK OVERLAY */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F2C]/95 via-[#0A0F2C]/70 to-transparent" />
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F2C]/95 via-[#0A0F2C]/70 to-transparent" /> */}
 
                   {/* 🔥 CONTENT */}
-                  <div className="relative z-10 p-6 lg:p-8 flex flex-col justify-end items-start h-full text-white text-left">
+                  <div className="relative z-10 p-6 lg:p-4 flex flex-col justify-end items-start h-full text-white text-left">
                     {" "}
                     {/* Badge */}
                     {/* <div
@@ -833,7 +833,7 @@ const ValuesPage = () => {
                       {philosophy.title}
                     </h3>
                     {/* Description */}
-                    <p className="text-sm text-white/70 mb-4 line-clamp-3">
+                    <p className="text-sm md:text-lg text-white mb-4 line-clamp-3">
                       {philosophy.description}
                     </p>
                     {/* Principles */}
@@ -841,7 +841,7 @@ const ValuesPage = () => {
                       {philosophy.principles.slice(0, 3).map((item, idx) => (
                         <li
                           key={idx}
-                          className="text-xs text-white/60 flex items-center gap-2"
+                          className="text-sm md:text-md text-white flex items-center gap-2"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
                           {item}
@@ -860,7 +860,7 @@ const ValuesPage = () => {
           </div>
         </Container>
       </section>
-      <ClosingSection />
+      {/* <ClosingSection /> */}
     </main>
   );
 };

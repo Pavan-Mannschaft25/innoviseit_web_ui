@@ -290,7 +290,7 @@
 //             {/* Mobile Menu Button - Premium Design */}
 //             <button
 //               onClick={() => setMobileOpen(true)}
-//               className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#0a1628] to-[#152d52] text-white shadow-lg shadow-[#0a1628]/30 hover:shadow-xl hover:shadow-[#0a1628]/40 transform hover:scale-105 transition-all duration-300"
+//               className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-primary-800 text-white shadow-lg shadow-[#0a1628]/30 hover:shadow-xl hover:shadow-[#0a1628]/40 transform hover:scale-105 transition-all duration-300"
 //             >
 //               <FaBars className="text-lg" />
 //               {/* Pulse Effect */}
@@ -778,16 +778,17 @@ const Navbar = () => {
                 <button
                   className={`flex items-center gap-1.5 px-4 py-1 rounded-lg transition-all duration-300 ${
                     activeMenu === "what"
-                      ? "bg-gradient-to-r from-[#0a1628] to-[#152d52] text-white shadow-lg shadow-[#0a1628]/25"
-                      : "hover:bg-[#0a1628]/5 hover:text-[#0a1628]"
+                      ? "px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
+                      : "px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
                   }`}
                 >
                   What We Do
                   <FaChevronDown
                     className={`text-xs transition-transform duration-300 ${
-                      activeMenu === "what" ? "rotate-180 text-[#FFD700]" : ""
+                      activeMenu === "what" ? "rotate-180" : ""
                     }`}
                   />
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
                 </button>
 
                 <MegaMenu
@@ -813,18 +814,19 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <button
-                  className={`flex items-center gap-1.5 px-4 py-1 rounded-lg transition-all duration-300 text-[#12324f] ${
+                  className={`flex items-center gap-1.5 px-4 py-1 rounded-lg transition-all duration-300 ${
                     activeMenu === "who"
-                      ? "bg-gradient-to-r from-[#0a1628] to-[#152d52] text-white shadow-lg shadow-[#0a1628]/25"
-                      : "hover:bg-[#0a1628]/5 hover:text-[#0a1628]"
+                      ? "px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
+                      : "px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
                   }`}
                 >
                   About Innovise
                   <FaChevronDown
                     className={`text-xs transition-transform duration-300 ${
-                      activeMenu === "who" ? "rotate-180 text-[#FFD700]" : ""
+                      activeMenu === "who" ? "rotate-180" : ""
                     }`}
                   />
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
                 </button>
 
                 <MegaMenu
@@ -933,7 +935,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#0a1628] to-[#152d52] text-white shadow-lg shadow-[#0a1628]/30 hover:shadow-xl hover:shadow-[#0a1628]/40 transform hover:scale-105 transition-all duration-300"
+              className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-primary-800 text-white shadow-lg shadow-[#0a1628]/30 hover:shadow-xl hover:shadow-[#0a1628]/40 transform hover:scale-105 transition-all duration-300"
             >
               <FaBars className="text-lg" />
 

@@ -970,7 +970,7 @@
 // //             border: `1px solid ${BRAND.navy.mid}15`,
 // //           }}
 // //         >
-// //           🛡️ Comprehensive Services
+// //            Comprehensive Services
 // //         </span>
 
 // //         <h2
@@ -1327,7 +1327,7 @@
 // //               border: `1px solid ${BRAND.navy.mid}15`,
 // //             }}
 // //           >
-// //             💡 Why Choose Us
+// //              Why Choose Us
 // //           </span>
 
 // //           <h2
@@ -1408,7 +1408,7 @@
 
 // // // Process Section
 // // const ProcessSection = () => (
-// //   <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+// //   <section className="py-6 lg:py-10 bg-primary-800  relative overflow-hidden">
 // //     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
 // //     <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
 
@@ -1427,7 +1427,7 @@
 // //             borderColor: "rgba(253,185,19,0.25)",
 // //           }}
 // //         >
-// //           🚀 Implementation Methodology
+// //            Implementation Methodology
 // //         </span>
 
 // //         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
@@ -2489,7 +2489,7 @@
 //         className="text-center max-w-3xl mx-auto mb-16"
 //       >
 //         <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
-//           🛡️ Comprehensive Services
+//            Comprehensive Services
 //         </span>
 
 //         <h2
@@ -2597,7 +2597,7 @@
 //         className="text-center max-w-3xl mx-auto mb-16"
 //       >
 //         <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-white text-[#0B1D33] border border-slate-200 shadow-sm">
-//           🚀 Implementation Methodology
+//            Implementation Methodology
 //         </span>
 
 //         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#0B1D33]">
@@ -2916,7 +2916,7 @@
 //           className="order-1 lg:order-2"
 //         >
 //           <span className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-slate-50 text-[#0B1D33] border border-slate-100">
-//             💡 Why Choose Us
+//              Why Choose Us
 //           </span>
 
 //           <h2
@@ -3423,20 +3423,7 @@ const ServiceCard = ({ service, index }) => {
       className="group h-full"
       style={{ transform: isHovered ? "translateY(-8px)" : "translateY(0)" }}
     >
-      <div
-        className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
-        style={{
-          background: isHovered
-            ? `linear-gradient(135deg, #081C34 0%, #0D2747 50%, #163B66 100%)`
-            : `linear-gradient(135deg, #0A1A2F 0%, #102B4C 50%, #163B66 100%)`,
-          border: isHovered
-            ? `1px solid rgba(253,185,19,0.25)`
-            : "1px solid rgba(255,255,255,0.06)",
-          boxShadow: isHovered
-            ? "0 30px 80px rgba(8,28,52,0.45)"
-            : "0 10px 35px rgba(8,28,52,0.20)",
-        }}
-      >
+      <div className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700 bg-primary-800">
         {/* Top Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
@@ -3536,10 +3523,8 @@ const BenefitCard = ({ benefit, index }) => (
     className="group"
   >
     <div
-      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
+      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500 bg-primary-800"
       style={{
-        background:
-          "linear-gradient(135deg, #081C34 0%, #102B4C 50%, #163B66 100%)",
         border: "1px solid rgba(255,255,255,0.08)",
         boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
       }}
@@ -3599,12 +3584,7 @@ const LiveIndicator = () => (
 
 // Hero Section
 const HeroSection = () => (
-  <section
-    className="relative py-6 lg:py-20 overflow-hidden max-h-screen"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
-  >
+  <section className="relative py-6 lg:py-20 overflow-hidden max-h-screen bg-primary-800">
     {/* Background Elements */}
     <div className="absolute inset-0" aria-hidden="true">
       <div
@@ -4231,13 +4211,7 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8 }}
           className="relative order-2 lg:order-1"
         >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.light})`,
-              border: `1px solid rgba(253,185,19,0.15)`,
-            }}
-          >
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             {/* Guidewire Suite Visual */}
             <div className="absolute inset-0 p-8 flex flex-col justify-center">
               <div className="grid grid-cols-3 gap-4 h-full">
@@ -4540,7 +4514,7 @@ const BenefitsSection = () => (
 
 // Process Section
 const ProcessSection = () => (
-  <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-primary-800 relative overflow-hidden">
     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
 
@@ -4870,7 +4844,7 @@ const GuidewirePage = () => {
       <ProcessSection />
       <BenefitsSection />
       {/* <TestimonialsSection /> */}
-      <CTABannerSection />
+      {/* <CTABannerSection /> */}
     </main>
   );
 };

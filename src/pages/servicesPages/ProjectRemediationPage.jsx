@@ -632,12 +632,7 @@ const BeforeAfterCard = ({ stat, index }) => (
 
 // Hero Section
 const HeroSection = () => (
-  <section
-    className="relative py-6 lg:py-10 overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
-  >
+  <section className="relative py-6 lg:py-10 overflow-hidden bg-primary-800">
     {/* Background Elements */}
     <div className="absolute inset-0" aria-hidden="true">
       <div
@@ -753,10 +748,10 @@ const HeroSection = () => (
           {/* Trust Tags */}
           <div className="flex flex-wrap gap-3 mb-8">
             {[
-              "⚡ Fast Turnaround",
-              "🎯 Proven Methodology",
-              "✅ Zero-Risk Approach",
-              "🤝 Dedicated Team",
+              " Fast Turnaround",
+              " Proven Methodology",
+              " Zero-Risk Approach",
+              "Dedicated Team",
             ].map((tag, idx) => (
               <motion.span
                 key={idx}
@@ -1137,7 +1132,7 @@ const ProblemSolutionSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          ❌ Challenges → ✅ Solutions
+          ❌ Challenges → Solutions
         </span>
 
         <h2
@@ -1222,7 +1217,7 @@ const ServicesSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          💡 What We Deliver
+          What We Deliver
         </span>
 
         <h2
@@ -1365,7 +1360,7 @@ const BenefitsSection = () => (
               border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
-            🎯 Key Benefits
+            Key Benefits
           </span>
 
           <h2
@@ -1415,7 +1410,7 @@ const BenefitsSection = () => (
 
 // Process Section (Stepper UI)
 const ProcessSection = () => (
-  <section className="py-20 lg:py-28 bg-[#081C34] relative overflow-hidden">
+  <section className="py-6 lg:py-12 bg-primary-800  relative overflow-hidden">
     {/* Background Effects */}
     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#102B4C] blur-3xl rounded-full"></div>
@@ -1436,7 +1431,7 @@ const ProcessSection = () => (
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
-          🧠 Our Approach
+          Our Approach
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">

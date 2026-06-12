@@ -165,7 +165,7 @@ const ServiceCard = ({ data, index = 0 }) => {
           }}
         >
           {/* ================================ */}
-          {/* ✨ TOP ACCENT LINE (Hover)         */}
+          {/*  TOP ACCENT LINE (Hover)         */}
           {/* ================================ */}
           <div className="absolute top-0 left-0 right-0 h-[3px] origin-left z-20 bg-gradient-to-r from-[#FDB913] to-[#FFD54F] scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
 

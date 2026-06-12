@@ -876,7 +876,7 @@ const HeroSection = () => (
           </div>
 
           {/* Trust Indicators */}
-          <div
+          {/* <div
             className="flex flex-wrap items-center gap-x-8 gap-y-4 pt-8"
             style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
           >
@@ -903,7 +903,7 @@ const HeroSection = () => (
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Right Dashboard Visual */}
@@ -1209,7 +1209,7 @@ const TechnologiesSection = () => (
 
 // --- Process Section Component ---
 const ProcessSection = () => (
-  <section className="py-10 lg:py-12 bg-[#081C34] relative overflow-hidden">
+  <section className="py-10 lg:py-12 bg-primary-800  relative overflow-hidden">
     <div
       className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.08]"
       style={{ background: BRAND.gold.primary }}

@@ -653,10 +653,10 @@
 //           {/* AI Feature Tags */}
 //           <div className="flex flex-wrap gap-3 mb-8">
 //             {[
-//               "✨ AI-Powered",
-//               "⚡ Fast Execution",
-//               "🔒 Secure",
-//               "📊 Real-time Analytics",
+//               " AI-Powered",
+//               " Fast Execution",
+//               " Secure",
+//               " Real-time Analytics",
 //             ].map((tag, idx) => (
 //               <motion.span
 //                 key={idx}
@@ -1092,7 +1092,7 @@
 //             border: `1px solid ${BRAND.ai.primary}25`,
 //           }}
 //         >
-//           💡 What We Deliver
+//            What We Deliver
 //         </span>
 
 //         <h2
@@ -1416,7 +1416,7 @@
 //               border: `1px solid ${BRAND.navy.mid}15`,
 //             }}
 //           >
-//             🎯 Key Benefits
+//              Key Benefits
 //           </span>
 
 //           <h2
@@ -1490,7 +1490,7 @@
 
 // // Process/Approach Section (Stepper UI)
 // const ProcessSection = () => (
-//   <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+//   <section className="py-6 lg:py-10 bg-primary-800  relative overflow-hidden">
 //     {/* Background Effects */}
 //     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
 //     <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
@@ -1511,7 +1511,7 @@
 //             borderColor: "rgba(253,185,19,0.25)",
 //           }}
 //         >
-//           🧠 Our Approach
+//            Our Approach
 //         </span>
 
 //         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
@@ -2055,20 +2055,7 @@ const ServiceCard = ({ service, index }) => {
         transform: isHovered ? "translateY(-8px)" : "translateY(0)",
       }}
     >
-      <div
-        className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
-        style={{
-          background: isHovered
-            ? `linear-gradient(135deg, #081C34 0%, #0D2747 50%, #163B66 100%)`
-            : `linear-gradient(135deg, #0A1A2F 0%, #102B4C 50%, #163B66 100%)`,
-          border: isHovered
-            ? "1px solid rgba(253,185,19,0.25)"
-            : "1px solid rgba(255,255,255,0.06)",
-          boxShadow: isHovered
-            ? "0 30px 80px rgba(8,28,52,0.45)"
-            : "0 10px 35px rgba(8,28,52,0.20)",
-        }}
-      >
+      <div className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700 bg-primary-800">
         {/* Top Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
@@ -2208,15 +2195,7 @@ const BenefitCard = ({ benefit, index }) => (
     whileHover={{ y: -6, scale: 1.02 }}
     className="group"
   >
-    <div
-      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
-      style={{
-        background:
-          "linear-gradient(135deg, #081C34 0%, #102B4C 50%, #163B66 100%)",
-        border: "1px solid rgba(255,255,255,0.08)",
-        boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
-      }}
-    >
+    <div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500 bg-primary-800">
       <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       <div className="relative z-10 flex items-start gap-4">
         <motion.div
@@ -2276,12 +2255,7 @@ const AnimatedProgressBar = ({ value, label, color, delay = 0 }) => (
 
 // Hero Section
 const HeroSection = () => (
-  <section
-    className="relative py-6 lg:py-10 overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
-  >
+  <section className="relative py-6 lg:py-10 overflow-hidden bg-primary-800">
     <div className="absolute inset-0" aria-hidden="true">
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -2358,10 +2332,10 @@ const HeroSection = () => (
 
           <div className="flex flex-wrap gap-3 mb-8">
             {[
-              "✨ Automated Frameworks",
-              "🔒 OWASP Security",
-              "⚡ Cypress & Selenium",
-              "📊 K6 Performance",
+              " Automated Frameworks",
+              " OWASP Security",
+              " Cypress & Selenium",
+              " K6 Performance",
             ].map((tag, idx) => (
               <motion.span
                 key={idx}
@@ -2380,7 +2354,7 @@ const HeroSection = () => (
             ))}
           </div>
 
-          <div
+          {/* <div
             className="flex flex-wrap items-center gap-6 mt-10 pt-8"
             style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
           >
@@ -2399,7 +2373,7 @@ const HeroSection = () => (
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* RIGHT - QA Dashboard Visual */}
@@ -2570,7 +2544,7 @@ const HeroSection = () => (
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              {/* <div className="grid grid-cols-2 gap-3">
                 <div
                   className="p-3 rounded-xl space-y-2"
                   style={{
@@ -2644,7 +2618,7 @@ const HeroSection = () => (
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <motion.div
@@ -2706,7 +2680,7 @@ const ServicesSection = () => (
             border: `1px solid ${BRAND.ai.primary}25`,
           }}
         >
-          💡 What We Deliver
+          What We Deliver
         </span>
 
         <h2
@@ -2755,7 +2729,7 @@ const ToolsSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          🛠️ Our Tool Stack
+          Our Tool Stack
         </span>
 
         <h2
@@ -2783,7 +2757,7 @@ const ToolsSection = () => (
 
 // Process/Approach Section
 const ProcessSection = () => (
-  <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-primary-800 relative overflow-hidden">
     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
 
@@ -2802,7 +2776,7 @@ const ProcessSection = () => (
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
-          🧠 Our Approach
+          Our Approach
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
@@ -2907,7 +2881,7 @@ const BenefitsSection = () => (
               border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
-            🎯 Key Benefits
+            Key Benefits
           </span>
 
           <h2
@@ -2980,13 +2954,7 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative order-2"
         >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.light})`,
-              border: `1px solid rgba(139,92,246,0.15)`,
-            }}
-          >
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             <div className="absolute inset-0 p-8 flex flex-col justify-center">
               <div className="grid grid-cols-2 gap-4 h-full">
                 <div
@@ -3283,7 +3251,7 @@ const TestingQAPage = () => {
       <ToolsSection /> {/* Added Tools Section */}
       <ProcessSection />
       <BenefitsSection />
-      <CTABannerSection />
+      {/* <CTABannerSection /> */}
     </main>
   );
 };

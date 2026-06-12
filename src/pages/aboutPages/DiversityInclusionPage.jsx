@@ -16,7 +16,7 @@ import {
   FaShieldAlt,
   FaChartLine,
 } from "react-icons/fa";
-import banner from "../../assets/banners/di.png";
+import banner from "../../assets/banners/culture_diversity.png";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -321,7 +321,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.25em]"
               style={{ color: BRAND.gold.primary }}
             >
-              🌍 Diversity & Inclusion
+              Diversity & Inclusion
             </span>
           </div>
 
@@ -430,7 +430,7 @@ const CommitmentsSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          🤝 Our Commitment
+          Our Commitment
         </span>
 
         <h2
@@ -461,7 +461,7 @@ const CommitmentsSection = () => (
 // Why It Matters Section
 const WhyMattersSection = () => (
   <section
-    className="py-20 lg:py-28 relative overflow-hidden"
+    className="py-6 lg:py-12 relative overflow-hidden"
     style={{
       background: `linear-gradient(135deg, ${BRAND.navy.mid} 0%, ${BRAND.navy.dark} 100%)`,
     }}
@@ -492,7 +492,7 @@ const WhyMattersSection = () => (
               border: `1px solid ${BRAND.gold.primary}30`,
             }}
           >
-            💡 Why It Matters
+            Why It Matters
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
@@ -622,7 +622,7 @@ const WhyMattersSection = () => (
 
 // Practices Section
 const PracticesSection = () => (
-  <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+  <section className="py-6 lg:py-12 bg-white relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
         {/* Left - Header */}
@@ -640,7 +640,7 @@ const PracticesSection = () => (
               border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
-            🚀 How We Put It Into Practice
+            How We Put It Into Practice
           </span>
 
           <h2
@@ -865,7 +865,7 @@ const DiversityInclusionPage = () => {
         <img
           src={banner}
           alt="Innovise IT Banner"
-          className="w-full h-full object-fill object-center"
+          className="w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/10" />
@@ -874,7 +874,7 @@ const DiversityInclusionPage = () => {
       <CommitmentsSection />
       <WhyMattersSection />
       <PracticesSection />
-      <ClosingSection />
+      {/* <ClosingSection /> */}
     </main>
   );
 };

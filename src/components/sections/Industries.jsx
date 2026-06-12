@@ -60,7 +60,7 @@
 // const Industries = () => {
 //   return (
 //     <section className="relative py-16 lg:py-24 bg-white overflow-hidden">
-//       {/* ✨ Background Decorative Blurs */}
+//       {/*  Background Decorative Blurs */}
 //       <div
 //         className="absolute top-0 left-0 w-[600px] h-[600px] bg-yellow-500/[0.07] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"
 //         aria-hidden="true"
@@ -124,7 +124,7 @@
 //         </div>
 
 //         {/* ================================ */}
-//         {/* 🎯 BOTTOM CTA SECTION             */}
+//         {/*  BOTTOM CTA SECTION             */}
 //         {/* ================================ */}
 //         <div className="text-center mt-16 lg:mt-20">
 //           <button
@@ -189,7 +189,7 @@ const COLORS = {
 const Industries = () => {
   return (
     <section className="relative py-6 lg:py-10 bg-primary-100 overflow-hidden">
-      {/* ✨ Background Effects */}
+      {/*  Background Effects */}
       {/* Gold Glow Top Left */}
       {/* <div
         className="absolute top-0 left-0 w-[800px] h-[800px] bg-yellow-500/[0.06] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"

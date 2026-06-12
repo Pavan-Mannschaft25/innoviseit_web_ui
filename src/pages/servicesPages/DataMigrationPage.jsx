@@ -233,28 +233,7 @@ const ServiceCard = ({ service, index }) => {
         transform: isHovered ? "translateY(-8px)" : "translateY(0)",
       }}
     >
-      <div
-        className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
-        style={{
-          background: isHovered
-            ? `linear-gradient(135deg,
-                #081C34 0%,
-                #0D2747 50%,
-                #163B66 100%)`
-            : `linear-gradient(135deg,
-                #0A1A2F 0%,
-                #102B4C 50%,
-                #163B66 100%)`,
-
-          border: isHovered
-            ? "1px solid rgba(253,185,19,0.25)"
-            : "1px solid rgba(255,255,255,0.06)",
-
-          boxShadow: isHovered
-            ? "0 30px 80px rgba(8,28,52,0.45)"
-            : "0 10px 35px rgba(8,28,52,0.20)",
-        }}
-      >
+      <div className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700 bg-primary-800">
         {/* Top Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
@@ -350,17 +329,7 @@ const BenefitCard = ({ benefit, index }) => (
     whileHover={{ y: -6, scale: 1.02 }}
     className="group"
   >
-    <div
-      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
-      style={{
-        background:
-          "linear-gradient(135deg, #081C34 0%, #102B4C 50%, #163B66 100%)",
-
-        border: "1px solid rgba(255,255,255,0.08)",
-
-        boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
-      }}
-    >
+    <div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500 bg-primary-800">
       {/* Gold Glow */}
       <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
@@ -733,12 +702,7 @@ const PipelineVisual = () => {
 
 // Hero Section (Left Text + Right Data Flow Visual)
 const HeroSection = () => (
-  <section
-    className="relative py-6 lg:py-10 overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
-  >
+  <section className="relative py-6 lg:py-10 overflow-hidden bg-primary-800">
     {/* Background Elements */}
     <div className="absolute inset-0" aria-hidden="true">
       {/* Dot Pattern */}
@@ -877,10 +841,10 @@ const HeroSection = () => (
           {/* Feature Tags */}
           <div className="flex flex-wrap gap-3 mb-8">
             {[
-              "🔄 Zero Downtime",
-              "📊 Real-time Sync",
-              "🔒 Secure Transfer",
-              "✅ 99.99% Accuracy",
+              " Zero Downtime",
+              " Real-time Sync",
+              " Secure Transfer",
+              " 99.99% Accuracy",
             ].map((tag, idx) => (
               <motion.span
                 key={idx}
@@ -900,7 +864,7 @@ const HeroSection = () => (
           </div>
 
           {/* Trust Indicators */}
-          <div
+          {/* <div
             className="flex flex-wrap items-center gap-6 mt-10 pt-8"
             style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
           >
@@ -919,7 +883,7 @@ const HeroSection = () => (
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* RIGHT - Data Flow Visual */}
@@ -1001,7 +965,7 @@ const HeroSection = () => (
 const ServicesSection = () => (
   <section
     id="services"
-    className="py-20 lg:py-28 bg-white relative overflow-hidden"
+    className="py-6 lg:py-12 bg-white relative overflow-hidden"
   >
     {/* Background Decoration */}
     <div
@@ -1025,7 +989,7 @@ const ServicesSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          💡 What We Deliver
+          What We Deliver
         </span>
 
         <h2
@@ -1056,7 +1020,7 @@ const ServicesSection = () => (
 
 // Benefits Section (Image Left + Benefits Right)
 const BenefitsSection = () => (
-  <section className="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
+  <section className="py-6 lg:py-12 bg-gray-50 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* LEFT - Data Visualization Visual */}
@@ -1067,13 +1031,7 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8 }}
           className="relative order-2 lg:order-1"
         >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.light})`,
-              border: `1px solid rgba(253,185,19,0.15)`,
-            }}
-          >
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             {/* Analytics Dashboard Mockup */}
             <div className="absolute inset-0 p-6 flex flex-col">
               {/* Header */}
@@ -1339,7 +1297,7 @@ const BenefitsSection = () => (
               border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
-            🎯 Key Benefits
+            Key Benefits
           </span>
 
           <h2
@@ -1367,12 +1325,7 @@ const BenefitsSection = () => (
           </div>
 
           {/* Quick Stats */}
-          <div
-            className="p-6 rounded-2xl"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-            }}
-          >
+          <div className="p-6 rounded-2xl bg-primary-800">
             <h4 className="text-white font-bold mb-4 flex items-center gap-2">
               <FaStar
                 className="text-sm"
@@ -1413,7 +1366,7 @@ const BenefitsSection = () => (
 
 // Process Section (5-Step Stepper UI)
 const ProcessSection = () => (
-  <section className="py-20 lg:py-28 bg-[#081C34] relative overflow-hidden">
+  <section className="py-6 lg:py-12 bg-primary-800  relative overflow-hidden">
     {/* Background Effects */}
     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#102B4C] blur-3xl rounded-full"></div>
@@ -1434,7 +1387,7 @@ const ProcessSection = () => (
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
-          🧠 Our Approach
+          Our Approach
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
@@ -1539,7 +1492,7 @@ const ProcessSection = () => (
 // CTA Banner Section
 const CTABannerSection = () => (
   <section
-    className="py-20 lg:py-28 relative overflow-hidden"
+    className="py-6 lg:py-12 relative overflow-hidden"
     style={{
       background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #0f0d29 50%, ${BRAND.navy.mid} 100%)`,
     }}
@@ -1696,7 +1649,7 @@ const DataMigrationPage = () => {
       <ProcessSection />
       <BenefitsSection />
 
-      <CTABannerSection />
+      {/* <CTABannerSection /> */}
     </main>
   );
 };
