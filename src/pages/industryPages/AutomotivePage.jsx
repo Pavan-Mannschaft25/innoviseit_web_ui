@@ -411,11 +411,11 @@ const ChallengesSection = () => (
             </p>
 
             {/* Gold bottom accent */}
-            <div className="mt-6 pt-4 border-t border-gray-100">
+            {/* <div className="mt-6 pt-4 border-t border-gray-100">
               <span className="text-[#D4AF37] text-sm font-semibold">
                 Learn More →
               </span>
-            </div>
+            </div> */}
           </div>
         </Card>
       ))}

@@ -891,18 +891,20 @@ const IndustryTileCard = ({
         {/* Title */}
         <h3
           className={`text-xl font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
-            isDark ? "text-white" : "text-[#12324f]"
-          } group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913] group-hover:bg-clip-text group-hover:text-transparent`}
+            isDark
+              ? "text-white group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913] group-hover:bg-clip-text group-hover:text-transparent"
+              : "text-[#12324f] group-hover:text-black"
+          }`}
         >
           {data.title}
         </h3>
 
         {/* Description */}
         <p
-          className={`text-sm leading-relaxed mb-4 transition-opacity duration-300 line-clamp-3 ${
+          className={`text-sm leading-relaxed mb-4 transition-all duration-300 line-clamp-3 ${
             isDark
               ? "text-gray-400/80 group-hover:text-gray-300"
-              : "text-[#12324f]  group-hover:text-gray-300/90"
+              : "text-[#12324f] group-hover:text-black"
           }`}
         >
           {data.description}
@@ -937,7 +939,7 @@ const IndustryTileCard = ({
           className={`absolute bottom-6 right-6 w-11 h-11 rounded-full flex items-center justify-center opacity-0 -translate-x-3 transition-all duration-400 z-20 ${
             isDark
               ? "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/25"
-              : "bg-gradient-to-br from-white/20 to-white/10 text-white border border-white/20"
+              : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-black border border-white/20"
           } group-hover:opacity-100 group-hover:translate-x-0 hover:scale-115 hover:rotate-45`}
           aria-hidden="true"
         >

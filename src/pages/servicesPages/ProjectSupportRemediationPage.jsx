@@ -330,7 +330,7 @@ const ServiceCard = ({ service, index }) => {
 
           {/* CTA Link */}
           <a
-            href="#"
+            href="/contact"
             className="inline-flex items-center gap-2 text-sm font-semibold group/link transition-colors"
             style={{ color: "#FDB913" }}
           >
