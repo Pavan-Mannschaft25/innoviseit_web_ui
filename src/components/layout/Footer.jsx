@@ -21,12 +21,12 @@ const Footer = () => {
   const footerLinks = {
     services: [
       {
-        name: "SAP",
+        name: "Consulting & Implementation",
         path: "/services/sap-consulting",
       },
       { name: "Guidewire Services", path: "/services/guidewire" },
       {
-        name: "Application Development & AI",
+        name: "AI & Engineering Services",
         path: "/services/application-development-integration-ai",
       },
       {
@@ -63,19 +63,30 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <Link to="/" className="flex items-center">
+              {/* <Link to="/" className="flex items-center">
                 <img
                   src={logo}
                   alt="Innovise IT"
                   className="h-8 w-auto object-contain mb-4"
                 />
+              </Link> */}
+              <Link to="/" className="relative group flex items-center">
+                <div className="relative overflow-hidden rounded-lg p-1">
+                  <img
+                    src={logo}
+                    alt="Innovise IT"
+                    className="mb-4 h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 brightness-0 invert" // Added brightness-0 invert assuming logo is dark, remove if logo is already white/transparent
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+                </div>
               </Link>
 
               <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
-                Innovative technology partner delivering SAP, Guidewire, cloud,
-                AI, and digital transformation solutions that help organizations
-                modernize operations, accelerate growth, and achieve measurable
-                business outcomes.
+                Innovative technology partner delivering cloud, AI, engineering,
+                enterprise applications, and digital transformation solutions
+                that help organizations modernize operations, accelerate growth,
+                and achieve measurable business outcomes.
               </p>
 
               {/* Social Links */}
@@ -209,7 +220,7 @@ const Footer = () => {
               © {currentYear} {companyData.name}. All rights reserved.
             </p>
 
-            <div className="flex items-center gap-6 text-sm text-gray-500">
+            {/* <div className="flex items-center gap-6 text-sm text-gray-500">
               <Link
                 to="/privacy"
                 className="hover:text-white transition-colors"
@@ -225,7 +236,7 @@ const Footer = () => {
               >
                 Cookie Policy
               </Link>
-            </div>
+            </div> */}
 
             <p className="text-sm text-gray-500 flex items-center gap-1">
               Made with <FaHeart className="text-red-500 text-xs" /> by Innovise

@@ -222,7 +222,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1f44] via-[#0d2847] to-[#0a1f44] text-white relative overflow-hidden">
+  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-gradient-to-br from-[#0a1f44] via-[#12324f] to-[#0a1f44] text-white relative overflow-hidden">
     {/* Background Pattern */}
     <div className="absolute inset-0 opacity-10">
       <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-500 rounded-full filter blur-3xl"></div>
@@ -459,7 +459,7 @@ const ProcessSection = () => (
 );
 
 const CTASection = () => (
-  <section className="px-6 lg:px-20 py-24 text-center bg-gradient-to-r from-[#0a1f44] to-[#0d2847] text-white relative overflow-hidden">
+  <section className="px-6 lg:px-20 py-24 text-center bg-gradient-to-r from-[#0a1f44] to-[#12324f] text-white relative overflow-hidden">
     {/* Background Elements */}
     <div className="absolute inset-0">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full filter blur-3xl"></div>

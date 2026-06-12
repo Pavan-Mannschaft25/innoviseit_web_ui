@@ -434,8 +434,8 @@ import img6 from "../../assets/patners/p6.png";
 // ============================================================
 const COLORS = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#132D4B",
     darker: "#081629",
   },
@@ -503,8 +503,8 @@ const PartnerMarquee = () => {
       /> */}
 
       {/* Gradient Overlays for Seamless Fade */}
-      {/* <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 lg:w-56 bg-gradient-to-r from-[#0B1D33] via-[#0B1D33]/98 to-transparent z-20 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 lg:w-56 bg-gradient-to-l from-[#0B1D33] via-[#0B1D33]/98 to-transparent z-20 pointer-events-none" /> */}
+      {/* <div className="absolute left-0 top-0 bottom-0 w-24 md:w-40 lg:w-56 bg-gradient-to-r from-[#12324f] via-[#12324f]/98 to-transparent z-20 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 lg:w-56 bg-gradient-to-l from-[#12324f] via-[#12324f]/98 to-transparent z-20 pointer-events-none" /> */}
 
       <div className="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ================================ */}

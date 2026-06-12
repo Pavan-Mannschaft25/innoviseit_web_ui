@@ -31,8 +31,8 @@ import banner from "../../assets/services/sr22.png";
 // ==================== BRAND COLORS ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#143A63",
     lighter: "#1A4570",
   },
@@ -359,7 +359,7 @@ const ServicesSection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
             style={{
-              background: "#0D284708",
+              background: "#12324f08",
               color: BRAND.navy.dark,
             }}
           >
@@ -424,13 +424,13 @@ const ServicesSection = () => {
                 {service.desc}
               </p>
 
-              <button
+              {/* <button
                 className="flex items-center gap-2 text-sm font-semibold"
                 style={{ color: BRAND.gold.primary }}
               >
                 Learn More
                 <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              </button> */}
             </motion.div>
           ))}
         </div>

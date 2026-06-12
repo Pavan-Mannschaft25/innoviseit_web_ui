@@ -8,8 +8,8 @@
 // // // 🎨 BRAND COLORS
 // // const BRAND = {
 // //   navy: {
-// //     dark: "#0B1D33",
-// //     mid: "#0D2847",
+// //     dark: "#12324f",
+// //     mid: "#12324f",
 // //   },
 // //   gold: {
 // //     primary: "#FDB913",
@@ -607,10 +607,10 @@ function Hero() {
       <div
         className="
       w-full
-      h-[35vh]
-      sm:h-[45vh]
-      md:h-[55vh]
-      lg:h-[85vh]
+      h-[28vh]
+      sm:h-[40vh]
+      md:h-[65vh]
+      lg:h-[80vh]
       xl:h-[90vh]
     "
       >
@@ -620,7 +620,7 @@ function Hero() {
           className="
         w-full
         h-full
-        object-contain rounded-3xl
+        object-cover
       "
         />
       </div>

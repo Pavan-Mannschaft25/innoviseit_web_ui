@@ -34,8 +34,8 @@ import {
 // ==================== BRAND COLORS (NAVY + GOLD) ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#143A63",
     lighter: "#1A4570",
   },
@@ -330,7 +330,7 @@ const ServiceCard = ({ service, index }) => {
 
           {/* CTA Link */}
           <a
-            href="#"
+            href="/contact"
             className="inline-flex items-center gap-2 text-sm font-semibold group/link transition-colors"
             style={{ color: "#FDB913" }}
           >

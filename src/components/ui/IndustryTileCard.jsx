@@ -507,7 +507,7 @@
 //       "transition-all duration-500 ease-out",
 //       isFullImage ? "h-[420px]" : "h-[380px]",
 //       isDark
-//         ? "bg-gradient-to-br from-[#0B1D33] via-[#0d2240] to-[#0a1929]"
+//         ? "bg-gradient-to-br from-[#12324f] via-[#0d2240] to-[#0a1929]"
 //         : "bg-gradient-to-br from-slate-50 via-blue-50/50 to-indigo-50/30",
 //       "hover:-translate-y-3 hover:scale-[1.02]",
 //     ].join(" "),
@@ -521,12 +521,12 @@
 //       "transition-all duration-500 shadow-lg relative z-10",
 //       isDark
 //         ? "bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FDB913]/50 backdrop-blur-sm"
-//         : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#0B1D33] shadow-yellow-400/30",
+//         : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-yellow-400/30",
 //     ].join(" "),
 
 //     title: [
 //       "text-xl font-bold mb-2 leading-tight transition-all duration-300 line-clamp-2",
-//       isDark ? "text-white" : "text-[#0B1D33]",
+//       isDark ? "text-white" : "text-[#12324f]",
 //       "group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913]",
 //       "group-hover:bg-clip-text group-hover:text-transparent",
 //     ].join(" "),
@@ -535,7 +535,7 @@
 //       "text-sm leading-relaxed mb-4 transition-opacity duration-300 line-clamp-3",
 //       isDark
 //         ? "text-white/65 group-hover:text-white/85"
-//         : "text-[#0D2847]/75 group-hover:text-[#0D2847]",
+//         : "text-[#12324f]/75 group-hover:text-[#12324f]",
 //     ].join(" "),
 
 //     tag: (idx) =>
@@ -543,17 +543,17 @@
 //         "px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300",
 //         isDark
 //           ? "bg-yellow-500/15 text-[#FFD54F] border border-yellow-500/25 hover:bg-yellow-500/25"
-//           : "bg-[#0B1D33]/8 text-[#0B1D33] hover:bg-[#0B1D33]/15",
+//           : "bg-[#12324f]/8 text-[#12324f] hover:bg-[#12324f]/15",
 //         "group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:to-[#FFD54F]",
-//         "group-hover:text-[#0B1D33] group-hover:border-transparent group-hover:-translate-y-0.5 group-hover:shadow-md",
+//         "group-hover:text-[#12324f] group-hover:border-transparent group-hover:-translate-y-0.5 group-hover:shadow-md",
 //       ].join(" "),
 
 //     arrowBtn: [
 //       "absolute bottom-6 right-6 w-11 h-11 rounded-full flex items-center justify-center",
 //       "opacity-0 -translate-x-3 transition-all duration-400 z-20",
 //       isDark
-//         ? "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#0B1D33] shadow-lg shadow-yellow-500/30"
-//         : "bg-gradient-to-br from-[#0B1D33] to-[#0D2847] text-[#FDB913] shadow-lg shadow-blue-900/30",
+//         ? "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/30"
+//         : "bg-gradient-to-br from-[#12324f] to-[#12324f] text-[#FDB913] shadow-lg shadow-blue-900/30",
 //       "group-hover:opacity-100 group-hover:translate-x-0 hover:scale-115 hover:rotate-45",
 //     ].join(" "),
 //   };
@@ -624,7 +624,7 @@
 //         <div
 //           className={`absolute inset-0 transition-all duration-500 ${
 //             isDark
-//               ? "bg-gradient-to-b from-transparent via-[#0B1D33]/30 to-[#0B1D33]/95"
+//               ? "bg-gradient-to-b from-transparent via-[#12324f]/30 to-[#12324f]/95"
 //               : "bg-gradient-to-b from-transparent via-black/20 to-black/60"
 //           } group-hover:from-transparent group-hover:via-black/40 group-hover:to-black/75`}
 //           aria-hidden="true"
@@ -633,7 +633,7 @@
 //         {/* Hover Icon Overlay */}
 //         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
 //           <div className="w-16 h-16 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-500">
-//             <FaExternalLinkAlt className="text-xl text-[#0B1D33]" />
+//             <FaExternalLinkAlt className="text-xl text-[#12324f]" />
 //           </div>
 //         </div>
 //       </div>
@@ -668,7 +668,7 @@
 //             {data.tags.length > 3 && (
 //               <span
 //                 className={`self-center px-2 py-1 text-xs font-medium ${
-//                   isDark ? "text-white/40" : "text-[#0D2847]/40"
+//                   isDark ? "text-white/40" : "text-[#12324f]/40"
 //                 }`}
 //               >
 //                 +{data.tags.length - 3}
@@ -687,7 +687,7 @@
 //           className={`absolute bottom-0 left-0 right-0 h-1 transform scale-x-0 origin-left transition-transform duration-500 ${
 //             isDark
 //               ? "bg-gradient-to-r from-[#FDB913] to-[#FFD54F]"
-//               : "bg-gradient-to-r from-[#0B1D33] to-[#0D2847]"
+//               : "bg-gradient-to-r from-[#12324f] to-[#12324f]"
 //           } group-hover:scale-x-100`}
 //           aria-hidden="true"
 //         />
@@ -852,7 +852,7 @@ const IndustryTileCard = ({
         <div
           className={`absolute inset-0 transition-all duration-500 ${
             isDark
-              ? "bg-gradient-to-b from-transparent via-black/40 to-[#0B1D33]"
+              ? "bg-gradient-to-b from-transparent via-black/40 to-[#12324f]"
               : "bg-gradient-to-b from-transparent via-black/30 to-black/70"
           }`}
           aria-hidden="true"
@@ -863,8 +863,8 @@ const IndustryTileCard = ({
           <div
             className={`w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-500 ${
               isDark
-                ? "bg-[#FDB913] text-[#0B1D33]"
-                : "bg-white/95 text-[#0B1D33]"
+                ? "bg-[#FDB913] text-[#12324f]"
+                : "bg-white/95 text-[#12324f]"
             }`}
           >
             <FaExternalLinkAlt className="text-xl" />
@@ -881,7 +881,7 @@ const IndustryTileCard = ({
           className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-all duration-500 relative z-10 ${
             isDark
               ? "bg-gradient-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FDB913]/40 shadow-lg shadow-yellow-500/10"
-              : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#0B1D33] shadow-lg shadow-yellow-400/20"
+              : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-400/20"
           } group-hover:rotate-y-360 group-hover:scale-110 group-hover:shadow-xl`}
           style={{ transformStyle: "preserve-3d" }}
         >
@@ -891,18 +891,20 @@ const IndustryTileCard = ({
         {/* Title */}
         <h3
           className={`text-xl font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
-            isDark ? "text-white" : "text-[#0B1D33]"
-          } group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913] group-hover:bg-clip-text group-hover:text-transparent`}
+            isDark
+              ? "text-white group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913] group-hover:bg-clip-text group-hover:text-transparent"
+              : "text-[#12324f] group-hover:text-black"
+          }`}
         >
           {data.title}
         </h3>
 
         {/* Description */}
         <p
-          className={`text-sm leading-relaxed mb-4 transition-opacity duration-300 line-clamp-3 ${
+          className={`text-sm leading-relaxed mb-4 transition-all duration-300 line-clamp-3 ${
             isDark
               ? "text-gray-400/80 group-hover:text-gray-300"
-              : "text-[#0B1D33]  group-hover:text-gray-300/90"
+              : "text-[#12324f] group-hover:text-black"
           }`}
         >
           {data.description}
@@ -918,7 +920,7 @@ const IndustryTileCard = ({
                   isDark
                     ? "bg-yellow-500/15 text-[#FFD54F] border border-yellow-500/25 hover:bg-yellow-500/25 hover:border-yellow-500/40"
                     : "bg-white/10 text-gray-200 border border-white/10 hover:bg-white/15"
-                } group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:to-[#FFD54F] group-hover:text-[#0B1D33] group-hover:border-transparent group-hover:shadow-md`}
+                } group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:to-[#FFD54F] group-hover:text-[#12324f] group-hover:border-transparent group-hover:shadow-md`}
               >
                 {String(tag)}
               </span>
@@ -936,8 +938,8 @@ const IndustryTileCard = ({
         <div
           className={`absolute bottom-6 right-6 w-11 h-11 rounded-full flex items-center justify-center opacity-0 -translate-x-3 transition-all duration-400 z-20 ${
             isDark
-              ? "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#0B1D33] shadow-lg shadow-yellow-500/25"
-              : "bg-gradient-to-br from-white/20 to-white/10 text-white border border-white/20"
+              ? "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/25"
+              : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-black border border-white/20"
           } group-hover:opacity-100 group-hover:translate-x-0 hover:scale-115 hover:rotate-45`}
           aria-hidden="true"
         >

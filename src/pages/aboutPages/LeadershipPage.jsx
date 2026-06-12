@@ -36,8 +36,8 @@
 // // ==================== BRAND COLORS (NAVY + GOLD ONLY) ====================
 // const BRAND = {
 //   navy: {
-//     dark: "#0B1D33",
-//     mid: "#0D2847",
+//     dark: "#12324f",
+//     mid: "#12324f",
 //     light: "#143A63",
 //     lighter: "#1A4570",
 //   },
@@ -1225,8 +1225,8 @@ import AboutHeroSection from "../../components/sections/AboutHeroSection";
 // ==================== BRAND COLORS (NAVY + GOLD ONLY) ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#143A63",
     lighter: "#1A4570",
   },
@@ -1672,7 +1672,7 @@ const LeaderCard = ({ leader, index }) => {
             }`}
             style={{
               background:
-                "linear-gradient(to bottom, transparent 15%, rgba(11,29,51,0.85) 65%, #0B1D33 100%)",
+                "linear-gradient(to bottom, transparent 15%, rgba(11,29,51,0.85) 65%, #12324f 100%)",
             }}
           />
 
@@ -1691,7 +1691,7 @@ const LeaderCard = ({ leader, index }) => {
               boxShadow: "0 8px 24px rgba(253,185,19,0.35)",
             }}
           >
-            <FaQuoteLeft className="text-[#0B1D33] text-lg" />
+            <FaQuoteLeft className="text-[#12324f] text-lg" />
           </motion.div>
 
           {/* Experience Badge - Top Left */}

@@ -37,8 +37,8 @@ import img6 from "../assets/services/digital.png";
 // ==================== CONSTANTS & CONFIG ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#143A63",
     lighter: "#1A4570",
   },
@@ -328,7 +328,7 @@ const BenefitsSection = memo(() => {
 
       <p className="text-sm leading-relaxed text-white">{benefit.desc}</p>
 
-      <div
+      {/* <div
         className="mt-6 pt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 group-focus:translate-y-0"
         style={{ borderTop: `1px solid ${BRAND.gold.primary}15` }}
       >
@@ -343,7 +343,7 @@ const BenefitsSection = memo(() => {
           style={{ color: BRAND.gold.primary }}
           aria-hidden="true"
         />
-      </div>
+      </div> */}
 
       <div
         className="absolute bottom-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -357,7 +357,7 @@ const BenefitsSection = memo(() => {
 
   return (
     <section
-      className="py-24 bg-white relative overflow-hidden"
+      className="py-14 bg-white relative overflow-hidden"
       aria-labelledby="benefits-heading"
     >
       <div

@@ -128,8 +128,8 @@ import {
 // ============================================================
 const COLORS = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#132D4B",
   },
   gold: {
@@ -183,7 +183,7 @@ const ServiceCard = ({ data, index = 0 }) => {
             />
 
             {/* Multi-layer Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D33] via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#12324f] via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
 
             {/* Vignette effect on hover */}
             <div
@@ -198,7 +198,7 @@ const ServiceCard = ({ data, index = 0 }) => {
             {data.category && (
               <div className="absolute top-4 left-4 z-10">
                 <span
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg border transition-all duration-300 group-hover:bg-[#FDB913] group-hover:text-[#0B1D33]"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg border transition-all duration-300 group-hover:bg-[#FDB913] group-hover:text-[#12324f]"
                   style={{
                     background: "rgba(255,255,255,0.95)",
                     color: COLORS.navy.dark,

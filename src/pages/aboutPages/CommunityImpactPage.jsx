@@ -24,8 +24,8 @@ import banner from "../../assets/banners/community.png";
 // ==================== BRAND COLORS ====================
 const BRAND = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#143A63",
     lighter: "#1A4570",
   },
@@ -954,7 +954,7 @@ const ContributionSection = () => (
                   </p>
 
                   {/* Learn More Link */}
-                  <div className="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  {/* <div className="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
                     <span
                       className="text-xs font-bold uppercase tracking-wider"
                       style={{ color: method.color }}
@@ -965,7 +965,7 @@ const ContributionSection = () => (
                       className="text-xs transition-transform group-hover:translate-x-1"
                       style={{ color: method.color }}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>

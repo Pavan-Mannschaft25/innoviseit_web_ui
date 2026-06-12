@@ -46,8 +46,8 @@
 // // 🎨 NAVY & GOLD BRAND COLORS
 // const COLORS = {
 //   navy: {
-//     dark: "#0B1D33",
-//     mid: "#0D2847",
+//     dark: "#12324f",
+//     mid: "#12324f",
 //     light: "#132D4B",
 //   },
 //   gold: {
@@ -85,13 +85,13 @@
 //           }
 //           title={
 //             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-//               <span className="bg-gradient-to-br from-[#0B1D33] via-[#0D2847] to-[#132D4B] bg-clip-text text-transparent">
+//               <span className="bg-gradient-to-br from-[#12324f] via-[#12324f] to-[#132D4B] bg-clip-text text-transparent">
 //                 Industries We Transform
 //               </span>
 //             </h2>
 //           }
 //           subtitle={
-//             <p className="text-lg md:text-xl text-[#0D2847]/80 max-w-2xl mx-auto leading-relaxed">
+//             <p className="text-lg md:text-xl text-[#12324f]/80 max-w-2xl mx-auto leading-relaxed">
 //               Deep domain knowledge across industries delivering scalable
 //               digital solutions with innovation at the core of every
 //               transformation journey
@@ -99,9 +99,9 @@
 //           }
 //           decoration={
 //             <div className="mt-8 flex items-center justify-center gap-3">
-//               <div className="w-20 h-1 rounded-full bg-gradient-to-r from-transparent via-[#0B1D33]/40 to-transparent" />
+//               <div className="w-20 h-1 rounded-full bg-gradient-to-r from-transparent via-[#12324f]/40 to-transparent" />
 //               <div className="w-3.5 h-3.5 rounded-full bg-[#FDB913] shadow-lg shadow-yellow-400/60 animate-pulse" />
-//               <div className="w-20 h-1 rounded-full bg-gradient-to-r from-transparent via-[#0B1D33]/40 to-transparent" />
+//               <div className="w-20 h-1 rounded-full bg-gradient-to-r from-transparent via-[#12324f]/40 to-transparent" />
 //             </div>
 //           }
 //         />
@@ -128,7 +128,7 @@
 //         {/* ================================ */}
 //         <div className="text-center mt-16 lg:mt-20">
 //           <button
-//             className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#0B1D33] to-[#0D2847] text-white font-semibold rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-blue-900/40 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
+//             className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#12324f] to-[#12324f] text-white font-semibold rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-blue-900/40 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
 //             onClick={() => (window.location.href = "/industries")}
 //           >
 //             {/* Button Shimmer Overlay */}
@@ -174,8 +174,8 @@ import { industriesData } from "../../data/industriesData";
 // 🎨 NAVY & GOLD BRAND COLORS
 const COLORS = {
   navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
+    dark: "#12324f",
+    mid: "#12324f",
     light: "#132D4B",
     darker: "#081629",
   },
@@ -215,26 +215,26 @@ const Industries = () => {
         {/* 📌 SECTION HEADER                */}
         {/* ================================ */}
         <SectionHeader
-          title={
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] tracking-tight">
-              <span className="bg-black bg-clip-text text-transparent">
-                Property And
-              </span>{" "}
-              <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
-                Casualty Insurance
-              </span>
-            </h2>
-          }
           // title={
           //   <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] tracking-tight">
           //     <span className="bg-black bg-clip-text text-transparent">
-          //       Industries We
+          //       Property and
           //     </span>{" "}
           //     <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
-          //       Transform
+          //       Casualty Insurance
           //     </span>
           //   </h2>
           // }
+          title={
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] tracking-tight">
+              <span className="bg-black bg-clip-text text-transparent">
+                Industries We
+              </span>{" "}
+              <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+                Serve
+              </span>
+            </h2>
+          }
           subtitle={
             <p className="text-lg md:text-xl text-black max-w-3xl mx-auto leading-relaxed font-light">
               Deep domain knowledge across industries delivering scalable
