@@ -516,7 +516,7 @@ const WhyMattersSection = () => (
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6">
+          {/* <div className="grid grid-cols-3 gap-6">
             {[
               { value: "3x", label: "More Innovative", icon: FaLightbulb },
               { value: "35%", label: "Better Decisions", icon: FaChartLine },
@@ -545,7 +545,7 @@ const WhyMattersSection = () => (
                 <div className="text-xs text-gray-400 mt-1">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Right - Visual Element */}
@@ -659,20 +659,6 @@ const PracticesSection = () => (
             concrete steps every day to ensure our workplace reflects the world
             we serve.
           </p>
-
-          {/* CTA */}
-          <a
-            href="/careers"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            style={{
-              background: BRAND.navy.dark,
-              color: "white",
-              boxShadow: `0 8px 30px ${BRAND.navy.dark}30`,
-            }}
-          >
-            View Career Opportunities
-            <FaArrowRight className="text-sm" />
-          </a>
         </motion.div>
 
         {/* Right - Practices List */}
@@ -861,7 +847,7 @@ const ClosingSection = () => (
 const DiversityInclusionPage = () => {
   return (
     <main role="main">
-      <div className="relative w-full h-[90vh] bg-[#020B2D] overflow-hidden">
+      <div className="relative w-full h-[30vh] md:h-[70vh] lg:h-[90vh] bg-[#020B2D] overflow-hidden">
         <img
           src={banner}
           alt="Innovise IT Banner"

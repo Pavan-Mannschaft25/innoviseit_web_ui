@@ -871,7 +871,7 @@ const Services = () => {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
           <div>
             <h2 className="text-3xl lg:text-5xl font-semibold text-[#0B2A4A] leading-tight">
-              Comprehensive Services
+              End-to-End Solutions
             </h2>
           </div>
 

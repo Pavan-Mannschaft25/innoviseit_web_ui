@@ -1455,7 +1455,38 @@ const ContactPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation Code...
+    const newErrors = {};
+
+    if (!formData.firstName?.trim()) {
+      newErrors.firstName = "First Name is required";
+    }
+
+    if (!formData.lastName?.trim()) {
+      newErrors.lastName = "Last Name is required";
+    }
+
+    if (!formData.email?.trim()) {
+      newErrors.email = "Email Address is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (!formData.subject) {
+      newErrors.subject = "Please select a subject";
+    }
+
+    if (!formData.message?.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    if (!formData.agreedToTerms) {
+      newErrors.agreedToTerms = "Please accept the privacy policy";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      toast.error("Please fill all required fields");
+      return;
+    }
 
     setIsSubmitting(true);
 
@@ -1477,11 +1508,14 @@ const ContactPage = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
 
-      toast.success("Message sent successfully!");
+      toast.success(
+        "Message sent successfully! We'll respond within 24 hours.",
+      );
+
       resetForm();
     } catch (error) {
       console.error(error);
-      toast.error("Failed to send message.");
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
