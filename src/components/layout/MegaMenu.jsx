@@ -34,7 +34,7 @@ const MegaMenu = ({ data, isOpen, onClose }) => {
                   {section.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
                       <Link
-                        to={item.path}
+                        // to={item.path}
                         className="group flex items-start gap-3 p-3 -mx-3 rounded-xl hover:bg-primary-50 transition-colors duration-200"
                         onClick={onClose}
                       >

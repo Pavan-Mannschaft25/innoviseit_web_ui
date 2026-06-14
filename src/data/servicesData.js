@@ -262,7 +262,7 @@ export const servicesData = [
     category: "SAP",
     title: "SAP Consulting, Implementation & Security",
     description:
-      "End-to-end SAP services including S/4HANA migration, implementation, support, SAP Security, GRC, access management, and enterprise transformation solutions.",
+      "End-to-End SAP services including S/4HANA migration, implementation, support, SAP Security, GRC, access management, and enterprise transformation solutions.",
     image: img1,
     readTime: "SAP Solutions",
     date: "Innovise IT",

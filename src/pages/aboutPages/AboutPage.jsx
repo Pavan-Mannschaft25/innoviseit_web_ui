@@ -635,19 +635,13 @@ const WhoWeAreSection = () => (
             <span style={{ color: BRAND.gold.primary }}>Excellence</span>
           </h2>
 
-          <p
-            className="text-lg leading-relaxed mb-6"
-            style={{ color: "#64748B" }}
-          >
+          <p className="text-lg leading-relaxed mb-6 text-gray-600">
             We are a team of experienced consultants, engineers, and
             problem-solvers committed to delivering reliable and scalable
             enterprise solutions.
           </p>
 
-          <p
-            className="text-base leading-relaxed mb-8"
-            style={{ color: "#94A3B8" }}
-          >
+          <p className="text-lg leading-relaxed mb-8 text-gray-600">
             Our global delivery approach ensures seamless execution, faster
             turnaround, and consistent quality across all projects. From
             strategy to implementation and ongoing support, we partner with
@@ -1455,7 +1449,7 @@ const ClosingSection = () => (
 const AboutPage = () => {
   return (
     <main role="main">
-      <div className="relative w-full h-[90vh] bg-[#020B2D] overflow-hidden">
+      <div className="relative w-full h-[30vh] md:h-[70vh] lg:h-[90vh] bg-[#020B2D] overflow-hidden">
         <img
           src={banner}
           alt="Innovise IT Banner"
@@ -1467,7 +1461,7 @@ const AboutPage = () => {
       {/* <HeroSection /> */}
       <WhoWeAreSection />
       {/* <ServicesSection /> */}
-      <CompanyStatsSection />
+      {/* <CompanyStatsSection /> */}
       <MissionVisionSection />
       {/* <WhyChooseUsSection /> */}
       <ApproachSection />

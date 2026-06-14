@@ -30,22 +30,14 @@ const Footer = () => {
         path: "/services/application-development-integration-ai",
       },
       {
-        name: "AMS",
-        path: "/services/app-maintenance",
-      },
-      {
-        name: "Data Migration & Transformation",
-        path: "/services/data-migration",
-      },
-      {
-        name: "SAP Talent & Staff Augmentation",
-        path: "/services/staff-augmentation",
+        name: "Testing & Quality Assurance",
+        path: "/services/testing-qa",
       },
     ],
     company: [
       { name: "About Us", path: "/about" },
       { name: "Leadership", path: "/about/leadership" },
-      { name: "Careers", path: "/careers" },
+      // { name: "Careers", path: "/careers" },
       { name: "Our Values", path: "/culture/values" },
       { name: "Contact", path: "/contact" },
     ],
@@ -139,7 +131,7 @@ const Footer = () => {
                 {footerLinks.services.map((link, idx) => (
                   <li key={idx}>
                     <Link
-                      to={link.path}
+                      // to={link.path}
                       onClick={() => window.scrollTo(0, 0)}
                       className="text-white hover:text-white transition-colors duration-200 flex items-center gap-2 group"
                     >
@@ -160,7 +152,7 @@ const Footer = () => {
                 {footerLinks.company.map((link, idx) => (
                   <li key={idx}>
                     <Link
-                      to={link.path}
+                      // to={link.path}
                       onClick={() => window.scrollTo(0, 0)}
                       className="text-white hover:text-white transition-colors duration-200 flex items-center gap-2 group"
                     >

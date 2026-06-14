@@ -155,7 +155,7 @@ const AppRoutes = () => {
           />
           //About Pages
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/about/leadership" element={<LeadershipPage />} />
+          <Route path="/leadership" element={<LeadershipPage />} />
           <Route path="/culture/values" element={<ValuesPage />} />
           <Route
             path="/culture/diversity"

@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+#Zip File
+innoviseIt_new_build1.zip
+
+
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

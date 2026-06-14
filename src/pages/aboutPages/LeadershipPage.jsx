@@ -1191,7 +1191,7 @@
 
 // export default LeadershipPage;
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaLinkedinIn,
@@ -1625,8 +1625,8 @@ const LeaderCard = ({ leader, index }) => {
         duration: ANIMATION.duration,
         ...ANIMATION.spring,
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      // onMouseEnter={() => setIsHovered(true)}
+      // onMouseLeave={() => setIsHovered(false)}
       className="group relative"
     >
       <div
@@ -2415,6 +2415,13 @@ const ClosingSection = () => (
 const LeadershipPage = () => {
   const [selectedLeader, setSelectedLeader] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   const handleLeaderClick = (leader) => {
     setSelectedLeader(leader);

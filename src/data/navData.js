@@ -273,7 +273,7 @@ export const navData = {
           name: "Leadership Team",
           desc: "Experienced executives driving innovation and excellence",
           icon: "FaUsers",
-          path: "/about/leadership",
+          path: "/leadership",
         },
       ],
     },
