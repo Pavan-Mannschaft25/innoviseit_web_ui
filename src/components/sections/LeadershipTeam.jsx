@@ -1293,13 +1293,13 @@ const LeadershipTeam = () => {
                         {leader.name}
                       </h3>
 
-                      <p className="text-sm text-gray-500 mb-3 font-medium truncate">
+                      <p className="text-sm text-gray-600 mb-3 font-medium truncate">
                         {leader.role}
                       </p>
 
                       <div className="h-[1px] bg-gradient-to-r from-[#FDB913]/40 via-transparent to-transparent mb-3" />
 
-                      <p className="text-xs text-gray-400 italic line-clamp-2 leading-relaxed">
+                      <p className="text-sm md:text-md text-gray-600 line-clamp-2 leading-relaxed">
                         "{leader.quote}"
                       </p>
 
