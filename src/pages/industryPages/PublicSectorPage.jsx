@@ -393,7 +393,7 @@ const HeroSection = () => (
         </div>
 
         {/* Floating Compliance Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
@@ -407,10 +407,10 @@ const HeroSection = () => (
               <div className="text-sm text-gray-500">FedRAMP Ready</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Floating Citizen Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
@@ -422,7 +422,7 @@ const HeroSection = () => (
               <div className="text-xs text-gray-300">Centric</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Decorative Corner Elements */}
         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
@@ -532,7 +532,7 @@ const BenefitsSection = () => (
           </div>
 
           {/* Overlay Stats Card */}
-          <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
+          {/* <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <div className="text-3xl font-bold text-[#0a1628]">60%</div>
@@ -551,7 +551,7 @@ const BenefitsSection = () => (
                 <div className="text-xs text-gray-600 mt-1">Cost Reduction</div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Corner Accents */}
           <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFD700] rounded-tl-2xl"></div>

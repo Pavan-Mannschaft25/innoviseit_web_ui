@@ -6539,7 +6539,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="min-h-screen relative overflow-hidden pt-10 pb-10 px-4 md:px-8 bg-primary-800">
+    <section className="relative overflow-hidden pt-10 pb-10 px-4 md:px-8 bg-primary-800">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -6579,7 +6579,7 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-1 gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -6731,134 +6731,6 @@ const HeroSection = () => {
               </div>
             </div> */}
           </motion.div>
-
-          {/* Right Side - Enterprise Ecosystem Diagram */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[650px] hidden lg:block"
-          >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="relative">
-                <div
-                  className="w-44 h-44 rounded-2xl flex items-center justify-center shadow-2xl"
-                  style={{
-                    background: BRAND.gold.gradient,
-                    boxShadow: "0 0 60px rgba(253,185,19,0.3)",
-                  }}
-                >
-                  <div className="text-center">
-                    <FaGlobe className="text-4xl text-white mb-2 mx-auto" />
-                    <div
-                      className="font-bold text-base"
-                      style={{ color: BRAND.navy.dark }}
-                    >
-                      Enterprise Hub
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="absolute inset-0 rounded-2xl"
-                  style={{
-                    background: BRAND.gold.gradient,
-                    animation: "pulseRing 2s ease-out infinite",
-                  }}
-                ></div>
-              </div>
-            </div>
-
-            <svg
-              className="absolute inset-0 w-full h-full"
-              style={{ zIndex: 10 }}
-            >
-              <line
-                x1="50%"
-                y1="32%"
-                x2="50%"
-                y2="12%"
-                stroke="#FDB913"
-                strokeWidth="2"
-                strokeDasharray="8,8"
-                opacity="0.4"
-              />
-              <line
-                x1="50%"
-                y1="68%"
-                x2="50%"
-                y2="88%"
-                stroke="#FDB913"
-                strokeWidth="2"
-                strokeDasharray="8,8"
-                opacity="0.4"
-              />
-              <line
-                x1="32%"
-                y1="50%"
-                x2="12%"
-                y2="50%"
-                stroke="#FDB913"
-                strokeWidth="2"
-                strokeDasharray="8,8"
-                opacity="0.4"
-              />
-              <line
-                x1="68%"
-                y1="50%"
-                x2="88%"
-                y2="50%"
-                stroke="#FDB913"
-                strokeWidth="2"
-                strokeDasharray="8,8"
-                opacity="0.4"
-              />
-            </svg>
-
-            {floatingCards.map((card, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-                className={`absolute ${card.position} backdrop-blur-xl p-5 rounded-2xl cursor-pointer transition-all duration-300 hover:scale-105`}
-                style={{
-                  background: "rgba(11,29,51,0.85)",
-                  border: `1px solid ${card.border}`,
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
-                  animation: `float 6s ease-in-out infinite`,
-                  animationDelay: `${index * -1}s`,
-                }}
-              >
-                <div className="flex items-center gap-4">
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{
-                      background: card.color,
-                      border: `1px solid ${card.border}`,
-                    }}
-                  >
-                    <card.icon
-                      className="text-xl"
-                      style={{ color: card.iconColor }}
-                    />
-                  </div>
-                  {!card.small && (
-                    <div>
-                      <div className="font-bold text-white text-sm">
-                        {card.title}
-                      </div>
-                      <div className="text-xs text-white/50">{card.desc}</div>
-                    </div>
-                  )}
-                  {card.small && (
-                    <span className="text-sm font-semibold text-white/80">
-                      {card.title}
-                    </span>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </div>
 
@@ -6966,7 +6838,7 @@ const WhyInnoviseSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
+      className="py-12 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
@@ -7114,7 +6986,7 @@ const ServicesSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden bg-primary-800"
+      className="py-12 px-4 md:px-8 relative overflow-hidden bg-primary-800"
       style={{
         // background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 100%)`,
         opacity: isVisible ? 1 : 0,
@@ -7279,7 +7151,7 @@ const TransformationJourneySection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
+      className="py-12 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
@@ -7463,7 +7335,7 @@ const TechnologyEcosystemSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden bg-primary-800"
+      className="py-12 px-4 md:px-8 relative overflow-hidden bg-primary-800"
       style={{
         // background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
         opacity: isVisible ? 1 : 0,
@@ -7682,7 +7554,7 @@ const IndustriesSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
+      className="py-12 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
@@ -7887,7 +7759,7 @@ const CaseStudiesSection = () => {
                   <p className="text-white/50 mb-6 text-sm leading-relaxed">
                     {caseStudy.description}
                   </p>
-                  <div
+                  {/* <div
                     style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
                     className="pt-4"
                   >
@@ -7911,7 +7783,7 @@ const CaseStudiesSection = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </div> */}
                   {/* <button
                     className="mt-6 font-medium text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
                     style={{ color: caseStudy.color }}
@@ -8091,7 +7963,7 @@ const StatsSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 bg-white relative overflow-hidden"
+      className="py-12 px-4 md:px-8 bg-white relative overflow-hidden"
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? "translateY(0)" : "translateY(10px)",
@@ -8148,7 +8020,7 @@ const CTABannerSection = () => {
   return (
     <section
       ref={ref}
-      className="py-28 px-4 md:px-8 relative overflow-hidden"
+      className="py-12 px-4 md:px-8 relative overflow-hidden"
       style={{
         background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #0A1628 50%, ${BRAND.navy.mid} 100%)`,
         opacity: isVisible ? 1 : 0,
@@ -8373,7 +8245,7 @@ const ApplicationDevelopmentIntegrationAIPage = () => {
       <ServicesSection />
       <TransformationJourneySection />
       <TechnologyEcosystemSection />
-      <BusinessImpactSection />
+      {/* <BusinessImpactSection /> */}
       <IndustriesSection />
       <CaseStudiesSection />
       <AIInnovationSection />

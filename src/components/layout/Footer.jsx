@@ -131,7 +131,7 @@ const Footer = () => {
                 {footerLinks.services.map((link, idx) => (
                   <li key={idx}>
                     <Link
-                      // to={link.path}
+                      to={link.path}
                       onClick={() => window.scrollTo(0, 0)}
                       className="text-white hover:text-white transition-colors duration-200 flex items-center gap-2 group"
                     >
@@ -152,7 +152,7 @@ const Footer = () => {
                 {footerLinks.company.map((link, idx) => (
                   <li key={idx}>
                     <Link
-                      // to={link.path}
+                      to={link.path}
                       onClick={() => window.scrollTo(0, 0)}
                       className="text-white hover:text-white transition-colors duration-200 flex items-center gap-2 group"
                     >
