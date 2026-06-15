@@ -1022,7 +1022,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
+  <section className="lg:h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     <div className="absolute inset-0 overflow-hidden">
       <motion.div
         animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}

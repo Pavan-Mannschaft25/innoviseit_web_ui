@@ -1483,6 +1483,8 @@ const ContactPage = () => {
       newErrors.agreedToTerms = "Please accept the privacy policy";
     }
 
+    console.log("SUCCESS TOAST");
+
     if (Object.keys(newErrors).length > 0) {
       toast.error("Please fill all required fields");
       return;
@@ -1507,6 +1509,8 @@ const ContactPage = () => {
         templateParams,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
+
+      console.log("SUCCESS TOAST");
 
       toast.success(
         "Message sent successfully! We'll respond within 24 hours.",
