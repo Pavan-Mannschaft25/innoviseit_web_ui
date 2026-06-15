@@ -292,12 +292,12 @@ export const navData = {
           icon: "FaUsersCog",
           path: "/culture/diversity",
         },
-        {
-          name: "Community Impact",
-          desc: "Making a positive difference beyond business boundaries",
-          icon: "FaGlobeAmericas",
-          path: "/culture/community",
-        },
+        // {
+        //   name: "Community Impact",
+        //   desc: "Making a positive difference beyond business boundaries",
+        //   icon: "FaGlobeAmericas",
+        //   path: "/culture/community",
+        // },
       ],
     },
   ],
