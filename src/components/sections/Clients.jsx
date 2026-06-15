@@ -290,7 +290,7 @@
 
 //       {/* Marquee Container */}
 //       <div className="relative">
-//         {/* ✨ TOP ROW - Left to Right */}
+//         {/*  TOP ROW - Left to Right */}
 //         <div className="overflow-hidden">
 //           <motion.div
 //             className="flex items-center"
@@ -350,7 +350,7 @@
 //         {/* Divider Line */}
 //         <div className="max-w-4xl mx-auto my-6 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-//         {/* ✨ BOTTOM ROW - Right to Left (Reverse Direction) */}
+//         {/*  BOTTOM ROW - Right to Left (Reverse Direction) */}
 //         <div className="overflow-hidden py-4">
 //           <motion.div
 //             className="flex items-center"
@@ -478,7 +478,7 @@ const PartnerMarquee = () => {
 
   return (
     <section className="relative py-8 lg:py-10 overflow-hidden bg-primary-100">
-      {/* ✨ Animated Background Effects */}
+      {/*  Animated Background Effects */}
 
       {/* Gold Glow Top Left */}
       {/* <div
@@ -532,20 +532,20 @@ const PartnerMarquee = () => {
           </motion.div> */}
 
           {/* Title */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight mb-5 leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-bold tracking-tight mb-5 leading-tight">
             <span className="text-black">Our </span>
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
                 Partners
               </span>
               {/* Underline Decoration */}
-              <motion.span
+              {/* <motion.span
                 className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FDB913] to-[#FFD54F] rounded-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-              />
+              /> */}
             </span>
           </h2>
 
@@ -565,7 +565,7 @@ const PartnerMarquee = () => {
       </div>
 
       {/* ================================ */}
-      {/* ✨ MARQUEE CONTAINER             */}
+      {/*  MARQUEE CONTAINER             */}
       {/* ================================ */}
       <div className="relative mt-4">
         {/* TOP ROW - Left to Right */}
@@ -585,52 +585,33 @@ const PartnerMarquee = () => {
             {[...logos, ...logos].map((logo, index) => (
               <div
                 key={`top-${logo.id}-${index}`}
-                className="flex-shrink-0 mx-2 sm:mx-3 md:mx-4 lg:mx-5 group"
+                className="flex-shrink-0 mx-4 sm:mx-5 md:mx-6 lg:mx-7"
               >
                 <div
-                  className="relative w-36 h-20 sm:w-44 sm:h-24 md:w-52 md:h-28 lg:w-56 lg:h-32 
-                    bg-white/[0.03] backdrop-blur-md 
-                    rounded-xl md:rounded-2xl 
-                    border border-white/[0.08]
-                    flex items-center justify-center p-4 sm:p-5 md:p-6
-                    
-                    transition-all duration-500 ease-out cursor-pointer overflow-hidden"
+                  className="
+    relative
+    w-44 h-28
+    sm:w-52 sm:h-32
+    md:w-60 md:h-36
+    lg:w-72 lg:h-40
+    xl:w-80 xl:h-44
+    bg-white
+    rounded-2xl
+    border border-gray-100
+    shadow-md
+    hover:shadow-xl
+    flex items-center justify-center
+    p-8
+    transition-all duration-300
+  "
                 >
-                  {/* Hover Glow Effect - GOLD */}
-                  {/* <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-br from-yellow-500/0 via-yellow-600/0 to-orange-500/0 group-hover:from-yellow-500/10 group-hover:via-yellow-600/5 group-hover:to-orange-500/5 transition-all duration-700" /> */}
-
-                  {/* Shine Effect on Hover */}
-                  {/* <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out">
-                    <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-[#FFD54F]/15 to-transparent skew-x-12" />
-                  </div> */}
-
-                  {/* Corner Accent (appears on hover) */}
-                  {/* <div
-                    className="absolute top-0 right-0 w-12 h-12 opacity-0 group-hover:opacity-60 transition-opacity duration-500"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, transparent 50%, #FDB913 50%)",
-                      borderRadius: "0 0 0 16px",
-                    }}
-                  /> */}
-
-                  {/* ✅ Logo Image - FIXED: Removed brightness-0 invert filter! */}
                   <img
                     src={logo.src}
                     alt={logo.name}
-                    className="relative z-10 w-full h-full object-contain 
-                      
-                      transition-all duration-500 ease-out"
+                    className="max-w-full max-h-full object-contain"
                     loading="lazy"
                     draggable={false}
                   />
-
-                  {/* Partner Name Tooltip (on hover) */}
-                  {/* <div className="absolute bottom-2 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                    <span className="text-[10px] text-[#FFD54F]/80 font-medium tracking-wide whitespace-nowrap px-2 py-1 bg-black/40 backdrop-blur-sm rounded-md border border-yellow-500/20">
-                      {logo.name}
-                    </span>
-                  </div> */}
                 </div>
               </div>
             ))}
@@ -643,7 +624,7 @@ const PartnerMarquee = () => {
         </div> */}
 
         {/* BOTTOM ROW - Right to Left (Reverse Direction) */}
-        <div className="overflow-hidden pt-4">
+        {/* <div className="overflow-hidden pt-4">
           <motion.div
             className="flex items-center"
             animate={{ x: [-containerWidth, 0] }}
@@ -670,15 +651,9 @@ const PartnerMarquee = () => {
                    
                     transition-all duration-500 ease-out cursor-pointer overflow-hidden"
                 >
-                  {/* Subtler Glow for Bottom Row */}
-                  {/* <div className="absolute inset-0 rounded-xl md:rounded-2xl bg-gradient-to-br from-[#FFD54F]/0 via-yellow-500/0 to-[#FDB913]/0 group-hover:from-[#FFD54F]/8 group-hover:via-yellow-500/3 group-hover:to-[#FDB913]/3 transition-all duration-700" /> */}
+                  
 
-                  {/* Shine Effect */}
-                  {/* <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1200 ease-out delay-75">
-                    <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/[0.08] to-transparent skew-x-12" />
-                  </div> */}
-
-                  {/* ✅ Logo Image - FIXED: No more white filter! */}
+                  
                   <img
                     src={logo.src}
                     alt={logo.name}
@@ -692,7 +667,7 @@ const PartnerMarquee = () => {
               </div>
             ))}
           </motion.div>
-        </div>
+        </div> */}
       </div>
 
       {/* ================================ */}

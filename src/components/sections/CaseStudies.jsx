@@ -517,7 +517,7 @@ const CaseStudiesBrand = () => {
         background: `linear-gradient(to bottom, ${BRAND.navy.dark}, ${BRAND.navy.mid}, ${BRAND.navy.lighter})`,
       }}
     >
-      {/* ✨ Animated Background */}
+      {/*  Animated Background */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Grid Pattern */}
         <div

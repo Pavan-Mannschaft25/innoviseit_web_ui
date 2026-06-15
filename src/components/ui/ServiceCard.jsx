@@ -143,7 +143,7 @@ const ServiceCard = ({ data, index = 0 }) => {
   return (
     <div className="group relative h-full w-full flex flex-col">
       <Link
-        to={data.link}
+        // to={data.link}
         className="block h-full w-full"
         aria-label={`Learn more about ${data.title}`}
       >
@@ -165,7 +165,7 @@ const ServiceCard = ({ data, index = 0 }) => {
           }}
         >
           {/* ================================ */}
-          {/* ✨ TOP ACCENT LINE (Hover)         */}
+          {/*  TOP ACCENT LINE (Hover)         */}
           {/* ================================ */}
           <div className="absolute top-0 left-0 right-0 h-[3px] origin-left z-20 bg-gradient-to-r from-[#FDB913] to-[#FFD54F] scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
 
@@ -215,7 +215,7 @@ const ServiceCard = ({ data, index = 0 }) => {
             )}
 
             {/* External Link Icon - Bottom Right (Animated) */}
-            <div
+            {/* <div
               className="absolute bottom-5 right-5 z-10 w-12 h-12 rounded-xl 
                 bg-white/95 backdrop-blur-md flex items-center justify-center shadow-xl
                 opacity-0 translate-y-4 scale-90 
@@ -229,7 +229,7 @@ const ServiceCard = ({ data, index = 0 }) => {
                 className="text-lg"
                 style={{ color: COLORS.navy.dark }}
               />
-            </div>
+            </div> */}
 
             {/* Star Rating Badge (Optional Enhancement) */}
             {data.rating && (
@@ -351,10 +351,7 @@ const ServiceCard = ({ data, index = 0 }) => {
               </div>
             )}
 
-            {/* ============================ */}
-            {/* CTA SECTION                     */}
-            {/* ============================ */}
-            <div
+            {/* <div
               className="mt-auto pt-5 flex items-center justify-between group/cta border-t-2 transition-all duration-300"
               style={{ borderColor: "rgba(11,29,51,0.06)" }}
               onMouseEnter={(e) =>
@@ -364,7 +361,7 @@ const ServiceCard = ({ data, index = 0 }) => {
                 (e.currentTarget.style.borderColor = "rgba(11,29,51,0.06)")
               }
             >
-              {/* Left Side - Text */}
+              
               <span
                 className="inline-flex items-center gap-2 text-sm font-bold tracking-wide uppercase transition-all duration-300 group-hover/cta:gap-3"
                 style={{ color: COLORS.navy.dark }}
@@ -374,14 +371,14 @@ const ServiceCard = ({ data, index = 0 }) => {
                   className="text-xs transition-transform duration-300 group-hover/cta:translate-x-1.5"
                   style={{ color: COLORS.gold.primary }}
                 />
-                {/* Animated underline */}
+                
                 <span
                   className="block h-[2px] w-0 group-hover/cta:w-full transition-all duration-300"
                   style={{ background: COLORS.gold.gradient }}
                 />
               </span>
 
-              {/* Right Side - Arrow Circle */}
+              
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-300 group-hover/cta:scale-110 group-hover/cta:rotate-45"
                 style={{
@@ -394,7 +391,7 @@ const ServiceCard = ({ data, index = 0 }) => {
                   style={{ color: COLORS.gold.light }}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* ================================ */}

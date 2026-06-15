@@ -87,10 +87,10 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-// ✅ FIX: Import all icons needed
+//  FIX: Import all icons needed
 import {
   FaCalendarAlt,
-  FaPhone, // ✅ This was missing!
+  FaPhone, //  This was missing!
   FaArrowRight,
   FaCheck,
   FaRocket,
@@ -113,7 +113,7 @@ const CTA = ({
     text: "Call Us Now",
     href: "tel:+14255185442",
     icon: FaPhone,
-  }, // ✅ Now FaPhone is defined!
+  }, //  Now FaPhone is defined!
   variant = "default", // default | careers | contact | think
 }) => {
   // Variant-specific configurations
@@ -205,7 +205,7 @@ const CTA = ({
                 variant="outline"
                 size="lg"
                 href={secondaryAction.href}
-                icon={secondaryAction.icon} // ✅ FaPhone is now properly passed
+                icon={secondaryAction.icon} //  FaPhone is now properly passed
               >
                 {secondaryAction.text}
               </Button>
@@ -266,10 +266,10 @@ const CTA = ({
               <p className="text-blue-200 text-sm">
                 Or reach us directly at{" "}
                 <a
-                  href="mailto:contact@innovise-it.com"
+                  href="mailto:Contact@innovise-IT.com"
                   className="font-semibold text-white hover:text-accent-400 transition-colors underline"
                 >
-                  contact@innovise-it.com
+                  Contact@innovise-IT.com
                 </a>
               </p>
             </div>

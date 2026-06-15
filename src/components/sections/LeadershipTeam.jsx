@@ -652,7 +652,7 @@
 
 //   return (
 //     <section className="relative py-6 lg:py-10 bg-gradient-to-br from-white via-gray-50/50 to-white overflow-hidden">
-//       {/* ✨ Background Decorative Elements */}
+//       {/*  Background Decorative Elements */}
 //       <div
 //         className="absolute top-0 left-0 w-[500px] h-[500px] bg-yellow-500/[0.04] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"
 //         aria-hidden="true"
@@ -871,7 +871,7 @@
 //         </div>
 
 //         {/* ================================ */}
-//         {/* 🎯 BOTTOM CTA SECTION             */}
+//         {/*  BOTTOM CTA SECTION             */}
 //         {/* ================================ */}
 //         <motion.div
 //           initial={{ opacity: 0, y: 20 }}
@@ -1234,7 +1234,7 @@ const LeadershipTeam = () => {
                 spaceBetween: 28,
               },
               1280: {
-                slidesPerView: 5,
+                slidesPerView: 4,
                 spaceBetween: 32,
               },
             }}
@@ -1249,7 +1249,7 @@ const LeadershipTeam = () => {
                 >
                   <div className="relative bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(11,29,51,0.18)] transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
                     {/* Image */}
-                    <div className="relative aspect-square overflow-hidden">
+                    <div className="relative h-[300px] lg:h-[340px] overflow-hidden">
                       <img
                         src={leader.image}
                         alt={leader.name}
@@ -1293,13 +1293,13 @@ const LeadershipTeam = () => {
                         {leader.name}
                       </h3>
 
-                      <p className="text-sm text-gray-500 mb-3 font-medium truncate">
+                      <p className="text-sm text-gray-600 mb-3 font-medium truncate">
                         {leader.role}
                       </p>
 
                       <div className="h-[1px] bg-gradient-to-r from-[#FDB913]/40 via-transparent to-transparent mb-3" />
 
-                      <p className="text-xs text-gray-400 italic line-clamp-2 leading-relaxed">
+                      <p className="text-sm md:text-md text-gray-600 line-clamp-2 leading-relaxed">
                         "{leader.quote}"
                       </p>
 
@@ -1330,7 +1330,7 @@ const LeadershipTeam = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-10"
         >
-          <Link to="/about/leadership">
+          <Link to="/leadership">
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}

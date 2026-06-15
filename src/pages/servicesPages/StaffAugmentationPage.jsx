@@ -247,28 +247,7 @@ const TalentCard = ({ category, index }) => {
         transform: isHovered ? "translateY(-8px)" : "translateY(0)",
       }}
     >
-      <div
-        className="relative h-full rounded-3xl overflow-hidden transition-all duration-700 backdrop-blur-xl"
-        style={{
-          background: isHovered
-            ? `linear-gradient(135deg,
-                #081C34 0%,
-                #0D2747 50%,
-                #133B63 100%)`
-            : `linear-gradient(135deg,
-                #0A1A2F 0%,
-                #102B4C 50%,
-                #163B66 100%)`,
-
-          border: isHovered
-            ? "1px solid rgba(253,185,19,0.25)"
-            : "1px solid rgba(255,255,255,0.06)",
-
-          boxShadow: isHovered
-            ? "0 30px 80px rgba(8,28,52,0.45)"
-            : "0 10px 35px rgba(8,28,52,0.20)",
-        }}
-      >
+      <div className="relative h-full rounded-3xl overflow-hidden transition-all duration-700 backdrop-blur-xl bg-primary-800">
         {/* Gold Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
@@ -509,14 +488,7 @@ const BenefitCard = ({ benefit, index }) => (
     whileHover={{ y: -5, scale: 1.02 }}
     className="group"
   >
-    <div
-      className="p-6 rounded-xl transition-all duration-500 hover:shadow-lg"
-      style={{
-        background: "white",
-        border: "1px solid rgba(0,0,0,0.05)",
-        boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
-      }}
-    >
+    <div className="p-6 rounded-xl transition-all duration-500 hover:shadow-lg bg-primary-800">
       <div className="flex items-start gap-4">
         <motion.div
           className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
@@ -801,12 +773,7 @@ const TeamVisual = () => (
 
 // Hero Section
 const HeroSection = () => (
-  <section
-    className="relative py-6 lg:py-10 overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
-  >
+  <section className="relative py-6 lg:py-10 overflow-hidden bg-primary-800">
     {/* Background Elements */}
     <div className="absolute inset-0" aria-hidden="true">
       <div
@@ -936,10 +903,10 @@ const HeroSection = () => (
           {/* Feature Tags */}
           <div className="flex flex-wrap gap-3 mb-8">
             {[
-              "⚡ Quick Deployment",
-              "🎯 Skill Matched",
-              "🤝 Seamless Integration",
-              "📈 Flexible Scaling",
+              " Quick Deployment",
+              " Skill Matched",
+              "Seamless Integration",
+              " Flexible Scaling",
             ].map((tag, idx) => (
               <motion.span
                 key={idx}
@@ -959,7 +926,7 @@ const HeroSection = () => (
           </div>
 
           {/* Trust Indicators */}
-          <div
+          {/* <div
             className="flex flex-wrap items-center gap-6 mt-10 pt-8"
             style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
           >
@@ -978,7 +945,7 @@ const HeroSection = () => (
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* RIGHT - Team Visual */}
@@ -1071,7 +1038,7 @@ const TalentSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          💡 What We Deliver
+          What We Deliver
         </span>
 
         <h2
@@ -1111,13 +1078,7 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8 }}
           className="relative order-2 lg:order-1"
         >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.light})`,
-              border: `1px solid rgba(253,185,19,0.15)`,
-            }}
-          >
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800 ">
             {/* Remote Team Setup Visual */}
             <div className="absolute inset-0 p-8 flex flex-col">
               {/* Video Call Grid Mockup */}
@@ -1294,7 +1255,7 @@ const BenefitsSection = () => (
               border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
-            🎯 Key Benefits
+            Key Benefits
           </span>
 
           <h2
@@ -1323,12 +1284,7 @@ const BenefitsSection = () => (
           </div>
 
           {/* Quick Stats */}
-          <div
-            className="p-6 rounded-2xl"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-            }}
-          >
+          <div className="p-6 rounded-2xl bg-primary-800">
             <h4 className="text-white font-bold mb-4 flex items-center gap-2">
               <FaStar
                 className="text-sm"
@@ -1369,7 +1325,7 @@ const BenefitsSection = () => (
 
 // Process Section
 const ProcessSection = () => (
-  <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
+  <section className="py-6 lg:py-10 bg-primary-800  relative overflow-hidden">
     {/* Background Glow */}
     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#0F2B4D] blur-3xl rounded-full"></div>
@@ -1390,7 +1346,7 @@ const ProcessSection = () => (
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
-          🧠 Our Approach
+          Our Approach
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
@@ -1649,7 +1605,7 @@ const StaffAugmentationPage = () => {
       <ProcessSection />
       <BenefitsSection />
 
-      <CTABannerSection />
+      {/* <CTABannerSection /> */}
     </main>
   );
 };

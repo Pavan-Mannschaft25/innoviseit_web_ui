@@ -374,20 +374,6 @@ const ValueCard = ({ value, index, isActive, onSelect }) => {
                     </motion.li>
                   ))}
                 </ul>
-
-                {/* Action Button */}
-                <button
-                  className="mt-6 w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider transition-all duration-300 focus:outline-none focus:ring-2"
-                  style={{
-                    background: value.color,
-                    color: "white",
-                    boxShadow: `0 4px 15px ${value.color}40`,
-                    "--tw-ring-color": value.color,
-                    "--tw-ring-offset-color": BRAND.navy.dark,
-                  }}
-                >
-                  Learn More About This Value
-                </button>
               </motion.div>
             )}
           </AnimatePresence>
@@ -756,11 +742,11 @@ const ValuesPage = () => {
 
   return (
     <main role="main">
-      <div className="relative w-full h-[90vh] bg-[#020B2D] overflow-hidden">
+      <div className="relative w-full h-[30vh] md:h-[70vh] lg:h-[90vh] bg-[#020B2D] overflow-hidden">
         <img
           src={banner}
           alt="Innovise IT Banner"
-          className="w-full h-full object-fill object-center"
+          className="w-full h-full object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/10" />
@@ -792,67 +778,41 @@ const ValuesPage = () => {
           </div>
 
           {/* Cards Grid - Bento Style */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {philosophyWithIcons.map((philosophy, index) => (
               <AnimatedSection key={philosophy.id} delay={index * 0.1}>
-                <motion.div className="group relative h-[60vh] overflow-hidden cursor-pointer">
-                  {/* 🔥 FULL BACKGROUND IMAGE */}
+                <motion.div className="group relative h-[60vh] overflow-hidden rounded-2xl cursor-pointer">
+                  {/* Background Image */}
                   <img
                     src={philosophy.image}
                     alt={philosophy.title}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
-                  {/* 🔥 DARK OVERLAY */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F2C]/95 via-[#0A0F2C]/70 to-transparent" />
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 z-[1]" />
 
-                  {/* 🔥 CONTENT */}
-                  <div className="relative z-10 p-6 lg:p-8 flex flex-col justify-end items-start h-full text-white text-left">
-                    {" "}
-                    {/* Badge */}
-                    {/* <div
-                      className="inline-block w-fit px-3 py-1 rounded-full text-xs font-bold mb-4"
-                      style={{
-                        background: `${BRAND.gold.primary}`,
-                        color: BRAND.navy.dark,
-                      }}
-                    >
-                      {philosophy.subtitle}
-                    </div> */}
-                    {/* Icon */}
-                    {/* <div
-                      className="w-12 h-12 rounded-lg flex items-center justify-center mb-4"
-                      style={{
-                        background: BRAND.gold.gradient,
-                      }}
-                    >
-                      <philosophy.icon className="text-white text-lg" />
-                    </div> */}
-                    {/* Title */}
-                    <h3 className="text-xl lg:text-2xl font-bold mb-2 group-hover:text-yellow-400 transition-colors uppercase">
+                  {/* Content */}
+                  <div className="absolute inset-0 z-[2] flex flex-col justify-end p-6 lg:p-8">
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3 uppercase">
                       {philosophy.title}
                     </h3>
-                    {/* Description */}
-                    <p className="text-sm text-white/70 mb-4 line-clamp-3">
+
+                    <p className="text-white/90 text-sm lg:text-base mb-4 max-w-xl">
                       {philosophy.description}
                     </p>
-                    {/* Principles */}
-                    <ul className="space-y-1 mb-4">
+
+                    <ul className="space-y-2">
                       {philosophy.principles.slice(0, 3).map((item, idx) => (
                         <li
                           key={idx}
-                          className="text-xs text-white/60 flex items-center gap-2"
+                          className="flex items-center gap-2 text-white text-sm"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
+                          <span className="w-2 h-2 rounded-full bg-yellow-400" />
                           {item}
                         </li>
                       ))}
                     </ul>
-                    {/* Link */}
-                    {/* <div className="flex items-center gap-2 text-sm font-semibold text-yellow-400">
-                      Learn More
-                      <FaChevronRight className="text-xs group-hover:translate-x-1 transition" />
-                    </div> */}
                   </div>
                 </motion.div>
               </AnimatedSection>
@@ -860,7 +820,7 @@ const ValuesPage = () => {
           </div>
         </Container>
       </section>
-      <ClosingSection />
+      {/* <ClosingSection /> */}
     </main>
   );
 };

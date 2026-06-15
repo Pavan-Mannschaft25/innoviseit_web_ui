@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
-// ✅ ADD THIS IMPORT - This was missing!
+//  ADD THIS IMPORT - This was missing!
 import Button from "./Button";
 
 const Card = ({
@@ -69,7 +69,7 @@ export const ServiceCard = ({ service }) => (
       <span className="text-xs font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
         {service.stats.projects} Projects
       </span>
-      {/* ✅ Now Button will work because it's imported! */}
+      {/*  Now Button will work because it's imported! */}
       <Button variant="ghost" size="sm" to={`/services/${service.id}`}>
         Learn More →
       </Button>

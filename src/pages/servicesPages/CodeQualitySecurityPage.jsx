@@ -24,11 +24,11 @@ import {
   FaShieldVirus,
 } from "react-icons/fa";
 
-// ==================== BRAND COLORS ====================
+// ==================== BRAND COLORS (MATCHING GUIDEWIRE PAGE) ====================
 const BRAND = {
   navy: {
-    dark: "#12324f",
-    mid: "#12324f",
+    dark: "#0B1D33",
+    mid: "#0D2847",
     light: "#143A63",
     lighter: "#1A4570",
   },
@@ -38,9 +38,9 @@ const BRAND = {
     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
   },
   security: {
-    primary: "#EF4444", // Red for critical security
-    secondary: "#10B981", // Green for safe/compliant
-    accent: "#3B82F6", // Blue for scanning
+    primary: "#EF4444",
+    secondary: "#10B981",
+    accent: "#3B82F6",
   },
 };
 
@@ -66,6 +66,7 @@ const servicesData = [
     ],
     color: "#3B82F6",
     status: "STATIC",
+    category: "SAST",
   },
   {
     id: 2,
@@ -80,6 +81,7 @@ const servicesData = [
     ],
     color: "#8B5CF6",
     status: "DYNAMIC",
+    category: "DAST",
   },
   {
     id: 3,
@@ -94,6 +96,7 @@ const servicesData = [
     ],
     color: "#10B981",
     status: "QUALITY",
+    category: "Quality",
   },
   {
     id: 4,
@@ -104,6 +107,7 @@ const servicesData = [
     features: ["Risk Prioritization", "Patch Management", "Zero-Day Tracking"],
     color: "#EF4444",
     status: "CRITICAL",
+    category: "Vuln Mgmt",
   },
   {
     id: 5,
@@ -118,6 +122,7 @@ const servicesData = [
     ],
     color: "#F59E0B",
     status: "COMPLIANT",
+    category: "Compliance",
   },
   {
     id: 6,
@@ -132,6 +137,7 @@ const servicesData = [
     ],
     color: "#06B6D4",
     status: "REGULATED",
+    category: "Privacy",
   },
 ];
 
@@ -274,69 +280,68 @@ const ServiceCard = ({ service, index }) => {
       className="group h-full"
       style={{ transform: isHovered ? "translateY(-8px)" : "translateY(0)" }}
     >
-      <div
-        className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700"
-        style={{
-          background: isHovered
-            ? "linear-gradient(135deg, #081C34 0%, #0D2747 50%, #163B66 100%)"
-            : "linear-gradient(135deg, #0A1A2F 0%, #102B4C 50%, #163B66 100%)",
-          border: isHovered
-            ? "1px solid rgba(253,185,19,0.25)"
-            : "1px solid rgba(255,255,255,0.06)",
-          boxShadow: isHovered
-            ? "0 30px 80px rgba(8,28,52,0.45)"
-            : "0 10px 35px rgba(8,28,52,0.20)",
-        }}
-      >
+      <div className="relative h-full rounded-3xl overflow-hidden backdrop-blur-xl transition-all duration-700 bg-primary-800">
+        {/* Top Accent — Gold like Guidewire */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
           style={{
-            background: `linear-gradient(90deg, ${service.color}, transparent)`,
+            background: "linear-gradient(90deg, #FDB913, transparent)",
           }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
           transition={{ duration: 0.4 }}
         />
 
+        {/* Status Badge — Gold like Guidewire */}
         <div className="absolute top-5 right-5 z-20">
           <span
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            style={{
+              background: "rgba(253,185,19,0.12)",
+              color: "#FDB913",
+              border: "1px solid rgba(253,185,19,0.25)",
+            }}
+          >
+            <motion.span
+              animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
+            />
+            {service.status}
+          </span>
+        </div>
+
+        {/* Category Badge — per-service color like Guidewire */}
+        <div className="absolute top-5 left-5 z-20">
+          <span
+            className="inline-flex items-center px-2.5 py-1 rounded-lg text-[9px] font-bold uppercase tracking-wider"
             style={{
               background: `${service.color}15`,
               color: service.color,
               border: `1px solid ${service.color}30`,
             }}
           >
-            <motion.span
-              animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-1.5 rounded-full inline-block"
-              style={{ background: service.color }}
-            />
-            {service.status}
+            {service.category}
           </span>
         </div>
 
+        {/* Glow Effect */}
         <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
-        <div className="relative z-10 p-8 lg:p-10">
+        <div className="relative z-10 p-8 lg:p-10 pt-16">
+          {/* Icon — Gold container like Guidewire */}
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
-              background: `${service.color}12`,
-              border: `1px solid ${service.color}25`,
+              background: "rgba(253,185,19,0.12)",
+              border: "1px solid rgba(253,185,19,0.25)",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
-            <service.icon
-              className="text-2xl"
-              style={{ color: service.color }}
-            />
+            <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
           </motion.div>
 
-          <h3 className="text-xl font-bold mb-3 pr-16 text-white">
-            {service.title}
-          </h3>
+          <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
           <p className="text-sm leading-relaxed mb-6 text-white/70">
             {service.description}
           </p>
@@ -347,10 +352,7 @@ const ServiceCard = ({ service, index }) => {
                 key={idx}
                 className="flex items-center gap-2 text-sm text-white/80"
               >
-                <FaCheckCircle
-                  className="flex-shrink-0 text-xs"
-                  style={{ color: service.color }}
-                />
+                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
                 {feature}
               </li>
             ))}
@@ -417,15 +419,7 @@ const BenefitCard = ({ benefit, index }) => (
     whileHover={{ y: -6, scale: 1.02 }}
     className="group"
   >
-    <div
-      className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
-      style={{
-        background:
-          "linear-gradient(135deg, #081C34 0%, #102B4C 50%, #163B66 100%)",
-        border: "1px solid rgba(255,255,255,0.08)",
-        boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
-      }}
-    >
+    <div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500 bg-primary-800">
       <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       <div className="relative z-10 flex items-start gap-4">
         <motion.div
@@ -483,12 +477,7 @@ const AnimatedProgressBar = ({ value, label, color, delay = 0 }) => (
 // ==================== SECTIONS ====================
 
 const HeroSection = () => (
-  <section
-    className="relative py-6 lg:py-10 overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, ${BRAND.navy.mid} 60%, ${BRAND.navy.lighter} 100%)`,
-    }}
-  >
+  <section className="relative py-6 lg:py-10 overflow-hidden bg-primary-800">
     <div className="absolute inset-0" aria-hidden="true">
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -497,11 +486,12 @@ const HeroSection = () => (
           backgroundSize: "32px 32px",
         }}
       />
+      {/* Floating Orbs — Blue + Gold like Guidewire */}
       <motion.div
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-16 right-20 w-[450px] h-[450px] rounded-full blur-3xl opacity-[0.08]"
-        style={{ background: "#EF4444" }}
+        className="absolute top-16 right-20 w-[450px] h-[450px] rounded-full blur-3xl opacity-[0.07]"
+        style={{ background: "#3B82F6" }}
       />
       <motion.div
         animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
@@ -524,22 +514,23 @@ const HeroSection = () => (
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Badge — Gold like Guidewire */}
           <div className="inline-flex items-center gap-3 mb-6">
             <div
               className="w-10 h-10 rounded-lg flex items-center justify-center"
               style={{
-                background: `${BRAND.security.primary}15`,
-                border: `1px solid ${BRAND.security.primary}30`,
+                background: `${BRAND.gold.primary}15`,
+                border: `1px solid ${BRAND.gold.primary}30`,
               }}
             >
               <FaShieldAlt
                 className="text-lg"
-                style={{ color: BRAND.security.primary }}
+                style={{ color: BRAND.gold.primary }}
               />
             </div>
             <span
               className="text-sm font-bold uppercase tracking-[0.2em]"
-              style={{ color: BRAND.security.primary }}
+              style={{ color: BRAND.gold.primary }}
             >
               Code Quality & Security
             </span>
@@ -568,10 +559,10 @@ const HeroSection = () => (
 
           <div className="flex flex-wrap gap-3 mb-8">
             {[
-              "🛡️ SAST & DAST",
-              "📊 SonarQube",
-              "🔒 SOC2 & GDPR",
-              "🐛 Vulnerability Mgmt",
+              " SAST & DAST",
+              " SonarQube",
+              " SOC2 & GDPR",
+              " Vulnerability Mgmt",
             ].map((tag, idx) => (
               <motion.span
                 key={idx}
@@ -580,34 +571,13 @@ const HeroSection = () => (
                 transition={{ delay: 0.5 + idx * 0.1 }}
                 className="px-4 py-2 rounded-lg text-xs font-semibold"
                 style={{
-                  background: "rgba(239,68,68,0.1)",
+                  background: "rgba(253,185,19,0.1)",
                   color: "white",
-                  border: "1px solid rgba(239,68,68,0.2)",
+                  border: "1px solid rgba(253,185,19,0.2)",
                 }}
               >
                 {tag}
               </motion.span>
-            ))}
-          </div>
-
-          <div
-            className="flex flex-wrap items-center gap-6 mt-10 pt-8"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
-          >
-            {[
-              { icon: FaAward, text: "AppSec Experts" },
-              { icon: FaUsers, text: "50+ Security Audits" },
-              { icon: FaStar, text: "Zero Critical Vulns" },
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <item.icon
-                  className="text-sm"
-                  style={{ color: BRAND.gold.primary }}
-                />
-                <span className="text-xs text-white/60 font-medium">
-                  {item.text}
-                </span>
-              </div>
             ))}
           </div>
         </motion.div>
@@ -623,7 +593,7 @@ const HeroSection = () => (
             className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
             style={{
               background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(239,68,68,0.2)`,
+              border: `1px solid rgba(253,185,19,0.2)`,
             }}
           >
             <div className="absolute inset-0 p-6 flex flex-col">
@@ -769,7 +739,7 @@ const HeroSection = () => (
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              {/* <div className="grid grid-cols-2 gap-3">
                 <div
                   className="p-3 rounded-xl space-y-2"
                   style={{
@@ -843,25 +813,29 @@ const HeroSection = () => (
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
+            {/* Floating Card — Gold border like Guidewire */}
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-              style={{ border: `2px solid ${BRAND.security.primary}` }}
+              style={{ border: `2px solid ${BRAND.gold.primary}` }}
             >
               <div className="flex items-center gap-3">
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: BRAND.gold.gradient }}
+                  style={{ background: `${BRAND.gold.primary}15` }}
                 >
-                  <FaShieldAlt className="text-xl text-white" />
+                  <FaShieldAlt
+                    className="text-xl"
+                    style={{ color: BRAND.gold.primary }}
+                  />
                 </div>
                 <div>
                   <div
-                    className="text-base font-black"
+                    className="text-xl font-black"
                     style={{ color: BRAND.navy.dark }}
                   >
                     Fortified
@@ -871,6 +845,18 @@ const HeroSection = () => (
               </div>
             </motion.div>
           </div>
+
+          {/* Decorative Elements — matching Guidewire style */}
+          <div
+            className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl -z-10 opacity-60"
+            style={{
+              background: "linear-gradient(135deg, #3B82F6, transparent)",
+            }}
+          />
+          <div
+            className="absolute -bottom-4 -left-8 w-32 h-32 rounded-full -z-10 opacity-40"
+            style={{ background: BRAND.gold.primary }}
+          />
         </motion.div>
       </div>
     </div>
@@ -884,7 +870,7 @@ const ServicesSection = () => (
   >
     <div
       className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-[0.03] translate-x-1/3 -translate-y-1/3"
-      style={{ background: BRAND.security.primary }}
+      style={{ background: BRAND.navy.lighter }}
     />
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       <motion.header
@@ -896,19 +882,26 @@ const ServicesSection = () => (
         <span
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
           style={{
-            background: `${BRAND.security.primary}10`,
-            color: BRAND.security.primary,
-            border: `1px solid ${BRAND.security.primary}25`,
+            background: `${BRAND.navy.mid}08`,
+            color: BRAND.navy.dark,
+            border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          🛡️ Security & Compliance
+          Security & Compliance
         </span>
         <h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
           End-to-End{" "}
-          <span style={{ color: BRAND.security.primary }}>
+          <span
+            style={{
+              backgroundImage: BRAND.gold.gradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
             AppSec Solutions
           </span>
         </h2>
@@ -948,14 +941,23 @@ const ToolsSection = () => (
             border: `1px solid ${BRAND.navy.mid}15`,
           }}
         >
-          🛠️ Security Tool Stack
+          Security Tool Stack
         </span>
         <h2
           className="text-3xl md:text-4xl font-bold mb-4"
           style={{ color: BRAND.navy.dark }}
         >
           Enterprise-Grade{" "}
-          <span style={{ color: BRAND.gold.primary }}>Security Tools</span>
+          <span
+            style={{
+              backgroundImage: BRAND.gold.gradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Security Tools
+          </span>
         </h2>
         <p className="text-base leading-relaxed" style={{ color: "#64748B" }}>
           We leverage industry-leading SAST, DAST, and compliance automation
@@ -972,8 +974,8 @@ const ToolsSection = () => (
 );
 
 const ProcessSection = () => (
-  <section className="py-6 lg:py-10 bg-[#081C34] relative overflow-hidden">
-    <div className="absolute top-0 left-0 w-96 h-96 bg-[#EF4444]/10 blur-3xl rounded-full"></div>
+  <section className="py-6 lg:py-10 bg-primary-800  relative overflow-hidden">
+    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       <motion.header
@@ -990,11 +992,20 @@ const ProcessSection = () => (
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
-          🧠 DevSecOps Approach
+          DevSecOps Approach
         </span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
           Security{" "}
-          <span style={{ color: "#FDB913" }}>Shift-Left Methodology</span>
+          <span
+            style={{
+              backgroundImage: BRAND.gold.gradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Shift-Left Methodology
+          </span>
         </h2>
         <p className="text-lg leading-relaxed text-white/70">
           Integrating security at every phase of the software development
@@ -1029,7 +1040,7 @@ const ProcessSection = () => (
                 <p className="text-sm leading-relaxed text-white/70">
                   {step.description}
                 </p>
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#EF4444]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </motion.div>
           ))}
@@ -1076,97 +1087,15 @@ const BenefitsSection = () => (
   <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* LEFT - Content */}
+        {/* LEFT - Visual */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="order-1"
+          className="relative order-2 lg:order-1"
         >
-          <span
-            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
-            style={{
-              background: `${BRAND.navy.mid}08`,
-              color: BRAND.navy.dark,
-              border: `1px solid ${BRAND.navy.mid}15`,
-            }}
-          >
-            🎯 Key Benefits
-          </span>
-          <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
-            style={{ color: BRAND.navy.dark }}
-          >
-            Why Choose Our{" "}
-            <span style={{ color: "#FDB913" }}>AppSec Solutions</span>?
-          </h2>
-          <p
-            className="text-lg leading-relaxed mb-10"
-            style={{ color: "#64748B" }}
-          >
-            We embed security into your DNA, turning compliance from a checkbox
-            exercise into a competitive advantage.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-            {benefitsData.map((benefit, index) => (
-              <BenefitCard key={index} benefit={benefit} index={index} />
-            ))}
-          </div>
-          <div
-            className="p-6 rounded-2xl"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-            }}
-          >
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-              <FaStar
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              Security Posture
-            </h4>
-            <div className="grid grid-cols-2 gap-4">
-              {metricsData.map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="text-center p-3 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)" }}
-                >
-                  <metric.icon
-                    className="mx-auto mb-1"
-                    style={{ color: metric.color, fontSize: "14px" }}
-                  />
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: "white" }}
-                  >
-                    {metric.value}
-                  </div>
-                  <div className="text-[10px] text-white/50">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* RIGHT - Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative order-2"
-        >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.light})`,
-              border: `1px solid rgba(239,68,68,0.15)`,
-            }}
-          >
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             <div className="absolute inset-0 p-8 flex flex-col justify-center">
               <div className="grid grid-cols-2 gap-4 h-full">
                 <div
@@ -1308,27 +1237,137 @@ const BenefitsSection = () => (
                 </div>
               </div>
 
+              {/* Bottom Status — Gold accent like Guidewire */}
               <div
                 className="mt-4 flex items-center justify-between px-2 py-3 rounded-xl"
                 style={{
-                  background: "rgba(59,130,246,0.1)",
-                  border: "1px solid rgba(59,130,246,0.2)",
+                  background: "rgba(253,185,19,0.1)",
+                  border: "1px solid rgba(253,185,19,0.2)",
                 }}
               >
                 <div className="flex items-center gap-2">
-                  <FaFileContract
-                    className="text-sm"
-                    style={{ color: "#3B82F6" }}
+                  <motion.span
+                    animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="w-2 h-2 rounded-full"
+                    style={{ background: "#FDB913" }}
                   />
                   <span
                     className="text-xs font-medium"
-                    style={{ color: "#3B82F6" }}
+                    style={{ color: "#FDB913" }}
                   >
                     GDPR & SOC2 Validated
                   </span>
                 </div>
                 <span className="text-[10px] text-white/30">Audit #847</span>
               </div>
+            </div>
+
+            {/* Floating Badge — Blue border like Guidewire Benefits section */}
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -bottom-3 -left-3 bg-white rounded-xl p-4 shadow-lg"
+              style={{ border: `2px solid #3B82F6` }}
+            >
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style={{ background: "rgba(59,130,246,0.1)" }}
+                >
+                  <FaAward className="text-lg" style={{ color: "#3B82F6" }} />
+                </div>
+                <div>
+                  <div
+                    className="text-base font-black"
+                    style={{ color: BRAND.navy.dark }}
+                  >
+                    Certified
+                  </div>
+                  <div className="text-[10px] text-gray-500">AppSec Level</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* RIGHT - Content */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="order-1 lg:order-2"
+        >
+          <span
+            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+            style={{
+              background: `${BRAND.navy.mid}08`,
+              color: BRAND.navy.dark,
+              border: `1px solid ${BRAND.navy.mid}15`,
+            }}
+          >
+            Key Benefits
+          </span>
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+            style={{ color: BRAND.navy.dark }}
+          >
+            Why Choose Our{" "}
+            <span
+              style={{
+                backgroundImage: BRAND.gold.gradient,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              AppSec Solutions
+            </span>
+            ?
+          </h2>
+          <p
+            className="text-lg leading-relaxed mb-10"
+            style={{ color: "#64748B" }}
+          >
+            We embed security into your DNA, turning compliance from a checkbox
+            exercise into a competitive advantage.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+            {benefitsData.map((benefit, index) => (
+              <BenefitCard key={index} benefit={benefit} index={index} />
+            ))}
+          </div>
+          <div className="p-6 rounded-2xl bg-primary-800">
+            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
+              <FaStar
+                className="text-sm"
+                style={{ color: BRAND.gold.primary }}
+              />
+              Security Posture
+            </h4>
+            <div className="grid grid-cols-2 gap-4">
+              {metricsData.map((metric, idx) => (
+                <div
+                  key={idx}
+                  className="text-center p-3 rounded-xl"
+                  style={{ background: "rgba(255,255,255,0.05)" }}
+                >
+                  <metric.icon
+                    className="mx-auto mb-1"
+                    style={{ color: metric.color, fontSize: "14px" }}
+                  />
+                  <div
+                    className="text-xl font-black"
+                    style={{ color: "white" }}
+                  >
+                    {metric.value}
+                  </div>
+                  <div className="text-[10px] text-white/50">
+                    {metric.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>
@@ -1338,12 +1377,7 @@ const BenefitsSection = () => (
 );
 
 const CTABannerSection = () => (
-  <section
-    className="py-6 lg:py-10 relative overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #0f0d29 50%, ${BRAND.navy.mid} 100%)`,
-    }}
-  >
+  <section className="py-6 lg:py-10 relative overflow-hidden" bg-primary-800>
     <div
       className="absolute inset-0 opacity-[0.04]"
       style={{
@@ -1354,8 +1388,8 @@ const CTABannerSection = () => (
     <motion.div
       animate={{ y: [0, -20, 0], x: [0, 15, 0] }}
       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute top-10 left-1/4 w-80 h-80 rounded-full blur-3xl opacity-[0.1]"
-      style={{ background: "#EF4444" }}
+      className="absolute top-10 left-1/4 w-80 h-80 rounded-full blur-3xl opacity-[0.08]"
+      style={{ background: "#3B82F6" }}
     />
     <motion.div
       animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
@@ -1365,89 +1399,78 @@ const CTABannerSection = () => (
         ease: "easeInOut",
         delay: 2,
       }}
-      className="absolute bottom-10 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-[0.06]"
+      className="absolute bottom-10 right-1/4 w-72 h-72 rounded-full blur-3xl opacity-[0.05]"
       style={{ background: BRAND.gold.primary }}
     />
-
-    <div className="max-w-5xl mx-auto px-4 lg:px-8 relative z-10 text-center">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+    <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
         <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-          className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8"
-          style={{
-            background: `${BRAND.security.primary}15`,
-            border: `2px solid ${BRAND.security.primary}`,
-          }}
+          className="text-center lg:text-left"
         >
-          <FaShieldAlt className="text-3xl" style={{ color: "#FDB913" }} />
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to{" "}
+            <span
+              style={{
+                backgroundImage: BRAND.gold.gradient,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Fortify
+            </span>{" "}
+            Your Codebase?
+          </h2>
+          <p className="text-lg text-white/70 max-w-xl">
+            Get a comprehensive security audit and code quality assessment.
+            Let's build unbreakable software together.
+          </p>
         </motion.div>
-
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-          Don't Ship <span style={{ color: "#EF4444" }}>Vulnerabilities</span>.
-          Ship <span style={{ color: "#FDB913" }}>Trust</span>.
-        </h2>
-
-        <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl mx-auto">
-          Secure your codebase, achieve compliance, and protect your users. Get
-          a comprehensive security audit today.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <a
-            href="/contact"
-            className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-            style={{ background: "#FDB913", color: "white" }}
-          >
-            <span className="relative z-10 flex items-center gap-3">
-              Start Security Audit{" "}
-              <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-            </span>
-            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
-              <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
-            </div>
-          </a>
-        </div>
-
-        <div
-          className="flex flex-wrap items-center justify-center gap-8 pt-8"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col sm:flex-row gap-4"
         >
-          {[
-            { value: "Free SAST Scan", icon: FaCode },
-            { value: "Compliance Review", icon: FaGavel },
-            { value: "24/7 Monitoring", icon: FaServer },
-          ].map((item, idx) => (
-            <div key={idx} className="flex items-center gap-2 text-white/60">
-              <item.icon className="text-sm" style={{ color: "#FDB913" }} />
-              <span className="text-sm font-medium">{item.value}</span>
-            </div>
-          ))}
-        </div>
-      </motion.div>
+          <button
+            className="px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#FDB913]/20"
+            style={{
+              background: BRAND.gold.gradient,
+              color: BRAND.navy.dark,
+            }}
+          >
+            Start Security Audit
+            <FaArrowRight className="inline ml-2" />
+          </button>
+          <button
+            className="px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105"
+            style={{
+              background: "rgba(255,255,255,0.08)",
+              color: "white",
+              border: "1px solid rgba(255,255,255,0.15)",
+            }}
+          >
+            View Compliance Report
+          </button>
+        </motion.div>
+      </div>
     </div>
   </section>
 );
 
-// ==================== MAIN COMPONENT ====================
-const CodeQualitySecurityPage = () => {
-  return (
-    <main role="main">
-      <HeroSection />
-      <ServicesSection />
-      <ToolsSection />
-      <ProcessSection />
-      <BenefitsSection />
-      <CTABannerSection />
-    </main>
-  );
-};
+// ==================== MAIN EXPORT ====================
+const CodeQualitySecurity = () => (
+  <main>
+    <HeroSection />
+    <ServicesSection />
+    <ToolsSection />
+    <ProcessSection />
+    <BenefitsSection />
+    {/* <CTABannerSection /> */}
+  </main>
+);
 
-export default CodeQualitySecurityPage;
+export default CodeQualitySecurity;

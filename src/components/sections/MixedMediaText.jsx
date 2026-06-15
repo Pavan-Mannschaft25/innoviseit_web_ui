@@ -65,7 +65,7 @@ const MixedMediaCinematic = ({
       ref={sectionRef}
       className="relative overflow-hidden flex items-center bg-white"
     >
-      {/* ✨ Animated Background Effects for White Theme */}
+      {/*  Animated Background Effects for White Theme */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Subtle Noise Texture */}
         <svg

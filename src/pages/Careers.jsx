@@ -1252,12 +1252,12 @@ const CareersPage = () => {
     <main role="main">
       <HeroSection />
       <BenefitsSection />
-      <PositionsSection
+      {/* <PositionsSection
         selectedJob={selectedJob}
         setSelectedJob={setSelectedJob}
-      />
-      <ApplicationFormSection />
-      <CTASection />
+      /> */}
+      {/* <ApplicationFormSection /> */}
+      {/* <CTASection /> */}
     </main>
   );
 };

@@ -207,7 +207,7 @@
 
 // //   return (
 // //     <section
-// //       className="relative py-20 lg:py-28 overflow-hidden"
+// //       className="relative py-6 lg:py-12 overflow-hidden"
 // //       style={{
 // //         background: "#F8FAFC",
 // //       }}

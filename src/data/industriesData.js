@@ -346,10 +346,19 @@
 //   },
 // ];
 
+import {
+  FaCar,
+  FaBolt,
+  FaShoppingCart,
+  FaStore,
+  FaIndustry,
+  FaLandmark,
+} from "react-icons/fa";
+
 import img1 from "../assets/industry/ae1.png";
 import img2 from "../assets/industry/au2.png";
 import img3 from "../assets/industry/cam1.png";
-import img4 from "../assets/industry/cr1.png";
+import img4 from "../assets/industry/cr1.jpeg";
 import img5 from "../assets/industry/cp1.png";
 import img6 from "../assets/industry/re1.png";
 
