@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Asset reliability improved by up to 45% through predictive maintenance",
-  "Real-time visibility across all operations reducing downtime by 30%",
-  "Energy efficiency gains of 20-25% through intelligent optimization",
-  "Full regulatory compliance with automated reporting and audit trails",
-  "Seamless integration of renewables into existing infrastructure",
-  "Operational costs reduced by 25% through process automation",
+  "Optimized asset performance and operational resilience",
+  "End-to-end visibility across energy and utility operations",
+  "Data-driven energy management and efficiency improvements",
+  "Robust compliance, governance, and audit support",
+  "Accelerated adoption of renewable and sustainable energy solutions",
+  "Scalable digital platforms for operational excellence and growth",
 ];
 
 const PROCESS_STEPS = [

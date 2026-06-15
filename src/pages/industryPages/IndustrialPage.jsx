@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Equipment downtime reduced by up to 45% through predictive maintenance",
-  "Overall Equipment Effectiveness (OEE) improved by 25-30%",
-  "Real-time visibility achieving 99%+ production tracking accuracy",
-  "Quality defects reduced by 40% through advanced process control",
-  "Operational costs decreased by 20% through intelligent automation",
-  "Time-to-market accelerated by 35% with digital manufacturing",
+  "Optimized asset performance and equipment utilization",
+  "Increased manufacturing efficiency and productivity",
+  "End-to-end visibility across production processes",
+  "Consistent product quality and process excellence",
+  "Smart automation for streamlined operations",
+  "Scalable digital manufacturing and innovation capabilities",
 ];
 
 const PROCESS_STEPS = [

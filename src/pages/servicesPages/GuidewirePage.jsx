@@ -3651,7 +3651,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Guidewire Implementation Partner
+              Guidewire Services
             </span>
           </div>
 

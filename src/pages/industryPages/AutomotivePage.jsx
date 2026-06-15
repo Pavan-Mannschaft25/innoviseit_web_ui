@@ -194,12 +194,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Production efficiency increased by up to 35%",
-  "Real-time supply chain visibility and control",
-  "Enhanced customer experience through personalization",
-  "Scalable cloud-native infrastructure",
-  "Reduced time-to-market by 40%",
-  "Predictive maintenance cutting downtime by 50%",
+  "Optimized production efficiency across operations",
+  "End-to-end supply chain visibility and management",
+  "Personalized customer experiences and engagement",
+  "Flexible and scalable cloud-based infrastructure",
+  "Faster product innovation and deployment",
+  "Proactive maintenance to ensure operational continuity",
 ];
 
 const PROCESS_STEPS = [
