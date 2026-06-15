@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Inventory accuracy improved to 98%+ across all channels",
-  "Seamless omnichannel experience driving 30% higher customer satisfaction",
-  "Customer lifetime value increased by up to 45%",
-  "Demand forecasting accuracy improved by 40%",
-  "Operational costs reduced through intelligent automation",
-  "Time-to-market for new initiatives cut by 50%",
+  "End-to-end inventory visibility and control",
+  "Connected customer experiences across digital and physical channels",
+  "Stronger customer retention and lifetime value",
+  "Data-driven demand planning and forecasting",
+  "Optimized operations with intelligent automation",
+  "Agile platforms that accelerate business growth and innovation",
 ];
 
 const PROCESS_STEPS = [

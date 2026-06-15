@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Financial transparency improved with real-time reporting capabilities",
-  "Grants processing time reduced by up to 60% through automation",
-  "Citizen satisfaction increased by 40% with digital services",
-  "Audit readiness achieved with complete compliance documentation",
-  "Operational costs reduced by 30% through process optimization",
-  "Enhanced data security meeting government cybersecurity standards",
+  "Real-time financial visibility and accountability",
+  "Efficient administration of grants and public programs",
+  "Citizen-centric digital service delivery",
+  "Robust compliance, governance, and audit support",
+  "Modernized operations through process automation",
+  "Secure and scalable platforms for public sector transformation",
 ];
 
 const PROCESS_STEPS = [
