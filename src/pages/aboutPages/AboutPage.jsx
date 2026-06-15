@@ -741,7 +741,7 @@ const WhoWeAreSection = () => (
                     className="text-xl font-black"
                     style={{ color: BRAND.gold.primary }}
                   >
-                    15+
+                    6+
                   </div>
                   <div className="text-xs text-white/60">Countries</div>
                 </div>
