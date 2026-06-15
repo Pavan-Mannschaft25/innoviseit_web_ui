@@ -67,7 +67,7 @@
 // //     icon: FaFileContract,
 // //     title: "PolicyCenter Implementation",
 // //     description:
-// //       "End-to-end implementation of Guidewire PolicyCenter for streamlined policy administration, underwriting, and product configuration across P&C insurance lines.",
+// //       "End-to-End implementation of Guidewire PolicyCenter for streamlined policy administration, underwriting, and product configuration across P&C insurance lines.",
 // //     features: [
 // //       "Product Model Design",
 // //       "Underwriting Workflows",
@@ -573,10 +573,10 @@
 // //           <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
 // //             Transform your insurance operations with expert Guidewire
 // //             implementation, customization, and support services. From
-// //             PolicyCenter to ClaimCenter, we deliver end-to-end excellence.
+// //             PolicyCenter to ClaimCenter, we deliver End-to-End excellence.
 // //           </p>
 
-// //           <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+// //           <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
 // //             Our certified consultants bring deep domain expertise across P&C
 // //             insurance lines, ensuring your Guidewire investment delivers maximum
 // //             ROI.
@@ -1814,7 +1814,7 @@
 //     icon: FaFileContract,
 //     title: "PolicyCenter Implementation",
 //     description:
-//       "End-to-end implementation of Guidewire PolicyCenter for streamlined policy administration, underwriting, and product configuration across P&C insurance lines.",
+//       "End-to-End implementation of Guidewire PolicyCenter for streamlined policy administration, underwriting, and product configuration across P&C insurance lines.",
 //     features: [
 //       "Product Model Design",
 //       "Underwriting Workflows",
@@ -2268,7 +2268,7 @@
 //           <p className="text-lg text-black/80 leading-relaxed mb-6 max-w-xl">
 //             Transform your insurance operations with expert Guidewire
 //             implementation, customization, and support services. From
-//             PolicyCenter to ClaimCenter, we deliver end-to-end excellence.
+//             PolicyCenter to ClaimCenter, we deliver End-to-End excellence.
 //           </p>
 
 //           <p className="text-base text-black/70 leading-relaxed mb-8 max-w-xl">
@@ -3199,7 +3199,7 @@ const guidewireServices = [
     icon: FaFileContract,
     title: "PolicyCenter Implementation",
     description:
-      "End-to-end implementation of Guidewire PolicyCenter for streamlined policy administration, underwriting, and product configuration across P&C insurance lines.",
+      "End-to-End implementation of Guidewire PolicyCenter for streamlined policy administration, underwriting, and product configuration across P&C insurance lines.",
     features: [
       "Product Model Design",
       "Underwriting Workflows",
@@ -3685,7 +3685,7 @@ const HeroSection = () => (
           <p className="text-lg text-gray-100 leading-relaxed mb-6 max-w-xl">
             Transform your insurance operations with expert Guidewire
             implementation, customization, and support services. From
-            PolicyCenter to ClaimCenter, we deliver end-to-end excellence.
+            PolicyCenter to ClaimCenter, we deliver End-to-End excellence.
           </p>
 
           <p className="text-base text-gray-100 leading-relaxed mb-8 max-w-xl">

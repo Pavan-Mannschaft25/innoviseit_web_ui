@@ -39,7 +39,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-4xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -304,14 +304,14 @@ const HeroSection = () => (
       >
         <GoldBadge className="mb-8">Powering Leading Consumer Brands</GoldBadge>
 
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Consumer{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
             Products
           </span>
         </h1>
 
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Driving demand-driven supply chains, smarter promotions, and seamless
           omnichannel experiences that delight consumers and grow brands.
         </p>
@@ -363,7 +363,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Modern retail environment showcasing consumer products and shopping experience"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -459,7 +459,7 @@ const SolutionsSection = () => (
     ></div>
 
     <div className="relative z-10">
-      <SectionTitle subtitle="End-to-end solutions designed for consumer products excellence">
+      <SectionTitle subtitle="End-to-End solutions designed for consumer products excellence">
         Our Specialized Solutions
       </SectionTitle>
 
@@ -505,7 +505,7 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="Advanced consumer analytics dashboard showing data-driven insights and metrics"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           </div>

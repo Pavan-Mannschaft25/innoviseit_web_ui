@@ -24,7 +24,7 @@ const serviceNavigationData = [
     number: "01",
     title: "Holistic Testing Services",
     description:
-      "End-to-end testing covering functional, performance, and security aspects for enterprise applications.",
+      "End-to-End testing covering functional, performance, and security aspects for enterprise applications.",
     path: "/services/testing/capabilities",
     icon: FaCrosshairs,
     tags: ["Functional", "Performance", "Security"],

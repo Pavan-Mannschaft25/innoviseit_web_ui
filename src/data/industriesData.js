@@ -375,7 +375,7 @@ export const industriesData = [
       "Vehicle lifecycle management, connected vehicles, and future mobility solutions.",
 
     detailedDescription:
-      "Drive innovation across the automotive value chain with connected vehicle platforms, EV ecosystem integration, smart manufacturing, and end-to-end vehicle lifecycle management powered by SAP solutions.",
+      "Drive innovation across the automotive value chain with connected vehicle platforms, EV ecosystem integration, smart manufacturing, and End-to-End vehicle lifecycle management powered by SAP solutions.",
 
     stats: {
       clients: "70+",

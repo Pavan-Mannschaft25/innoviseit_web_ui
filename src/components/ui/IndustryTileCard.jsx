@@ -772,7 +772,7 @@ const IndustryTileCard = ({
 
   return (
     <Link
-      // to={data.link}
+      to={data.link}
       className={`group relative block overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ${
         isFullImage ? "h-[430px]" : "h-[420px]"
       } ${
@@ -859,7 +859,7 @@ const IndustryTileCard = ({
         /> */}
 
         {/* Hover Icon Overlay */}
-        {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
           <div
             className={`w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-500 ${
               isDark
@@ -869,7 +869,7 @@ const IndustryTileCard = ({
           >
             <FaExternalLinkAlt className="text-xl" />
           </div>
-        </div> */}
+        </div>
       </div>
 
       {/* ================================ */}

@@ -740,7 +740,7 @@ const HeroSection = () => (
             delivery.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
             We help organizations regain control, restore stakeholder
             confidence, and achieve their intended business outcomes.
           </p>
@@ -1231,7 +1231,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end project recovery solutions designed to stabilize execution
+          End-to-End project recovery solutions designed to stabilize execution
           and deliver results.
         </p>
       </motion.header>

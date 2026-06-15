@@ -43,7 +43,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-4xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -312,14 +312,14 @@ const HeroSection = () => (
           Powering Next-Gen Retail Experiences
         </GoldBadge>
 
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Retail{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
             Transformation
           </span>
         </h1>
 
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Deliver seamless omnichannel experiences with intelligent
           merchandising, data-driven insights, and personalized customer
           engagement.
@@ -372,7 +372,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Modern retail store showcasing seamless omnichannel shopping experience"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -514,7 +514,7 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="Advanced retail analytics dashboard showing real-time insights and customer data"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           </div>

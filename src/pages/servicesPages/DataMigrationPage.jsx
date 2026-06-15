@@ -833,13 +833,13 @@ const HeroSection = () => (
             their data to support next-generation enterprise systems.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
             From legacy system consolidation to SAP HANA migration, we ensure
             your data is accurate, accessible, and ready for real-time insights.
           </p>
 
           {/* Feature Tags */}
-          <div className="flex flex-wrap gap-3 mb-8">
+          {/* <div className="flex flex-wrap gap-3 mb-8">
             {[
               " Zero Downtime",
               " Real-time Sync",
@@ -861,7 +861,7 @@ const HeroSection = () => (
                 {tag}
               </motion.span>
             ))}
-          </div>
+          </div> */}
 
           {/* Trust Indicators */}
           {/* <div
@@ -932,7 +932,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end data services designed to modernize your infrastructure
+          End-to-End data services designed to modernize your infrastructure
           while ensuring complete integrity.
         </p>
       </motion.header>
@@ -1071,8 +1071,8 @@ const BenefitsSection = () => (
               </div>
 
               {/* Bottom Progress Bars */}
-              <div className="grid grid-cols-2 gap-3">
-                <div
+              <div className="grid grid-cols-1 gap-3">
+                {/* <div
                   className="p-3 rounded-xl space-y-2"
                   style={{
                     background: "rgba(255,255,255,0.03)",
@@ -1106,7 +1106,7 @@ const BenefitsSection = () => (
                       </div>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 <div
                   className="p-3 rounded-xl"

@@ -143,7 +143,7 @@ const ServiceCard = ({ data, index = 0 }) => {
   return (
     <div className="group relative h-full w-full flex flex-col">
       <Link
-        // to={data.link}
+        to={data.link}
         className="block h-full w-full"
         aria-label={`Learn more about ${data.title}`}
       >
@@ -215,7 +215,7 @@ const ServiceCard = ({ data, index = 0 }) => {
             )}
 
             {/* External Link Icon - Bottom Right (Animated) */}
-            {/* <div
+            <div
               className="absolute bottom-5 right-5 z-10 w-12 h-12 rounded-xl 
                 bg-white/95 backdrop-blur-md flex items-center justify-center shadow-xl
                 opacity-0 translate-y-4 scale-90 
@@ -229,7 +229,7 @@ const ServiceCard = ({ data, index = 0 }) => {
                 className="text-lg"
                 style={{ color: COLORS.navy.dark }}
               />
-            </div> */}
+            </div>
 
             {/* Star Rating Badge (Optional Enhancement) */}
             {data.rating && (

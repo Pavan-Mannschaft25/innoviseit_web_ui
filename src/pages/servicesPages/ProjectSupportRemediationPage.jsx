@@ -559,7 +559,7 @@ const HeroSection = () => (
             battle-tested remediation expertise.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed max-w-xl">
+          <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
             We bring decades of enterprise experience to diagnose root causes,
             implement corrective actions, and ensure your critical initiatives
             achieve their intended business outcomes.
@@ -937,7 +937,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end services designed to rescue struggling projects, optimize
+          End-to-End services designed to rescue struggling projects, optimize
           performance, and ensure successful delivery of your most critical
           initiatives.
         </p>

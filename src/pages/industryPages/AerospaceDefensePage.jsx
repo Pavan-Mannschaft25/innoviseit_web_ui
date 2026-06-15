@@ -161,7 +161,7 @@ const SOLUTIONS_DATA = [
   {
     icon: FaProjectDiagram,
     title: "Project Management",
-    description: "End-to-end program oversight and delivery",
+    description: "End-to-End program oversight and delivery",
   },
   {
     icon: FaShieldAlt,
@@ -238,7 +238,7 @@ const HeroSection = () => (
         <span className="inline-block px-4 py-2 bg-yellow-500/20 text-yellow-400 rounded-full text-sm font-semibold mb-6">
           Trusted by Leading Aerospace Companies
         </span>
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Aerospace &{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
             Defense
@@ -344,7 +344,7 @@ const SolutionsSection = () => (
     <div className="text-center mb-16">
       <SectionTitle>Our Comprehensive Solutions</SectionTitle>
       <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-        End-to-end services designed specifically for aerospace and defense
+        End-to-End services designed specifically for aerospace and defense
         requirements.
       </p>
     </div>

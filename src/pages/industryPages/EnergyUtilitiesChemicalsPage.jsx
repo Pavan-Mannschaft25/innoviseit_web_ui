@@ -59,7 +59,7 @@
 //   centered = true,
 //   light = false,
 // }) => (
-//   <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+//   <div className={`mb-10 ${centered ? "text-center" : ""}`}>
 //     <h2
 //       className={`text-3xl lg:text-5xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
 //     >
@@ -225,7 +225,7 @@
 //     icon: FaNetworkWired,
 //     title: "Supply Chain Optimization",
 //     description:
-//       "End-to-end supply chain tracking, procurement intelligence, and logistics automation.",
+//       "End-to-End supply chain tracking, procurement intelligence, and logistics automation.",
 //   },
 // ];
 
@@ -316,7 +316,7 @@
 //             Chemicals
 //           </span>
 //         </h1>
-//         <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+//         <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
 //           Driving operational excellence through asset management, smart
 //           metering, energy trading, batch manufacturing, regulatory compliance,
 //           and supply chain solutions.
@@ -365,7 +365,7 @@
 //           <img
 //             src={img1}
 //             alt="Modern energy infrastructure showcasing power generation and smart grid technology"
-//             className="w-full h-[500px] object-cover"
+//             className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
 //           />
 //           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -504,7 +504,7 @@
 //             <img
 //               src={img2}
 //               alt="Advanced smart grid infrastructure and power distribution systems"
-//               className="w-full h-[450px] object-cover"
+//               className="w-full h-[200px] md:h-[450px] object-cover"
 //             />
 //             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 //           </div>
@@ -807,7 +807,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-5xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -973,7 +973,7 @@ const SOLUTIONS_DATA = [
     icon: FaNetworkWired,
     title: "Supply Chain Optimization",
     description:
-      "End-to-end digital thread for supply chain tracking, procurement intelligence, and logistics automation.",
+      "End-to-End digital thread for supply chain tracking, procurement intelligence, and logistics automation.",
   },
 ];
 
@@ -1063,7 +1063,7 @@ const HeroSection = () => (
             Chemicals
           </span>
         </h1>
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Empowering the future of heavy industry through intelligent asset
           management, smart grid integration, predictive maintenance, and
           seamless regulatory compliance across the energy and chemical value
@@ -1117,7 +1117,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Modern energy infrastructure showcasing power generation and smart grid technology"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/5 to-transparent"></div>
@@ -1247,7 +1247,7 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="Advanced smart grid infrastructure and power distribution systems"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           </div>
