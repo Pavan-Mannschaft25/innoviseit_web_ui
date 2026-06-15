@@ -1330,7 +1330,7 @@ const LeadershipTeam = () => {
           transition={{ delay: 0.3 }}
           className="text-center mt-10"
         >
-          <Link to="/about/leadership">
+          <Link to="/leadership">
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
