@@ -546,11 +546,11 @@
 // //           {/* Description */}
 // //           <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
 // //             At Innovise IT, we help organizations unlock the full potential of
-// //             SAP by delivering end-to-end consulting, implementation, and
+// //             SAP by delivering End-to-End consulting, implementation, and
 // //             optimization services powered by SAP S/4HANA.
 // //           </p>
 
-// //           <p className="text-base text-gray-400 leading-relaxed mb-10 max-w-xl">
+// //           <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-xl">
 // //             We combine deep domain expertise with proven methodologies to
 // //             modernize legacy systems, streamline operations, and drive real-time
 // //             business insights.
@@ -829,7 +829,7 @@
 // //         </h2>
 
 // //         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-// //           End-to-end solutions designed to maximize your SAP investment and
+// //           End-to-End solutions designed to maximize your SAP investment and
 // //           accelerate digital transformation.
 // //         </p>
 // //       </motion.header>
@@ -1811,7 +1811,7 @@
 //           {/* Description */}
 //           <p className="text-lg text-black/80 leading-relaxed mb-8 max-w-xl">
 //             At Innovise IT, we help organizations unlock the full potential of
-//             SAP by delivering end-to-end consulting, implementation, and
+//             SAP by delivering End-to-End consulting, implementation, and
 //             optimization services powered by SAP S/4HANA.
 //           </p>
 
@@ -2060,7 +2060,7 @@
 //         </h2>
 
 //         <p className="text-lg leading-relaxed text-black/70">
-//           End-to-end solutions designed to maximize your SAP investment and
+//           End-to-End solutions designed to maximize your SAP investment and
 //           accelerate digital transformation.
 //         </p>
 //       </motion.header>
@@ -3002,7 +3002,7 @@ const HeroSection = () => (
           {/* Description */}
           <p className="text-lg text-gray-100 leading-relaxed mb-8 max-w-xl">
             At Innovise IT, we help organizations unlock the full potential of
-            SAP by delivering end-to-end consulting, implementation, and
+            SAP by delivering End-to-End consulting, implementation, and
             optimization services powered by SAP S/4HANA.
           </p>
 
@@ -3111,7 +3111,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end solutions designed to maximize your SAP investment and
+          End-to-End solutions designed to maximize your SAP investment and
           accelerate digital transformation.
         </p>
       </motion.header>
@@ -3317,19 +3317,17 @@ const ApproachSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative group"
+              className="group relative"
             >
-              <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
-                {/* Step Number */}
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
-                  <span className="text-2xl font-black text-[#081C34]">
-                    {step.step}
-                  </span>
+              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+                {/* Icon Box */}
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+                  <step.icon className="text-2xl text-[#081C34]" />
                 </div>
 
-                {/* Icon */}
-                <div className="mb-5">
-                  <step.icon className="text-3xl text-[#FDB913]" />
+                {/* Watermark Step Number */}
+                <div className="absolute top-6 right-6 text-5xl font-black text-white/5">
+                  {step.step}
                 </div>
 
                 {/* Title */}
@@ -3347,7 +3345,7 @@ const ApproachSection = () => (
                   {step.description}
                 </p>
 
-                {/* Top Glow */}
+                {/* Hover Glow */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </motion.div>
@@ -3366,12 +3364,10 @@ const ApproachSection = () => (
             transition={{ delay: index * 0.1 }}
             className="flex gap-5"
           >
-            {/* Left Step */}
+            {/* Left Icon */}
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
-                <span className="text-lg font-black text-[#081C34]">
-                  {step.step}
-                </span>
+                <step.icon className="text-lg text-[#081C34]" />
               </div>
 
               {index < approachSteps.length - 1 && (
@@ -3381,11 +3377,9 @@ const ApproachSection = () => (
 
             {/* Content */}
             <div className="pb-8">
-              <div className="flex items-center gap-3 mb-2">
-                <step.icon className="text-lg text-[#FDB913]" />
-
-                <h4 className="font-bold text-lg text-white">{step.title}</h4>
-              </div>
+              <h4 className="font-bold text-lg mb-1 text-white">
+                {step.title}
+              </h4>
 
               <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
                 {step.subtitle}

@@ -838,7 +838,7 @@ const HeroSection = () => (
             Harness the transformative power of artificial intelligence,
             advanced engineering practices, and intelligent automation.
           </p>
-          <p className="text-base text-gray-400 leading-relaxed mb-10 max-w-xl">
+          <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-xl">
             From AI-powered development to enterprise-grade quality assurance,
             we deliver cutting-edge solutions that drive innovation.
           </p>

@@ -314,7 +314,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                                 {section.items.map((item, itemIdx) => (
                                   <li key={itemIdx}>
                                     <Link
-                                      // to={item.path}
+                                      to={item.path}
                                       onClick={onClose}
                                       className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200 ${
                                         currentPage === item.path
