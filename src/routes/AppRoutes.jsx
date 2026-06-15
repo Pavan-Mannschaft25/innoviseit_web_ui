@@ -7,7 +7,6 @@ import HomePage from "../pages/Home";
 import InnoviseThinkPage from "../pages/InnoviseThink";
 import CareersPage from "../pages/Careers";
 import ContactPage from "../pages/Contact";
-import { Toaster } from "react-hot-toast";
 import NotFound from "../components/common/NotFound";
 import ValuesPage from "../pages/aboutPages/ValuesPage";
 import DiversityInclusionPage from "../pages/aboutPages/DiversityInclusionPage";
@@ -43,32 +42,6 @@ const AppRoutes = () => {
 
   return (
     <>
-      <Toaster
-        position="top-right"
-        toastOptions={{
-          duration: 4000,
-          style: {
-            background: "#363636",
-            color: "#fff",
-            fontSize: "14px",
-            borderRadius: "12px",
-            padding: "16px",
-          },
-          success: {
-            iconTheme: {
-              primary: "#10B981",
-              secondary: "#fff",
-            },
-          },
-          error: {
-            iconTheme: {
-              primary: "#EF4444",
-              secondary: "#fff",
-            },
-          },
-        }}
-      />
-
       <Navbar />
 
       <AnimatePresence>
