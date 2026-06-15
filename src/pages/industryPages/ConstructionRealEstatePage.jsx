@@ -213,12 +213,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "On-time project delivery increased by up to 35%",
-  "Cost overruns reduced by 25% through better controls",
-  "Zero lost-time incidents with proactive safety management",
-  "Real-time visibility across all projects and sites",
-  "Streamlined collaboration between all stakeholders",
-  "Scalable systems supporting portfolio growth",
+  "Efficient project planning and execution",
+  "Better financial oversight and resource utilization",
+  "Proactive safety and compliance management",
+  "Centralized visibility across all project activities",
+  "Integrated collaboration across stakeholders",
+  "Flexible and scalable systems for future expansion",
 ];
 
 const PROCESS_STEPS = [

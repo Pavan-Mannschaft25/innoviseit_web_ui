@@ -978,12 +978,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Asset reliability improved by up to 45% through IoT predictive maintenance",
-  "Zero safety incidents with proactive EHS risk management frameworks",
-  "100% regulatory compliance with automated, real-time reporting engines",
-  "Batch manufacturing efficiency increased by up to 40% via AI optimization",
-  "Real-time visibility across global supply chains and smart grid networks",
-  "Operational costs reduced by 25% through intelligent process automation",
+  "Improved asset performance and operational reliability",
+  "Advanced health, safety, and environmental management",
+  "Simplified regulatory compliance and governance",
+  "Data-driven process optimization and production planning",
+  "Connected visibility across assets, facilities, and supply chains",
+  "Scalable digital solutions supporting sustainable growth",
 ];
 
 const PROCESS_STEPS = [

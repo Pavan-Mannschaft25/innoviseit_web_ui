@@ -213,12 +213,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Demand forecasting accuracy improved by up to 40%",
-  "Supply chain costs reduced by 20% through optimization",
-  "Trade promotion ROI increased by 35%",
-  "Seamless omnichannel experience driving 25% higher customer satisfaction",
-  "Real-time dashboards enabling faster decision-making",
-  "Scalable platforms supporting rapid business growth",
+  "Improved demand forecasting and inventory planning",
+  "Optimized supply chain operations and efficiency",
+  "Enhanced trade promotion management and performance",
+  "Seamless omnichannel customer experiences",
+  "Real-time insights for faster decision-making",
+  "Scalable platforms that support business growth",
 ];
 
 const PROCESS_STEPS = [
