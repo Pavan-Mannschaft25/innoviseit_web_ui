@@ -1630,9 +1630,8 @@ const LeaderCard = ({ leader, index }) => {
       className="group relative"
     >
       <div
-        className="relative rounded-2xl overflow-hidden transition-all duration-700 ease-out h-full"
+        className="relative rounded-2xl overflow-hidden transition-all duration-700 ease-out h-full bg-white"
         style={{
-          background: "white",
           border: isHovered
             ? `2px solid ${BRAND.gold.primary}`
             : "1px solid rgba(11,29,51,0.08)",
@@ -1648,60 +1647,38 @@ const LeaderCard = ({ leader, index }) => {
           style={{ background: BRAND.gold.gradient }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5 }}
         />
 
-        {/* ================================ */}
-        {/* 🖼️ FULL PHOTO IMAGE SECTION     */}
-        {/* ================================ */}
-        <div className="relative h-[340px] lg:h-[400px] overflow-hidden">
-          {/* Leader Image - Full Size Photo */}
+        {/* ================================= */}
+        {/* IMAGE SECTION */}
+        {/* ================================= */}
+        <div className="relative h-[380px] md:h-[400px] lg:h-[400px] overflow-hidden">
           <img
             src={leader.image}
             alt={`${leader.name} - ${leader.role}`}
-            className={`w-full h-full object-cover object-top transition-all duration-800 ease-out ${
-              isHovered ? "scale-110" : "scale-100"
+            className={`w-full h-full object-cover object-top transition-all duration-700 ${
+              isHovered ? "scale-105" : "scale-100"
             }`}
             loading="lazy"
           />
 
-          {/* Gradient Overlay - Dark at bottom for text readability */}
+          {/* Soft Gradient */}
           <div
-            className={`absolute inset-0 transition-opacity duration-500 ${
-              isHovered ? "opacity-95" : "opacity-80"
-            }`}
+            className="absolute inset-x-0 bottom-0 h-28"
             style={{
               background:
-                "linear-gradient(to bottom, transparent 15%, rgba(11,29,51,0.85) 65%, #12324f 100%)",
+                "linear-gradient(to top, rgba(18,50,79,0.45), transparent)",
             }}
           />
 
-          {/* Quote Icon (appears on hover) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
-            animate={{
-              opacity: isHovered ? 1 : 0,
-              scale: isHovered ? 1 : 0.5,
-              rotate: isHovered ? 0 : -15,
-            }}
-            transition={{ duration: 0.4, type: "spring" }}
-            className="absolute top-5 right-5 w-12 h-12 rounded-xl flex items-center justify-center backdrop-blur-md z-20"
-            style={{
-              background: `${BRAND.gold.primary}ee`,
-              boxShadow: "0 8px 24px rgba(253,185,19,0.35)",
-            }}
-          >
-            <FaQuoteLeft className="text-[#12324f] text-lg" />
-          </motion.div>
-
-          {/* Experience Badge - Top Left */}
-          <div className="absolute top-5 left-5 z-20">
+          {/* Experience Badge */}
+          <div className="absolute top-4 left-1 z-20">
             <span
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md"
               style={{
-                background: "rgba(255,255,255,0.15)",
+                background: "rgba(18,50,79,0.85)",
                 color: "white",
-                border: "1px solid rgba(255,255,255,0.25)",
               }}
             >
               <FaGraduationCap className="text-[#FFD54F]" />
@@ -1709,137 +1686,100 @@ const LeaderCard = ({ leader, index }) => {
             </span>
           </div>
 
-          {/* ================================ */}
-          {/* 📝 CONTENT OVERLAY ON IMAGE      */}
-          {/* ================================ */}
-          <div className="absolute inset-x-0 bottom-0 p-6 lg:p-6 z-10">
-            {/* Name */}
-            <h3
-              className="text-2xl lg:text-3xl font-bold mb-2 transition-all duration-300"
-              style={{ color: "white" }}
-            >
-              {leader.name}
-            </h3>
-
-            {/* Role */}
-            <p
-              className="text-base font-semibold uppercase tracking-wider transition-all duration-300"
-              style={{ color: BRAND.gold.light }}
-            >
-              {leader.role}
-            </p>
-
-            {/* Quote Text (appears on hover) */}
-            <AnimatePresence>
-              {isHovered && (
-                <motion.p
-                  initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-                  animate={{ opacity: 1, height: "auto", marginBottom: "16px" }}
-                  exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="text-sm leading-relaxed overflow-hidden"
-                  style={{ color: "rgba(255,255,255,0.9)" }}
-                >
-                  "{leader.quote}"
-                </motion.p>
-              )}
-            </AnimatePresence>
-
-            {/* Expertise Tags */}
-            {/* <div className="flex flex-wrap gap-2 mb-5">
-              {leader.expertise.slice(0, 3).map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="px-3 py-1.5 rounded-lg text-xs font-semibold backdrop-blur-sm transition-all duration-300"
-                  style={{
-                    background: isHovered
-                      ? `${BRAND.gold.primary}30`
-                      : "rgba(255,255,255,0.12)",
-                    color: isHovered ? "#FFFFFF" : "rgba(255,255,255,0.95)",
-                    border: `1px solid ${isHovered ? BRAND.gold.primary + "60" : "rgba(255,255,255,0.2)"}`,
-                  }}
-                >
-                  {skill}
-                </span>
-              ))}
-            </div> */}
-
-            {/* Social Links (appear on hover) */}
-            <AnimatePresence>
-              {isHovered && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ delay: 0.1, duration: 0.4 }}
-                  className="flex gap-3 pt-4"
-                  style={{ borderTop: "1px solid rgba(255,255,255,0.2)" }}
-                >
-                  {/* LinkedIn */}
-                  <a
-                    href={leader.social.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
-                    style={{
-                      background: "#0077B5",
-                      color: "white",
-                    }}
-                    aria-label={`${leader.name} LinkedIn`}
-                  >
-                    <FaLinkedinIn className="text-base" />
-                  </a>
-
-                  {/* Twitter */}
-                  {/* <a
-                    href={leader.social.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
-                    style={{
-                      background: "#1DA1F2",
-                      color: "white",
-                    }}
-                    aria-label={`${leader.name} Twitter`}
-                  >
-                    <FaTwitter className="text-base" />
-                  </a> */}
-
-                  {/* Email */}
-                  {/* <a
-                    href={`mailto:${leader.email}`}
-                    className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg"
-                    style={{
-                      background: BRAND.navy.dark,
-                      color: "white",
-                    }}
-                    aria-label={`Email ${leader.name}`}
-                  >
-                    <FaEnvelope className="text-base" />
-                  </a> */}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+          {/* Quote Icon */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{
+              opacity: isHovered ? 1 : 0,
+              scale: isHovered ? 1 : 0.5,
+            }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-4 right-4 w-12 h-12 rounded-xl flex items-center justify-center backdrop-blur-md"
+            style={{
+              background: `${BRAND.gold.primary}ee`,
+              boxShadow: "0 8px 24px rgba(253,185,19,0.35)",
+            }}
+          >
+            <FaQuoteLeft className="text-[#12324f] text-lg" />
+          </motion.div>
         </div>
 
-        {/* Bottom Bio Bar (visible when not hovered) */}
-        {!isHovered && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="px-6 pb-5 pt-3"
-            style={{ borderTop: "1px solid rgba(11,29,51,0.06)" }}
+        {/* ================================= */}
+        {/* CONTENT SECTION */}
+        {/* ================================= */}
+        <div className="p-5 lg:p-6">
+          {/* Name */}
+          <h3
+            className="text-xl lg:text-2xl font-bold mb-2"
+            style={{ color: BRAND.navy.dark }}
           >
-            <p
-              className="text-xs leading-relaxed line-clamp-2"
-              style={{ color: "#64748B" }}
+            {leader.name}
+          </h3>
+
+          {/* Role */}
+          <p
+            className="text-sm font-semibold uppercase tracking-wider mb-4"
+            style={{ color: BRAND.gold.primary }}
+          >
+            {leader.role}
+          </p>
+
+          {/* Bio */}
+          <p
+            className="text-sm leading-relaxed mb-5"
+            style={{ color: "#64748B" }}
+          >
+            {leader.bio}
+          </p>
+
+          {/* Quote on Hover */}
+          <AnimatePresence>
+            {isHovered && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div
+                  className="mb-5 p-4 rounded-xl"
+                  style={{
+                    background: "rgba(253,185,19,0.08)",
+                    border: `1px solid ${BRAND.gold.primary}30`,
+                  }}
+                >
+                  <p
+                    className="text-sm italic leading-relaxed"
+                    style={{ color: BRAND.navy.dark }}
+                  >
+                    "{leader.quote}"
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Social Links */}
+          <div
+            className="flex items-center gap-3 pt-4"
+            style={{
+              borderTop: "1px solid rgba(11,29,51,0.08)",
+            }}
+          >
+            <a
+              href={leader.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 hover:-translate-y-1"
+              style={{
+                background: "#0077B5",
+                color: "white",
+              }}
             >
-              {leader.bio}
-            </p>
-          </motion.div>
-        )}
+              <FaLinkedinIn className="text-base" />
+            </a>
+          </div>
+        </div>
       </div>
     </motion.div>
   );

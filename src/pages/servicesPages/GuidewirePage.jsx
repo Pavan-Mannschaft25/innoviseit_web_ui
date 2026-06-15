@@ -3642,7 +3642,7 @@ const HeroSection = () => (
                 border: `1px solid ${BRAND.gold.primary}30`,
               }}
             >
-              <FaShieldAlt
+              <FaCloud
                 className="text-lg"
                 style={{ color: BRAND.gold.primary }}
               />
