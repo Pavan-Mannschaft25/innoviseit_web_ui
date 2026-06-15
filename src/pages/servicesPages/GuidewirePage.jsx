@@ -3626,7 +3626,7 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid grid-cols-1 gap-12 lg:gap-20 items-center">
         {/* LEFT - Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -3682,13 +3682,13 @@ const HeroSection = () => (
           </h1>
 
           {/* Description */}
-          <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
+          <p className="text-lg text-gray-100 leading-relaxed mb-6 max-w-xl">
             Transform your insurance operations with expert Guidewire
             implementation, customization, and support services. From
             PolicyCenter to ClaimCenter, we deliver end-to-end excellence.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+          <p className="text-base text-gray-100 leading-relaxed mb-8 max-w-xl">
             Our certified consultants bring deep domain expertise across P&C
             insurance lines, ensuring your Guidewire investment delivers maximum
             ROI.
@@ -3720,336 +3720,6 @@ const HeroSection = () => (
               </div>
             ))}
           </div> */}
-        </motion.div>
-
-        {/* RIGHT - Guidewire Dashboard Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(59,130,246,0.2)`,
-            }}
-          >
-            {/* Mock Guidewire Interface */}
-            <div className="absolute inset-0 p-6 flex flex-col">
-              {/* Header Bar */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-3 text-xs text-white/40 font-mono">
-                    Guidewire Suite v10.x
-                  </span>
-                </div>
-                <LiveIndicator />
-              </div>
-
-              {/* Suite Navigation Tabs */}
-              {/* <div className="flex gap-2 mb-4 overflow-x-auto">
-                {[
-                  "PolicyCenter",
-                  "ClaimCenter",
-                  "BillingCenter",
-                  "ContactManager",
-                ].map((tab, idx) => (
-                  <div
-                    key={tab}
-                    className={`px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
-                      idx === 0
-                        ? "bg-[#FDB913]/20 text-[#FDB913] border border-[#FDB913]/30"
-                        : "bg-white/5 text-white/50 border border-white/10"
-                    }`}
-                  >
-                    {tab}
-                  </div>
-                ))}
-              </div> */}
-
-              {/* Main Metrics Row */}
-              <div className="grid grid-cols-4 gap-3 mb-4">
-                {[
-                  {
-                    label: "POLICIES",
-                    value: "12,458",
-                    status: "active",
-                    change: "+234",
-                  },
-                  {
-                    label: "CLAIMS",
-                    value: "1,847",
-                    status: "processing",
-                    change: "-89",
-                  },
-                  {
-                    label: "PAYMENTS",
-                    value: "$2.4M",
-                    status: "collected",
-                    change: "+$180K",
-                  },
-                  {
-                    label: "UPTIME",
-                    value: "99.99%",
-                    status: "excellent",
-                    change: "+0.01%",
-                  },
-                ].map((metric, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + idx * 0.1 }}
-                    className="p-3 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(255,255,255,0.06)",
-                    }}
-                  >
-                    <div className="text-[10px] text-white/35 uppercase tracking-wider mb-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-lg font-black text-white">
-                      {metric.value}
-                    </div>
-                    <div
-                      className={`text-[10px] font-medium ${metric.change.startsWith("+") ? "text-green-400" : "text-blue-400"}`}
-                    >
-                      {metric.change} today
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Chart Area - Policy Performance */}
-              <div
-                className="flex-1 rounded-xl p-4 mb-4"
-                style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                }}
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs text-white/40">
-                    POLICY ISSUANCE TREND
-                  </span>
-                  <div className="flex gap-3">
-                    <span className="text-[10px] text-white/30">Auto</span>
-                    <span className="text-[10px] text-white/30">Home</span>
-                    <span className="text-[10px] text-white/30">
-                      Commercial
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative h-24">
-                  <svg
-                    viewBox="0 0 400 80"
-                    className="w-full h-full"
-                    preserveAspectRatio="none"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="gwGradient"
-                        x1="0%"
-                        y1="0%"
-                        x2="0%"
-                        y2="100%"
-                      >
-                        <stop
-                          offset="0%"
-                          stopColor="#FDB913"
-                          stopOpacity="0.3"
-                        />
-                        <stop
-                          offset="100%"
-                          stopColor="#FDB913"
-                          stopOpacity="0"
-                        />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M0,55 Q50,40 100,45 T200,30 T300,35 T400,20"
-                      fill="url(#gwGradient)"
-                      stroke="#FDB913"
-                      strokeWidth="2"
-                      vectorEffect="non-scaling-stroke"
-                    />
-                    <path
-                      d="M0,50 Q50,35 100,42 T200,25 T300,32 T400,15"
-                      fill="none"
-                      stroke="#3B82F6"
-                      strokeWidth="1.5"
-                      strokeDasharray="4,4"
-                      vectorEffect="non-scaling-stroke"
-                      opacity="0.6"
-                    />
-                  </svg>
-
-                  <motion.div
-                    animate={{ cx: [0, 380] }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="absolute top-0 w-2 h-2 rounded-full"
-                    style={{
-                      background: "#FDB913",
-                      boxShadow: "0 0 10px #FDB913",
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* Bottom Activity Feed */}
-              {/* <div className="grid grid-cols-2 gap-3">
-                <div
-                  className="p-3 rounded-xl"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <div className="text-[10px] text-white/35 uppercase tracking-wider mb-2">
-                    Recent Transactions
-                  </div>
-                  <div className="space-y-1.5">
-                    {[
-                      {
-                        time: "1m ago",
-                        action: "Policy #PL-2024-8847 Issued",
-                        type: "success",
-                      },
-                      {
-                        time: "3m ago",
-                        action: "Claim #CL-2024-3321 Opened",
-                        type: "warning",
-                      },
-                      {
-                        time: "8m ago",
-                        action: "Payment $4,500 Received",
-                        type: "success",
-                      },
-                    ].map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <div
-                          className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${activity.type === "success" ? "bg-green-400" : "bg-yellow-400"}`}
-                        />
-                        <div>
-                          <div className="text-[11px] text-white/70">
-                            {activity.action}
-                          </div>
-                          <div className="text-[9px] text-white/30">
-                            {activity.time}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div
-                  className="p-3 rounded-xl"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <div className="text-[10px] text-white/35 uppercase tracking-wider mb-2">
-                    System Health
-                  </div>
-                  <div className="space-y-2">
-                    {[
-                      { name: "PolicyCenter", pct: 99 },
-                      { name: "ClaimCenter", pct: 97 },
-                      { name: "BillingCenter", pct: 98 },
-                      { name: "Integration Hub", pct: 95 },
-                    ].map((sys, idx) => (
-                      <div key={idx}>
-                        <div className="flex justify-between text-[10px] mb-1">
-                          <span className="text-white/50">{sys.name}</span>
-                          <span className="text-white/70 font-medium">
-                            {sys.pct}%
-                          </span>
-                        </div>
-                        <div
-                          className="h-1 rounded-full overflow-hidden"
-                          style={{ background: "rgba(255,255,255,0.1)" }}
-                        >
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${sys.pct}%` }}
-                            transition={{
-                              delay: 0.5 + idx * 0.1,
-                              duration: 0.8,
-                            }}
-                            className="h-full rounded-full"
-                            style={{
-                              background:
-                                sys.pct > 97
-                                  ? "#10B981"
-                                  : sys.pct > 94
-                                    ? "#F59E0B"
-                                    : "#EF4444",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div> */}
-            </div>
-
-            {/* Floating Stats Card */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-              style={{ border: `2px solid ${BRAND.gold.primary}` }}
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: `${BRAND.gold.primary}15` }}
-                >
-                  <FaShieldAlt
-                    className="text-xl"
-                    style={{ color: BRAND.gold.primary }}
-                  />
-                </div>
-                <div>
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: BRAND.navy.dark }}
-                  >
-                    Suite
-                  </div>
-                  <div className="text-xs text-gray-500">
-                    Full Implementation
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Decorative Elements */}
-          <div
-            className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl -z-10 opacity-60"
-            style={{
-              background: "linear-gradient(135deg, #3B82F6, transparent)",
-            }}
-          />
-          <div
-            className="absolute -bottom-4 -left-8 w-32 h-32 rounded-full -z-10 opacity-40"
-            style={{ background: BRAND.gold.primary }}
-          />
         </motion.div>
       </div>
     </div>
@@ -4214,7 +3884,7 @@ const BenefitsSection = () => (
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             {/* Guidewire Suite Visual */}
             <div className="absolute inset-0 p-8 flex flex-col justify-center">
-              <div className="grid grid-cols-3 gap-4 h-full">
+              <div className="grid grid-cols-2 gap-4 h-full">
                 {/* Policy Center Visual */}
                 <div
                   className="rounded-xl p-4 flex flex-col"
@@ -4318,74 +3988,6 @@ const BenefitsSection = () => (
                     <div className="text-[10px] text-white/40">Claims Flow</div>
                   </div>
                 </div>
-
-                {/* Billing Center Visual */}
-                <div
-                  className="rounded-xl p-4 flex flex-col"
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <FaMoneyCheckAlt
-                      className="text-sm"
-                      style={{ color: "#8B5CF6" }}
-                    />
-                    <span className="text-xs text-white/50 font-medium">
-                      BILLINGCENTER
-                    </span>
-                  </div>
-                  <div className="flex-1 space-y-3">
-                    {[
-                      { label: "Direct Bill", val: "$1.2M", good: true },
-                      { label: "Agency Bill", val: "$890K", good: true },
-                      { label: "Past Due", val: "$45K", good: false },
-                    ].map((item, i) => (
-                      <div
-                        key={i}
-                        className="p-2 rounded-lg"
-                        style={{ background: "rgba(255,255,255,0.03)" }}
-                      >
-                        <div className="flex justify-between text-[10px] mb-1">
-                          <span className="text-white/40">{item.label}</span>
-                          <span
-                            className={`font-medium ${item.good ? "text-green-400" : "text-yellow-400"}`}
-                          >
-                            {item.val}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Status */}
-              <div
-                className="mt-4 flex items-center justify-between px-2 py-3 rounded-xl"
-                style={{
-                  background: "rgba(253,185,19,0.1)",
-                  border: "1px solid rgba(253,185,19,0.2)",
-                }}
-              >
-                <div className="flex items-center gap-2">
-                  <motion.span
-                    animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                    className="w-2 h-2 rounded-full"
-                    style={{ background: "#FDB913" }}
-                  />
-                  <span
-                    className="text-xs font-medium"
-                    style={{ color: "#FDB913" }}
-                  >
-                    All Systems Integrated
-                  </span>
-                </div>
-                <span className="text-[10px] text-white/30">
-                  Real-time Sync
-                </span>
               </div>
             </div>
 
@@ -4462,7 +4064,7 @@ const BenefitsSection = () => (
             knowledge to deliver solutions that drive real business outcomes.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}

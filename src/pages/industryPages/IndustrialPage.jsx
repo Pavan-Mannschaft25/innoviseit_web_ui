@@ -403,7 +403,7 @@ const HeroSection = () => (
         </div>
 
         {/* Floating IIoT Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
@@ -417,10 +417,10 @@ const HeroSection = () => (
               <div className="text-sm text-gray-500">Connected</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Floating Robot Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
@@ -432,7 +432,7 @@ const HeroSection = () => (
               <div className="text-xs text-gray-300">Ready</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Decorative Corner Elements */}
         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
@@ -539,24 +539,6 @@ const BenefitsSection = () => (
               className="w-full h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
-          </div>
-
-          {/* Overlay Stats Card */}
-          <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">45%</div>
-                <div className="text-xs text-gray-600 mt-1">Less Downtime</div>
-              </div>
-              <div className="border-x border-[#FFD700]/30">
-                <div className="text-3xl font-bold text-[#0a1628]">30%</div>
-                <div className="text-xs text-gray-600 mt-1">OEE Increase</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">40%</div>
-                <div className="text-xs text-gray-600 mt-1">Fewer Defects</div>
-              </div>
-            </div>
           </div>
 
           {/* Corner Accents */}
