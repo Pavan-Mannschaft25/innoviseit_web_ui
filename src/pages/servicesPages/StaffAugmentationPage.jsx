@@ -855,14 +855,14 @@ const HeroSection = () => (
             certified SAP consultants and skilled engineering professionals.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
             Whether you need to scale quickly, fill critical skill gaps, or
             accelerate project delivery— we help you build the right team,
             exactly when you need it.
           </p>
 
           {/* Feature Tags */}
-          <div className="flex flex-wrap gap-3 mb-8">
+          {/* <div className="flex flex-wrap gap-3 mb-8">
             {[
               " Quick Deployment",
               " Skill Matched",
@@ -884,7 +884,7 @@ const HeroSection = () => (
                 {tag}
               </motion.span>
             ))}
-          </div>
+          </div> */}
 
           {/* Trust Indicators */}
           {/* <div

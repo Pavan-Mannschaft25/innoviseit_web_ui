@@ -579,7 +579,7 @@ const HeroSection = () => (
             optimization.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
             We help organizations reduce downtime, improve performance, and
             adapt quickly to evolving business needs.
           </p>
@@ -665,7 +665,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end application support designed to keep your systems running
+          End-to-End application support designed to keep your systems running
           at peak performance around the clock.
         </p>
       </motion.header>

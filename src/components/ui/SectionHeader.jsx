@@ -14,7 +14,7 @@
 //     whileInView={{ opacity: 1, y: 0 }}
 //     viewport={{ once: true }}
 //     transition={{ duration: 0.6 }}
-//     className={`mb-16 ${centered ? "text-center" : ""} ${className}`}
+//     className={`mb-10 ${centered ? "text-center" : ""} ${className}`}
 //   >
 //     {/* {badge && (
 //       <span className="inline-block px-4 py-2 rounded-full text-sm font-semibold bg-primary-100 text-primary-700 mb-4">

@@ -2,7 +2,7 @@
 // //   {
 // //     id: 1,
 // //     title: "SAP Consulting & Implementation",
-// //     shortDesc: "End-to-end SAP transformation expertise",
+// //     shortDesc: "End-to-End SAP transformation expertise",
 // //     description:
 // //       "Comprehensive SAP consulting services covering strategy, implementation, and optimization. Our certified consultants deliver S/4HANA migrations, ECC upgrades, and custom development with minimal business disruption.",
 // //     icon: "FaCogs",
@@ -70,7 +70,7 @@
 // //     title: "Cloud Solutions & Engineering",
 // //     shortDesc: "Modern cloud architecture & migration",
 // //     description:
-// //       "End-to-end cloud transformation from strategy to execution. We architect, migrate, and manage cloud-native applications across AWS, Azure, GCP, and hybrid environments.",
+// //       "End-to-End cloud transformation from strategy to execution. We architect, migrate, and manage cloud-native applications across AWS, Azure, GCP, and hybrid environments.",
 // //     icon: "FaCloud",
 // //     features: [
 // //       "Cloud Strategy & Assessment",
@@ -145,7 +145,7 @@
 //     id: 1,
 //     title: "SAP Transformation",
 //     description:
-//       "End-to-end SAP transformation including S/4HANA migration, cloud integration, and intelligent enterprise solutions.",
+//       "End-to-End SAP transformation including S/4HANA migration, cloud integration, and intelligent enterprise solutions.",
 //     image: img1,
 //     link: "/services/sap",
 //   },
@@ -203,7 +203,7 @@
 //     id: 1,
 //     title: "SAP Consulting & Implementation",
 //     description:
-//       "End-to-end SAP transformation including S/4HANA migration, process optimization, and intelligent enterprise solutions.",
+//       "End-to-End SAP transformation including S/4HANA migration, process optimization, and intelligent enterprise solutions.",
 //     image: img1,
 //     link: "/services/sap-consulting",
 //   },
@@ -310,7 +310,7 @@ export const servicesData = [
   //   category: "SAP Solutions",
   //   title: "SAP Consulting & Implementation",
   //   description:
-  //     "End-to-end SAP transformation including S/4HANA migration, process optimization, and intelligent enterprise solutions.",
+  //     "End-to-End SAP transformation including S/4HANA migration, process optimization, and intelligent enterprise solutions.",
   //   image: img1,
   //   readTime: "Enterprise Solutions",
   //   date: "Innovise IT",

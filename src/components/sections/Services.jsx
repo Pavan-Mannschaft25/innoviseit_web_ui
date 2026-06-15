@@ -33,7 +33,7 @@
 // // // // // // // // //         <SectionHeader
 // // // // // // // // //           badge="Our Expertise"
 // // // // // // // // //           title="Comprehensive Technology Services"
-// // // // // // // // //           subtitle="End-to-end solutions designed to accelerate your digital transformation journey and drive sustainable business growth"
+// // // // // // // // //           subtitle="End-to-End solutions designed to accelerate your digital transformation journey and drive sustainable business growth"
 // // // // // // // // //         />
 
 // // // // // // // // //         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -76,7 +76,7 @@
 // // // // // // // //         <SectionHeader
 // // // // // // // //           badge="Our Expertise"
 // // // // // // // //           title="Comprehensive Technology Services"
-// // // // // // // //           subtitle="End-to-end solutions designed to accelerate your digital transformation journey"
+// // // // // // // //           subtitle="End-to-End solutions designed to accelerate your digital transformation journey"
 // // // // // // // //         />
 
 // // // // // // // //         {/* Cards Grid */}
@@ -115,7 +115,7 @@
 // // // // // // //         <SectionHeader
 // // // // // // //           badge="Our Expertise"
 // // // // // // //           title="Comprehensive Technology Services"
-// // // // // // //           subtitle="End-to-end solutions designed to accelerate your digital transformation journey"
+// // // // // // //           subtitle="End-to-End solutions designed to accelerate your digital transformation journey"
 // // // // // // //         />
 
 // // // // // // //         {/* 🔥 Swiper Slider */}
@@ -210,7 +210,7 @@
 // // // // // //         {/* Header */}
 // // // // // //         <SectionHeader
 // // // // // //           title="Comprehensive Technology Services"
-// // // // // //           // subtitle="End-to-end solutions designed to accelerate your digital transformation journey"
+// // // // // //           // subtitle="End-to-End solutions designed to accelerate your digital transformation journey"
 // // // // // //         />
 
 // // // // // //         {/* Slider Container */}
@@ -1010,7 +1010,7 @@ export default Services;
 //       tag: "AMS",
 //       title: "Application Maintenance Services",
 //       description:
-//         "End-to-end AMS support ensuring stability, performance, and continuous improvement of your SAP landscape.",
+//         "End-to-End AMS support ensuring stability, performance, and continuous improvement of your SAP landscape.",
 //       link: "/services/app-maintenance",
 //       features: ["L1-L3 Support", "Monitoring", "Upgrades"],
 //     },

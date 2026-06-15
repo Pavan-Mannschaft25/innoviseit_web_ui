@@ -103,7 +103,7 @@ const servicesData = [
     icon: FaShieldVirus,
     title: "Vulnerability Management",
     description:
-      "End-to-end lifecycle management of security flaws—from identification and prioritization to remediation and verification.",
+      "End-to-End lifecycle management of security flaws—from identification and prioritization to remediation and verification.",
     features: ["Risk Prioritization", "Patch Management", "Zero-Day Tracking"],
     color: "#EF4444",
     status: "CRITICAL",
@@ -557,7 +557,7 @@ const HeroSection = () => (
             applications.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-8">
+          {/* <div className="flex flex-wrap gap-3 mb-8">
             {[
               " SAST & DAST",
               " SonarQube",
@@ -579,7 +579,7 @@ const HeroSection = () => (
                 {tag}
               </motion.span>
             ))}
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>

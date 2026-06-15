@@ -645,7 +645,7 @@
 //             ensure your applications are secure, scalable, and high-performing.
 //           </p>
 
-//           <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+//           <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
 //             Our intelligent testing approach accelerates release cycles while
 //             maintaining the highest standards of quality.
 //           </p>
@@ -1104,7 +1104,7 @@
 //         </h2>
 
 //         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-//           End-to-end quality assurance services powered by artificial
+//           End-to-End quality assurance services powered by artificial
 //           intelligence for faster, smarter testing.
 //         </p>
 //       </motion.header>
@@ -2330,7 +2330,7 @@ const HeroSection = () => (
             flawless.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-8">
+          {/* <div className="flex flex-wrap gap-3 mb-8">
             {[
               " Automated Frameworks",
               " OWASP Security",
@@ -2352,7 +2352,7 @@ const HeroSection = () => (
                 {tag}
               </motion.span>
             ))}
-          </div>
+          </div> */}
 
           {/* <div
             className="flex flex-wrap items-center gap-6 mt-10 pt-8"
@@ -2418,7 +2418,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end quality assurance services covering every aspect of your
+          End-to-End quality assurance services covering every aspect of your
           application lifecycle.
         </p>
       </motion.header>
