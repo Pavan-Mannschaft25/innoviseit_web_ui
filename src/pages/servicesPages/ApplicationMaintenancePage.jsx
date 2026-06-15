@@ -506,7 +506,7 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid lg:grid-cols-1 gap-12 lg:gap-20 items-center">
         {/* LEFT - Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -611,319 +611,6 @@ const HeroSection = () => (
             ))}
           </div> */}
         </motion.div>
-
-        {/* RIGHT - Monitoring Dashboard Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          {/* Main Dashboard Container */}
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(16,185,129,0.2)`,
-            }}
-          >
-            {/* Replace with actual image: */}
-            {/* <img src="/images/monitoring-dashboard.jpg" alt="Application Monitoring Dashboard" className="w-full h-full object-cover" /> */}
-
-            {/* Mock Dashboard Content */}
-            <div className="absolute inset-0 p-6 flex flex-col">
-              {/* Header Bar */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-3 text-xs text-white/40 font-mono">
-                    NOC Dashboard v2.4
-                  </span>
-                </div>
-
-                {/* Live Time */}
-                <LiveIndicator />
-              </div>
-
-              {/* Main Metrics Row */}
-              <div className="grid grid-cols-4 gap-3 mb-4">
-                {[
-                  {
-                    label: "SYSTEMS",
-                    value: "156",
-                    status: "healthy",
-                    change: "+2",
-                  },
-                  {
-                    label: "ALERTS",
-                    value: "3",
-                    status: "warning",
-                    change: "-5",
-                  },
-                  {
-                    label: "UPTIME",
-                    value: "99.97%",
-                    status: "good",
-                    change: "+0.02%",
-                  },
-                  {
-                    label: "RESPONSE",
-                    value: "12s",
-                    status: "good",
-                    change: "-3s",
-                  },
-                ].map((metric, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + idx * 0.1 }}
-                    className="p-3 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: `1px solid rgba(255,255,255,0.06)`,
-                    }}
-                  >
-                    <div className="text-[10px] text-white/35 uppercase tracking-wider mb-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-lg font-black text-white">
-                      {metric.value}
-                    </div>
-                    <div
-                      className={`text-[10px] font-medium ${metric.change.startsWith("+") ? "text-green-400" : metric.status === "warning" ? "text-yellow-400" : "text-green-400"}`}
-                    >
-                      {metric.change} today
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Chart Area */}
-              <div
-                className="flex-1 rounded-xl p-4 mb-4"
-                style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                }}
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs text-white/40">
-                    APPLICATION PERFORMANCE
-                  </span>
-                  <div className="flex gap-3">
-                    <span className="text-[10px] text-white/30">CPU</span>
-                    <span className="text-[10px] text-white/30">Memory</span>
-                    <span className="text-[10px] text-white/30">Network</span>
-                  </div>
-                </div>
-
-                {/* Mock Line Chart */}
-                <div className="relative h-24">
-                  <svg
-                    viewBox="0 0 400 80"
-                    className="w-full h-full"
-                    preserveAspectRatio="none"
-                  >
-                    <defs>
-                      <linearGradient
-                        id="lineGradient"
-                        x1="0%"
-                        y1="0%"
-                        x2="0%"
-                        y2="100%"
-                      >
-                        <stop
-                          offset="0%"
-                          stopColor="#10B981"
-                          stopOpacity="0.3"
-                        />
-                        <stop
-                          offset="100%"
-                          stopColor="#10B981"
-                          stopOpacity="0"
-                        />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M0,60 Q50,45 100,50 T200,35 T300,40 T400,25"
-                      fill="url(#lineGradient)"
-                      stroke="#10B981"
-                      strokeWidth="2"
-                      vectorEffect="non-scaling-stroke"
-                    />
-                    <path
-                      d="M0,55 Q50,40 100,48 T200,30 T300,38 T400,20"
-                      fill="none"
-                      stroke="#3B82F6"
-                      strokeWidth="1.5"
-                      strokeDasharray="4,4"
-                      vectorEffect="non-scaling-stroke"
-                      opacity="0.6"
-                    />
-                  </svg>
-
-                  {/* Animated Pulse Point */}
-                  <motion.div
-                    animate={{ cx: [0, 380] }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="absolute top-0 w-2 h-2 rounded-full"
-                    style={{
-                      background: "#10B981",
-                      boxShadow: "0 0 10px #10B981",
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* Bottom Activity Feed */}
-              {/* <div className="grid grid-cols-2 gap-3">
-                <div
-                  className="p-3 rounded-xl"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <div className="text-[10px] text-white/35 uppercase tracking-wider mb-2">
-                    Recent Activity
-                  </div>
-                  <div className="space-y-1.5">
-                    {[
-                      {
-                        time: "2m ago",
-                        action: "Auto-scaled Server Group A",
-                        type: "success",
-                      },
-                      {
-                        time: "5m ago",
-                        action: "Applied Security Patch v2.1",
-                        type: "info",
-                      },
-                      {
-                        time: "12m ago",
-                        action: "Resolved Incident #4521",
-                        type: "success",
-                      },
-                    ].map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <div
-                          className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${activity.type === "success" ? "bg-green-400" : "bg-blue-400"}`}
-                        />
-                        <div>
-                          <div className="text-[11px] text-white/70">
-                            {activity.action}
-                          </div>
-                          <div className="text-[9px] text-white/30">
-                            {activity.time}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div
-                  className="p-3 rounded-xl"
-                  style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <div className="text-[10px] text-white/35 uppercase tracking-wider mb-2">
-                    System Health
-                  </div>
-                  <div className="space-y-2">
-                    {[
-                      { name: "Web Servers", pct: 94 },
-                      { name: "Database", pct: 87 },
-                      { name: "API Gateway", pct: 99 },
-                      { name: "Cache Layer", pct: 92 },
-                    ].map((sys, idx) => (
-                      <div key={idx}>
-                        <div className="flex justify-between text-[10px] mb-1">
-                          <span className="text-white/50">{sys.name}</span>
-                          <span className="text-white/70 font-medium">
-                            {sys.pct}%
-                          </span>
-                        </div>
-                        <div
-                          className="h-1 rounded-full overflow-hidden"
-                          style={{ background: "rgba(255,255,255,0.1)" }}
-                        >
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${sys.pct}%` }}
-                            transition={{
-                              delay: 0.5 + idx * 0.1,
-                              duration: 0.8,
-                            }}
-                            className="h-full rounded-full"
-                            style={{
-                              background:
-                                sys.pct > 90
-                                  ? "#10B981"
-                                  : sys.pct > 85
-                                    ? "#F59E0B"
-                                    : "#EF4444",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div> */}
-            </div>
-
-            {/* Floating Stats Card */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-              style={{ border: `2px solid ${BRAND.gold.primary}` }}
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: `${BRAND.gold.primary}15` }}
-                >
-                  <FaClock
-                    className="text-xl"
-                    style={{ color: BRAND.gold.primary }}
-                  />
-                </div>
-                <div>
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: BRAND.navy.dark }}
-                  >
-                    24/7
-                  </div>
-                  <div className="text-xs text-gray-500">Always On Support</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Decorative Elements */}
-          <div
-            className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl -z-10 opacity-60"
-            style={{
-              background: "linear-gradient(135deg, #10B981, transparent)",
-            }}
-          />
-          <div
-            className="absolute -bottom-4 -left-8 w-32 h-32 rounded-full -z-10 opacity-40"
-            style={{ background: BRAND.gold.primary }}
-          />
-        </motion.div>
       </div>
     </div>
   </section>
@@ -1013,7 +700,7 @@ const BenefitsSection = () => (
             {/* Placeholder Visual - Operations Center */}
             <div className="absolute inset-0 p-8 flex flex-col justify-center">
               {/* Multiple Screen Layout */}
-              <div className="grid grid-cols-3 gap-3 h-full">
+              <div className="grid grid-cols-2 gap-3 h-full">
                 {/* Screen 1 - Servers */}
                 <div
                   className="rounded-xl p-4 flex flex-col"
@@ -1112,58 +799,17 @@ const BenefitsSection = () => (
                       </motion.div>
                     </div>
                   </div>
-                  <div className="mt-auto text-center">
+                  {/* <div className="mt-auto text-center">
                     <div className="text-lg font-black text-white">
                       1.2 Gbps
                     </div>
                     <div className="text-[10px] text-white/40">Bandwidth</div>
-                  </div>
-                </div>
-
-                {/* Screen 3 - Security */}
-                <div
-                  className="rounded-xl p-4 flex flex-col"
-                  style={{
-                    background: "rgba(255,255,255,0.05)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <FaShieldAlt
-                      className="text-sm"
-                      style={{ color: "#F59E0B" }}
-                    />
-                    <span className="text-xs text-white/50 font-medium">
-                      SECURITY
-                    </span>
-                  </div>
-                  <div className="flex-1 space-y-3">
-                    {[
-                      { label: "Firewall", val: "Active", good: true },
-                      { label: "Threats Blocked", val: "247", good: true },
-                      { label: "Patches Due", val: "2", good: false },
-                    ].map((item, i) => (
-                      <div
-                        key={i}
-                        className="p-2 rounded-lg"
-                        style={{ background: "rgba(255,255,255,0.03)" }}
-                      >
-                        <div className="flex justify-between text-[10px] mb-1">
-                          <span className="text-white/40">{item.label}</span>
-                          <span
-                            className={`font-medium ${item.good ? "text-green-400" : "text-yellow-400"}`}
-                          >
-                            {item.val}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
               {/* Bottom Status Bar */}
-              <div
+              {/* <div
                 className="mt-4 flex items-center justify-between px-2 py-3 rounded-xl "
                 style={{
                   background: "rgba(16,185,129,0.1)",
@@ -1187,7 +833,7 @@ const BenefitsSection = () => (
                 <span className="text-[10px] text-white/30">
                   Updated just now
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Floating Badge */}
@@ -1264,45 +910,10 @@ const BenefitsSection = () => (
           </p>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
-          </div>
-
-          {/* Quick Stats */}
-          <div className="p-6 rounded-2xl bg-primary-800 ">
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-              <FaStar
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              Performance Metrics
-            </h4>
-
-            <div className="grid grid-cols-2 gap-4">
-              {metricsData.slice(0, 4).map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="text-center p-3 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)" }}
-                >
-                  <metric.icon
-                    className="mx-auto mb-1"
-                    style={{ color: metric.color, fontSize: "14px" }}
-                  />
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: "white" }}
-                  >
-                    {metric.value}
-                  </div>
-                  <div className="text-[10px] text-white/50">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

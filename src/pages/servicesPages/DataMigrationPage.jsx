@@ -772,7 +772,7 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid lg:grid-cols-1 gap-12 lg:gap-20 items-center">
         {/* LEFT - Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -885,77 +885,6 @@ const HeroSection = () => (
             ))}
           </div> */}
         </motion.div>
-
-        {/* RIGHT - Data Flow Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          {/* Main Container */}
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(253,185,19,0.15)`,
-            }}
-          >
-            <DataFlowVisual />
-
-            {/* Bottom Pipeline Bar */}
-            <div
-              className="absolute bottom-0 left-0 right-0 p-4"
-              style={{
-                background: "rgba(11,29,51,0.95)",
-                borderTop: "1px solid rgba(253,185,19,0.2)",
-              }}
-            >
-              <PipelineVisual />
-            </div>
-          </div>
-
-          {/* Floating Stats Card */}
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-            style={{ border: `2px solid ${BRAND.gold.primary}` }}
-          >
-            <div className="flex items-center gap-3">
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center"
-                style={{ background: `${BRAND.gold.primary}15` }}
-              >
-                <FaHdd
-                  className="text-xl"
-                  style={{ color: BRAND.gold.primary }}
-                />
-              </div>
-              <div>
-                <div
-                  className="text-xl font-black"
-                  style={{ color: BRAND.navy.dark }}
-                >
-                  2PB+
-                </div>
-                <div className="text-xs text-gray-500">Data Migrated</div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Decorative Elements */}
-          <div
-            className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl -z-10 opacity-60"
-            style={{
-              background: "linear-gradient(135deg, #10B981, transparent)",
-            }}
-          />
-          <div
-            className="absolute -bottom-4 -left-8 w-32 h-32 rounded-full -z-10 opacity-40"
-            style={{ background: BRAND.gold.primary }}
-          />
-        </motion.div>
       </div>
     </div>
   </section>
@@ -1061,37 +990,6 @@ const BenefitsSection = () => (
                     LIVE
                   </span>
                 </div>
-              </div>
-
-              {/* Top Metrics */}
-              <div className="grid grid-cols-3 gap-3 mb-4">
-                {[
-                  { label: "Records", value: "2.4M", change: "+12%" },
-                  { label: "Accuracy", value: "99.99%", change: "+0.01%" },
-                  { label: "Speed", value: "1.2GB/s", change: "+45%" },
-                ].map((metric, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 + idx * 0.1 }}
-                    className="p-3 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.05)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                    }}
-                  >
-                    <div className="text-[9px] text-white/35 uppercase">
-                      {metric.label}
-                    </div>
-                    <div className="text-lg font-black text-white">
-                      {metric.value}
-                    </div>
-                    <div className="text-[10px] text-green-400">
-                      {metric.change}
-                    </div>
-                  </motion.div>
-                ))}
               </div>
 
               {/* Chart Area */}
@@ -1255,7 +1153,7 @@ const BenefitsSection = () => (
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-3 -left-3 bg-white rounded-xl p-4 shadow-lg"
+            className="absolute -bottom-10 -left-3 bg-white rounded-xl p-4 shadow-lg"
             style={{ border: `2px solid #10B981` }}
           >
             <div className="flex items-center gap-3">
@@ -1269,13 +1167,13 @@ const BenefitsSection = () => (
                 />
               </div>
               <div>
-                <div
+                {/* <div
                   className="text-base font-black"
                   style={{ color: BRAND.navy.dark }}
                 >
                   99.99%
-                </div>
-                <div className="text-[10px] text-gray-500">Data Integrity</div>
+                </div> */}
+                <div className="text-[14px] text-gray-600">Data Integrity</div>
               </div>
             </div>
           </motion.div>
@@ -1318,45 +1216,10 @@ const BenefitsSection = () => (
           </p>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
-          </div>
-
-          {/* Quick Stats */}
-          <div className="p-6 rounded-2xl bg-primary-800">
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-              <FaStar
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              Migration Success Metrics
-            </h4>
-
-            <div className="grid grid-cols-2 gap-4">
-              {metricsData.map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="text-center p-3 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)" }}
-                >
-                  <metric.icon
-                    className="mx-auto mb-1"
-                    style={{ color: metric.color, fontSize: "14px" }}
-                  />
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: "white" }}
-                  >
-                    {metric.value}
-                  </div>
-                  <div className="text-[10px] text-white/50">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

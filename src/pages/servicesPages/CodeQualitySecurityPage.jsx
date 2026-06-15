@@ -507,7 +507,7 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid lg:grid-cols-1 gap-12 lg:gap-20 items-center">
         {/* LEFT - Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -580,283 +580,6 @@ const HeroSection = () => (
               </motion.span>
             ))}
           </div>
-        </motion.div>
-
-        {/* RIGHT - Security Dashboard Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(253,185,19,0.2)`,
-            }}
-          >
-            <div className="absolute inset-0 p-6 flex flex-col">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-3 text-xs text-white/40 font-mono">
-                    Security Dashboard • SonarQube Integrated
-                  </span>
-                </div>
-                <div
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full"
-                  style={{
-                    background: "rgba(16,185,129,0.15)",
-                    border: "1px solid rgba(16,185,129,0.3)",
-                  }}
-                >
-                  <motion.span
-                    animate={{ scale: [1, 1.4, 1], opacity: [1, 0.5, 1] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                    className="w-2 h-2 rounded-full inline-block bg-emerald-400"
-                  />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400">
-                    Secure
-                  </span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-4 gap-3 mb-4">
-                {[
-                  { label: "VULNERABILITIES", value: "0", color: "#10B981" },
-                  { label: "CODE SMELLS", value: "12", color: "#F59E0B" },
-                  { label: "SECURITY HOTSPOTS", value: "0", color: "#3B82F6" },
-                  { label: "QUALITY GATE", value: "Passed", color: "#10B981" },
-                ].map((metric, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + idx * 0.1 }}
-                    className="p-3 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(255,255,255,0.06)",
-                    }}
-                  >
-                    <div className="text-[9px] text-white/35 uppercase tracking-wider mb-1">
-                      {metric.label}
-                    </div>
-                    <div
-                      className="text-lg font-black"
-                      style={{ color: metric.color }}
-                    >
-                      {metric.value}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="flex-1 grid grid-cols-3 gap-3 mb-4">
-                <div
-                  className="col-span-2 rounded-xl p-4"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] text-white/40">
-                      VULNERABILITY LIFECYCLE (SAST/DAST)
-                    </span>
-                    <div className="flex gap-2">
-                      <span className="text-[9px] text-blue-400">
-                        ● Scanned
-                      </span>
-                      <span className="text-[9px] text-green-400">
-                        ● Patched
-                      </span>
-                    </div>
-                  </div>
-                  <div className="h-28 flex items-end gap-1.5">
-                    {[45, 60, 35, 80, 55, 90, 70, 95, 85, 100].map(
-                      (height, idx) => (
-                        <motion.div
-                          key={idx}
-                          initial={{ height: 0 }}
-                          animate={{ height: `${height}%` }}
-                          transition={{
-                            delay: 0.5 + idx * 0.05,
-                            duration: 0.5,
-                          }}
-                          className="flex-1 rounded-t-md"
-                          style={{
-                            background:
-                              height > 90
-                                ? "linear-gradient(180deg, #10B981, #059669)"
-                                : "linear-gradient(180deg, #3B82F6, #2563EB)",
-                          }}
-                        />
-                      ),
-                    )}
-                  </div>
-                  <div className="flex justify-between mt-2 text-[9px] text-white/30">
-                    <span>Q1</span>
-                    <span>Q2</span>
-                    <span>Q3</span>
-                    <span>Q4</span>
-                  </div>
-                </div>
-
-                <div
-                  className="rounded-xl p-4 flex flex-col justify-center"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <span className="text-[10px] text-white/40 mb-3 block text-center">
-                    COMPLIANCE
-                  </span>
-                  {[
-                    { label: "SOC2", status: "Active", color: "#10B981" },
-                    { label: "GDPR", status: "Active", color: "#10B981" },
-                    { label: "HIPAA", status: "N/A", color: "#64748B" },
-                  ].map((comp, idx) => (
-                    <div
-                      key={idx}
-                      className="flex items-center justify-between mb-2 text-[11px]"
-                    >
-                      <span className="text-white/60 font-semibold">
-                        {comp.label}
-                      </span>
-                      <span
-                        className="flex items-center gap-1 font-medium"
-                        style={{ color: comp.color }}
-                      >
-                        <FaCheckCircle className="text-[8px]" /> {comp.status}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* <div className="grid grid-cols-2 gap-3">
-                <div
-                  className="p-3 rounded-xl space-y-2"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <span className="text-[10px] text-white/40 uppercase">
-                    Module Security
-                  </span>
-                  <AnimatedProgressBar
-                    value={98}
-                    label="Authentication"
-                    color="#10B981"
-                    delay={0.2}
-                  />
-                  <AnimatedProgressBar
-                    value={94}
-                    label="Payments API"
-                    color="#3B82F6"
-                    delay={0.4}
-                  />
-                  <AnimatedProgressBar
-                    value={100}
-                    label="User Data PII"
-                    color="#FDB913"
-                    delay={0.6}
-                  />
-                </div>
-                <div
-                  className="p-3 rounded-xl"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <span className="text-[10px] text-white/40 uppercase mb-2 block">
-                    Recent Scans
-                  </span>
-                  <div className="space-y-2">
-                    {[
-                      {
-                        action: "DAST Scan Passed",
-                        time: "2m ago",
-                        color: "bg-green-400",
-                      },
-                      {
-                        action: "SAST: 0 New Vulns",
-                        time: "5m ago",
-                        color: "bg-blue-400",
-                      },
-                      {
-                        action: "GDPR Audit Complete",
-                        time: "12m ago",
-                        color: "bg-yellow-400",
-                      },
-                    ].map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <div
-                          className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${activity.color}`}
-                        />
-                        <div>
-                          <div className="text-[11px] text-white/70">
-                            {activity.action}
-                          </div>
-                          <div className="text-[9px] text-white/30">
-                            {activity.time}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div> */}
-            </div>
-
-            {/* Floating Card — Gold border like Guidewire */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-              style={{ border: `2px solid ${BRAND.gold.primary}` }}
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: `${BRAND.gold.primary}15` }}
-                >
-                  <FaShieldAlt
-                    className="text-xl"
-                    style={{ color: BRAND.gold.primary }}
-                  />
-                </div>
-                <div>
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: BRAND.navy.dark }}
-                  >
-                    Fortified
-                  </div>
-                  <div className="text-xs text-gray-500">Security Engine</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Decorative Elements — matching Guidewire style */}
-          <div
-            className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl -z-10 opacity-60"
-            style={{
-              background: "linear-gradient(135deg, #3B82F6, transparent)",
-            }}
-          />
-          <div
-            className="absolute -bottom-4 -left-8 w-32 h-32 rounded-full -z-10 opacity-40"
-            style={{ background: BRAND.gold.primary }}
-          />
         </motion.div>
       </div>
     </div>
@@ -1224,7 +947,7 @@ const BenefitsSection = () => (
                       </div>
                     ))}
                   </div>
-                  <div className="mt-auto pt-3 grid grid-cols-2 gap-2 text-center">
+                  {/* <div className="mt-auto pt-3 grid grid-cols-2 gap-2 text-center">
                     <div>
                       <div className="text-sm font-bold text-white">A+</div>
                       <div className="text-[8px] text-white/40">Grade</div>
@@ -1233,12 +956,12 @@ const BenefitsSection = () => (
                       <div className="text-sm font-bold text-white">100%</div>
                       <div className="text-[8px] text-white/40">Patch Rate</div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
               {/* Bottom Status — Gold accent like Guidewire */}
-              <div
+              {/* <div
                 className="mt-4 flex items-center justify-between px-2 py-3 rounded-xl"
                 style={{
                   background: "rgba(253,185,19,0.1)",
@@ -1260,14 +983,14 @@ const BenefitsSection = () => (
                   </span>
                 </div>
                 <span className="text-[10px] text-white/30">Audit #847</span>
-              </div>
+              </div> */}
             </div>
 
             {/* Floating Badge — Blue border like Guidewire Benefits section */}
             <motion.div
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-3 -left-3 bg-white rounded-xl p-4 shadow-lg"
+              className="absolute -bottom-10 -left-3 bg-white rounded-xl p-4 shadow-lg"
               style={{ border: `2px solid #3B82F6` }}
             >
               <div className="flex items-center gap-3">
@@ -1333,12 +1056,12 @@ const BenefitsSection = () => (
             We embed security into your DNA, turning compliance from a checkbox
             exercise into a competitive advantage.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
           </div>
-          <div className="p-6 rounded-2xl bg-primary-800">
+          {/* <div className="p-6 rounded-2xl bg-primary-800">
             <h4 className="text-white font-bold mb-4 flex items-center gap-2">
               <FaStar
                 className="text-sm"
@@ -1369,7 +1092,7 @@ const BenefitsSection = () => (
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
