@@ -17,7 +17,7 @@
 // //   {
 // //     id: 2,
 // //     name: "Robert Marchand",
-// //     role: "COO",
+// //     role: "Chief Operating Officer",
 // //     image:
 // //       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
 // //     bio: "Operations expert driving organizational excellence",
@@ -1059,7 +1059,7 @@ const leaders = [
 
   {
     name: "Bob Marchand",
-    role: "COO",
+    role: "Chief Operating Officer",
     image: img2,
     quote: "20+ years managing SAP delivery and global operations.",
     social: {
@@ -1221,16 +1221,16 @@ const LeadershipTeam = () => {
             // }}
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             breakpoints={{
-              480: {
-                slidesPerView: 2,
+              300: {
+                slidesPerView: 1,
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 24,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 28,
               },
               1280: {
@@ -1249,7 +1249,7 @@ const LeadershipTeam = () => {
                 >
                   <div className="relative bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(11,29,51,0.18)] transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
                     {/* Image */}
-                    <div className="relative h-[300px] lg:h-[340px] overflow-hidden">
+                    <div className="relative h-[400px] md:h-[420px] lg:h-[420px] overflow-hidden">
                       <img
                         src={leader.image}
                         alt={leader.name}

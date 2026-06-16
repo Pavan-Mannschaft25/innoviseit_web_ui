@@ -1428,7 +1428,7 @@ const leadershipData = [
   {
     id: 2,
     name: "Bob Marchand",
-    role: "COO",
+    role: "Chief Operating Officer",
     image: img2,
     initials: "BM",
     color: "#3B82F6",
@@ -1653,11 +1653,11 @@ const LeaderCard = ({ leader, index }) => {
         {/* ================================= */}
         {/* IMAGE SECTION */}
         {/* ================================= */}
-        <div className="relative h-[380px] md:h-[400px] lg:h-[400px] overflow-hidden">
+        <div className="relative h-[400px] md:h-[420px] lg:h-[420px] overflow-hidden">
           <img
             src={leader.image}
             alt={`${leader.name} - ${leader.role}`}
-            className={`w-full h-full object-cover object-top transition-all duration-700 ${
+            className={`w-full h-full object-fit object-top transition-all duration-700 ${
               isHovered ? "scale-105" : "scale-100"
             }`}
             loading="lazy"
@@ -1707,7 +1707,7 @@ const LeaderCard = ({ leader, index }) => {
         {/* ================================= */}
         {/* CONTENT SECTION */}
         {/* ================================= */}
-        <div className="p-5 lg:p-6">
+        <div className="p-5 lg:p-6 flex flex-col h-full">
           {/* Name */}
           <h3
             className="text-xl lg:text-2xl font-bold mb-2"
