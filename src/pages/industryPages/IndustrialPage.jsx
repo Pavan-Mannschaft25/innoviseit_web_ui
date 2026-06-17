@@ -43,7 +43,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-4xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -184,7 +184,7 @@ const SOLUTIONS_DATA = [
     icon: FaIndustry,
     title: "Smart Factory Solutions",
     description:
-      "End-to-end digitalization of manufacturing with MES and shop floor integration",
+      "End-to-End digitalization of manufacturing with MES and shop floor integration",
   },
   {
     icon: FaChartLine,
@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Equipment downtime reduced by up to 45% through predictive maintenance",
-  "Overall Equipment Effectiveness (OEE) improved by 25-30%",
-  "Real-time visibility achieving 99%+ production tracking accuracy",
-  "Quality defects reduced by 40% through advanced process control",
-  "Operational costs decreased by 20% through intelligent automation",
-  "Time-to-market accelerated by 35% with digital manufacturing",
+  "Optimized asset performance and equipment utilization",
+  "Increased manufacturing efficiency and productivity",
+  "End-to-end visibility across production processes",
+  "Consistent product quality and process excellence",
+  "Smart automation for streamlined operations",
+  "Scalable digital manufacturing and innovation capabilities",
 ];
 
 const PROCESS_STEPS = [
@@ -263,7 +263,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="h-[95vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
+  <section className="lg:h-[95vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs - Industrial Precision Theme */}
@@ -325,7 +325,7 @@ const HeroSection = () => (
           Industry 4.0 & Smart Manufacturing Leader
         </GoldBadge>
 
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Industrial{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
             Manufacturing
@@ -334,7 +334,7 @@ const HeroSection = () => (
           <span className="text-4xl lg:text-6xl">& High Tech</span>
         </h1>
 
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Enable smart factories, predictive maintenance, and Industry 4.0
           innovation with digital transformation that drives operational
           excellence.
@@ -387,7 +387,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Advanced smart factory showcasing Industry 4.0 automation and digital manufacturing"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -403,7 +403,7 @@ const HeroSection = () => (
         </div>
 
         {/* Floating IIoT Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
@@ -417,10 +417,10 @@ const HeroSection = () => (
               <div className="text-sm text-gray-500">Connected</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Floating Robot Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
@@ -432,7 +432,7 @@ const HeroSection = () => (
               <div className="text-xs text-gray-300">Ready</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Decorative Corner Elements */}
         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
@@ -536,27 +536,9 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="High-tech manufacturing facility with robotic automation and digital systems"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
-          </div>
-
-          {/* Overlay Stats Card */}
-          <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">45%</div>
-                <div className="text-xs text-gray-600 mt-1">Less Downtime</div>
-              </div>
-              <div className="border-x border-[#FFD700]/30">
-                <div className="text-3xl font-bold text-[#0a1628]">30%</div>
-                <div className="text-xs text-gray-600 mt-1">OEE Increase</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">40%</div>
-                <div className="text-xs text-gray-600 mt-1">Fewer Defects</div>
-              </div>
-            </div>
           </div>
 
           {/* Corner Accents */}

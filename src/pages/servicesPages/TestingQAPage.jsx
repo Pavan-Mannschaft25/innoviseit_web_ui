@@ -645,7 +645,7 @@
 //             ensure your applications are secure, scalable, and high-performing.
 //           </p>
 
-//           <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+//           <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
 //             Our intelligent testing approach accelerates release cycles while
 //             maintaining the highest standards of quality.
 //           </p>
@@ -1104,7 +1104,7 @@
 //         </h2>
 
 //         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-//           End-to-end quality assurance services powered by artificial
+//           End-to-End quality assurance services powered by artificial
 //           intelligence for faster, smarter testing.
 //         </p>
 //       </motion.header>
@@ -2284,7 +2284,7 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid lg:grid-cols-1 gap-12 lg:gap-20 items-center">
         {/* LEFT - Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -2330,7 +2330,7 @@ const HeroSection = () => (
             flawless.
           </p>
 
-          <div className="flex flex-wrap gap-3 mb-8">
+          {/* <div className="flex flex-wrap gap-3 mb-8">
             {[
               " Automated Frameworks",
               " OWASP Security",
@@ -2352,7 +2352,7 @@ const HeroSection = () => (
                 {tag}
               </motion.span>
             ))}
-          </div>
+          </div> */}
 
           {/* <div
             className="flex flex-wrap items-center gap-6 mt-10 pt-8"
@@ -2374,280 +2374,6 @@ const HeroSection = () => (
               </div>
             ))}
           </div> */}
-        </motion.div>
-
-        {/* RIGHT - QA Dashboard Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(139,92,246,0.2)`,
-            }}
-          >
-            <div className="absolute inset-0 p-6 flex flex-col">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-3 text-xs text-white/40 font-mono">
-                    QA Dashboard • CI/CD Integrated
-                  </span>
-                </div>
-                <div
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full"
-                  style={{
-                    background: "rgba(16,185,129,0.15)",
-                    border: "1px solid rgba(16,185,129,0.3)",
-                  }}
-                >
-                  <motion.span
-                    animate={{ rotate: [0, 360] }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="w-2 h-2 rounded-full inline-block"
-                    style={{ background: "#10B981" }}
-                  />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400">
-                    Build Passing
-                  </span>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-4 gap-3 mb-4">
-                {[
-                  { label: "TEST CASES", value: "2,847", color: "#3B82F6" },
-                  { label: "PASS RATE", value: "97.3%", color: "#10B981" },
-                  { label: "BUGS FIXED", value: "23", color: "#F59E0B" },
-                  { label: "COVERAGE", value: "94.2%", color: "#8B5CF6" },
-                ].map((metric, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 + idx * 0.1 }}
-                    className="p-3 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(255,255,255,0.06)",
-                    }}
-                  >
-                    <div className="text-[9px] text-white/35 uppercase tracking-wider mb-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-lg font-black text-white">
-                      {metric.value}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="flex-1 grid grid-cols-3 gap-3 mb-4">
-                <div
-                  className="col-span-2 rounded-xl p-4"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] text-white/40">
-                      TEST EXECUTION TREND
-                    </span>
-                    <div className="flex gap-2">
-                      <span className="text-[9px] text-green-400">● Pass</span>
-                      <span className="text-[9px] text-red-400">● Fail</span>
-                    </div>
-                  </div>
-                  <div className="h-28 flex items-end gap-1.5">
-                    {[85, 92, 78, 95, 88, 97, 94, 99, 96, 98].map(
-                      (height, idx) => (
-                        <motion.div
-                          key={idx}
-                          initial={{ height: 0 }}
-                          animate={{ height: `${height}%` }}
-                          transition={{
-                            delay: 0.5 + idx * 0.05,
-                            duration: 0.5,
-                          }}
-                          className="flex-1 rounded-t-md"
-                          style={{
-                            background:
-                              height > 90
-                                ? "linear-gradient(180deg, #10B981, #059669)"
-                                : height > 80
-                                  ? "linear-gradient(180deg, #3B82F6, #2563EB)"
-                                  : "linear-gradient(180deg, #F59E0B, #D97706)",
-                          }}
-                        />
-                      ),
-                    )}
-                  </div>
-                </div>
-
-                <div
-                  className="rounded-xl p-4 flex flex-col items-center justify-center"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <span className="text-[10px] text-white/40 mb-3">
-                    CODE COVERAGE
-                  </span>
-                  <div className="relative w-24 h-24">
-                    <svg
-                      viewBox="0 0 100 100"
-                      className="w-full h-full -rotate-90"
-                    >
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="42"
-                        fill="none"
-                        stroke="rgba(255,255,255,0.08)"
-                        strokeWidth="8"
-                      />
-                      <motion.circle
-                        cx="50"
-                        cy="50"
-                        r="42"
-                        fill="none"
-                        stroke="#8B5CF6"
-                        strokeWidth="8"
-                        strokeLinecap="round"
-                        strokeDasharray={`${94.2 * 2.64} 264`}
-                        initial={{ strokeDashoffset: 264 }}
-                        animate={{ strokeDashoffset: 264 - 94.2 * 2.64 }}
-                        transition={{
-                          delay: 0.8,
-                          duration: 1.5,
-                          ease: "easeOut",
-                        }}
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl font-black text-white">
-                        94%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* <div className="grid grid-cols-2 gap-3">
-                <div
-                  className="p-3 rounded-xl space-y-2"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <span className="text-[10px] text-white/40 uppercase">
-                    Module Progress
-                  </span>
-                  <AnimatedProgressBar
-                    value={87}
-                    label="Authentication"
-                    color="#10B981"
-                    delay={0.2}
-                  />
-                  <AnimatedProgressBar
-                    value={94}
-                    label="Payments"
-                    color="#3B82F6"
-                    delay={0.4}
-                  />
-                  <AnimatedProgressBar
-                    value={72}
-                    label="Reports"
-                    color="#F59E0B"
-                    delay={0.6}
-                  />
-                </div>
-                <div
-                  className="p-3 rounded-xl"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  <span className="text-[10px] text-white/40 uppercase mb-2 block">
-                    Recent Activity
-                  </span>
-                  <div className="space-y-2">
-                    {[
-                      {
-                        action: "Regression suite passed",
-                        time: "2m ago",
-                        color: "bg-green-400",
-                      },
-                      {
-                        action: "OWASP scan completed",
-                        time: "5m ago",
-                        color: "bg-yellow-400",
-                      },
-                      {
-                        action: "K6 Load test stable",
-                        time: "12m ago",
-                        color: "bg-blue-400",
-                      },
-                    ].map((activity, idx) => (
-                      <div key={idx} className="flex items-start gap-2">
-                        <div
-                          className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${activity.color}`}
-                        />
-                        <div>
-                          <div className="text-[11px] text-white/70">
-                            {activity.action}
-                          </div>
-                          <div className="text-[9px] text-white/30">
-                            {activity.time}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div> */}
-            </div>
-
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-              style={{ border: `2px solid ${BRAND.ai.primary}` }}
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: BRAND.ai.gradient }}
-                >
-                  <FaRobot className="text-xl text-white" />
-                </div>
-                <div>
-                  <div
-                    className="text-base font-black"
-                    style={{ color: BRAND.navy.dark }}
-                  >
-                    AI-Powered
-                  </div>
-                  <div className="text-xs text-gray-500">
-                    Smart Testing Engine
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
         </motion.div>
       </div>
     </div>
@@ -2692,7 +2418,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end quality assurance services covering every aspect of your
+          End-to-End quality assurance services covering every aspect of your
           application lifecycle.
         </p>
       </motion.header>
@@ -2871,7 +2597,7 @@ const BenefitsSection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="order-1"
+          className="order-2"
         >
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
@@ -2901,48 +2627,10 @@ const BenefitsSection = () => (
             standards.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
-          </div>
-
-          <div
-            className="p-6 rounded-2xl"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-            }}
-          >
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-              <FaStar
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              Quality Metrics
-            </h4>
-            <div className="grid grid-cols-2 gap-4">
-              {metricsData.map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="text-center p-3 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)" }}
-                >
-                  <metric.icon
-                    className="mx-auto mb-1"
-                    style={{ color: metric.color, fontSize: "14px" }}
-                  />
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: "white" }}
-                  >
-                    {metric.value}
-                  </div>
-                  <div className="text-[10px] text-white/50">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </motion.div>
 
@@ -2952,7 +2640,7 @@ const BenefitsSection = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative order-2"
+          className="relative order-1"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             <div className="absolute inset-0 p-8 flex flex-col justify-center">
@@ -3093,22 +2781,6 @@ const BenefitsSection = () => (
                       />
                     </svg>
                   </div>
-                  <div className="mt-auto pt-3 grid grid-cols-3 gap-2 text-center">
-                    {[
-                      { val: "23ms", label: "Avg Resp" },
-                      { val: "99.9%", label: "Uptime" },
-                      { val: "<1s", label: "P99" },
-                    ].map((stat, i) => (
-                      <div key={i}>
-                        <div className="text-sm font-bold text-white">
-                          {stat.val}
-                        </div>
-                        <div className="text-[8px] text-white/40">
-                          {stat.label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
 
@@ -3131,7 +2803,6 @@ const BenefitsSection = () => (
                     Quality Gates Passed
                   </span>
                 </div>
-                <span className="text-[10px] text-white/30">Build #1247</span>
               </div>
             </div>
           </div>

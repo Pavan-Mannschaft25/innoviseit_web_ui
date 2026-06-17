@@ -485,7 +485,7 @@
 
 //         {/* Bottom Button */}
 //         <div className="text-center mt-12">
-//           <Link to="/about/leadership">
+//           <Link to="/leadership">
 //             <button className="px-8 py-3 bg-[#0B1F3A] text-white font-medium rounded-full hover:bg-yellow-500 hover:text-black transition duration-300">
 //               View Leadership Team
 //             </button>
@@ -881,7 +881,7 @@
 //           className="text-center mt-6 lg:mt-6"
 //         >
 //           {/* Primary CTA Button */}
-//           <Link to="/about/leadership">
+//           <Link to="/leadership">
 //             <motion.button
 //               whileHover={{ scale: 1.05, y: -2 }}
 //               whileTap={{ scale: 0.98 }}

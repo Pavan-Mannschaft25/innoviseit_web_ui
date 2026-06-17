@@ -703,7 +703,8 @@ const WhoWeAreSection = () => (
             />
 
             {/* Content Inside Visual */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 md:p-8">
+              {/* Globe Icon */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{
@@ -713,37 +714,45 @@ const WhoWeAreSection = () => (
                 }}
               >
                 <FaGlobeAmericas
-                  className="text-7xl md:text-8xl mb-6 opacity-40"
+                  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3 sm:mb-4 md:mb-6 opacity-40"
                   style={{ color: BRAND.gold.primary }}
                 />
               </motion.div>
 
-              <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+              {/* Heading */}
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white text-center mb-1 md:mb-2">
                 Global Team
               </h3>
-              <p className="text-white/50 text-center text-sm">
+
+              {/* Sub Text */}
+              <p className="text-white/60 text-center text-xs sm:text-sm md:text-base">
                 Experts Across Continents
               </p>
 
               {/* Floating Stats */}
-              <div className="absolute bottom-6 left-6 right-6 flex justify-between">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
+              <div className="absolute bottom-0 sm:bottom-4 md:bottom-6 left-3 sm:left-4 md:left-6 right-3 sm:right-4 md:right-6 flex justify-between gap-2 md:gap-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg md:rounded-xl px-3 py-2 md:px-4 md:py-3">
                   <div
-                    className="text-xl font-black"
+                    className="text-sm sm:text-lg md:text-xl font-black"
                     style={{ color: BRAND.gold.primary }}
                   >
                     300+
                   </div>
-                  <div className="text-xs text-white/60">Consultants</div>
+                  <div className="text-[10px] sm:text-xs text-white/60">
+                    Consultants
+                  </div>
                 </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3">
+
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg md:rounded-xl px-3 py-2 md:px-4 md:py-3">
                   <div
-                    className="text-xl font-black"
+                    className="text-sm sm:text-lg md:text-xl font-black"
                     style={{ color: BRAND.gold.primary }}
                   >
                     6+
                   </div>
-                  <div className="text-xs text-white/60">Countries</div>
+                  <div className="text-[10px] sm:text-xs text-white/60">
+                    Countries
+                  </div>
                 </div>
               </div>
             </div>

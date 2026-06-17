@@ -43,7 +43,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-4xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -196,7 +196,7 @@ const SOLUTIONS_DATA = [
     icon: FaHandsHelping,
     title: "Grants Management Platform",
     description:
-      "End-to-end grants lifecycle from application through closeout and compliance",
+      "End-to-End grants lifecycle from application through closeout and compliance",
   },
   {
     icon: FaUsers,
@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Financial transparency improved with real-time reporting capabilities",
-  "Grants processing time reduced by up to 60% through automation",
-  "Citizen satisfaction increased by 40% with digital services",
-  "Audit readiness achieved with complete compliance documentation",
-  "Operational costs reduced by 30% through process optimization",
-  "Enhanced data security meeting government cybersecurity standards",
+  "Real-time financial visibility and accountability",
+  "Efficient administration of grants and public programs",
+  "Citizen-centric digital service delivery",
+  "Robust compliance, governance, and audit support",
+  "Modernized operations through process automation",
+  "Secure and scalable platforms for public sector transformation",
 ];
 
 const PROCESS_STEPS = [
@@ -262,7 +262,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
+  <section className="lg:h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs - Authority/Trust Theme */}
@@ -324,14 +324,14 @@ const HeroSection = () => (
           Trusted Government Technology Partner
         </GoldBadge>
 
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Public{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
             Sector
           </span>
         </h1>
 
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Empowering government organizations with transparent accounting,
           efficient grants management, and citizen-centric digital platforms
           that build trust.
@@ -384,7 +384,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Modern government building representing public service excellence and digital transformation"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -393,7 +393,7 @@ const HeroSection = () => (
         </div>
 
         {/* Floating Compliance Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
@@ -407,10 +407,10 @@ const HeroSection = () => (
               <div className="text-sm text-gray-500">FedRAMP Ready</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Floating Citizen Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
@@ -422,7 +422,7 @@ const HeroSection = () => (
               <div className="text-xs text-gray-300">Centric</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Decorative Corner Elements */}
         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
@@ -526,13 +526,13 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="Modern government office showcasing digital transformation and efficient public service delivery"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           </div>
 
           {/* Overlay Stats Card */}
-          <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
+          {/* <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
                 <div className="text-3xl font-bold text-[#0a1628]">60%</div>
@@ -551,7 +551,7 @@ const BenefitsSection = () => (
                 <div className="text-xs text-gray-600 mt-1">Cost Reduction</div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Corner Accents */}
           <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFD700] rounded-tl-2xl"></div>

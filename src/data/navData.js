@@ -5,7 +5,7 @@ export const navData = {
       items: [
         {
           name: "SAP Consulting & Implementation",
-          desc: "End-to-end SAP transformation including S/4HANA migration and optimization",
+          desc: "End-to-End SAP transformation including S/4HANA migration and optimization",
           icon: "FaCogs",
           path: "/services/sap-consulting",
         },

@@ -43,7 +43,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-4xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -208,7 +208,7 @@ const SOLUTIONS_DATA = [
     icon: FaNetworkWired,
     title: "Utilities Digital Transformation",
     description:
-      "End-to-end utility operations including billing, CIS, and workforce management",
+      "End-to-End utility operations including billing, CIS, and workforce management",
   },
   {
     icon: FaDatabase,
@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Asset reliability improved by up to 45% through predictive maintenance",
-  "Real-time visibility across all operations reducing downtime by 30%",
-  "Energy efficiency gains of 20-25% through intelligent optimization",
-  "Full regulatory compliance with automated reporting and audit trails",
-  "Seamless integration of renewables into existing infrastructure",
-  "Operational costs reduced by 25% through process automation",
+  "Optimized asset performance and operational resilience",
+  "End-to-end visibility across energy and utility operations",
+  "Data-driven energy management and efficiency improvements",
+  "Robust compliance, governance, and audit support",
+  "Accelerated adoption of renewable and sustainable energy solutions",
+  "Scalable digital platforms for operational excellence and growth",
 ];
 
 const PROCESS_STEPS = [
@@ -261,7 +261,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
+  <section className="lg:h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs - Representing Energy Flow */}
@@ -323,14 +323,14 @@ const HeroSection = () => (
           Powering the Global Energy Transition
         </GoldBadge>
 
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Energy, Oil & Gas,{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
             Utilities
           </span>
         </h1>
 
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Transform asset-intensive operations with smart metering, energy
           trading, and digital innovation powering the future of energy.
         </p>
@@ -382,7 +382,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Modern energy infrastructure showcasing power generation and smart grid technology"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -531,7 +531,7 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="Advanced smart grid infrastructure and power distribution systems"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           </div>

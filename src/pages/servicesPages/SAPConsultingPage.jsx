@@ -546,11 +546,11 @@
 // //           {/* Description */}
 // //           <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
 // //             At Innovise IT, we help organizations unlock the full potential of
-// //             SAP by delivering end-to-end consulting, implementation, and
+// //             SAP by delivering End-to-End consulting, implementation, and
 // //             optimization services powered by SAP S/4HANA.
 // //           </p>
 
-// //           <p className="text-base text-gray-400 leading-relaxed mb-10 max-w-xl">
+// //           <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-xl">
 // //             We combine deep domain expertise with proven methodologies to
 // //             modernize legacy systems, streamline operations, and drive real-time
 // //             business insights.
@@ -829,7 +829,7 @@
 // //         </h2>
 
 // //         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-// //           End-to-end solutions designed to maximize your SAP investment and
+// //           End-to-End solutions designed to maximize your SAP investment and
 // //           accelerate digital transformation.
 // //         </p>
 // //       </motion.header>
@@ -1811,7 +1811,7 @@
 //           {/* Description */}
 //           <p className="text-lg text-black/80 leading-relaxed mb-8 max-w-xl">
 //             At Innovise IT, we help organizations unlock the full potential of
-//             SAP by delivering end-to-end consulting, implementation, and
+//             SAP by delivering End-to-End consulting, implementation, and
 //             optimization services powered by SAP S/4HANA.
 //           </p>
 
@@ -2060,7 +2060,7 @@
 //         </h2>
 
 //         <p className="text-lg leading-relaxed text-black/70">
-//           End-to-end solutions designed to maximize your SAP investment and
+//           End-to-End solutions designed to maximize your SAP investment and
 //           accelerate digital transformation.
 //         </p>
 //       </motion.header>
@@ -2962,7 +2962,7 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid grid-cols-1 gap-12 lg:gap-20 items-center">
         {/* LEFT - Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -3000,13 +3000,13 @@ const HeroSection = () => (
           </h1>
 
           {/* Description */}
-          <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-100 leading-relaxed mb-8 max-w-xl">
             At Innovise IT, we help organizations unlock the full potential of
-            SAP by delivering end-to-end consulting, implementation, and
+            SAP by delivering End-to-End consulting, implementation, and
             optimization services powered by SAP S/4HANA.
           </p>
 
-          <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-xl">
+          <p className="text-lg text-gray-100 leading-relaxed mb-10 max-w-xl">
             We combine deep domain expertise with proven methodologies to
             modernize legacy systems, streamline operations, and drive real-time
             business insights.
@@ -3067,180 +3067,6 @@ const HeroSection = () => (
             ))}
           </div> */}
         </motion.div>
-
-        {/* RIGHT - Visual / Image Placeholder */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          {/* Main Visual Container */}
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(253,185,19,0.15)`,
-            }}
-          >
-            {/* Replace this div with actual image: */}
-            {/* <img src="/images/sap-dashboard.jpg" alt="SAP Dashboard" className="w-full h-full object-cover" /> */}
-
-            {/* Placeholder Content */}
-            <div className="absolute inset-0 p-8 flex flex-col">
-              {/* Header Bar */}
-              <div className="flex items-center gap-2 mb-6">
-                <div className="w-3 h-3 rounded-full bg-red-400" />
-                <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                <div className="w-3 h-3 rounded-full bg-green-400" />
-                <span className="ml-4 text-xs text-white/40 font-mono">
-                  SAP S/4HANA Dashboard
-                </span>
-              </div>
-
-              {/* Mock Dashboard Content */}
-              <div className="flex-1 grid grid-cols-3 gap-4">
-                {/* Left Panel */}
-                <div className="col-span-1 space-y-3">
-                  <div
-                    className="p-4 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.05)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                    }}
-                  >
-                    <div className="text-xs text-white/40 mb-2">REVENUE</div>
-                    <div
-                      className="text-2xl font-black"
-                      style={{ color: BRAND.gold.primary }}
-                    >
-                      $2.4M
-                    </div>
-                    <div className="text-xs text-green-400 mt-1">↑ 12.5%</div>
-                  </div>
-                  <div
-                    className="p-4 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.05)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                    }}
-                  >
-                    <div className="text-xs text-white/40 mb-2">ORDERS</div>
-                    <div className="text-2xl font-black text-white">1,847</div>
-                    <div className="text-xs text-green-400 mt-1">↑ 8.3%</div>
-                  </div>
-                  <div
-                    className="p-4 rounded-xl"
-                    style={{
-                      background: "rgba(255,255,255,0.05)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                    }}
-                  >
-                    <div className="text-xs text-white/40 mb-2">EFFICIENCY</div>
-                    <div className="text-2xl font-black text-white">94.2%</div>
-                    <div className="text-xs text-green-400 mt-1">↑ 5.1%</div>
-                  </div>
-                </div>
-
-                {/* Center Chart Area */}
-                <div
-                  className="col-span-2 rounded-xl p-4"
-                  style={{
-                    background: "rgba(255,255,255,0.03)",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                  }}
-                >
-                  <div className="text-xs text-white/40 mb-4">
-                    PERFORMANCE ANALYTICS
-                  </div>
-
-                  {/* Mock Chart Bars */}
-                  <div className="flex items-end gap-2 h-32">
-                    {[40, 65, 45, 80, 55, 90, 70].map((height, idx) => (
-                      <motion.div
-                        key={idx}
-                        initial={{ height: 0 }}
-                        animate={{ height: `${height}%` }}
-                        transition={{ delay: idx * 0.1, duration: 0.5 }}
-                        className="flex-1 rounded-t-md"
-                        style={{
-                          background:
-                            idx === 5
-                              ? BRAND.gold.gradient
-                              : `rgba(0,164,253,${0.3 + idx * 0.1})`,
-                        }}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="flex justify-between mt-2 text-[10px] text-white/30">
-                    <span>Mon</span>
-                    <span>Tue</span>
-                    <span>Wed</span>
-                    <span>Thu</span>
-                    <span>Fri</span>
-                    <span>Sat</span>
-                    <span>Sun</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Status Bar */}
-              <div className="mt-4 flex items-center justify-between px-2">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-xs text-white/40">
-                    System Online • Real-time Sync
-                  </span>
-                </div>
-                <div className="text-xs text-white/30">
-                  Last updated: Just now
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Badge */}
-            <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-              style={{ border: `2px solid ${BRAND.gold.primary}` }}
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: `${BRAND.gold.primary}15` }}
-                >
-                  <FaChartLine
-                    className="text-xl"
-                    style={{ color: BRAND.gold.primary }}
-                  />
-                </div>
-                <div>
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: BRAND.navy.dark }}
-                  >
-                    40%
-                  </div>
-                  <div className="text-xs text-gray-500">Cost Reduction</div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Decorative Elements */}
-          <div
-            className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl -z-10 opacity-60"
-            style={{
-              background: "linear-gradient(135deg, #00A4FD, transparent)",
-            }}
-          />
-          <div
-            className="absolute -bottom-4 -left-8 w-32 h-32 rounded-full -z-10 opacity-40"
-            style={{ background: BRAND.gold.primary }}
-          />
-        </motion.div>
       </div>
     </div>
   </section>
@@ -3285,7 +3111,7 @@ const ServicesSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          End-to-end solutions designed to maximize your SAP investment and
+          End-to-End solutions designed to maximize your SAP investment and
           accelerate digital transformation.
         </p>
       </motion.header>
@@ -3370,28 +3196,6 @@ const BenefitsSection = () => (
                 </div>
               </div>
             </div>
-
-            {/* Stats Overlay */}
-            <div className="absolute bottom-6 left-6 right-6 flex gap-4">
-              <div className="flex-1 bg-white/95 backdrop-blur-sm rounded-xl p-4 text-center">
-                <div
-                  className="text-2xl font-black"
-                  style={{ color: "#00A4FD" }}
-                >
-                  35%
-                </div>
-                <div className="text-xs text-gray-500">Faster Processing</div>
-              </div>
-              <div className="flex-1 bg-white/95 backdrop-blur-sm rounded-xl p-4 text-center">
-                <div
-                  className="text-2xl font-black"
-                  style={{ color: BRAND.gold.primary }}
-                >
-                  99.9%
-                </div>
-                <div className="text-xs text-gray-500">Uptime SLA</div>
-              </div>
-            </div>
           </div>
         </motion.div>
 
@@ -3432,14 +3236,14 @@ const BenefitsSection = () => (
           </p>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
           </div>
 
           {/* Why Choose Us Badges */}
-          <div className="p-6 rounded-2xl bg-primary-800">
+          {/* <div className="p-6 rounded-2xl bg-primary-800">
             <h4 className="text-white font-bold mb-4 flex items-center gap-2">
               <FaStar
                 className="text-sm"
@@ -3459,7 +3263,7 @@ const BenefitsSection = () => (
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
@@ -3513,19 +3317,17 @@ const ApproachSection = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative group"
+              className="group relative"
             >
-              <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
-                {/* Step Number */}
-                <div className="flex items-center justify-center w-16 h-16 rounded-2xl mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
-                  <span className="text-2xl font-black text-[#081C34]">
-                    {step.step}
-                  </span>
+              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+                {/* Icon Box */}
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+                  <step.icon className="text-2xl text-[#081C34]" />
                 </div>
 
-                {/* Icon */}
-                <div className="mb-5">
-                  <step.icon className="text-3xl text-[#FDB913]" />
+                {/* Watermark Step Number */}
+                <div className="absolute top-6 right-6 text-5xl font-black text-white/5">
+                  {step.step}
                 </div>
 
                 {/* Title */}
@@ -3543,7 +3345,7 @@ const ApproachSection = () => (
                   {step.description}
                 </p>
 
-                {/* Top Glow */}
+                {/* Hover Glow */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </motion.div>
@@ -3562,12 +3364,10 @@ const ApproachSection = () => (
             transition={{ delay: index * 0.1 }}
             className="flex gap-5"
           >
-            {/* Left Step */}
+            {/* Left Icon */}
             <div className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
-                <span className="text-lg font-black text-[#081C34]">
-                  {step.step}
-                </span>
+                <step.icon className="text-lg text-[#081C34]" />
               </div>
 
               {index < approachSteps.length - 1 && (
@@ -3577,11 +3377,9 @@ const ApproachSection = () => (
 
             {/* Content */}
             <div className="pb-8">
-              <div className="flex items-center gap-3 mb-2">
-                <step.icon className="text-lg text-[#FDB913]" />
-
-                <h4 className="font-bold text-lg text-white">{step.title}</h4>
-              </div>
+              <h4 className="font-bold text-lg mb-1 text-white">
+                {step.title}
+              </h4>
 
               <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
                 {step.subtitle}

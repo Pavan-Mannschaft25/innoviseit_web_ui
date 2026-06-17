@@ -59,7 +59,7 @@
 //   centered = true,
 //   light = false,
 // }) => (
-//   <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+//   <div className={`mb-10 ${centered ? "text-center" : ""}`}>
 //     <h2
 //       className={`text-3xl lg:text-5xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
 //     >
@@ -225,7 +225,7 @@
 //     icon: FaNetworkWired,
 //     title: "Supply Chain Optimization",
 //     description:
-//       "End-to-end supply chain tracking, procurement intelligence, and logistics automation.",
+//       "End-to-End supply chain tracking, procurement intelligence, and logistics automation.",
 //   },
 // ];
 
@@ -316,7 +316,7 @@
 //             Chemicals
 //           </span>
 //         </h1>
-//         <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+//         <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
 //           Driving operational excellence through asset management, smart
 //           metering, energy trading, batch manufacturing, regulatory compliance,
 //           and supply chain solutions.
@@ -365,7 +365,7 @@
 //           <img
 //             src={img1}
 //             alt="Modern energy infrastructure showcasing power generation and smart grid technology"
-//             className="w-full h-[500px] object-cover"
+//             className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
 //           />
 //           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -504,7 +504,7 @@
 //             <img
 //               src={img2}
 //               alt="Advanced smart grid infrastructure and power distribution systems"
-//               className="w-full h-[450px] object-cover"
+//               className="w-full h-[200px] md:h-[450px] object-cover"
 //             />
 //             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 //           </div>
@@ -807,7 +807,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-5xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -973,17 +973,17 @@ const SOLUTIONS_DATA = [
     icon: FaNetworkWired,
     title: "Supply Chain Optimization",
     description:
-      "End-to-end digital thread for supply chain tracking, procurement intelligence, and logistics automation.",
+      "End-to-End digital thread for supply chain tracking, procurement intelligence, and logistics automation.",
   },
 ];
 
 const BENEFITS_DATA = [
-  "Asset reliability improved by up to 45% through IoT predictive maintenance",
-  "Zero safety incidents with proactive EHS risk management frameworks",
-  "100% regulatory compliance with automated, real-time reporting engines",
-  "Batch manufacturing efficiency increased by up to 40% via AI optimization",
-  "Real-time visibility across global supply chains and smart grid networks",
-  "Operational costs reduced by 25% through intelligent process automation",
+  "Improved asset performance and operational reliability",
+  "Advanced health, safety, and environmental management",
+  "Simplified regulatory compliance and governance",
+  "Data-driven process optimization and production planning",
+  "Connected visibility across assets, facilities, and supply chains",
+  "Scalable digital solutions supporting sustainable growth",
 ];
 
 const PROCESS_STEPS = [
@@ -1022,7 +1022,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
+  <section className="lg:h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     <div className="absolute inset-0 overflow-hidden">
       <motion.div
         animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
@@ -1063,7 +1063,7 @@ const HeroSection = () => (
             Chemicals
           </span>
         </h1>
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Empowering the future of heavy industry through intelligent asset
           management, smart grid integration, predictive maintenance, and
           seamless regulatory compliance across the energy and chemical value
@@ -1117,7 +1117,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Modern energy infrastructure showcasing power generation and smart grid technology"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/5 to-transparent"></div>
@@ -1128,7 +1128,7 @@ const HeroSection = () => (
           />
         </div>
 
-        <motion.div
+        {/* <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
@@ -1156,7 +1156,7 @@ const HeroSection = () => (
               <div className="text-xs text-gray-300">Enabled</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
         <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-4 border-r-4 border-[#FFD700]/50 rounded-br-3xl"></div>
@@ -1247,26 +1247,9 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="Advanced smart grid infrastructure and power distribution systems"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
-          </div>
-
-          <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">45%</div>
-                <div className="text-xs text-gray-600 mt-1">Reliability ↑</div>
-              </div>
-              <div className="border-x border-[#FFD700]/30">
-                <div className="text-3xl font-bold text-[#0a1628]">0</div>
-                <div className="text-xs text-gray-600 mt-1">Incidents</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">25%</div>
-                <div className="text-xs text-gray-600 mt-1">Cost Savings</div>
-              </div>
-            </div>
           </div>
 
           <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFD700] rounded-tl-2xl"></div>

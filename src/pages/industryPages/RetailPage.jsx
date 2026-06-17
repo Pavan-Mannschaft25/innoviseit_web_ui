@@ -43,7 +43,7 @@ const SectionTitle = ({
   centered = true,
   light = false,
 }) => (
-  <div className={`mb-16 ${centered ? "text-center" : ""}`}>
+  <div className={`mb-10 ${centered ? "text-center" : ""}`}>
     <h2
       className={`text-3xl lg:text-4xl font-bold mb-4 ${light ? "text-white" : "text-[#0a1628]"}`}
     >
@@ -219,12 +219,12 @@ const SOLUTIONS_DATA = [
 ];
 
 const BENEFITS_DATA = [
-  "Inventory accuracy improved to 98%+ across all channels",
-  "Seamless omnichannel experience driving 30% higher customer satisfaction",
-  "Customer lifetime value increased by up to 45%",
-  "Demand forecasting accuracy improved by 40%",
-  "Operational costs reduced through intelligent automation",
-  "Time-to-market for new initiatives cut by 50%",
+  "End-to-end inventory visibility and control",
+  "Connected customer experiences across digital and physical channels",
+  "Stronger customer retention and lifetime value",
+  "Data-driven demand planning and forecasting",
+  "Optimized operations with intelligent automation",
+  "Agile platforms that accelerate business growth and innovation",
 ];
 
 const PROCESS_STEPS = [
@@ -262,7 +262,7 @@ const PROCESS_STEPS = [
 // ============================================
 
 const HeroSection = () => (
-  <section className="min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
+  <section className="lg:h-[90vh] flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-primary-800 text-white relative overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       {/* Gold Gradient Orbs */}
@@ -312,14 +312,14 @@ const HeroSection = () => (
           Powering Next-Gen Retail Experiences
         </GoldBadge>
 
-        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Retail{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
             Transformation
           </span>
         </h1>
 
-        <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-xl">
+        <p className="text-md md:text-xl text-gray-300 mb-2leading-relaxed max-w-xl">
           Deliver seamless omnichannel experiences with intelligent
           merchandising, data-driven insights, and personalized customer
           engagement.
@@ -372,7 +372,7 @@ const HeroSection = () => (
           <img
             src={img1}
             alt="Modern retail store showcasing seamless omnichannel shopping experience"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
@@ -381,7 +381,7 @@ const HeroSection = () => (
         </div>
 
         {/* Floating Omnichannel Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
@@ -395,10 +395,10 @@ const HeroSection = () => (
               <div className="text-sm text-gray-500">Ready</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Floating Customer Badge */}
-        <motion.div
+        {/* <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
@@ -410,7 +410,7 @@ const HeroSection = () => (
               <div className="text-xs text-gray-300">First</div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Decorative Corner Elements */}
         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
@@ -514,29 +514,9 @@ const BenefitsSection = () => (
             <img
               src={img2}
               alt="Advanced retail analytics dashboard showing real-time insights and customer data"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-[200px] md:h-[450px] object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
-          </div>
-
-          {/* Overlay Stats Card */}
-          <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">98%</div>
-                <div className="text-xs text-gray-600 mt-1">
-                  Inventory Accuracy
-                </div>
-              </div>
-              <div className="border-x border-[#FFD700]/30">
-                <div className="text-3xl font-bold text-[#0a1628]">30%</div>
-                <div className="text-xs text-gray-600 mt-1">CSAT Increase</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-[#0a1628]">45%</div>
-                <div className="text-xs text-gray-600 mt-1">CLV Growth</div>
-              </div>
-            </div>
           </div>
 
           {/* Corner Accents */}

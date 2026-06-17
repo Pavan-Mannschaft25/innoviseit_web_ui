@@ -282,23 +282,6 @@ const TalentCard = ({ category, index }) => {
                 style={{ color: "#FDB913" }}
               />
             </motion.div>
-
-            {/* Availability Badge */}
-            <span
-              className="px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5"
-              style={{
-                background: "rgba(253,185,19,0.12)",
-                color: "#FDB913",
-                border: "1px solid rgba(253,185,19,0.25)",
-              }}
-            >
-              <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1.5 h-1.5 rounded-full bg-[#FDB913]"
-              />
-              {category.available} Available
-            </span>
           </div>
 
           {/* Title */}
@@ -326,28 +309,6 @@ const TalentCard = ({ category, index }) => {
                 {skill}
               </span>
             ))}
-          </div>
-
-          {/* Avatar Row */}
-          <div className="flex items-center gap-2 mb-6">
-            {category.avatarColors.map((color, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ y: -5, zIndex: 10 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold -ml-2 first:ml-0"
-                style={{
-                  background: color,
-                  border: "2px solid #081C34",
-                  boxShadow: "0 2px 10px rgba(0,0,0,0.25)",
-                }}
-              >
-                {String.fromCharCode(65 + idx)}
-              </motion.div>
-            ))}
-
-            <span className="text-xs font-medium ml-2 text-white/50">
-              +{Math.floor(Math.random() * 30) + 20} more
-            </span>
           </div>
 
           {/* Footer */}
@@ -844,7 +805,7 @@ const HeroSection = () => (
     </div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="grid lg:grid-cols-1 gap-12 lg:gap-20 items-center">
         {/* LEFT - Content */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -894,14 +855,14 @@ const HeroSection = () => (
             certified SAP consultants and skilled engineering professionals.
           </p>
 
-          <p className="text-base text-gray-400 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
             Whether you need to scale quickly, fill critical skill gaps, or
             accelerate project delivery— we help you build the right team,
             exactly when you need it.
           </p>
 
           {/* Feature Tags */}
-          <div className="flex flex-wrap gap-3 mb-8">
+          {/* <div className="flex flex-wrap gap-3 mb-8">
             {[
               " Quick Deployment",
               " Skill Matched",
@@ -923,7 +884,7 @@ const HeroSection = () => (
                 {tag}
               </motion.span>
             ))}
-          </div>
+          </div> */}
 
           {/* Trust Indicators */}
           {/* <div
@@ -946,65 +907,6 @@ const HeroSection = () => (
               </div>
             ))}
           </div> */}
-        </motion.div>
-
-        {/* RIGHT - Team Visual */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
-            style={{
-              background: `linear-gradient(145deg, ${BRAND.navy.light}, ${BRAND.navy.mid})`,
-              border: `1px solid rgba(253,185,19,0.15)`,
-            }}
-          >
-            <TeamVisual />
-          </div>
-
-          {/* Floating Stats Card */}
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-5 shadow-xl"
-            style={{ border: `2px solid ${BRAND.gold.primary}` }}
-          >
-            <div className="flex items-center gap-3">
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center"
-                style={{ background: `${BRAND.gold.primary}15` }}
-              >
-                <FaUserPlus
-                  className="text-xl"
-                  style={{ color: BRAND.gold.primary }}
-                />
-              </div>
-              <div>
-                <div
-                  className="text-xl font-black"
-                  style={{ color: BRAND.navy.dark }}
-                >
-                  {"<48hrs"}
-                </div>{" "}
-                <div className="text-xs text-gray-500">Avg Deployment</div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Decorative Elements */}
-          <div
-            className="absolute -top-4 -left-4 w-24 h-24 rounded-2xl -z-10 opacity-60"
-            style={{
-              background: "linear-gradient(135deg, #3B82F6, transparent)",
-            }}
-          />
-          <div
-            className="absolute -bottom-4 -left-8 w-32 h-32 rounded-full -z-10 opacity-40"
-            style={{ background: BRAND.gold.primary }}
-          />
         </motion.div>
       </div>
     </div>
@@ -1078,11 +980,12 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8 }}
           className="relative order-2 lg:order-1"
         >
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800 ">
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
             {/* Remote Team Setup Visual */}
-            <div className="absolute inset-0 p-8 flex flex-col">
+            {/* Reduced padding on mobile (p-3) scaling up to desktop (md:p-8) */}
+            <div className="absolute inset-0 p-3 sm:p-5 md:p-8 flex flex-col">
               {/* Video Call Grid Mockup */}
-              <div className="flex-1 grid grid-cols-2 gap-3">
+              <div className="flex-1 grid grid-cols-2 gap-2 sm:gap-3">
                 {[
                   {
                     name: "Sarah M.",
@@ -1115,7 +1018,7 @@ const BenefitsSection = () => (
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2 + idx * 0.1 }}
-                    className={`rounded-xl p-4 flex flex-col items-center justify-center ${
+                    className={`rounded-lg sm:rounded-xl p-1 sm:p-1 md:p-2 flex flex-col items-center justify-center ${
                       person.isYou ? "row-span-2" : ""
                     }`}
                     style={{
@@ -1127,11 +1030,13 @@ const BenefitsSection = () => (
                         : "1px solid rgba(255,255,255,0.08)",
                     }}
                   >
-                    {/* Avatar */}
+                    {/* Avatar - Scaled down properly for mobile */}
                     <div
-                      className={`w-${person.isYou ? "16" : "12"} h-${person.isYou ? "16" : "12"} rounded-${
-                        person.isYou ? "2xl" : "xl"
-                      } flex items-center justify-center mb-2`}
+                      className={`${
+                        person.isYou
+                          ? "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-xl sm:rounded-2xl"
+                          : "w-6 h-6 sm:w-6 sm:h-6 md:w-10 md:h-10 rounded-lg sm:rounded-xl"
+                      } flex items-center justify-center mb-1 sm:mb-2`}
                       style={{
                         background: person.isYou
                           ? BRAND.gold.gradient
@@ -1139,7 +1044,7 @@ const BenefitsSection = () => (
                       }}
                     >
                       <span
-                        className={`${person.isYou ? "text-2xl" : "text-lg"} font-bold text-white`}
+                        className={`${person.isYou ? "text-base sm:text-xl md:text-2xl" : "text-xs sm:text-base md:text-lg"} font-bold text-white`}
                       >
                         {person.isYou ? "👔" : person.name.charAt(0)}
                       </span>
@@ -1150,90 +1055,73 @@ const BenefitsSection = () => (
                       <motion.div
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 1, repeat: Infinity }}
-                        className="w-2 h-2 rounded-full mb-1"
+                        className="w-0.5 h-0.6 sm:w-1 sm:h-1 rounded-full mb-0.5 sm:mb-1"
                         style={{ background: BRAND.gold.primary }}
                       />
                     )}
 
-                    <span className="text-xs font-medium text-white text-center truncate w-full px-1">
+                    {/* Text scaled down for mobile readability */}
+                    <span className="text-[10px] sm:text-xs md:text-sm font-medium text-white text-center truncate w-full px-1">
                       {person.name}
                     </span>
-                    <span className="text-[10px] text-white/50 text-center">
+                    <span className="text-[8px] sm:text-[10px] md:text-xs text-white/50 text-center">
                       {person.role}
                     </span>
 
                     {/* Active indicator */}
-                    <div className="flex items-center gap-1 mt-1">
+                    <div className="flex items-center gap-0.5 sm:gap-1 mt-0.5 sm:mt-1">
                       <span
-                        className="w-1.5 h-1.5 rounded-full"
+                        className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full"
                         style={{ background: "#10B981" }}
                       />
-                      <span className="text-[8px] text-green-400">Online</span>
+                      <span className="text-[6px] sm:text-[8px] md:text-[10px] text-green-400">
+                        Online
+                      </span>
                     </div>
                   </motion.div>
                 ))}
               </div>
 
-              {/* Meeting Controls Bar */}
-              <div
-                className="mt-4 flex items-center justify-between px-4 py-3 rounded-xl"
-                style={{
-                  background: "rgba(11,29,51,0.95)",
-                  borderTop: "1px solid rgba(253,185,19,0.2)",
-                }}
-              >
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] text-white/40">
-                    Meeting in progress
-                  </span>
-                  <motion.span
-                    animate={{ opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="w-2 h-2 rounded-full"
-                    style={{ background: "#EF4444" }}
-                  />
-                  <span className="text-[10px] font-mono text-red-400">
-                    02:34:17
-                  </span>
-                </div>
-
-                <div className="flex gap-2">
-                  {["Mic", "Video", "Share"].map((btn, i) => (
-                    <div
-                      key={i}
-                      className="w-7 h-7 rounded-lg flex items-center justify-center"
-                      style={{ background: "rgba(255,255,255,0.1)" }}
-                    >
-                      <span className="text-[8px] text-white/60">{btn[0]}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* Meeting Controls Bar (Commented out in original, kept commented) */}
+              {/* <div
+        className="mt-2 sm:mt-4 flex items-center justify-between px-3 sm:px-4 py-2 sm:py-3 rounded-xl"
+        style={{
+          background: "rgba(11,29,51,0.95)",
+          borderTop: "1px solid rgba(253,185,19,0.2)",
+        }}
+      >
+        ...
+      </div> */}
             </div>
           </div>
 
-          {/* Floating Badge */}
+          {/* Floating Badge - Scaled down for mobile so it doesn't cover the video grid */}
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -bottom-3 -left-3 bg-white rounded-xl p-4 shadow-lg"
-            style={{ border: `2px solid #3B82F6` }}
+            className="absolute -bottom-2 -left-2 sm:-bottom-3 sm:-left-3 bg-white rounded-lg sm:rounded-xl p-2 sm:p-3 md:p-4 shadow-lg z-20"
+            style={{ border: "2px solid #3B82F6" }}
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-md sm:rounded-lg flex items-center justify-center"
                 style={{ background: "rgba(59,130,246,0.1)" }}
               >
-                <FaUsers className="text-lg" style={{ color: "#3B82F6" }} />
+                <FaUsers
+                  className="text-sm sm:text-lg"
+                  style={{ color: "#3B82F6" }}
+                />
               </div>
               <div>
                 <div
-                  className="text-base font-black"
+                  className="text-xs sm:text-sm md:text-base font-black"
                   style={{ color: BRAND.navy.dark }}
                 >
                   Seamless
                 </div>
-                <div className="text-[10px] text-gray-500">Integration</div>
+                <div className="text-[8px] sm:text-[10px] md:text-xs text-gray-500">
+                  Integration
+                </div>
               </div>
             </div>
           </motion.div>
@@ -1277,45 +1165,10 @@ const BenefitsSection = () => (
           </p>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
-          </div>
-
-          {/* Quick Stats */}
-          <div className="p-6 rounded-2xl bg-primary-800">
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-              <FaStar
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              Why Clients Choose Us
-            </h4>
-
-            <div className="grid grid-cols-2 gap-4">
-              {metricsData.map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="text-center p-3 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)" }}
-                >
-                  <metric.icon
-                    className="mx-auto mb-1"
-                    style={{ color: metric.color, fontSize: "14px" }}
-                  />
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: "white" }}
-                  >
-                    {metric.value}
-                  </div>
-                  <div className="text-[10px] text-white/50">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>
