@@ -1402,12 +1402,12 @@ const leadershipData = [
   {
     id: 1,
     name: "Nishant Gautam",
-    role: "CEO & Founder",
+    role: "Founder & CEO",
     image: img1,
     initials: "NG",
     color: "#FDB913",
     quote: "Driving enterprise transformation through innovation.",
-    bio: "SAP consulting leader with over 15 years of experience delivering enterprise transformation initiatives and strategic business solutions.",
+    bio: "Founder and business leader with over 15 years of experience driving consulting, technology, and professional services organizations. Passionate about helping clients accelerate growth, transform operations, and achieve long-term business success.",
     expertise: [
       "SAP Consulting",
       "Digital Transformation",
@@ -1428,7 +1428,7 @@ const leadershipData = [
   {
     id: 2,
     name: "Bob Marchand",
-    role: "COO",
+    role: "Chief Operating Officer",
     image: img2,
     initials: "BM",
     color: "#3B82F6",
@@ -1477,7 +1477,7 @@ const leadershipData = [
     initials: "OB",
     color: "#8B5CF6",
     quote: "Strategic leadership creates long-term value.",
-    bio: "Board advisor focused on SAP AMS, Hybrid Cloud Services, and enterprise delivery excellence.",
+    bio: "Guiding businesses worldwide with decades of expertise in SAP, cloud services, and digital transformation.",
     expertise: ["SAP AMS", "Hybrid Cloud", "Executive Advisory"],
     experience: "20+ Years",
     achievements: [
@@ -1653,7 +1653,7 @@ const LeaderCard = ({ leader, index }) => {
         {/* ================================= */}
         {/* IMAGE SECTION */}
         {/* ================================= */}
-        <div className="relative h-[380px] md:h-[400px] lg:h-[400px] overflow-hidden">
+        <div className="relative h-[460px] md:h-[420px] lg:h-[420px] overflow-hidden">
           <img
             src={leader.image}
             alt={`${leader.name} - ${leader.role}`}
@@ -1707,7 +1707,7 @@ const LeaderCard = ({ leader, index }) => {
         {/* ================================= */}
         {/* CONTENT SECTION */}
         {/* ================================= */}
-        <div className="p-5 lg:p-6">
+        <div className="p-5 lg:p-6 flex flex-col h-full">
           {/* Name */}
           <h3
             className="text-xl lg:text-2xl font-bold mb-2"

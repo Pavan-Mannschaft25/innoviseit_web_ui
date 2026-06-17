@@ -21,7 +21,7 @@ const Footer = () => {
   const footerLinks = {
     services: [
       {
-        name: "Consulting & Implementation",
+        name: "SAP Consulting & Implementation",
         path: "/services/sap-consulting",
       },
       { name: "Guidewire Services", path: "/services/guidewire" },
@@ -55,7 +55,7 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="py-16 border-b border-black">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
             {/* Company Info */}
             <div className="lg:col-span-2">
               {/* <Link to="/" className="flex items-center">
