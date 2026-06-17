@@ -1049,9 +1049,10 @@ const BRAND = {
 const leaders = [
   {
     name: "Nishant Gautam",
-    role: "CEO & Founder",
+    role: "Founder & CEO",
     image: img1,
-    quote: "15+ years in SAP consulting and strategic leadership.",
+    quote:
+      "15+ years of experience in consulting, innovation, and strategic leadership.",
     social: {
       linkedin: "https://www.linkedin.com/in/nishantgautamsap/",
     },
@@ -1081,7 +1082,8 @@ const leaders = [
     name: "Oliver Betz",
     role: "Board Advisor",
     image: img4,
-    quote: "Leads SAP AMS and Hybrid Cloud Services Delivery.",
+    quote:
+      "Former SAP Executive and Board Advisor with global leadership experience in enterprise technology.",
     social: {
       linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
     },
@@ -1249,7 +1251,7 @@ const LeadershipTeam = () => {
                 >
                   <div className="relative bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(11,29,51,0.18)] transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
                     {/* Image */}
-                    <div className="relative h-[400px] md:h-[420px] lg:h-[420px] overflow-hidden">
+                    <div className="relative h-[460px] md:h-[420px] lg:h-[420px] overflow-hidden">
                       <img
                         src={leader.image}
                         alt={leader.name}

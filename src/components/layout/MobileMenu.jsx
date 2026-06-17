@@ -270,6 +270,75 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   )}
                 </Link>
 
+                {/* ─── About Innovise (Accordion) ─── */}
+                <div className="rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => toggleSection("about")}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
+                      expandedSection === "about"
+                        ? "bg-[#0a1628]/5 text-[#0a1628]"
+                        : "text-[#12324f] hover:bg-[#0a1628]/5"
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <FaIcons.FaBuilding className="text-lg" />
+                      <span>About Innovise</span>
+                    </div>
+                    <FaIcons.FaChevronDown
+                      className={`text-xs transition-transform duration-300 ${
+                        expandedSection === "about" ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {expandedSection === "about" && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pt-2 pb-1 space-y-0.5 pl-2">
+                          {navData.whoWeAre.map((section, idx) => (
+                            <React.Fragment key={idx}>
+                              {/* Section Title (if multiple sections) */}
+                              {navData.whoWeAre.length > 1 && (
+                                <p className="text-[11px] font-bold text-[#0a1628] uppercase tracking-wider px-3 mb-1.5 flex items-center gap-2">
+                                  <span className="w-4 h-px bg-[#FFD700]"></span>
+                                  {section.title}
+                                </p>
+                              )}
+
+                              {section.items.map((item, itemIdx) => (
+                                <Link
+                                  key={itemIdx}
+                                  to={item.path}
+                                  onClick={onClose}
+                                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200 ${
+                                    currentPage === item.path
+                                      ? "bg-[#FFD700]/10 text-[#0a1628] font-semibold"
+                                      : "text-gray-600 hover:bg-[#0a1628]/5 hover:text-[#0a1628]"
+                                  }`}
+                                >
+                                  <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#0a1628]/5 flex items-center justify-center text-[#12324f]">
+                                    <IconComponent iconName={item.icon} />
+                                  </span>
+                                  <span>{item.name}</span>
+                                  {currentPage === item.path && (
+                                    <FaIcons.FaCheck className="ml-auto text-[#FFD700] text-xs" />
+                                  )}
+                                </Link>
+                              ))}
+                            </React.Fragment>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
                 {/* ─── What We Do (Accordion) ─── */}
                 <div className="rounded-xl overflow-hidden">
                   <button
@@ -334,75 +403,6 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                                 ))}
                               </ul>
                             </div>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                {/* ─── About Innovise (Accordion) ─── */}
-                <div className="rounded-xl overflow-hidden">
-                  <button
-                    onClick={() => toggleSection("about")}
-                    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
-                      expandedSection === "about"
-                        ? "bg-[#0a1628]/5 text-[#0a1628]"
-                        : "text-[#12324f] hover:bg-[#0a1628]/5"
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <FaIcons.FaBuilding className="text-lg" />
-                      <span>About Innovise</span>
-                    </div>
-                    <FaIcons.FaChevronDown
-                      className={`text-xs transition-transform duration-300 ${
-                        expandedSection === "about" ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
-                  <AnimatePresence>
-                    {expandedSection === "about" && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <div className="pt-2 pb-1 space-y-0.5 pl-2">
-                          {navData.whoWeAre.map((section, idx) => (
-                            <React.Fragment key={idx}>
-                              {/* Section Title (if multiple sections) */}
-                              {navData.whoWeAre.length > 1 && (
-                                <p className="text-[11px] font-bold text-[#0a1628] uppercase tracking-wider px-3 mb-1.5 flex items-center gap-2">
-                                  <span className="w-4 h-px bg-[#FFD700]"></span>
-                                  {section.title}
-                                </p>
-                              )}
-
-                              {section.items.map((item, itemIdx) => (
-                                <Link
-                                  key={itemIdx}
-                                  to={item.path}
-                                  onClick={onClose}
-                                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200 ${
-                                    currentPage === item.path
-                                      ? "bg-[#FFD700]/10 text-[#0a1628] font-semibold"
-                                      : "text-gray-600 hover:bg-[#0a1628]/5 hover:text-[#0a1628]"
-                                  }`}
-                                >
-                                  <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#0a1628]/5 flex items-center justify-center text-[#12324f]">
-                                    <IconComponent iconName={item.icon} />
-                                  </span>
-                                  <span>{item.name}</span>
-                                  {currentPage === item.path && (
-                                    <FaIcons.FaCheck className="ml-auto text-[#FFD700] text-xs" />
-                                  )}
-                                </Link>
-                              ))}
-                            </React.Fragment>
                           ))}
                         </div>
                       </motion.div>

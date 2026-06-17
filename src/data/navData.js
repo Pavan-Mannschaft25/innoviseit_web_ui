@@ -194,12 +194,6 @@ export const navData = {
     {
       title: "Industries",
       items: [
-        // {
-        //   name: "Aerospace & Defense",
-        //   desc: "Maintenance, repair, and overhaul (MRO), project management, and regulatory compliance",
-        //   icon: "FaFighterJet",
-        //   path: "/industries/aerospace-defense",
-        // },
         {
           name: "Automotive",
           desc: "Vehicle lifecycle management, connected vehicles, and future mobility solutions",
@@ -253,6 +247,12 @@ export const navData = {
           desc: "Government accounting, grants management, and citizen service platforms",
           icon: "FaLandmark",
           path: "/industries/public-sector",
+        },
+        {
+          name: "Aerospace & Defense",
+          desc: "PEO-led SAP transformation, MRO optimization, program execution excellence, and compliance-driven operations for aerospace and defense enterprises.",
+          icon: "FaFighterJet",
+          path: "/industries/aerospace-defense",
         },
       ],
     },
