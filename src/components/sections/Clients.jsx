@@ -532,7 +532,7 @@ const PartnerMarquee = () => {
           </motion.div> */}
 
           {/* Title */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-bold tracking-tight mb-5 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 leading-tight">
             <span className="text-black">Our </span>
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
