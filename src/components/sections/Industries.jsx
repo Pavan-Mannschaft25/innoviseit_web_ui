@@ -226,7 +226,7 @@ const Industries = () => {
           //   </h2>
           // }
           title={
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-[1.1] tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
               <span className="bg-black bg-clip-text text-transparent">
                 Industries We
               </span>{" "}
