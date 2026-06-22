@@ -411,7 +411,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                 </div>
 
                 {/* Careers */}
-                {/* <Link
+                <Link
                   to="/careers"
                   onClick={onClose}
                   className={`flex items-center gap-3 px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
@@ -425,7 +425,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   {currentPage === "/careers" && (
                     <span className="ml-auto w-2 h-2 rounded-full bg-[#FFD700]"></span>
                   )}
-                </Link> */}
+                </Link>
 
                 {/* Contact */}
                 <Link
