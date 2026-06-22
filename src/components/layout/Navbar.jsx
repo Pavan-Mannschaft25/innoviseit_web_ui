@@ -1138,6 +1138,11 @@ const Navbar = () => {
                 />
               </div>
 
+              <Link to="/careers" className={navLinkClass()}>
+                Careers
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+              </Link>
+
               {/* Contact */}
               <Link to="/contact" className={navLinkClass()}>
                 Contact
