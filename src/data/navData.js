@@ -45,12 +45,12 @@ export const navData = {
         //   icon: "FaProjectDiagram",
         //   path: "/services/integration-services",
         // },
-        // {
-        //   name: "Application Management Services",
-        //   desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
-        //   icon: "FaTools",
-        //   path: "/services/app-maintenance",
-        // },
+        {
+          name: "Application Management Services",
+          desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
+          icon: "FaTools",
+          path: "/services/app-maintenance",
+        },
         // {
         //   name: "Data Migration & Transformation",
         //   desc: "System consolidation, SAP HANA migration, and data modernization",

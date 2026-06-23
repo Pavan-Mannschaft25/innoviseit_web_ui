@@ -30,6 +30,10 @@ const Footer = () => {
         path: "/services/application-development-integration-ai",
       },
       {
+        name: "Application Management Services",
+        path: "/services/app-maintenance",
+      },
+      {
         name: "Testing & Quality Assurance",
         path: "/services/testing-qa",
       },
@@ -37,7 +41,7 @@ const Footer = () => {
     company: [
       { name: "About Us", path: "/about" },
       { name: "Leadership", path: "/leadership" },
-      // { name: "Careers", path: "/careers" },
+      { name: "Careers", path: "/careers" },
       { name: "Our Values", path: "/culture/values" },
       { name: "Contact", path: "/contact" },
     ],

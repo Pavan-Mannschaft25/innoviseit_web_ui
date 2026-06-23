@@ -868,7 +868,7 @@ const Services = () => {
 
       <Container>
         {/* Top Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+        <div className="flex flex-row items-center justify-between gap-6 mb-12">
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0B2A4A] leading-tight">
               Core Services
@@ -876,14 +876,14 @@ const Services = () => {
           </div>
 
           {/* Navigation */}
-          {/* <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="group w-14 h-14 rounded-full bg-white border border-gray-200 shadow-sm
+              className="group w-14 h-14 rounded-full bg-[#0B2A4A] shadow-lg
               flex items-center justify-center transition-all duration-300
-              hover:bg-[#0B2A4A] hover:border-[#0B2A4A] hover:scale-105"
+              hover:scale-105"
             >
-              <FaArrowLeft className="text-gray-700 group-hover:text-white transition-all duration-300" />
+              <FaArrowLeft className="text-white" />
             </button>
 
             <button
@@ -894,7 +894,7 @@ const Services = () => {
             >
               <FaArrowRight className="text-white" />
             </button>
-          </div> */}
+          </div>
         </div>
 
         {/* Premium Slider */}
