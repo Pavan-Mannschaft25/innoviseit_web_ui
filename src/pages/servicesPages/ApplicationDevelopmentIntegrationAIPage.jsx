@@ -6406,6 +6406,7 @@ import {
   FaStar,
   FaAward,
   FaGlobe,
+  FaClipboardList,
 } from "react-icons/fa";
 import {
   FaAws,
@@ -7113,41 +7114,40 @@ const TransformationJourneySection = () => {
     {
       title: "Discover",
       icon: FaSearch,
-      desc: "Analyze requirements and identify opportunities",
+      desc: "Understand business requirements, identify challenges, and define the project scope and objectives.",
       color: "#3B82F6",
     },
     {
-      title: "Design",
+      title: "Prepare",
+      icon: FaClipboardList,
+      desc: "Establish the project team, create the implementation plan, and set up the development environment.",
+      color: "#06B6D4",
+    },
+    {
+      title: "Explore",
       icon: FaPencilRuler,
-      desc: "Create architecture and user experience blueprints",
+      desc: "Analyze business processes, design the solution architecture, and finalize integrations and requirements.",
       color: "#F59E0B",
     },
     {
-      title: "Develop",
+      title: "Realize",
       icon: FaCode,
-      desc: "Build robust, scalable applications",
+      desc: "Develop the application, configure features, perform testing, and validate the solution.",
       color: "#10B981",
-    },
-    {
-      title: "Integrate",
-      icon: FaPlug,
-      desc: "Connect systems and data flows seamlessly",
-      color: "#8B5CF6",
     },
     {
       title: "Deploy",
       icon: FaRocket,
-      desc: "Launch with confidence and minimal disruption",
+      desc: "Execute production deployment, data migration, and go-live activities with minimal disruption.",
       color: BRAND.gold.primary,
     },
     {
-      title: "Optimize",
+      title: "Run",
       icon: FaChartLine,
-      desc: "Continuously improve performance and ROI",
-      color: "#06B6D4",
+      desc: "Provide ongoing support, monitor performance, optimize the application, and deliver continuous enhancements.",
+      color: "#8B5CF6",
     },
   ];
-
   return (
     <section
       ref={ref}
@@ -7190,7 +7190,7 @@ const TransformationJourneySection = () => {
 
         {/* Desktop View */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-6 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             {steps.map((step, index) => (
               <motion.div
                 key={index}

@@ -3165,6 +3165,8 @@ import {
   FaUserInjured,
   FaUserShield,
   FaHardHat,
+  FaClipboardList,
+  FaPencilRuler,
 } from "react-icons/fa";
 
 // ==================== BANNER IMAGE ====================
@@ -3321,41 +3323,98 @@ const benefitsData = [
 ];
 
 // ==================== PROCESS STEPS ====================
+// const processSteps = [
+//   {
+//     step: 1,
+//     icon: FaSearchPlus,
+//     title: "Discovery",
+//     subtitle: "Business Analysis",
+//     description:
+//       "Deep-dive into your current processes, requirements, and goals to create a comprehensive implementation roadmap tailored to your needs.",
+//     color: "#3B82F6",
+//   },
+//   {
+//     step: 2,
+//     icon: FaCogs,
+//     title: "Configure",
+//     subtitle: "Platform Setup",
+//     description:
+//       "Configure Guidewire suite components including data model, product definitions, workflows, and integration points based on discovery findings.",
+//     color: "#F59E0B",
+//   },
+//   {
+//     step: 3,
+//     icon: FaCode,
+//     title: "Customize",
+//     subtitle: "Development",
+//     description:
+//       "Develop custom enhancements, integrations, reports, and extensions using Gosu, Java, and Guidewire best practices.",
+//     color: "#10B981",
+//   },
+//   {
+//     step: 4,
+//     icon: FaRocket,
+//     title: "Deploy",
+//     subtitle: "Go-Live & Support",
+//     description:
+//       "Execute production deployment, data migration cutover, user training, and provide post-go-live hypercare support.",
+//     color: "#8B5CF6",
+//   },
+// ];
+
 const processSteps = [
   {
     step: 1,
     icon: FaSearchPlus,
-    title: "Discovery",
-    subtitle: "Business Analysis",
+    title: "Discover",
+    subtitle: "Requirements Assessment",
     description:
-      "Deep-dive into your current processes, requirements, and goals to create a comprehensive implementation roadmap tailored to your needs.",
+      "Understand business objectives, analyze current insurance processes, identify pain points, and define the implementation scope and roadmap.",
     color: "#3B82F6",
   },
   {
     step: 2,
-    icon: FaCogs,
-    title: "Configure",
-    subtitle: "Platform Setup",
+    icon: FaClipboardList,
+    title: "Prepare",
+    subtitle: "Project Planning",
     description:
-      "Configure Guidewire suite components including data model, product definitions, workflows, and integration points based on discovery findings.",
-    color: "#F59E0B",
+      "Establish the project team, define governance, prepare the implementation plan, and set up development and testing environments.",
+    color: "#06B6D4",
   },
   {
     step: 3,
-    icon: FaCode,
-    title: "Customize",
-    subtitle: "Development",
+    icon: FaPencilRuler,
+    title: "Explore",
+    subtitle: "Solution Design",
     description:
-      "Develop custom enhancements, integrations, reports, and extensions using Gosu, Java, and Guidewire best practices.",
-    color: "#10B981",
+      "Conduct business process workshops, define product configurations, identify integrations, and finalize customization requirements.",
+    color: "#F59E0B",
   },
   {
     step: 4,
+    icon: FaCode,
+    title: "Realize",
+    subtitle: "Build & Testing",
+    description:
+      "Configure Guidewire applications, develop integrations and extensions, perform testing, and validate business requirements.",
+    color: "#10B981",
+  },
+  {
+    step: 5,
     icon: FaRocket,
     title: "Deploy",
-    subtitle: "Go-Live & Support",
+    subtitle: "Go-Live Execution",
     description:
-      "Execute production deployment, data migration cutover, user training, and provide post-go-live hypercare support.",
+      "Execute data migration, production deployment, user training, and cutover activities for a successful go-live.",
+    color: "#EF4444",
+  },
+  {
+    step: 6,
+    icon: FaHeadset,
+    title: "Run",
+    subtitle: "Support & Optimization",
+    description:
+      "Provide ongoing support, monitor system performance, optimize processes, and deliver continuous enhancements and end-user assistance.",
     color: "#8B5CF6",
   },
 ];
@@ -4150,7 +4209,7 @@ const ProcessSection = () => (
 
       {/* Desktop View */}
       <div className="hidden lg:block">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.step}
