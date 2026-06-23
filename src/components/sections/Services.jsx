@@ -870,7 +870,7 @@ const Services = () => {
         {/* Top Header */}
         <div className="flex flex-row items-center justify-between gap-6 mb-12">
           <div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0B2A4A] leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#0B2A4A] leading-tight">
               Core Services
             </h2>
           </div>
@@ -879,7 +879,7 @@ const Services = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
-              className="group w-14 h-14 rounded-full bg-[#0B2A4A] shadow-lg
+              className="group w-8 h-8 md:w-14 md:h-14 rounded-full bg-[#0B2A4A] shadow-lg
               flex items-center justify-center transition-all duration-300
               hover:scale-105"
             >
@@ -888,7 +888,7 @@ const Services = () => {
 
             <button
               onClick={() => swiperRef.current?.slideNext()}
-              className="group w-14 h-14 rounded-full bg-[#0B2A4A] shadow-lg
+              className="group w-8 h-8 md:w-14 md:h-14 rounded-full bg-[#0B2A4A] shadow-lg
               flex items-center justify-center transition-all duration-300
               hover:scale-105"
             >
