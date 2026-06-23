@@ -260,7 +260,7 @@ export const servicesData = [
   {
     id: 1,
     category: "SAP",
-    title: "SAP Consulting, Implementation & Security",
+    title: "SAP Consulting & Implementation",
     description:
       "End-to-End SAP services including S/4HANA migration, implementation, support, SAP Security, GRC, access management, and enterprise transformation solutions.",
     image: img1,
@@ -272,7 +272,7 @@ export const servicesData = [
   {
     id: 2,
     category: "Guidewire",
-    title: "Guidewire Consulting & Testing Services",
+    title: "Guidewire Services",
     description:
       "Guidewire implementation, integration, support, upgrades, and comprehensive testing services tailored for insurance organizations.",
     image: img2,
@@ -292,6 +292,31 @@ export const servicesData = [
     date: "Innovise IT",
     featured: true,
     link: "/services/application-development-integration-ai",
+  },
+
+  {
+    id: 4,
+    category: "Application Support",
+    title: "Application Management Services",
+    description:
+      "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
+    image: img4,
+    readTime: "24/7 Support",
+    date: "Innovise IT",
+    featured: false,
+    link: "/services/app-maintenance",
+  },
+  {
+    id: 5,
+    category: "Quality Engineering",
+    title: "Testing & Quality Assurance",
+    description:
+      "AI-powered testing and quality assurance solutions ensuring reliability, scalability, and performance.",
+    image: img5,
+    readTime: "AI Testing",
+    date: "Innovise IT",
+    featured: true,
+    link: "/services/testing-qa",
   },
   // {
   //   id: 3,
@@ -316,30 +341,6 @@ export const servicesData = [
   //   date: "Innovise IT",
   //   featured: true,
   //   link: "/services/sap-consulting",
-  // },
-  // {
-  //   id: 4,
-  //   category: "Application Support",
-  //   title: "Application Maintenance Services",
-  //   description:
-  //     "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
-  //   image: img2,
-  //   readTime: "24/7 Support",
-  //   date: "Innovise IT",
-  //   featured: false,
-  //   link: "/services/app-maintenance",
-  // },
-  // {
-  //   id: 5,
-  //   category: "Quality Engineering",
-  //   title: "Testing & Quality Assurance",
-  //   description:
-  //     "AI-powered testing and quality assurance solutions ensuring reliability, scalability, and performance.",
-  //   image: img3,
-  //   readTime: "AI Testing",
-  //   date: "Innovise IT",
-  //   featured: true,
-  //   link: "/services/testing-qa",
   // },
   // {
   //   id: 6,

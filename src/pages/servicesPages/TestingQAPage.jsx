@@ -1786,7 +1786,9 @@ import {
   FaClipboardCheck,
   FaCog,
   FaUniversalAccess, // Added for Accessibility
-  FaPlug, // Added for API Testing
+  FaPlug,
+  FaSearch,
+  FaClipboardList, // Added for API Testing
 } from "react-icons/fa";
 import banner from "../../assets/services/sr33.png";
 
@@ -1974,38 +1976,56 @@ const processSteps = [
   {
     step: 1,
     icon: FaMicroscope,
-    title: "Assess",
-    subtitle: "Discovery Phase",
+    title: "Discover",
+    subtitle: "Requirements Assessment",
     description:
-      "Understand application architecture, identify risks, and define comprehensive testing strategy.",
+      "Understand business requirements, analyze application landscape, identify risks, and define the testing scope and objectives.",
     color: "#8B5CF6",
   },
   {
     step: 2,
-    icon: FaRobot,
-    title: "Automate",
-    subtitle: "Framework Setup",
+    icon: FaClipboardList,
+    title: "Prepare",
+    subtitle: "Test Planning",
     description:
-      "Implement AI-driven test frameworks with intelligent test case generation and self-healing capabilities.",
+      "Establish the testing team, create the test strategy and plan, and set up testing environments and tools.",
     color: "#6366F1",
   },
   {
     step: 3,
-    icon: FaFlask,
-    title: "Validate",
-    subtitle: "Execution Phase",
+    icon: FaSearch,
+    title: "Explore",
+    subtitle: "Test Design",
     description:
-      "Execute comprehensive testing cycles across functional, performance, and security dimensions.",
+      "Analyze business processes, design test scenarios, identify integrations, and prepare test cases and test data.",
     color: "#3B82F6",
   },
   {
     step: 4,
-    icon: FaCog,
-    title: "Optimize",
-    subtitle: "Improvement Phase",
+    icon: FaFlask,
+    title: "Realize",
+    subtitle: "Execution & Validation",
     description:
-      "Continuously improve quality metrics, optimize test coverage, and enhance overall performance.",
+      "Execute functional, integration, performance, and security testing while validating business requirements and quality standards.",
     color: "#10B981",
+  },
+  {
+    step: 5,
+    icon: FaRocket,
+    title: "Deploy",
+    subtitle: "Go-Live Readiness",
+    description:
+      "Perform final validations, support production deployment, and ensure a smooth go-live with minimal business risk.",
+    color: "#F59E0B",
+  },
+  {
+    step: 6,
+    icon: FaCog,
+    title: "Run",
+    subtitle: "Continuous Quality",
+    description:
+      "Provide ongoing quality assurance, monitor application performance, optimize test coverage, and support continuous improvements.",
+    color: "#EC4899",
   },
 ];
 
@@ -2517,7 +2537,7 @@ const ProcessSection = () => (
       </motion.header>
 
       <div className="hidden lg:block">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.step}
