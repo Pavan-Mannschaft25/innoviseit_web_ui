@@ -10,7 +10,7 @@ function IntroSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-6xl mx-auto">
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Transforming Businesses with
             <span className="bg-primary-800 bg-clip-text text-transparent">
               {" "}
