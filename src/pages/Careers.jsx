@@ -5512,12 +5512,7 @@ const ApplicationFormSection = memo(({ prefillPosition }) => {
 
             <div className="reveal rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
               {!submitted && (
-                <div
-                  className="relative h-8 md:h-36 overflow-hidden"
-                  style={{
-                    background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.lighter})`,
-                  }}
-                >
+                <div className="relative h-36 md:h-36 overflow-hidden bg-primary-800">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div

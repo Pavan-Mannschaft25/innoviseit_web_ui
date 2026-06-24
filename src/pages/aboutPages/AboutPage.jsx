@@ -70,7 +70,7 @@ const servicesData = [
   {
     id: 2,
     icon: FaCogs,
-    title: "Application Maintenance Services",
+    title: "Application Management Services",
     description:
       "24/7 monitoring, support, and continuous optimization of your enterprise applications.",
     features: [
@@ -652,8 +652,10 @@ const WhoWeAreSection = () => (
           <div className="grid grid-cols-2 gap-4">
             {[
               { icon: FaGlobeAmericas, text: "Global Delivery Model" },
+              { icon: FaLightbulb, text: "AI & Engineering Capabilities" },
               { icon: FaShieldAlt, text: "Enterprise Security" },
-              { icon: FaChartLine, text: "Proven Methodologies" },
+              { icon: FaChartLine, text: "Data & Automation" },
+              { icon: FaCloud, text: "Cloud & SAP Expertise" },
               { icon: FaUsers, text: "Expert Consultants" },
             ].map((item, idx) => (
               <motion.div
