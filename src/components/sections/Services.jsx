@@ -1008,7 +1008,7 @@ export default Services;
 //       number: "02",
 //       icon: FaTools,
 //       tag: "AMS",
-//       title: "Application Maintenance Services",
+//       title: "Application Management Services",
 //       description:
 //         "End-to-End AMS support ensuring stability, performance, and continuous improvement of your SAP landscape.",
 //       link: "/services/app-maintenance",
