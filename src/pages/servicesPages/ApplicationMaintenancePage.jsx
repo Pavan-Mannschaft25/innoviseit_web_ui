@@ -30,6 +30,9 @@ import {
   FaAward,
   FaHandshake,
   FaCircle,
+  FaClipboardList,
+  FaPencilRuler,
+  FaCode,
 } from "react-icons/fa";
 import banner from "../../assets/services/sr22.png";
 
@@ -145,38 +148,56 @@ const benefitsData = [
 const processSteps = [
   {
     step: 1,
-    icon: FaEye,
-    title: "Monitor",
-    subtitle: "Real-time Tracking",
+    icon: FaSearchPlus,
+    title: "Discover",
+    subtitle: "Requirements Assessment",
     description:
-      "Continuous 24/7 monitoring of system health, performance metrics, and security events using advanced APM tools.",
+      "Understand business requirements, evaluate available solutions, and define the project scope and transformation objectives.",
     color: "#3B82F6",
   },
   {
     step: 2,
-    icon: FaSearchPlus,
-    title: "Analyze",
-    subtitle: "Risk Identification",
+    icon: FaClipboardList,
+    title: "Prepare",
+    subtitle: "Project Preparation",
     description:
-      "Identify potential risks, performance bottlenecks, and areas for improvement through deep analytics.",
-    color: "#F59E0B",
+      "Establish the project team, create the implementation plan, and set up the system landscape and project governance.",
+    color: "#06B6D4",
   },
   {
     step: 3,
-    icon: FaWrench,
-    title: "Resolve",
-    subtitle: "Issue Resolution",
+    icon: FaPencilRuler,
+    title: "Explore",
+    subtitle: "Solution Design",
     description:
-      "Quick and effective resolution of incidents with minimal impact on business operations.",
-    color: "#10B981",
+      "Analyze business processes, conduct fit-to-standard workshops, identify integrations, and finalize custom requirements.",
+    color: "#F59E0B",
   },
   {
     step: 4,
-    icon: FaRocket,
-    title: "Enhance",
-    subtitle: "Continuous Improvement",
+    icon: FaCode,
+    title: "Realize",
+    subtitle: "Build & Validation",
     description:
-      "Ongoing optimization, feature enhancements, and system upgrades to maximize value.",
+      "Configure and develop the solution, execute testing activities, and validate the system to ensure business readiness.",
+    color: "#10B981",
+  },
+  {
+    step: 5,
+    icon: FaRocket,
+    title: "Deploy",
+    subtitle: "Go-Live Execution",
+    description:
+      "Perform data migration, production deployment, and execute go-live activities for a smooth transition.",
+    color: "#EF4444",
+  },
+  {
+    step: 6,
+    icon: FaHeadset,
+    title: "Run",
+    subtitle: "Continuous Support",
+    description:
+      "Provide ongoing support, monitor system performance, optimize processes, and deliver end-user assistance and enhancements.",
     color: "#8B5CF6",
   },
 ];
@@ -531,7 +552,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Application Maintenance Services
+              Application Management Services
             </span>
           </div>
 
@@ -574,7 +595,7 @@ const HeroSection = () => (
 
           {/* Description */}
           <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
-            Our Application Maintenance Services go beyond traditional support.
+            Our Application Management Services go beyond traditional support.
             We provide 24/7 monitoring, proactive maintenance, and continuous
             optimization.
           </p>
@@ -960,7 +981,7 @@ const ProcessSection = () => (
 
       {/* Desktop */}
       <div className="hidden lg:block">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.step}

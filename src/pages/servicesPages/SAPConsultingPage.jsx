@@ -2512,6 +2512,8 @@ import {
   FaHandshake,
   FaUserTie,
   FaTools,
+  FaClipboardList,
+  FaCode,
 } from "react-icons/fa";
 import banner from "../../assets/services/sr11.png";
 
@@ -2536,6 +2538,44 @@ const ANIMATION = {
   duration: 0.6,
   spring: { type: "spring", stiffness: 300, damping: 25 },
 };
+
+const projectServices = [
+  {
+    title: "Design",
+    icon: FaPencilRuler,
+    description:
+      "Business process design, solution architecture, blueprinting, and transformation planning.",
+    color: "#3B82F6",
+  },
+  {
+    title: "Build",
+    icon: FaCode,
+    description:
+      "Configuration, custom development, integrations, extensions, and quality assurance.",
+    color: "#F59E0B",
+  },
+  {
+    title: "Implementation",
+    icon: FaCogs,
+    description:
+      "End-to-End SAP implementation using SAP Activate methodology and best practices.",
+    color: "#10B981",
+  },
+  {
+    title: "Rollout",
+    icon: FaRocket,
+    description:
+      "Global deployments, data migration, localization, and go-live support.",
+    color: "#8B5CF6",
+  },
+  {
+    title: "Support",
+    icon: FaHeadset,
+    description:
+      "Application management, continuous optimization, monitoring, and enhancement services.",
+    color: BRAND.gold.primary,
+  },
+];
 
 const sapServicesData = [
   {
@@ -2620,41 +2660,60 @@ const benefitsData = [
 ];
 
 // ==================== APPROACH STEPS ====================
+
 const approachSteps = [
   {
     step: 1,
     icon: FaSearch,
     title: "Discover",
-    subtitle: "Assessment Phase",
+    subtitle: "Business Assessment",
     description:
-      "Understand business goals, current systems, and transformation requirements through comprehensive analysis.",
+      "Understand business requirements, evaluate available SAP solutions, and define the project scope and transformation objectives.",
     color: "#3B82F6",
   },
   {
     step: 2,
-    icon: FaPencilRuler,
-    title: "Design",
-    subtitle: "Planning Phase",
+    icon: FaClipboardList,
+    title: "Prepare",
+    subtitle: "Project Preparation",
     description:
-      "Create tailored SAP transformation roadmap with detailed architecture and implementation strategy.",
-    color: "#F59E0B",
+      "Establish the project team, create the implementation plan, and set up the systems and project governance framework.",
+    color: "#06B6D4",
   },
   {
     step: 3,
-    icon: FaShippingFast,
-    title: "Deploy",
-    subtitle: "Execution Phase",
+    icon: FaPencilRuler,
+    title: "Explore",
+    subtitle: "Solution Design",
     description:
-      "Execute implementation using proven methodologies, best practices, and rigorous quality assurance.",
-    color: "#10B981",
+      "Conduct fit-to-standard workshops, analyze business processes, identify integrations, and define custom requirements.",
+    color: "#F59E0B",
   },
   {
     step: 4,
-    icon: FaHeadset,
-    title: "Optimize",
-    subtitle: "Support Phase",
+    icon: FaCode,
+    title: "Realize",
+    subtitle: "Build & Validation",
     description:
-      "Continuous monitoring, performance optimization, and ongoing support to ensure long-term success.",
+      "Configure and develop the solution, perform testing activities, and validate the system to ensure business readiness.",
+    color: "#10B981",
+  },
+  {
+    step: 5,
+    icon: FaRocket,
+    title: "Deploy",
+    subtitle: "Go-Live Execution",
+    description:
+      "Execute data migration, deploy the solution to production, and successfully transition to the live environment.",
+    color: "#EF4444",
+  },
+  {
+    step: 6,
+    icon: FaHeadset,
+    title: "Run",
+    subtitle: "Continuous Support",
+    description:
+      "Provide ongoing support, monitor system performance, optimize processes, and assist end users for long-term success.",
     color: "#8B5CF6",
   },
 ];
@@ -2666,6 +2725,75 @@ const whyChooseUsData = [
   { icon: FaShieldAlt, text: "Proven Methodologies" },
   { icon: FaHandshake, text: "End-to-End Partnership" },
 ];
+
+const ProjectServicesSection = () => (
+  <section className="py-6 lg:py-10 bg-white overflow-hidden">
+    <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <motion.header
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto mb-20"
+      >
+        <span
+          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          style={{
+            background: `${BRAND.navy.mid}08`,
+            color: BRAND.navy.dark,
+          }}
+        >
+          Project Services
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          style={{ color: BRAND.navy.dark }}
+        >
+          End-to-End Delivery Capabilities
+        </h2>
+
+        <p className="text-lg text-slate-500">
+          From strategy and design to rollout and long-term support, we deliver
+          complete SAP transformation services.
+        </p>
+      </motion.header>
+
+      <div className="relative">
+        {/* Desktop Line */}
+        <div className="hidden lg:block absolute top-14 left-0 right-0 h-1 bg-slate-200 rounded-full" />
+
+        <div className="grid lg:grid-cols-5 gap-8">
+          {projectServices.map((item, index) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="text-center relative"
+            >
+              {/* Icon */}
+              <div className="w-28 h-28 rounded-full mx-auto mb-6 flex items-center justify-center relative z-10 bg-primary-800">
+                <item.icon className="text-4xl text-white" />
+              </div>
+
+              <h3
+                className="text-xl font-bold mb-3"
+                style={{ color: BRAND.navy.dark }}
+              >
+                {item.title}
+              </h3>
+
+              <p className="text-sm text-slate-500 leading-relaxed">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 // ==================== COMPONENTS ====================
 
@@ -3309,7 +3437,7 @@ const ApproachSection = () => (
 
       {/* Desktop */}
       <div className="hidden lg:block">
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-3 gap-8">
           {approachSteps.map((step, index) => (
             <motion.div
               key={step.step}
@@ -3530,6 +3658,7 @@ const SAPConsultingPage = () => {
       </div> */}
       <HeroSection />
       <ServicesSection />
+      <ProjectServicesSection />
       <ApproachSection />
       <BenefitsSection />
       {/* <CTABannerSection /> */}
