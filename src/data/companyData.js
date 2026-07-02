@@ -5,10 +5,10 @@ export const companyData = {
   headquarters: "Redmond, Washington, USA",
 
   contact: {
-    email: "Contact@innovise-IT.com",
+    email: "contact@innovise-it.com",
     phone: "+1 (425) 518-5442",
     address: {
-      street: "123 Innovation Drive",
+      // street: "123 Innovation Drive",
       city: "Redmond",
       state: "WA",
       zip: "98052",

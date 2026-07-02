@@ -3171,6 +3171,7 @@ import {
 
 // ==================== BANNER IMAGE ====================
 import guidewireBanner from "../../assets/services/app.png"; // Update path
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS (NAVY + GOLD) ====================
 const BRAND = {
@@ -3710,7 +3711,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Guidewire Services
+              <AnimatedText text="Guidewire Services" />
             </span>
           </div>
 

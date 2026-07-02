@@ -23,6 +23,7 @@ import {
   FaServer,
   FaShieldVirus,
 } from "react-icons/fa";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS (MATCHING GUIDEWIRE PAGE) ====================
 const BRAND = {
@@ -532,7 +533,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Code Quality & Security
+              <AnimatedText text="Code Quality & Security" />
             </span>
           </div>
 

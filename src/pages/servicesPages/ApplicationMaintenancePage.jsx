@@ -35,6 +35,7 @@ import {
   FaCode,
 } from "react-icons/fa";
 import banner from "../../assets/services/sr22.png";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS (NAVY + GOLD) ====================
 const BRAND = {
@@ -552,10 +553,9 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Application Management Services
+              <AnimatedText text="Application Management Services" />
             </span>
           </div>
-
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
             Ensuring{" "}
@@ -592,45 +592,20 @@ const HeroSection = () => (
               Innovation
             </span>
           </h1>
-
           {/* Description */}
           <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
             Our Application Management Services go beyond traditional support.
             We provide 24/7 monitoring, proactive maintenance, and continuous
             optimization.
           </p>
-
           <p className="text-lg text-gray-300 leading-relaxed mb-8 max-w-xl">
             We help organizations reduce downtime, improve performance, and
             adapt quickly to evolving business needs.
           </p>
-
           {/* Live Indicator */}
           <div className="mb-8">
             <LiveIndicator />
           </div>
-
-          {/* Trust Indicators */}
-          {/* <div
-            className="flex flex-wrap items-center gap-6 mt-10 pt-8"
-            style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
-          >
-            {[
-              { icon: FaAward, text: "ISO Certified" },
-              { icon: FaUsers, text: "500+ Apps Managed" },
-              { icon: FaStar, text: "99.9% Uptime" },
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <item.icon
-                  className="text-sm"
-                  style={{ color: BRAND.gold.primary }}
-                />
-                <span className="text-xs text-white/60 font-medium">
-                  {item.text}
-                </span>
-              </div>
-            ))}
-          </div> */}
         </motion.div>
       </div>
     </div>

@@ -36,6 +36,7 @@ import ProjectSupportRemediationPage from "../pages/servicesPages/ProjectSupport
 import ApplicationDevelopmentIntegrationAIPage from "../pages/servicesPages/ApplicationDevelopmentIntegrationAIPage";
 import EnergyUtilitiesChemicalsPage from "../pages/industryPages/EnergyUtilitiesChemicalsPage";
 import CodeQualitySecurityPage from "../pages/servicesPages/CodeQualitySecurityPage";
+import PrivacyPolicy from "../pages/Privacy";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -128,13 +129,14 @@ const AppRoutes = () => {
           />
           //About Pages
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/leadership" element={<LeadershipPage />} />
+          <Route path="/about/leadership" element={<LeadershipPage />} />
           <Route path="/culture/values" element={<ValuesPage />} />
           <Route
             path="/culture/diversity"
             element={<DiversityInclusionPage />}
           />
           <Route path="/culture/community" element={<CommunityImpactPage />} />
+          <Route path="/about/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
