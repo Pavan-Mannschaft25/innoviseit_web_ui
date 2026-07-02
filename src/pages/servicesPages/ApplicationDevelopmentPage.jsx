@@ -27,6 +27,7 @@ import {
 } from "react-icons/fa";
 
 import banner from "../../assets/services/sr22.png";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -142,7 +143,7 @@ const HeroSection = () => {
                 className="text-xs font-bold uppercase tracking-[0.2em]"
                 style={{ color: BRAND.gold.primary }}
               >
-                Application Development Services
+                <AnimatedText text="Application Development Services" />
               </span>
             </div>
 

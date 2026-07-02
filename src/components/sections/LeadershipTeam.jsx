@@ -989,70 +989,92 @@ const BRAND = {
 //     name: "Nishant Gautam",
 //     role: "Founder & CEO",
 //     image: img1,
-//     quote: "Building the future of digital transformation",
-//     social: { linkedin: "https://www.linkedin.com/in/nishantgautamsap/" },
+//     quote:
+//       "15+ years of experience in consulting, innovation, and strategic leadership.",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/nishantgautamsap/",
+//     },
 //   },
+
 //   {
 //     name: "Bob Marchand",
 //     role: "Chief Operating Officer",
 //     image: img2,
-//     quote: "Operational excellence drives our success",
-//     social: { linkedin: "https://www.linkedin.com/in/bomarchand/" },
+//     quote: "20+ years managing SAP delivery and global operations.",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/bomarchand/",
+//     },
 //   },
+
 //   {
 //     name: "Alan Wu",
 //     role: "Chief Revenue Officer",
 //     image: img3,
-//     quote: "Revenue growth through innovation",
-//     social: { linkedin: "https://www.linkedin.com/in/alan-wu-886190" },
+//     quote: "Expert in deep SAP and cybersecurity expertise.",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/alan-wu-886190",
+//     },
 //   },
+
 //   {
 //     name: "Oliver Betz",
 //     role: "Board Advisor",
 //     image: img4,
-//     quote: "Strategic vision for sustainable growth",
-//     social: { linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/" },
+//     quote:
+//       "Former SAP Executive and Board Advisor with global leadership experience in enterprise technology.",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
+//     },
 //   },
+
 //   {
 //     name: "Silvio Bessa",
 //     role: "Board Advisor",
 //     image: img5,
-//     quote: "Guiding companies toward excellence",
-//     social: { linkedin: "https://www.linkedin.com/in/silviobessa/" },
+//     quote: "Deep global experience in enterprise technology and partnerships.",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/silviobessa/",
+//     },
 //   },
+
 //   {
 //     name: "Timothy Wirtjes",
-//     role: "Guidewire Practice Lead",
+//     role: "Director – Guidewire Practice",
 //     image: img6,
-//     quote: "Leading insurance technology solutions",
-//     social: { linkedin: "https://www.linkedin.com/in/timothy-wirtjes/" },
+//     quote: "Bringing over 14+ years of Guidewire expertise.",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/timothy-wirtjes/",
+//     },
 //   },
+
 //   {
 //     name: "Jasbir Singh",
 //     role: "Director – AMS",
 //     image: img7,
-//     quote: "Delivering managed services excellence",
+//     quote: "Leads SAP AMS and Hybrid Cloud Services Delivery.",
 //     social: {
 //       linkedin:
 //         "https://www.linkedin.com/in/jasbir-singh-12b256b?originalSubdomain=ca",
 //     },
 //   },
+
 //   {
 //     name: "Rodrigo Recio",
-//     role: "Director – Testing Services",
+//     role: "Director – Head of Testing Services",
 //     image: img8,
-//     quote: "Quality assurance at its finest",
-//     social: { linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/" },
+//     quote: "Expert in SAP testing and automation leadership.",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
+//     },
 //   },
 // ];
-
 const leaders = [
   {
     name: "Nishant Gautam",
     role: "Founder & CEO",
     image: img1,
     quote:
-      "15+ years of experience in consulting, innovation, and strategic leadership.",
+      "15+ years leading SAP consulting, digital innovation, enterprise strategy, and business transformation globally.",
     social: {
       linkedin: "https://www.linkedin.com/in/nishantgautamsap/",
     },
@@ -1062,7 +1084,8 @@ const leaders = [
     name: "Bob Marchand",
     role: "Chief Operating Officer",
     image: img2,
-    quote: "20+ years managing SAP delivery and global operations.",
+    quote:
+      "20+ years delivering global SAP programs, operational excellence, and scalable enterprise transformation initiatives.",
     social: {
       linkedin: "https://www.linkedin.com/in/bomarchand/",
     },
@@ -1072,7 +1095,8 @@ const leaders = [
     name: "Alan Wu",
     role: "Chief Revenue Officer",
     image: img3,
-    quote: "Expert in deep SAP and cybersecurity expertise.",
+    quote:
+      "Drives enterprise growth through SAP expertise, cybersecurity solutions, strategic partnerships, and customer success.",
     social: {
       linkedin: "https://www.linkedin.com/in/alan-wu-886190",
     },
@@ -1083,7 +1107,7 @@ const leaders = [
     role: "Board Advisor",
     image: img4,
     quote:
-      "Former SAP Executive and Board Advisor with global leadership experience in enterprise technology.",
+      "Former SAP executive providing strategic guidance, global leadership, and enterprise technology advisory expertise.",
     social: {
       linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
     },
@@ -1093,7 +1117,8 @@ const leaders = [
     name: "Silvio Bessa",
     role: "Board Advisor",
     image: img5,
-    quote: "Deep global experience in enterprise technology and partnerships.",
+    quote:
+      "Experienced technology leader strengthening enterprise partnerships, innovation strategies, and global business growth initiatives.",
     social: {
       linkedin: "https://www.linkedin.com/in/silviobessa/",
     },
@@ -1103,7 +1128,8 @@ const leaders = [
     name: "Timothy Wirtjes",
     role: "Director – Guidewire Practice",
     image: img6,
-    quote: "Bringing over 14+ years of Guidewire expertise.",
+    quote:
+      "14+ years delivering Guidewire implementations, consulting excellence, and insurance technology transformation solutions worldwide.",
     social: {
       linkedin: "https://www.linkedin.com/in/timothy-wirtjes/",
     },
@@ -1113,7 +1139,8 @@ const leaders = [
     name: "Jasbir Singh",
     role: "Director – AMS",
     image: img7,
-    quote: "Leads SAP AMS and Hybrid Cloud Services Delivery.",
+    quote:
+      "Leads SAP AMS, hybrid cloud operations, managed services, and enterprise support delivery excellence.",
     social: {
       linkedin:
         "https://www.linkedin.com/in/jasbir-singh-12b256b?originalSubdomain=ca",
@@ -1124,12 +1151,14 @@ const leaders = [
     name: "Rodrigo Recio",
     role: "Director – Head of Testing Services",
     image: img8,
-    quote: "Expert in SAP testing and automation leadership.",
+    quote:
+      "Leads SAP testing, quality assurance, automation strategies, and enterprise application testing excellence globally.",
     social: {
       linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
     },
   },
 ];
+
 const LeadershipTeam = () => {
   const swiperRef = useRef(null);
 

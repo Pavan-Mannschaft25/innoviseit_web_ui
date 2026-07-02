@@ -36,7 +36,7 @@ import ProjectSupportRemediationPage from "../pages/servicesPages/ProjectSupport
 import ApplicationDevelopmentIntegrationAIPage from "../pages/servicesPages/ApplicationDevelopmentIntegrationAIPage";
 import EnergyUtilitiesChemicalsPage from "../pages/industryPages/EnergyUtilitiesChemicalsPage";
 import CodeQualitySecurityPage from "../pages/servicesPages/CodeQualitySecurityPage";
-import PrivacyPolicy from "../pages/privacy";
+import PrivacyPolicy from "../pages/Privacy";
 
 const AppRoutes = () => {
   const location = useLocation();

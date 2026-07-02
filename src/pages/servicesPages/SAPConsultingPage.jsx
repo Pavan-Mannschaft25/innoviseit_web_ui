@@ -2516,6 +2516,7 @@ import {
   FaCode,
 } from "react-icons/fa";
 import banner from "../../assets/services/sr11.png";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS (NAVY + GOLD) ====================
 const BRAND = {
@@ -3115,7 +3116,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              SAP Consulting & Implementation
+              <AnimatedText text="SAP Consulting & Implementation" />
             </span>
           </div>
 
@@ -3268,9 +3269,6 @@ const BenefitsSection = () => (
           className="relative order-2 lg:order-1"
         >
           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-primary-800">
-            {/* Replace with actual image: */}
-            {/* <img src="/images/sap-team.jpg" alt="SAP Team Collaboration" className="w-full h-full object-cover" /> */}
-
             {/* Placeholder Visual */}
             <div className="absolute inset-0 flex items-center justify-center p-8">
               <div className="w-full max-w-sm">
@@ -3369,29 +3367,6 @@ const BenefitsSection = () => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
           </div>
-
-          {/* Why Choose Us Badges */}
-          {/* <div className="p-6 rounded-2xl bg-primary-800">
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-              <FaStar
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              The Innovise Advantage
-            </h4>
-
-            <div className="grid grid-cols-2 gap-3">
-              {whyChooseUsData.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2">
-                  <item.icon
-                    className="text-sm flex-shrink-0"
-                    style={{ color: BRAND.gold.primary }}
-                  />
-                  <span className="text-sm text-white/80">{item.text}</span>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </motion.div>
       </div>
     </div>
@@ -3524,144 +3499,15 @@ const ApproachSection = () => (
   </section>
 );
 
-// CTA Banner Section
-const CTABannerSection = () => (
-  <section
-    className="py-6 lg:py-10 relative overflow-hidden"
-    style={{
-      background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #0A1628 50%, ${BRAND.navy.mid} 100%)`,
-    }}
-  >
-    {/* Background Pattern */}
-    <div
-      className="absolute inset-0 opacity-[0.04]"
-      style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-        backgroundSize: "32px 32px",
-      }}
-    />
-
-    {/* Decorative Orbs */}
-    <motion.div
-      animate={{ y: [0, -20, 0], x: [0, 15, 0] }}
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute top-10 left-1/4 w-80 h-80 rounded-full blur-3xl opacity-[0.08]"
-      style={{ background: "#00A4FD" }}
-    />
-
-    <motion.div
-      animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
-      transition={{
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: 2,
-      }}
-      className="absolute bottom-10 right-1/4 w-96 h-96 rounded-full blur-3xl opacity-[0.06]"
-      style={{ background: BRAND.gold.primary }}
-    />
-
-    <div className="max-w-5xl mx-auto px-4 lg:px-8 relative z-10 text-center">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        {/* Icon */}
-        <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-          className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8"
-          style={{
-            background: `${BRAND.gold.primary}15`,
-            border: `2px solid ${BRAND.gold.primary}30`,
-          }}
-        >
-          <FaRocket
-            className="text-3xl"
-            style={{ color: BRAND.gold.primary }}
-          />
-        </motion.div>
-
-        {/* Main Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-          Ready to Transform Your <span>Enterprise with SAP</span>?
-        </h2>
-
-        <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl mx-auto">
-          Let our certified SAP experts guide you through a seamless
-          transformation journey. From strategy to support, we're with you every
-          step of the way.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <a
-            href="/contact"
-            className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-            style={{
-              background: BRAND.gold.gradient,
-              color: BRAND.navy.dark,
-              boxShadow: `0 10px 40px ${BRAND.gold.primary}40`,
-            }}
-          >
-            <span className="relative z-10 flex items-center gap-3">
-              Get Started Today
-              <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-            </span>
-
-            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
-              <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
-            </div>
-          </a>
-        </div>
-
-        {/* Quick Contact Info */}
-        <div
-          className="flex flex-wrap items-center justify-center gap-8 pt-8"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
-        >
-          {[
-            { value: "Free Assessment", icon: FaLightbulb },
-            { value: "Expert Consultation", icon: FaUsers },
-            { value: "Custom Roadmap", icon: FaProjectDiagram },
-          ].map((item, idx) => (
-            <div key={idx} className="flex items-center gap-2 text-white/60">
-              <item.icon
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              <span className="text-sm font-medium">{item.value}</span>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-    </div>
-  </section>
-);
-
 // Main SAP Page Component
 const SAPConsultingPage = () => {
   return (
     <main role="main">
-      {/* <div
-        className="relative w-full min-h-[70vh] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${banner})`,
-        }}
-      >
-        
-        <div className="absolute inset-0 bg-black/20" />
-      </div> */}
       <HeroSection />
       <ServicesSection />
       <ProjectServicesSection />
       <ApproachSection />
       <BenefitsSection />
-      {/* <CTABannerSection /> */}
     </main>
   );
 };

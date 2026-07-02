@@ -1791,6 +1791,7 @@ import {
   FaClipboardList, // Added for API Testing
 } from "react-icons/fa";
 import banner from "../../assets/services/sr33.png";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS ====================
 const BRAND = {
@@ -2325,7 +2326,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.ai.primary }}
             >
-              Testing & Quality Assurance
+              <AnimatedText text="Testing & Quality Assurance" />
             </span>
           </div>
 

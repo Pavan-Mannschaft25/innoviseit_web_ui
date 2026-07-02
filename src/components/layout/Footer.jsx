@@ -63,14 +63,17 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              {/* <Link to="/" className="flex items-center">
-                <img
-                  src={logo}
-                  alt="Innovise IT"
-                  className="h-8 w-auto object-contain mb-4"
-                />
-              </Link> */}
-              <Link to="/" className="relative group flex items-center">
+              <Link to="/" className="inline-flex items-center gap-3 group">
+                <div className="bg-white p-2 shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:scale-105">
+                  <img
+                    src={logo}
+                    alt="Innovise IT"
+                    className="h-8 w-auto object-contain"
+                  />
+                </div>
+              </Link>
+
+              {/* <Link to="/" className="relative group flex items-center">
                 <div className="relative overflow-hidden rounded-lg p-1">
                   <img
                     src={logo}
@@ -80,7 +83,7 @@ const Footer = () => {
 
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
                 </div>
-              </Link>
+              </Link> */}
 
               <p className="text-white leading-relaxed mb-6 max-w-md">
                 Innovative technology partner delivering cloud, AI, engineering,
@@ -178,8 +181,8 @@ const Footer = () => {
                 <li className="flex items-start gap-3">
                   <FaMapMarkerAlt className="text-accent-500 mt-1 flex-shrink-0" />
                   <span className="text-sm text-white">
-                    {companyData.contact.address.street}
-                    <br />
+                    {/* {companyData.contact.address.street}
+                    <br /> */}
                     {companyData.contact.address.city},{" "}
                     {companyData.contact.address.state}{" "}
                     {companyData.contact.address.zip}
