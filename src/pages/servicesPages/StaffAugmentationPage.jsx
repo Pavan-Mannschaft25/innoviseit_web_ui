@@ -34,6 +34,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import banner from "../../assets/services/sr66.png";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS (NAVY + GOLD ONLY) ====================
 const BRAND = {
@@ -830,7 +831,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Staff Augmentation
+              <AnimatedText text="Staff Augmentation" />
             </span>
           </div>
 

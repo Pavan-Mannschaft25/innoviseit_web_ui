@@ -1032,13 +1032,13 @@ const ANIMATION_CONFIG = {
 const companyData = {
   contact: {
     address: {
-      street: "123 Innovation Drive, Suite 500",
+      // street: "123 Innovation Drive, Suite 500",
       city: "Redmond",
       state: "WA",
       zip: "98052",
       country: "United States",
     },
-    email: "Contact@innovise-IT.com",
+    email: "contact@innovise-it.com",
     phone: "+1 (425) 518-5442",
     hours: "Mon - Fri: 9.30am – 6.30pm",
   },
@@ -1908,8 +1908,8 @@ const ContactPage = () => {
                 <div className="flex items-start gap-3">
                   <FaBuilding className="text-[#FDB913] mt-1 flex-shrink-0" />
                   <p className="text-sm text-gray-300 leading-relaxed">
-                    {companyData.contact.address.street}
-                    <br />
+                    {/* {companyData.contact.address.street}
+                    <br /> */}
                     {companyData.contact.address.city},{" "}
                     {companyData.contact.address.state}{" "}
                     {companyData.contact.address.zip}

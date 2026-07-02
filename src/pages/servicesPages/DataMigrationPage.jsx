@@ -31,6 +31,7 @@ import {
   FaCompress,
 } from "react-icons/fa";
 import banner from "../../assets/services/sr44.png";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS (NAVY + GOLD ONLY) ====================
 const BRAND = {
@@ -797,7 +798,10 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Data Migration & Transformation
+              <AnimatedText
+                text="Data Migration &
+              Transformation"
+              />
             </span>
           </div>
 
