@@ -30,7 +30,7 @@ const Footer = () => {
         path: "/services/application-development-integration-ai",
       },
       {
-        name: "Application Management Services",
+        name: "Application Maintenance Services",
         path: "/services/app-maintenance",
       },
       {

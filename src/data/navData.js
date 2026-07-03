@@ -11,7 +11,7 @@ export const navData = {
         },
         {
           name: "Guidewire Services",
-          desc: "Comprehensive Guidewire implementation, integration, testing, upgrades, and support solutions",
+          desc: "A structured approach fully leveraging Guidewire's SurePath methodology, ensuring predictable and successful delivery.",
           icon: "FaCloud",
           path: "/services/guidewire",
         },
@@ -46,7 +46,7 @@ export const navData = {
         //   path: "/services/integration-services",
         // },
         {
-          name: "Application Management Services",
+          name: "Application Maintenance Services",
           desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
           icon: "FaTools",
           path: "/services/app-maintenance",
@@ -219,17 +219,23 @@ export const navData = {
         //   path: "/industries/construction-real-estate",
         // },
         {
-          name: "Consumer Products",
-          desc: "Demand-driven supply chains, trade promotion, and omnichannel strategies",
-          icon: "FaShoppingCart",
-          path: "/industries/consumer-products",
-        },
-        {
-          name: "Retail",
-          desc: "Merchandise management, omnichannel commerce, and customer loyalty programs",
+          name: "Consumer Products & Retail",
+          desc: "Demand-driven supply chains, merchandising, omnichannel commerce, and customer loyalty.",
           icon: "FaStore",
-          path: "/industries/retail",
+          path: "/industries/consumer-retail",
         },
+        // {
+        //   name: "Consumer Products",
+        //   desc: "Demand-driven supply chains, trade promotion, and omnichannel strategies",
+        //   icon: "FaShoppingCart",
+        //   path: "/industries/consumer-products",
+        // },
+        // {
+        //   name: "Retail",
+        //   desc: "Merchandise management, omnichannel commerce, and customer loyalty programs",
+        //   icon: "FaStore",
+        //   path: "/industries/retail",
+        // },
         // {
         //   name: "Energy, Oil & Gas, Utilities",
         //   desc: "Asset-intensive operations, smart metering, and energy trading systems",

@@ -1126,7 +1126,7 @@ const leaders = [
 
   {
     name: "Timothy Wirtjes",
-    role: "Director – Guidewire Practice",
+    role: "Practice Leader",
     image: img6,
     quote:
       "14+ years delivering Guidewire implementations, consulting excellence, and insurance technology transformation solutions worldwide.",

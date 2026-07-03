@@ -553,7 +553,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              <AnimatedText text="Application Management Services" />
+              <AnimatedText text="Application Maintenance Services" />
             </span>
           </div>
           {/* Title */}
@@ -594,7 +594,7 @@ const HeroSection = () => (
           </h1>
           {/* Description */}
           <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
-            Our Application Management Services go beyond traditional support.
+            Our Application Maintenance Services go beyond traditional support.
             We provide 24/7 monitoring, proactive maintenance, and continuous
             optimization.
           </p>

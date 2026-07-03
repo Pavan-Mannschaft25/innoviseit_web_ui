@@ -1369,7 +1369,7 @@ const ANIMATION = {
 //     initials: "TW",
 //     color: "#F59E0B",
 //     quote: "Modernizing insurance platforms through innovation.",
-//     bio: "Guidewire specialist with 14+ years of experience delivering insurance technology solutions and modernization programs.",
+//     bio: "Guidewire Practice Leader with 14+ years of experience delivering insurance technology solutions and modernization programs.",
 //     expertise: ["Guidewire", "Insurance Technology", "Platform Modernization"],
 //     experience: "14+ Years",
 //     achievements: [
@@ -1555,12 +1555,12 @@ const leadershipData = [
   {
     id: 6,
     name: "Timothy Wirtjes",
-    role: "Director – Guidewire Practice",
+    role: "Practice Leader",
     image: img6,
     initials: "TW",
     color: "#F59E0B",
     quote: "Modernizing insurance platforms through innovation.",
-    bio: "Guidewire specialist with more than 14 years of experience delivering insurance technology solutions, platform modernization, and enterprise consulting while improving operational efficiency and customer experience for insurers worldwide.",
+    bio: "Practice Leader with more than 14 years of experience delivering insurance technology solutions, platform modernization, and enterprise consulting while improving operational efficiency and customer experience for insurers worldwide.",
     expertise: ["Guidewire", "Insurance Technology", "Platform Modernization"],
     experience: "14+ Years",
     achievements: [
