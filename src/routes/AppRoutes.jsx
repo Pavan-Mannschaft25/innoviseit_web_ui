@@ -37,6 +37,7 @@ import ApplicationDevelopmentIntegrationAIPage from "../pages/servicesPages/Appl
 import EnergyUtilitiesChemicalsPage from "../pages/industryPages/EnergyUtilitiesChemicalsPage";
 import CodeQualitySecurityPage from "../pages/servicesPages/CodeQualitySecurityPage";
 import PrivacyPolicy from "../pages/Privacy";
+import ConsumerProductsRetailPage from "../pages/industryPages/ConsumerProductsPage";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -65,6 +66,10 @@ const AppRoutes = () => {
           <Route
             path="/industries/construction-real-estate"
             element={<ConstructionRealEstatePage />}
+          />
+          <Route
+            path="/industries/consumer-retail"
+            element={<ConsumerProductsRetailPage />}
           />
           <Route
             path="/industries/consumer-products"

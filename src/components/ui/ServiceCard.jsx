@@ -195,7 +195,7 @@ const ServiceCard = ({ data, index = 0 }) => {
             />
 
             {/* Category Badge - Top Left */}
-            {data.category && (
+            {/* {data.category && (
               <div className="absolute top-4 left-4 z-10">
                 <span
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg border transition-all duration-300 group-hover:bg-[#FDB913] group-hover:text-[#12324f]"
@@ -212,7 +212,7 @@ const ServiceCard = ({ data, index = 0 }) => {
                   {data.category}
                 </span>
               </div>
-            )}
+            )} */}
 
             {/* External Link Icon - Bottom Right (Animated) */}
             <div

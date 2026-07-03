@@ -774,7 +774,7 @@ const IndustryTileCard = ({
     <Link
       to={data.link}
       className={`group relative block overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ${
-        isFullImage ? "h-[430px]" : "h-[420px]"
+        isFullImage ? "h-[500px]" : "h-[500px]"
       } ${
         isDark
           ? "bg-gradient-to-br from-[#0d2240]/80 to-[#081629]/90 border border-yellow-500/10"
@@ -813,7 +813,7 @@ const IndustryTileCard = ({
       {/* 🖼️ IMAGE SECTION                 */}
       {/* ================================ */}
       <div
-        className={`relative overflow-hidden ${isFullImage ? "h-[260px]" : "h-[200px]"}`}
+        className={`relative overflow-hidden ${isFullImage ? "h-[340px]" : "h-[300px]"}`}
       >
         {/* Loading Skeleton */}
         {!imageLoaded && !imageError && (
