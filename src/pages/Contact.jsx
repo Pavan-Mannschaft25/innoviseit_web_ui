@@ -486,7 +486,7 @@
 
 //       {
 //         value: "application-management",
-//         label: "Application Management Services",
+//         label: "Application Maintenance Services",
 //       },
 
 //       { value: "data-migration", label: "Data Migration & Transformation" },
@@ -1034,7 +1034,7 @@ const companyData = {
     address: {
       // street: "123 Innovation Drive, Suite 500",
       city: "Redmond",
-      state: "WA",
+      state: "Washington",
       zip: "98052",
       country: "United States",
     },
@@ -1335,7 +1335,7 @@ const ContactPage = () => {
         title: "Visit Our Office",
         details: [
           companyData.contact.address.street,
-          `${companyData.contact.address.city}, ${companyData.contact.address.state} ${companyData.contact.address.zip}`,
+          `${companyData.contact.address.city}, ${companyData.contact.address.state}, ${companyData.contact.address.zip}`,
         ],
         action: null,
       },
@@ -1375,7 +1375,7 @@ const ContactPage = () => {
       { value: "ai", label: "AI & Engineering Services" },
       { value: "cloud", label: "Cloud & Digital Transformation" },
       { value: "integration", label: "Enterprise Integration Services" },
-      { value: "ams", label: "Application Management Services" },
+      { value: "ams", label: "Application Maintenance Services" },
       { value: "partnership", label: "Partnership Inquiry" },
       { value: "support", label: "Technical Support" },
       { value: "other", label: "Other" },
@@ -1911,7 +1911,7 @@ const ContactPage = () => {
                     {/* {companyData.contact.address.street}
                     <br /> */}
                     {companyData.contact.address.city},{" "}
-                    {companyData.contact.address.state}{" "}
+                    {companyData.contact.address.state},{" "}
                     {companyData.contact.address.zip}
                   </p>
                 </div>

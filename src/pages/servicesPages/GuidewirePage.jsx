@@ -3307,13 +3307,13 @@ const benefitsData = [
     icon: FaChartLine,
     title: "Operational Efficiency",
     description:
-      "Reduce manual processes by 60% through automation and workflow optimization.",
+      "Reduce manual processes through automation and workflow optimization.",
   },
   {
     icon: FaShieldAlt,
-    title: "Regulatory Compliance",
+    title: "TCO Reductions",
     description:
-      "Stay compliant with evolving insurance regulations through built-in compliance frameworks.",
+      "Reduce total cost of ownership through automation, optimized workflows, and efficient application management.",
   },
   {
     icon: FaUsers,
@@ -3322,46 +3322,6 @@ const benefitsData = [
       "Deliver seamless digital experiences that modern insurance customers expect.",
   },
 ];
-
-// ==================== PROCESS STEPS ====================
-// const processSteps = [
-//   {
-//     step: 1,
-//     icon: FaSearchPlus,
-//     title: "Discovery",
-//     subtitle: "Business Analysis",
-//     description:
-//       "Deep-dive into your current processes, requirements, and goals to create a comprehensive implementation roadmap tailored to your needs.",
-//     color: "#3B82F6",
-//   },
-//   {
-//     step: 2,
-//     icon: FaCogs,
-//     title: "Configure",
-//     subtitle: "Platform Setup",
-//     description:
-//       "Configure Guidewire suite components including data model, product definitions, workflows, and integration points based on discovery findings.",
-//     color: "#F59E0B",
-//   },
-//   {
-//     step: 3,
-//     icon: FaCode,
-//     title: "Customize",
-//     subtitle: "Development",
-//     description:
-//       "Develop custom enhancements, integrations, reports, and extensions using Gosu, Java, and Guidewire best practices.",
-//     color: "#10B981",
-//   },
-//   {
-//     step: 4,
-//     icon: FaRocket,
-//     title: "Deploy",
-//     subtitle: "Go-Live & Support",
-//     description:
-//       "Execute production deployment, data migration cutover, user training, and provide post-go-live hypercare support.",
-//     color: "#8B5CF6",
-//   },
-// ];
 
 const processSteps = [
   {
@@ -3670,7 +3630,7 @@ const HeroSection = () => (
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-16 right-20 w-[450px] h-[450px] rounded-full blur-3xl opacity-[0.07]"
-        style={{ background: "#3B82F6" }} // Blue for trust/security
+        style={{ background: "#3B82F6" }}
       />
       <motion.div
         animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
@@ -4050,32 +4010,6 @@ const BenefitsSection = () => (
                 </div>
               </div>
             </div>
-
-            {/* Floating Badge */}
-            <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-3 -left-3 bg-white rounded-xl p-4 shadow-lg"
-              style={{ border: `2px solid #3B82F6` }}
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style={{ background: "rgba(59,130,246,0.1)" }}
-                >
-                  <FaAward className="text-lg" style={{ color: "#3B82F6" }} />
-                </div>
-                <div>
-                  <div
-                    className="text-base font-black"
-                    style={{ color: BRAND.navy.dark }}
-                  >
-                    Certified
-                  </div>
-                  <div className="text-[10px] text-gray-500">Partner Level</div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
 

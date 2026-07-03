@@ -421,70 +421,104 @@ export const industriesData = [
     ],
   },
 
+  // {
+  //   id: 3,
+  //   name: "Consumer Products",
+  //   category: "Consumer Goods",
+  //   icon: "FaShoppingCart",
+  //   image: img3,
+  //   link: "/industries/consumer-products",
+
+  //   description:
+  //     "Demand-driven supply chains, trade promotion, and omnichannel strategies.",
+
+  //   detailedDescription:
+  //     "Accelerate growth through demand-driven supply chains, trade promotion optimization, customer insights, and omnichannel engagement strategies that improve profitability and customer satisfaction.",
+
+  //   stats: {
+  //     clients: "80+",
+  //     projects: "170+",
+  //     experience: "10+ years",
+  //   },
+
+  //   capabilities: [
+  //     "Demand Planning",
+  //     "Trade Promotion Management",
+  //     "Omnichannel Strategy",
+  //     "Inventory Optimization",
+  //     "Customer Analytics",
+  //   ],
+  // },
+
+  // {
+  //   id: 4,
+  //   name: "Retail",
+  //   category: "Retail",
+  //   icon: "FaStore",
+  //   image: img4,
+  //   link: "/industries/retail",
+
+  //   description:
+  //     "Merchandise management, omnichannel commerce, and customer loyalty programs.",
+
+  //   detailedDescription:
+  //     "Deliver seamless customer experiences through SAP-powered retail solutions including merchandise planning, omnichannel commerce, customer loyalty programs, and advanced retail analytics.",
+
+  //   stats: {
+  //     clients: "90+",
+  //     projects: "200+",
+  //     experience: "10+ years",
+  //   },
+
+  //   capabilities: [
+  //     "Merchandise Management",
+  //     "Omnichannel Commerce",
+  //     "Customer Loyalty Programs",
+  //     "POS Integration",
+  //     "Retail Analytics",
+  //   ],
+  // },
   {
     id: 3,
-    name: "Consumer Products",
-    category: "Consumer Goods",
-    icon: "FaShoppingCart",
+    name: "Consumer Products & Retail",
+    category: "Consumer Goods & Retail",
+    icon: "FaStore",
     image: img3,
-    link: "/industries/consumer-products",
+
+    link: "/industries/consumer-retail",
 
     description:
-      "Demand-driven supply chains, trade promotion, and omnichannel strategies.",
+      "Demand-driven supply chains, merchandising, omnichannel commerce, customer loyalty, and retail transformation.",
 
     detailedDescription:
-      "Accelerate growth through demand-driven supply chains, trade promotion optimization, customer insights, and omnichannel engagement strategies that improve profitability and customer satisfaction.",
+      "Empower consumer products and retail businesses with intelligent supply chain planning, merchandise management, trade promotion optimization, omnichannel commerce, customer loyalty programs, advanced analytics, and SAP-powered digital transformation. We help organizations deliver seamless customer experiences, optimize operations, and accelerate sustainable growth across every sales channel.",
 
     stats: {
-      clients: "80+",
-      projects: "170+",
+      clients: "170+",
+      projects: "370+",
       experience: "10+ years",
     },
 
     capabilities: [
       "Demand Planning",
+      "Supply Chain Optimization",
       "Trade Promotion Management",
-      "Omnichannel Strategy",
-      "Inventory Optimization",
-      "Customer Analytics",
-    ],
-  },
-
-  {
-    id: 4,
-    name: "Retail",
-    category: "Retail",
-    icon: "FaStore",
-    image: img4,
-    link: "/industries/retail",
-
-    description:
-      "Merchandise management, omnichannel commerce, and customer loyalty programs.",
-
-    detailedDescription:
-      "Deliver seamless customer experiences through SAP-powered retail solutions including merchandise planning, omnichannel commerce, customer loyalty programs, and advanced retail analytics.",
-
-    stats: {
-      clients: "90+",
-      projects: "200+",
-      experience: "10+ years",
-    },
-
-    capabilities: [
       "Merchandise Management",
       "Omnichannel Commerce",
       "Customer Loyalty Programs",
+      "Inventory Optimization",
       "POS Integration",
+      "Customer Analytics",
       "Retail Analytics",
     ],
   },
 
   {
-    id: 5,
+    id: 4,
     name: "Industrial Manufacturing & High Tech",
     category: "Manufacturing",
     icon: "FaIndustry",
-    image: img5,
+    image: img4,
     link: "/industries/industrial-manufacturing",
 
     description:
@@ -509,11 +543,11 @@ export const industriesData = [
   },
 
   {
-    id: 6,
+    id: 5,
     name: "Public Sector",
     category: "Government",
     icon: "FaLandmark",
-    image: img6,
+    image: img5,
     link: "/industries/public-sector",
 
     description:
@@ -534,6 +568,40 @@ export const industriesData = [
       "Citizen Services",
       "Budget Planning",
       "Digital Governance",
+    ],
+  },
+  {
+    id: 6,
+    name: "Aerospace & Defense",
+    category: "Aerospace & Defense",
+    icon: "FaFighterJet",
+    image: img6,
+
+    link: "/industries/aerospace-defense",
+
+    description:
+      "PEO-led SAP transformation, MRO optimization, program execution, and compliance-driven operations.",
+
+    detailedDescription:
+      "Accelerate aerospace and defense transformation with SAP-powered solutions for Program Executive Office (PEO) operations, Maintenance, Repair & Overhaul (MRO), supply chain optimization, program lifecycle management, engineering excellence, regulatory compliance, and mission-critical operations. We help organizations improve operational efficiency, strengthen compliance, reduce lifecycle costs, and deliver complex defense programs with confidence.",
+
+    stats: {
+      clients: "60+",
+      projects: "140+",
+      experience: "10+ years",
+    },
+
+    capabilities: [
+      "PEO Transformation",
+      "SAP S/4HANA for Aerospace",
+      "Maintenance, Repair & Overhaul (MRO)",
+      "Program & Portfolio Management",
+      "Supply Chain Optimization",
+      "Asset Lifecycle Management",
+      "Regulatory Compliance",
+      "Engineering & Manufacturing",
+      "Defense Logistics",
+      "Predictive Maintenance",
     ],
   },
 ];

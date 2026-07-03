@@ -55,6 +55,7 @@ import {
   FaAws as FaAwsSolid,
   FaJava as FaJavaSolid,
 } from "react-icons/fa6";
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ============================================================================
 // BRAND CONSTANTS & CONFIGURATION
@@ -803,7 +804,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.25em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Core Engineering & AI Division
+              <AnimatedText text="Core Engineering & AI Division" />
             </span>
           </div>
 

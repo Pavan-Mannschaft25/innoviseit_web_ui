@@ -23,7 +23,7 @@
 // //   },
 // //   {
 // //     id: 2,
-// //     title: "Application Management Services",
+// //     title: "Application Maintenance Services",
 // //     shortDesc: "Continuous optimization of enterprise apps",
 // //     description:
 // //       "Proactive application management ensuring peak performance, security, and reliability. Our AMS practice combines automation, AI-powered monitoring, and expert support to maximize your IT investment.",
@@ -209,7 +209,7 @@
 //   },
 //   {
 //     id: 2,
-//     title: "Application Management Services",
+//     title: "Application Maintenance Services",
 //     description:
 //       "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
 //     image: img2,
@@ -274,7 +274,7 @@ export const servicesData = [
     category: "Guidewire",
     title: "Guidewire Services",
     description:
-      "Guidewire implementation, integration, support, upgrades, and comprehensive testing services tailored for insurance organizations.",
+      "A structured approach fully leveraging Guidewire's SurePath methodology, ensuring predictable and successful delivery.",
     image: img2,
     readTime: "Insurance Technology",
     date: "Innovise IT",
@@ -297,7 +297,7 @@ export const servicesData = [
   {
     id: 4,
     category: "Application Support",
-    title: "Application Management Services",
+    title: "Application Maintenance Services",
     description:
       "24/7 monitoring, support, maintenance, and continuous improvement of enterprise applications.",
     image: img4,
