@@ -95,7 +95,7 @@ const projectServices = [
 const sapServicesData = [
   {
     id: 5,
-    name: "Application Management Services",
+    name: "Application Maintenance Services",
     status: "24/7 Support",
     desc: "24/7 monitoring, support, and continuous improvement of enterprise SAP applications.",
     icon: FaTools,
