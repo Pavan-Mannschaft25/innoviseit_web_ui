@@ -11,7 +11,7 @@ export const companyData = {
       // street: "123 Innovation Drive",
       city: "Redmond",
       state: "Washington,",
-      zip: "98052",
+      zip: "USA",
       country: "USA",
     },
     hours: "Monday – Friday | 9:00 AM – 5:00 PM PST",

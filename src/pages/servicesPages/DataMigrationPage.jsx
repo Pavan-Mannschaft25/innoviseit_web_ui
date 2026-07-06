@@ -798,10 +798,7 @@ const HeroSection = () => (
               className="text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              <AnimatedText
-                text="Data Migration &
-              Transformation"
-              />
+              <AnimatedText text="Data Migration & Transformation" />
             </span>
           </div>
 

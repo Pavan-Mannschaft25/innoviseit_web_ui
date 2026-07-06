@@ -3708,7 +3708,7 @@ const HeroSection = () => (
             PolicyCenter to ClaimCenter, we deliver End-to-End excellence.
           </p>
 
-          <p className="text-base text-gray-100 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-100 leading-relaxed mb-8 max-w-xl">
             Our certified consultants bring deep domain expertise across P&C
             insurance lines, ensuring your Guidewire investment delivers maximum
             ROI.
