@@ -910,7 +910,7 @@ const Services = () => {
           spaceBetween={24}
           breakpoints={{
             640: {
-              slidesPerView: 1.4,
+              slidesPerView: 1,
               spaceBetween: 24,
             },
             768: {

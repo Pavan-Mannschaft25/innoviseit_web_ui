@@ -172,14 +172,13 @@ const ServiceCard = ({ data, index = 0 }) => {
           {/* ================================ */}
           {/* 🖼️ IMAGE CONTAINER               */}
           {/* ================================ */}
-          <div className="relative w-full h-56 lg:h-64 overflow-hidden flex-shrink-0">
+          <div className="relative w-full h-42 lg:h-64 overflow-hidden flex-shrink-0">
             {/* Main Image */}
             <img
               src={data.image}
               alt={data.title}
               loading="lazy"
-              className="w-full h-full object-cover transform 
-                group-hover:scale-110 transition-transform duration-700 ease-out"
+              className="w-full h-full object-cover transform transition-transform duration-700 ease-out"
             />
 
             {/* Multi-layer Gradient Overlay */}
