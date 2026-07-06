@@ -288,7 +288,7 @@ const ServiceCard = ({ data, index = 0 }) => {
 
             {/* Description - Flex Grow for Equal Height */}
             <p
-              className="text-sm leading-relaxed mb-5 line-clamp-3 flex-grow"
+              className="text-sm leading-relaxed mb-5 flex-grow"
               style={{ color: "#64748B" }}
             >
               {data.description}

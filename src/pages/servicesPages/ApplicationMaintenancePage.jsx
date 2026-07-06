@@ -656,7 +656,7 @@ const ServicesSection = () => (
               backgroundClip: "text",
             }}
           >
-            Management Services
+            Maintenance Services
           </span>
         </h2>
 
