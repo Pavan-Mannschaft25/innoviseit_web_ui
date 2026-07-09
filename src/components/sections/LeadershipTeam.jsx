@@ -1356,9 +1356,10 @@ const BRAND = {
 const leaders = [
   {
     name: "Nishant Gautam",
-    role: "Founder & CEO",
+    role: "Founder & Chief Executive Officer",
     image: img1,
-    quote: "15+ years in ERP, SAP consulting, transformation, and innovation.",
+    quote:
+      "Leading enterprise innovation, digital transformation, and strategic business growth worldwide.",
     social: {
       linkedin: "https://www.linkedin.com/in/nishantgautamsap/",
     },
@@ -1367,7 +1368,8 @@ const leaders = [
     name: "Bob Marchand",
     role: "Chief Operating Officer",
     image: img2,
-    quote: "20+ years driving global SAP programs and operational excellence.",
+    quote:
+      "Driving operational excellence through leadership, collaboration, and business transformation.",
     social: {
       linkedin: "https://www.linkedin.com/in/bomarchand/",
     },
@@ -1376,16 +1378,18 @@ const leaders = [
     name: "Alan Wu",
     role: "Chief Revenue Officer",
     image: img3,
-    quote: "Driving strategic partnerships and growth across global markets.",
+    quote:
+      "Accelerating global growth through strategic partnerships and customer success.",
     social: {
       linkedin: "https://www.linkedin.com/in/alan-wu-886190",
     },
   },
   {
     name: "Oliver Betz",
-    role: "Licensed Adviser",
+    role: "Board Advisor",
     image: img4,
-    quote: "10+ years in insurance technology strategy and client success.",
+    quote:
+      "Providing strategic guidance for sustainable innovation and enterprise excellence.",
     social: {
       linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
     },
@@ -1395,7 +1399,7 @@ const leaders = [
     role: "Board Advisor",
     image: img5,
     quote:
-      "Experienced technology leader strengthening enterprise partnerships.",
+      "Building trusted partnerships that empower business growth and transformation.",
     social: {
       linkedin: "https://www.linkedin.com/in/silviobessa/",
     },
@@ -1405,16 +1409,17 @@ const leaders = [
     role: "Practice Leader",
     image: img6,
     quote:
-      "14+ years delivering Guidewire implementations and consulting excellence.",
+      "Delivering innovative technology solutions with operational excellence and customer focus.",
     social: {
       linkedin: "https://www.linkedin.com/in/timothy-wirtjes/",
     },
   },
   {
     name: "Jasbir Singh",
-    role: "Director – AMS",
+    role: "Application Maintenance Services",
     image: img7,
-    quote: "Leads SAP AMS, hybrid cloud operations, and managed services.",
+    quote:
+      "Ensuring reliable application services through continuous operational excellence and innovation.",
     social: {
       linkedin:
         "https://www.linkedin.com/in/jasbir-singh-12b256b?originalSubdomain=ca",
@@ -1422,9 +1427,10 @@ const leaders = [
   },
   {
     name: "Rodrigo Recio",
-    role: "Director – Head of Testing Services",
+    role: "Head of Testing Services",
     image: img8,
-    quote: "Leads SAP testing, quality assurance, and automation strategies.",
+    quote:
+      "Driving software quality through automation, innovation, and testing excellence.",
     social: {
       linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
     },
@@ -1575,7 +1581,7 @@ const LeadershipTeam = () => {
                             {leader.name}
                           </h3>
 
-                          <p className="text-[11px] sm:text-[12px] md:text-[12px] lg:text-[13px] font-medium text-[#64748B] mt-0.5 truncate">
+                          <p className="text-[11px] sm:text-[12px] md:text-[12px] lg:text-[13px] font-medium text-[#64748B] mt-0.5">
                             {leader.role}
                           </p>
 
