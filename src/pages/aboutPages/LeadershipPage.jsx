@@ -1433,12 +1433,12 @@ const leadershipData = [
   {
     id: 1,
     name: "Nishant Gautam",
-    role: "Founder & CEO",
+    role: "Founder & Chief Executive Officer",
     image: img1,
     initials: "NG",
     color: "#FDB913",
     quote: "Driving enterprise transformation through innovation.",
-    bio: "Founder and technology leader with over 15 years of experience delivering SAP consulting, digital transformation, and enterprise solutions while helping organizations accelerate growth, optimize operations, and achieve sustainable business success.",
+    bio: "Leads company vision through innovation, strategic leadership, customer-focused solutions, empowering high-performing teams, driving digital transformation, delivering sustainable business growth, operational excellence, and long-term client value.",
     expertise: [
       "SAP Consulting",
       "Digital Transformation",
@@ -1464,7 +1464,7 @@ const leadershipData = [
     initials: "BM",
     color: "#3B82F6",
     quote: "Operational excellence powers sustainable growth.",
-    bio: "Operations executive with more than 20 years of experience leading global SAP delivery, enterprise operations, and transformation programs while driving operational excellence, customer satisfaction, and scalable business growth worldwide.",
+    bio: "Drives operational excellence by optimizing processes, supporting collaboration, improving efficiency, and ensuring seamless business operations that deliver organizational success and exceptional customer satisfaction.",
     expertise: ["Operations Management", "SAP Delivery", "Program Leadership"],
     experience: "20+ Years",
     achievements: [
@@ -1486,7 +1486,7 @@ const leadershipData = [
     initials: "AW",
     color: "#10B981",
     quote: "Growth is driven by innovation and customer success.",
-    bio: "Revenue executive with extensive expertise in SAP solutions, cybersecurity, and enterprise business development, building strategic partnerships, expanding global markets, and delivering sustainable revenue growth for enterprise organizations.",
+    bio: "Accelerates business growth through strategic partnerships, market expansion, customer engagement, and revenue-focused initiatives that strengthen relationships and create long-term business opportunities globally.",
     expertise: ["Revenue Growth", "Cybersecurity", "Enterprise Sales"],
     experience: "18+ Years",
     achievements: [
@@ -1508,7 +1508,7 @@ const leadershipData = [
     initials: "OB",
     color: "#8B5CF6",
     quote: "Strategic leadership creates long-term value.",
-    bio: "Former SAP executive and board advisor with decades of experience guiding enterprise technology, cloud transformation, and executive leadership while enabling organizations to strengthen innovation and long-term business value.",
+    bio: "Provides strategic guidance, governance, and leadership insights that support innovation, business transformation, informed decision-making, and sustainable organizational growth across evolving technology landscapes.",
     expertise: [
       "Executive Advisory",
       "Cloud Strategy",
@@ -1534,7 +1534,7 @@ const leadershipData = [
     initials: "SB",
     color: "#EC4899",
     quote: "Partnerships and innovation drive business success.",
-    bio: "Experienced technology advisor with deep expertise in enterprise partnerships, digital innovation, and business strategy, helping organizations accelerate transformation, expand global opportunities, and achieve sustainable long-term growth.",
+    bio: "Advises business strategy, digital transformation, and partnership initiatives while supporting organizational growth, innovation, collaboration, and long-term value creation through strategic leadership.",
     expertise: [
       "Enterprise Technology",
       "Strategic Partnerships",
@@ -1560,7 +1560,7 @@ const leadershipData = [
     initials: "TW",
     color: "#F59E0B",
     quote: "Modernizing insurance platforms through innovation.",
-    bio: "Practice Leader with more than 14 years of experience delivering insurance technology solutions, platform modernization, and enterprise consulting while improving operational efficiency and customer experience for insurers worldwide.",
+    bio: "Leads technology initiatives by promoting innovation, service excellence, collaboration, and operational improvement while delivering quality solutions that enhance customer success and business performance.",
     expertise: ["Guidewire", "Insurance Technology", "Platform Modernization"],
     experience: "14+ Years",
     achievements: [
@@ -1577,13 +1577,13 @@ const leadershipData = [
   {
     id: 7,
     name: "Jasbir Singh",
-    role: "Director – AMS",
+    role: "Application Maintenance Services",
     image: img7,
     initials: "JS",
     color: "#22C55E",
     quote: "Delivering reliable managed services at scale.",
-    bio: "SAP AMS leader with extensive experience managing hybrid cloud services, enterprise support, and service delivery while ensuring operational excellence, business continuity, and exceptional customer success across global engagements.",
-    expertise: ["SAP AMS", "Hybrid Cloud", "Service Delivery"],
+    bio: "Oversees Application Maintenance Services, ensuring reliable operations, business continuity, customer satisfaction, and efficient service delivery through collaborative leadership and continuous process improvement.",
+    expertise: ["Application Maintenance Services", "SAP AMS", "Hybrid Cloud"],
     experience: "16+ Years",
     achievements: [
       "Established enterprise AMS delivery models",
@@ -1600,12 +1600,12 @@ const leadershipData = [
   {
     id: 8,
     name: "Rodrigo Recio",
-    role: "Director – Head of Testing Services",
+    role: "Head of Testing Services",
     image: img8,
     initials: "RR",
     color: "#EF4444",
     quote: "Quality engineering ensures business confidence.",
-    bio: "Quality assurance leader with extensive expertise in SAP testing, automation frameworks, and enterprise quality management, enabling organizations to reduce delivery risks, improve software reliability, and accelerate successful releases.",
+    bio: "Leads quality assurance initiatives through testing excellence, automation, and collaboration, ensuring reliable software, improved product quality, and successful business outcomes across enterprise projects.",
     expertise: ["SAP Testing", "Automation", "Quality Engineering"],
     experience: "15+ Years",
     achievements: [
@@ -1711,20 +1711,6 @@ const LeaderCard = ({ leader, index }) => {
             }}
           />
 
-          {/* Experience Badge */}
-          <div className="absolute top-4 left-1 z-20">
-            <span
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md"
-              style={{
-                background: "rgba(18,50,79,0.85)",
-                color: "white",
-              }}
-            >
-              <FaGraduationCap className="text-[#FFD54F]" />
-              {leader.experience}
-            </span>
-          </div>
-
           {/* Quote Icon */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -1757,7 +1743,7 @@ const LeaderCard = ({ leader, index }) => {
 
           {/* Role */}
           <p
-            className="text-sm font-semibold uppercase tracking-wider mb-4"
+            className="text-xs font-semibold uppercase tracking-wider mb-4"
             style={{ color: BRAND.gold.primary }}
           >
             {leader.role}

@@ -718,7 +718,7 @@
 // // //           Comprehensive SAP Services
 // // //         </h2>
 
-// // //         <p className="text-lg leading-relaxed text-white/50">
+// // //         <p className="text-lg leading-relaxed text-white">
 // // //           End-to-end solutions designed to maximize your SAP investment and
 // // //           accelerate digital transformation.
 // // //         </p>
@@ -1040,7 +1040,7 @@
 // //           whileInView={{ opacity: 1, y: 0 }}
 // //           viewport={{ once: true }}
 // //           transition={{ delay: 0.25, duration: 0.5 }}
-// //           className="text-white/55 text-[15px] leading-[1.8] mb-8 max-w-lg"
+// //           className="text-white text-[15px] leading-[1.8] mb-8 max-w-lg"
 // //         >
 // //           {service.description}
 // //         </motion.p>
@@ -1060,7 +1060,7 @@
 // //               whileInView={{ opacity: 1, x: 0 }}
 // //               viewport={{ once: true }}
 // //               transition={{ delay: 0.4 + idx * 0.08, duration: 0.4 }}
-// //               className="flex items-start gap-3 text-sm text-white/75"
+// //               className="flex items-start gap-3 text-sm text-white"
 // //             >
 // //               <span className="mt-0.5">
 // //                 <CheckIcon />
@@ -1644,7 +1644,7 @@
 // //           Comprehensive SAP Services
 // //         </h2>
 
-// //         <p className="text-lg leading-relaxed text-white/50">
+// //         <p className="text-lg leading-relaxed text-white">
 // //           End-to-end solutions designed to maximize your SAP investment and
 // //           accelerate digital transformation.
 // //         </p>
@@ -2568,7 +2568,7 @@
 // //             SAP
 // //           </span>
 // //           <span
-// //             className="font-semibold text-white/50"
+// //             className="font-semibold text-white"
 // //             style={{ fontSize: "clamp(3px, 1.2vw, 6px)" }}
 // //           >
 // //             DIGITAL CORE
@@ -2743,7 +2743,7 @@
 // //           whileInView={{ opacity: 1, y: 0 }}
 // //           viewport={{ once: true }}
 // //           transition={{ delay: 0.25, duration: 0.5 }}
-// //           className="text-white/55 text-[15px] leading-[1.8] mb-8 max-w-lg"
+// //           className="text-white text-[15px] leading-[1.8] mb-8 max-w-lg"
 // //         >
 // //           {service.description}
 // //         </motion.p>
@@ -2762,7 +2762,7 @@
 // //               whileInView={{ opacity: 1, x: 0 }}
 // //               viewport={{ once: true }}
 // //               transition={{ delay: 0.4 + idx * 0.08, duration: 0.4 }}
-// //               className="flex items-start gap-3 text-sm text-white/75"
+// //               className="flex items-start gap-3 text-sm text-white"
 // //             >
 // //               <span className="mt-0.5">
 // //                 <CheckIcon />
@@ -3158,7 +3158,7 @@
 // //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
 // //             Comprehensive SAP Services
 // //           </h2>
-// //           <p className="text-lg leading-relaxed text-white/50">
+// //           <p className="text-lg leading-relaxed text-white">
 // //             End-to-end solutions designed to maximize your SAP investment and
 // //             accelerate digital transformation.
 // //           </p>
@@ -4684,7 +4684,7 @@
 //           whileInView={{ opacity: 1, y: 0 }}
 //           viewport={{ once: true }}
 //           transition={{ delay: 0.25, duration: 0.5 }}
-//           className="text-white/55 text-[15px] leading-[1.8] mb-8 max-w-lg"
+//           className="text-white text-[15px] leading-[1.8] mb-8 max-w-lg"
 //         >
 //           {service.description}
 //         </motion.p>
@@ -4703,7 +4703,7 @@
 //               whileInView={{ opacity: 1, x: 0 }}
 //               viewport={{ once: true }}
 //               transition={{ delay: 0.4 + idx * 0.08, duration: 0.4 }}
-//               className="flex items-start gap-3 text-sm text-white/75"
+//               className="flex items-start gap-3 text-sm text-white"
 //             >
 //               <span className="mt-0.5">
 //                 <CheckIcon />
@@ -4786,7 +4786,7 @@
 //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
 //             Comprehensive SAP Services
 //           </h2>
-//           <p className="text-lg leading-relaxed text-white/50">
+//           <p className="text-lg leading-relaxed text-white">
 //             End-to-end solutions designed to maximize your SAP investment and
 //             accelerate digital transformation.
 //           </p>
@@ -5266,259 +5266,414 @@ const MigrationViz = () => {
     resize();
     window.addEventListener("resize", resize);
 
-    const particles = [];
-    const numParticles = 120;
-    for (let i = 0; i < numParticles; i++) {
-      particles.push({
-        x: Math.random() * w * 0.22,
-        y: Math.random() * h,
-        speed: 0.3 + Math.random() * 0.7,
-        size: 1.5 + Math.random() * 3,
-        phase: Math.random() * 10,
-        type: Math.random() > 0.8 ? "gold" : "blue",
-        corrupted: Math.random() < 0.08,
+    // ── Data flows ──
+    const flows = [];
+    const numFlows = 6;
+    for (let i = 0; i < numFlows; i++) {
+      flows.push({
+        y: 0.15 + (i / (numFlows - 1)) * 0.7,
+        phase: i * 0.6,
+        speed: 0.3 + Math.random() * 0.4,
+        count: 6 + Math.floor(Math.random() * 8),
       });
     }
 
+    // ── Particles ──
+    const particles = [];
+    for (let i = 0; i < 80; i++) {
+      particles.push({
+        x: Math.random() * 0.25,
+        y: 0.15 + Math.random() * 0.7,
+        speed: 0.2 + Math.random() * 0.6,
+        size: 2 + Math.random() * 3,
+        phase: Math.random() * 10,
+        type: Math.random() > 0.7 ? "gold" : "blue",
+        flowIndex: Math.floor(Math.random() * numFlows),
+      });
+    }
+
+    // ── Data quality over time ──
+    let dataQuality = 85;
+
     const draw = () => {
-      time += 0.01;
+      time += 0.008;
+      dataQuality = 85 + 7 * Math.sin(time * 0.15) + 3 * Math.sin(time * 0.3);
+
       ctx.clearRect(0, 0, w, h);
 
       // ── Background ──
       const grad = ctx.createLinearGradient(0, 0, w, 0);
-      grad.addColorStop(0, "rgba(1, 24, 47, 0.4)");
-      grad.addColorStop(0.5, "rgba(0, 40, 80, 0.3)");
-      grad.addColorStop(1, "rgba(0, 10, 30, 0.4)");
+      grad.addColorStop(0, "rgba(1, 24, 47, 0.3)");
+      grad.addColorStop(0.5, "rgba(0, 40, 80, 0.2)");
+      grad.addColorStop(1, "rgba(0, 10, 30, 0.3)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, w, h);
 
-      // ── Legacy systems ──
-      const legacyX = w * 0.06;
-      const legacyY = h * 0.12;
-      const legacyW = w * 0.16;
-      const legacyH = h * 0.76;
+      // ── Legacy Systems (Left) ──
+      const legacyX = w * 0.04;
+      const legacyY = h * 0.08;
+      const legacyW = w * 0.18;
+      const legacyH = h * 0.84;
 
-      ctx.fillStyle = "rgba(255,255,255,0.03)";
-      ctx.strokeStyle = "rgba(255,255,255,0.06)";
-      ctx.lineWidth = 0.8;
+      // Container
+      ctx.fillStyle = "rgba(255,255,255,0.02)";
+      ctx.strokeStyle = "rgba(255,255,255,0.05)";
+      ctx.lineWidth = 0.5;
       ctx.beginPath();
-      ctx.roundRect(legacyX, legacyY, legacyW, legacyH, 10);
+      ctx.roundRect(legacyX, legacyY, legacyW, legacyH, 12);
       ctx.fill();
       ctx.stroke();
 
-      ctx.fillStyle = "rgba(255,255,255,0.25)";
-      ctx.font = `${w * 0.02}px Inter, sans-serif`;
+      // Header
+      ctx.fillStyle = "rgba(255,255,255,0.2)";
+      ctx.font = `bold ${w * 0.018}px Inter, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
-      ctx.fillText("LEGACY SYSTEMS", legacyX + legacyW / 2, legacyY + 10);
+      ctx.fillText("Legacy Systems", legacyX + legacyW / 2, legacyY + 14);
 
-      for (let i = 0; i < 4; i++) {
-        const lx = legacyX + legacyW * 0.1 + (i % 2) * legacyW * 0.38;
-        const ly =
-          legacyY + legacyH * 0.18 + Math.floor(i / 2) * legacyH * 0.26;
-        const lw = legacyW * 0.32;
-        const lh = legacyH * 0.13;
-        ctx.fillStyle = `rgba(100, 100, 140, ${0.2 + i * 0.05})`;
-        ctx.strokeStyle = `rgba(200, 200, 230, ${0.12 + i * 0.04})`;
+      // Legacy icons
+      const legacyItems = [
+        { label: "ERP", color: "rgba(100, 120, 180, 0.2)" },
+        { label: "CRM", color: "rgba(120, 100, 180, 0.2)" },
+        { label: "Database", color: "rgba(80, 140, 200, 0.2)" },
+      ];
+
+      legacyItems.forEach((item, i) => {
+        const lx = legacyX + legacyW * 0.12;
+        const ly = legacyY + legacyH * 0.15 + i * legacyH * 0.22;
+        const lw = legacyW * 0.76;
+        const lh = legacyH * 0.14;
+
+        ctx.fillStyle = item.color;
+        ctx.strokeStyle = "rgba(255,255,255,0.05)";
         ctx.lineWidth = 0.5;
         ctx.beginPath();
-        ctx.roundRect(lx, ly, lw, lh, 4);
+        ctx.roundRect(lx, ly, lw, lh, 6);
         ctx.fill();
         ctx.stroke();
-        ctx.fillStyle = "rgba(255,255,255,0.2)";
-        ctx.font = `${lw * 0.16}px Inter, sans-serif`;
+
+        ctx.fillStyle = "rgba(255,255,255,0.15)";
+        ctx.font = `${lw * 0.12}px Inter, sans-serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        const labels = ["ERP", "CRM", "DB", "Legacy"];
-        ctx.fillText(labels[i], lx + lw / 2, ly + lh / 2);
-      }
+        ctx.fillText(item.label, lx + lw / 2, ly + lh / 2);
 
-      // ── SAP Cloud ──
-      const cloudX = w * 0.76;
-      const cloudY = h * 0.1;
-      const cloudW = w * 0.19;
-      const cloudH = h * 0.8;
+        // Glowing dot (active)
+        ctx.beginPath();
+        ctx.arc(
+          lx + lw - 14,
+          ly + lh / 2,
+          3 + 1.5 * Math.sin(time * 2 + i),
+          0,
+          Math.PI * 2,
+        );
+        ctx.fillStyle = `rgba(16, 185, 129, ${0.4 + 0.3 * Math.sin(time * 2 + i)})`;
+        ctx.fill();
+      });
 
-      ctx.fillStyle = "rgba(0, 164, 253, 0.06)";
-      ctx.strokeStyle = "rgba(0, 164, 253, 0.12)";
-      ctx.lineWidth = 0.8;
+      // ── SAP S/4HANA (Right) ──
+      const sapX = w * 0.78;
+      const sapY = h * 0.08;
+      const sapW = w * 0.19;
+      const sapH = h * 0.84;
+
+      // Container with glow
+      ctx.fillStyle = "rgba(0, 164, 253, 0.04)";
+      ctx.strokeStyle = "rgba(0, 164, 253, 0.08)";
+      ctx.lineWidth = 0.5;
       ctx.beginPath();
-      ctx.roundRect(cloudX, cloudY, cloudW, cloudH, 10);
+      ctx.roundRect(sapX, sapY, sapW, sapH, 12);
       ctx.fill();
       ctx.stroke();
 
-      ctx.fillStyle = "rgba(0, 164, 253, 0.5)";
-      ctx.font = `bold ${w * 0.02}px Inter, sans-serif`;
+      // Header
+      ctx.fillStyle = "rgba(0, 164, 253, 0.4)";
+      ctx.font = `bold ${w * 0.018}px Inter, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "top";
-      ctx.fillText("SAP S/4HANA", cloudX + cloudW / 2, cloudY + 10);
+      ctx.fillText("SAP S/4HANA", sapX + sapW / 2, sapY + 14);
 
-      ctx.fillStyle = "rgba(0, 164, 253, 0.12)";
-      ctx.beginPath();
-      ctx.arc(
-        cloudX + cloudW / 2,
-        cloudY + cloudH * 0.22,
-        cloudW * 0.28,
+      // SAP Cloud icon
+      const cloudCX = sapX + sapW / 2;
+      const cloudCY = sapY + sapH * 0.22;
+      const cloudR = sapW * 0.25;
+
+      // Cloud glow
+      const cloudGlow = ctx.createRadialGradient(
+        cloudCX,
+        cloudCY,
         0,
-        Math.PI * 2,
+        cloudCX,
+        cloudCY,
+        cloudR * 1.3,
       );
+      cloudGlow.addColorStop(0, "rgba(0, 164, 253, 0.06)");
+      cloudGlow.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = cloudGlow;
+      ctx.beginPath();
+      ctx.arc(cloudCX, cloudCY, cloudR * 1.3, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.fillStyle = "rgba(0, 164, 253, 0.25)";
-      ctx.font = `${cloudW * 0.45}px Inter, sans-serif`;
+      // Cloud shape
+      ctx.fillStyle = "rgba(0, 164, 253, 0.08)";
+      ctx.beginPath();
+      ctx.arc(cloudCX, cloudCY, cloudR, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(0, 164, 253, 0.1)";
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(0, 164, 253, 0.15)";
+      ctx.font = `${cloudR * 0.7}px Inter, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillText("☁", cloudX + cloudW / 2, cloudY + cloudH * 0.22);
+      ctx.fillText("☁", cloudCX, cloudCY + 2);
 
-      // ── Pipeline ──
-      const pipeY1 = h * 0.18;
-      const pipeY2 = h * 0.82;
-      const pipeX1 = legacyX + legacyW;
-      const pipeX2 = cloudX;
+      // S/4HANA badge
+      const badgeX = sapX + sapW / 2;
+      const badgeY = sapY + sapH * 0.45;
+      const badgeW = sapW * 0.7;
+      const badgeH = sapH * 0.08;
 
-      for (let i = 0; i < 8; i++) {
-        const yPos = pipeY1 + (pipeY2 - pipeY1) * (i / 7);
+      ctx.fillStyle = "rgba(0, 164, 253, 0.06)";
+      ctx.strokeStyle = "rgba(0, 164, 253, 0.08)";
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.roundRect(badgeX - badgeW / 2, badgeY, badgeW, badgeH, 4);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(0, 164, 253, 0.3)";
+      ctx.font = `${badgeH * 0.45}px Inter, sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("HANA Cloud", badgeX, badgeY + badgeH / 2);
+
+      // ── Data Flows (horizontal pipes) ──
+      flows.forEach((flow) => {
+        const yPos = h * flow.y;
+        const x1 = legacyX + legacyW;
+        const x2 = sapX;
+
+        // Pipe glow
         ctx.beginPath();
-        ctx.moveTo(pipeX1, yPos);
-        ctx.lineTo(pipeX2, yPos);
-        ctx.strokeStyle = `rgba(0, 164, 253, ${0.04 + 0.03 * (i / 7)})`;
-        ctx.lineWidth = 0.6;
+        ctx.moveTo(x1, yPos);
+        ctx.lineTo(x2, yPos);
+        ctx.strokeStyle = `rgba(0, 164, 253, ${0.03 + 0.02 * Math.sin(time * 0.5 + flow.phase)})`;
+        ctx.lineWidth = 2;
         ctx.stroke();
-      }
 
-      // ── Transformation Engine ──
-      const tx = w * 0.42;
-      const ty = h * 0.35;
-      const tr = Math.min(w, h) * 0.13;
+        // Main pipe
+        ctx.beginPath();
+        ctx.moveTo(x1, yPos);
+        ctx.lineTo(x2, yPos);
+        ctx.strokeStyle = `rgba(0, 164, 253, 0.08)`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
 
-      const tGlow = ctx.createRadialGradient(tx, ty, 0, tx, ty, tr * 1.4);
-      tGlow.addColorStop(0, "rgba(253, 185, 19, 0.2)");
-      tGlow.addColorStop(0.4, "rgba(0, 164, 253, 0.08)");
-      tGlow.addColorStop(1, "rgba(0,0,0,0)");
-      ctx.fillStyle = tGlow;
-      ctx.beginPath();
-      ctx.arc(tx, ty, tr * 1.4, 0, Math.PI * 2);
-      ctx.fill();
+        // Flow particles on this pipe
+        const count = flow.count;
+        for (let i = 0; i < count; i++) {
+          const t = (time * flow.speed + i / count + flow.phase * 0.2) % 1;
+          const px = x1 + (x2 - x1) * t;
+          const py = yPos + 3 * Math.sin(t * 20 + flow.phase);
 
-      const ringPulse = 1 + 0.06 * Math.sin(time * 2.5);
-      ctx.beginPath();
-      ctx.arc(tx, ty, tr * 0.95 * ringPulse, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(253, 185, 19, ${0.3 + 0.15 * Math.sin(time * 2.5)})`;
-      ctx.lineWidth = 2;
-      ctx.stroke();
+          const isGold = i % 3 === 0;
+          const size = isGold ? 2.5 : 2;
 
-      ctx.beginPath();
-      ctx.arc(tx, ty, tr * 0.7 * ringPulse, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(0, 164, 253, ${0.15 + 0.1 * Math.sin(time * 2)})`;
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-
-      const tGrad = ctx.createRadialGradient(
-        tx - 5,
-        ty - 5,
-        0,
-        tx,
-        ty,
-        tr * 0.7,
-      );
-      tGrad.addColorStop(0, "#FDB913");
-      tGrad.addColorStop(0.5, "#D4A020");
-      tGrad.addColorStop(1, "#8A6A10");
-      ctx.fillStyle = tGrad;
-      ctx.beginPath();
-      ctx.arc(tx, ty, tr * 0.7, 0, Math.PI * 2);
-      ctx.fill();
-
-      ctx.fillStyle = "rgba(255,255,255,0.9)";
-      ctx.font = `bold ${tr * 0.28}px Inter, sans-serif`;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillText("AI", tx, ty - 3);
-
-      ctx.fillStyle = "rgba(255,255,255,0.5)";
-      ctx.font = `${tr * 0.1}px Inter, sans-serif`;
-      ctx.fillText("TRANSFORM", tx, ty + tr * 0.32);
-
-      // ── Particles flowing ──
-      particles.forEach((p) => {
-        p.x += p.speed * 1.0;
-        if (p.x > w + 20) {
-          p.x = w * 0.04 + Math.random() * w * 0.08;
-          p.y = Math.random() * h;
-          p.corrupted = Math.random() < 0.06;
-        }
-
-        const px = p.x;
-        const py = p.y;
-        const size = p.size;
-
-        if (!p.corrupted) {
-          const glow = ctx.createRadialGradient(px, py, 0, px, py, size * 7);
+          // Glow
+          const glow = ctx.createRadialGradient(px, py, 0, px, py, size * 5);
           glow.addColorStop(
             0,
-            p.type === "gold"
-              ? "rgba(253,185,19,0.15)"
-              : "rgba(0,164,253,0.15)",
+            isGold
+              ? `rgba(253, 185, 19, ${0.08 + 0.06 * Math.sin(time * 3 + i)})`
+              : `rgba(0, 164, 253, ${0.08 + 0.06 * Math.sin(time * 3 + i)})`,
           );
           glow.addColorStop(1, "rgba(0,0,0,0)");
           ctx.fillStyle = glow;
           ctx.beginPath();
-          ctx.arc(px, py, size * 7, 0, Math.PI * 2);
+          ctx.arc(px, py, size * 5, 0, Math.PI * 2);
           ctx.fill();
-        }
 
-        ctx.beginPath();
-        ctx.arc(px, py, size, 0, Math.PI * 2);
-        if (p.corrupted) {
-          ctx.fillStyle = `rgba(239, 68, 68, ${0.7 + 0.3 * Math.sin(time * 4 + p.phase)})`;
-        } else if (p.type === "gold") {
-          ctx.fillStyle = `rgba(253, 185, 19, ${0.6 + 0.3 * Math.sin(time * 2.5 + p.phase)})`;
-        } else {
-          ctx.fillStyle = `rgba(0, 164, 253, ${0.5 + 0.3 * Math.sin(time * 2 + p.phase)})`;
-        }
-        ctx.fill();
-
-        if (!p.corrupted && p.type === "gold" && p.x > w * 0.45) {
-          ctx.strokeStyle = "rgba(16, 185, 129, 0.5)";
-          ctx.lineWidth = 1;
+          // Particle
           ctx.beginPath();
-          ctx.moveTo(px - size * 0.7, py);
-          ctx.lineTo(px - size * 0.25, py + size * 0.6);
-          ctx.lineTo(px + size * 0.7, py - size * 0.5);
-          ctx.stroke();
+          ctx.arc(px, py, size, 0, Math.PI * 2);
+          ctx.fillStyle = isGold
+            ? `rgba(253, 185, 19, ${0.5 + 0.3 * Math.sin(time * 3 + i)})`
+            : `rgba(0, 164, 253, ${0.4 + 0.3 * Math.sin(time * 3 + i)})`;
+          ctx.fill();
+
+          // Checkmark for validated gold particles near end
+          if (isGold && t > 0.85) {
+            ctx.strokeStyle = "rgba(16, 185, 129, 0.3)";
+            ctx.lineWidth = 0.8;
+            ctx.beginPath();
+            ctx.moveTo(px - size * 0.6, py);
+            ctx.lineTo(px - size * 0.2, py + size * 0.5);
+            ctx.lineTo(px + size * 0.6, py - size * 0.4);
+            ctx.stroke();
+          }
         }
       });
 
-      // ── Progress bar ──
-      const progX = w * 0.28;
-      const progY = h * 0.93;
-      const progW = w * 0.44;
-      const progH = h * 0.025;
+      // ── Transformation Engine (Center) ──
+      const tx = w * 0.42;
+      const ty = h * 0.38;
+      const tr = Math.min(w, h) * 0.11;
 
-      ctx.fillStyle = "rgba(255,255,255,0.06)";
+      // Outer glow
+      const tGlow = ctx.createRadialGradient(tx, ty, 0, tx, ty, tr * 1.6);
+      tGlow.addColorStop(0, "rgba(253, 185, 19, 0.12)");
+      tGlow.addColorStop(0.3, "rgba(0, 164, 253, 0.06)");
+      tGlow.addColorStop(1, "rgba(0,0,0,0)");
+      ctx.fillStyle = tGlow;
       ctx.beginPath();
-      ctx.roundRect(progX, progY, progW, progH, 5);
+      ctx.arc(tx, ty, tr * 1.6, 0, Math.PI * 2);
       ctx.fill();
 
-      const progress = 0.55 + 0.35 * Math.sin(time * 0.25);
-      const fillGrad = ctx.createLinearGradient(progX, 0, progX + progW, 0);
-      fillGrad.addColorStop(0, "#00A4FD");
-      fillGrad.addColorStop(0.5, "#FDB913");
-      fillGrad.addColorStop(1, "#10B981");
-      ctx.fillStyle = fillGrad;
+      // Rotating rings
+      const ringPulse = 1 + 0.04 * Math.sin(time * 2);
+      for (let ring = 0; ring < 3; ring++) {
+        const r = tr * (0.5 + ring * 0.25) * ringPulse;
+        ctx.beginPath();
+        ctx.arc(tx, ty, r, 0, Math.PI * 2);
+        const rot = time * (0.3 + ring * 0.1);
+        ctx.strokeStyle = `rgba(253, 185, 19, ${0.08 + ring * 0.04 + 0.04 * Math.sin(time * 2 + ring)})`;
+        ctx.lineWidth = 0.8 + ring * 0.4;
+        ctx.setLineDash([3, 6]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      // Inner ring
       ctx.beginPath();
-      ctx.roundRect(progX, progY, progW * progress, progH, 5);
+      ctx.arc(
+        tx,
+        ty,
+        tr * 0.7 * (1 + 0.03 * Math.sin(time * 2.5)),
+        0,
+        Math.PI * 2,
+      );
+      ctx.strokeStyle = `rgba(253, 185, 19, ${0.15 + 0.1 * Math.sin(time * 2.5)})`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+
+      // Engine body
+      const tGrad = ctx.createRadialGradient(
+        tx - 4,
+        ty - 4,
+        0,
+        tx,
+        ty,
+        tr * 0.65,
+      );
+      tGrad.addColorStop(0, "#FDB913");
+      tGrad.addColorStop(0.6, "#D4A020");
+      tGrad.addColorStop(1, "#8A6A10");
+      ctx.fillStyle = tGrad;
+      ctx.beginPath();
+      ctx.arc(tx, ty, tr * 0.65, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.fillStyle = "rgba(255,255,255,0.3)";
-      ctx.font = `bold ${w * 0.013}px Inter, sans-serif`;
+      // AI text
+      ctx.fillStyle = "rgba(255,255,255,0.9)";
+      ctx.font = `bold ${tr * 0.3}px Inter, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillText(
-        `Migration ${Math.round(progress * 100)}%`,
-        progX + progW / 2,
-        progY + progH / 2,
+      ctx.fillText("AI", tx, ty - 2);
+
+      ctx.fillStyle = "rgba(255,255,255,0.4)";
+      ctx.font = `${tr * 0.1}px Inter, sans-serif`;
+      ctx.fillText("TRANSFORM", tx, ty + tr * 0.35);
+
+      // ── Data Quality Widget ──
+      const dqX = w * 0.04;
+      const dqY = h * 0.92;
+      const dqW = w * 0.18;
+      const dqH = h * 0.06;
+
+      ctx.fillStyle = "rgba(255,255,255,0.03)";
+      ctx.strokeStyle = "rgba(255,255,255,0.04)";
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.roundRect(dqX, dqY, dqW, dqH, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(255,255,255,0.15)";
+      ctx.font = `${dqW * 0.08}px Inter, sans-serif`;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "top";
+      ctx.fillText("Data Quality", dqX + 8, dqY + 4);
+
+      const qualityVal = Math.round(dataQuality);
+      const qualityColor =
+        qualityVal > 90 ? "#10B981" : qualityVal > 80 ? "#FBBF24" : "#EF4444";
+
+      ctx.fillStyle = qualityColor;
+      ctx.font = `bold ${dqW * 0.16}px Inter, sans-serif`;
+      ctx.textBaseline = "bottom";
+      ctx.textAlign = "right";
+      ctx.fillText(`${qualityVal}%`, dqX + dqW - 8, dqY + dqH - 4);
+
+      // Quality bar
+      const barX = dqX + 8;
+      const barY = dqY + dqH - 8;
+      const barW = dqW - 16;
+      const barH = 3;
+
+      ctx.fillStyle = "rgba(255,255,255,0.05)";
+      ctx.beginPath();
+      ctx.roundRect(barX, barY, barW, barH, 2);
+      ctx.fill();
+
+      const qualityPercent = qualityVal / 100;
+      const barGrad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
+      barGrad.addColorStop(0, "#00A4FD");
+      barGrad.addColorStop(0.6, "#FDB913");
+      barGrad.addColorStop(1, "#10B981");
+      ctx.fillStyle = barGrad;
+      ctx.beginPath();
+      ctx.roundRect(barX, barY, barW * qualityPercent, barH, 2);
+      ctx.fill();
+
+      // ── Status Badge ──
+      const statusX = w * 0.78;
+      const statusY = h * 0.92;
+      const statusW = w * 0.19;
+      const statusH = h * 0.06;
+
+      ctx.fillStyle = "rgba(16, 185, 129, 0.05)";
+      ctx.strokeStyle = "rgba(16, 185, 129, 0.08)";
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.roundRect(statusX, statusY, statusW, statusH, 6);
+      ctx.fill();
+      ctx.stroke();
+
+      // Status dot
+      ctx.beginPath();
+      ctx.arc(
+        statusX + 14,
+        statusY + statusH / 2,
+        4 + 2 * Math.sin(time * 2),
+        0,
+        Math.PI * 2,
       );
+      ctx.fillStyle = `rgba(16, 185, 129, ${0.6 + 0.3 * Math.sin(time * 2)})`;
+      ctx.fill();
+
+      ctx.fillStyle = "rgba(255,255,255,0.2)";
+      ctx.font = `${statusW * 0.08}px Inter, sans-serif`;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      ctx.fillText("Live Migration", statusX + 24, statusY + statusH / 2);
+
+      // Speed indicator
+      ctx.fillStyle = "rgba(255,255,255,0.1)";
+      ctx.font = `${statusW * 0.06}px Inter, sans-serif`;
+      ctx.textAlign = "right";
+      ctx.fillText("12.4 GB/s", statusX + statusW - 8, statusY + statusH / 2);
     };
 
     if (!CanvasRenderingContext2D.prototype.roundRect) {
@@ -5885,7 +6040,7 @@ const TalentViz = () => {
 };
 
 // ═══════════════════════════════════════════════════════════════════
-// 4. SECURITY VIZ — Shield & Code Scan (Brighter)
+// 4. SECURITY VIZ — Advanced Security Operations Center
 // ═══════════════════════════════════════════════════════════════════
 const SecurityViz = () => {
   const canvasRef = useRef(null);
@@ -5913,128 +6068,258 @@ const SecurityViz = () => {
     resize();
     window.addEventListener("resize", resize);
 
+    // ── Code scanning lines ──
     const codeLines = [];
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 35; i++) {
       codeLines.push({
         x: Math.random() * w,
         y: Math.random() * h,
-        len: 15 + Math.random() * 70,
-        speed: 0.1 + Math.random() * 0.4,
+        len: 20 + Math.random() * 80,
+        speed: 0.1 + Math.random() * 0.3,
         phase: Math.random() * 10,
+        opacity: 0.3 + Math.random() * 0.5,
       });
     }
 
+    // ── Threat actors ──
     const threats = [];
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 10; i++) {
       threats.push({
         x: Math.random() * w,
         y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 1.5,
-        vy: (Math.random() - 0.5) * 1.5,
-        size: 2 + Math.random() * 4,
+        vx: (Math.random() - 0.5) * 1.8,
+        vy: (Math.random() - 0.5) * 1.8,
+        size: 3 + Math.random() * 5,
         phase: Math.random() * 10,
+        type: Math.random() > 0.6 ? "malware" : "suspicious",
         alive: true,
+        trail: [],
+      });
+    }
+
+    // ── Security nodes ──
+    const nodes = [];
+    const numNodes = 8;
+    for (let i = 0; i < numNodes; i++) {
+      const angle = (i / numNodes) * Math.PI * 2;
+      const radius = Math.min(w, h) * 0.28;
+      nodes.push({
+        x: w / 2 + radius * Math.cos(angle),
+        y: h / 2 + radius * Math.sin(angle),
+        phase: i * 0.9,
+        size: 4 + Math.random() * 3,
+        status: Math.random() > 0.2 ? "secure" : "warning",
       });
     }
 
     const draw = () => {
-      time += 0.01;
+      time += 0.008;
       ctx.clearRect(0, 0, w, h);
 
+      // ── Background with security grid ──
       const grad = ctx.createRadialGradient(
         w / 2,
         h / 2,
         0,
         w / 2,
         h / 2,
-        w * 0.6,
+        w * 0.7,
       );
-      grad.addColorStop(0, "rgba(0, 164, 253, 0.05)");
+      grad.addColorStop(0, "rgba(0, 164, 253, 0.04)");
+      grad.addColorStop(0.5, "rgba(0, 164, 253, 0.02)");
       grad.addColorStop(1, "rgba(0, 10, 30, 0)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, w, h);
 
-      // ── Code lines ──
-      codeLines.forEach((line) => {
-        const yPos = line.y + Math.sin(time * line.speed + line.phase) * 6;
-        const alpha = 0.06 + 0.08 * Math.sin(time * line.speed + line.phase);
+      // ── Security grid lines ──
+      ctx.strokeStyle = "rgba(0, 164, 253, 0.03)";
+      ctx.lineWidth = 0.3;
+      for (let i = 0; i < w; i += 30) {
+        ctx.beginPath();
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, h);
+        ctx.stroke();
+      }
+      for (let i = 0; i < h; i += 30) {
+        ctx.beginPath();
+        ctx.moveTo(0, i);
+        ctx.lineTo(w, i);
+        ctx.stroke();
+      }
 
-        const chars = "abcdefghijklmnopqrstuvwxyz0123456789{}()<>/";
-        for (let i = 0; i < line.len; i += 5) {
+      // ── Code scanning lines ──
+      codeLines.forEach((line) => {
+        const yPos = line.y + Math.sin(time * line.speed + line.phase) * 8;
+        const alpha =
+          line.opacity *
+          (0.08 + 0.06 * Math.sin(time * line.speed + line.phase));
+
+        const chars = "abcdefghijklmnopqrstuvwxyz0123456789{}()<>/[]";
+        for (let i = 0; i < line.len; i += 4) {
           const char = chars[Math.floor(Math.random() * chars.length)];
-          ctx.fillStyle = `rgba(0, 164, 253, ${alpha * 0.7})`;
-          ctx.font = `${7 + Math.random() * 5}px monospace`;
+          ctx.fillStyle = `rgba(0, 164, 253, ${alpha * 0.8})`;
+          ctx.font = `${6 + Math.random() * 6}px monospace`;
           ctx.textBaseline = "middle";
-          ctx.fillText(char, line.x + i * 3, yPos + Math.sin(i * 0.4) * 4);
+          ctx.fillText(char, line.x + i * 3, yPos + Math.sin(i * 0.3) * 5);
         }
       });
 
-      // ── Shield ──
+      // ── Security nodes with connections ──
+      // Draw connections first
+      nodes.forEach((node, i) => {
+        nodes.forEach((node2, j) => {
+          if (i >= j) return;
+          const dist = Math.sqrt(
+            Math.pow(node.x - node2.x, 2) + Math.pow(node.y - node2.y, 2),
+          );
+          if (dist < Math.min(w, h) * 0.5) {
+            const alpha = 0.04 + 0.06 * (1 - dist / (Math.min(w, h) * 0.5));
+            ctx.beginPath();
+            ctx.moveTo(node.x, node.y);
+            ctx.lineTo(node2.x, node2.y);
+            ctx.strokeStyle = `rgba(0, 164, 253, ${alpha})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        });
+      });
+
+      // Draw nodes
+      nodes.forEach((node) => {
+        const pulse = 0.6 + 0.4 * Math.sin(time * 1.5 + node.phase);
+        const r = node.size * (0.6 + 0.4 * pulse);
+
+        // Glow
+        const glow = ctx.createRadialGradient(
+          node.x,
+          node.y,
+          0,
+          node.x,
+          node.y,
+          r * 8,
+        );
+        glow.addColorStop(
+          0,
+          node.status === "secure"
+            ? "rgba(16, 185, 129, 0.15)"
+            : "rgba(251, 191, 36, 0.15)",
+        );
+        glow.addColorStop(1, "rgba(0,0,0,0)");
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, r * 8, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Node circle
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, r, 0, Math.PI * 2);
+        const isSecure = node.status === "secure";
+        ctx.fillStyle = isSecure
+          ? "rgba(16, 185, 129, 0.3)"
+          : "rgba(251, 191, 36, 0.3)";
+        ctx.fill();
+        ctx.strokeStyle = isSecure
+          ? "rgba(16, 185, 129, 0.5)"
+          : "rgba(251, 191, 36, 0.5)";
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        // Inner dot
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, r * 0.4, 0, Math.PI * 2);
+        ctx.fillStyle = isSecure
+          ? "rgba(16, 185, 129, 0.6)"
+          : "rgba(251, 191, 36, 0.6)";
+        ctx.fill();
+
+        // Security badge
+        ctx.fillStyle = "rgba(255,255,255,0.15)";
+        ctx.font = `${r * 0.6}px Inter, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "bottom";
+        const labels = [
+          "FW",
+          "WAF",
+          "IDS",
+          "SIEM",
+          "VPN",
+          "IAM",
+          "DDoS",
+          "SSL",
+        ];
+        ctx.fillText(labels[nodes.indexOf(node)], node.x, node.y - r - 4);
+      });
+
+      // ── Central Shield ──
       const cx = w / 2,
         cy = h / 2;
-      const shieldR = Math.min(w, h) * 0.22;
+      const shieldR = Math.min(w, h) * 0.19;
 
+      // Shield outer glow
       const shieldGlow = ctx.createRadialGradient(
         cx,
         cy,
         0,
         cx,
         cy,
-        shieldR * 1.6,
+        shieldR * 1.8,
       );
-      shieldGlow.addColorStop(0, "rgba(0, 164, 253, 0.10)");
-      shieldGlow.addColorStop(0.5, "rgba(0, 164, 253, 0.04)");
+      shieldGlow.addColorStop(0, "rgba(0, 164, 253, 0.08)");
+      shieldGlow.addColorStop(0.5, "rgba(0, 164, 253, 0.03)");
       shieldGlow.addColorStop(1, "rgba(0,0,0,0)");
       ctx.fillStyle = shieldGlow;
       ctx.beginPath();
-      ctx.arc(cx, cy, shieldR * 1.6, 0, Math.PI * 2);
+      ctx.arc(cx, cy, shieldR * 1.8, 0, Math.PI * 2);
       ctx.fill();
 
-      for (let layer = 0; layer < 5; layer++) {
-        const r = shieldR * (0.25 + layer * 0.2);
-        const rot = time * (0.18 + layer * 0.08);
+      // Rotating defense layers
+      for (let layer = 0; layer < 6; layer++) {
+        const r = shieldR * (0.2 + layer * 0.16);
+        const rot = time * (0.15 + layer * 0.06);
         ctx.beginPath();
-        for (let i = 0; i < 16; i++) {
-          const angle = (i / 16) * Math.PI * 2 + rot;
+        for (let i = 0; i < 20; i++) {
+          const angle = (i / 20) * Math.PI * 2 + rot;
           const radius =
-            r * (1 + 0.08 * Math.sin(time * 2 + layer * 0.7 + i * 0.5));
+            r * (1 + 0.06 * Math.sin(time * 1.8 + layer * 0.5 + i * 0.6));
           const px = cx + radius * Math.cos(angle);
           const py = cy + radius * Math.sin(angle);
           if (i === 0) ctx.moveTo(px, py);
           else ctx.lineTo(px, py);
         }
         ctx.closePath();
-        ctx.strokeStyle = `rgba(0, 164, 253, ${0.05 + layer * 0.03})`;
-        ctx.lineWidth = 0.8 + layer * 0.4;
+        const alpha = 0.04 + layer * 0.02 + 0.02 * Math.sin(time * 1.5 + layer);
+        ctx.strokeStyle = `rgba(0, 164, 253, ${alpha})`;
+        ctx.lineWidth = 0.6 + layer * 0.3;
         ctx.stroke();
       }
 
-      const shieldSize = shieldR * 0.55;
+      // Shield shape
+      const shieldSize = shieldR * 0.5;
       ctx.beginPath();
-      ctx.moveTo(cx, cy - shieldSize * 0.85);
+      ctx.moveTo(cx, cy - shieldSize * 0.9);
       ctx.quadraticCurveTo(
-        cx + shieldSize * 1.3,
-        cy - shieldSize * 0.6,
-        cx + shieldSize * 0.95,
-        cy,
+        cx + shieldSize * 1.4,
+        cy - shieldSize * 0.5,
+        cx + shieldSize * 1.0,
+        cy + shieldSize * 0.1,
       );
       ctx.quadraticCurveTo(
-        cx + shieldSize * 0.85,
-        cy + shieldSize * 0.75,
+        cx + shieldSize * 0.9,
+        cy + shieldSize * 0.8,
         cx,
-        cy + shieldSize * 0.95,
+        cy + shieldSize * 1.0,
       );
       ctx.quadraticCurveTo(
-        cx - shieldSize * 0.85,
-        cy + shieldSize * 0.75,
-        cx - shieldSize * 0.95,
-        cy,
+        cx - shieldSize * 0.9,
+        cy + shieldSize * 0.8,
+        cx - shieldSize * 1.0,
+        cy + shieldSize * 0.1,
       );
       ctx.quadraticCurveTo(
-        cx - shieldSize * 1.3,
-        cy - shieldSize * 0.6,
+        cx - shieldSize * 1.4,
+        cy - shieldSize * 0.5,
         cx,
-        cy - shieldSize * 0.85,
+        cy - shieldSize * 0.9,
       );
       ctx.closePath();
 
@@ -6044,88 +6329,155 @@ const SecurityViz = () => {
         cx + shieldSize,
         cy + shieldSize,
       );
-      shieldGrad.addColorStop(0, "rgba(0, 164, 253, 0.25)");
-      shieldGrad.addColorStop(0.5, "rgba(0, 164, 253, 0.08)");
-      shieldGrad.addColorStop(1, "rgba(0, 164, 253, 0.04)");
+      shieldGrad.addColorStop(0, "rgba(0, 164, 253, 0.2)");
+      shieldGrad.addColorStop(0.3, "rgba(0, 164, 253, 0.08)");
+      shieldGrad.addColorStop(0.7, "rgba(0, 164, 253, 0.05)");
+      shieldGrad.addColorStop(1, "rgba(0, 164, 253, 0.1)");
       ctx.fillStyle = shieldGrad;
       ctx.fill();
-      ctx.strokeStyle = `rgba(0, 164, 253, ${0.25 + 0.15 * Math.sin(time * 2.5)})`;
-      ctx.lineWidth = 2;
+
+      // Shield border with pulse
+      const shieldPulse = 0.15 + 0.1 * Math.sin(time * 2);
+      ctx.strokeStyle = `rgba(0, 164, 253, ${0.2 + shieldPulse})`;
+      ctx.lineWidth = 2 + 0.5 * Math.sin(time * 2);
       ctx.stroke();
 
-      ctx.fillStyle = "rgba(255,255,255,0.2)";
-      ctx.font = `bold ${shieldSize * 0.55}px Inter, sans-serif`;
+      // Shield lock icon
+      ctx.fillStyle = "rgba(255,255,255,0.15)";
+      ctx.font = `${shieldSize * 0.5}px Inter, sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-      ctx.fillText("SECURE", cx, cy - 2);
+      ctx.fillText("🔒", cx, cy - 2);
 
-      // ── Threats ──
+      ctx.fillStyle = "rgba(255,255,255,0.08)";
+      ctx.font = `${shieldSize * 0.2}px Inter, sans-serif`;
+      ctx.fillText("SECURE", cx, cy + shieldSize * 0.35);
+
+      // ── Threat actors ──
       threats.forEach((t) => {
+        // Store trail
+        t.trail.push({ x: t.x, y: t.y });
+        if (t.trail.length > 15) t.trail.shift();
+
         t.x += t.vx;
         t.y += t.vy;
 
-        if (t.x < 0 || t.x > w) t.vx *= -1;
-        if (t.y < 0 || t.y > h) t.vy *= -1;
+        // Bounce with slight randomness
+        if (t.x < 20 || t.x > w - 20) {
+          t.vx *= -1;
+          t.x += t.vx * 2;
+        }
+        if (t.y < 20 || t.y > h - 20) {
+          t.vy *= -1;
+          t.y += t.vy * 2;
+        }
 
+        // Distance to shield
         const dx = t.x - cx;
         const dy = t.y - cy;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
+        // If threat reaches shield, block it
         if (dist < shieldR * 0.7) {
-          for (let i = 0; i < 10; i++) {
+          // Explosion effect
+          for (let i = 0; i < 15; i++) {
             const angle = Math.random() * Math.PI * 2;
-            const speed = 1.5 + Math.random() * 3;
-            ctx.fillStyle = `rgba(239, 68, 68, ${0.25 + Math.random() * 0.4})`;
+            const speed = 2 + Math.random() * 4;
+            const size = 1 + Math.random() * 4;
+            ctx.fillStyle = `rgba(239, 68, 68, ${0.2 + Math.random() * 0.3})`;
             ctx.beginPath();
             ctx.arc(
-              t.x + Math.cos(angle) * speed * 4,
-              t.y + Math.sin(angle) * speed * 4,
-              1.5 + Math.random() * 3,
+              t.x + Math.cos(angle) * speed * 5,
+              t.y + Math.sin(angle) * speed * 5,
+              size,
               0,
               Math.PI * 2,
             );
             ctx.fill();
           }
-          t.x = Math.random() * w;
-          t.y = Math.random() * h;
-          t.vx = (Math.random() - 0.5) * 2;
-          t.vy = (Math.random() - 0.5) * 2;
+          // Shield flash
+          ctx.fillStyle = "rgba(0, 164, 253, 0.05)";
+          ctx.beginPath();
+          ctx.arc(cx, cy, shieldR * 0.8, 0, Math.PI * 2);
+          ctx.fill();
+
+          // Reset threat
+          t.x = 20 + Math.random() * (w - 40);
+          t.y = 20 + Math.random() * (h - 40);
+          t.vx = (Math.random() - 0.5) * 2.5;
+          t.vy = (Math.random() - 0.5) * 2.5;
+          t.trail = [];
           return;
         }
 
-        const pulse = 0.4 + 0.6 * Math.sin(time * 4 + t.phase);
-        ctx.fillStyle = `rgba(239, 68, 68, ${0.3 + 0.4 * pulse})`;
-        ctx.beginPath();
-        ctx.arc(t.x, t.y, t.size * (0.4 + 0.6 * pulse), 0, Math.PI * 2);
-        ctx.fill();
+        // Draw trail
+        t.trail.forEach((point, idx) => {
+          const alpha = (idx / t.trail.length) * 0.15;
+          ctx.fillStyle = `rgba(239, 68, 68, ${alpha})`;
+          ctx.beginPath();
+          ctx.arc(
+            point.x,
+            point.y,
+            t.size * 0.3 * (idx / t.trail.length),
+            0,
+            Math.PI * 2,
+          );
+          ctx.fill();
+        });
 
+        // Threat body
+        const pulse = 0.5 + 0.5 * Math.sin(time * 3 + t.phase);
+        const threatSize = t.size * (0.4 + 0.6 * pulse);
+
+        // Glow
         const threatGlow = ctx.createRadialGradient(
           t.x,
           t.y,
           0,
           t.x,
           t.y,
-          t.size * 6,
+          threatSize * 6,
         );
-        threatGlow.addColorStop(0, `rgba(239, 68, 68, ${0.08 * pulse})`);
+        threatGlow.addColorStop(0, `rgba(239, 68, 68, ${0.06 * pulse})`);
         threatGlow.addColorStop(1, "rgba(0,0,0,0)");
         ctx.fillStyle = threatGlow;
         ctx.beginPath();
-        ctx.arc(t.x, t.y, t.size * 6, 0, Math.PI * 2);
+        ctx.arc(t.x, t.y, threatSize * 6, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.strokeStyle = `rgba(239, 68, 68, ${0.3 * pulse})`;
+        // Threat icon
+        ctx.beginPath();
+        ctx.arc(t.x, t.y, threatSize, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(239, 68, 68, ${0.3 + 0.4 * pulse})`;
+        ctx.fill();
+        ctx.strokeStyle = `rgba(239, 68, 68, ${0.5 * pulse})`;
         ctx.lineWidth = 1;
-        const s = t.size * 0.6;
+        ctx.stroke();
+
+        // X mark
+        ctx.strokeStyle = `rgba(255,255,255,${0.3 * pulse})`;
+        ctx.lineWidth = 1.5;
+        const s = threatSize * 0.4;
         ctx.beginPath();
         ctx.moveTo(t.x - s, t.y - s);
         ctx.lineTo(t.x + s, t.y + s);
         ctx.moveTo(t.x + s, t.y - s);
         ctx.lineTo(t.x - s, t.y + s);
         ctx.stroke();
+
+        // Threat label
+        ctx.fillStyle = `rgba(239, 68, 68, ${0.2 * pulse})`;
+        ctx.font = `${threatSize * 0.4}px Inter, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "bottom";
+        ctx.fillText(
+          t.type === "malware" ? "⚠" : "•",
+          t.x,
+          t.y - threatSize - 2,
+        );
       });
 
-      // ── Widgets ──
+      // ── Security widgets ──
       const widgets = [
         {
           label: "Risk Score",
@@ -6133,20 +6485,23 @@ const SecurityViz = () => {
           color: "#10B981",
           x: 0.02,
           y: 0.02,
+          icon: "🛡",
         },
         {
-          label: "Vulnerabilities",
-          value: "0",
-          color: "#10B981",
+          label: "Threats Blocked",
+          value: "1,247",
+          color: "#00A4FD",
           x: 0.02,
           y: 0.88,
+          icon: "🚫",
         },
         {
           label: "Code Quality",
           value: "94%",
-          color: "#00A4FD",
+          color: "#FDB913",
           x: 0.78,
           y: 0.02,
+          icon: "✓",
         },
         {
           label: "Compliance",
@@ -6154,6 +6509,7 @@ const SecurityViz = () => {
           color: "#10B981",
           x: 0.78,
           y: 0.88,
+          icon: "✅",
         },
       ];
 
@@ -6163,32 +6519,79 @@ const SecurityViz = () => {
         const ww = Math.min(w, h) * 0.17;
         const wh = Math.min(w, h) * 0.075;
 
-        ctx.fillStyle = "rgba(255,255,255,0.04)";
-        ctx.strokeStyle = "rgba(255,255,255,0.06)";
-        ctx.lineWidth = 0.8;
+        // Glass background
+        ctx.fillStyle = "rgba(255,255,255,0.03)";
+        ctx.strokeStyle = "rgba(255,255,255,0.05)";
+        ctx.lineWidth = 0.5;
         ctx.beginPath();
         ctx.roundRect(wx, wy, ww, wh, 8);
         ctx.fill();
         ctx.stroke();
 
-        ctx.fillStyle = "rgba(255,255,255,0.3)";
-        ctx.font = `${ww * 0.1}px Inter, sans-serif`;
+        // Icon
+        ctx.fillStyle = "rgba(255,255,255,0.1)";
+        ctx.font = `${wh * 0.35}px Inter, sans-serif`;
         ctx.textAlign = "left";
         ctx.textBaseline = "top";
-        ctx.fillText(w.label, wx + 10, wy + 5);
+        ctx.fillText(w.icon, wx + 8, wy + 4);
 
+        // Label
+        ctx.fillStyle = "rgba(255,255,255,0.25)";
+        ctx.font = `${ww * 0.08}px Inter, sans-serif`;
+        ctx.textBaseline = "top";
+        ctx.fillText(w.label, wx + 28, wy + 4);
+
+        // Value
         ctx.fillStyle = w.color;
-        ctx.font = `bold ${ww * 0.2}px Inter, sans-serif`;
+        ctx.font = `bold ${ww * 0.18}px Inter, sans-serif`;
         ctx.textBaseline = "bottom";
-        ctx.fillText(w.value, wx + 10, wy + wh - 6);
+        ctx.textAlign = "right";
+        ctx.fillText(w.value, wx + ww - 8, wy + wh - 6);
       });
 
       // ── Scan line ──
-      const scanY = (time * 40) % h;
+      const scanY = (time * 35) % h;
+      const scanGrad = ctx.createLinearGradient(0, scanY - 20, 0, scanY + 20);
+      scanGrad.addColorStop(0, "rgba(0, 164, 253, 0)");
+      scanGrad.addColorStop(0.5, "rgba(0, 164, 253, 0.06)");
+      scanGrad.addColorStop(1, "rgba(0, 164, 253, 0)");
+      ctx.fillStyle = scanGrad;
+      ctx.fillRect(0, scanY - 20, w, 40);
+
       ctx.fillStyle = "rgba(0, 164, 253, 0.04)";
-      ctx.fillRect(0, scanY - 3, w, 6);
+      ctx.fillRect(0, scanY - 2, w, 4);
+
+      // Scan label
       ctx.fillStyle = "rgba(0, 164, 253, 0.08)";
-      ctx.fillRect(0, scanY - 15, w, 30);
+      ctx.font = `${w * 0.012}px Inter, sans-serif`;
+      ctx.textAlign = "right";
+      ctx.textBaseline = "bottom";
+      ctx.fillText("SCANNING •", w - 8, scanY - 4);
+
+      // ── Live threat counter ──
+      const activeThreats = threats.filter((t) => {
+        const dx = t.x - cx;
+        const dy = t.y - cy;
+        return Math.sqrt(dx * dx + dy * dy) > shieldR * 0.7;
+      }).length;
+
+      ctx.fillStyle = "rgba(255,255,255,0.03)";
+      ctx.strokeStyle = "rgba(255,255,255,0.04)";
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.roundRect(w * 0.4, h * 0.94, w * 0.2, h * 0.04, 4);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(239, 68, 68, 0.3)";
+      ctx.font = `${w * 0.012}px Inter, sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(
+        `🛡 ${activeThreats} threats detected • ${Math.round(99.9 - activeThreats * 0.05)}% secure`,
+        w * 0.5,
+        h * 0.96,
+      );
     };
 
     if (!CanvasRenderingContext2D.prototype.roundRect) {
@@ -6282,7 +6685,7 @@ const ServiceRow = ({ service, index }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.25, duration: 0.5 }}
-          className="text-white/55 text-[15px] leading-[1.8] mb-8 max-w-lg"
+          className="text-white text-[15px] leading-[1.8] mb-8 max-w-lg"
         >
           {service.description}
         </motion.p>
@@ -6301,7 +6704,7 @@ const ServiceRow = ({ service, index }) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 + idx * 0.08, duration: 0.4 }}
-              className="flex items-start gap-3 text-sm text-white/75"
+              className="flex items-start gap-3 text-sm text-white"
             >
               <span className="mt-0.5">
                 <CheckIcon />
@@ -6349,7 +6752,7 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="relative overflow-hidden py-20 lg:py-20 bg-[#01182f]"
+      className="relative overflow-hidden py-10 lg:py-10 bg-black"
     >
       <div
         className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.06] -translate-x-1/2 -translate-y-1/2"
@@ -6381,7 +6784,7 @@ const ServicesSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
             Comprehensive SAP Services
           </h2>
-          <p className="text-lg leading-relaxed text-white/50">
+          <p className="text-lg leading-relaxed text-white">
             End-to-end solutions designed to maximize your SAP investment and
             accelerate digital transformation.
           </p>

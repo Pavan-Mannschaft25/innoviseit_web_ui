@@ -58,12 +58,12 @@ const Footer = () => {
   return (
     <footer className="bg-primary-800 text-gray-300">
       {/* Main Footer Content */}
-      <div className="py-16 border-b border-black">
+      <div className="py-10 border-b border-black">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <Link to="/" className="inline-flex items-center gap-3 group">
+              {/* <Link to="/" className="inline-flex items-center gap-3 group">
                 <div className="bg-white p-2 shadow-md transition-all duration-300 group-hover:shadow-xl group-hover:scale-105">
                   <img
                     src={logo}
@@ -71,7 +71,7 @@ const Footer = () => {
                     className="h-8 w-auto object-contain"
                   />
                 </div>
-              </Link>
+              </Link> */}
 
               {/* <Link to="/" className="relative group flex items-center">
                 <div className="relative overflow-hidden rounded-lg p-1">
