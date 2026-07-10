@@ -1541,7 +1541,7 @@ const LeadershipTeam = () => {
                 spaceBetween: 24,
               },
               1536: {
-                slidesPerView: 3.5,
+                slidesPerView: 3,
                 spaceBetween: 24,
               },
             }}
