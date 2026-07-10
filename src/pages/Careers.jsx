@@ -3397,7 +3397,7 @@ const MergedPositionsAndForm = memo(() => {
 
 /* ---------- HERO ---------- */
 const HeroSection = memo(() => (
-  <section className="relative h-[30vh] md:h-[90vh] overflow-hidden">
+  <section className="relative h-[29vh] md:h-[60vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
     <img
       src={banner}
       alt="Innovise Career"
