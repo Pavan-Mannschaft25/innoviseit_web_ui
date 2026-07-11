@@ -1784,12 +1784,6 @@ import React, {
   memo,
 } from "react";
 import {
-  FaLaptopCode,
-  FaGraduationCap,
-  FaUsers,
-  FaChartLine,
-  FaHeart,
-  FaEarthAmericas,
   FaBriefcase,
   FaLocationDot,
   FaClock,
@@ -1807,19 +1801,11 @@ import {
   FaFileWord,
   FaFileLines,
   FaXmark,
-  FaBullseye,
-  FaBookOpen,
-  FaHandshake,
-  FaTrophy,
   FaQuoteLeft,
 } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import img1 from "../assets/leaders/NishantGautam.webp";
-import banner from "../assets/banners/careers_banner.jpeg";
-import why1 from "../assets/banners/career_why1.png";
-import why2 from "../assets/banners/career_why2.png";
-import why3 from "../assets/banners/career_why3.png";
-import why4 from "../assets/banners/career_why4.png";
+import banner from "../assets/banners/careers_banner.png";
 
 // ==================== CONSTANTS ====================
 const BRAND = {
@@ -1839,82 +1825,6 @@ const ACCEPTED_TYPES = [
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 ];
 const ACCEPTED_EXTENSIONS = ".pdf,.doc,.docx";
-
-const BENEFITS = [
-  {
-    icon: FaLaptopCode,
-    title: "Modern Tech Stack",
-    desc: "Work with cutting-edge technologies and tools that keep you ahead of the curve.",
-  },
-  {
-    icon: FaGraduationCap,
-    title: "Learning & Growth",
-    desc: "$5,000 annual learning budget plus certifications and conference sponsorships.",
-  },
-  {
-    icon: FaUsers,
-    title: "Great Culture",
-    desc: "Collaborative, inclusive, and fun work environment that feels like a second home.",
-  },
-  {
-    icon: FaChartLine,
-    title: "Career Growth",
-    desc: "Clear promotion paths and leadership opportunities tailored to your ambitions.",
-  },
-  {
-    icon: FaHeart,
-    title: "Health & Wellness",
-    desc: "Comprehensive medical, dental, and vision coverage for you and your family.",
-  },
-  {
-    icon: FaEarthAmericas,
-    title: "Global Opportunities",
-    desc: "Work with clients across 30+ countries and expand your global perspective.",
-  },
-];
-
-// Why Choose Us tabs data
-const WHY_TABS = [
-  {
-    id: "impact",
-    label: "Impact",
-    icon: FaBullseye,
-    title: "Delivering Measurable Business Impact",
-    description:
-      "We create technology solutions that drive real business outcomes. From AI-powered applications and cloud transformation to enterprise software, every solution is designed to improve efficiency, accelerate growth, and deliver lasting value.",
-    image: why1,
-  },
-
-  {
-    id: "development",
-    label: "Development",
-    icon: FaBookOpen,
-    title: "Innovation Through Continuous Development",
-    description:
-      "Technology evolves every day, and so do we. Our team embraces modern frameworks, AI technologies, cloud platforms, and agile development practices to build scalable, secure, and future-ready digital solutions.",
-    image: why2,
-  },
-
-  {
-    id: "support",
-    label: "Support",
-    icon: FaHandshake,
-    title: "Reliable Support & Long-Term Partnership",
-    description:
-      "Our relationship doesn't end at deployment. We provide proactive maintenance, security updates, performance optimization, and dedicated technical support to ensure your business operates without interruption.",
-    image: why3,
-  },
-
-  {
-    id: "progress",
-    label: "Progress",
-    icon: FaTrophy,
-    title: "Driving Sustainable Digital Growth",
-    description:
-      "We help organizations embrace digital transformation with confidence. By combining innovation, strategic thinking, and cutting-edge technology, we enable businesses to scale faster, adapt to change, and stay ahead of the competition.",
-    image: why4,
-  },
-];
 
 const POSITIONS = [
   {
@@ -1981,6 +1891,32 @@ const POSITIONS = [
       "Design and implement automation frameworks and quality strategies to ensure high-quality enterprise software delivery across SAP, Guidewire, and AI platforms.",
     tags: ["Selenium", "Cypress", "Playwright", "CI/CD"],
     highlights: ["Automation Focus", "Cross-Team", "Quality Leadership"],
+  },
+  {
+    id: 6,
+    title: "Cyber Security Engineer",
+    department: "Cyber Security",
+    location: "Remote",
+    type: "Full-Time",
+    experience: "3 – 6 Years",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+    description:
+      "Design, implement, and manage enterprise security solutions to protect applications, cloud infrastructure, and critical business data from cyber threats.",
+    tags: ["Cyber Security", "IAM", "Network Security", "SIEM"],
+    highlights: ["Enterprise Security", "Cloud Security", "Threat Detection"],
+  },
+  {
+    id: 7,
+    title: "DevOps Engineer",
+    department: "Cloud & Infrastructure",
+    location: "Remote",
+    type: "Full-Time",
+    experience: "3 – 6 Years",
+    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9",
+    description:
+      "Design and implement CI/CD pipelines, manage cloud infrastructure, and automate deployment processes to ensure scalable and reliable software delivery.",
+    tags: ["AWS", "Docker", "Kubernetes", "Terraform"],
+    highlights: ["Cloud Infrastructure", "Automation", "Scalable Systems"],
   },
 ];
 
@@ -2344,10 +2280,11 @@ const DEPT_COLORS = {
     color: "#60A5FA",
     border: "rgba(59,130,246,0.25)",
   },
+
   Default: {
-    bg: `${BRAND.gold.primary}18`,
-    color: BRAND.gold.primary,
-    border: `${BRAND.gold.primary}35`,
+    bg: "rgba(59,130,246,0.12)",
+    color: "#60A5FA",
+    border: "rgba(59,130,246,0.25)",
   },
 };
 
@@ -2375,7 +2312,7 @@ const CompactPositionCard = memo(({ position, isActive, onClick }) => {
       <div className="flex items-start gap-3">
         {/* Icon Container */}
         <div
-          className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
+          className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300"
           style={{
             background: isActive ? "rgba(255,255,255,0.25)" : c.bg,
             border: isActive
@@ -2853,42 +2790,53 @@ const SuccessState = memo(({ onReset }) => (
 
 // ===== MERGED SECTION - IMPROVED WITH EQUAL WIDTH & HEIGHT =====
 const MergedPositionsAndForm = memo(() => {
+  // --- State ---
   const [selectedPosition, setSelectedPosition] = useState(null);
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    position: "",
-    message: "",
-    agreedToTerms: false,
-  });
-  const [errors, setErrors] = useState({});
-  const [touched, setTouched] = useState({});
-  const [resumeFile, setResumeFile] = useState(null);
-  const [resumeError, setResumeError] = useState("");
-  const [resumeTouched, setResumeTouched] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
   const formRef = useRef(null);
 
-  // Pre-fill position when selected from left panel
+  // --- Utilize Custom Hooks (The "Better Way") ---
+  const {
+    form,
+    errors,
+    touched,
+    handleChange,
+    handleBlur,
+    forceValidate: validateForm,
+    resetForm,
+    setForm,
+  } = useFormValidation();
+
+  const {
+    file: resumeFile,
+    error: resumeError,
+    touched: resumeTouched,
+    selectFile: handleResumeSelect,
+    removeFile: handleResumeRemove,
+    forceValidate: validateResume,
+    reset: resetResume,
+  } = useResumeUpload();
+
+  // --- Effects ---
   useEffect(() => {
     if (selectedPosition && !submitted) {
-      setFormData((prev) => ({ ...prev, position: selectedPosition.title }));
-      // Scroll to form on mobile
+      setForm((prev) => ({ ...prev, position: selectedPosition.title }));
       if (window.innerWidth < 1024) {
-        setTimeout(() => {
-          formRef.current?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 300);
+        setTimeout(
+          () =>
+            formRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            }),
+          300,
+        );
       }
     }
-  }, [selectedPosition, submitted]);
+  }, [selectedPosition, submitted, setForm]);
 
-  // Filter positions based on search
+  // --- Derived Data ---
   const filteredPositions = useMemo(() => {
     if (!searchTerm.trim()) return POSITIONS;
     const term = searchTerm.toLowerCase().trim();
@@ -2900,150 +2848,45 @@ const MergedPositionsAndForm = memo(() => {
     );
   }, [searchTerm]);
 
-  // Validation
-  const validateField = (name, value) => {
-    switch (name) {
-      case "fullName":
-        if (!value.trim()) return "Full name is required";
-        if (value.trim().length < 2)
-          return "Name must be at least 2 characters";
-        return "";
-      case "email":
-        if (!value.trim()) return "Email address is required";
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value.trim()))
-          return "Please enter a valid email address";
-        return "";
-      case "position":
-        if (!value) return "Please select a position";
-        return "";
-      case "agreedToTerms":
-        if (!value) return "You must agree to the terms";
-        return "";
-      default:
-        return "";
-    }
-  };
+  const positionOptions = useMemo(() => POSITIONS.map((p) => p.title), []);
 
-  const validateAll = () => {
-    const newErrors = {};
-    Object.keys(formData).forEach((key) => {
-      const err = validateField(key, formData[key]);
-      if (err) newErrors[key] = err;
-    });
-    if (!resumeFile) {
-      setResumeError("Please upload your resume");
-      setResumeTouched(true);
-    } else {
-      setResumeError("");
-    }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0 && !!resumeFile;
-  };
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    const val = type === "checkbox" ? checked : value;
-    setFormData((prev) => ({ ...prev, [name]: val }));
-    setTouched((prev) => ({ ...prev, [name]: true }));
-    const err = validateField(name, val);
-    setErrors((prev) => ({ ...prev, [name]: err }));
-  };
-
-  const handleBlur = (e) => {
-    const { name } = e.target;
-    setTouched((prev) => ({ ...prev, [name]: true }));
-  };
-
-  const handleResumeSelect = (file) => {
-    if (file && file.size > MAX_FILE_SIZE) {
-      setResumeError("File size must be less than 5MB");
-      return;
-    }
-    setResumeFile(file);
-    setResumeError("");
-    setResumeTouched(true);
-  };
-
-  const handleResumeRemove = () => {
-    setResumeFile(null);
-    setResumeError("");
-  };
-
+  // --- Handlers ---
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Touch all fields
-    const allTouched = {};
-    Object.keys(formData).forEach((key) => {
-      allTouched[key] = true;
-    });
-    setTouched(allTouched);
-    setResumeTouched(true);
+    const isFormValid = validateForm();
+    const isResumeValid = validateResume();
 
-    const isValid = validateAll();
-
-    if (!isValid) {
+    if (!isFormValid || !isResumeValid) {
       setIsSubmitting(false);
-      const firstError = document.querySelector(".field-error-scroll");
-      if (firstError) {
-        firstError.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+      document
+        .querySelector(".field-error-scroll")
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
       return;
     }
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
+    await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulate API
     setSubmitted(true);
     setIsSubmitting(false);
-
-    // Reset form after success
-    setTimeout(() => {
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        position: "",
-        message: "",
-        agreedToTerms: false,
-      });
-      setResumeFile(null);
-      setErrors({});
-      setTouched({});
-      setResumeError("");
-      setResumeTouched(false);
-    }, 100);
   };
 
   const handleReset = () => {
     setSubmitted(false);
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      position: "",
-      message: "",
-      agreedToTerms: false,
-    });
-    setResumeFile(null);
-    setErrors({});
-    setTouched({});
-    setResumeError("");
-    setResumeTouched(false);
+    resetForm();
+    resetResume();
+    setSelectedPosition(null);
   };
 
-  const positionOptions = useMemo(() => POSITIONS.map((p) => p.title), []);
-
-  // Fixed height for both panels
-  const PANEL_HEIGHT = "min-h-[600px] max-h-[750px]";
+  // --- Consistent Panel Heights ---
+  const panelStyles = "flex flex-col w-full h-[650px] lg:h-[840px]";
 
   return (
     <section
       id="application-form"
       className="relative overflow-hidden bg-primary-800 py-12 md:py-16"
     >
-      {/* Background decorations */}
+      {/* Background Decorations */}
       <div className="absolute inset-0 dot-pattern opacity-[0.025]" />
       <div
         className="absolute pointer-events-none"
@@ -3073,7 +2916,7 @@ const MergedPositionsAndForm = memo(() => {
       />
 
       <div className="max-w-8xl mx-auto px-4 lg:px-8 relative z-10">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-3">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-[rgba(253,185,19,0.3)]" />
@@ -3085,309 +2928,269 @@ const MergedPositionsAndForm = memo(() => {
             </span>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-[rgba(253,185,19,0.3)]" />
           </div>
-          <h2
-            className="text-3xl md:text-5xl font-bold"
-            style={{ color: "#FFFFFF" }}
-          >
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
             Open <span style={{ color: BRAND.gold.primary }}>Positions</span>
           </h2>
-          <p className="text-white/40 text-sm mt-2 max-w-2xl mx-auto">
+          <p className="text-white/40 text-sm mt-3 max-w-2xl mx-auto">
             Find your perfect role and apply directly. Click any position to
             pre-fill the application form.
           </p>
         </div>
 
-        {/* Two Column Layout - Equal height */}
+        {/* Grid Layout - Perfect Alignment */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-          {/* LEFT COLUMN - Positions List */}
-          <div className="flex">
-            <div
-              className="w-full bg-[rgba(255,255,255,0.03)] rounded-2xl border border-[rgba(255,255,255,0.06)] p-5 flex flex-col"
-              style={{ height: PANEL_HEIGHT }}
-            >
-              {/* Search & Count */}
-              <div className="flex items-center gap-3 mb-4 flex-shrink-0">
-                <div className="relative flex-1">
-                  <FaSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/20 text-sm" />
-                  <input
-                    type="text"
-                    placeholder="Search positions..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2.5 rounded-xl text-sm bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] text-white placeholder-white/30 focus:border-[rgba(253,185,19,0.4)] focus:outline-none transition-all"
-                  />
-                </div>
-                <div
-                  className="flex-shrink-0 px-3 py-2 rounded-xl text-xs font-bold whitespace-nowrap"
-                  style={{
-                    background: `${BRAND.gold.primary}12`,
-                    color: BRAND.gold.primary,
-                    border: `1px solid ${BRAND.gold.primary}25`,
-                  }}
-                >
-                  {filteredPositions.length} Open
-                </div>
+          {/* LEFT COLUMN - Positions */}
+          <div
+            className={`${panelStyles} bg-[rgba(255,255,255,0.03)] rounded-2xl border border-[rgba(255,255,255,0.06)] p-5`}
+          >
+            {/* Search Bar */}
+            <div className="flex items-center gap-3 mb-4 flex-shrink-0">
+              <div className="relative flex-1">
+                <FaSearch className="absolute left-3.5 top-1/2 -translate-y-1/2 text-white/20 text-sm" />
+                <input
+                  type="text"
+                  placeholder="Search positions..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl text-sm bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] text-white placeholder-white/30 focus:border-[rgba(253,185,19,0.4)] focus:outline-none transition-all"
+                />
               </div>
-
-              {/* Scrollable List */}
               <div
-                className="flex-1 overflow-y-auto pr-1 -mr-1 scrollable-list"
+                className="flex-shrink-0 px-3 py-2 rounded-xl text-xs font-bold whitespace-nowrap"
                 style={{
-                  scrollbarWidth: "thin",
-                  scrollbarColor: "rgba(253,185,19,0.3) transparent",
+                  background: `${BRAND.gold.primary}12`,
+                  color: BRAND.gold.primary,
+                  border: `1px solid ${BRAND.gold.primary}25`,
                 }}
               >
-                <style>{`
-                  .scrollable-list::-webkit-scrollbar {
-                    width: 3px;
-                  }
-                  .scrollable-list::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .scrollable-list::-webkit-scrollbar-thumb {
-                    background: rgba(253,185,19,0.3);
-                    border-radius: 10px;
-                  }
-                  .scrollable-list::-webkit-scrollbar-thumb:hover {
-                    background: rgba(253,185,19,0.5);
-                  }
-                `}</style>
-
-                <div className="space-y-2">
-                  {filteredPositions.length > 0 ? (
-                    filteredPositions.map((pos) => (
-                      <CompactPositionCard
-                        key={pos.id}
-                        position={pos}
-                        isActive={selectedPosition?.id === pos.id}
-                        onClick={setSelectedPosition}
-                      />
-                    ))
-                  ) : (
-                    <div className="text-center py-16">
-                      <div className="text-white/20 text-4xl mb-3">🔍</div>
-                      <p className="text-white/40 text-sm">
-                        No positions found matching "{searchTerm}"
-                      </p>
-                    </div>
-                  )}
-                </div>
+                {filteredPositions.length} Open
               </div>
+            </div>
 
-              {/* Footer hint */}
-              <div className="flex-shrink-0 mt-3 pt-3 border-t border-[rgba(255,255,255,0.04)] text-center">
-                <p className="text-[10px] text-white/20 flex items-center justify-center gap-2">
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[rgba(253,185,19,0.3)]" />
-                  Click a position to auto-fill the form
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[rgba(253,185,19,0.3)]" />
-                </p>
+            {/* Scrollable List */}
+            <div className="flex-1 overflow-y-auto pr-1 custom-scrollbar">
+              <div className="space-y-2">
+                {filteredPositions.length > 0 ? (
+                  filteredPositions.map((pos) => (
+                    <CompactPositionCard
+                      key={pos.id}
+                      position={pos}
+                      isActive={selectedPosition?.id === pos.id}
+                      onClick={setSelectedPosition}
+                    />
+                  ))
+                ) : (
+                  <div className="text-center py-16">
+                    <div className="text-white/20 text-4xl mb-3">🔍</div>
+                    <p className="text-white/40 text-sm">
+                      No positions found matching "{searchTerm}"
+                    </p>
+                  </div>
+                )}
               </div>
+            </div>
+
+            {/* Footer */}
+            <div className="flex-shrink-0 mt-3 pt-3 border-t border-[rgba(255,255,255,0.04)] text-center">
+              <p className="text-[10px] text-white/20 flex items-center justify-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[rgba(253,185,19,0.3)]" />
+                Click a position to auto-fill the form
+                <span className="w-1.5 h-1.5 rounded-full bg-[rgba(253,185,19,0.3)]" />
+              </p>
             </div>
           </div>
 
-          {/* RIGHT COLUMN - Application Form */}
-          <div className="flex" ref={formRef}>
-            <div
-              className="w-full bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col"
-              style={{ height: PANEL_HEIGHT }}
-            >
-              {/* Form Header */}
-              {!submitted && (
+          {/* RIGHT COLUMN - Form */}
+          <div
+            className={`${panelStyles} bg-white rounded-2xl shadow-2xl overflow-hidden`}
+            ref={formRef}
+          >
+            {/* Form Header */}
+            {!submitted && (
+              <div
+                className="p-5 text-center flex-shrink-0"
+                style={{
+                  background: "linear-gradient(135deg, #0A1628, #12324f)",
+                }}
+              >
                 <div
-                  className="p-5 text-center flex-shrink-0"
+                  className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-2"
                   style={{
-                    background: "linear-gradient(135deg, #0A1628, #12324f)",
+                    background: "linear-gradient(135deg, #FDB913, #FFD54F)",
                   }}
                 >
-                  <div
-                    className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-2"
-                    style={{
-                      background: "linear-gradient(135deg, #FDB913, #FFD54F)",
-                    }}
-                  >
-                    <FaPaperPlane
-                      className="text-xl"
-                      style={{ color: BRAND.navy.dark }}
+                  <FaPaperPlane
+                    className="text-xl"
+                    style={{ color: BRAND.navy.dark }}
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-white">
+                  Start Your Application
+                </h3>
+                <p className="text-white/40 text-sm mt-0.5">
+                  {selectedPosition
+                    ? `Applying for: ${selectedPosition.title}`
+                    : "Select a position from the list"}
+                </p>
+              </div>
+            )}
+
+            {/* Form Body */}
+            <div className="flex-1 overflow-y-auto px-6 py-5 custom-scrollbar-light">
+              {submitted ? (
+                <div className="flex items-center justify-center h-full">
+                  <SuccessState onReset={handleReset} />
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} noValidate className="space-y-4">
+                  {/* Row 1 */}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="field-error-scroll">
+                      <FormField
+                        label="Full Name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        icon={FaUser}
+                        required
+                        value={form.fullName}
+                        error={errors.fullName}
+                        touched={touched.fullName}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                    </div>
+                    <div className="field-error-scroll">
+                      <FormField
+                        label="Email Address"
+                        name="email"
+                        type="email"
+                        placeholder="Enter your email"
+                        icon={FaEnvelope}
+                        required
+                        value={form.email}
+                        error={errors.email}
+                        touched={touched.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 2 */}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <FormField
+                      label="Phone Number"
+                      name="phone"
+                      type="tel"
+                      placeholder="Enter your phone"
+                      icon={FaPhone}
+                      value={form.phone}
+                      error={errors.phone}
+                      touched={touched.phone}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                    />
+                    <div className="field-error-scroll">
+                      <FormField
+                        label="Position"
+                        name="position"
+                        type="select"
+                        placeholder="Select a position..."
+                        icon={FaBriefcase}
+                        required
+                        value={form.position}
+                        error={errors.position}
+                        touched={touched.position}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        options={positionOptions}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Resume Upload */}
+                  <div className="field-error-scroll">
+                    <ResumeUpload
+                      file={resumeFile}
+                      error={resumeError}
+                      touched={resumeTouched}
+                      onFileSelect={handleResumeSelect}
+                      onFileRemove={handleResumeRemove}
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-white">
-                    Start Your Application
-                  </h3>
-                  <p className="text-white/40 text-sm mt-0.5">
-                    {selectedPosition
-                      ? `Applying for: ${selectedPosition.title}`
-                      : "Select a position from the list"}
-                  </p>
-                </div>
-              )}
 
-              {/* Scrollable Form Content */}
-              <div className="flex-1 overflow-y-auto px-6 py-5 scrollable-form">
-                <style>{`
-                  .scrollable-form::-webkit-scrollbar {
-                    width: 3px;
-                  }
-                  .scrollable-form::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .scrollable-form::-webkit-scrollbar-thumb {
-                    background: rgba(0,0,0,0.1);
-                    border-radius: 10px;
-                  }
-                  .scrollable-form::-webkit-scrollbar-thumb:hover {
-                    background: rgba(0,0,0,0.2);
-                  }
-                `}</style>
-
-                {submitted ? (
-                  <div className="flex items-center justify-center h-full">
-                    <SuccessState onReset={handleReset} />
-                  </div>
-                ) : (
-                  <form
-                    onSubmit={handleSubmit}
-                    noValidate
-                    className="space-y-4"
-                  >
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="field-error-scroll">
-                        <FormField
-                          label="Full Name"
-                          name="fullName"
-                          placeholder="Enter your full name"
-                          icon={FaUser}
-                          required
-                          value={formData.fullName}
-                          error={errors.fullName}
-                          touched={touched.fullName}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                        />
-                      </div>
-                      <div className="field-error-scroll">
-                        <FormField
-                          label="Email Address"
-                          name="email"
-                          type="email"
-                          placeholder="Enter your email"
-                          icon={FaEnvelope}
-                          required
-                          value={formData.email}
-                          error={errors.email}
-                          touched={touched.email}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <FormField
-                        label="Phone Number"
-                        name="phone"
-                        type="tel"
-                        placeholder="Enter your phone"
-                        icon={FaPhone}
-                        value={formData.phone}
-                        error={errors.phone}
-                        touched={touched.phone}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                      />
-                      <div className="field-error-scroll">
-                        <FormField
-                          label="Position"
-                          name="position"
-                          type="select"
-                          placeholder="Select a position..."
-                          icon={FaBriefcase}
-                          value={formData.position}
-                          error={errors.position}
-                          touched={touched.position}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          options={positionOptions}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="field-error-scroll">
-                      <ResumeUpload
-                        file={resumeFile}
-                        error={resumeError}
-                        touched={resumeTouched}
-                        onFileSelect={handleResumeSelect}
-                        onFileRemove={handleResumeRemove}
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-semibold mb-1.5"
-                        style={{ color: BRAND.navy.dark }}
-                      >
-                        Cover Letter / Message
-                      </label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        rows={2}
-                        placeholder="Tell us about yourself and why you'd be a great fit..."
-                        className="w-full px-4 py-3 rounded-xl resize-none text-sm border border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FDB913] focus:outline-none transition-all"
-                      />
-                    </div>
-
-                    <div className="field-error-scroll">
-                      <TermsCheckbox
-                        checked={formData.agreedToTerms}
-                        error={errors.agreedToTerms}
-                        touched={touched.agreedToTerms}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                      />
-                    </div>
-
-                    <GoldButton
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full py-3.5 text-base"
+                  {/* Message */}
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-semibold mb-1.5"
+                      style={{ color: BRAND.navy.dark }}
                     >
-                      {isSubmitting ? (
-                        <>
-                          <span className="inline-block w-5 h-5 border-2 border-[#0A1628] border-t-transparent rounded-full animate-spin" />
-                          Submitting...
-                        </>
-                      ) : (
-                        <>
-                          <FaPaperPlane />
-                          Submit Application
-                          <FaArrowRight className="text-sm" />
-                        </>
-                      )}
-                    </GoldButton>
-                  </form>
-                )}
-              </div>
+                      Cover Letter / Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={form.message}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      rows={2}
+                      placeholder="Tell us about yourself and why you'd be a great fit..."
+                      className="w-full px-4 py-3 rounded-xl resize-none text-sm border border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FDB913] focus:outline-none transition-all"
+                    />
+                  </div>
+
+                  {/* Terms */}
+                  <div className="field-error-scroll">
+                    <TermsCheckbox
+                      checked={form.agreedToTerms}
+                      error={errors.agreedToTerms}
+                      touched={touched.agreedToTerms}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <GoldButton
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full py-3.5 text-base"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <span className="inline-block w-5 h-5 border-2 border-[#0A1628] border-t-transparent rounded-full animate-spin" />{" "}
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        <FaPaperPlane /> Submit Application{" "}
+                        <FaArrowRight className="text-sm" />
+                      </>
+                    )}
+                  </GoldButton>
+                </form>
+              )}
             </div>
           </div>
         </div>
       </div>
 
-      {/* CSS animations */}
+      {/* Global Styles for Scrollbars */}
       <style>{`
-        @keyframes spin {
-          to { transform: rotate(360deg); }
-        }
-        .animate-spin {
-          animation: spin 0.8s linear infinite;
-        }
-        .field-error-scroll {
-          scroll-margin-top: 80px;
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(253,185,19,0.3); border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(253,185,19,0.5); }
+        
+        .custom-scrollbar-light::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar-light::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar-light::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 10px; }
+        .custom-scrollbar-light::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.2); }
+        
+        .field-error-scroll { scroll-margin-top: 80px; }
+        .animate-spin { animation: spin 0.8s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
       `}</style>
     </section>
   );
@@ -3397,7 +3200,7 @@ const MergedPositionsAndForm = memo(() => {
 
 /* ---------- HERO ---------- */
 const HeroSection = memo(() => (
-  <section className="relative h-[29vh] md:h-[60vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
+  <section className="relative h-[26vh] md:h-[60vh] lg:h-[80vh] xl:h-[90vh] overflow-hidden">
     <img
       src={banner}
       alt="Innovise Career"
