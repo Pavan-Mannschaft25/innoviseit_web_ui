@@ -188,7 +188,7 @@ const COLORS = {
 
 const Industries = () => {
   return (
-    <section className="relative py-6 lg:py-10 bg-primary-100 overflow-hidden">
+    <section className="relative py-6 lg:py-8 bg-primary-100 overflow-hidden">
       {/*  Background Effects */}
       {/* Gold Glow Top Left */}
       {/* <div
@@ -226,7 +226,7 @@ const Industries = () => {
           //   </h2>
           // }
           title={
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight">
               <span className="bg-black bg-clip-text text-transparent">
                 Industries We
               </span>{" "}

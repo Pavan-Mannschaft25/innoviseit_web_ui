@@ -1577,13 +1577,13 @@ const leadershipData = [
   {
     id: 7,
     name: "Jasbir Singh",
-    role: "Application Maintenance Services",
+    role: "Application Management Services",
     image: img7,
     initials: "JS",
     color: "#22C55E",
     quote: "Delivering reliable managed services at scale.",
-    bio: "Oversees Application Maintenance Services, ensuring reliable operations, business continuity, customer satisfaction, and efficient service delivery through collaborative leadership and continuous process improvement.",
-    expertise: ["Application Maintenance Services", "SAP AMS", "Hybrid Cloud"],
+    bio: "Oversees Application Management Services, ensuring reliable operations, business continuity, customer satisfaction, and efficient service delivery through collaborative leadership and continuous process improvement.",
+    expertise: ["Application Management Services", "SAP AMS", "Hybrid Cloud"],
     experience: "16+ Years",
     achievements: [
       "Established enterprise AMS delivery models",
@@ -1743,7 +1743,7 @@ const LeaderCard = ({ leader, index }) => {
 
           {/* Role */}
           <p
-            className="text-xs font-semibold uppercase tracking-wider mb-4"
+            className="text-xs font-semibold uppercase tracking-wider h-9"
             style={{ color: BRAND.gold.primary }}
           >
             {leader.role}
@@ -1751,7 +1751,7 @@ const LeaderCard = ({ leader, index }) => {
 
           {/* Bio */}
           <p
-            className="text-sm leading-relaxed mb-5"
+            className="text-sm leading-relaxed mb-5 lg:h-42 xl:h-45"
             style={{ color: "#64748B" }}
           >
             {leader.bio}

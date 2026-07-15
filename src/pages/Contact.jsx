@@ -486,7 +486,7 @@
 
 //       {
 //         value: "application-management",
-//         label: "Application Maintenance Services",
+//         label: "Application Management Services",
 //       },
 
 //       { value: "data-migration", label: "Data Migration & Transformation" },
@@ -1040,7 +1040,7 @@ const companyData = {
     },
     email: "contact@innovise-it.com",
     phone: "+1 (425) 518-5442",
-    hours: "Mon - Fri: 9.30am – 6.30pm",
+    hours: "Monday – Friday | 9:00 AM – 5:00 PM PST",
   },
 };
 
@@ -1375,7 +1375,7 @@ const ContactPage = () => {
       { value: "ai", label: "AI & Engineering Services" },
       { value: "cloud", label: "Cloud & Digital Transformation" },
       { value: "integration", label: "Enterprise Integration Services" },
-      { value: "ams", label: "Application Maintenance Services" },
+      { value: "ams", label: "Application Management Services" },
       { value: "partnership", label: "Partnership Inquiry" },
       { value: "support", label: "Technical Support" },
       { value: "other", label: "Other" },
