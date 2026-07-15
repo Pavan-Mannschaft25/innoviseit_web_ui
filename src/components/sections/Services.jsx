@@ -860,7 +860,7 @@ const Services = () => {
   const swiperRef = useRef(null);
 
   return (
-    <section className="relative py-6 lg:py-12 overflow-hidden bg-[#f8fbff]">
+    <section className="relative py-6 lg:py-8 overflow-hidden bg-[#f8fbff]">
       {/* Background Glow */}
       {/* <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-100/40 blur-3xl rounded-full" />
@@ -868,9 +868,9 @@ const Services = () => {
 
       <Container>
         {/* Top Header */}
-        <div className="flex flex-row items-center justify-between gap-6 mb-12">
+        <div className="flex flex-row items-center justify-between gap-6 mb-6">
           <div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-[#0B2A4A] leading-tight">
+            <h2 className="text-3xl md:text-5xl font-semibold text-[#0B2A4A] leading-tight">
               Core Services
             </h2>
           </div>
@@ -1008,7 +1008,7 @@ export default Services;
 //       number: "02",
 //       icon: FaTools,
 //       tag: "AMS",
-//       title: "Application Maintenance Services",
+//       title: "Application Management Services",
 //       description:
 //         "End-to-End AMS support ensuring stability, performance, and continuous improvement of your SAP landscape.",
 //       link: "/services/app-maintenance",
