@@ -781,21 +781,21 @@ const HeroSection = () => (
           transition={{ duration: 0.8 }}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-3 mb-6">
+          <div className="inline-flex items-center gap-3 mb-2 md:mb-6">
             <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center"
+              className="w-6 h-6 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
               style={{
                 background: `${BRAND.gold.primary}15`,
                 border: `1px solid ${BRAND.gold.primary}30`,
               }}
             >
               <FaDatabase
-                className="text-lg"
+                className="text-xs md:text-lg"
                 style={{ color: BRAND.gold.primary }}
               />
             </div>
             <span
-              className="text-sm font-bold uppercase tracking-[0.2em]"
+              className="text-[9px] md:text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
               <AnimatedText text="Data Migration & Transformation" />
@@ -952,6 +952,35 @@ const ServicesSection = () => (
 const BenefitsSection = () => (
   <section className="py-6 lg:py-12 bg-gray-50 relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+        <span
+          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          style={{
+            background: `${BRAND.navy.mid}08`,
+            color: BRAND.navy.dark,
+            border: `1px solid ${BRAND.navy.mid}15`,
+          }}
+        >
+          Key Benefits
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+          style={{ color: BRAND.navy.dark }}
+        >
+          Transform Your Data Into{" "}
+          <span style={{ color: BRAND.gold.primary }}>Strategic Assets</span>
+        </h2>
+
+        <p
+          className="text-lg leading-relaxed mb-10"
+          style={{ color: "#64748B" }}
+        >
+          Our proven methodology ensures seamless data migration with zero
+          downtime, complete accuracy, and enhanced accessibility for business
+          intelligence.
+        </p>
+      </div>
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* LEFT - Data Visualization Visual */}
         <motion.div
@@ -1188,34 +1217,6 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8, delay: 0.2 }}
           className="order-1 lg:order-2"
         >
-          <span
-            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
-            style={{
-              background: `${BRAND.navy.mid}08`,
-              color: BRAND.navy.dark,
-              border: `1px solid ${BRAND.navy.mid}15`,
-            }}
-          >
-            Key Benefits
-          </span>
-
-          <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
-            style={{ color: BRAND.navy.dark }}
-          >
-            Transform Your Data Into{" "}
-            <span style={{ color: BRAND.gold.primary }}>Strategic Assets</span>
-          </h2>
-
-          <p
-            className="text-lg leading-relaxed mb-10"
-            style={{ color: "#64748B" }}
-          >
-            Our proven methodology ensures seamless data migration with zero
-            downtime, complete accuracy, and enhanced accessibility for business
-            intelligence.
-          </p>
-
           {/* Benefits Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (

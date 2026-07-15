@@ -1416,7 +1416,7 @@ const leaders = [
   },
   {
     name: "Jasbir Singh",
-    role: "Application Maintenance Services",
+    role: "Application Management Services",
     image: img7,
     quote:
       "Ensuring reliable application services through continuous operational excellence and innovation.",
@@ -1450,7 +1450,7 @@ const LeadershipTeam = () => {
   };
 
   return (
-    <section className="relative py-12 sm:py-16 lg:py-20 bg-white overflow-hidden">
+    <section className="relative py-6 sm:py-8 lg:py-8 bg-white overflow-hidden">
       {/* Background Gradients */}
       <div
         className="absolute top-0 left-0 w-[300px] sm:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] lg:h-[500px] rounded-full blur-3xl opacity-[0.04] -translate-x-1/2 -translate-y-1/2"
@@ -1480,7 +1480,7 @@ const LeadershipTeam = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 sm:mb-10 lg:mb-14"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold mb-2 sm:mb-3 tracking-tight">
             <span className="text-[#12324F]">Leadership</span>{" "}
             <span className="text-[#FDB913]">Team</span>
           </h2>
@@ -1533,7 +1533,7 @@ const LeadershipTeam = () => {
                 spaceBetween: 20,
               },
               1024: {
-                slidesPerView: 2.5,
+                slidesPerView: 3,
                 spaceBetween: 24,
               },
               1280: {
@@ -1577,11 +1577,11 @@ const LeadershipTeam = () => {
                       {/* Details - Right Side */}
                       <div className="flex-1 min-w-0 flex flex-col p-3 sm:p-3.5 md:p-4 lg:p-4 xl:p-5 h-full">
                         <div className="flex-1 min-h-0">
-                          <h3 className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] font-bold text-[#12324F] leading-tight truncate">
+                          <h3 className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[20px] xl:text-[20px] font-bold text-[#12324F] leading-tight truncate">
                             {leader.name}
                           </h3>
 
-                          <p className="text-[11px] sm:text-[12px] md:text-[12px] lg:text-[13px] font-medium text-[#64748B] mt-0.5">
+                          <p className="text-[11px] sm:text-[12px] md:text-[12px] lg:text-[13px] font-medium text-[#FDB913] mt-0.5">
                             {leader.role}
                           </p>
 

@@ -639,11 +639,7 @@ function Hero() {
       <div
         className="
           w-full
-          h-[22vh]
-          sm:h-[40vh]
-          md:h-[50vh]
-          lg:h-[70vh]
-          xl:h-[90vh]
+          max-h-screen
         "
       >
         <video

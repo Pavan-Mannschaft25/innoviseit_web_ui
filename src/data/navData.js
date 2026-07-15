@@ -46,7 +46,7 @@ export const navData = {
         //   path: "/services/integration-services",
         // },
         {
-          name: "Application Maintenance Services",
+          name: "Application Management Services",
           desc: "24/7 monitoring, support, and continuous improvement of enterprise applications",
           icon: "FaTools",
           path: "/services/app-maintenance",

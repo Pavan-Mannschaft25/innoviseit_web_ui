@@ -6610,7 +6610,7 @@ const HeroSection = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-3 mb-8">
               <motion.div
-                className="w-14 h-14 rounded-xl flex items-center justify-center"
+                className="w-6 h-6 md:w-10 md:h-10 rounded-xl flex items-center justify-center"
                 whileHover={{ rotate: 12 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 style={{
@@ -6619,19 +6619,19 @@ const HeroSection = () => {
                 }}
               >
                 <FaRobot
-                  className="text-2xl"
+                  className="text-xs md:text-lg"
                   style={{ color: BRAND.gold.primary }}
                 />
               </motion.div>
               <span
-                className="text-sm font-bold uppercase tracking-[0.25em]"
+                className="text-[10px] md:text-sm font-bold uppercase tracking-[0.25em]"
                 style={{ color: BRAND.gold.primary }}
               >
                 <AnimatedText text="AI & Engineering Services" />
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-black leading-tight text-white">
               Transforming Enterprises Through{" "}
               <span
                 style={{
@@ -6656,7 +6656,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-white max-w-xl leading-relaxed">
               Innovise delivers enterprise-grade application development, system
               integration, and AI solutions that help organizations modernize
               operations, improve customer experiences, and accelerate digital
@@ -6787,9 +6787,9 @@ const WhyInnoviseSection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
             style={{
-              background: "rgba(253,185,19,0.1)",
+              background: `${BRAND.navy.mid}08`,
               color: BRAND.navy.dark,
-              border: "1px solid rgba(253,185,19,0.2)",
+              border: `1px solid ${BRAND.navy.mid}15`,
             }}
           >
             Why Choose Innovise

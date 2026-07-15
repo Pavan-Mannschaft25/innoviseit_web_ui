@@ -6,12 +6,12 @@
 // // // const servicesData = [
 // // //   {
 // // //     id: 5,
-// // //     title: "Application Maintenance Services",
+// // //     title: "Application Management Services",
 // // //     description:
-// // //       "Ensure uninterrupted business operations with end-to-end SAP Application Maintenance Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
+// // //       "Ensure uninterrupted business operations with end-to-end SAP Application Management Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
 // // //     image:
 // // //       "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-// // //     imageAlt: "SAP Application Maintenance Services",
+// // //     imageAlt: "SAP Application Management Services",
 // // //     features: [
 // // //       "24/7 Application Monitoring & Support",
 // // //       "Incident & Problem Management",
@@ -744,12 +744,12 @@
 // // const servicesData = [
 // //   {
 // //     id: 5,
-// //     title: "Application Maintenance Services",
+// //     title: "Application Management Services",
 // //     description:
-// //       "Ensure uninterrupted business operations with end-to-end SAP Application Maintenance Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
+// //       "Ensure uninterrupted business operations with end-to-end SAP Application Management Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
 // //     image:
 // //       "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-// //     imageAlt: "SAP Application Maintenance Services",
+// //     imageAlt: "SAP Application Management Services",
 // //     image2:
 // //       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
 // //     imageAlt2: "SAP Monitoring Dashboard",
@@ -1679,9 +1679,9 @@
 // // const servicesData = [
 // //   {
 // //     id: 5,
-// //     title: "Application Maintenance Services",
+// //     title: "Application Management Services",
 // //     description:
-// //       "Ensure uninterrupted business operations with end-to-end SAP Application Maintenance Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
+// //       "Ensure uninterrupted business operations with end-to-end SAP Application Management Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
 // //     features: [
 // //       "24/7 Application Monitoring & Support",
 // //       "Incident & Problem Management",
@@ -3187,9 +3187,9 @@
 // const servicesData = [
 //   {
 //     id: 5,
-//     title: "Application Maintenance Services",
+//     title: "Application Management Services",
 //     description:
-//       "Ensure uninterrupted business operations with end-to-end SAP Application Maintenance Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
+//       "Ensure uninterrupted business operations with end-to-end SAP Application Management Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
 //     features: [
 //       "24/7 Application Monitoring & Support",
 //       "Incident & Problem Management",
@@ -4815,9 +4815,9 @@ import { FaArrowRight } from "react-icons/fa";
 const servicesData = [
   {
     id: 5,
-    title: "Application Maintenance Services",
+    title: "Application Management Services",
     description:
-      "Ensure uninterrupted business operations with end-to-end SAP Application Maintenance Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
+      "Ensure uninterrupted business operations with end-to-end SAP Application Management Services. We provide 24/7 monitoring, proactive maintenance, incident resolution, performance optimization, and continuous enhancements to maximize system availability and business productivity.",
     features: [
       "24/7 Application Monitoring & Support",
       "Incident & Problem Management",
