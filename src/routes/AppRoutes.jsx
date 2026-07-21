@@ -50,7 +50,7 @@ const AppRoutes = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
           <Route path="/think" element={<InnoviseThinkPage />} />
-          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/careers/*" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
           //Industry Pages
           <Route
