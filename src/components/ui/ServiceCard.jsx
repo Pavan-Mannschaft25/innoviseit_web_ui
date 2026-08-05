@@ -172,7 +172,7 @@ const ServiceCard = ({ data, index = 0 }) => {
           {/* ================================ */}
           {/* 🖼️ IMAGE CONTAINER               */}
           {/* ================================ */}
-          <div className="relative w-full h-42 lg:h-50 xl:h-60 overflow-hidden flex-shrink-0">
+          <div className="relative w-full h-42 lg:h-42 xl:h-60 overflow-hidden flex-shrink-0">
             {/* Main Image */}
             <img
               src={data.image}
