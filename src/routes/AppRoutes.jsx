@@ -36,6 +36,8 @@ import ProjectSupportRemediationPage from "../pages/servicesPages/ProjectSupport
 import ApplicationDevelopmentIntegrationAIPage from "../pages/servicesPages/ApplicationDevelopmentIntegrationAIPage";
 import EnergyUtilitiesChemicalsPage from "../pages/industryPages/EnergyUtilitiesChemicalsPage";
 import CodeQualitySecurityPage from "../pages/servicesPages/CodeQualitySecurityPage";
+import PrivacyPolicy from "../pages/Privacy";
+import ConsumerProductsRetailPage from "../pages/industryPages/ConsumerProductsPage";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -48,7 +50,7 @@ const AppRoutes = () => {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
           <Route path="/think" element={<InnoviseThinkPage />} />
-          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/careers/*" element={<CareersPage />} />
           <Route path="/contact" element={<ContactPage />} />
           //Industry Pages
           <Route
@@ -64,6 +66,10 @@ const AppRoutes = () => {
           <Route
             path="/industries/construction-real-estate"
             element={<ConstructionRealEstatePage />}
+          />
+          <Route
+            path="/industries/consumer-retail"
+            element={<ConsumerProductsRetailPage />}
           />
           <Route
             path="/industries/consumer-products"
@@ -128,13 +134,14 @@ const AppRoutes = () => {
           />
           //About Pages
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/leadership" element={<LeadershipPage />} />
+          <Route path="/about/leadership" element={<LeadershipPage />} />
           <Route path="/culture/values" element={<ValuesPage />} />
           <Route
             path="/culture/diversity"
             element={<DiversityInclusionPage />}
           />
           <Route path="/culture/community" element={<CommunityImpactPage />} />
+          <Route path="/about/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

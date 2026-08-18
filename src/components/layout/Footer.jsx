@@ -40,8 +40,9 @@ const Footer = () => {
     ],
     company: [
       { name: "About Us", path: "/about" },
-      { name: "Leadership", path: "/leadership" },
-      { name: "Careers", path: "/careers" },
+      { name: "Leadership", path: "/about/leadership" },
+      { name: "Privacy Policy", path: "/about/privacy-policy" },
+      // { name: "Careers", path: "/careers" },
       { name: "Our Values", path: "/culture/values" },
       { name: "Contact", path: "/contact" },
     ],
@@ -57,31 +58,12 @@ const Footer = () => {
   return (
     <footer className="bg-primary-800 text-gray-300">
       {/* Main Footer Content */}
-      <div className="py-16 border-b border-black">
+      <div className="py-10 border-b border-black">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {/* Company Info */}
-            <div className="lg:col-span-2">
-              {/* <Link to="/" className="flex items-center">
-                <img
-                  src={logo}
-                  alt="Innovise IT"
-                  className="h-8 w-auto object-contain mb-4"
-                />
-              </Link> */}
-              <Link to="/" className="relative group flex items-center">
-                <div className="relative overflow-hidden rounded-lg p-1">
-                  <img
-                    src={logo}
-                    alt="Innovise IT"
-                    className="mb-4 h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 brightness-0 invert" // Added brightness-0 invert assuming logo is dark, remove if logo is already white/transparent
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-                </div>
-              </Link>
-
-              <p className="text-white leading-relaxed mb-6 max-w-md">
+            <div className="lg:col-span-1">
+              <p className="text-white leading-relaxed mb-6 max-w-sm">
                 Innovative technology partner delivering cloud, AI, engineering,
                 enterprise applications, and digital transformation solutions
                 that help organizations modernize operations, accelerate growth,
@@ -177,8 +159,8 @@ const Footer = () => {
                 <li className="flex items-start gap-3">
                   <FaMapMarkerAlt className="text-accent-500 mt-1 flex-shrink-0" />
                   <span className="text-sm text-white">
-                    {companyData.contact.address.street}
-                    <br />
+                    {/* {companyData.contact.address.street}
+                    <br /> */}
                     {companyData.contact.address.city},{" "}
                     {companyData.contact.address.state}{" "}
                     {companyData.contact.address.zip}
@@ -203,7 +185,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="pt-2">
-                  <p className="text-xs text-white">
+                  <p className="text-sm text-white">
                     {companyData.contact.hours}
                   </p>
                 </li>

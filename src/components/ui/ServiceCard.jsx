@@ -172,14 +172,13 @@ const ServiceCard = ({ data, index = 0 }) => {
           {/* ================================ */}
           {/* 🖼️ IMAGE CONTAINER               */}
           {/* ================================ */}
-          <div className="relative w-full h-56 lg:h-64 overflow-hidden flex-shrink-0">
+          <div className="relative w-full h-42 lg:h-42 xl:h-60 overflow-hidden flex-shrink-0">
             {/* Main Image */}
             <img
               src={data.image}
               alt={data.title}
               loading="lazy"
-              className="w-full h-full object-cover transform 
-                group-hover:scale-110 transition-transform duration-700 ease-out"
+              className="w-full h-full object-cover transform transition-transform duration-700 ease-out"
             />
 
             {/* Multi-layer Gradient Overlay */}
@@ -195,7 +194,7 @@ const ServiceCard = ({ data, index = 0 }) => {
             />
 
             {/* Category Badge - Top Left */}
-            {data.category && (
+            {/* {data.category && (
               <div className="absolute top-4 left-4 z-10">
                 <span
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg border transition-all duration-300 group-hover:bg-[#FDB913] group-hover:text-[#12324f]"
@@ -212,7 +211,7 @@ const ServiceCard = ({ data, index = 0 }) => {
                   {data.category}
                 </span>
               </div>
-            )}
+            )} */}
 
             {/* External Link Icon - Bottom Right (Animated) */}
             <div
@@ -289,7 +288,7 @@ const ServiceCard = ({ data, index = 0 }) => {
 
             {/* Description - Flex Grow for Equal Height */}
             <p
-              className="text-sm leading-relaxed mb-5 line-clamp-3 flex-grow"
+              className="text-sm leading-relaxed mb-5 flex-grow"
               style={{ color: "#64748B" }}
             >
               {data.description}

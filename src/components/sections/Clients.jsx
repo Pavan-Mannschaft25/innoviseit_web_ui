@@ -477,7 +477,7 @@ const PartnerMarquee = () => {
   }, []);
 
   return (
-    <section className="relative py-8 lg:py-10 overflow-hidden bg-primary-100">
+    <section className="relative py-6 lg:py-8 overflow-hidden bg-primary-100">
       {/*  Animated Background Effects */}
 
       {/* Gold Glow Top Left */}
@@ -532,7 +532,7 @@ const PartnerMarquee = () => {
           </motion.div> */}
 
           {/* Title */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-5 leading-tight">
             <span className="text-black">Our </span>
             <span className="relative inline-block">
               <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
@@ -591,17 +591,17 @@ const PartnerMarquee = () => {
                   className="
     relative
     w-44 h-28
-    sm:w-52 sm:h-32
-    md:w-60 md:h-36
-    lg:w-72 lg:h-40
-    xl:w-80 xl:h-44
+    sm:w-52 sm:h-28
+    md:w-60 md:h-28
+    lg:w-60 lg:h-28
+    xl:w-60 xl:h-28
     bg-white
     rounded-2xl
     border border-gray-100
     shadow-md
     hover:shadow-xl
     flex items-center justify-center
-    p-8
+    p-4
     transition-all duration-300
   "
                 >

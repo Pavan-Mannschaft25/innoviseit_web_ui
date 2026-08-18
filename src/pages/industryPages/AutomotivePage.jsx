@@ -14,8 +14,8 @@ import {
   FaArrowDown,
   FaStar,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/au1.png";
-import img2 from "../../assets/industry/au2.png";
+import img1 from "../../assets/industry/ae1.png";
+import img2 from "../../assets/industry/au1.png";
 
 // ============================================
 // REUSABLE COMPONENTS - NAVY & GOLD THEME

@@ -598,31 +598,59 @@
 
 // export default HeroSection;
 
+// import React from "react";
+// import banner from "../../assets/banners/home_banner.png";
+
+// function Hero() {
+//   return (
+//     <section className="relative bg-[#020B2D] overflow-hidden">
+//       <div
+//         className="
+//       w-full
+//       h-[24vh]
+//       sm:h-[40vh]
+//       md:h-[70vh]
+//       lg:h-[90vh]
+//       xl:h-[90vh]
+//     "
+//       >
+//         <img
+//           src={banner}
+//           alt="Innovise IT Banner"
+//           className="
+//         w-full
+//         h-full
+//         object-cover
+//       "
+//         />
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Hero;
+
 import React from "react";
-import banner from "../../assets/banners/home_banner.png";
+import bannerVideo from "../../assets/videos/hero_banner.mp4";
 
 function Hero() {
   return (
     <section className="relative bg-[#020B2D] overflow-hidden">
       <div
         className="
-      w-full
-      h-[24vh]
-      sm:h-[40vh]
-      md:h-[70vh]
-      lg:h-[90vh]
-      xl:h-[90vh]
-    "
+          w-full
+          max-h-screen
+        "
       >
-        <img
-          src={banner}
-          alt="Innovise IT Banner"
-          className="
-        w-full
-        h-full
-        object-cover
-      "
-        />
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={bannerVideo} type="video/mp4" />
+        </video>
       </div>
     </section>
   );

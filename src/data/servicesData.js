@@ -274,7 +274,7 @@ export const servicesData = [
     category: "Guidewire",
     title: "Guidewire Services",
     description:
-      "Guidewire implementation, integration, support, upgrades, and comprehensive testing services tailored for insurance organizations.",
+      "A structured approach fully leveraging Guidewire's SurePath methodology, ensuring predictable and successful delivery.",
     image: img2,
     readTime: "Insurance Technology",
     date: "Innovise IT",

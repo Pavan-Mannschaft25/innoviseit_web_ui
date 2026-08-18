@@ -774,7 +774,7 @@ const IndustryTileCard = ({
     <Link
       to={data.link}
       className={`group relative block overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ${
-        isFullImage ? "h-[430px]" : "h-[420px]"
+        isFullImage ? "h-[420px]" : "h-[420px]"
       } ${
         isDark
           ? "bg-gradient-to-br from-[#0d2240]/80 to-[#081629]/90 border border-yellow-500/10"
@@ -813,7 +813,7 @@ const IndustryTileCard = ({
       {/* 🖼️ IMAGE SECTION                 */}
       {/* ================================ */}
       <div
-        className={`relative overflow-hidden ${isFullImage ? "h-[260px]" : "h-[200px]"}`}
+        className={`relative overflow-hidden ${isFullImage ? "h-[260px]" : "h-[260px]"}`}
       >
         {/* Loading Skeleton */}
         {!imageLoaded && !imageError && (
@@ -875,9 +875,9 @@ const IndustryTileCard = ({
       {/* ================================ */}
       {/* 📝 CONTENT SECTION               */}
       {/* ================================ */}
-      <div className={`relative p-6 ${isFullImage ? "-mt-14" : ""}`}>
+      <div className={`relative p-4`}>
         {/* Icon Badge */}
-        <div
+        {/* <div
           className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-all duration-500 relative z-10 ${
             isDark
               ? "bg-linear-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FDB913]/40 shadow-lg shadow-yellow-500/10"
@@ -886,7 +886,7 @@ const IndustryTileCard = ({
           style={{ transformStyle: "preserve-3d" }}
         >
           <i className={data.icon} />
-        </div>
+        </div> */}
 
         {/* Title */}
         <h3

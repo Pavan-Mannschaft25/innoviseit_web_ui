@@ -3171,6 +3171,7 @@ import {
 
 // ==================== BANNER IMAGE ====================
 import guidewireBanner from "../../assets/services/app.png"; // Update path
+import AnimatedText from "../../components/common/AnimatedText";
 
 // ==================== BRAND COLORS (NAVY + GOLD) ====================
 const BRAND = {
@@ -3306,13 +3307,13 @@ const benefitsData = [
     icon: FaChartLine,
     title: "Operational Efficiency",
     description:
-      "Reduce manual processes by 60% through automation and workflow optimization.",
+      "Reduce manual processes through automation and workflow optimization.",
   },
   {
     icon: FaShieldAlt,
-    title: "Regulatory Compliance",
+    title: "TCO Reductions",
     description:
-      "Stay compliant with evolving insurance regulations through built-in compliance frameworks.",
+      "Reduce total cost of ownership through automation, optimized workflows, and efficient application management.",
   },
   {
     icon: FaUsers,
@@ -3321,46 +3322,6 @@ const benefitsData = [
       "Deliver seamless digital experiences that modern insurance customers expect.",
   },
 ];
-
-// ==================== PROCESS STEPS ====================
-// const processSteps = [
-//   {
-//     step: 1,
-//     icon: FaSearchPlus,
-//     title: "Discovery",
-//     subtitle: "Business Analysis",
-//     description:
-//       "Deep-dive into your current processes, requirements, and goals to create a comprehensive implementation roadmap tailored to your needs.",
-//     color: "#3B82F6",
-//   },
-//   {
-//     step: 2,
-//     icon: FaCogs,
-//     title: "Configure",
-//     subtitle: "Platform Setup",
-//     description:
-//       "Configure Guidewire suite components including data model, product definitions, workflows, and integration points based on discovery findings.",
-//     color: "#F59E0B",
-//   },
-//   {
-//     step: 3,
-//     icon: FaCode,
-//     title: "Customize",
-//     subtitle: "Development",
-//     description:
-//       "Develop custom enhancements, integrations, reports, and extensions using Gosu, Java, and Guidewire best practices.",
-//     color: "#10B981",
-//   },
-//   {
-//     step: 4,
-//     icon: FaRocket,
-//     title: "Deploy",
-//     subtitle: "Go-Live & Support",
-//     description:
-//       "Execute production deployment, data migration cutover, user training, and provide post-go-live hypercare support.",
-//     color: "#8B5CF6",
-//   },
-// ];
 
 const processSteps = [
   {
@@ -3669,7 +3630,7 @@ const HeroSection = () => (
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-16 right-20 w-[450px] h-[450px] rounded-full blur-3xl opacity-[0.07]"
-        style={{ background: "#3B82F6" }} // Blue for trust/security
+        style={{ background: "#3B82F6" }}
       />
       <motion.div
         animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
@@ -3693,24 +3654,24 @@ const HeroSection = () => (
           transition={{ duration: 0.8 }}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-3 mb-6">
+          <div className="inline-flex items-center gap-3 mb-2 md:mb-6">
             <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center"
+              className="w-6 h-6 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
               style={{
                 background: `${BRAND.gold.primary}15`,
                 border: `1px solid ${BRAND.gold.primary}30`,
               }}
             >
               <FaCloud
-                className="text-lg"
+                className="text-xs md:text-lg"
                 style={{ color: BRAND.gold.primary }}
               />
             </div>
             <span
-              className="text-sm font-bold uppercase tracking-[0.2em]"
+              className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em]"
               style={{ color: BRAND.gold.primary }}
             >
-              Guidewire Services
+              <AnimatedText text="Guidewire Services" />
             </span>
           </div>
 
@@ -3747,7 +3708,7 @@ const HeroSection = () => (
             PolicyCenter to ClaimCenter, we deliver End-to-End excellence.
           </p>
 
-          <p className="text-base text-gray-100 leading-relaxed mb-8 max-w-xl">
+          <p className="text-lg text-gray-100 leading-relaxed mb-8 max-w-xl">
             Our certified consultants bring deep domain expertise across P&C
             insurance lines, ensuring your Guidewire investment delivers maximum
             ROI.
@@ -3931,6 +3892,44 @@ const IndustriesSection = () => (
 const BenefitsSection = () => (
   <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+        <span
+          className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+          style={{
+            background: `${BRAND.navy.mid}08`,
+            color: BRAND.navy.dark,
+            border: `1px solid ${BRAND.navy.mid}15`,
+          }}
+        >
+          Why Choose Us
+        </span>
+
+        <h2
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
+          style={{ color: BRAND.navy.dark }}
+        >
+          The{" "}
+          <span
+            style={{
+              backgroundImage: BRAND.gold.gradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            Strategic Advantage
+          </span>{" "}
+          of Working with Innovise IT
+        </h2>
+
+        <p
+          className="text-lg leading-relaxed mb-10"
+          style={{ color: "#64748B" }}
+        >
+          We combine deep Guidewire technical expertise with insurance domain
+          knowledge to deliver solutions that drive real business outcomes.
+        </p>
+      </div>
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* LEFT - Visual */}
         <motion.div
@@ -4049,32 +4048,6 @@ const BenefitsSection = () => (
                 </div>
               </div>
             </div>
-
-            {/* Floating Badge */}
-            <motion.div
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-3 -left-3 bg-white rounded-xl p-4 shadow-lg"
-              style={{ border: `2px solid #3B82F6` }}
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style={{ background: "rgba(59,130,246,0.1)" }}
-                >
-                  <FaAward className="text-lg" style={{ color: "#3B82F6" }} />
-                </div>
-                <div>
-                  <div
-                    className="text-base font-black"
-                    style={{ color: BRAND.navy.dark }}
-                  >
-                    Certified
-                  </div>
-                  <div className="text-[10px] text-gray-500">Partner Level</div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
 
@@ -4086,87 +4059,11 @@ const BenefitsSection = () => (
           transition={{ duration: 0.8, delay: 0.2 }}
           className="order-1 lg:order-2"
         >
-          <span
-            className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
-            style={{
-              background: `${BRAND.navy.mid}08`,
-              color: BRAND.navy.dark,
-              border: `1px solid ${BRAND.navy.mid}15`,
-            }}
-          >
-            Why Choose Us
-          </span>
-
-          <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
-            style={{ color: BRAND.navy.dark }}
-          >
-            The{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Strategic Advantage
-            </span>{" "}
-            of Working with Innovise IT
-          </h2>
-
-          <p
-            className="text-lg leading-relaxed mb-10"
-            style={{ color: "#64748B" }}
-          >
-            We combine deep Guidewire technical expertise with insurance domain
-            knowledge to deliver solutions that drive real business outcomes.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-4 mb-10">
             {benefitsData.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} index={index} />
             ))}
           </div>
-
-          {/* Quick Stats */}
-          {/* <div
-            className="p-6 rounded-2xl"
-            style={{
-              background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.mid})`,
-            }}
-          >
-            <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-              <FaStar
-                className="text-sm"
-                style={{ color: BRAND.gold.primary }}
-              />
-              Our Track Record
-            </h4>
-            <div className="grid grid-cols-2 gap-4">
-              {metricsData.slice(0, 4).map((metric, idx) => (
-                <div
-                  key={idx}
-                  className="text-center p-3 rounded-xl"
-                  style={{ background: "rgba(255,255,255,0.05)" }}
-                >
-                  <metric.icon
-                    className="mx-auto mb-1"
-                    style={{ color: metric.color, fontSize: "14px" }}
-                  />
-                  <div
-                    className="text-xl font-black"
-                    style={{ color: "white" }}
-                  >
-                    {metric.value}
-                  </div>
-                  <div className="text-[10px] text-white/50">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
         </motion.div>
       </div>
     </div>

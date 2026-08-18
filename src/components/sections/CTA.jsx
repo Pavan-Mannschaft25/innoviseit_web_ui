@@ -266,10 +266,10 @@ const CTA = ({
               <p className="text-blue-200 text-sm">
                 Or reach us directly at{" "}
                 <a
-                  href="mailto:Contact@innovise-IT.com"
+                  href="mailto:contact@innovise-it.com"
                   className="font-semibold text-white hover:text-accent-400 transition-colors underline"
                 >
-                  Contact@innovise-IT.com
+                  contact@innovise-it.com
                 </a>
               </p>
             </div>

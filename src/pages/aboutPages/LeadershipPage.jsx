@@ -1245,6 +1245,7 @@ const ANIMATION = {
 };
 
 // ==================== LEADERSHIP DATA ====================
+
 // const leadershipData = [
 //   {
 //     id: 1,
@@ -1253,18 +1254,25 @@ const ANIMATION = {
 //     image: img1,
 //     initials: "NG",
 //     color: "#FDB913",
-//     quote: "Building the future of digital transformation",
-//     bio: "Visionary leader driving enterprise innovation, SAP transformation, and global digital strategy.",
-//     expertise: ["Digital Transformation", "Enterprise Strategy", "Leadership"],
-//     experience: "20+ Years",
-//     achievements: [
-//       "Led large-scale digital transformation programs",
-//       "Built global enterprise delivery models",
-//       "Recognized industry leader",
+//     quote: "Driving enterprise transformation through innovation.",
+//     bio: "Founder and technology leader with over 15 years of experience delivering SAP consulting, digital transformation, and enterprise solutions while helping organizations accelerate growth, improve operations, and achieve sustainable business success.",
+//     expertise: [
+//       "SAP Consulting",
+//       "Digital Transformation",
+//       "Strategic Leadership",
 //     ],
-//     social: { linkedin: "https://www.linkedin.com/in/nishantgautamsap/" },
-//     email: "nishant@innoviseit.com",
+//     experience: "15+ Years",
+//     achievements: [
+//       "Led enterprise SAP transformation programs",
+//       "Built high-performing global consulting teams",
+//       "Delivered strategic digital transformation initiatives",
+//     ],
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/nishantgautamsap/",
+//     },
+//     email: "[nishant@innoviseit.com](mailto:nishant@innoviseit.com)",
 //   },
+
 //   {
 //     id: 2,
 //     name: "Bob Marchand",
@@ -1272,17 +1280,21 @@ const ANIMATION = {
 //     image: img2,
 //     initials: "BM",
 //     color: "#3B82F6",
-//     quote: "Operational excellence drives our success",
-//     bio: "Operations leader focused on scaling delivery, optimizing performance, and ensuring client success.",
-//     expertise: ["Operations Strategy", "Program Management", "Execution"],
-//     experience: "18+ Years",
+//     quote: "Operational excellence powers sustainable growth.",
+//     bio: "Operations executive with more than 20 years of experience managing SAP delivery programs and global enterprise operations.",
+//     expertise: ["Operations Management", "SAP Delivery", "Program Leadership"],
+//     experience: "20+ Years",
 //     achievements: [
-//       "Improved operational efficiency across global teams",
-//       "Managed multi-million delivery portfolios",
+//       "Managed global SAP delivery organizations",
+//       "Improved operational performance across regions",
+//       "Led multi-million-dollar transformation initiatives",
 //     ],
-//     social: { linkedin: "https://www.linkedin.com/in/bomarchand/" },
-//     email: "bob@innoviseit.com",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/bomarchand/",
+//     },
+//     email: "[bob@innoviseit.com](mailto:bob@innoviseit.com)",
 //   },
+
 //   {
 //     id: 3,
 //     name: "Alan Wu",
@@ -1290,17 +1302,21 @@ const ANIMATION = {
 //     image: img3,
 //     initials: "AW",
 //     color: "#10B981",
-//     quote: "Revenue growth through innovation",
-//     bio: "Revenue strategist driving growth through customer-centric solutions and market expansion.",
-//     expertise: ["Revenue Growth", "Sales Strategy", "Market Expansion"],
-//     experience: "17+ Years",
+//     quote: "Growth is driven by innovation and customer success.",
+//     bio: "Revenue leader with deep expertise in SAP solutions, cybersecurity services, and enterprise business development.",
+//     expertise: ["Revenue Growth", "Cybersecurity", "Enterprise Sales"],
+//     experience: "18+ Years",
 //     achievements: [
-//       "Scaled revenue across multiple regions",
-//       "Built high-performing sales teams",
+//       "Expanded enterprise revenue channels globally",
+//       "Built strategic customer partnerships",
+//       "Led high-growth sales organizations",
 //     ],
-//     social: { linkedin: "https://www.linkedin.com/in/alan-wu-886190" },
-//     email: "alan@innoviseit.com",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/alan-wu-886190",
+//     },
+//     email: "[alan@innoviseit.com](mailto:alan@innoviseit.com)",
 //   },
+
 //   {
 //     id: 4,
 //     name: "Oliver Betz",
@@ -1308,17 +1324,21 @@ const ANIMATION = {
 //     image: img4,
 //     initials: "OB",
 //     color: "#8B5CF6",
-//     quote: "Strategic vision for sustainable growth",
-//     bio: "Advisor bringing strategic insight for long-term growth and enterprise scalability.",
-//     expertise: ["Strategy", "Governance", "Advisory"],
+//     quote: "Strategic leadership creates long-term value.",
+//     bio: "Guiding businesses worldwide with decades of expertise in SAP, cloud services, and digital transformation.",
+//     expertise: ["SAP AMS", "Hybrid Cloud", "Executive Advisory"],
 //     experience: "20+ Years",
 //     achievements: [
 //       "Advised global enterprise organizations",
-//       "Supported long-term strategic growth initiatives",
+//       "Supported cloud transformation initiatives",
+//       "Enabled scalable service delivery models",
 //     ],
-//     social: { linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/" },
-//     email: "oliver@innoviseit.com",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
+//     },
+//     email: "[oliver@innoviseit.com](mailto:oliver@innoviseit.com)",
 //   },
+
 //   {
 //     id: 5,
 //     name: "Silvio Bessa",
@@ -1326,35 +1346,43 @@ const ANIMATION = {
 //     image: img5,
 //     initials: "SB",
 //     color: "#EC4899",
-//     quote: "Guiding companies toward excellence",
-//     bio: "Business advisor focused on operational excellence and enterprise transformation.",
-//     expertise: ["Business Strategy", "Transformation", "Advisory"],
-//     experience: "19+ Years",
+//     quote: "Partnerships and innovation drive business success.",
+//     bio: "Technology advisor bringing extensive global experience in enterprise technology, partnerships, and organizational growth.",
+//     expertise: ["Enterprise Technology", "Partnerships", "Business Strategy"],
+//     experience: "20+ Years",
 //     achievements: [
-//       "Helped scale enterprise organizations globally",
-//       "Improved operational efficiency across sectors",
+//       "Built strategic technology partnerships",
+//       "Supported global business expansion",
+//       "Advised enterprise transformation programs",
 //     ],
-//     social: { linkedin: "https://www.linkedin.com/in/silviobessa/" },
-//     email: "silvio@innoviseit.com",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/silviobessa/",
+//     },
+//     email: "[silvio@innoviseit.com](mailto:silvio@innoviseit.com)",
 //   },
+
 //   {
 //     id: 6,
 //     name: "Timothy Wirtjes",
-//     role: "Guidewire Practice Lead",
+//     role: "Director – Guidewire Practice",
 //     image: img6,
 //     initials: "TW",
 //     color: "#F59E0B",
-//     quote: "Leading insurance technology solutions",
-//     bio: "Insurance technology expert specializing in Guidewire implementations and modernization.",
-//     expertise: ["Guidewire", "Insurance Tech", "Platform Modernization"],
-//     experience: "15+ Years",
+//     quote: "Modernizing insurance platforms through innovation.",
+//     bio: "Guidewire Practice Leader with 14+ years of experience delivering insurance technology solutions and modernization programs.",
+//     expertise: ["Guidewire", "Insurance Technology", "Platform Modernization"],
+//     experience: "14+ Years",
 //     achievements: [
-//       "Led multiple Guidewire implementations",
-//       "Improved insurance platform efficiency",
+//       "Led successful Guidewire implementations",
+//       "Modernized enterprise insurance platforms",
+//       "Improved operational efficiency for insurers",
 //     ],
-//     social: { linkedin: "https://www.linkedin.com/in/timothy-wirtjes/" },
-//     email: "timothy@innoviseit.com",
+//     social: {
+//       linkedin: "https://www.linkedin.com/in/timothy-wirtjes/",
+//     },
+//     email: "[timothy@innoviseit.com](mailto:timothy@innoviseit.com)",
 //   },
+
 //   {
 //     id: 7,
 //     name: "Jasbir Singh",
@@ -1362,52 +1390,55 @@ const ANIMATION = {
 //     image: img7,
 //     initials: "JS",
 //     color: "#22C55E",
-//     quote: "Delivering managed services excellence",
-//     bio: "AMS leader ensuring continuous support, optimization, and enterprise system performance.",
-//     expertise: ["AMS", "Support Services", "Optimization"],
+//     quote: "Delivering reliable managed services at scale.",
+//     bio: "AMS leader responsible for SAP AMS and Hybrid Cloud Services delivery, ensuring operational excellence and customer success.",
+//     expertise: ["SAP AMS", "Cloud Services", "Service Delivery"],
 //     experience: "16+ Years",
 //     achievements: [
-//       "Delivered 24/7 enterprise support models",
+//       "Established enterprise AMS delivery models",
 //       "Improved SLA performance across clients",
+//       "Led cloud support transformation programs",
 //     ],
 //     social: {
 //       linkedin:
 //         "https://www.linkedin.com/in/jasbir-singh-12b256b?originalSubdomain=ca",
 //     },
-//     email: "jasbir@innoviseit.com",
+//     email: "[jasbir@innoviseit.com](mailto:jasbir@innoviseit.com)",
 //   },
+
 //   {
 //     id: 8,
 //     name: "Rodrigo Recio",
-//     role: "Director – Testing Services",
+//     role: "Director – Head of Testing Services",
 //     image: img8,
 //     initials: "RR",
 //     color: "#EF4444",
-//     quote: "Quality assurance at its finest",
-//     bio: "QA leader specializing in automation, testing strategy, and enterprise quality frameworks.",
-//     expertise: ["QA Automation", "Testing Strategy", "Performance Testing"],
-//     experience: "14+ Years",
+//     quote: "Quality engineering ensures business confidence.",
+//     bio: "Testing and quality assurance leader with expertise in SAP testing, automation frameworks, and enterprise quality management.",
+//     expertise: ["SAP Testing", "Automation", "Quality Engineering"],
+//     experience: "15+ Years",
 //     achievements: [
-//       "Built enterprise QA frameworks",
-//       "Reduced defects and improved release quality",
+//       "Built enterprise QA and automation frameworks",
+//       "Reduced release risks through quality governance",
+//       "Led large-scale testing transformation initiatives",
 //     ],
 //     social: {
 //       linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
-//       twitter: "#",
 //     },
-//     email: "rodrigo@innoviseit.com",
+//     email: "[rodrigo@innoviseit.com](mailto:rodrigo@innoviseit.com)",
 //   },
 // ];
+
 const leadershipData = [
   {
     id: 1,
     name: "Nishant Gautam",
-    role: "Founder & CEO",
+    role: "Founder & Chief Executive Officer",
     image: img1,
     initials: "NG",
     color: "#FDB913",
     quote: "Driving enterprise transformation through innovation.",
-    bio: "Founder and business leader with over 15 years of experience driving consulting, technology, and professional services organizations. Passionate about helping clients accelerate growth, transform operations, and achieve long-term business success.",
+    bio: "Leads company vision through innovation, strategic leadership, customer-focused solutions, empowering high-performing teams, driving digital transformation, delivering sustainable business growth, operational excellence, and long-term client value.",
     expertise: [
       "SAP Consulting",
       "Digital Transformation",
@@ -1422,7 +1453,7 @@ const leadershipData = [
     social: {
       linkedin: "https://www.linkedin.com/in/nishantgautamsap/",
     },
-    email: "[nishant@innoviseit.com](mailto:nishant@innoviseit.com)",
+    email: "nishant@innoviseit.com",
   },
 
   {
@@ -1433,7 +1464,7 @@ const leadershipData = [
     initials: "BM",
     color: "#3B82F6",
     quote: "Operational excellence powers sustainable growth.",
-    bio: "Operations executive with more than 20 years of experience managing SAP delivery programs and global enterprise operations.",
+    bio: "Drives operational excellence by optimizing processes, supporting collaboration, improving efficiency, and ensuring seamless business operations that deliver organizational success and exceptional customer satisfaction.",
     expertise: ["Operations Management", "SAP Delivery", "Program Leadership"],
     experience: "20+ Years",
     achievements: [
@@ -1444,7 +1475,7 @@ const leadershipData = [
     social: {
       linkedin: "https://www.linkedin.com/in/bomarchand/",
     },
-    email: "[bob@innoviseit.com](mailto:bob@innoviseit.com)",
+    email: "bob@innoviseit.com",
   },
 
   {
@@ -1455,7 +1486,7 @@ const leadershipData = [
     initials: "AW",
     color: "#10B981",
     quote: "Growth is driven by innovation and customer success.",
-    bio: "Revenue leader with deep expertise in SAP solutions, cybersecurity services, and enterprise business development.",
+    bio: "Accelerates business growth through strategic partnerships, market expansion, customer engagement, and revenue-focused initiatives that strengthen relationships and create long-term business opportunities globally.",
     expertise: ["Revenue Growth", "Cybersecurity", "Enterprise Sales"],
     experience: "18+ Years",
     achievements: [
@@ -1466,7 +1497,7 @@ const leadershipData = [
     social: {
       linkedin: "https://www.linkedin.com/in/alan-wu-886190",
     },
-    email: "[alan@innoviseit.com](mailto:alan@innoviseit.com)",
+    email: "alan@innoviseit.com",
   },
 
   {
@@ -1477,9 +1508,13 @@ const leadershipData = [
     initials: "OB",
     color: "#8B5CF6",
     quote: "Strategic leadership creates long-term value.",
-    bio: "Guiding businesses worldwide with decades of expertise in SAP, cloud services, and digital transformation.",
-    expertise: ["SAP AMS", "Hybrid Cloud", "Executive Advisory"],
-    experience: "20+ Years",
+    bio: "Provides strategic guidance, governance, and leadership insights that support innovation, business transformation, informed decision-making, and sustainable organizational growth across evolving technology landscapes.",
+    expertise: [
+      "Executive Advisory",
+      "Cloud Strategy",
+      "Enterprise Leadership",
+    ],
+    experience: "25+ Years",
     achievements: [
       "Advised global enterprise organizations",
       "Supported cloud transformation initiatives",
@@ -1488,7 +1523,7 @@ const leadershipData = [
     social: {
       linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
     },
-    email: "[oliver@innoviseit.com](mailto:oliver@innoviseit.com)",
+    email: "oliver@innoviseit.com",
   },
 
   {
@@ -1499,8 +1534,12 @@ const leadershipData = [
     initials: "SB",
     color: "#EC4899",
     quote: "Partnerships and innovation drive business success.",
-    bio: "Technology advisor bringing extensive global experience in enterprise technology, partnerships, and organizational growth.",
-    expertise: ["Enterprise Technology", "Partnerships", "Business Strategy"],
+    bio: "Advises business strategy, digital transformation, and partnership initiatives while supporting organizational growth, innovation, collaboration, and long-term value creation through strategic leadership.",
+    expertise: [
+      "Enterprise Technology",
+      "Strategic Partnerships",
+      "Business Strategy",
+    ],
     experience: "20+ Years",
     achievements: [
       "Built strategic technology partnerships",
@@ -1510,18 +1549,18 @@ const leadershipData = [
     social: {
       linkedin: "https://www.linkedin.com/in/silviobessa/",
     },
-    email: "[silvio@innoviseit.com](mailto:silvio@innoviseit.com)",
+    email: "silvio@innoviseit.com",
   },
 
   {
     id: 6,
     name: "Timothy Wirtjes",
-    role: "Director – Guidewire Practice",
+    role: "Practice Leader",
     image: img6,
     initials: "TW",
     color: "#F59E0B",
     quote: "Modernizing insurance platforms through innovation.",
-    bio: "Guidewire specialist with 14+ years of experience delivering insurance technology solutions and modernization programs.",
+    bio: "Leads technology initiatives by promoting innovation, service excellence, collaboration, and operational improvement while delivering quality solutions that enhance customer success and business performance.",
     expertise: ["Guidewire", "Insurance Technology", "Platform Modernization"],
     experience: "14+ Years",
     achievements: [
@@ -1532,19 +1571,19 @@ const leadershipData = [
     social: {
       linkedin: "https://www.linkedin.com/in/timothy-wirtjes/",
     },
-    email: "[timothy@innoviseit.com](mailto:timothy@innoviseit.com)",
+    email: "timothy@innoviseit.com",
   },
 
   {
     id: 7,
     name: "Jasbir Singh",
-    role: "Director – AMS",
+    role: "Application Management Services",
     image: img7,
     initials: "JS",
     color: "#22C55E",
     quote: "Delivering reliable managed services at scale.",
-    bio: "AMS leader responsible for SAP AMS and Hybrid Cloud Services delivery, ensuring operational excellence and customer success.",
-    expertise: ["SAP AMS", "Cloud Services", "Service Delivery"],
+    bio: "Oversees Application Management Services, ensuring reliable operations, business continuity, customer satisfaction, and efficient service delivery through collaborative leadership and continuous process improvement.",
+    expertise: ["Application Management Services", "SAP AMS", "Hybrid Cloud"],
     experience: "16+ Years",
     achievements: [
       "Established enterprise AMS delivery models",
@@ -1555,18 +1594,18 @@ const leadershipData = [
       linkedin:
         "https://www.linkedin.com/in/jasbir-singh-12b256b?originalSubdomain=ca",
     },
-    email: "[jasbir@innoviseit.com](mailto:jasbir@innoviseit.com)",
+    email: "jasbir@innoviseit.com",
   },
 
   {
     id: 8,
     name: "Rodrigo Recio",
-    role: "Director – Head of Testing Services",
+    role: "Head of Testing Services",
     image: img8,
     initials: "RR",
     color: "#EF4444",
     quote: "Quality engineering ensures business confidence.",
-    bio: "Testing and quality assurance leader with expertise in SAP testing, automation frameworks, and enterprise quality management.",
+    bio: "Leads quality assurance initiatives through testing excellence, automation, and collaboration, ensuring reliable software, improved product quality, and successful business outcomes across enterprise projects.",
     expertise: ["SAP Testing", "Automation", "Quality Engineering"],
     experience: "15+ Years",
     achievements: [
@@ -1577,7 +1616,7 @@ const leadershipData = [
     social: {
       linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
     },
-    email: "[rodrigo@innoviseit.com](mailto:rodrigo@innoviseit.com)",
+    email: "rodrigo@innoviseit.com",
   },
 ];
 
@@ -1672,20 +1711,6 @@ const LeaderCard = ({ leader, index }) => {
             }}
           />
 
-          {/* Experience Badge */}
-          <div className="absolute top-4 left-1 z-20">
-            <span
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md"
-              style={{
-                background: "rgba(18,50,79,0.85)",
-                color: "white",
-              }}
-            >
-              <FaGraduationCap className="text-[#FFD54F]" />
-              {leader.experience}
-            </span>
-          </div>
-
           {/* Quote Icon */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
@@ -1718,7 +1743,7 @@ const LeaderCard = ({ leader, index }) => {
 
           {/* Role */}
           <p
-            className="text-sm font-semibold uppercase tracking-wider mb-4"
+            className="text-xs font-semibold uppercase tracking-wider h-9"
             style={{ color: BRAND.gold.primary }}
           >
             {leader.role}
@@ -1726,7 +1751,7 @@ const LeaderCard = ({ leader, index }) => {
 
           {/* Bio */}
           <p
-            className="text-sm leading-relaxed mb-5"
+            className="text-sm leading-relaxed mb-5 lg:h-42 xl:h-45"
             style={{ color: "#64748B" }}
           >
             {leader.bio}
