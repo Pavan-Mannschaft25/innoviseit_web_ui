@@ -24,7 +24,7 @@ import {
   FaCogs,
   FaArrowDown,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/ps1.png";
+import img1 from "../../assets/industry/cp1.png";
 import img2 from "../../assets/industry/ps2.png";
 
 // ============================================
