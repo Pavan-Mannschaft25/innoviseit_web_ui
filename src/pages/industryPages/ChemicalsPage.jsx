@@ -16,7 +16,7 @@ import {
   FaWarehouse,
   FaArrowDown,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/cam1.png";
+import img1 from "../../assets/industry/au2.png";
 import img2 from "../../assets/industry/cam2.png";
 
 // ============================================
