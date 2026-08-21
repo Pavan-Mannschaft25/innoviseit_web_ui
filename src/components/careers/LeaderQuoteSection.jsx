@@ -4,11 +4,11 @@ import { BRAND } from "../../constants/careersConstants";
 import img1 from "../../assets/leaders/NishantGautam.webp";
 
 const LeaderQuoteSection = memo(() => (
-  <section className="py-12 md:py-12 bg-white relative overflow-hidden">
+  <section className="py-6 md:py-6 bg-white relative overflow-hidden">
     <div className="max-w-8xl mx-auto px-6 lg:px-8 relative z-10">
-      <div className="reveal relative rounded-3xl p-10 md:p-16 overflow-hidden bg-primary-800">
+      <div className="reveal relative rounded-3xl p-8 md:p-10 overflow-hidden bg-primary-800">
         <div
-          className="absolute -top-20 -right-20 w-72 h-72 rounded-full pointer-events-none"
+          className="absolute -top-20 -right-20 w-62 h-62 rounded-full pointer-events-none"
           style={{
             background: BRAND.gold.primary,
             filter: "blur(100px)",
@@ -30,7 +30,7 @@ const LeaderQuoteSection = memo(() => (
           </div>
           <blockquote>
             <p
-              className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed text-white/90 mb-10"
+              className="text-xl md:text-2xl lg:text-2xl font-light leading-relaxed text-white/90 mb-10"
               style={{ letterSpacing: "-0.01em" }}
             >
               "Technology is meaningful only when it creates lasting value for
