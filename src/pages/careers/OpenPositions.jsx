@@ -8,6 +8,7 @@ import HeroSection from "../../components/careers/HeroSection";
 import LeaderQuoteSection from "../../components/careers/LeaderQuoteSection";
 import HiringProcessSection from "../../components/careers/HiringProcessSection";
 import CTASection from "../../components/careers/CTASection";
+import IndustriesSection from "../../components/careers/IndustriesSection";
 
 const OpenPositions = memo(() => {
   const { jobs, isLoading, isLoadingMore, error, hasMore, loadMore, refetch } =
@@ -180,6 +181,8 @@ const OpenPositions = memo(() => {
           )}
         </div>
       </section>
+
+      <IndustriesSection />
 
       <HiringProcessSection />
       <CTASection />
