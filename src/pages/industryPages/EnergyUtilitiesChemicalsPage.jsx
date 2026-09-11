@@ -773,7 +773,7 @@ import {
   FaClipboardCheck,
   FaWarehouse,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/cam1.png";
+import img1 from "../../assets/industry/au2.png";
 import img2 from "../../assets/industry/og2.png";
 
 // ============================================

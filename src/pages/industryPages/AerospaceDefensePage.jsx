@@ -554,7 +554,7 @@ import {
   FaCheckCircle,
   FaIndustry,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/ae1.png";
+import img1 from "../../assets/industry/re1.png";
 import img2 from "../../assets/industry/ae2.png";
 
 // ============================================

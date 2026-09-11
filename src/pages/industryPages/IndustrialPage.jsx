@@ -24,7 +24,7 @@ import {
   FaAtom,
   FaArrowDown,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/im1.png";
+import img1 from "../../assets/industry/cr1.jpeg";
 import img2 from "../../assets/industry/im2.png";
 
 // ============================================
