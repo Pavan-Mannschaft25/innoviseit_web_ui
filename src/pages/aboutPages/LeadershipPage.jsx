@@ -1217,6 +1217,8 @@ import img5 from "../../assets/leaders/SilvioBessa.webp";
 import img6 from "../../assets/leaders/TimothyWirtjes.webp";
 import img7 from "../../assets/leaders/JasbirSingh.webp";
 import img8 from "../../assets/leaders/RodrigoRecio.webp";
+import img9 from "../../assets/leaders/sriram_in.png";
+import img10 from "../../assets/leaders/StevenClemens.png";
 
 import leaderImg from "../../assets/banners/le1.png";
 
@@ -1617,6 +1619,58 @@ const leadershipData = [
       linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
     },
     email: "rodrigo@innoviseit.com",
+  },
+  {
+    id: 9,
+    name: "Sriram Palapudi",
+    role: "Chief AI Officer",
+    image: img9,
+    initials: "SP",
+    color: "#F59E0B",
+    quote:
+      "Driving AI innovation through strategy, responsible adoption, and intelligent solutions.",
+    bio: "Leads AI vision and strategy through responsible adoption, intelligent solutions, and collaboration, helping organizations accelerate innovation, improve efficiency, and create measurable business value through AI.",
+    expertise: [
+      "Artificial Intelligence",
+      "AI Strategy",
+      "Intelligent Solutions",
+    ],
+    experience: "20+ Years",
+    achievements: [
+      "Developed AI strategies for enterprise transformation",
+      "Led responsible AI adoption and innovation initiatives",
+      "Delivered intelligent solutions focused on business value",
+    ],
+    social: {
+      linkedin: "https://www.linkedin.com/in/sriram-palapudi-11294b1/",
+    },
+    email: "sriram@innoviseit.com",
+  },
+  {
+    id: 10,
+    name: "Steven Clemens",
+    role: "Vice President, Business Development",
+    image: img10,
+    initials: "SC",
+    color: "#2563EB",
+    quote:
+      "Driving business growth through partnerships, client engagement, and quality engineering.",
+    bio: "Leads business growth, client engagement, and strategic partnerships, focusing on expanding SAP and Guidewire capabilities while advancing quality engineering, testing, and innovative solutions for enterprise clients.",
+    expertise: [
+      "Business Development",
+      "SAP & Guidewire",
+      "Quality Engineering",
+    ],
+    experience: "20+ Years",
+    achievements: [
+      "Expanded strategic client and technology partnerships",
+      "Drove growth across SAP and Guidewire businesses",
+      "Advanced quality engineering and testing initiatives",
+    ],
+    social: {
+      linkedin: "https://www.linkedin.com/in/steveclemens/",
+    },
+    email: "steven@innoviseit.com",
   },
 ];
 
