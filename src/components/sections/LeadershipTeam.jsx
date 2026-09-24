@@ -1332,6 +1332,8 @@ import img5 from "../../assets/leaders/SilvioBessa.webp";
 import img6 from "../../assets/leaders/TimothyWirtjes.webp";
 import img7 from "../../assets/leaders/JasbirSingh.webp";
 import img8 from "../../assets/leaders/RodrigoRecio.webp";
+import img9 from "../../assets/leaders/sriram_in.png";
+import img10 from "../../assets/leaders/StevenClemens.png";
 
 // Swiper styles
 import "swiper/css";
@@ -1433,6 +1435,26 @@ const leaders = [
       "Driving software quality through automation, innovation, and testing excellence.",
     social: {
       linkedin: "https://www.linkedin.com/in/rodrigo-recio-b8003717/",
+    },
+  },
+  {
+    name: "Sriram Palapudi",
+    role: "Chief AI Officer",
+    image: img9,
+    quote:
+      "Driving AI innovation through strategy, responsible adoption, and intelligent solutions.",
+    social: {
+      linkedin: "https://www.linkedin.com/in/sriram-palapudi-11294b1/",
+    },
+  },
+  {
+    name: "Steven Clemens",
+    role: "Vice President, Business Development",
+    image: img10,
+    quote:
+      "Driving business growth through partnerships, client engagement, and quality engineering.",
+    social: {
+      linkedin: "https://www.linkedin.com/in/steveclemens/",
     },
   },
 ];
