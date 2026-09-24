@@ -631,7 +631,7 @@
 // export default Hero;
 
 import React from "react";
-import bannerVideo from "../../assets/videos/hero_banner1.mp4";
+import bannerVideo from "../../assets/videos/hero_banner.mp4";
 
 function Hero() {
   return (
