@@ -1483,8 +1483,6 @@ const ContactPage = () => {
       newErrors.agreedToTerms = "Please accept the privacy policy";
     }
 
-    console.log("SUCCESS TOAST");
-
     if (Object.keys(newErrors).length > 0) {
       toast.error("Please fill all required fields");
       return;
@@ -1493,13 +1491,25 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     try {
+      // 1. Find the readable label of the selected subject (e.g., "SAP Consulting" instead of "sap")
+      const selectedOption = subjectOptions.find(
+        (opt) => opt.value === formData.subject,
+      );
+      const subjectLabel = selectedOption
+        ? selectedOption.label
+        : formData.subject;
+
+      // 2. Combine First and Last name for the {{name}} variable
+      const fullName = `${formData.firstName} ${formData.lastName}`;
+
       const templateParams = {
+        name: fullName, // Matches {{name}} in From Name
         first_name: formData.firstName,
         last_name: formData.lastName,
         email: formData.email,
         phone: formData.phone,
-        company: formData.company,
-        subject: formData.subject,
+        company: formData.company || "N/A", // Fallback if they leave company blank
+        subject: subjectLabel, // Sends the readable label to the {{subject}} variable
         message: formData.message,
       };
 
@@ -1510,15 +1520,13 @@ const ContactPage = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
 
-      console.log("SUCCESS TOAST");
-
       toast.success(
         "Message sent successfully! We'll respond within 24 hours.",
       );
 
       resetForm();
     } catch (error) {
-      console.error(error);
+      console.error("EmailJS Error:", error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
