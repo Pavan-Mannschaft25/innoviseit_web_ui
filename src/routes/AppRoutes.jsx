@@ -147,7 +147,8 @@ const AppRoutes = () => {
           <Route path="/about/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/reserve-your-invitation" element={<InvitationPage />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/events/:eventId" element={<EventDetailPage />} />
+          {/* <Route path="/events/:eventId" element={<EventDetailPage />} /> */}
+          <Route path="/events/:eventSlug" element={<EventDetailPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
