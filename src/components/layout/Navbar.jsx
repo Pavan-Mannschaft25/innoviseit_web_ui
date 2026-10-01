@@ -1074,7 +1074,7 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="Innovise IT"
-                  className="h-6 md:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
               </div>
