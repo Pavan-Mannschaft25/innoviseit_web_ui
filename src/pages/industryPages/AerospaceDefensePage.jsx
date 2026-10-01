@@ -612,10 +612,10 @@ const IconCard = ({ icon: Icon, title, description, delay = 0 }) => (
     className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl text-center group cursor-pointer border border-gray-100 relative overflow-hidden"
   >
     {/* Gold Accent Top Border */}
-    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFD700] via-[#D4AF37] to-[#FFD700] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
 
-    <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
-      <Icon className="text-4xl text-[#FFD700]" />
+    <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFF]/20">
+      <Icon className="text-4xl text-[#FFF]" />
     </div>
     <h3 className="font-bold text-xl mb-3 text-[#0a1628]">{title}</h3>
     {description && (
@@ -636,11 +636,11 @@ const Button = ({
 
   const variants = {
     primary:
-      "bg-gradient-to-r from-[#FFD700] to-[#D4AF37] hover:from-[#D4AF37] hover:to-[#B8962E] text-[#0a1628] shadow-lg hover:shadow-xl focus:ring-[#FFD700]",
+      "bg-gradient-to-r from-[#FFF] to-[#FFF] hover:from-[#FFF] hover:to-[#B8962E] text-[#0a1628] shadow-lg hover:shadow-xl focus:ring-[#FFF]",
     secondary:
       "bg-white hover:bg-gray-50 text-[#0a1628] border-2 border-[#0a1628] focus:ring-[#0a1628]",
     ghost:
-      "bg-transparent text-white hover:bg-[#FFD700]/10 focus:ring-[#FFD700] border border-[#FFD700]/50",
+      "bg-transparent text-white hover:bg-[#FFF]/10 focus:ring-[#FFF] border border-[#FFF]/50",
   };
 
   const sizes = {
@@ -660,7 +660,7 @@ const Button = ({
 };
 
 const GoldBadge = ({ children }) => (
-  <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full text-[#FFD700] text-sm font-medium backdrop-blur-sm">
+  <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFF]/10 border border-[#FFF]/30 rounded-full text-[#FFF] text-sm font-medium backdrop-blur-sm">
     <FaStar className="text-xs animate-pulse" />
     {children}
   </div>
@@ -791,7 +791,7 @@ const HeroSection = () => (
           opacity: [0.08, 0.15, 0.08],
         }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-[#FFD700]/30 to-[#D4AF37]/10 rounded-full filter blur-3xl"
+        className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-[#FFF]/30 to-[#FFF]/10 rounded-full filter blur-3xl"
       />
       <motion.div
         animate={{
@@ -799,7 +799,7 @@ const HeroSection = () => (
           opacity: [0.08, 0.12, 0.08],
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-[#D4AF37]/20 to-[#FFD700]/10 rounded-full filter blur-3xl"
+        className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-[#FFF]/20 to-[#FFF]/10 rounded-full filter blur-3xl"
       />
 
       {/* Grid Pattern */}
@@ -815,12 +815,12 @@ const HeroSection = () => (
       {/* <motion.div
         animate={{ x: ["-100%", "100%"] }}
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFD700]/30 to-transparent"
+        className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFF]/30 to-transparent"
       />
       <motion.div
         animate={{ x: ["100%", "-100%"] }}
         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFD700]/30 to-transparent"
+        className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFF]/30 to-transparent"
       /> */}
     </div>
 
@@ -834,7 +834,7 @@ const HeroSection = () => (
 
         <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Aerospace & Defense{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF]">
             Transformation
           </span>
         </h1>
@@ -855,7 +855,7 @@ const HeroSection = () => (
     >
       <div className="relative">
         {/* Main Image */}
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFF]/30">
           <img
             src={img1}
             alt="Advanced aerospace manufacturing facility with high precision engineering and defense technology"
@@ -864,12 +864,12 @@ const HeroSection = () => (
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
           {/* Gold Overlay Effect */}
-          {/* <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/5 to-transparent"></div> */}
+          {/* <div className="absolute inset-0 bg-gradient-to-tr from-[#FFF]/5 to-transparent"></div> */}
         </div>
 
         {/* Decorative Corners */}
-        <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
-        <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-4 border-r-4 border-[#FFD700]/50 rounded-br-3xl"></div>
+        <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFF]/50 rounded-tl-3xl"></div>
+        <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-4 border-r-4 border-[#FFF]/50 rounded-br-3xl"></div>
       </div>
     </motion.div>
   </section>
@@ -889,7 +889,7 @@ const ChallengesSection = () => (
         <Card key={i} delay={i * 0.1}>
           <div className="flex flex-col h-full">
             <div className="w-14 h-14 bg-primary-800 rounded-xl flex items-center justify-center mb-5 shadow-lg">
-              <challenge.icon className="text-2xl text-[#FFD700]" />
+              <challenge.icon className="text-2xl text-[#FFF]" />
             </div>
             <h3 className="font-bold text-lg mb-3 text-[#0a1628]">
               {challenge.title}
@@ -945,7 +945,7 @@ const BenefitsSection = () => (
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        className="absolute -top-1/2 -right-1/4 w-full h-full bg-gradient-to-br from-[#FFD700]/5 to-transparent rounded-full"
+        className="absolute -top-1/2 -right-1/4 w-full h-full bg-gradient-to-br from-[#FFF]/5 to-transparent rounded-full"
       />
     </div>
 
@@ -958,7 +958,7 @@ const BenefitsSection = () => (
         transition={{ duration: 0.6 }}
       >
         <div className="relative">
-          <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
+          <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFF]/30">
             <img
               src={img2}
               alt="Aerospace MRO operations team utilizing advanced digital tools for maintenance optimization"
@@ -968,8 +968,8 @@ const BenefitsSection = () => (
           </div>
 
           {/* Corner Accents */}
-          <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFD700] rounded-tl-2xl"></div>
-          <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-[#FFD700] rounded-br-2xl"></div>
+          <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFF] rounded-tl-2xl"></div>
+          <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-[#FFF] rounded-br-2xl"></div>
         </div>
       </motion.div>
 
@@ -998,7 +998,7 @@ const BenefitsSection = () => (
                 transition={{ delay: i * 0.1 + 0.3 }}
                 className="flex items-start gap-4 group"
               >
-                <div className="w-7 h-7 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-7 h-7 bg-gradient-to-br from-[#FFF] to-[#FFF] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg group-hover:scale-110 transition-transform">
                   <FaCheckCircle className="text-[#0a1628] text-sm" />
                 </div>
                 <span className="text-gray-200 font-medium group-hover:text-white transition-colors leading-relaxed">
@@ -1031,7 +1031,7 @@ const ProcessSection = () => (
 
       <div className="relative">
         {/* Connection Line - Desktop - Navy to Gold Gradient */}
-        <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-[#0a1628] via-[#FFD700] to-[#0a1628] rounded-full shadow-lg"></div>
+        <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-[#0a1628] via-[#FFF] to-[#0a1628] rounded-full shadow-lg"></div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {PROCESS_STEPS.map((step, i) => (
@@ -1045,17 +1045,17 @@ const ProcessSection = () => (
             >
               {/* Step Circle */}
               <div className="relative inline-block mb-6">
-                <div className="w-24 h-24 bg-white border-4 border-[#0a1628] rounded-full flex items-center justify-center shadow-xl relative z-10 group-hover:border-[#FFD700] group-hover:scale-110 transition-all duration-300 mx-auto">
-                  <step.icon className="text-3xl text-[#0a1628] group-hover:text-[#FFD700] transition-colors" />
+                <div className="w-24 h-24 bg-white border-4 border-[#0a1628] rounded-full flex items-center justify-center shadow-xl relative z-10 group-hover:border-[#FFF] group-hover:scale-110 transition-all duration-300 mx-auto">
+                  <step.icon className="text-3xl text-[#0a1628] group-hover:text-[#0a1628] transition-colors" />
                 </div>
 
                 {/* Step Number Badge - Gold */}
-                <div className="absolute -top-2 -right-2 w-9 h-9 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-full flex items-center justify-center text-[#0a1628] text-sm font-bold shadow-lg border-2 border-white">
+                <div className="absolute -top-2 -right-2 w-9 h-9 bg-[#0a1628] rounded-full flex items-center justify-center text-[#FFF] text-sm font-bold shadow-lg border-2 border-white">
                   {step.step}
                 </div>
               </div>
 
-              <h3 className="font-bold text-xl mb-3 text-[#0a1628] group-hover:text-[#D4AF37] transition-colors">
+              <h3 className="font-bold text-xl mb-3 text-[#0a1628] group-hover:text-[#FFF] transition-colors">
                 {step.title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">
@@ -1065,8 +1065,8 @@ const ProcessSection = () => (
               {/* Arrow Connector - Mobile/Tablet */}
               {i < PROCESS_STEPS.length - 1 && (
                 <div className="lg:hidden flex justify-center my-4">
-                  <div className="w-10 h-10 bg-[#FFD700]/20 rounded-full flex items-center justify-center">
-                    <FaArrowDown className="text-[#D4AF37]" />
+                  <div className="w-10 h-10 bg-[#FFF]/20 rounded-full flex items-center justify-center">
+                    <FaArrowDown className="text-[#FFF]" />
                   </div>
                 </div>
               )}
@@ -1087,7 +1087,7 @@ const CTASection = () => (
     <div
       className="absolute inset-0 opacity-[0.05]"
       style={{
-        backgroundImage: `radial-gradient(circle at 2px 2px, #FFD700 1px, transparent 0)`,
+        backgroundImage: `radial-gradient(circle at 2px 2px, #FFF 1px, transparent 0)`,
         backgroundSize: "35px 35px",
       }}
     ></div>
@@ -1100,7 +1100,7 @@ const CTASection = () => (
         y: [-10, 10, -10],
       }}
       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute top-10 left-10 w-72 h-72 bg-[#FFD700]/15 rounded-full filter blur-3xl"
+      className="absolute top-10 left-10 w-72 h-72 bg-[#FFF]/15 rounded-full filter blur-3xl"
     />
     <motion.div
       animate={{
@@ -1109,31 +1109,31 @@ const CTASection = () => (
         y: [10, -10, 10],
       }}
       transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute bottom-10 right-10 w-96 h-96 bg-[#D4AF37]/12 rounded-full filter blur-3xl"
+      className="absolute bottom-10 right-10 w-96 h-96 bg-[#FFF]/12 rounded-full filter blur-3xl"
     />
 
     {/* Geometric Decorations */}
     <motion.div
       animate={{ rotate: 360 }}
       transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-      className="absolute top-20 right-20 w-44 h-44 border-2 border-[#FFD700]/20 rounded-full"
+      className="absolute top-20 right-20 w-44 h-44 border-2 border-[#FFF]/20 rounded-full"
     />
     <motion.div
       animate={{ rotate: -360 }}
       transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-      className="absolute bottom-20 left-20 w-36 h-36 border-2 border-[#FFD700]/15 rounded-full"
+      className="absolute bottom-20 left-20 w-36 h-36 border-2 border-[#FFF]/15 rounded-full"
     />
 
     {/* Energy Lines Animation */}
     <motion.div
       animate={{ opacity: [0.05, 0.15, 0.05] }}
       transition={{ duration: 3, repeat: Infinity }}
-      className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"
+      className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFF] to-transparent"
     />
     <motion.div
       animate={{ opacity: [0.05, 0.15, 0.05] }}
       transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
-      className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFD700] to-transparent"
+      className="absolute bottom-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFF] to-transparent"
     />
 
     <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
@@ -1149,7 +1149,7 @@ const CTASection = () => (
 
         <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Ready to Modernize{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF]">
             Aerospace & Defense Operations?
           </span>
         </h2>
@@ -1169,21 +1169,21 @@ const CTASection = () => (
           </Button>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFD700]/20">
+        <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFF]/20">
           <div className="flex items-center gap-2">
-            <FaCheckCircle className="text-[#FFD700]" />
+            <FaCheckCircle className="text-[#FFF]" />
             No commitment required
           </div>
           <div className="flex items-center gap-2">
-            <FaCheckCircle className="text-[#FFD700]" />
+            <FaCheckCircle className="text-[#FFF]" />
             Free assessment
           </div>
           <div className="flex items-center gap-2">
-            <FaCheckCircle className="text-[#FFD700]" />
+            <FaCheckCircle className="text-[#FFF]" />
             Response within 24 hours
           </div>
           <div className="flex items-center gap-2">
-            <FaStar className="text-[#FFD700]" />
+            <FaStar className="text-[#FFF]" />
             Premium Support
           </div>
         </div>
@@ -1214,7 +1214,7 @@ export default function AerospacePage() {
       {/* Skip Link for Accessibility */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#FFD700] text-[#0a1628] px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#FFF] text-[#0a1628] px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-[#FFF]"
       >
         Skip to main content
       </a>

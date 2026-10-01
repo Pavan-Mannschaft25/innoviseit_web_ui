@@ -17,7 +17,7 @@
 // //     light: "#163B66",
 // //   },
 // //   gold: {
-// //     primary: "#FDB913",
+// //     primary: "#FFF",
 // //     light: "#FFD54F",
 // //   },
 // // };
@@ -113,7 +113,7 @@
 // //         }}
 // //       >
 // //         {/* Glow */}
-// //         <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+// //         <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 
 // //         {/* Quote */}
 // //         <div
@@ -150,13 +150,13 @@
 // //           <img
 // //             src={item.image}
 // //             alt={item.name}
-// //             className="w-16 h-16 rounded-2xl object-cover border-2 border-[#FDB913]/20"
+// //             className="w-16 h-16 rounded-2xl object-cover border-2 border-[#FFF]/20"
 // //           />
 
 // //           <div>
 // //             <h4 className="text-white font-bold text-lg">{item.name}</h4>
 
-// //             <p className="text-[#FDB913] text-sm font-medium">{item.role}</p>
+// //             <p className="text-[#FFF] text-sm font-medium">{item.role}</p>
 
 // //             <div className="flex items-center gap-2 mt-1">
 // //               <FaBuilding className="text-[10px] text-white/40" />
@@ -213,7 +213,7 @@
 // //       }}
 // //     >
 // //       {/* Background Glow */}
-// //       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FDB913]/5 blur-3xl rounded-full"></div>
+// //       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FFF]/5 blur-3xl rounded-full"></div>
 
 // //       <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#102B4C]/5 blur-3xl rounded-full"></div>
 
@@ -244,7 +244,7 @@
 // //             Trusted by{" "}
 // //             <span
 // //               style={{
-// //                 background: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+// //                 background: "linear-gradient(135deg, #FFF 0%, #FFD54F 100%)",
 // //                 WebkitBackgroundClip: "text",
 // //                 WebkitTextFillColor: "transparent",
 // //               }}
@@ -363,7 +363,7 @@
 //     light: "#163B66",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#FFF",
 //     light: "#FFD54F",
 //   },
 // };
@@ -455,9 +455,9 @@
 //     >
 //       {/* BACKGROUND */}
 //       <div className="absolute inset-0 overflow-hidden">
-//         {/* <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+//         {/* <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FFF]/10 blur-3xl rounded-full"></div>
 
-//         <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#FDB913]/5 blur-3xl rounded-full"></div> */}
+//         <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#FFF]/5 blur-3xl rounded-full"></div> */}
 
 //         <div
 //           className="absolute inset-0 opacity-[0.04]"
@@ -492,7 +492,7 @@
 //             Trusted by{" "}
 //             <span
 //               style={{
-//                 background: "linear-gradient(135deg,#FDB913,#FFD54F)",
+//                 background: "linear-gradient(135deg,#FFF,#FFD54F)",
 //                 WebkitBackgroundClip: "text",
 //                 WebkitTextFillColor: "transparent",
 //               }}
@@ -576,7 +576,7 @@
 //                     }}
 //                   >
 //                     {/* GLOW */}
-//                     <div className="absolute top-0 right-0 w-48 h-48 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+//                     <div className="absolute top-0 right-0 w-48 h-48 bg-[#FFF]/10 blur-3xl rounded-full"></div>
 
 //                     {/* QUOTE */}
 //                     <div
@@ -613,7 +613,7 @@
 //                       <img
 //                         src={item.image}
 //                         alt={item.name}
-//                         className="w-20 h-20 rounded-3xl object-cover border-2 border-[#FDB913]/20"
+//                         className="w-20 h-20 rounded-3xl object-cover border-2 border-[#FFF]/20"
 //                       />
 
 //                       <div>
@@ -621,7 +621,7 @@
 //                           {item.name}
 //                         </h4>
 
-//                         <p className="text-[#FDB913] text-sm font-semibold mt-1">
+//                         <p className="text-[#FFF] text-sm font-semibold mt-1">
 //                           {item.role}
 //                         </p>
 
@@ -639,7 +639,7 @@
 //                       className="absolute bottom-0 left-0 h-[4px] w-full"
 //                       style={{
 //                         background:
-//                           "linear-gradient(to right,#FDB913,transparent)",
+//                           "linear-gradient(to right,#FFF,transparent)",
 //                       }}
 //                     ></div>
 //                   </div>
@@ -653,7 +653,7 @@
 //             onClick={nextSlide}
 //             className="absolute right-0 z-20 hidden lg:flex w-14 h-14 rounded-2xl items-center justify-center transition-all duration-300 hover:-translate-y-1"
 //             style={{
-//               background: "#FDB913",
+//               background: "#FFF",
 //               color: "#081C34",
 //             }}
 //           >
@@ -672,7 +672,7 @@
 //                 width: index === current ? "38px" : "12px",
 //                 height: "12px",
 //                 background:
-//                   index === current ? "#FDB913" : "rgba(255,255,255,0.2)",
+//                   index === current ? "#FFF" : "rgba(255,255,255,0.2)",
 //               }}
 //             ></button>
 //           ))}
@@ -714,10 +714,10 @@ const BRAND = {
     lighter: "#1A4570", // Lightest navy
   },
   gold: {
-    primary: "#FDB913", // Main gold/yellow (from "IT" in logo)
+    primary: "#FFF", // Main gold/yellow (from "IT" in logo)
     light: "#FFD54F", // Light gold
     dark: "#F59E0B", // Dark gold/amber
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 

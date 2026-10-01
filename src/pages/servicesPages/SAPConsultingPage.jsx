@@ -46,9 +46,9 @@
 //     lighter: "#1A4570",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#FFF",
 //     light: "#FFD54F",
-//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 //   },
 // };
 
@@ -372,12 +372,12 @@
 //                     style={{
 //                       background:
 //                         hoveredIdx === index
-//                           ? "#FDB913"
+//                           ? "#FFF"
 //                           : "rgba(253,185,19,0.12)",
 //                       color: hoveredIdx === index ? "#ffffff" : "#D4960A",
 //                       border: `1.5px solid ${
 //                         hoveredIdx === index
-//                           ? "#FDB913"
+//                           ? "#FFF"
 //                           : "rgba(253,185,19,0.25)"
 //                       }`,
 //                       boxShadow:
@@ -565,12 +565,12 @@
 //                     style={{
 //                       background:
 //                         hoveredIdx === index
-//                           ? "#FDB913"
+//                           ? "#FFF"
 //                           : "rgba(253,185,19,0.12)",
 //                       color: hoveredIdx === index ? "#ffffff" : "#D4960A",
 //                       border: `1.5px solid ${
 //                         hoveredIdx === index
-//                           ? "#FDB913"
+//                           ? "#FFF"
 //                           : "rgba(253,185,19,0.25)"
 //                       }`,
 //                     }}
@@ -678,13 +678,13 @@
 //         >
 //           {/* Status Badge */}
 //           <div className="absolute top-5 right-5">
-//             <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FDB913]/10 border border-[#FDB913]/20 text-[#FDB913]">
+//             <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FFF]/10 border border-[#FFF]/20 text-[#FFF]">
 //               {service.status}
 //             </span>
 //           </div>
 
 //           {/* Glow */}
-//           <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
+//           <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
 //           <div className="relative z-10 p-8">
 //             {/* Icon */}
@@ -692,11 +692,11 @@
 //               whileHover={{ rotate: [0, -8, 8, 0] }}
 //               className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
 //               style={{
-//                 background: "rgba(253,185,19,0.12)",
+//                 background: `${BRAND.navy.mid}08`,
 //                 border: "1px solid rgba(253,185,19,0.25)",
 //               }}
 //             >
-//               <Icon size={28} className="text-[#FDB913]" />
+//               <Icon size={28} className="text-[#FFF]" />
 //             </motion.div>
 
 //             {/* Title */}
@@ -716,7 +716,7 @@
 //                   key={idx}
 //                   className="flex items-center gap-3 text-sm text-white/80"
 //                 >
-//                   <FaCheckCircle className="text-[#FDB913] flex-shrink-0" />
+//                   <FaCheckCircle className="text-[#FFF] flex-shrink-0" />
 //                   <span>{feature}</span>
 //                 </div>
 //               ))}
@@ -726,7 +726,7 @@
 //             <motion.a
 //               href={service.path}
 //               whileHover={{ x: 5 }}
-//               className="inline-flex items-center gap-2 text-[#FDB913] font-semibold"
+//               className="inline-flex items-center gap-2 text-[#FFF] font-semibold"
 //             >
 //               Learn More
 //               <FaArrowRight size={14} />
@@ -744,7 +744,7 @@
 // //     main: "#ffffff",
 // //     mid: "#1E5090",
 // //     light: "#00A4FD",
-// //     gold: "#FDB913",
+// //     gold: "#FFF",
 // //     dark: "#01182f",
 // //     darkCard: "rgba(255,255,255,0.03)",
 // //     darkBorder: "rgba(255,255,255,0.06)",
@@ -1512,7 +1512,7 @@
 //             className="text-3xl md:text-4xl lg:text-[42px] font-bold mb-6 leading-[1.12] tracking-tight"
 //             style={{ color: "#0A2540" }}
 //           >
-//             Why Choose <span style={{ color: "#FDB913" }}>Innovise IT</span> for
+//             Why Choose <span style={{ color: "#FFF" }}>Innovise</span> for
 //             Your SAP Journey?
 //           </h2>
 
@@ -1725,7 +1725,7 @@
 //             transition={{ duration: 0.7, delay: 0.6 }}
 //             className="text-lg md:text-xl text-white leading-relaxed mb-6 max-w-2xl"
 //           >
-//             At Innovise IT, we help organizations unlock the full potential of
+//             At Innovise, we help organizations unlock the full potential of
 //             SAP by delivering End-to-End consulting, implementation, and
 //             optimization services powered by SAP S/4HANA.{" "}
 //           </motion.p>
@@ -1876,7 +1876,7 @@
 // //       />
 // //       <div
 // //         className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full blur-[150px] opacity-[0.04]"
-// //         style={{ background: "#FDB913" }}
+// //         style={{ background: "#FFF" }}
 // //       />
 // //       <div
 // //         className="absolute bottom-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full blur-[160px] opacity-[0.03]"
@@ -1896,7 +1896,7 @@
 // //             className="inline-block px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6 border"
 // //             style={{
 // //               background: "rgba(253,185,19,0.08)",
-// //               color: "#FDB913",
+// //               color: "#FFF",
 // //               borderColor: "rgba(253,185,19,0.18)",
 // //             }}
 // //           >
@@ -1905,7 +1905,7 @@
 
 // //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-white leading-tight">
 // //             Proven{" "}
-// //             <span style={{ color: "#FDB913" }}>Implementation Methodology</span>
+// //             <span style={{ color: "#FFF" }}>Implementation Methodology</span>
 // //           </h2>
 
 // //           <p className="text-base lg:text-lg leading-relaxed text-white/45">
@@ -1978,14 +1978,14 @@
 // //                     <div
 // //                       className="w-10 h-10 rounded-xl flex items-center justify-center mb-1 transition-all duration-400"
 // //                       style={{
-// //                         background: "rgba(253,185,19,0.12)",
+// //                         background: `${BRAND.navy.mid}08`,
 // //                         border: "1px solid rgba(253,185,19,0.25)",
 // //                         backdropFilter: "blur(8px)",
 // //                       }}
 // //                     >
 // //                       <step.icon
 // //                         className="text-base"
-// //                         style={{ color: "#FDB913" }}
+// //                         style={{ color: "#FFF" }}
 // //                       />
 // //                     </div>
 // //                   </div>
@@ -1999,7 +1999,7 @@
 
 // //                   <p
 // //                     className="text-[11px] font-semibold uppercase tracking-[0.15em] mb-3"
-// //                     style={{ color: "#FDB913" }}
+// //                     style={{ color: "#FFF" }}
 // //                   >
 // //                     {step.subtitle}
 // //                   </p>
@@ -2066,14 +2066,14 @@
 // //                     <div
 // //                       className="w-9 h-9 rounded-xl flex items-center justify-center mb-0.5"
 // //                       style={{
-// //                         background: "rgba(253,185,19,0.12)",
+// //                         background: `${BRAND.navy.mid}08`,
 // //                         border: "1px solid rgba(253,185,19,0.25)",
 // //                         backdropFilter: "blur(8px)",
 // //                       }}
 // //                     >
 // //                       <step.icon
 // //                         className="text-sm"
-// //                         style={{ color: "#FDB913" }}
+// //                         style={{ color: "#FFF" }}
 // //                       />
 // //                     </div>
 // //                   </div>
@@ -2086,7 +2086,7 @@
 // //                   </h4>
 // //                   <p
 // //                     className="text-[11px] font-semibold uppercase tracking-[0.15em] mb-3"
-// //                     style={{ color: "#FDB913" }}
+// //                     style={{ color: "#FFF" }}
 // //                   >
 // //                     {step.subtitle}
 // //                   </p>
@@ -2175,9 +2175,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "#0B1D33",
   },
 };
 
@@ -2398,17 +2398,7 @@ const ProjectServicesSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          End-to-End{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Delivery Capabilities
-          </span>
+          End-to-End Delivery Capabilities
         </h2>
 
         <p className="text-lg text-slate-500">
@@ -2486,24 +2476,24 @@ const ServiceCard = ({ service, index }) => {
         >
           {/* Status Badge */}
           <div className="absolute top-5 right-5">
-            <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FDB913]/10 border border-[#FDB913]/20 text-[#FDB913]">
+            <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FFF]/10 border border-[#FFF]/20 text-[#FFF]">
               {service.status}
             </span>
           </div>
 
           {/* Glow */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
           <div className="relative z-10 p-8">
             {/* Icon */}
             <motion.div
               className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
               style={{
-                background: "rgba(253,185,19,0.12)",
+                background: `${BRAND.navy.mid}08`,
                 border: "1px solid rgba(253,185,19,0.25)",
               }}
             >
-              <Icon size={28} className="text-[#FDB913]" />
+              <Icon size={28} className="text-[#FFF]" />
             </motion.div>
 
             {/* Title */}
@@ -2523,7 +2513,7 @@ const ServiceCard = ({ service, index }) => {
                   key={idx}
                   className="flex items-center gap-3 text-sm text-white/80"
                 >
-                  <FaCheckCircle className="text-[#FDB913] flex-shrink-0" />
+                  <FaCheckCircle className="text-[#FFF] flex-shrink-0" />
                   <span>{feature}</span>
                 </div>
               ))}
@@ -2533,7 +2523,7 @@ const ServiceCard = ({ service, index }) => {
             <motion.a
               href={service.path}
               whileHover={{ x: 5 }}
-              className="inline-flex items-center gap-2 text-[#FDB913] font-semibold"
+              className="inline-flex items-center gap-2 text-[#FFF] font-semibold"
             >
               Learn More
               <FaArrowRight size={14} />
@@ -2561,19 +2551,19 @@ const BenefitCard = ({ benefit, index }) => (
   >
     <div className="relative p-6 rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500 bg-primary-800">
       {/* Gold Glow */}
-      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative z-10 flex items-start gap-4">
         {/* Icon */}
         <motion.div
           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
-            background: "rgba(253,185,19,0.12)",
+            background: `${BRAND.navy.mid}08`,
             border: "1px solid rgba(253,185,19,0.25)",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >
-          <benefit.icon className="text-xl" style={{ color: "#FDB913" }} />
+          <benefit.icon className="text-xl" style={{ color: "#FFF" }} />
         </motion.div>
 
         {/* Content */}
@@ -2779,16 +2769,13 @@ const HeroSection = () => (
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-            Transforming Enterprises with{" "}
-            <span style={{ color: BRAND.gold.primary }}>
-              Intelligent SAP Solutions
-            </span>
+            Transforming Enterprises with <span>Intelligent SAP Solutions</span>
           </h1>
 
           {/* Description */}
           <p className="text-lg text-gray-100 leading-relaxed mb-8 max-w-xl">
-            At Innovise IT, we help organizations unlock the full potential of
-            SAP by delivering End-to-End consulting, implementation, and
+            At Innovise, we help organizations unlock the full potential of SAP
+            by delivering End-to-End consulting, implementation, and
             optimization services powered by SAP S/4HANA.
           </p>
 
@@ -2865,10 +2852,10 @@ const ServicesSection = () => (
     className="py-6 lg:py-10 bg-white relative overflow-hidden"
   >
     {/* Background Decoration */}
-    <div
+    {/* <div
       className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-[0.03] translate-x-1/3 -translate-y-1/3"
       style={{ background: BRAND.navy.lighter }}
-    />
+    /> */}
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       {/* Section Header */}
@@ -2893,17 +2880,7 @@ const ServicesSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          Comprehensive{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            SAP Services
-          </span>
+          Comprehensive SAP Services
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
@@ -2942,9 +2919,7 @@ const BenefitsSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           style={{ color: BRAND.navy.dark }}
         >
-          Why Choose{" "}
-          <span style={{ color: BRAND.gold.primary }}>Innovise IT</span> for
-          Your SAP Journey?
+          Why Choose <span>Innovise</span> for Your SAP Journey?
         </h2>
 
         <p
@@ -3071,7 +3046,7 @@ const BenefitsSection = () => (
 const ApproachSection = () => (
   <section className="py-6 lg:py-10 bg-primary-800 relative overflow-hidden">
     {/* Background Glow */}
-    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFF]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#0F2B4D] blur-3xl rounded-full"></div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -3085,8 +3060,8 @@ const ApproachSection = () => (
         <span
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: "rgba(253,185,19,0.12)",
-            color: "#FDB913",
+            background: `${BRAND.navy.mid}08`,
+            color: "#FFF",
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
@@ -3095,7 +3070,7 @@ const ApproachSection = () => (
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
           Proven{" "}
-          <span style={{ color: "#FDB913" }}>Implementation Methodology</span>
+          <span style={{ color: "#FFF" }}>Implementation Methodology</span>
         </h2>
 
         <p className="text-lg leading-relaxed text-white/70">
@@ -3116,9 +3091,9 @@ const ApproachSection = () => (
               transition={{ delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FFF]/30 hover:bg-white/[0.07]">
                 {/* Icon Box */}
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FFF] shadow-lg shadow-[#FFF]/20">
                   <step.icon className="text-2xl text-[#081C34]" />
                 </div>
 
@@ -3133,7 +3108,7 @@ const ApproachSection = () => (
                 </h4>
 
                 {/* Subtitle */}
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FDB913] mb-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FFF] mb-3">
                   {step.subtitle}
                 </p>
 
@@ -3143,7 +3118,7 @@ const ApproachSection = () => (
                 </p>
 
                 {/* Hover Glow */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </motion.div>
           ))}
@@ -3163,12 +3138,12 @@ const ApproachSection = () => (
           >
             {/* Left Icon */}
             <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
+              <div className="w-14 h-14 rounded-full bg-[#FFF] flex items-center justify-center shadow-lg shadow-[#FFF]/20">
                 <step.icon className="text-lg text-[#081C34]" />
               </div>
 
               {index < approachSteps.length - 1 && (
-                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-white/10"></div>
+                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FFF] to-white/10"></div>
               )}
             </div>
 
@@ -3178,7 +3153,7 @@ const ApproachSection = () => (
                 {step.title}
               </h4>
 
-              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
+              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FFF]">
                 {step.subtitle}
               </p>
 

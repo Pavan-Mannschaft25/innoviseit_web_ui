@@ -133,9 +133,9 @@
 //     light: "#132D4B",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#FFF",
 //     light: "#FFD54F",
-//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #FFF 0%, #FFD54F 100%)",
 //   },
 // };
 
@@ -148,7 +148,7 @@
 //         aria-label={`Learn more about ${data.title}`}
 //       >
 //         <div
-//           className={`relative bg-white overflow-hidden rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] h-full w-full flex flex-col border ${"border-gray-100 hover:border-[#FDB913]/40"}`}
+//           className={`relative bg-white overflow-hidden rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] h-full w-full flex flex-col border ${"border-gray-100 hover:border-[#FFF]/40"}`}
 //           style={{
 //             boxShadow:
 //               "0 8px 30px rgba(11,29,51,0.08), 0 2px 10px rgba(11,29,51,0.04)",
@@ -167,7 +167,7 @@
 //           {/* ================================ */}
 //           {/*  TOP ACCENT LINE (Hover)         */}
 //           {/* ================================ */}
-//           <div className="absolute top-0 left-0 right-0 h-[3px] origin-left z-20 bg-gradient-to-r from-[#FDB913] to-[#FFD54F] scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+//           <div className="absolute top-0 left-0 right-0 h-[3px] origin-left z-20 bg-gradient-to-r from-[#FFF] to-[#FFD54F] scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
 
 //           {/* ================================ */}
 //           {/* 🖼️ IMAGE CONTAINER               */}
@@ -197,7 +197,7 @@
 //             {/* {data.category && (
 //               <div className="absolute top-4 left-4 z-10">
 //                 <span
-//                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg border transition-all duration-300 group-hover:bg-[#FDB913] group-hover:text-[#12324f]"
+//                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold backdrop-blur-md shadow-lg border transition-all duration-300 group-hover:bg-[#FFF] group-hover:text-[#12324f]"
 //                   style={{
 //                     background: "rgba(255,255,255,0.95)",
 //                     color: COLORS.navy.dark,
@@ -395,7 +395,7 @@
 //           {/* ================================ */}
 //           {/* 🔻 BOTTOM ACCENT BAR             */}
 //           {/* ================================ */}
-//           <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-l from-[#FDB913] via-[#FFD54F] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" />
+//           <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-l from-[#FFF] via-[#FFD54F] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" />
 //         </div>
 //       </Link>
 //     </div>
@@ -423,9 +423,9 @@ const COLORS = {
     light: "#132D4B",
   },
   gold: {
-    primary: "#FDB913",
-    light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+    primary: "#FFF",
+    light: "#FFFFFF",
+    gradient: "#FFFFFF",
   },
 };
 
@@ -433,7 +433,7 @@ const ServiceCard = ({ data, index = 0 }) => {
   return (
     <div className="group relative h-full w-full flex flex-col">
       <div
-        className="relative bg-white overflow-hidden rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] h-full w-full flex flex-col border border-gray-100 hover:border-[#FDB913]/40"
+        className="relative bg-white overflow-hidden rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] h-full w-full flex flex-col"
         style={{
           boxShadow:
             "0 8px 30px rgba(11,29,51,0.08), 0 2px 10px rgba(11,29,51,0.04)",
@@ -452,7 +452,7 @@ const ServiceCard = ({ data, index = 0 }) => {
         {/* ================================ */}
         {/*  TOP ACCENT LINE (Hover)         */}
         {/* ================================ */}
-        <div className="absolute top-0 left-0 right-0 h-[3px] origin-left z-20 bg-gradient-to-r from-[#FDB913] to-[#FFD54F] scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+        {/* <div className="absolute top-0 left-0 right-0 h-[3px] origin-left z-20 bg-gradient-to-r from-[#FFF] to-[#FFD54F] scale-x-0 group-hover:scale-x-100 transition-transform duration-500" /> */}
 
         {/* ================================ */}
         {/* 🖼️ IMAGE CONTAINER               */}
@@ -643,7 +643,7 @@ const ServiceCard = ({ data, index = 0 }) => {
         {/* ================================ */}
         {/* 🔻 BOTTOM ACCENT BAR             */}
         {/* ================================ */}
-        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-l from-[#FDB913] via-[#FFD54F] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" />
+        {/* <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-l from-[#FFF] via-[#FFD54F] to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right" /> */}
       </div>
     </div>
   );

@@ -35,9 +35,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 
@@ -117,7 +117,7 @@ const HeroSection = () => {
       }}
     >
       {/* Background */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FDB913]/10 blur-3xl rounded-full" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FFF]/10 blur-3xl rounded-full" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#143A63]/40 blur-3xl rounded-full" />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -328,7 +328,7 @@ const HeroSection = () => {
                     </h3>
                   </div>
 
-                  <div className="w-16 h-16 rounded-2xl bg-[#FDB913] flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-2xl bg-[#FFF] flex items-center justify-center">
                     <FaRocket className="text-2xl text-[#081C34]" />
                   </div>
                 </div>
@@ -342,7 +342,7 @@ const HeroSection = () => {
               className="absolute -bottom-5 -left-5 bg-white rounded-2xl p-5 shadow-xl"
             >
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-[#FDB913]/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-[#FFF]/10 flex items-center justify-center">
                   <FaBolt
                     className="text-xl"
                     style={{ color: BRAND.gold.primary }}
@@ -422,7 +422,7 @@ const ServicesSection = () => {
                 border: "1px solid rgba(255,255,255,0.06)",
               }}
             >
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFF]/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div
                 className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
@@ -504,7 +504,7 @@ const ProcessSection = () => {
                 {item.step}
               </div>
 
-              <div className="w-16 h-16 rounded-2xl bg-[#FDB913] flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-2xl bg-[#FFF] flex items-center justify-center mb-6">
                 <FaLayerGroup className="text-2xl text-[#081C34]" />
               </div>
 
@@ -561,7 +561,7 @@ const CTASection = () => {
         background: `linear-gradient(135deg, ${BRAND.navy.dark} 0%, #081C34 50%, ${BRAND.navy.mid} 100%)`,
       }}
     >
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FDB913]/10 blur-3xl rounded-full" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FFF]/10 blur-3xl rounded-full" />
 
       <div className="max-w-5xl mx-auto px-4 lg:px-8 text-center relative z-10">
         <motion.div

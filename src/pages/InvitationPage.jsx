@@ -209,7 +209,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
             {/* Footer */}
             <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10">
               <p className="text-xs text-white/40 text-center">
-                © 2026 Innovise IT Solutions
+                © 2026 Innovise Solutions
               </p>
             </div>
           </motion.div>
@@ -743,7 +743,7 @@ export default function SAPSapphireRegistrationPage() {
             <div className="bg-white/95 backdrop-blur-xl border border-white/20 px-4 py-3 rounded-2xl shadow-2xl">
               <img
                 src={Logo}
-                alt="Innovise IT"
+                alt="Innovise"
                 className="h-4 sm:h-4 lg:h-6 object-contain"
               />
             </div>
@@ -1322,7 +1322,7 @@ export default function SAPSapphireRegistrationPage() {
               </h3>
 
               <p className="text-white/40 text-sm mt-2 max-w-md">
-                Hosted by Innovise IT Solutions — connecting innovators,
+                Hosted by Innovise Solutions — connecting innovators,
                 enterprise leaders, and SAP professionals for an unforgettable
                 networking evening.
               </p>
@@ -1337,7 +1337,7 @@ export default function SAPSapphireRegistrationPage() {
               className="text-center lg:text-right"
             >
               <p className="text-sm text-white/30">
-                © 2026 Innovise IT Solutions
+                © 2026 Innovise Solutions
               </p>
 
               <p className="text-xs text-white/20 mt-1">All rights reserved.</p>

@@ -520,14 +520,14 @@
 //       "w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4",
 //       "transition-all duration-500 shadow-lg relative z-10",
 //       isDark
-//         ? "bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FDB913]/50 backdrop-blur-sm"
-//         : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-yellow-400/30",
+//         ? "bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FFF]/50 backdrop-blur-sm"
+//         : "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-yellow-400/30",
 //     ].join(" "),
 
 //     title: [
 //       "text-xl font-bold mb-2 leading-tight transition-all duration-300 line-clamp-2",
 //       isDark ? "text-white" : "text-[#12324f]",
-//       "group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913]",
+//       "group-hover:bg-gradient-to-r group-hover:from-[#FFF] group-hover:via-[#FFD54F] group-hover:to-[#FFF]",
 //       "group-hover:bg-clip-text group-hover:text-transparent",
 //     ].join(" "),
 
@@ -544,7 +544,7 @@
 //         isDark
 //           ? "bg-yellow-500/15 text-[#FFD54F] border border-yellow-500/25 hover:bg-yellow-500/25"
 //           : "bg-[#12324f]/8 text-[#12324f] hover:bg-[#12324f]/15",
-//         "group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:to-[#FFD54F]",
+//         "group-hover:bg-gradient-to-r group-hover:from-[#FFF] group-hover:to-[#FFD54F]",
 //         "group-hover:text-[#12324f] group-hover:border-transparent group-hover:-translate-y-0.5 group-hover:shadow-md",
 //       ].join(" "),
 
@@ -552,8 +552,8 @@
 //       "absolute bottom-6 right-6 w-11 h-11 rounded-full flex items-center justify-center",
 //       "opacity-0 -translate-x-3 transition-all duration-400 z-20",
 //       isDark
-//         ? "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/30"
-//         : "bg-gradient-to-br from-[#12324f] to-[#12324f] text-[#FDB913] shadow-lg shadow-blue-900/30",
+//         ? "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/30"
+//         : "bg-gradient-to-br from-[#12324f] to-[#12324f] text-[#FFF] shadow-lg shadow-blue-900/30",
 //       "group-hover:opacity-100 group-hover:translate-x-0 hover:scale-115 hover:rotate-45",
 //     ].join(" "),
 //   };
@@ -567,7 +567,7 @@
 //     >
 //       {/*  Hover Glow Effect */}
 //       <div
-//         className="absolute inset-[-2px] bg-gradient-to-br from-[#FDB913] via-[#FFD54F] to-[#FDB913] rounded-[22px] opacity-0 group-hover:opacity-25 blur-xl transition-opacity duration-500 z-[-1]"
+//         className="absolute inset-[-2px] bg-gradient-to-br from-[#FFF] via-[#FFD54F] to-[#FFF] rounded-[22px] opacity-0 group-hover:opacity-25 blur-xl transition-opacity duration-500 z-[-1]"
 //         aria-hidden="true"
 //       />
 
@@ -577,7 +577,7 @@
 //           isDark ? "bottom-0 left-0" : "top-0 right-0"
 //         }`}
 //         style={{
-//           background: `linear-gradient(${isDark ? "-45deg" : "135deg"}, transparent 50%, #FDB913 50%)`,
+//           background: `linear-gradient(${isDark ? "-45deg" : "135deg"}, transparent 50%, #FFF 50%)`,
 //           borderRadius: isDark ? "0 20px 0 0" : "0 0 20px 0",
 //         }}
 //         aria-hidden="true"
@@ -686,7 +686,7 @@
 //         <div
 //           className={`absolute bottom-0 left-0 right-0 h-1 transform scale-x-0 origin-left transition-transform duration-500 ${
 //             isDark
-//               ? "bg-gradient-to-r from-[#FDB913] to-[#FFD54F]"
+//               ? "bg-gradient-to-r from-[#FFF] to-[#FFD54F]"
 //               : "bg-gradient-to-r from-[#12324f] to-[#12324f]"
 //           } group-hover:scale-x-100`}
 //           aria-hidden="true"
@@ -798,22 +798,22 @@ const IndustryTileCard = ({
       />
 
       {/* 🔷 Corner Accent */}
-      <div
+      {/* <div
         className={`absolute w-24 h-24 opacity-0 group-hover:opacity-60 transition-all duration-500 z-10 pointer-events-none ${
           isDark ? "bottom-0 right-0" : "top-0 left-0"
         }`}
         style={{
-          background: `linear-gradient(${isDark ? "45deg" : "-135deg"}, transparent 50%, ${isDark ? "#FDB913" : "rgba(255,255,255,0.3)"} 50%)`,
+          background: `linear-gradient(${isDark ? "45deg" : "-135deg"}, transparent 50%, ${isDark ? "#FFF" : "rgba(255,255,255,0.3)"} 50%)`,
           borderRadius: isDark ? "0 0 20px 0" : "0 20px 0 0",
         }}
         aria-hidden="true"
-      />
+      /> */}
 
       {/* ================================ */}
       {/* 🖼️ IMAGE SECTION                 */}
       {/* ================================ */}
       <div
-        className={`relative overflow-hidden ${isFullImage ? "h-[260px]" : "h-[260px]"}`}
+        className={`relative overflow-hidden ${isFullImage ? "h-[280px]" : "h-[280px]"}`}
       >
         {/* Loading Skeleton */}
         {!imageLoaded && !imageError && (
@@ -863,7 +863,7 @@ const IndustryTileCard = ({
           <div
             className={`w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-500 ${
               isDark
-                ? "bg-[#FDB913] text-[#12324f]"
+                ? "bg-white/95 text-[#12324f]"
                 : "bg-white/95 text-[#12324f]"
             }`}
           >
@@ -880,8 +880,8 @@ const IndustryTileCard = ({
         {/* <div
           className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-all duration-500 relative z-10 ${
             isDark
-              ? "bg-linear-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FDB913]/40 shadow-lg shadow-yellow-500/10"
-              : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-400/20"
+              ? "bg-linear-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FFF]/40 shadow-lg shadow-yellow-500/10"
+              : "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-400/20"
           } group-hover:rotate-y-360 group-hover:scale-110 group-hover:shadow-xl`}
           style={{ transformStyle: "preserve-3d" }}
         >
@@ -891,9 +891,7 @@ const IndustryTileCard = ({
         {/* Title */}
         <h3
           className={`text-xl font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
-            isDark
-              ? "text-white group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:via-[#FFD54F] group-hover:to-[#FDB913] group-hover:bg-clip-text group-hover:text-transparent"
-              : "text-[#12324f] group-hover:text-black"
+            isDark ? "text-white" : "text-[#12324f] group-hover:text-black"
           }`}
         >
           {data.title}
@@ -920,7 +918,7 @@ const IndustryTileCard = ({
                   isDark
                     ? "bg-yellow-500/15 text-[#FFD54F] border border-yellow-500/25 hover:bg-yellow-500/25 hover:border-yellow-500/40"
                     : "bg-white/10 text-gray-200 border border-white/10 hover:bg-white/15"
-                } group-hover:bg-gradient-to-r group-hover:from-[#FDB913] group-hover:to-[#FFD54F] group-hover:text-[#12324f] group-hover:border-transparent group-hover:shadow-md`}
+                } group-hover:bg-gradient-to-r group-hover:from-[#FFF] group-hover:to-[#FFD54F] group-hover:text-[#12324f] group-hover:border-transparent group-hover:shadow-md`}
               >
                 {String(tag)}
               </span>
@@ -938,8 +936,8 @@ const IndustryTileCard = ({
         {/* <div
           className={`absolute bottom-6 right-6 w-11 h-11 rounded-full flex items-center justify-center opacity-0 -translate-x-3 transition-all duration-400 z-20 ${
             isDark
-              ? "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/25"
-              : "bg-gradient-to-br from-[#FDB913] to-[#FFD54F] text-black border border-white/20"
+              ? "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/25"
+              : "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-black border border-white/20"
           } group-hover:opacity-100 group-hover:translate-x-0 hover:scale-115 hover:rotate-45`}
           aria-hidden="true"
         >
@@ -947,14 +945,14 @@ const IndustryTileCard = ({
         </div> */}
 
         {/* Bottom Border Accent */}
-        <div
+        {/* <div
           className={`absolute bottom-0 left-6 right-6 h-[2px] transform scale-x-0 origin-left transition-transform duration-500 ${
             isDark
-              ? "bg-gradient-to-r from-[#FDB913] to-[#FFD54F]"
+              ? "bg-gradient-to-r from-white/40 to-white/10"
               : "bg-gradient-to-r from-white/40 to-white/10"
           } group-hover:scale-x-100`}
           aria-hidden="true"
-        />
+        /> */}
       </div>
     </Link>
   );

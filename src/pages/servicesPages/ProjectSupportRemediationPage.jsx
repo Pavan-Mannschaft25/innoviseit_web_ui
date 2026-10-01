@@ -40,9 +40,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 
@@ -67,7 +67,7 @@ const servicesData = [
       "Resource Restructuring & Optimization",
     ],
     status: "Most Popular",
-    color: "#FDB913",
+    color: "#FFF",
   },
   {
     id: 2,
@@ -81,7 +81,7 @@ const servicesData = [
       "Delivery Acceleration Programs",
     ],
     status: null,
-    color: "#FDB913",
+    color: "#FFF",
   },
   {
     id: 3,
@@ -95,7 +95,7 @@ const servicesData = [
       "Governance Framework Design",
     ],
     status: null,
-    color: "#FDB913",
+    color: "#FFF",
   },
   {
     id: 4,
@@ -109,7 +109,7 @@ const servicesData = [
       "Integration & Testing Support",
     ],
     status: null,
-    color: "#FDB913",
+    color: "#FFF",
   },
 ];
 
@@ -182,7 +182,7 @@ const benefitsData = [
 const testimonialsData = [
   {
     quote:
-      "Innovise IT stepped in when our $12M ERP implementation was 18 months behind schedule. Within 8 weeks, they had us back on track. Absolutely phenomenal team.",
+      "Innovise stepped in when our $12M ERP implementation was 18 months behind schedule. Within 8 weeks, they had us back on track. Absolutely phenomenal team.",
     author: "James Mitchell",
     role: "CTO, Fortune 500 Manufacturing",
     initials: "JM",
@@ -255,7 +255,7 @@ const ServiceCard = ({ service, index }) => {
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
           style={{
-            background: "linear-gradient(90deg, #FDB913, transparent)",
+            background: "linear-gradient(90deg, #FFF, transparent)",
           }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
@@ -269,7 +269,7 @@ const ServiceCard = ({ service, index }) => {
               className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
               style={{
                 background: "rgba(253,185,19,0.12)",
-                color: "#FDB913",
+                color: "#FFF",
                 border: "1px solid rgba(253,185,19,0.25)",
               }}
             >
@@ -282,7 +282,7 @@ const ServiceCard = ({ service, index }) => {
                   duration: 2,
                   repeat: Infinity,
                 }}
-                className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
+                className="w-1.5 h-1.5 rounded-full inline-block bg-[#FFF]"
               />
               {service.status}
             </span>
@@ -290,7 +290,7 @@ const ServiceCard = ({ service, index }) => {
         )}
 
         {/* Glow Effect */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
         <div className="relative z-10 p-8 lg:p-10">
           {/* Icon */}
@@ -302,7 +302,7 @@ const ServiceCard = ({ service, index }) => {
             }}
             whileHover={{ rotate: [0, -10, 10, 0] }}
           >
-            <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
+            <service.icon className="text-2xl" style={{ color: "#FFF" }} />
           </motion.div>
 
           {/* Title */}
@@ -322,7 +322,7 @@ const ServiceCard = ({ service, index }) => {
                 key={idx}
                 className="flex items-center gap-2 text-sm text-white/80"
               >
-                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
+                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FFF]" />
                 {feature}
               </li>
             ))}
@@ -332,7 +332,7 @@ const ServiceCard = ({ service, index }) => {
           <a
             href="/contact"
             className="inline-flex items-center gap-2 text-sm font-semibold group/link transition-colors"
-            style={{ color: "#FDB913" }}
+            style={{ color: "#FFF" }}
           >
             Learn More{" "}
             <FaArrowRight className="text-xs group-hover/link:translate-x-1 transition-transform" />
@@ -367,7 +367,7 @@ const BenefitCard = ({ benefit, index }) => (
       }}
     >
       {/* Gold Glow */}
-      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative z-10 flex items-start gap-4">
         {/* Icon */}
@@ -380,7 +380,7 @@ const BenefitCard = ({ benefit, index }) => (
           whileHover={{ rotate: [0, -360, 0] }}
           transition={{ duration: 0.8 }}
         >
-          <benefit.icon className="text-xl" style={{ color: "#FDB913" }} />
+          <benefit.icon className="text-xl" style={{ color: "#FFF" }} />
         </motion.div>
 
         {/* Content */}
@@ -420,7 +420,7 @@ const TestimonialCard = ({ testimonial, index }) => (
       {/* Stars */}
       <div className="flex items-center gap-1 mb-4">
         {[...Array(5)].map((_, i) => (
-          <FaStar key={i} className="text-sm" style={{ color: "#FDB913" }} />
+          <FaStar key={i} className="text-sm" style={{ color: "#FFF" }} />
         ))}
       </div>
 
@@ -607,7 +607,7 @@ const HeroSection = () => (
                 icon: FaAward,
                 value: "150+",
                 label: "Projects Rescued",
-                color: "#FDB913",
+                color: "#FFF",
               },
               {
                 icon: FaCheckCircle,
@@ -981,7 +981,7 @@ const ApproachSection = () => (
           className="inline-block px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
             background: "rgba(253,185,19,0.12)",
-            color: "#FDB913",
+            color: "#FFF",
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
@@ -989,7 +989,7 @@ const ApproachSection = () => (
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-white">
-          Proven <span style={{ color: "#FDB913" }}>4-Phase Approach</span> to
+          Proven <span style={{ color: "#FFF" }}>4-Phase Approach</span> to
           Success
         </h2>
 
@@ -1011,12 +1011,12 @@ const ApproachSection = () => (
               transition={{ delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+              <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-[#FFF]/30 hover:bg-white/[0.07]">
                 {/* Step Number */}
                 <div
                   className="flex items-center justify-center w-16 h-16 rounded-2xl mb-6 shadow-lg"
                   style={{
-                    background: "#FDB913",
+                    background: "#FFF",
                     boxShadow: "0 10px 30px rgba(253,185,19,0.3)",
                   }}
                 >
@@ -1030,7 +1030,7 @@ const ApproachSection = () => (
 
                 {/* Icon */}
                 <div className="mb-5">
-                  <step.icon className="text-3xl text-[#FDB913]" />
+                  <step.icon className="text-3xl text-[#FFF]" />
                 </div>
 
                 {/* Title */}
@@ -1041,7 +1041,7 @@ const ApproachSection = () => (
                 {/* Subtitle */}
                 <p
                   className="text-xs font-semibold uppercase tracking-[0.2em] mb-3"
-                  style={{ color: "#FDB913" }}
+                  style={{ color: "#FFF" }}
                 >
                   {step.subtitle}
                 </p>
@@ -1052,7 +1052,7 @@ const ApproachSection = () => (
                 </p>
 
                 {/* Top Glow */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
               {/* Connector Line (except last) */}
@@ -1085,7 +1085,7 @@ const ApproachSection = () => (
               <div
                 className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
                 style={{
-                  background: "#FDB913",
+                  background: "#FFF",
                   boxShadow: "0 10px 30px rgba(253,185,19,0.3)",
                 }}
               >
@@ -1102,7 +1102,7 @@ const ApproachSection = () => (
                   className="w-0.5 flex-1 mt-3"
                   style={{
                     background:
-                      "linear-gradient(to bottom, #FDB913, rgba(255,255,255,0.1))",
+                      "linear-gradient(to bottom, #FFF, rgba(255,255,255,0.1))",
                   }}
                 />
               )}
@@ -1111,13 +1111,13 @@ const ApproachSection = () => (
             {/* Right Content */}
             <div className="pb-8">
               <div className="flex items-center gap-3 mb-2">
-                <step.icon className="text-lg text-[#FDB913]" />
+                <step.icon className="text-lg text-[#FFF]" />
                 <h4 className="font-bold text-lg text-white">{step.title}</h4>
               </div>
 
               <p
                 className="text-xs font-semibold uppercase tracking-wider mb-2"
-                style={{ color: "#FDB913" }}
+                style={{ color: "#FFF" }}
               >
                 {step.subtitle}
               </p>
@@ -1576,7 +1576,7 @@ const CTABannerSection = () => (
 
           <a
             href="tel:+1234567890"
-            className="px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center justify-center gap-3 border border-white/20 text-white hover:border-[#FDB913]/50"
+            className="px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/10 flex items-center justify-center gap-3 border border-white/20 text-white hover:border-[#FFF]/50"
           >
             <FaPhone style={{ color: BRAND.gold.primary }} />
             Talk to an Expert Now
@@ -1649,13 +1649,13 @@ const FooterSection = () => (
               style={{ color: BRAND.navy.dark }}
             />
           </div>
-          <span className="text-white font-bold text-lg">Innovise IT</span>
+          <span className="text-white font-bold text-lg">Innovise</span>
         </div>
 
         {/* Copyright */}
         <p className="text-sm text-white/50 text-center">
-          © 2024 Innovise IT Solutions. All rights reserved. | Enterprise
-          Project Excellence
+          © 2024 Innovise Solutions. All rights reserved. | Enterprise Project
+          Excellence
         </p>
 
         {/* Social Links */}
@@ -1664,7 +1664,7 @@ const FooterSection = () => (
             <a
               key={idx}
               href="#"
-              className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:text-[#FDB913] hover:bg-[#FDB913]/10 transition-all"
+              className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:text-[#FFF] hover:bg-[#FFF]/10 transition-all"
             >
               <Icon className="text-sm" />
             </a>

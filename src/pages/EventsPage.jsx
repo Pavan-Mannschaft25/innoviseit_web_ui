@@ -156,7 +156,7 @@ function EventsPage() {
             </div>
 
             <div className="p-6 sm:p-7 flex flex-col flex-grow">
-              <div className="text-sm font-semibold text-accent-600 mb-3 uppercase tracking-wide">
+              <div className="text-sm font-semibold text-primary-900 mb-3 uppercase tracking-wide">
                 {event.date} <span className="text-primary-200 mx-1">|</span>{" "}
                 <span className="text-primary-500">{event.location}</span>
               </div>

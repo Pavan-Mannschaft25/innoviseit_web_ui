@@ -47,9 +47,9 @@
 // //     lighter: "#1A4570",
 // //   },
 // //   gold: {
-// //     primary: "#FDB913",
+// //     primary: "#FFF",
 // //     light: "#FFD54F",
-// //     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// //     gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // //   },
 // // };
 
@@ -234,7 +234,7 @@
 // //     value: "50+",
 // //     label: "Guidewire Projects",
 // //     icon: FaBuilding,
-// //     color: "#FDB913",
+// //     color: "#FFF",
 // //   },
 // //   {
 // //     value: "100+",
@@ -258,7 +258,7 @@
 // // const testimonials = [
 // //   {
 // //     quote:
-// //       "Innovise IT transformed our claims processing time by 40%. Their Guidewire expertise is unmatched in the industry.",
+// //       "Innovise transformed our claims processing time by 40%. Their Guidewire expertise is unmatched in the industry.",
 // //     author: "VP of Operations",
 // //     company: "Fortune 500 Insurer",
 // //   },
@@ -308,7 +308,7 @@
 // //         {/* Top Accent */}
 // //         <motion.div
 // //           className="absolute top-0 left-0 right-0 h-1 origin-left"
-// //           style={{ background: "linear-gradient(90deg, #FDB913, transparent)" }}
+// //           style={{ background: "linear-gradient(90deg, #FFF, transparent)" }}
 // //           initial={{ scaleX: 0 }}
 // //           animate={{ scaleX: isHovered ? 1 : 0 }}
 // //           transition={{ duration: 0.4 }}
@@ -319,15 +319,15 @@
 // //           <span
 // //             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
 // //             style={{
-// //               background: "rgba(253,185,19,0.12)",
-// //               color: "#FDB913",
+// //               background: `${BRAND.navy.mid}08`,
+// //               color: "#FFF",
 // //               border: "1px solid rgba(253,185,19,0.25)",
 // //             }}
 // //           >
 // //             <motion.span
 // //               animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
 // //               transition={{ duration: 2, repeat: Infinity }}
-// //               className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
+// //               className="w-1.5 h-1.5 rounded-full inline-block bg-[#FFF]"
 // //             />
 // //             {service.status}
 // //           </span>
@@ -348,19 +348,19 @@
 // //         </div>
 
 // //         {/* Glow Effect */}
-// //         <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+// //         <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
 // //         <div className="relative z-10 p-8 lg:p-10 pt-16">
 // //           {/* Icon */}
 // //           <motion.div
 // //             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
 // //             style={{
-// //               background: "rgba(253,185,19,0.12)",
+// //               background: `${BRAND.navy.mid}08`,
 // //               border: "1px solid rgba(253,185,19,0.25)",
 // //             }}
 // //             whileHover={{ rotate: [0, -5, 5, 0] }}
 // //           >
-// //             <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
+// //             <service.icon className="text-2xl" style={{ color: "#FFF" }} />
 // //           </motion.div>
 
 // //           {/* Title */}
@@ -378,7 +378,7 @@
 // //                 key={idx}
 // //                 className="flex items-center gap-2 text-sm text-white/80"
 // //               >
-// //                 <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
+// //                 <FaCheckCircle className="flex-shrink-0 text-xs text-[#FFF]" />
 // //                 {feature}
 // //               </li>
 // //             ))}
@@ -412,18 +412,18 @@
 // //         boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
 // //       }}
 // //     >
-// //       <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+// //       <div className="absolute top-0 right-0 w-28 h-28 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
 // //       <div className="relative z-10 flex items-start gap-4">
 // //         <motion.div
 // //           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
 // //           style={{
-// //             background: "rgba(253,185,19,0.12)",
+// //             background: `${BRAND.navy.mid}08`,
 // //             border: "1px solid rgba(253,185,19,0.25)",
 // //           }}
 // //           whileHover={{ rotate: [0, -10, 10, 0] }}
 // //         >
-// //           <benefit.icon className="text-xl" style={{ color: "#FDB913" }} />
+// //           <benefit.icon className="text-xl" style={{ color: "#FFF" }} />
 // //         </motion.div>
 
 // //         <div>
@@ -651,7 +651,7 @@
 // //                     key={tab}
 // //                     className={`px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
 // //                       idx === 0
-// //                         ? "bg-[#FDB913]/20 text-[#FDB913] border border-[#FDB913]/30"
+// //                         ? "bg-[#FFF]/20 text-[#FFF] border border-[#FFF]/30"
 // //                         : "bg-white/5 text-white/50 border border-white/10"
 // //                     }`}
 // //                   >
@@ -751,12 +751,12 @@
 // //                       >
 // //                         <stop
 // //                           offset="0%"
-// //                           stopColor="#FDB913"
+// //                           stopColor="#FFF"
 // //                           stopOpacity="0.3"
 // //                         />
 // //                         <stop
 // //                           offset="100%"
-// //                           stopColor="#FDB913"
+// //                           stopColor="#FFF"
 // //                           stopOpacity="0"
 // //                         />
 // //                       </linearGradient>
@@ -764,7 +764,7 @@
 // //                     <path
 // //                       d="M0,55 Q50,40 100,45 T200,30 T300,35 T400,20"
 // //                       fill="url(#gwGradient)"
-// //                       stroke="#FDB913"
+// //                       stroke="#FFF"
 // //                       strokeWidth="2"
 // //                       vectorEffect="non-scaling-stroke"
 // //                     />
@@ -788,8 +788,8 @@
 // //                     }}
 // //                     className="absolute top-0 w-2 h-2 rounded-full"
 // //                     style={{
-// //                       background: "#FDB913",
-// //                       boxShadow: "0 0 10px #FDB913",
+// //                       background: "#FFF",
+// //                       boxShadow: "0 0 10px #FFF",
 // //                     }}
 // //                   />
 // //                 </div>
@@ -1268,11 +1268,11 @@
 // //                     animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
 // //                     transition={{ duration: 1.5, repeat: Infinity }}
 // //                     className="w-2 h-2 rounded-full"
-// //                     style={{ background: "#FDB913" }}
+// //                     style={{ background: "#FFF" }}
 // //                   />
 // //                   <span
 // //                     className="text-xs font-medium"
-// //                     style={{ color: "#FDB913" }}
+// //                     style={{ color: "#FFF" }}
 // //                   >
 // //                     All Systems Integrated
 // //                   </span>
@@ -1345,7 +1345,7 @@
 // //             >
 // //               Strategic Advantage
 // //             </span>{" "}
-// //             of Working with Innovise IT
+// //             of Working with Innovise
 // //           </h2>
 
 // //           <p
@@ -1409,7 +1409,7 @@
 // // // Process Section
 // // const ProcessSection = () => (
 // //   <section className="py-6 lg:py-10 bg-primary-800  relative overflow-hidden">
-// //     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+// //     <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFF]/10 blur-3xl rounded-full"></div>
 // //     <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
 
 // //     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -1422,8 +1422,8 @@
 // //         <span
 // //           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
 // //           style={{
-// //             background: "rgba(253,185,19,0.12)",
-// //             color: "#FDB913",
+// //             background: `${BRAND.navy.mid}08`,
+// //             color: "#FFF",
 // //             borderColor: "rgba(253,185,19,0.25)",
 // //           }}
 // //         >
@@ -1431,7 +1431,7 @@
 // //         </span>
 
 // //         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-// //           Proven <span style={{ color: "#FDB913" }}>Delivery Framework</span>
+// //           Proven <span style={{ color: "#FFF" }}>Delivery Framework</span>
 // //         </h2>
 
 // //         <p className="text-lg leading-relaxed text-white/70">
@@ -1452,8 +1452,8 @@
 // //               transition={{ delay: index * 0.1 }}
 // //               className="group relative"
 // //             >
-// //               <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
-// //                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+// //               <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FFF]/30 hover:bg-white/[0.07]">
+// //                 <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FFF] shadow-lg shadow-[#FFF]/20">
 // //                   <step.icon className="text-2xl text-[#081C34]" />
 // //                 </div>
 
@@ -1464,14 +1464,14 @@
 // //                 <h4 className="text-xl font-bold text-white mb-2">
 // //                   {step.title}
 // //                 </h4>
-// //                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FDB913] mb-3">
+// //                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FFF] mb-3">
 // //                   {step.subtitle}
 // //                 </p>
 // //                 <p className="text-sm leading-relaxed text-white/70">
 // //                   {step.description}
 // //                 </p>
 
-// //                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+// //                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 // //               </div>
 // //             </motion.div>
 // //           ))}
@@ -1490,18 +1490,18 @@
 // //             className="flex gap-5"
 // //           >
 // //             <div className="flex flex-col items-center">
-// //               <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
+// //               <div className="w-14 h-14 rounded-full bg-[#FFF] flex items-center justify-center shadow-lg shadow-[#FFF]/20">
 // //                 <step.icon className="text-lg text-[#081C34]" />
 // //               </div>
 // //               {index < processSteps.length - 1 && (
-// //                 <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-white/10"></div>
+// //                 <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FFF] to-white/10"></div>
 // //               )}
 // //             </div>
 // //             <div className="pb-8">
 // //               <h4 className="font-bold text-lg mb-1 text-white">
 // //                 {step.title}
 // //               </h4>
-// //               <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
+// //               <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FFF]">
 // //                 {step.subtitle}
 // //               </p>
 // //               <p className="text-sm leading-relaxed text-white/70">
@@ -1690,7 +1690,7 @@
 
 // //           <a
 // //             href="/contact"
-// //             className="group px-8 py-5 rounded-xl font-bold text-lg border-2 border-white/20 text-white hover:border-[#FDB913]/50 hover:bg-white/5 transition-all duration-300 flex items-center gap-3"
+// //             className="group px-8 py-5 rounded-xl font-bold text-lg border-2 border-white/20 text-white hover:border-[#FFF]/50 hover:bg-white/5 transition-all duration-300 flex items-center gap-3"
 // //           >
 // //             <FaPlayCircle style={{ color: BRAND.gold.primary }} />
 // //             Watch Demo
@@ -1793,10 +1793,10 @@
 //     light: "#1A4570",
 //   },
 //   gold: {
-//     primary: "#FDB913", // Innovise Yellow
+//     primary: "#FFF", // Innovise Yellow
 //     light: "#FFD54F",
 //     dark: "#E5A700",
-//     gradient: "linear-gradient(135deg, #E5A700 0%, #FDB913 50%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #E5A700 0%, #FFF 50%, #FFD54F 100%)",
 //   },
 // };
 
@@ -2015,7 +2015,7 @@
 // const testimonials = [
 //   {
 //     quote:
-//       "Innovise IT transformed our claims processing time by 40%. Their Guidewire expertise is unmatched in the industry.",
+//       "Innovise transformed our claims processing time by 40%. Their Guidewire expertise is unmatched in the industry.",
 //     author: "VP of Operations",
 //     company: "Fortune 500 Insurer",
 //   },
@@ -2382,12 +2382,12 @@
 //                       >
 //                         <stop
 //                           offset="0%"
-//                           stopColor="#FDB913"
+//                           stopColor="#FFF"
 //                           stopOpacity="0.3"
 //                         />
 //                         <stop
 //                           offset="100%"
-//                           stopColor="#FDB913"
+//                           stopColor="#FFF"
 //                           stopOpacity="0"
 //                         />
 //                       </linearGradient>
@@ -2395,7 +2395,7 @@
 //                     <path
 //                       d="M0,55 Q50,40 100,45 T200,30 T300,35 T400,20"
 //                       fill="url(#gwGradient)"
-//                       stroke="#FDB913"
+//                       stroke="#FFF"
 //                       strokeWidth="2"
 //                       vectorEffect="non-scaling-stroke"
 //                     />
@@ -2419,8 +2419,8 @@
 //                     }}
 //                     className="absolute top-0 w-2 h-2 rounded-full"
 //                     style={{
-//                       background: "#FDB913",
-//                       boxShadow: "0 0 10px #FDB913",
+//                       background: "#FFF",
+//                       boxShadow: "0 0 10px #FFF",
 //                     }}
 //                   />
 //                 </div>
@@ -2641,7 +2641,7 @@
 //                 <h4 className="text-xl font-bold text-[#0B1D33] mb-2">
 //                   {step.title}
 //                 </h4>
-//                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FDB913] mb-3">
+//                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FFF] mb-3">
 //                   {step.subtitle}
 //                 </p>
 //                 <p className="text-sm leading-relaxed text-black/70">
@@ -2675,14 +2675,14 @@
 //                 <step.icon className="text-lg text-[#0B1D33]" />
 //               </div>
 //               {index < processSteps.length - 1 && (
-//                 <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-slate-100"></div>
+//                 <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FFF] to-slate-100"></div>
 //               )}
 //             </div>
 //             <div className="pb-8">
 //               <h4 className="font-bold text-lg mb-1 text-[#0B1D33]">
 //                 {step.title}
 //               </h4>
-//               <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
+//               <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FFF]">
 //                 {step.subtitle}
 //               </p>
 //               <p className="text-sm leading-relaxed text-black/70">
@@ -2709,7 +2709,7 @@
 //           transition={{ duration: 0.8 }}
 //           className="relative order-2 lg:order-1"
 //         >
-//           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-[#FFFBEB] border border-[#FDB913]/20">
+//           <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-[#FFFBEB] border border-[#FFF]/20">
 //             {/* Guidewire Suite Visual */}
 //             <div className="absolute inset-0 p-8 flex flex-col justify-center">
 //               <div className="grid grid-cols-3 gap-4 h-full">
@@ -2856,7 +2856,7 @@
 //               </div>
 
 //               {/* Bottom Status */}
-//               <div className="mt-4 flex items-center justify-between px-2 py-3 rounded-xl bg-white border border-[#FDB913]/30">
+//               <div className="mt-4 flex items-center justify-between px-2 py-3 rounded-xl bg-white border border-[#FFF]/30">
 //                 <div className="flex items-center gap-2">
 //                   <motion.span
 //                     animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
@@ -2934,7 +2934,7 @@
 //             >
 //               Strategic Advantage
 //             </span>{" "}
-//             of Working with Innovise IT
+//             of Working with Innovise
 //           </h2>
 
 //           <p className="text-lg leading-relaxed mb-10 text-black/70">
@@ -3086,7 +3086,7 @@
 
 //           <a
 //             href="/contact"
-//             className="group px-8 py-5 rounded-xl font-bold text-lg border-2 border-[#0B1D33]/20 text-[#0B1D33] hover:border-[#FDB913]/50 hover:bg-white/50 transition-all duration-300 flex items-center gap-3"
+//             className="group px-8 py-5 rounded-xl font-bold text-lg border-2 border-[#0B1D33]/20 text-[#0B1D33] hover:border-[#FFF]/50 hover:bg-white/50 transition-all duration-300 flex items-center gap-3"
 //           >
 //             <FaPlayCircle style={{ color: BRAND.gold.primary }} />
 //             Watch Demo
@@ -3182,9 +3182,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
-    light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    primary: "#0B1D33",
+    light: "#0B1D33",
+    gradient: "#0B1D33",
   },
 };
 
@@ -3386,7 +3386,7 @@ const metricsData = [
     value: "50+",
     label: "Guidewire Projects",
     icon: FaBuilding,
-    color: "#FDB913",
+    color: "#FFF",
   },
   {
     value: "100+",
@@ -3410,7 +3410,7 @@ const industries = [
 const testimonials = [
   {
     quote:
-      "Innovise IT transformed our claims processing time by 40%. Their Guidewire expertise is unmatched in the industry.",
+      "Innovise transformed our claims processing time by 40%. Their Guidewire expertise is unmatched in the industry.",
     author: "VP of Operations",
     company: "Fortune 500 Insurer",
   },
@@ -3447,7 +3447,7 @@ const ServiceCard = ({ service, index }) => {
         {/* Top Accent */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
-          style={{ background: "linear-gradient(90deg, #FDB913, transparent)" }}
+          style={{ background: "linear-gradient(90deg, #FFF, transparent)" }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
           transition={{ duration: 0.4 }}
@@ -3458,15 +3458,15 @@ const ServiceCard = ({ service, index }) => {
           <span
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
             style={{
-              background: "rgba(253,185,19,0.12)",
-              color: "#FDB913",
+              background: `${BRAND.navy.mid}08`,
+              color: "#FFF",
               border: "1px solid rgba(253,185,19,0.25)",
             }}
           >
             <motion.span
               animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
+              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FFF]"
             />
             {service.status}
           </span>
@@ -3487,19 +3487,19 @@ const ServiceCard = ({ service, index }) => {
         </div>
 
         {/* Glow Effect */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
         <div className="relative z-10 p-8 lg:p-10 pt-16">
           {/* Icon */}
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
-              background: "rgba(253,185,19,0.12)",
+              background: `${BRAND.navy.mid}08`,
               border: "1px solid rgba(253,185,19,0.25)",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
-            <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
+            <service.icon className="text-2xl" style={{ color: "#FFF" }} />
           </motion.div>
 
           {/* Title */}
@@ -3517,7 +3517,7 @@ const ServiceCard = ({ service, index }) => {
                 key={idx}
                 className="flex items-center gap-2 text-sm text-white/80"
               >
-                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
+                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FFF]" />
                 {feature}
               </li>
             ))}
@@ -3549,18 +3549,18 @@ const BenefitCard = ({ benefit, index }) => (
         boxShadow: "0 10px 35px rgba(8,28,52,0.20)",
       }}
     >
-      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative z-10 flex items-start gap-4">
         <motion.div
           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
-            background: "rgba(253,185,19,0.12)",
+            background: `${BRAND.navy.mid}08`,
             border: "1px solid rgba(253,185,19,0.25)",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >
-          <benefit.icon className="text-xl" style={{ color: "#FDB913" }} />
+          <benefit.icon className="text-xl" style={{ color: "#FFF" }} />
         </motion.div>
 
         <div>
@@ -3658,7 +3658,7 @@ const HeroSection = () => (
             <div
               className="w-6 h-6 md:w-10 md:h-10 rounded-lg flex items-center justify-center"
               style={{
-                background: `${BRAND.gold.primary}15`,
+                background: `#FFF`,
                 border: `1px solid ${BRAND.gold.primary}30`,
               }}
             >
@@ -3669,7 +3669,7 @@ const HeroSection = () => (
             </div>
             <span
               className="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em]"
-              style={{ color: BRAND.gold.primary }}
+              style={{ color: "#FFF" }}
             >
               <AnimatedText text="Guidewire Services" />
             </span>
@@ -3677,28 +3677,8 @@ const HeroSection = () => (
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-            Enterprise{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Guidewire
-            </span>{" "}
-            Solutions for{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Modern Insurers
-            </span>
+            Enterprise <span>Guidewire</span> Solutions for{" "}
+            <span>Modern Insurers</span>
           </h1>
 
           {/* Description */}
@@ -3779,17 +3759,7 @@ const ServicesSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          End-to-End{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Guidewire Expertise
-          </span>
+          End-to-End <span>Guidewire Expertise</span>
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
@@ -3908,18 +3878,7 @@ const BenefitsSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           style={{ color: BRAND.navy.dark }}
         >
-          The{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Strategic Advantage
-          </span>{" "}
-          of Working with Innovise IT
+          The <span>Strategic Advantage</span> of Working with Innovise
         </h2>
 
         <p
@@ -4073,7 +4032,7 @@ const BenefitsSection = () => (
 // Process Section
 const ProcessSection = () => (
   <section className="py-6 lg:py-10 bg-primary-800 relative overflow-hidden">
-    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFF]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -4086,8 +4045,8 @@ const ProcessSection = () => (
         <span
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: "rgba(253,185,19,0.12)",
-            color: "#FDB913",
+            background: `${BRAND.navy.mid}08`,
+            color: "#FFF",
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
@@ -4095,7 +4054,7 @@ const ProcessSection = () => (
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-          Proven <span style={{ color: "#FDB913" }}>Delivery Framework</span>
+          Proven <span style={{ color: "#FFF" }}>Delivery Framework</span>
         </h2>
 
         <p className="text-lg leading-relaxed text-white/70">
@@ -4116,8 +4075,8 @@ const ProcessSection = () => (
               transition={{ delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FFF]/30 hover:bg-white/[0.07]">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FFF] shadow-lg shadow-[#FFF]/20">
                   <step.icon className="text-2xl text-[#081C34]" />
                 </div>
 
@@ -4128,14 +4087,14 @@ const ProcessSection = () => (
                 <h4 className="text-xl font-bold text-white mb-2">
                   {step.title}
                 </h4>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FDB913] mb-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FFF] mb-3">
                   {step.subtitle}
                 </p>
                 <p className="text-sm leading-relaxed text-white/70">
                   {step.description}
                 </p>
 
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </motion.div>
           ))}
@@ -4154,18 +4113,18 @@ const ProcessSection = () => (
             className="flex gap-5"
           >
             <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
+              <div className="w-14 h-14 rounded-full bg-[#FFF] flex items-center justify-center shadow-lg shadow-[#FFF]/20">
                 <step.icon className="text-lg text-[#081C34]" />
               </div>
               {index < processSteps.length - 1 && (
-                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-white/10"></div>
+                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FFF] to-white/10"></div>
               )}
             </div>
             <div className="pb-8">
               <h4 className="font-bold text-lg mb-1 text-white">
                 {step.title}
               </h4>
-              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
+              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FFF]">
                 {step.subtitle}
               </p>
               <p className="text-sm leading-relaxed text-white/70">
@@ -4354,7 +4313,7 @@ const CTABannerSection = () => (
 
           <a
             href="/contact"
-            className="group px-8 py-5 rounded-xl font-bold text-lg border-2 border-white/20 text-white hover:border-[#FDB913]/50 hover:bg-white/5 transition-all duration-300 flex items-center gap-3"
+            className="group px-8 py-5 rounded-xl font-bold text-lg border-2 border-white/20 text-white hover:border-[#FFF]/50 hover:bg-white/5 transition-all duration-300 flex items-center gap-3"
           >
             <FaPlayCircle style={{ color: BRAND.gold.primary }} />
             Watch Demo

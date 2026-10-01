@@ -34,7 +34,7 @@
 // //             <Link to="/" className="flex items-center">
 // //               <img
 // //                 src={logo}
-// //                 alt="Innovise IT"
+// //                 alt="Innovise"
 // //                 className="h-8 w-auto object-contain"
 // //               />
 // //             </Link>
@@ -189,7 +189,7 @@
 // //               <div className="relative overflow-hidden rounded-lg p-1">
 // //                 <img
 // //                   src={logo}
-// //                   alt="Innovise IT"
+// //                   alt="Innovise"
 // //                   className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
 // //                 />
 // //                 {/* Logo Shine Effect */}
@@ -231,7 +231,7 @@
 // //                 className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group"
 // //               >
 // //                 What We Think
-// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 // //               </Link>
 
 // //               {/* About - Mega Menu Trigger */}
@@ -266,7 +266,7 @@
 // //                 className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group"
 // //               >
 // //                 Careers
-// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 // //               </Link>
 
 // //               <Link
@@ -274,7 +274,7 @@
 // //                 className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group"
 // //               >
 // //                 Contact
-// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 // //               </Link>
 // //             </div>
 
@@ -416,7 +416,7 @@
 // //       <header
 // //         className={`sticky top-0 z-50 transition-all duration-500 ${
 // //           scrolled
-// //             ? "bg-[#0B1D33]/95 backdrop-blur-lg shadow-2xl border-b border-[#FDB913]/20"
+// //             ? "bg-[#0B1D33]/95 backdrop-blur-lg shadow-2xl border-b border-[#FFF]/20"
 // //             : "bg-[#0B1D33] border-b border-[#143A63]"
 // //         }`}
 // //       >
@@ -427,7 +427,7 @@
 // //               <div className="relative overflow-hidden rounded-lg p-1">
 // //                 <img
 // //                   src={logo}
-// //                   alt="Innovise IT"
+// //                   alt="Innovise"
 // //                   className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105 brightness-0 invert" // Added brightness-0 invert assuming logo is dark, remove if logo is already white/transparent
 // //                 />
 
@@ -439,10 +439,10 @@
 // //             <div className="hidden lg:flex items-center gap-1 xl:gap-2 text-[16px] font-medium text-white">
 // //               <Link
 // //                 to="/"
-// //                 className="px-4 py-1.5 rounded-lg hover:bg-white/10 hover:text-[#FDB913] transition-all duration-300 relative group text-white"
+// //                 className="px-4 py-1.5 rounded-lg hover:bg-white/10 hover:text-[#FFF] transition-all duration-300 relative group text-white"
 // //               >
 // //                 Home
-// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FDB913] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FFF] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 // //               </Link>
 
 // //               {/* What We Do */}
@@ -454,8 +454,8 @@
 // //                 <button
 // //                   className={`flex items-center gap-1.5 px-4 py-1.5 rounded-lg transition-all duration-300 ${
 // //                     activeMenu === "what"
-// //                       ? "bg-[#FDB913] text-[#0B1D33] shadow-lg shadow-[#FDB913]/25"
-// //                       : "hover:bg-white/10 hover:text-[#FDB913] text-white"
+// //                       ? "bg-[#FFF] text-[#0B1D33] shadow-lg shadow-[#FFF]/25"
+// //                       : "hover:bg-white/10 hover:text-[#FFF] text-white"
 // //                   }`}
 // //                 >
 // //                   What We Do
@@ -476,10 +476,10 @@
 // //               {/* What We Think */}
 // //               {/* <Link
 // //                 to="/think"
-// //                 className="px-4 py-1.5 rounded-lg text-white hover:bg-white/10 hover:text-[#FDB913] transition-all duration-300 relative group"
+// //                 className="px-4 py-1.5 rounded-lg text-white hover:bg-white/10 hover:text-[#FFF] transition-all duration-300 relative group"
 // //               >
 // //                 What We Think
-// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FDB913] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FFF] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 // //               </Link> */}
 
 // //               {/* About */}
@@ -491,8 +491,8 @@
 // //                 <button
 // //                   className={`flex items-center gap-1.5 px-4 py-1.5 rounded-lg transition-all duration-300 ${
 // //                     activeMenu === "who"
-// //                       ? "bg-[#FDB913] text-[#0B1D33] shadow-lg shadow-[#FDB913]/25"
-// //                       : "hover:bg-white/10 hover:text-[#FDB913] text-white"
+// //                       ? "bg-[#FFF] text-[#0B1D33] shadow-lg shadow-[#FFF]/25"
+// //                       : "hover:bg-white/10 hover:text-[#FFF] text-white"
 // //                   }`}
 // //                 >
 // //                   About Innovise
@@ -513,19 +513,19 @@
 // //               {/* Careers */}
 // //               <Link
 // //                 to="/careers"
-// //                 className="px-4 py-1.5 rounded-lg hover:bg-white/10 hover:text-[#FDB913] transition-all duration-300 relative group text-white"
+// //                 className="px-4 py-1.5 rounded-lg hover:bg-white/10 hover:text-[#FFF] transition-all duration-300 relative group text-white"
 // //               >
 // //                 Careers
-// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FDB913] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FFF] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 // //               </Link>
 
 // //               {/* Contact */}
 // //               <Link
 // //                 to="/contact"
-// //                 className="px-4 py-1.5 rounded-lg hover:bg-white/10 hover:text-[#FDB913] transition-all duration-300 relative group text-white"
+// //                 className="px-4 py-1.5 rounded-lg hover:bg-white/10 hover:text-[#FFF] transition-all duration-300 relative group text-white"
 // //               >
 // //                 Contact
-// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FDB913] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+// //                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#FFF] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 // //               </Link>
 // //             </div>
 
@@ -536,9 +536,9 @@
 // //             >
 // //               <button
 // //                 onClick={() => setLanguageOpen(!languageOpen)}
-// //                 className="flex items-center gap-2 text-slate-300 hover:text-[#FDB913] transition-all duration-300 group p-2 rounded-lg hover:bg-white/10"
+// //                 className="flex items-center gap-2 text-slate-300 hover:text-[#FFF] transition-all duration-300 group p-2 rounded-lg hover:bg-white/10"
 // //               >
-// //                 <FaGlobe className="text-lg group-hover:rotate-12 transition-transform text-[#FDB913]" />
+// //                 <FaGlobe className="text-lg group-hover:rotate-12 transition-transform text-[#FFF]" />
 
 // //                 <span className="text-lg">{selectedCountry.flag}</span>
 
@@ -585,7 +585,7 @@
 // //                             <span className="text-2xl">{country.flag}</span>
 
 // //                             <div className="text-left">
-// //                               <p className="text-sm font-semibold text-white group-hover:text-[#FDB913]">
+// //                               <p className="text-sm font-semibold text-white group-hover:text-[#FFF]">
 // //                                 {country.name}
 // //                               </p>
 
@@ -596,7 +596,7 @@
 // //                           </div>
 
 // //                           {selectedCountry.name === country.name && (
-// //                             <FaCheck className="text-[#FDB913] text-sm" />
+// //                             <FaCheck className="text-[#FFF] text-sm" />
 // //                           )}
 // //                         </button>
 // //                       ))}
@@ -609,7 +609,7 @@
 // //             {/* Mobile Menu Button */}
 // //             <button
 // //               onClick={() => setMobileOpen(true)}
-// //               className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-[#FDB913] text-[#0B1D33] shadow-lg shadow-[#FDB913]/30 hover:shadow-xl hover:shadow-[#FDB913]/40 transform hover:scale-105 transition-all duration-300"
+// //               className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-[#FFF] text-[#0B1D33] shadow-lg shadow-[#FFF]/30 hover:shadow-xl hover:shadow-[#FFF]/40 transform hover:scale-105 transition-all duration-300"
 // //             >
 // //               <FaBars className="text-lg" />
 
@@ -639,7 +639,7 @@
 // //               behavior: "smooth",
 // //             })
 // //           }
-// //           className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-br from-[#FDB913] to-[#E5A700] text-[#0B1D33] rounded-full shadow-xl shadow-[#FDB913]/40 flex items-center justify-center hover:shadow-2xl hover:scale-110 transition-all duration-300 hidden lg:flex"
+// //           className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-br from-[#FFF] to-[#E5A700] text-[#0B1D33] rounded-full shadow-xl shadow-[#FFF]/40 flex items-center justify-center hover:shadow-2xl hover:scale-110 transition-all duration-300 hidden lg:flex"
 // //         >
 // //           <FaArrowRight className="rotate-[-90deg] text-lg" />
 // //         </motion.button>
@@ -753,7 +753,7 @@
 //               <div className="relative overflow-hidden rounded-lg p-1">
 //                 <img
 //                   src={logo}
-//                   alt="Innovise IT"
+//                   alt="Innovise"
 //                   className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
 //                 />
 
@@ -768,7 +768,7 @@
 //                 className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
 //               >
 //                 Home
-//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 //               </Link>
 //               {/* What We Do */}
 //               <div
@@ -789,7 +789,7 @@
 //                       activeMenu === "what" ? "rotate-180" : ""
 //                     }`}
 //                   />
-//                   <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+//                   <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 //                 </button>
 
 //                 <MegaMenu
@@ -805,7 +805,7 @@
 //                 className="px-4 py-1 rounded-lg text-[#12324f] hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group"
 //               >
 //                 What We Think
-//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 //               </Link> */}
 
 //               {/* About */}
@@ -827,7 +827,7 @@
 //                       activeMenu === "who" ? "rotate-180" : ""
 //                     }`}
 //                   />
-//                   <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+//                   <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 //                 </button>
 
 //                 <AboutMenu
@@ -843,7 +843,7 @@
 //                 className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
 //               >
 //                 Careers
-//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 //               </Link> */}
 
 //               {/* Contact */}
@@ -852,7 +852,7 @@
 //                 className="px-4 py-1 rounded-lg hover:bg-[#0a1628]/5 hover:text-[#0a1628] transition-all duration-300 relative group text-[#12324f]"
 //               >
 //                 Contact
-//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+//                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
 //               </Link>
 //             </div>
 
@@ -1073,7 +1073,7 @@ const Navbar = () => {
               <div className="relative overflow-hidden rounded-lg p-1">
                 <img
                   src={logo}
-                  alt="Innovise IT"
+                  alt="Innovise"
                   className="h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
@@ -1085,7 +1085,7 @@ const Navbar = () => {
               {/* Home */}
               <Link to="/" className={navLinkClass()}>
                 Home
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
               </Link>
 
               {/* What We Do */}
@@ -1103,7 +1103,7 @@ const Navbar = () => {
                       activeMenu === "what" ? "rotate-180" : ""
                     }`}
                   />
-                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
                 </button>
 
                 <MegaMenu
@@ -1128,7 +1128,7 @@ const Navbar = () => {
                       activeMenu === "who" ? "rotate-180" : ""
                     }`}
                   />
-                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
                 </button>
 
                 <AboutMenu
@@ -1138,15 +1138,15 @@ const Navbar = () => {
                 />
               </div>
 
-              <Link to="/careers" className={navLinkClass()}>
+              {/* <Link to="/careers" className={navLinkClass()}>
                 Careers
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
-              </Link>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+              </Link> */}
 
               {/* Contact */}
               <Link to="/contact" className={navLinkClass()}>
                 Contact
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFD700] to-[#D4AF37] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#0B2A4A] group-hover:w-3/4 group-hover:-translate-x-1/2 transition-all duration-300"></span>
               </Link>
             </div>
 
@@ -1224,8 +1224,8 @@ const Navbar = () => {
               className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#0a1628] to-[#152d52] text-white shadow-lg shadow-[#0a1628]/30 hover:shadow-xl hover:shadow-[#0a1628]/40 transform hover:scale-105 transition-all duration-300"
             >
               <FaBars className="text-lg" />
-              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-[#FFD700] rounded-full animate-ping"></span>
-              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-[#FFD700] rounded-full"></span>
+              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-[#0B2A4A] rounded-full animate-ping"></span>
+              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-[#0B2A4A] rounded-full"></span>
             </button>
           </nav>
         </Container>
@@ -1244,7 +1244,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] text-[#0a1628] rounded-full shadow-xl shadow-[#FFD700]/40 flex items-center justify-center hover:shadow-2xl hover:scale-110 transition-all duration-300 hidden lg:flex"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-br from-[#0B2A4A] to-[#0B2A4A] text-[#FFF] rounded-full shadow-xl shadow-[#0B2A4A]/40 flex items-center justify-center hover:shadow-2xl hover:scale-110 transition-all duration-300 hidden lg:flex"
         >
           <FaArrowRight className="rotate-[-90deg] text-lg" />
         </motion.button>

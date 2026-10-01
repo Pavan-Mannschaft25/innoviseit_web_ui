@@ -51,9 +51,9 @@
 //     light: "#132D4B",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#FFF",
 //     light: "#FFD54F",
-//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #FFF 0%, #FFD54F 100%)",
 //   },
 // };
 
@@ -100,7 +100,7 @@
 //           decoration={
 //             <div className="mt-8 flex items-center justify-center gap-3">
 //               <div className="w-20 h-1 rounded-full bg-gradient-to-r from-transparent via-[#12324f]/40 to-transparent" />
-//               <div className="w-3.5 h-3.5 rounded-full bg-[#FDB913] shadow-lg shadow-yellow-400/60 animate-pulse" />
+//               <div className="w-3.5 h-3.5 rounded-full bg-[#FFF] shadow-lg shadow-yellow-400/60 animate-pulse" />
 //               <div className="w-20 h-1 rounded-full bg-gradient-to-r from-transparent via-[#12324f]/40 to-transparent" />
 //             </div>
 //           }
@@ -128,7 +128,7 @@
 //         {/* ================================ */}
 //         <div className="text-center mt-16 lg:mt-20">
 //           <button
-//             className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#12324f] to-[#12324f] text-white font-semibold rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-blue-900/40 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
+//             className="group relative inline-flex items-center gap-3 px-10 py-4 bg-gradient-to-r from-[#12324f] to-[#12324f] text-white font-semibold rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-blue-900/40 hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FFF] focus:ring-offset-2"
 //             onClick={() => (window.location.href = "/industries")}
 //           >
 //             {/* Button Shimmer Overlay */}
@@ -180,9 +180,9 @@ const COLORS = {
     darker: "#081629",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFD54F 100%)",
   },
 };
 
@@ -204,7 +204,7 @@ const Industries = () => {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #FDB913 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #FFF 1px, transparent 0)`,
           backgroundSize: "40px 40px",
         }}
         aria-hidden="true"
@@ -220,17 +220,17 @@ const Industries = () => {
           //     <span className="bg-black bg-clip-text text-transparent">
           //       Property and
           //     </span>{" "}
-          //     <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+          //     <span className="bg-black bg-clip-text text-transparent">
           //       Casualty Insurance
           //     </span>
           //   </h2>
           // }
           title={
             <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight">
-              <span className="bg-black bg-clip-text text-transparent">
+              <span className="bg-[#0B2A4A] bg-clip-text text-transparent">
                 Industries We
               </span>{" "}
-              <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+              <span className="bg-[#0B2A4A] bg-clip-text text-transparent">
                 Serve
               </span>
             </h2>

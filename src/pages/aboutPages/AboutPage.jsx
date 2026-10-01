@@ -39,9 +39,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
-    light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    primary: "#0b2a4a",
+    light: "#0b2a4a",
+    gradient: "#0b2a4a",
   },
 };
 
@@ -404,15 +404,8 @@ const ApproachStep = ({ step, index }) => {
           {/* Step Number & Icon */}
           <div className="flex items-center gap-4 mb-6">
             <motion.div
-              className="w-14 h-14 rounded-xl flex items-center justify-center text-xl font-black"
-              style={{
-                background: isHovered
-                  ? BRAND.gold.gradient
-                  : `${BRAND.gold.primary}10`,
-                color: isHovered ? BRAND.navy.dark : BRAND.gold.primary,
-                border: `2px solid ${isHovered ? "transparent" : `${BRAND.gold.primary}30`}`,
-              }}
-              whileHover={{ scale: 1.1 }}
+              className="w-14 h-14 rounded-xl flex items-center justify-center text-xl font-black bg-white"
+              style={{ color: BRAND.gold.primary }}
             >
               {step.step}
             </motion.div>
@@ -430,10 +423,7 @@ const ApproachStep = ({ step, index }) => {
           <div className="space-y-2">
             {step.activities.map((activity, idx) => (
               <div key={idx} className="flex items-center gap-3">
-                <FaCheckCircle
-                  className="text-sm flex-shrink-0"
-                  style={{ color: BRAND.gold.primary }}
-                />
+                <FaCheckCircle className="text-sm flex-shrink-0" />
                 <span className="text-sm font-medium">{activity}</span>
               </div>
             ))}
@@ -554,7 +544,7 @@ const HeroSection = () => (
             className="text-sm font-bold uppercase tracking-[0.25em]"
             style={{ color: BRAND.gold.primary }}
           >
-            About Innovise IT
+            About Innovise
           </span>
           <span
             className="w-12 h-[2px]"
@@ -715,10 +705,7 @@ const WhoWeAreSection = () => (
                   ease: "easeInOut",
                 }}
               >
-                <FaGlobeAmericas
-                  className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3 sm:mb-4 md:mb-6 opacity-40"
-                  style={{ color: BRAND.gold.primary }}
-                />
+                <FaGlobeAmericas className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3 sm:mb-4 md:mb-6 opacity-40 text-white" />
               </motion.div>
 
               {/* Heading */}
@@ -734,10 +721,7 @@ const WhoWeAreSection = () => (
               {/* Floating Stats */}
               <div className="absolute bottom-0 sm:bottom-4 md:bottom-6 left-3 sm:left-4 md:left-6 right-3 sm:right-4 md:right-6 flex justify-between gap-2 md:gap-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg md:rounded-xl px-3 py-2 md:px-4 md:py-3">
-                  <div
-                    className="text-sm sm:text-lg md:text-xl font-black"
-                    style={{ color: BRAND.gold.primary }}
-                  >
+                  <div className="text-sm sm:text-lg md:text-xl font-black text-white">
                     300+
                   </div>
                   <div className="text-[10px] sm:text-xs text-white/60">
@@ -746,10 +730,7 @@ const WhoWeAreSection = () => (
                 </div>
 
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg md:rounded-xl px-3 py-2 md:px-4 md:py-3">
-                  <div
-                    className="text-sm sm:text-lg md:text-xl font-black"
-                    style={{ color: BRAND.gold.primary }}
-                  >
+                  <div className="text-sm sm:text-lg md:text-xl font-black text-white">
                     6+
                   </div>
                   <div className="text-[10px] sm:text-xs text-white/60">
@@ -958,11 +939,7 @@ const MissionVisionSection = () => (
           >
             {/* Icon */}
             <motion.div
-              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-8"
-              style={{
-                background: `${BRAND.gold.primary}15`,
-                border: `2px solid ${BRAND.gold.primary}30`,
-              }}
+              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-8 bg-white"
               whileHover={{ rotate: [0, -10, 10, 0] }}
             >
               <FaBullseye
@@ -973,9 +950,8 @@ const MissionVisionSection = () => (
 
             {/* Label */}
             <span
-              className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4"
+              className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 bg-white"
               style={{
-                background: `${BRAND.gold.primary}15`,
                 color: BRAND.gold.primary,
                 border: `1px solid ${BRAND.gold.primary}25`,
               }}
@@ -985,17 +961,7 @@ const MissionVisionSection = () => (
 
             {/* Title */}
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-snug">
-              Empowering Businesses Through{" "}
-              <span
-                style={{
-                  backgroundImage: BRAND.gold.gradient,
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Innovation
-              </span>
+              Empowering Businesses Through Innovation
             </h3>
 
             {/* Description */}
@@ -1032,9 +998,8 @@ const MissionVisionSection = () => (
           >
             {/* Icon */}
             <motion.div
-              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-8"
+              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-8 bg-white"
               style={{
-                background: `${BRAND.gold.primary}15`,
                 border: `2px solid ${BRAND.gold.primary}30`,
               }}
               whileHover={{ rotate: [0, 10, -10, 0] }}
@@ -1047,9 +1012,8 @@ const MissionVisionSection = () => (
 
             {/* Label */}
             <span
-              className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4"
+              className="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 bg-white"
               style={{
-                background: `${BRAND.gold.primary}15`,
                 color: BRAND.gold.primary,
                 border: `1px solid ${BRAND.gold.primary}25`,
               }}
@@ -1059,17 +1023,7 @@ const MissionVisionSection = () => (
 
             {/* Title */}
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 leading-snug">
-              A Trusted{" "}
-              <span
-                style={{
-                  backgroundImage: BRAND.gold.gradient,
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Global Technology Partner
-              </span>
+              A Trusted Global Technology Partner
             </h3>
 
             {/* Description */}
@@ -1111,7 +1065,7 @@ const WhyChooseUsSection = () => (
             border: `1px solid ${BRAND.gold.primary}30`,
           }}
         >
-          Why Innovise IT
+          Why Innovise
         </span>
 
         <h2
@@ -1280,7 +1234,7 @@ const ApproachSection = () => (
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
-          At Innovise IT, we follow a proven methodology that ensures success at
+          At Innovise, we follow a proven methodology that ensures success at
           every stage.
         </p>
       </motion.header>
@@ -1463,7 +1417,7 @@ const AboutPage = () => {
       <div className="relative w-full h-[30vh] md:h-[70vh] lg:h-[90vh] bg-[#020B2D] overflow-hidden">
         <img
           src={banner}
-          alt="Innovise IT Banner"
+          alt="Innovise Banner"
           className="w-full h-full object-cover object-center"
         />
 
