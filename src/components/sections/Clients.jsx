@@ -440,10 +440,10 @@ const COLORS = {
     darker: "#081629",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
     dark: "#E5A812",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFD54F 100%)",
   },
 };
 
@@ -496,7 +496,7 @@ const PartnerMarquee = () => {
       {/* <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #FDB913 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #FFF 1px, transparent 0)`,
           backgroundSize: "50px 50px",
         }}
         aria-hidden="true"
@@ -525,7 +525,7 @@ const PartnerMarquee = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-yellow-500/[0.12] to-yellow-400/[0.06] border border-yellow-500/25 rounded-full mb-6"
           >
-            <i className="fas fa-handshake text-[#FDB913] text-sm animate-pulse" />
+            <i className="fas fa-handshake text-[#FFF] text-sm animate-pulse" />
             <span className="text-[#FFD54F] text-xs font-bold tracking-[0.15em] uppercase">
               Trusted Partnerships
             </span>
@@ -533,14 +533,14 @@ const PartnerMarquee = () => {
 
           {/* Title */}
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-5 leading-tight">
-            <span className="text-black">Our </span>
+            <span className="text-[#0B2A4A]">Our </span>
             <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+              <span className="bg-[#0B2A4A] bg-clip-text text-transparent">
                 Partners
               </span>
               {/* Underline Decoration */}
               {/* <motion.span
-                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FDB913] to-[#FFD54F] rounded-full"
+                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#FFF] to-[#FFD54F] rounded-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
@@ -558,7 +558,7 @@ const PartnerMarquee = () => {
           {/* Decorative Line */}
           {/* <div className="mt-8 flex items-center justify-center gap-3">
             <div className="w-16 h-[2px] rounded-full bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent" />
-            <div className="w-2.5 h-2.5 rounded-full bg-[#FDB913] shadow-[0_0_15px_rgba(253,185,19,0.5)] animate-pulse" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#FFF] shadow-[0_0_15px_rgba(253,185,19,0.5)] animate-pulse" />
             <div className="w-16 h-[2px] rounded-full bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent" />
           </div> */}
         </motion.div>
@@ -620,7 +620,7 @@ const PartnerMarquee = () => {
 
         {/* Elegant Divider Line */}
         {/* <div className="max-w-4xl mx-auto my-8 h-px bg-gradient-to-r from-transparent via-yellow-500/20 to-transparent relative">
-          <div className="absolute left-1/2 -translate-x-1/2 -top-1 w-2 h-2 rounded-full bg-[#FDB913] shadow-[0_0_10px_rgba(253,185,19,0.6)]" />
+          <div className="absolute left-1/2 -translate-x-1/2 -top-1 w-2 h-2 rounded-full bg-[#FFF] shadow-[0_0_10px_rgba(253,185,19,0.6)]" />
         </div> */}
 
         {/* BOTTOM ROW - Right to Left (Reverse Direction) */}
@@ -675,7 +675,7 @@ const PartnerMarquee = () => {
       {/* ================================ */}
 
       {/* Accent Line */}
-      {/* <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FDB913]/30 to-transparent" /> */}
+      {/* <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFF]/30 to-transparent" /> */}
 
       {/* Custom Animations */}
       {/* <style>{`

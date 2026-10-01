@@ -69,9 +69,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 
@@ -286,7 +286,7 @@ const metricsData = [
     value: "500+",
     label: "Projects Delivered",
     icon: FaProjectDiagram,
-    color: "#FDB913",
+    color: "#FFF",
   },
   {
     value: "200+",
@@ -306,7 +306,7 @@ const metricsData = [
 const testimonials = [
   {
     quote:
-      "Innovise IT's AI engineering team transformed our data analytics capabilities beyond our expectations. Their machine learning models reduced our processing time by 75% while improving prediction accuracy significantly. The team's expertise in MLOps was exceptional.",
+      "Innovise's AI engineering team transformed our data analytics capabilities beyond our expectations. Their machine learning models reduced our processing time by 75% while improving prediction accuracy significantly. The team's expertise in MLOps was exceptional.",
     author: "Sarah Mitchell",
     role: "Chief Technology Officer",
     company: "FinTech Innovations Inc.",
@@ -470,7 +470,7 @@ const ServiceCard = ({ service, index }) => {
         {/* Top Accent Line */}
         <motion.div
           className="absolute top-0 left-0 right-0 h-[3px] origin-left"
-          style={{ background: "linear-gradient(90deg, #FDB913, transparent)" }}
+          style={{ background: "linear-gradient(90deg, #FFF, transparent)" }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
           transition={{ duration: 0.5 }}
@@ -587,7 +587,7 @@ const ProcessStep = ({ step, index }) => (
     }}
   >
     {/* Top Accent on Hover */}
-    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FDB913] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FFF] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
     {/* Step Number */}
     <div className="absolute top-6 right-6 text-6xl font-black text-white/[0.03] select-none">
@@ -618,7 +618,7 @@ const ProcessStep = ({ step, index }) => (
     <p className="text-sm leading-relaxed text-white/65">{step.description}</p>
 
     {/* Glow Effect */}
-    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+    <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
   </motion.div>
 );
 
@@ -992,7 +992,7 @@ const HeroSection = () => (
                     label: "Quality",
                     value: "A+",
                     change: "Excellent",
-                    color: "#FDB913",
+                    color: "#FFF",
                   },
                 ].map((m) => (
                   <div
@@ -1258,7 +1258,7 @@ const ProcessSection = () => (
                 />
               </div>
               {index < processSteps.length - 1 && (
-                <div className="w-0.5 flex-1 mt-3 rounded-full bg-gradient-to-b from-[#FDB913] to-transparent" />
+                <div className="w-0.5 flex-1 mt-3 rounded-full bg-gradient-to-b from-[#FFF] to-transparent" />
               )}
             </div>
             <div className="pb-6">
@@ -1382,7 +1382,7 @@ const BenefitsSection = () => (
                         <circle cx="50" cy="12" r="4" fill="#8B5CF6" />
                         <circle cx="88" cy="50" r="4" fill="#3B82F6" />
                         <circle cx="50" cy="88" r="4" fill="#10B981" />
-                        <circle cx="12" cy="50" r="4" fill="#FDB913" />
+                        <circle cx="12" cy="50" r="4" fill="#FFF" />
                         <circle
                           cx="50"
                           cy="50"

@@ -7,7 +7,7 @@ export const GoldLink = memo(
       className={`group relative inline-flex items-center overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
       style={{
         background:
-          "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+          "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
         color: BRAND.navy.dark,
         boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
         ["--tw-ring-color"]: BRAND.gold.primary,
@@ -63,8 +63,7 @@ export const GoldButton = memo(({ children, className = "", ...props }) => (
   <button
     className={`group relative overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${className}`}
     style={{
-      background:
-        "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+      background: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
       color: BRAND.navy.dark,
       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
       ["--tw-ring-color"]: BRAND.gold.primary,

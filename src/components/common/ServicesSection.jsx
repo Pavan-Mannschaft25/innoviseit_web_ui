@@ -89,7 +89,7 @@
 // // //   >
 // // //     <path
 // // //       d="M1 6L5.24264 10.2426L13.727 1.75732"
-// // //       stroke="#FDB913"
+// // //       stroke="#FFF"
 // // //       strokeWidth="2"
 // // //       strokeLinecap="round"
 // // //       strokeLinejoin="round"
@@ -178,7 +178,7 @@
 // // //           whileHover={{ x: 6 }}
 // // //           whileTap={{ scale: 0.97 }}
 // // //           className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-wide group/btn"
-// // //           style={{ color: "#FDB913" }}
+// // //           style={{ color: "#FFF" }}
 // // //         >
 // // //           <span>Learn More</span>
 // // //           <FaArrowRight
@@ -214,7 +214,7 @@
 // // //             className="absolute -bottom-px left-8 right-8 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
 // // //             style={{
 // // //               background:
-// // //                 "linear-gradient(90deg, transparent, #FDB913, transparent)",
+// // //                 "linear-gradient(90deg, transparent, #FFF, transparent)",
 // // //             }}
 // // //           />
 
@@ -268,7 +268,7 @@
 // // //                 backdropFilter: "blur(10px)",
 // // //               }}
 // // //             >
-// // //               <FaArrowRight size={14} className="text-[#FDB913] -rotate-45" />
+// // //               <FaArrowRight size={14} className="text-[#FFF] -rotate-45" />
 // // //             </div>
 // // //           </div>
 // // //         </div>
@@ -530,14 +530,14 @@
 // // //         ═══════════════════════════════════════════════ */}
 
 // // //         {/* ── Dot 1: Main path, top → bottom ── */}
-// // //         <circle r="5" fill="#FDB913" filter="url(#yellowGlow)">
+// // //         <circle r="5" fill="#FFF" filter="url(#yellowGlow)">
 // // //           <animateMotion dur="12s" repeatCount="indefinite" rotate="auto">
 // // //             <mpath href="#motionPath1" />
 // // //           </animateMotion>
 // // //         </circle>
 
 // // //         {/* ── Dot 2: Main path, bottom → top (reverse, offset) ── */}
-// // //         <circle r="4" fill="#FDB913" opacity="0.7" filter="url(#yellowGlow)">
+// // //         <circle r="4" fill="#FFF" opacity="0.7" filter="url(#yellowGlow)">
 // // //           <animateMotion
 // // //             dur="14s"
 // // //             repeatCount="indefinite"
@@ -549,7 +549,7 @@
 // // //         </circle>
 
 // // //         {/* ── Dot 3: Main path, top → bottom (slower, smaller) ── */}
-// // //         <circle r="3.5" fill="#FDB913" opacity="0.5">
+// // //         <circle r="3.5" fill="#FFF" opacity="0.5">
 // // //           <animateMotion
 // // //             dur="18s"
 // // //             repeatCount="indefinite"
@@ -561,7 +561,7 @@
 // // //         </circle>
 
 // // //         {/* ── Dot 4: Branch path, bottom → top ── */}
-// // //         <circle r="4.5" fill="#FDB913" filter="url(#yellowGlow)">
+// // //         <circle r="4.5" fill="#FFF" filter="url(#yellowGlow)">
 // // //           <animateMotion
 // // //             dur="6s"
 // // //             repeatCount="indefinite"
@@ -573,7 +573,7 @@
 // // //         </circle>
 
 // // //         {/* ── Dot 5: Branch path, top → bottom (reverse) ── */}
-// // //         <circle r="3" fill="#FDB913" opacity="0.6">
+// // //         <circle r="3" fill="#FFF" opacity="0.6">
 // // //           <animateMotion
 // // //             dur="7s"
 // // //             repeatCount="indefinite"
@@ -587,14 +587,14 @@
 // // //         </circle>
 
 // // //         {/* ── Dot 6: Large trailing glow on main path ── */}
-// // //         <circle r="12" fill="#FDB913" opacity="0.12">
+// // //         <circle r="12" fill="#FFF" opacity="0.12">
 // // //           <animateMotion dur="12s" repeatCount="indefinite" rotate="auto">
 // // //             <mpath href="#motionPath1" />
 // // //           </animateMotion>
 // // //         </circle>
 
 // // //         {/* ── Dot 7: Large trailing glow on branch path ── */}
-// // //         <circle r="10" fill="#FDB913" opacity="0.1">
+// // //         <circle r="10" fill="#FFF" opacity="0.1">
 // // //           <animateMotion
 // // //             dur="6s"
 // // //             repeatCount="indefinite"
@@ -614,7 +614,7 @@
 // // //           cx="891"
 // // //           cy="225"
 // // //           r="6"
-// // //           fill="#FDB913"
+// // //           fill="#FFF"
 // // //           opacity="0.5"
 // // //           filter="url(#yellowGlow)"
 // // //         >
@@ -637,7 +637,7 @@
 // // //           cx="7.5"
 // // //           cy="1618"
 // // //           r="6"
-// // //           fill="#FDB913"
+// // //           fill="#FFF"
 // // //           opacity="0.5"
 // // //           filter="url(#yellowGlow)"
 // // //         >
@@ -662,7 +662,7 @@
 // // //           cx="7.5"
 // // //           cy="3075"
 // // //           r="5"
-// // //           fill="#FDB913"
+// // //           fill="#FFF"
 // // //           opacity="0.4"
 // // //           filter="url(#yellowGlow)"
 // // //         >
@@ -687,11 +687,11 @@
 // // //     {/* ── Ambient glow blobs ── */}
 // // //     <div
 // // //       className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.04] -translate-x-1/2 -translate-y-1/2"
-// // //       style={{ background: "#FDB913" }}
+// // //       style={{ background: "#FFF" }}
 // // //     />
 // // //     <div
 // // //       className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[140px] opacity-[0.03] translate-x-1/3 translate-y-1/3"
-// // //       style={{ background: "#FDB913" }}
+// // //       style={{ background: "#FFF" }}
 // // //     />
 
 // // //     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -707,7 +707,7 @@
 // // //           className="inline-block px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6"
 // // //           style={{
 // // //             background: "rgba(253,185,19,0.08)",
-// // //             color: "#FDB913",
+// // //             color: "#FFF",
 // // //             border: "1px solid rgba(253,185,19,0.15)",
 // // //           }}
 // // //         >
@@ -832,7 +832,7 @@
 // //   >
 // //     <path
 // //       d="M1 6L5.24264 10.2426L13.727 1.75732"
-// //       stroke="#FDB913"
+// //       stroke="#FFF"
 // //       strokeWidth="2"
 // //       strokeLinecap="round"
 // //       strokeLinejoin="round"
@@ -930,7 +930,7 @@
 // //         whileHover={{ y: -6, scale: 1.02 }}
 // //         className={`
 // //           absolute bottom-0 rounded-2xl overflow-hidden border border-white/[0.1]
-// //           transition-all duration-500 hover:border-[#FDB913]/30 z-10
+// //           transition-all duration-500 hover:border-[#FFF]/30 z-10
 // //           ${isReversed ? "left-0 w-[52%]" : "right-0 w-[52%]"}
 // //         `}
 // //         style={{
@@ -978,7 +978,7 @@
 // //           ${isReversed ? "top-4 left-4" : "top-4 right-4"}
 // //         `}
 // //         style={{
-// //           background: "#FDB913",
+// //           background: "#FFF",
 // //           boxShadow: "0 0 12px rgba(253,185,19,0.4)",
 // //         }}
 // //       />
@@ -989,7 +989,7 @@
 // //           absolute w-6 h-6 rounded-full opacity-20 z-20
 // //           ${isReversed ? "top-3 right-[18%]" : "top-3 left-[18%]"}
 // //         `}
-// //         style={{ border: "1.5px solid #FDB913" }}
+// //         style={{ border: "1.5px solid #FFF" }}
 // //       />
 // //     </motion.div>
 // //   );
@@ -1031,7 +1031,7 @@
 // //           viewport={{ once: true }}
 // //           transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 // //           className="w-16 h-[2px] mb-6 origin-left"
-// //           style={{ background: "linear-gradient(90deg, #FDB913, transparent)" }}
+// //           style={{ background: "linear-gradient(90deg, #FFF, transparent)" }}
 // //         />
 
 // //         {/* Description */}
@@ -1080,11 +1080,11 @@
 // //           whileHover={{ x: 6 }}
 // //           whileTap={{ scale: 0.97 }}
 // //           className="inline-flex items-center gap-3 text-sm font-semibold tracking-wide group/btn"
-// //           style={{ color: "#FDB913" }}
+// //           style={{ color: "#FFF" }}
 // //         >
 // //           <span>Learn More</span>
 // //           <span
-// //             className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FDB913]/10"
+// //             className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FFF]/10"
 // //             style={{ border: "1px solid rgba(253,185,19,0.25)" }}
 // //           >
 // //             <FaArrowRight
@@ -1405,14 +1405,14 @@
 // //         ═══════════════════════════════════════════ */}
 
 // //         {/* Dot 1: zigzag forward */}
-// //         <circle r="5" fill="#FDB913" filter="url(#yellowGlow)">
+// //         <circle r="5" fill="#FFF" filter="url(#yellowGlow)">
 // //           <animateMotion dur="16s" repeatCount="indefinite" rotate="auto">
 // //             <mpath href="#zigzagFwd" />
 // //           </animateMotion>
 // //         </circle>
 
 // //         {/* Dot 2: zigzag reverse */}
-// //         <circle r="4" fill="#FDB913" opacity="0.7" filter="url(#yellowGlow)">
+// //         <circle r="4" fill="#FFF" opacity="0.7" filter="url(#yellowGlow)">
 // //           <animateMotion
 // //             dur="18s"
 // //             repeatCount="indefinite"
@@ -1424,7 +1424,7 @@
 // //         </circle>
 
 // //         {/* Dot 3: zigzag forward (slower, smaller) */}
-// //         <circle r="3.5" fill="#FDB913" opacity="0.5">
+// //         <circle r="3.5" fill="#FFF" opacity="0.5">
 // //           <animateMotion
 // //             dur="22s"
 // //             repeatCount="indefinite"
@@ -1436,7 +1436,7 @@
 // //         </circle>
 
 // //         {/* Dot 4: branch forward */}
-// //         <circle r="4.5" fill="#FDB913" filter="url(#yellowGlow)">
+// //         <circle r="4.5" fill="#FFF" filter="url(#yellowGlow)">
 // //           <animateMotion
 // //             dur="6s"
 // //             repeatCount="indefinite"
@@ -1448,7 +1448,7 @@
 // //         </circle>
 
 // //         {/* Dot 5: branch reverse */}
-// //         <circle r="3" fill="#FDB913" opacity="0.6">
+// //         <circle r="3" fill="#FFF" opacity="0.6">
 // //           <animateMotion
 // //             dur="7s"
 // //             repeatCount="indefinite"
@@ -1462,14 +1462,14 @@
 // //         </circle>
 
 // //         {/* Dot 6: large trailing glow on zigzag */}
-// //         <circle r="14" fill="#FDB913" opacity="0.1">
+// //         <circle r="14" fill="#FFF" opacity="0.1">
 // //           <animateMotion dur="16s" repeatCount="indefinite" rotate="auto">
 // //             <mpath href="#zigzagFwd" />
 // //           </animateMotion>
 // //         </circle>
 
 // //         {/* Dot 7: large trailing glow on branch */}
-// //         <circle r="10" fill="#FDB913" opacity="0.08">
+// //         <circle r="10" fill="#FFF" opacity="0.08">
 // //           <animateMotion
 // //             dur="6s"
 // //             repeatCount="indefinite"
@@ -1490,7 +1490,7 @@
 // //           cx="891"
 // //           cy="480"
 // //           r="6"
-// //           fill="#FDB913"
+// //           fill="#FFF"
 // //           opacity="0.5"
 // //           filter="url(#yellowGlow)"
 // //         >
@@ -1513,7 +1513,7 @@
 // //           cx="7"
 // //           cy="1080"
 // //           r="6"
-// //           fill="#FDB913"
+// //           fill="#FFF"
 // //           opacity="0.5"
 // //           filter="url(#yellowGlow)"
 // //         >
@@ -1538,7 +1538,7 @@
 // //           cx="891"
 // //           cy="1680"
 // //           r="6"
-// //           fill="#FDB913"
+// //           fill="#FFF"
 // //           opacity="0.5"
 // //           filter="url(#yellowGlow)"
 // //         >
@@ -1563,7 +1563,7 @@
 // //           cx="7"
 // //           cy="2280"
 // //           r="6"
-// //           fill="#FDB913"
+// //           fill="#FFF"
 // //           opacity="0.5"
 // //           filter="url(#yellowGlow)"
 // //         >
@@ -1588,7 +1588,7 @@
 // //           cx="7"
 // //           cy="3075"
 // //           r="5"
-// //           fill="#FDB913"
+// //           fill="#FFF"
 // //           opacity="0.4"
 // //           filter="url(#yellowGlow)"
 // //         >
@@ -1613,11 +1613,11 @@
 // //     {/* ── Ambient glow blobs ── */}
 // //     <div
 // //       className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.04] -translate-x-1/2 -translate-y-1/2"
-// //       style={{ background: "#FDB913" }}
+// //       style={{ background: "#FFF" }}
 // //     />
 // //     <div
 // //       className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[140px] opacity-[0.03] translate-x-1/3 translate-y-1/3"
-// //       style={{ background: "#FDB913" }}
+// //       style={{ background: "#FFF" }}
 // //     />
 
 // //     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -1633,7 +1633,7 @@
 // //           className="inline-block px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6"
 // //           style={{
 // //             background: "rgba(253,185,19,0.08)",
-// //             color: "#FDB913",
+// //             color: "#FFF",
 // //             border: "1px solid rgba(253,185,19,0.15)",
 // //           }}
 // //         >
@@ -1768,7 +1768,7 @@
 // //     x: CENTER.x + RADIUS * Math.cos(rad),
 // //     y: CENTER.y + RADIUS * Math.sin(rad),
 // //     status: m.id === "ai" ? "Active" : "Live",
-// //     statusColor: m.id === "ai" ? "#FDB913" : "#10B981",
+// //     statusColor: m.id === "ai" ? "#FFF" : "#10B981",
 // //   };
 // // });
 
@@ -2004,7 +2004,7 @@
 // //     delay: Math.random() * 5,
 // //     dx: (Math.random() - 0.5) * 30,
 // //     dy: -(15 + Math.random() * 40),
-// //     color: i % 3 === 0 ? "#FDB913" : "#00A4FD",
+// //     color: i % 3 === 0 ? "#FFF" : "#00A4FD",
 // //   }));
 
 // //   return (
@@ -2113,7 +2113,7 @@
 // //       style={{ animation: "eco-ripple 3s ease-out infinite" }}
 // //     />
 // //     <div
-// //       className="absolute inset-[-20%] rounded-full border border-[#FDB913]/10"
+// //       className="absolute inset-[-20%] rounded-full border border-[#FFF]/10"
 // //       style={{ animation: "eco-ripple 3s 1s ease-out infinite" }}
 // //     />
 // //     <div
@@ -2126,7 +2126,7 @@
 // //       className="absolute inset-[-3px] rounded-full"
 // //       style={{
 // //         background:
-// //           "conic-gradient(from 0deg, transparent 55%, #00A4FD 65%, #FDB913 78%, #00A4FD 88%, transparent 95%)",
+// //           "conic-gradient(from 0deg, transparent 55%, #00A4FD 65%, #FFF 78%, #00A4FD 88%, transparent 95%)",
 // //         animation: "eco-rotate-border 5s linear infinite",
 // //       }}
 // //     />
@@ -2165,7 +2165,7 @@
 // //         className="w-[40%] h-[1px] mt-1"
 // //         style={{
 // //           background:
-// //             "linear-gradient(90deg, transparent, #FDB913, transparent)",
+// //             "linear-gradient(90deg, transparent, #FFF, transparent)",
 // //         }}
 // //       />
 // //     </div>
@@ -2217,7 +2217,7 @@
 // //           className="h-full rounded-full"
 // //           style={{
 // //             width: `${data.barW}%`,
-// //             background: "linear-gradient(90deg, #00A4FD, #FDB913)",
+// //             background: "linear-gradient(90deg, #00A4FD, #FFF)",
 // //             animation: `eco-bar-fill 2s ${1 + index * 0.3}s ease-out forwards`,
 // //             "--bar-width": `${data.barW}%`,
 // //           }}
@@ -2286,7 +2286,7 @@
 // //           {/* Data packet → outward */}
 // //           <circle
 // //             r={active ? "0.7" : "0.4"}
-// //             fill={active ? "#FDB913" : "#00A4FD"}
+// //             fill={active ? "#FFF" : "#00A4FD"}
 // //             filter="url(#pGlow)"
 // //             opacity={active ? 1 : 0.65}
 // //           >
@@ -2314,7 +2314,7 @@
 // //           {/* Trailing glow */}
 // //           <circle
 // //             r={active ? "1.8" : "1"}
-// //             fill={active ? "#FDB913" : "#00A4FD"}
+// //             fill={active ? "#FFF" : "#00A4FD"}
 // //             opacity={active ? 0.12 : 0.05}
 // //           >
 // //             <animateMotion
@@ -2339,7 +2339,7 @@
 // //         cy={CENTER.y}
 // //         r="2"
 // //         fill="none"
-// //         stroke="#FDB913"
+// //         stroke="#FFF"
 // //         strokeWidth="0.2"
 // //         opacity="0.6"
 // //       >
@@ -2470,7 +2470,7 @@
 // //               </circle>
 
 // //               {/* Packet on branch */}
-// //               <circle r="0.4" fill="#FDB913" opacity="0.6">
+// //               <circle r="0.4" fill="#FFF" opacity="0.6">
 // //                 <animateMotion
 // //                   dur={`${2 + i * 0.3}s`}
 // //                   repeatCount="indefinite"
@@ -2525,7 +2525,7 @@
 // //             <mpath href="#mvert" />
 // //           </animateMotion>
 // //         </circle>
-// //         <circle r="0.35" fill="#FDB913" opacity="0.5">
+// //         <circle r="0.35" fill="#FFF" opacity="0.5">
 // //           <animateMotion
 // //             dur="6s"
 // //             repeatCount="indefinite"
@@ -2693,7 +2693,7 @@
 // //   >
 // //     <path
 // //       d="M1 6L5.24264 10.2426L13.727 1.75732"
-// //       stroke="#FDB913"
+// //       stroke="#FFF"
 // //       strokeWidth="2"
 // //       strokeLinecap="round"
 // //       strokeLinejoin="round"
@@ -2735,7 +2735,7 @@
 // //           viewport={{ once: true }}
 // //           transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 // //           className="w-16 h-[2px] mb-6 origin-left"
-// //           style={{ background: "linear-gradient(90deg, #FDB913, transparent)" }}
+// //           style={{ background: "linear-gradient(90deg, #FFF, transparent)" }}
 // //         />
 
 // //         <motion.p
@@ -2781,11 +2781,11 @@
 // //           whileHover={{ x: 6 }}
 // //           whileTap={{ scale: 0.97 }}
 // //           className="inline-flex items-center gap-3 text-sm font-semibold tracking-wide group/btn"
-// //           style={{ color: "#FDB913" }}
+// //           style={{ color: "#FFF" }}
 // //         >
 // //           <span>Learn More</span>
 // //           <span
-// //             className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FDB913]/10"
+// //             className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FFF]/10"
 // //             style={{ border: "1px solid rgba(253,185,19,0.25)" }}
 // //           >
 // //             <FaArrowRight
@@ -3029,12 +3029,12 @@
 // //           ))}
 
 // //           {/* Animated yellow dots */}
-// //           <circle r="5" fill="#FDB913" filter="url(#yellowGlow)">
+// //           <circle r="5" fill="#FFF" filter="url(#yellowGlow)">
 // //             <animateMotion dur="16s" repeatCount="indefinite" rotate="auto">
 // //               <mpath href="#zigzagFwd" />
 // //             </animateMotion>
 // //           </circle>
-// //           <circle r="4" fill="#FDB913" opacity="0.7" filter="url(#yellowGlow)">
+// //           <circle r="4" fill="#FFF" opacity="0.7" filter="url(#yellowGlow)">
 // //             <animateMotion
 // //               dur="18s"
 // //               repeatCount="indefinite"
@@ -3044,7 +3044,7 @@
 // //               <mpath href="#zigzagRev" />
 // //             </animateMotion>
 // //           </circle>
-// //           <circle r="3.5" fill="#FDB913" opacity="0.5">
+// //           <circle r="3.5" fill="#FFF" opacity="0.5">
 // //             <animateMotion
 // //               dur="22s"
 // //               repeatCount="indefinite"
@@ -3054,7 +3054,7 @@
 // //               <mpath href="#zigzagFwd" />
 // //             </animateMotion>
 // //           </circle>
-// //           <circle r="4.5" fill="#FDB913" filter="url(#yellowGlow)">
+// //           <circle r="4.5" fill="#FFF" filter="url(#yellowGlow)">
 // //             <animateMotion
 // //               dur="6s"
 // //               repeatCount="indefinite"
@@ -3064,7 +3064,7 @@
 // //               <mpath href="#branchPath" />
 // //             </animateMotion>
 // //           </circle>
-// //           <circle r="3" fill="#FDB913" opacity="0.6">
+// //           <circle r="3" fill="#FFF" opacity="0.6">
 // //             <animateMotion
 // //               dur="7s"
 // //               repeatCount="indefinite"
@@ -3076,12 +3076,12 @@
 // //               <mpath href="#branchPath" />
 // //             </animateMotion>
 // //           </circle>
-// //           <circle r="12" fill="#FDB913" opacity="0.12">
+// //           <circle r="12" fill="#FFF" opacity="0.12">
 // //             <animateMotion dur="16s" repeatCount="indefinite" rotate="auto">
 // //               <mpath href="#zigzagFwd" />
 // //             </animateMotion>
 // //           </circle>
-// //           <circle r="10" fill="#FDB913" opacity="0.1">
+// //           <circle r="10" fill="#FFF" opacity="0.1">
 // //             <animateMotion
 // //               dur="6s"
 // //               repeatCount="indefinite"
@@ -3103,7 +3103,7 @@
 // //               cx={cx}
 // //               cy={cy}
 // //               r="6"
-// //               fill="#FDB913"
+// //               fill="#FFF"
 // //               opacity="0.5"
 // //               filter="url(#yellowGlow)"
 // //             >
@@ -3129,11 +3129,11 @@
 // //       {/* ── Ambient glow blobs ── */}
 // //       <div
 // //         className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.04] -translate-x-1/2 -translate-y-1/2"
-// //         style={{ background: "#FDB913" }}
+// //         style={{ background: "#FFF" }}
 // //       />
 // //       <div
 // //         className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[140px] opacity-[0.03] translate-x-1/3 translate-y-1/3"
-// //         style={{ background: "#FDB913" }}
+// //         style={{ background: "#FFF" }}
 // //       />
 
 // //       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -3149,7 +3149,7 @@
 // //             className="inline-block px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6"
 // //             style={{
 // //               background: "rgba(253,185,19,0.08)",
-// //               color: "#FDB913",
+// //               color: "#FFF",
 // //               border: "1px solid rgba(253,185,19,0.15)",
 // //             }}
 // //           >
@@ -3256,7 +3256,7 @@
 //   >
 //     <path
 //       d="M1 6L5.24264 10.2426L13.727 1.75732"
-//       stroke="#FDB913"
+//       stroke="#FFF"
 //       strokeWidth="2"
 //       strokeLinecap="round"
 //       strokeLinejoin="round"
@@ -3314,7 +3314,7 @@
 //     // ── Widgets ──
 //     const widgets = [
 //       { label: "Incidents", value: "3", x: 0.08, y: 0.12, color: "#00A4FD" },
-//       { label: "Uptime", value: "99.97%", x: 0.85, y: 0.1, color: "#FDB913" },
+//       { label: "Uptime", value: "99.97%", x: 0.85, y: 0.1, color: "#FFF" },
 //       { label: "Requests", value: "47", x: 0.08, y: 0.82, color: "#00A4FD" },
 //       {
 //         label: "Performance",
@@ -3789,7 +3789,7 @@
 //         ty,
 //         tr * 0.7,
 //       );
-//       tGrad.addColorStop(0, "#FDB913");
+//       tGrad.addColorStop(0, "#FFF");
 //       tGrad.addColorStop(0.5, "#D4A020");
 //       tGrad.addColorStop(1, "#8A6A10");
 //       ctx.fillStyle = tGrad;
@@ -3874,7 +3874,7 @@
 //       const progress = 0.55 + 0.35 * Math.sin(time * 0.3);
 //       const fillGrad = ctx.createLinearGradient(progX, 0, progX + progW, 0);
 //       fillGrad.addColorStop(0, "#00A4FD");
-//       fillGrad.addColorStop(0.6, "#FDB913");
+//       fillGrad.addColorStop(0.6, "#FFF");
 //       fillGrad.addColorStop(1, "#10B981");
 //       ctx.fillStyle = fillGrad;
 //       ctx.beginPath();
@@ -4676,7 +4676,7 @@
 //           viewport={{ once: true }}
 //           transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
 //           className="w-16 h-[2px] mb-6 origin-left"
-//           style={{ background: "linear-gradient(90deg, #FDB913, transparent)" }}
+//           style={{ background: "linear-gradient(90deg, #FFF, transparent)" }}
 //         />
 
 //         <motion.p
@@ -4722,11 +4722,11 @@
 //           whileHover={{ x: 6 }}
 //           whileTap={{ scale: 0.97 }}
 //           className="inline-flex items-center gap-3 text-sm font-semibold tracking-wide group/btn"
-//           style={{ color: "#FDB913" }}
+//           style={{ color: "#FFF" }}
 //         >
 //           <span>Learn More</span>
 //           <span
-//             className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FDB913]/10"
+//             className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FFF]/10"
 //             style={{ border: "1px solid rgba(253,185,19,0.25)" }}
 //           >
 //             <FaArrowRight
@@ -4757,11 +4757,11 @@
 //       {/* ── Ambient glow blobs ── */}
 //       <div
 //         className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.04] -translate-x-1/2 -translate-y-1/2"
-//         style={{ background: "#FDB913" }}
+//         style={{ background: "#FFF" }}
 //       />
 //       <div
 //         className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[140px] opacity-[0.03] translate-x-1/3 translate-y-1/3"
-//         style={{ background: "#FDB913" }}
+//         style={{ background: "#FFF" }}
 //       />
 
 //       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -4777,7 +4777,7 @@
 //             className="inline-block px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6"
 //             style={{
 //               background: "rgba(253,185,19,0.08)",
-//               color: "#FDB913",
+//               color: "#FFF",
 //               border: "1px solid rgba(253,185,19,0.15)",
 //             }}
 //           >
@@ -4884,7 +4884,7 @@ const CheckIcon = () => (
   >
     <path
       d="M1 6L5.24264 10.2426L13.727 1.75732"
-      stroke="#FDB913"
+      stroke="#FFF"
       strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -4939,7 +4939,7 @@ const MaintenanceViz = () => {
 
     const widgets = [
       { label: "Incidents", value: "3", x: 0.06, y: 0.1, color: "#00A4FD" },
-      { label: "Uptime", value: "99.97%", x: 0.86, y: 0.08, color: "#FDB913" },
+      { label: "Uptime", value: "99.97%", x: 0.86, y: 0.08, color: "#FFF" },
       { label: "Requests", value: "47", x: 0.06, y: 0.86, color: "#00A4FD" },
       {
         label: "Performance",
@@ -5567,7 +5567,7 @@ const MigrationViz = () => {
         ty,
         tr * 0.65,
       );
-      tGrad.addColorStop(0, "#FDB913");
+      tGrad.addColorStop(0, "#FFF");
       tGrad.addColorStop(0.6, "#D4A020");
       tGrad.addColorStop(1, "#8A6A10");
       ctx.fillStyle = tGrad;
@@ -5630,7 +5630,7 @@ const MigrationViz = () => {
       const qualityPercent = qualityVal / 100;
       const barGrad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
       barGrad.addColorStop(0, "#00A4FD");
-      barGrad.addColorStop(0.6, "#FDB913");
+      barGrad.addColorStop(0.6, "#FFF");
       barGrad.addColorStop(1, "#10B981");
       ctx.fillStyle = barGrad;
       ctx.beginPath();
@@ -6498,7 +6498,7 @@ const SecurityViz = () => {
         {
           label: "Code Quality",
           value: "94%",
-          color: "#FDB913",
+          color: "#FFF",
           x: 0.78,
           y: 0.02,
           icon: "✓",
@@ -6677,7 +6677,7 @@ const ServiceRow = ({ service, index }) => {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="w-16 h-[2px] mb-6 origin-left"
-          style={{ background: "linear-gradient(90deg, #FDB913, transparent)" }}
+          style={{ background: "linear-gradient(90deg, #FFF, transparent)" }}
         />
 
         <motion.p
@@ -6723,11 +6723,11 @@ const ServiceRow = ({ service, index }) => {
           whileHover={{ x: 6 }}
           whileTap={{ scale: 0.97 }}
           className="inline-flex items-center gap-3 text-sm font-semibold tracking-wide group/btn"
-          style={{ color: "#FDB913" }}
+          style={{ color: "#FFF" }}
         >
           <span>Learn More</span>
           <span
-            className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FDB913]/10"
+            className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 group-hover/btn:bg-[#FFF]/10"
             style={{ border: "1px solid rgba(253,185,19,0.25)" }}
           >
             <FaArrowRight
@@ -6756,11 +6756,11 @@ const ServicesSection = () => {
     >
       <div
         className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-[0.06] -translate-x-1/2 -translate-y-1/2"
-        style={{ background: "#FDB913" }}
+        style={{ background: "#FFF" }}
       />
       <div
         className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-[140px] opacity-[0.05] translate-x-1/3 translate-y-1/3"
-        style={{ background: "#FDB913" }}
+        style={{ background: "#FFF" }}
       />
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -6775,7 +6775,7 @@ const ServicesSection = () => {
             className="inline-block px-5 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6"
             style={{
               background: "rgba(253,185,19,0.10)",
-              color: "#FDB913",
+              color: "#FFF",
               border: "1px solid rgba(253,185,19,0.20)",
             }}
           >

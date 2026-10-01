@@ -38,8 +38,8 @@
 //     700: "#152d52",
 //   },
 //   gold: {
-//     400: "#FFD700",
-//     500: "#D4AF37",
+//     400: "#FFF",
+//     500: "#FFF",
 //     600: "#B8962E",
 //   },
 // };
@@ -97,9 +97,9 @@
 //     whileHover={{ scale: 1.05, y: -10 }}
 //     className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl text-center group cursor-pointer border border-gray-100 relative overflow-hidden"
 //   >
-//     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFD700] via-[#D4AF37] to-[#FFD700] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-//     <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
-//       <Icon className="text-4xl text-[#FFD700]" />
+//     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+//     <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFF]/20">
+//       <Icon className="text-4xl text-[#FFF]" />
 //     </div>
 //     <h3 className="font-bold text-xl mb-3 text-[#0a1628]">{title}</h3>
 //     {description && (
@@ -119,11 +119,11 @@
 //     "inline-flex items-center gap-2 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2";
 //   const variants = {
 //     primary:
-//       "bg-gradient-to-r from-[#FFD700] to-[#D4AF37] hover:from-[#D4AF37] hover:to-[#B8962E] text-[#0a1628] shadow-lg hover:shadow-xl focus:ring-[#FFD700]",
+//       "bg-gradient-to-r from-[#FFF] to-[#FFF] hover:from-[#FFF] hover:to-[#B8962E] text-[#0a1628] shadow-lg hover:shadow-xl focus:ring-[#FFF]",
 //     secondary:
 //       "bg-white hover:bg-gray-50 text-[#0a1628] border-2 border-[#0a1628] focus:ring-[#0a1628]",
 //     ghost:
-//       "bg-transparent text-white hover:bg-[#FFD700]/10 focus:ring-[#FFD700] border border-[#FFD700]/50",
+//       "bg-transparent text-white hover:bg-[#FFF]/10 focus:ring-[#FFF] border border-[#FFF]/50",
 //   };
 //   const sizes = {
 //     sm: "px-5 py-2.5 text-sm",
@@ -142,7 +142,7 @@
 // };
 
 // const GoldBadge = ({ children, icon = true }) => (
-//   <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full text-[#FFD700] text-sm font-medium backdrop-blur-sm">
+//   <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFF]/10 border border-[#FFF]/30 rounded-full text-[#FFF] text-sm font-medium backdrop-blur-sm">
 //     {icon && <FaStar className="text-xs animate-pulse" />}
 //     {children}
 //   </div>
@@ -279,12 +279,12 @@
 //       <motion.div
 //         animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
 //         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-//         className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-[#FFD700]/30 to-[#D4AF37]/10 rounded-full filter blur-3xl"
+//         className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-[#FFF]/30 to-[#FFF]/10 rounded-full filter blur-3xl"
 //       />
 //       <motion.div
 //         animate={{ scale: [1.3, 1, 1.3], opacity: [0.08, 0.12, 0.08] }}
 //         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-//         className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-[#D4AF37]/20 to-[#FFD700]/10 rounded-full filter blur-3xl"
+//         className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-[#FFF]/20 to-[#FFF]/10 rounded-full filter blur-3xl"
 //       />
 //       {/* Power Grid + Molecular Hybrid Pattern */}
 //       <div
@@ -312,7 +312,7 @@
 //         <GoldBadge className="mb-8">Driving Operational Excellence</GoldBadge>
 //         <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
 //           Energy, Oil & Gas, Utilities &{" "}
-//           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
+//           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF]">
 //             Chemicals
 //           </span>
 //         </h1>
@@ -333,7 +333,7 @@
 //           initial={{ opacity: 0, y: 30 }}
 //           animate={{ opacity: 1, y: 0 }}
 //           transition={{ delay: 0.6 }}
-//           className="grid grid-cols-3 gap-6 p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-[#FFD700]/20"
+//           className="grid grid-cols-3 gap-6 p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-[#FFF]/20"
 //         >
 //           {[
 //             { value: "150+", label: "Global Projects" },
@@ -342,9 +342,9 @@
 //           ].map((stat, i) => (
 //             <div
 //               key={i}
-//               className="border-l-2 border-[#FFD700]/40 pl-4 first:border-l-0 first:pl-0"
+//               className="border-l-2 border-[#FFF]/40 pl-4 first:border-l-0 first:pl-0"
 //             >
-//               <div className="text-3xl font-bold text-[#FFD700]">
+//               <div className="text-3xl font-bold text-[#FFF]">
 //                 {stat.value}
 //               </div>
 //               <div className="text-sm text-gray-400">{stat.label}</div>
@@ -361,7 +361,7 @@
 //       transition={{ duration: 0.8, delay: 0.3 }}
 //     >
 //       <div className="relative">
-//         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
+//         <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFF]/30">
 //           <img
 //             src={img1}
 //             alt="Modern energy infrastructure showcasing power generation and smart grid technology"
@@ -370,23 +370,23 @@
 //           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 
 //           {/* Gold Overlay Effect */}
-//           <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/5 to-transparent"></div>
+//           <div className="absolute inset-0 bg-gradient-to-tr from-[#FFF]/5 to-transparent"></div>
 
 //           {/* Energy Pulse Animation Overlay */}
 //           <motion.div
 //             animate={{ opacity: [0, 0.1, 0] }}
 //             transition={{ duration: 2, repeat: Infinity }}
-//             className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/20 via-transparent to-[#FFD700]/20"
+//             className="absolute inset-0 bg-gradient-to-r from-[#FFF]/20 via-transparent to-[#FFF]/20"
 //           />
 //         </div>
 
 //         <motion.div
 //           animate={{ y: [-10, 10, -10] }}
 //           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-//           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
+//           className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFF]/30 hidden lg:block"
 //         >
 //           <div className="flex items-center gap-3">
-//             <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-xl flex items-center justify-center">
+//             <div className="w-12 h-12 bg-gradient-to-br from-[#FFF] to-[#FFF] rounded-xl flex items-center justify-center">
 //               <FaShieldAlt className="text-2xl text-[#0a1628]" />
 //             </div>
 //             <div>
@@ -399,10 +399,10 @@
 //         <motion.div
 //           animate={{ y: [10, -10, 10] }}
 //           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-//           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
+//           className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFF]/50 hidden lg:block"
 //         >
 //           <div className="flex items-center gap-3">
-//             <FaBolt className="text-3xl text-[#FFD700]" />
+//             <FaBolt className="text-3xl text-[#FFF]" />
 //             <div>
 //               <div className="text-sm font-bold">Smart Grid</div>
 //               <div className="text-xs text-gray-300">Enabled</div>
@@ -410,8 +410,8 @@
 //           </div>
 //         </motion.div>
 
-//         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
-//         <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-4 border-r-4 border-[#FFD700]/50 rounded-br-3xl"></div>
+//         <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFF]/50 rounded-tl-3xl"></div>
+//         <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-4 border-r-4 border-[#FFF]/50 rounded-br-3xl"></div>
 //       </div>
 //     </motion.div>
 //   </section>
@@ -430,7 +430,7 @@
 //         <Card key={i} delay={i * 0.1}>
 //           <div className="flex flex-col h-full">
 //             <div className="w-14 h-14 bg-primary-800 rounded-xl flex items-center justify-center mb-5 shadow-lg">
-//               <challenge.icon className="text-2xl text-[#FFD700]" />
+//               <challenge.icon className="text-2xl text-[#FFF]" />
 //             </div>
 //             <h3 className="font-bold text-lg mb-3 text-[#0a1628]">
 //               {challenge.title}
@@ -439,7 +439,7 @@
 //               {challenge.description}
 //             </p>
 //             <div className="mt-6 pt-4 border-t border-gray-100">
-//               <span className="text-[#D4AF37] text-sm font-semibold">
+//               <span className="text-[#FFF] text-sm font-semibold">
 //                 Learn More →
 //               </span>
 //             </div>
@@ -487,7 +487,7 @@
 //       <motion.div
 //         animate={{ rotate: 360 }}
 //         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-//         className="absolute -top-1/2 -right-1/4 w-full h-full bg-gradient-to-br from-[#FFD700]/5 to-transparent rounded-full"
+//         className="absolute -top-1/2 -right-1/4 w-full h-full bg-gradient-to-br from-[#FFF]/5 to-transparent rounded-full"
 //       />
 //     </div>
 
@@ -500,7 +500,7 @@
 //         transition={{ duration: 0.6 }}
 //       >
 //         <div className="relative">
-//           <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
+//           <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFF]/30">
 //             <img
 //               src={img2}
 //               alt="Advanced smart grid infrastructure and power distribution systems"
@@ -509,13 +509,13 @@
 //             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
 //           </div>
 
-//           <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFD700]/30">
+//           <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-[#FFF]/30">
 //             <div className="grid grid-cols-3 gap-4 text-center">
 //               <div>
 //                 <div className="text-3xl font-bold text-[#0a1628]">45%</div>
 //                 <div className="text-xs text-gray-600 mt-1">Reliability ↑</div>
 //               </div>
-//               <div className="border-x border-[#FFD700]/30">
+//               <div className="border-x border-[#FFF]/30">
 //                 <div className="text-3xl font-bold text-[#0a1628]">0</div>
 //                 <div className="text-xs text-gray-600 mt-1">Incidents</div>
 //               </div>
@@ -526,8 +526,8 @@
 //             </div>
 //           </div>
 
-//           <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFD700] rounded-tl-2xl"></div>
-//           <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-[#FFD700] rounded-br-2xl"></div>
+//           <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFF] rounded-tl-2xl"></div>
+//           <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-[#FFF] rounded-br-2xl"></div>
 //         </div>
 //       </motion.div>
 
@@ -555,7 +555,7 @@
 //                 transition={{ delay: i * 0.1 + 0.3 }}
 //                 className="flex items-start gap-4 group"
 //               >
-//                 <div className="w-7 h-7 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg group-hover:scale-110 transition-transform">
+//                 <div className="w-7 h-7 bg-gradient-to-br from-[#FFF] to-[#FFF] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg group-hover:scale-110 transition-transform">
 //                   <FaCheckCircle className="text-[#0a1628] text-sm" />
 //                 </div>
 //                 <span className="text-gray-200 font-medium group-hover:text-white transition-colors leading-relaxed">
@@ -589,7 +589,7 @@
 //         Our Proven Approach
 //       </SectionTitle>
 //       <div className="relative">
-//         <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-[#0a1628] via-[#FFD700] to-[#0a1628] rounded-full shadow-lg"></div>
+//         <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-[#0a1628] via-[#FFF] to-[#0a1628] rounded-full shadow-lg"></div>
 //         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
 //           {PROCESS_STEPS.map((step, i) => (
 //             <motion.div
@@ -601,14 +601,14 @@
 //               className="relative text-center group"
 //             >
 //               <div className="relative inline-block mb-6">
-//                 <div className="w-24 h-24 bg-white border-4 border-[#0a1628] rounded-full flex items-center justify-center shadow-xl relative z-10 group-hover:border-[#FFD700] group-hover:scale-110 transition-all duration-300 mx-auto">
-//                   <step.icon className="text-3xl text-[#0a1628] group-hover:text-[#FFD700] transition-colors" />
+//                 <div className="w-24 h-24 bg-white border-4 border-[#0a1628] rounded-full flex items-center justify-center shadow-xl relative z-10 group-hover:border-[#FFF] group-hover:scale-110 transition-all duration-300 mx-auto">
+//                   <step.icon className="text-3xl text-[#0a1628] group-hover:text-[#FFF] transition-colors" />
 //                 </div>
-//                 <div className="absolute -top-2 -right-2 w-9 h-9 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-full flex items-center justify-center text-[#0a1628] text-sm font-bold shadow-lg border-2 border-white">
+//                 <div className="absolute -top-2 -right-2 w-9 h-9 bg-gradient-to-br from-[#FFF] to-[#FFF] rounded-full flex items-center justify-center text-[#0a1628] text-sm font-bold shadow-lg border-2 border-white">
 //                   {step.step}
 //                 </div>
 //               </div>
-//               <h3 className="font-bold text-xl mb-3 text-[#0a1628] group-hover:text-[#D4AF37] transition-colors">
+//               <h3 className="font-bold text-xl mb-3 text-[#0a1628] group-hover:text-[#FFF] transition-colors">
 //                 {step.title}
 //               </h3>
 //               <p className="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">
@@ -616,8 +616,8 @@
 //               </p>
 //               {i < PROCESS_STEPS.length - 1 && (
 //                 <div className="lg:hidden flex justify-center my-4">
-//                   <div className="w-10 h-10 bg-[#FFD700]/20 rounded-full flex items-center justify-center">
-//                     <FaArrowDown className="text-[#D4AF37]" />
+//                   <div className="w-10 h-10 bg-[#FFF]/20 rounded-full flex items-center justify-center">
+//                     <FaArrowDown className="text-[#FFF]" />
 //                   </div>
 //                 </div>
 //               )}
@@ -635,7 +635,7 @@
 //     <div
 //       className="absolute inset-0 opacity-[0.05]"
 //       style={{
-//         backgroundImage: `radial-gradient(circle at 2px 2px, #FFD700 1px, transparent 0)`,
+//         backgroundImage: `radial-gradient(circle at 2px 2px, #FFF 1px, transparent 0)`,
 //         backgroundSize: "35px 35px",
 //       }}
 //     ></div>
@@ -643,23 +643,23 @@
 //     <motion.div
 //       animate={{ scale: [1, 1.2, 1], x: [-20, 20, -20], y: [-10, 10, -10] }}
 //       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-//       className="absolute top-10 left-10 w-72 h-72 bg-[#FFD700]/15 rounded-full filter blur-3xl"
+//       className="absolute top-10 left-10 w-72 h-72 bg-[#FFF]/15 rounded-full filter blur-3xl"
 //     />
 //     <motion.div
 //       animate={{ scale: [1.2, 1, 1.2], x: [20, -20, 20], y: [10, -10, 10] }}
 //       transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-//       className="absolute bottom-10 right-10 w-96 h-96 bg-[#D4AF37]/12 rounded-full filter blur-3xl"
+//       className="absolute bottom-10 right-10 w-96 h-96 bg-[#FFF]/12 rounded-full filter blur-3xl"
 //     />
 
 //     <motion.div
 //       animate={{ rotate: 360 }}
 //       transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-//       className="absolute top-20 right-20 w-44 h-44 border-2 border-[#FFD700]/20 rounded-full"
+//       className="absolute top-20 right-20 w-44 h-44 border-2 border-[#FFF]/20 rounded-full"
 //     />
 //     <motion.div
 //       animate={{ rotate: -360 }}
 //       transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-//       className="absolute bottom-20 left-20 w-36 h-36 border-2 border-[#FFD700]/15 rounded-full"
+//       className="absolute bottom-20 left-20 w-36 h-36 border-2 border-[#FFF]/15 rounded-full"
 //     />
 
 //     <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
@@ -674,7 +674,7 @@
 //         </GoldBadge>
 //         <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
 //           Power the Future with{" "}
-//           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
+//           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF]">
 //             Operational Excellence
 //           </span>
 //         </h2>
@@ -691,18 +691,18 @@
 //             Download Compliance Guide
 //           </Button>
 //         </div>
-//         <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFD700]/20">
+//         <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFF]/20">
 //           <div className="flex items-center gap-2">
-//             <FaBolt className="text-[#FFD700]" /> Smart Infrastructure
+//             <FaBolt className="text-[#FFF]" /> Smart Infrastructure
 //           </div>
 //           <div className="flex items-center gap-2">
-//             <FaShieldAlt className="text-[#FFD700]" /> EHS Compliant
+//             <FaShieldAlt className="text-[#FFF]" /> EHS Compliant
 //           </div>
 //           <div className="flex items-center gap-2">
-//             <FaFlask className="text-[#FFD700]" /> Batch Optimization
+//             <FaFlask className="text-[#FFF]" /> Batch Optimization
 //           </div>
 //           <div className="flex items-center gap-2">
-//             <FaGlobeAmericas className="text-[#FFD700]" /> Global Scale
+//             <FaGlobeAmericas className="text-[#FFF]" /> Global Scale
 //           </div>
 //         </div>
 //       </motion.div>
@@ -730,7 +730,7 @@
 //     <div className="w-full font-sans antialiased text-gray-800 overflow-x-hidden bg-gray-50">
 //       <a
 //         href="#main-content"
-//         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#FFD700] text-[#0a1628] px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
+//         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#FFF] text-[#0a1628] px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-[#FFF]"
 //       >
 //         Skip to main content
 //       </a>
@@ -786,8 +786,8 @@ const COLORS = {
     700: "#152d52",
   },
   gold: {
-    400: "#FFD700",
-    500: "#D4AF37",
+    400: "#FFF",
+    500: "#FFF",
     600: "#B8962E",
   },
 };
@@ -845,9 +845,9 @@ const IconCard = ({ icon: Icon, title, description, delay = 0 }) => (
     whileHover={{ scale: 1.05, y: -10 }}
     className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl text-center group cursor-pointer border border-gray-100 relative overflow-hidden"
   >
-    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFD700] via-[#D4AF37] to-[#FFD700] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-    <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFD700]/20">
-      <Icon className="text-4xl text-[#FFD700]" />
+    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+    <div className="w-20 h-20 bg-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg group-hover:shadow-[#FFF]/20">
+      <Icon className="text-4xl text-[#FFF]" />
     </div>
     <h3 className="font-bold text-xl mb-3 text-[#0a1628]">{title}</h3>
     {description && (
@@ -867,11 +867,11 @@ const Button = ({
     "inline-flex items-center gap-2 font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2";
   const variants = {
     primary:
-      "bg-gradient-to-r from-[#FFD700] to-[#D4AF37] hover:from-[#D4AF37] hover:to-[#B8962E] text-[#0a1628] shadow-lg hover:shadow-xl focus:ring-[#FFD700]",
+      "bg-gradient-to-r from-[#FFF] to-[#FFF] hover:from-[#FFF] hover:to-[#B8962E] text-[#0a1628] shadow-lg hover:shadow-xl focus:ring-[#FFF]",
     secondary:
       "bg-white hover:bg-gray-50 text-[#0a1628] border-2 border-[#0a1628] focus:ring-[#0a1628]",
     ghost:
-      "bg-transparent text-white hover:bg-[#FFD700]/10 focus:ring-[#FFD700] border border-[#FFD700]/50",
+      "bg-transparent text-white hover:bg-[#FFF]/10 focus:ring-[#FFF] border border-[#FFF]/50",
   };
   const sizes = {
     sm: "px-5 py-2.5 text-sm",
@@ -890,7 +890,7 @@ const Button = ({
 };
 
 const GoldBadge = ({ children, icon = true }) => (
-  <div className="mb-4 inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full text-[#FFD700] text-sm font-medium backdrop-blur-sm">
+  <div className="mb-4 inline-flex items-center gap-2 px-5 py-2.5 bg-[#FFF]/10 border border-[#FFF]/30 rounded-full text-[#FFF] text-sm font-medium backdrop-blur-sm">
     {icon && <FaStar className="text-xs animate-pulse" />}
     {children}
   </div>
@@ -1027,12 +1027,12 @@ const HeroSection = () => (
       <motion.div
         animate={{ scale: [1, 1.3, 1], opacity: [0.08, 0.15, 0.08] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-[#FFD700]/30 to-[#D4AF37]/10 rounded-full filter blur-3xl"
+        className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-[#FFF]/30 to-[#FFF]/10 rounded-full filter blur-3xl"
       />
       <motion.div
         animate={{ scale: [1.3, 1, 1.3], opacity: [0.08, 0.12, 0.08] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-[#D4AF37]/20 to-[#FFD700]/10 rounded-full filter blur-3xl"
+        className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-[#FFF]/20 to-[#FFF]/10 rounded-full filter blur-3xl"
       />
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -1059,7 +1059,7 @@ const HeroSection = () => (
         <GoldBadge className="mb-10">Driving Operational Excellence</GoldBadge>
         <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
           Energy, Oil & Gas, Utilities &{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF]">
             Chemicals
           </span>
         </h1>
@@ -1085,7 +1085,7 @@ const HeroSection = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="grid grid-cols-3 gap-6 p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-[#FFD700]/20"
+          className="grid grid-cols-3 gap-6 p-6 bg-white/5 backdrop-blur-md rounded-2xl border border-[#FFF]/20"
         >
           {[
             { value: "150+", label: "Global Projects" },
@@ -1094,9 +1094,9 @@ const HeroSection = () => (
           ].map((stat, i) => (
             <div
               key={i}
-              className="border-l-2 border-[#FFD700]/40 pl-4 first:border-l-0 first:pl-0"
+              className="border-l-2 border-[#FFF]/40 pl-4 first:border-l-0 first:pl-0"
             >
-              <div className="text-3xl font-bold text-[#FFD700]">
+              <div className="text-3xl font-bold text-[#FFF]">
                 {stat.value}
               </div>
               <div className="text-sm text-gray-400">{stat.label}</div>
@@ -1113,28 +1113,28 @@ const HeroSection = () => (
       transition={{ duration: 0.8, delay: 0.3 }}
     >
       <div className="relative">
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
+        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFF]/30">
           <img
             src={img1}
             alt="Modern energy infrastructure showcasing power generation and smart grid technology"
             className="w-full h-[200px] md:h-[250px] lg:h-[400px] object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#FFD700]/5 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#FFF]/5 to-transparent"></div>
           <motion.div
             animate={{ opacity: [0, 0.1, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/20 via-transparent to-[#FFD700]/20"
+            className="absolute inset-0 bg-gradient-to-r from-[#FFF]/20 via-transparent to-[#FFF]/20"
           />
         </div>
 
         {/* <motion.div
           animate={{ y: [-10, 10, -10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFD700]/30 hidden lg:block"
+          className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-2xl border border-[#FFF]/30 hidden lg:block"
         >
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#FFF] to-[#FFF] rounded-xl flex items-center justify-center">
               <FaShieldAlt className="text-2xl text-[#0a1628]" />
             </div>
             <div>
@@ -1147,10 +1147,10 @@ const HeroSection = () => (
         <motion.div
           animate={{ y: [10, -10, 10] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFD700]/50 hidden lg:block"
+          className="absolute -top-6 -right-6 bg-primary-800 rounded-2xl p-5 shadow-2xl text-white border border-[#FFF]/50 hidden lg:block"
         >
           <div className="flex items-center gap-3">
-            <FaBolt className="text-3xl text-[#FFD700]" />
+            <FaBolt className="text-3xl text-[#FFF]" />
             <div>
               <div className="text-sm font-bold">Smart Grid</div>
               <div className="text-xs text-gray-300">Enabled</div>
@@ -1158,8 +1158,8 @@ const HeroSection = () => (
           </div>
         </motion.div> */}
 
-        <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFD700]/50 rounded-tl-3xl"></div>
-        <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-4 border-r-4 border-[#FFD700]/50 rounded-br-3xl"></div>
+        <div className="absolute -top-3 -left-3 w-20 h-20 border-t-4 border-l-4 border-[#FFF]/50 rounded-tl-3xl"></div>
+        <div className="absolute -bottom-3 -right-3 w-20 h-20 border-b-4 border-r-4 border-[#FFF]/50 rounded-br-3xl"></div>
       </div>
     </motion.div>
   </section>
@@ -1178,7 +1178,7 @@ const ChallengesSection = () => (
         <Card key={i} delay={i * 0.1}>
           <div className="flex flex-col h-full">
             <div className="w-14 h-14 bg-primary-800 rounded-xl flex items-center justify-center mb-5 shadow-lg">
-              <challenge.icon className="text-2xl text-[#FFD700]" />
+              <challenge.icon className="text-2xl text-[#FFF]" />
             </div>
             <h3 className="font-bold text-lg mb-3 text-[#0a1628]">
               {challenge.title}
@@ -1230,7 +1230,7 @@ const BenefitsSection = () => (
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        className="absolute -top-1/2 -right-1/4 w-full h-full bg-gradient-to-br from-[#FFD700]/5 to-transparent rounded-full"
+        className="absolute -top-1/2 -right-1/4 w-full h-full bg-gradient-to-br from-[#FFF]/5 to-transparent rounded-full"
       />
     </div>
 
@@ -1243,7 +1243,7 @@ const BenefitsSection = () => (
         transition={{ duration: 0.6 }}
       >
         <div className="relative">
-          <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFD700]/30">
+          <div className="rounded-3xl overflow-hidden shadow-2xl border-2 border-[#FFF]/30">
             <img
               src={img2}
               alt="Advanced smart grid infrastructure and power distribution systems"
@@ -1252,8 +1252,8 @@ const BenefitsSection = () => (
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent to-transparent"></div>
           </div>
 
-          <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFD700] rounded-tl-2xl"></div>
-          <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-[#FFD700] rounded-br-2xl"></div>
+          <div className="absolute -top-2 -left-2 w-16 h-16 border-t-4 border-l-4 border-[#FFF] rounded-tl-2xl"></div>
+          <div className="absolute -bottom-2 -right-2 w-16 h-16 border-b-4 border-r-4 border-[#FFF] rounded-br-2xl"></div>
         </div>
       </motion.div>
 
@@ -1281,7 +1281,7 @@ const BenefitsSection = () => (
                 transition={{ delay: i * 0.1 + 0.3 }}
                 className="flex items-start gap-4 group"
               >
-                <div className="w-7 h-7 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg group-hover:scale-110 transition-transform">
+                <div className="w-7 h-7 bg-gradient-to-br from-[#FFF] to-[#FFF] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 shadow-lg group-hover:scale-110 transition-transform">
                   <FaCheckCircle className="text-[#0a1628] text-sm" />
                 </div>
                 <span className="text-gray-200 font-medium group-hover:text-white transition-colors leading-relaxed">
@@ -1317,7 +1317,7 @@ const ProcessSection = () => (
         Our Proven Approach
       </SectionTitle>
       <div className="relative">
-        <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-[#0a1628] via-[#FFD700] to-[#0a1628] rounded-full shadow-lg"></div>
+        <div className="hidden lg:block absolute top-24 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-[#0a1628] via-[#FFF] to-[#0a1628] rounded-full shadow-lg"></div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {PROCESS_STEPS.map((step, i) => (
             <motion.div
@@ -1329,14 +1329,14 @@ const ProcessSection = () => (
               className="relative text-center group"
             >
               <div className="relative inline-block mb-6">
-                <div className="w-24 h-24 bg-white border-4 border-[#0a1628] rounded-full flex items-center justify-center shadow-xl relative z-10 group-hover:border-[#FFD700] group-hover:scale-110 transition-all duration-300 mx-auto">
-                  <step.icon className="text-3xl text-[#0a1628] group-hover:text-[#FFD700] transition-colors" />
+                <div className="w-24 h-24 bg-white border-4 border-[#0a1628] rounded-full flex items-center justify-center shadow-xl relative z-10 group-hover:border-[#FFF] group-hover:scale-110 transition-all duration-300 mx-auto">
+                  <step.icon className="text-3xl text-[#0a1628] group-hover:text-[#0a1628] transition-colors" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-9 h-9 bg-gradient-to-br from-[#FFD700] to-[#D4AF37] rounded-full flex items-center justify-center text-[#0a1628] text-sm font-bold shadow-lg border-2 border-white">
+                <div className="absolute -top-2 -right-2 w-9 h-9 bg-[#0a1628] rounded-full flex items-center justify-center text-[#FFF] text-sm font-bold shadow-lg border-2 border-white">
                   {step.step}
                 </div>
               </div>
-              <h3 className="font-bold text-xl mb-3 text-[#0a1628] group-hover:text-[#D4AF37] transition-colors">
+              <h3 className="font-bold text-xl mb-3 text-[#0a1628] group-hover:text-[#FFF] transition-colors">
                 {step.title}
               </h3>
               <p className="text-gray-600 text-sm leading-relaxed max-w-xs mx-auto">
@@ -1344,8 +1344,8 @@ const ProcessSection = () => (
               </p>
               {i < PROCESS_STEPS.length - 1 && (
                 <div className="lg:hidden flex justify-center my-4">
-                  <div className="w-10 h-10 bg-[#FFD700]/20 rounded-full flex items-center justify-center">
-                    <FaArrowDown className="text-[#D4AF37]" />
+                  <div className="w-10 h-10 bg-[#FFF]/20 rounded-full flex items-center justify-center">
+                    <FaArrowDown className="text-[#FFF]" />
                   </div>
                 </div>
               )}
@@ -1363,7 +1363,7 @@ const CTASection = () => (
     <div
       className="absolute inset-0 opacity-[0.05]"
       style={{
-        backgroundImage: `radial-gradient(circle at 2px 2px, #FFD700 1px, transparent 0)`,
+        backgroundImage: `radial-gradient(circle at 2px 2px, #FFF 1px, transparent 0)`,
         backgroundSize: "35px 35px",
       }}
     ></div>
@@ -1371,23 +1371,23 @@ const CTASection = () => (
     <motion.div
       animate={{ scale: [1, 1.2, 1], x: [-20, 20, -20], y: [-10, 10, -10] }}
       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute top-10 left-10 w-72 h-72 bg-[#FFD700]/15 rounded-full filter blur-3xl"
+      className="absolute top-10 left-10 w-72 h-72 bg-[#FFF]/15 rounded-full filter blur-3xl"
     />
     <motion.div
       animate={{ scale: [1.2, 1, 1.2], x: [20, -20, 20], y: [10, -10, 10] }}
       transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      className="absolute bottom-10 right-10 w-96 h-96 bg-[#D4AF37]/12 rounded-full filter blur-3xl"
+      className="absolute bottom-10 right-10 w-96 h-96 bg-[#FFF]/12 rounded-full filter blur-3xl"
     />
 
     <motion.div
       animate={{ rotate: 360 }}
       transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-      className="absolute top-20 right-20 w-44 h-44 border-2 border-[#FFD700]/20 rounded-full"
+      className="absolute top-20 right-20 w-44 h-44 border-2 border-[#FFF]/20 rounded-full"
     />
     <motion.div
       animate={{ rotate: -360 }}
       transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-      className="absolute bottom-20 left-20 w-36 h-36 border-2 border-[#FFD700]/15 rounded-full"
+      className="absolute bottom-20 left-20 w-36 h-36 border-2 border-[#FFF]/15 rounded-full"
     />
 
     <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
@@ -1402,7 +1402,7 @@ const CTASection = () => (
         </GoldBadge>
         <h2 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Power the Future with{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD700] via-[#FFE55C] to-[#D4AF37]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFF] via-[#FFF] to-[#FFF]">
             Operational Excellence
           </span>
         </h2>
@@ -1423,18 +1423,18 @@ const CTASection = () => (
             </Button>
           </a>
         </div>
-        <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFD700]/20">
+        <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-400 pt-8 border-t border-[#FFF]/20">
           <div className="flex items-center gap-2">
-            <FaBolt className="text-[#FFD700]" /> Smart Infrastructure
+            <FaBolt className="text-[#FFF]" /> Smart Infrastructure
           </div>
           <div className="flex items-center gap-2">
-            <FaShieldAlt className="text-[#FFD700]" /> EHS Compliant
+            <FaShieldAlt className="text-[#FFF]" /> EHS Compliant
           </div>
           <div className="flex items-center gap-2">
-            <FaFlask className="text-[#FFD700]" /> Batch Optimization
+            <FaFlask className="text-[#FFF]" /> Batch Optimization
           </div>
           <div className="flex items-center gap-2">
-            <FaGlobeAmericas className="text-[#FFD700]" /> Global Scale
+            <FaGlobeAmericas className="text-[#FFF]" /> Global Scale
           </div>
         </div>
       </motion.div>
@@ -1462,7 +1462,7 @@ export default function EnergyUtilitiesChemicalsPage() {
     <div className="w-full font-sans antialiased text-gray-800 overflow-x-hidden bg-gray-50">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#FFD700] text-[#0a1628] px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[#FFF] text-[#0a1628] px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-[#FFF]"
       >
         Skip to main content
       </a>

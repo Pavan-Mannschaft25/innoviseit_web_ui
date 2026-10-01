@@ -93,14 +93,14 @@ const EventDetailPage = () => {
   // Update the browser tab title to the event name
   useEffect(() => {
     if (event) {
-      document.title = `${event.title} | Innovise IT`;
+      document.title = `${event.title} | Innovise`;
     } else {
-      document.title = "Event Not Found | Innovise IT";
+      document.title = "Event Not Found | Innovise";
     }
 
     // Cleanup: Reset title when leaving the page
     return () => {
-      document.title = "Innovise IT";
+      document.title = "Innovise";
     };
   }, [event]);
 
@@ -146,7 +146,7 @@ const EventDetailPage = () => {
           </Link> */}
 
           {/* Date and Location - Accent 600 (Gold) */}
-          <div className="text-sm font-semibold text-accent-600 mb-3 uppercase tracking-wide">
+          <div className="text-sm font-semibold text-primary-900 mb-3 uppercase tracking-wide">
             {event.date} <span className="text-primary-200 mx-1">|</span>{" "}
             <span className="text-primary-500">{event.location}</span>
           </div>
@@ -175,7 +175,7 @@ const EventDetailPage = () => {
               href={event.registerLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center w-full bg-accent-500 text-white py-4 px-8 rounded-md font-semibold hover:bg-accent-600 transition-colors duration-300 text-lg shadow-md hover:shadow-lg"
+              className="block text-center w-full bg-primary-900 text-white py-4 px-8 rounded-md font-semibold hover:bg-accent-600 transition-colors duration-300 text-lg shadow-md hover:shadow-lg"
             >
               Register Now
             </a>

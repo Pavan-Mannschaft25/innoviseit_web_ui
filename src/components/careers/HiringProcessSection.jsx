@@ -8,7 +8,7 @@ const ProcessStep = memo(({ step, isLast }) => (
     <div
       className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5 text-lg font-bold"
       style={{
-        background: "linear-gradient(135deg, #FDB913, #FFD54F)",
+        background: "linear-gradient(135deg, #FFF, #FFD54F)",
         color: BRAND.navy.dark,
       }}
     >

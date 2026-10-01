@@ -78,7 +78,7 @@ const HeroSection = () => {
 
             {/* Description */}
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Innovise IT delivers SAP consulting, Guidewire solutions, cloud
+              Innovise delivers SAP consulting, Guidewire solutions, cloud
               transformation, testing, and enterprise modernization services for
               scalable growth.
             </p>

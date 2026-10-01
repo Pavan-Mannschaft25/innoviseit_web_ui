@@ -265,7 +265,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   <FaIcons.FaHome className="text-lg" />
                   <span>Home</span>
                   {currentPage === "/" && (
-                    <span className="ml-auto w-2 h-2 rounded-full bg-[#FFD700]"></span>
+                    <span className="ml-auto w-2 h-2 rounded-full bg-[#0B2A4A]"></span>
                   )}
                 </Link>
 
@@ -305,7 +305,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                               {/* Section Title (if multiple sections) */}
                               {navData.whoWeAre.length > 1 && (
                                 <p className="text-[11px] font-bold text-[#0a1628] uppercase tracking-wider px-3 mb-1.5 flex items-center gap-2">
-                                  <span className="w-4 h-px bg-[#FFD700]"></span>
+                                  <span className="w-4 h-px bg-[#0B2A4A]"></span>
                                   {section.title}
                                 </p>
                               )}
@@ -317,7 +317,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                                   onClick={onClose}
                                   className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200 ${
                                     currentPage === item.path
-                                      ? "bg-[#FFD700]/10 text-[#0a1628] font-semibold"
+                                      ? "bg-[#0B2A4A]/10 text-[#0a1628] font-semibold"
                                       : "text-gray-600 hover:bg-[#0a1628]/5 hover:text-[#0a1628]"
                                   }`}
                                 >
@@ -326,7 +326,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                                   </span>
                                   <span>{item.name}</span>
                                   {currentPage === item.path && (
-                                    <FaIcons.FaCheck className="ml-auto text-[#FFD700] text-xs" />
+                                    <FaIcons.FaCheck className="ml-auto text-[#0B2A4A] text-xs" />
                                   )}
                                 </Link>
                               ))}
@@ -373,7 +373,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                             <div key={idx} className="pl-2">
                               {/* Section Title */}
                               <p className="text-[11px] font-bold text-[#0a1628] uppercase tracking-wider px-3 mb-1.5 flex items-center gap-2">
-                                <span className="w-4 h-px bg-[#FFD700]"></span>
+                                <span className="w-4 h-px bg-[#0B2A4A]"></span>
                                 {section.title}
                               </p>
 
@@ -386,7 +386,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                                       onClick={onClose}
                                       className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all duration-200 ${
                                         currentPage === item.path
-                                          ? "bg-[#FFD700]/10 text-[#0a1628] font-semibold"
+                                          ? "bg-[#0B2A4A]/10 text-[#0a1628] font-semibold"
                                           : "text-gray-600 hover:bg-[#0a1628]/5 hover:text-[#0a1628]"
                                       }`}
                                     >
@@ -395,7 +395,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                                       </span>
                                       <span>{item.name}</span>
                                       {currentPage === item.path && (
-                                        <FaIcons.FaCheck className="ml-auto text-[#FFD700] text-xs" />
+                                        <FaIcons.FaCheck className="ml-auto text-[#0B2A4A] text-xs" />
                                       )}
                                     </Link>
                                   </li>
@@ -422,7 +422,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   <FaIcons.FaBriefcase className="text-lg" />
                   <span>Careers</span>
                   {currentPage === "/careers" && (
-                    <span className="ml-auto w-2 h-2 rounded-full bg-[#FFD700]"></span>
+                    <span className="ml-auto w-2 h-2 rounded-full bg-[#0B2A4A]"></span>
                   )}
                 </Link>
 
@@ -439,7 +439,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   <FaIcons.FaEnvelope className="text-lg" />
                   <span>Contact Us</span>
                   {currentPage === "/contact" && (
-                    <span className="ml-auto w-2 h-2 rounded-full bg-[#FFD700]"></span>
+                    <span className="ml-auto w-2 h-2 rounded-full bg-[#0B2A4A]"></span>
                   )}
                 </Link>
               </nav>
@@ -460,7 +460,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
             {/* ─── Footer (always visible, no absolute) ─── */}
             <div className="flex-shrink-0 p-5 bg-gradient-to-r from-[#0a1628]/[0.03] to-[#152d52]/[0.03] border-t border-gray-100">
               <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
-                <FaIcons.FaPhone className="text-[#FFD700] text-xs" />
+                <FaIcons.FaPhone className="text-[#0B2A4A] text-xs" />
                 <span>Questions? Call</span>
                 <a
                   href="tel:+14255185442"

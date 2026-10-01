@@ -16,8 +16,8 @@ function IntroSection() {
 
           {/* Description */}
           <p className="text-lg text-gray-600 leading-8">
-            At <span className="font-semibold text-gray-900">Innovise IT</span>,
-            we deliver End-to-End enterprise solutions—from consulting and
+            At <span className="font-semibold text-gray-900">Innovise</span>, we
+            deliver End-to-End enterprise solutions—from consulting and
             implementation to testing, support, and application management.
             Together with our partners and experienced consultants, we help
             organizations modernize, secure, and innovate their IT landscape.

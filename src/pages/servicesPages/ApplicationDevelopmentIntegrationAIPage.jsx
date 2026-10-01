@@ -1191,10 +1191,10 @@
 //             >
 //               <FaCube className="text-black font-bold text-lg" />
 //             </div>
-//             <span className="text-xl font-bold text-black">Innovise IT</span>
+//             <span className="text-xl font-bold text-black">Innovise</span>
 //           </div>
 //           <p className="text-slate-400 text-sm">
-//             © 2024 Innovise IT Solutions. All rights reserved.
+//             © 2024 Innovise Solutions. All rights reserved.
 //           </p>
 //           <div className="flex gap-3">
 //             {[FaLinkedin, FaTwitter, FaGithub].map((SocialIcon, i) => (
@@ -1327,10 +1327,10 @@
 //     lighter: "#1A4570",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#FFF",
 //     light: "#FFD54F",
 //     dark: "#E5A700",
-//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 //   },
 // };
 
@@ -1390,7 +1390,7 @@
 //       desc: "Insurance Platform",
 //       position: "top-1/2 -translate-y-1/2 right-2",
 //       color: "rgba(253,185,19,0.15)",
-//       iconColor: "#FDB913",
+//       iconColor: "#FFF",
 //       border: "rgba(253,185,19,0.3)",
 //     },
 //     {
@@ -1497,7 +1497,7 @@
 //             <div
 //               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full"
 //               style={{
-//                 background: "rgba(253,185,19,0.12)",
+//                 background: `${BRAND.navy.mid}08`,
 //                 border: "1px solid rgba(253,185,19,0.25)",
 //               }}
 //             >
@@ -1661,7 +1661,7 @@
 //                 y1="32%"
 //                 x2="50%"
 //                 y2="12%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -1671,7 +1671,7 @@
 //                 y1="68%"
 //                 x2="50%"
 //                 y2="88%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -1681,7 +1681,7 @@
 //                 y1="50%"
 //                 x2="12%"
 //                 y2="50%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -1691,7 +1691,7 @@
 //                 y1="50%"
 //                 x2="88%"
 //                 y2="50%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -1789,7 +1789,7 @@
 //               key={index}
 //               className="group flex items-center gap-3 opacity-40 hover:opacity-100 transition-all duration-300 cursor-pointer"
 //             >
-//               <partner.icon className="text-2xl md:text-3xl text-black/50 group-hover:text-[#FDB913] transition-colors" />
+//               <partner.icon className="text-2xl md:text-3xl text-black/50 group-hover:text-[#FFF] transition-colors" />
 //               <span className="text-lg md:text-xl font-semibold text-black/50 group-hover:text-black transition-colors">
 //                 {partner.name}
 //               </span>
@@ -1925,7 +1925,7 @@
 //                     style={{ color: card.color }}
 //                   />
 //                 </div>
-//                 <h3 className="text-2xl font-bold mb-5 text-black group-hover:text-[#FDB913] transition-colors">
+//                 <h3 className="text-2xl font-bold mb-5 text-black group-hover:text-[#FFF] transition-colors">
 //                   {card.title}
 //                 </h3>
 //                 <ul className="space-y-3">
@@ -2011,7 +2011,7 @@
 //         transition: "all 1s",
 //       }}
 //     >
-//       {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+//       {/* <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFF]/10 blur-3xl rounded-full"></div>
 //       <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div> */}
 
 //       <div className="max-w-7xl mx-auto relative z-10">
@@ -2019,8 +2019,8 @@
 //           <span
 //             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
 //             style={{
-//               background: "rgba(253,185,19,0.12)",
-//               color: "#FDB913",
+//               background: `${BRAND.navy.mid}08`,
+//               color: "#FFF",
 //               borderColor: "rgba(253,185,19,0.25)",
 //             }}
 //           >
@@ -2028,7 +2028,7 @@
 //           </span>
 //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
 //             Comprehensive{" "}
-//             <span style={{ color: "#FDB913" }}>Digital Solutions</span>
+//             <span style={{ color: "#FFF" }}>Digital Solutions</span>
 //           </h2>
 //         </div>
 //         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2097,7 +2097,7 @@
 //                       style={{ color: service.color }}
 //                     />
 //                   </div>
-//                   <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#FDB913] transition-colors">
+//                   <h3 className="text-lg font-bold mb-2 text-black group-hover:text-[#FFF] transition-colors">
 //                     {service.title}
 //                   </h3>
 //                   <p className="text-sm text-black/50 leading-relaxed">
@@ -2373,15 +2373,15 @@
 //           <span
 //             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
 //             style={{
-//               background: "rgba(253,185,19,0.12)",
-//               color: "#FDB913",
+//               background: `${BRAND.navy.mid}08`,
+//               color: "#FFF",
 //               borderColor: "rgba(253,185,19,0.25)",
 //             }}
 //           >
 //             Technology Stack
 //           </span>
 //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-//             Our Technology <span style={{ color: "#FDB913" }}>Ecosystem</span>
+//             Our Technology <span style={{ color: "#FFF" }}>Ecosystem</span>
 //           </h2>
 //         </div>
 //         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -2498,8 +2498,8 @@
 //           <span
 //             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
 //             style={{
-//               // background: "rgba(253,185,19,0.12)",
-//               color: "#FDB913",
+//               // background: `${BRAND.navy.mid}08`,
+//               color: "#FFF",
 //               borderColor: "rgba(253,185,19,0.25)",
 //             }}
 //           >
@@ -2507,7 +2507,7 @@
 //           </span>
 //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
 //             Delivering Measurable{" "}
-//             <span style={{ color: "#FDB913" }}>Business Impact</span>
+//             <span style={{ color: "#FFF" }}>Business Impact</span>
 //           </h2>
 //         </div>
 //         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -2720,15 +2720,15 @@
 //           <span
 //             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
 //             style={{
-//               background: "rgba(253,185,19,0.12)",
-//               color: "#FDB913",
+//               background: `${BRAND.navy.mid}08`,
+//               color: "#FFF",
 //               borderColor: "rgba(253,185,19,0.25)",
 //             }}
 //           >
 //             Success Stories
 //           </span>
 //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
-//             Featured <span style={{ color: "#FDB913" }}>Case Studies</span>
+//             Featured <span style={{ color: "#FFF" }}>Case Studies</span>
 //           </h2>
 //         </div>
 //         <div className="grid md:grid-cols-3 gap-8">
@@ -2771,7 +2771,7 @@
 //                       style={{ color: caseStudy.color }}
 //                     />
 //                   </div>
-//                   <h3 className="text-xl font-bold mb-3 text-black group-hover:text-[#FDB913] transition-colors">
+//                   <h3 className="text-xl font-bold mb-3 text-black group-hover:text-[#FFF] transition-colors">
 //                     {caseStudy.title}
 //                   </h3>
 //                   <p className="text-black/50 mb-6 text-sm leading-relaxed">
@@ -3086,7 +3086,7 @@
 //             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
 //             className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8"
 //             style={{
-//               background: "rgba(253,185,19,0.12)",
+//               background: `${BRAND.navy.mid}08`,
 //               border: "2px solid rgba(253,185,19,0.25)",
 //             }}
 //           >
@@ -3202,10 +3202,10 @@
 //             >
 //               <FaCube className="text-black text-lg" />
 //             </div>
-//             <span className="text-xl font-bold text-black">Innovise IT</span>
+//             <span className="text-xl font-bold text-black">Innovise</span>
 //           </div>
 //           <p className="text-black/30 text-sm">
-//             © 2024 Innovise IT Solutions. All rights reserved.
+//             © 2024 Innovise Solutions. All rights reserved.
 //           </p>
 //           <div className="flex gap-3">
 //             {[FaLinkedin, FaTwitter, FaGithub].map((SocialIcon, i) => (
@@ -3218,7 +3218,7 @@
 //                   border: "1px solid rgba(255,255,255,0.08)",
 //                 }}
 //               >
-//                 <SocialIcon className="text-black/40 group-hover:text-[#FDB913] transition-colors" />
+//                 <SocialIcon className="text-black/40 group-hover:text-[#FFF] transition-colors" />
 //               </a>
 //             ))}
 //           </div>
@@ -3236,7 +3236,7 @@
 //                   <li key={j}>
 //                     <a
 //                       href="#"
-//                       className="hover:text-[#FDB913] transition-colors flex items-center justify-center md:justify-start gap-2"
+//                       className="hover:text-[#FFF] transition-colors flex items-center justify-center md:justify-start gap-2"
 //                     >
 //                       {section.icons && j === 0 && <FaEnvelope />}
 //                       {section.icons && j === 1 && <FaPhone />}
@@ -3343,10 +3343,10 @@
 //     lighter: "#1A4570",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#FFF",
 //     light: "#FFD54F",
 //     dark: "#E5A700",
-//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 //   },
 // };
 
@@ -3405,7 +3405,7 @@
 //       icon: FaShieldAlt,
 //       desc: "Insurance Platform",
 //       position: "top-1/2 -translate-y-1/2 right-2",
-//       iconColor: "#FDB913",
+//       iconColor: "#FFF",
 //       border: "rgba(253,185,19,0.4)",
 //       bg: "rgba(253,185,19,0.1)",
 //     },
@@ -3605,7 +3605,7 @@
 //                 y1="32%"
 //                 x2="50%"
 //                 y2="12%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -3615,7 +3615,7 @@
 //                 y1="68%"
 //                 x2="50%"
 //                 y2="88%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -3625,7 +3625,7 @@
 //                 y1="50%"
 //                 x2="12%"
 //                 y2="50%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -3635,7 +3635,7 @@
 //                 y1="50%"
 //                 x2="88%"
 //                 y2="50%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -4751,10 +4751,10 @@
 //             >
 //               <FaCube className="text-black text-lg" />
 //             </div>
-//             <span className="text-xl font-bold text-black">Innovise IT</span>
+//             <span className="text-xl font-bold text-black">Innovise</span>
 //           </div>
 //           <p className="text-slate-500 text-sm">
-//             © 2024 Innovise IT Solutions. All rights reserved.
+//             © 2024 Innovise Solutions. All rights reserved.
 //           </p>
 //           <div className="flex gap-3">
 //             {[FaLinkedin, FaTwitter, FaGithub].map((SocialIcon, i) => (
@@ -4875,10 +4875,10 @@
 //     light: "#1A4570",
 //   },
 //   gold: {
-//     primary: "#FDB913", // Innovise Yellow
+//     primary: "#FFF", // Innovise Yellow
 //     light: "#FFD54F",
 //     dark: "#E5A700",
-//     gradient: "linear-gradient(135deg, #E5A700 0%, #FDB913 50%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #E5A700 0%, #FFF 50%, #FFD54F 100%)",
 //   },
 // };
 
@@ -4919,7 +4919,7 @@
 //       icon: FaBrain,
 //       desc: "ML & Automation",
 //       position: "top-2 left-1/2 -translate-x-1/2",
-//       iconColor: "#FDB913",
+//       iconColor: "#FFF",
 //       border: "rgba(253,185,19,0.4)",
 //       bg: "rgba(253,185,19,0.1)",
 //     },
@@ -4937,7 +4937,7 @@
 //       icon: FaShieldAlt,
 //       desc: "Insurance Platform",
 //       position: "top-1/2 -translate-y-1/2 right-2",
-//       iconColor: "#FDB913",
+//       iconColor: "#FFF",
 //       border: "rgba(253,185,19,0.4)",
 //       bg: "rgba(253,185,19,0.1)",
 //     },
@@ -4954,7 +4954,7 @@
 //       title: "Cloud Services",
 //       icon: FaCloud,
 //       position: "top-1/4 left-6",
-//       iconColor: "#FDB913",
+//       iconColor: "#FFF",
 //       border: "rgba(253,185,19,0.3)",
 //       bg: "rgba(253,185,19,0.1)",
 //       small: true,
@@ -4972,7 +4972,7 @@
 //       title: "Security",
 //       icon: FaLock,
 //       position: "bottom-1/4 left-6",
-//       iconColor: "#FDB913",
+//       iconColor: "#FFF",
 //       border: "rgba(253,185,19,0.3)",
 //       bg: "rgba(253,185,19,0.1)",
 //       small: true,
@@ -5085,7 +5085,7 @@
 //               </a>
 //               <a
 //                 href="/contact"
-//                 className="px-8 py-4 rounded-xl font-semibold text-black flex items-center gap-2 transition-all hover:-translate-y-1 hover:bg-white/10 border-2 border-[#FDB913]/30 bg-white/5"
+//                 className="px-8 py-4 rounded-xl font-semibold text-black flex items-center gap-2 transition-all hover:-translate-y-1 hover:bg-white/10 border-2 border-[#FFF]/30 bg-white/5"
 //               >
 //                 Explore Services
 //               </a>
@@ -5147,7 +5147,7 @@
 //                 y1="32%"
 //                 x2="50%"
 //                 y2="12%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -5167,7 +5167,7 @@
 //                 y1="50%"
 //                 x2="12%"
 //                 y2="50%"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="2"
 //                 strokeDasharray="8,8"
 //                 opacity="0.4"
@@ -5599,7 +5599,7 @@
 //                   <step.icon className="text-lg text-[#0B1D33]" />
 //                 </div>
 //                 {index < steps.length - 1 && (
-//                   <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-slate-100" />
+//                   <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FFF] to-slate-100" />
 //                 )}
 //               </div>
 //               <div className="pb-8">
@@ -6040,7 +6040,7 @@
 //               operations, enhance decision-making, and create unprecedented
 //               competitive advantages.
 //             </p>
-//             <button className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-[#0B1D33] text-[#FDB913]">
+//             <button className="px-8 py-4 rounded-xl font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all bg-[#0B1D33] text-[#FFF]">
 //               Explore AI Solutions <FaArrowRight />
 //             </button>
 //           </div>
@@ -6053,10 +6053,10 @@
 //                 viewport={{ once: true }}
 //                 transition={{ delay: index * 0.1 }}
 //                 whileHover={{ x: -4 }}
-//                 className="rounded-xl p-5 flex items-start gap-4 cursor-pointer shadow-sm transition-all hover:shadow-md bg-white border border-[#FDB913]/20"
+//                 className="rounded-xl p-5 flex items-start gap-4 cursor-pointer shadow-sm transition-all hover:shadow-md bg-white border border-[#FFF]/20"
 //               >
 //                 <div className="w-12 h-12 rounded-lg flex items-center justify-center shrink-0 bg-[#0B1D33]">
-//                   <feature.icon className="text-[#FDB913]" />
+//                   <feature.icon className="text-[#FFF]" />
 //                 </div>
 //                 <div>
 //                   <h3 className="font-bold mb-1 text-[#0B1D33]">
@@ -6201,9 +6201,9 @@
 //             whileInView={{ scale: 1 }}
 //             viewport={{ once: true }}
 //             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-//             className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-white/5 border-2 border-[#FDB913]/30"
+//             className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8 bg-white/5 border-2 border-[#FFF]/30"
 //           >
-//             <FaRocket className="text-3xl text-[#FDB913]" />
+//             <FaRocket className="text-3xl text-[#FFF]" />
 //           </motion.div>
 
 //           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-black leading-tight mb-6">
@@ -6229,7 +6229,7 @@
 //           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
 //             <a
 //               href="/contact"
-//               className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#FDB913] text-[#0B1D33] shadow-lg"
+//               className="group relative px-10 py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl bg-[#FFF] text-[#0B1D33] shadow-lg"
 //             >
 //               <span className="relative z-10 flex items-center gap-3">
 //                 Talk to Our Experts{" "}
@@ -6238,9 +6238,9 @@
 //             </a>
 //             <a
 //               href="/contact"
-//               className="group px-8 py-5 rounded-xl font-bold text-lg text-black flex items-center gap-3 transition-all duration-300 hover:bg-white/10 border-2 border-[#FDB913]/30 bg-white/5"
+//               className="group px-8 py-5 rounded-xl font-bold text-lg text-black flex items-center gap-3 transition-all duration-300 hover:bg-white/10 border-2 border-[#FFF]/30 bg-white/5"
 //             >
-//               <FaPlayCircle className="text-[#FDB913]" /> Request a Consultation
+//               <FaPlayCircle className="text-[#FFF]" /> Request a Consultation
 //             </a>
 //           </div>
 
@@ -6251,7 +6251,7 @@
 //               { value: "Flexible Engagement", icon: FaHandshake },
 //             ].map((item, idx) => (
 //               <div key={idx} className="flex items-center gap-2 text-slate-400">
-//                 <item.icon className="text-sm text-[#FDB913]" />
+//                 <item.icon className="text-sm text-[#FFF]" />
 //                 <span className="text-sm font-medium">{item.value}</span>
 //               </div>
 //             ))}
@@ -6290,18 +6290,18 @@
 //               <FaCube className="text-[#0B1D33] text-lg" />
 //             </div>
 //             <span className="text-xl font-bold text-black">
-//               Innovise <span className="text-[#FDB913]">IT</span>
+//               Innovise <span className="text-[#FFF]">IT</span>
 //             </span>
 //           </div>
 //           <p className="text-slate-400 text-sm">
-//             © 2024 Innovise IT Solutions. All rights reserved.
+//             © 2024 Innovise Solutions. All rights reserved.
 //           </p>
 //           <div className="flex gap-3">
 //             {[FaLinkedin, FaTwitter, FaGithub].map((SocialIcon, i) => (
 //               <a
 //                 key={i}
 //                 href="#"
-//                 className="w-10 h-10 rounded-full flex items-center justify-center transition-colors group bg-[#143A63] hover:bg-[#FDB913]"
+//                 className="w-10 h-10 rounded-full flex items-center justify-center transition-colors group bg-[#143A63] hover:bg-[#FFF]"
 //               >
 //                 <SocialIcon className="text-black group-hover:text-[#0B1D33] transition-colors" />
 //               </a>
@@ -6317,7 +6317,7 @@
 //                   <li key={j}>
 //                     <a
 //                       href="#"
-//                       className="hover:text-[#FDB913] transition-colors flex items-center justify-center md:justify-start gap-2"
+//                       className="hover:text-[#FFF] transition-colors flex items-center justify-center md:justify-start gap-2"
 //                     >
 //                       {section.icons && j === 0 && <FaEnvelope />}
 //                       {section.icons && j === 1 && <FaPhone />}
@@ -6427,10 +6427,10 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
-    light: "#FFD54F",
-    dark: "#E5A700",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    primary: "#FFF",
+    light: "#FFF",
+    dark: "#FFF",
+    gradient: "#FFF",
   },
 };
 
@@ -6490,7 +6490,7 @@ const HeroSection = () => {
       desc: "Insurance Platform",
       position: "top-1/2 -translate-y-1/2 right-2",
       color: "rgba(253,185,19,0.15)",
-      iconColor: "#FDB913",
+      iconColor: "#FFF",
       border: "rgba(253,185,19,0.3)",
     },
     {
@@ -6592,7 +6592,7 @@ const HeroSection = () => {
             {/* <div
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full"
               style={{
-                background: "rgba(253,185,19,0.12)",
+                background: `${BRAND.navy.mid}08`,
                 border: "1px solid rgba(253,185,19,0.25)",
               }}
             >
@@ -6614,7 +6614,7 @@ const HeroSection = () => {
                 whileHover={{ rotate: 12 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 style={{
-                  background: `${BRAND.gold.primary}15`,
+                  background: ``,
                   border: `1px solid ${BRAND.gold.primary}30`,
                 }}
               >
@@ -6633,27 +6633,8 @@ const HeroSection = () => {
 
             <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-black leading-tight text-white">
               Transforming Enterprises Through{" "}
-              <span
-                style={{
-                  backgroundImage: BRAND.gold.gradient,
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Intelligent Applications
-              </span>
-              , Seamless Integrations &{" "}
-              <span
-                style={{
-                  backgroundImage: BRAND.gold.gradient,
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                AI-Powered Innovation
-              </span>
+              <span>Intelligent Applications</span>, Seamless Integrations &{" "}
+              <span>AI-Powered Innovation</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white max-w-xl leading-relaxed">
@@ -6712,7 +6693,7 @@ const TrustedBySection = () => {
               key={index}
               className="group flex items-center gap-3 opacity-40 hover:opacity-100 transition-all duration-300 cursor-pointer"
             >
-              <partner.icon className="text-2xl md:text-3xl text-white/50 group-hover:text-[#FDB913] transition-colors" />
+              <partner.icon className="text-2xl md:text-3xl text-white/50 group-hover:text-[#FFF] transition-colors" />
               <span className="text-lg md:text-xl font-semibold text-white/50 group-hover:text-white transition-colors">
                 {partner.name}
               </span>
@@ -6799,16 +6780,7 @@ const WhyInnoviseSection = () => {
             style={{ color: BRAND.navy.dark }}
           >
             Engineering Business Growth Through{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Technology Excellence
-            </span>
+            <span>Technology Excellence</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -6840,7 +6812,7 @@ const WhyInnoviseSection = () => {
                     style={{ color: card.color }}
                   />
                 </div>
-                <h3 className="text-2xl font-bold mb-5 text-white group-hover:text-[#FDB913] transition-colors">
+                <h3 className="text-2xl font-bold mb-5 text-white group-hover:text-[#FFF] transition-colors">
                   {card.title}
                 </h3>
                 <ul className="space-y-3">
@@ -6875,21 +6847,21 @@ const ServicesSection = () => {
       title: "Custom Application Development",
       icon: FaLaptopCode,
       desc: "Tailored solutions built for your unique business needs",
-      color: "#3B82F6",
+      color: "#06B6D4",
       status: "DEV",
     },
     {
       title: "Enterprise Integrations",
       icon: FaProjectDiagram,
       desc: "Seamless connectivity across your entire tech stack",
-      color: "#8B5CF6",
+      color: "#06B6D4",
       status: "CONNECT",
     },
     {
       title: "AI & Automation",
       icon: FaBrain,
       desc: "Intelligent automation to drive efficiency and innovation",
-      color: BRAND.gold.primary,
+      color: "#06B6D4",
       status: "AI",
     },
     {
@@ -6903,14 +6875,14 @@ const ServicesSection = () => {
       title: "Quality Assurance",
       icon: FaShieldAlt,
       desc: "Comprehensive testing for flawless performance",
-      color: "#10B981",
+      color: "#06B6D4",
       status: "QA",
     },
     {
       title: "Managed Services",
       icon: FaCogs,
       desc: "24/7 monitoring and support for peace of mind",
-      color: "#F59E0B",
+      color: "#06B6D4",
       status: "ACTIVE",
     },
   ];
@@ -6926,7 +6898,7 @@ const ServicesSection = () => {
         transition: "all 1s",
       }}
     >
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFF]/10 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-[#102B4C] blur-3xl rounded-full"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -6934,16 +6906,15 @@ const ServicesSection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
             style={{
-              background: "rgba(253,185,19,0.12)",
-              color: "#FDB913",
+              background: `${BRAND.navy.mid}08`,
+              color: "#FFF",
               borderColor: "rgba(253,185,19,0.25)",
             }}
           >
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Comprehensive{" "}
-            <span style={{ color: "#FDB913" }}>Digital Solutions</span>
+            Comprehensive <span>Digital Solutions</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -7012,7 +6983,7 @@ const ServicesSection = () => {
                       style={{ color: service.color }}
                     />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#FDB913] transition-colors">
+                  <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#FFF] transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-sm text-white/50 leading-relaxed">
@@ -7094,7 +7065,7 @@ const TransformationJourneySection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
             style={{
-              background: "rgba(253,185,19,0.1)",
+              background: "#FFF",
               color: BRAND.navy.dark,
               border: "1px solid rgba(253,185,19,0.2)",
             }}
@@ -7105,17 +7076,7 @@ const TransformationJourneySection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold"
             style={{ color: BRAND.navy.dark }}
           >
-            Digital Transformation{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Journey
-            </span>
+            Digital Transformation <span>Journey</span>
           </h2>
         </div>
 
@@ -7150,7 +7111,6 @@ const TransformationJourneySection = () => {
                     className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 shadow-lg"
                     style={{
                       background: BRAND.gold.gradient,
-                      boxShadow: `0 8px 24px rgba(253,185,19,0.25)`,
                     }}
                   >
                     <step.icon
@@ -7287,15 +7247,15 @@ const TechnologyEcosystemSection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
             style={{
-              background: "rgba(253,185,19,0.12)",
-              color: "#FDB913",
+              background: `${BRAND.navy.mid}08`,
+              color: "#FFF",
               borderColor: "rgba(253,185,19,0.25)",
             }}
           >
             Technology Stack
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Our Technology <span style={{ color: "#FDB913" }}>Ecosystem</span>
+            Our Technology <span style={{ color: "#FFF" }}>Ecosystem</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -7412,8 +7372,8 @@ const BusinessImpactSection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
             style={{
-              background: "rgba(253,185,19,0.12)",
-              color: "#FDB913",
+              background: `${BRAND.navy.mid}08`,
+              color: "#FFF",
               borderColor: "rgba(253,185,19,0.25)",
             }}
           >
@@ -7421,7 +7381,7 @@ const BusinessImpactSection = () => {
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             Delivering Measurable{" "}
-            <span style={{ color: "#FDB913" }}>Business Impact</span>
+            <span style={{ color: "#FFF" }}>Business Impact</span>
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -7473,13 +7433,13 @@ const IndustriesSection = () => {
 
   const industries = [
     { name: "Insurance", icon: FaShieldAlt, color: "#3B82F6" },
-    { name: "Banking", icon: FaUniversity, color: "#10B981" },
-    { name: "Healthcare", icon: FaHeartbeat, color: "#EF4444" },
-    { name: "Retail", icon: FaShoppingCart, color: "#8B5CF6" },
-    { name: "Manufacturing", icon: FaIndustry, color: "#F59E0B" },
-    { name: "Logistics", icon: FaTruck, color: "#06B6D4" },
-    { name: "Energy", icon: FaBolt, color: BRAND.gold.primary },
-    { name: "Public Sector", icon: FaLandmark, color: "#64748B" },
+    { name: "Banking", icon: FaUniversity, color: "#3B82F6" },
+    { name: "Healthcare", icon: FaHeartbeat, color: "#3B82F6" },
+    { name: "Retail", icon: FaShoppingCart, color: "#3B82F6" },
+    { name: "Manufacturing", icon: FaIndustry, color: "#3B82F6" },
+    { name: "Logistics", icon: FaTruck, color: "#3B82F6" },
+    { name: "Energy", icon: FaBolt, color: "#3B82F6" },
+    { name: "Public Sector", icon: FaLandmark, color: "#3B82F6" },
   ];
 
   return (
@@ -7497,7 +7457,7 @@ const IndustriesSection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
             style={{
-              background: "rgba(253,185,19,0.1)",
+              background: "#FFF",
               color: BRAND.navy.dark,
               border: "1px solid rgba(253,185,19,0.2)",
             }}
@@ -7508,17 +7468,7 @@ const IndustriesSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold"
             style={{ color: BRAND.navy.dark }}
           >
-            Expertise Across{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Industries
-            </span>
+            Expertise Across <span>Industries</span>
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -7582,7 +7532,7 @@ const CaseStudiesSection = () => {
         "Improved User Experience",
       ],
       icon: FaProjectDiagram,
-      color: "#3B82F6",
+      color: BRAND.gold.primary,
     },
     {
       title: "AI Automation Initiative",
@@ -7594,7 +7544,7 @@ const CaseStudiesSection = () => {
         "$2M Annual Savings",
       ],
       icon: FaRobot,
-      color: "#8B5CF6",
+      color: BRAND.gold.primary,
     },
     {
       title: "Cloud Modernization Project",
@@ -7633,15 +7583,15 @@ const CaseStudiesSection = () => {
           <span
             className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
             style={{
-              background: "rgba(253,185,19,0.12)",
-              color: "#FDB913",
+              background: `${BRAND.navy.mid}08`,
+              color: "#FFF",
               borderColor: "rgba(253,185,19,0.25)",
             }}
           >
             Success Stories
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Featured <span style={{ color: "#FDB913" }}>Case Studies</span>
+            Featured <span style={{ color: "#FFF" }}>Case Studies</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -7684,7 +7634,7 @@ const CaseStudiesSection = () => {
                       style={{ color: caseStudy.color }}
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#FDB913] transition-colors">
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#FFF] transition-colors">
                     {caseStudy.title}
                   </h3>
                   <p className="text-white/50 mb-6 text-sm leading-relaxed">
@@ -7999,7 +7949,7 @@ const CTABannerSection = () => {
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8"
             style={{
-              background: "rgba(253,185,19,0.12)",
+              background: `${BRAND.navy.mid}08`,
               border: "2px solid rgba(253,185,19,0.25)",
             }}
           >
@@ -8115,10 +8065,10 @@ const Footer = () => {
             >
               <FaCube className="text-white text-lg" />
             </div>
-            <span className="text-xl font-bold text-white">Innovise IT</span>
+            <span className="text-xl font-bold text-white">Innovise</span>
           </div>
           <p className="text-white/30 text-sm">
-            © 2024 Innovise IT Solutions. All rights reserved.
+            © 2024 Innovise Solutions. All rights reserved.
           </p>
           <div className="flex gap-3">
             {[FaLinkedin, FaTwitter, FaGithub].map((SocialIcon, i) => (
@@ -8131,7 +8081,7 @@ const Footer = () => {
                   border: "1px solid rgba(255,255,255,0.08)",
                 }}
               >
-                <SocialIcon className="text-white/40 group-hover:text-[#FDB913] transition-colors" />
+                <SocialIcon className="text-white/40 group-hover:text-[#FFF] transition-colors" />
               </a>
             ))}
           </div>
@@ -8149,7 +8099,7 @@ const Footer = () => {
                   <li key={j}>
                     <a
                       href="#"
-                      className="hover:text-[#FDB913] transition-colors flex items-center justify-center md:justify-start gap-2"
+                      className="hover:text-[#FFF] transition-colors flex items-center justify-center md:justify-start gap-2"
                     >
                       {section.icons && j === 0 && <FaEnvelope />}
                       {section.icons && j === 1 && <FaPhone />}

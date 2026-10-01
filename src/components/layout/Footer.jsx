@@ -157,7 +157,7 @@ const Footer = () => {
               </h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <FaMapMarkerAlt className="text-accent-500 mt-1 flex-shrink-0" />
+                  <FaMapMarkerAlt className=" mt-1 flex-shrink-0" />
                   <span className="text-sm text-white">
                     {/* {companyData.contact.address.street}
                     <br /> */}
@@ -167,7 +167,7 @@ const Footer = () => {
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FaEnvelope className="text-accent-500 flex-shrink-0" />
+                  <FaEnvelope className=" flex-shrink-0" />
                   <a
                     href={`mailto:${companyData.contact.email}`}
                     className="text-sm text-white hover:text-white transition-colors"
@@ -176,7 +176,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
-                  <FaPhone className="text-accent-500 flex-shrink-0" />
+                  <FaPhone className=" flex-shrink-0" />
                   <a
                     href={`tel:${companyData.contact.phone.replace(/\s/g, "")}`}
                     className="text-sm text-white hover:text-white transition-colors"
@@ -222,7 +222,7 @@ const Footer = () => {
             </div> */}
 
             <p className="text-sm text-white flex items-center gap-1">
-              Designed & Developed by Innovise IT Team
+              Designed & Developed by Innovise Team
             </p>
           </div>
         </Container>

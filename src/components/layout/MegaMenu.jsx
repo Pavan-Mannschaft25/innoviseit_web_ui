@@ -93,7 +93,7 @@ export default MegaMenu;
 //           <div className="grid grid-cols-2 gap-0 divide-x divide-[#1A4570]">
 //             {data.map((section, sectionIndex) => (
 //               <div key={sectionIndex} className="p-8">
-//                 <h3 className="text-sm font-bold text-[#FDB913] uppercase tracking-wider mb-2 pb-3 border-b border-[#1A4570]">
+//                 <h3 className="text-sm font-bold text-[#FFF] uppercase tracking-wider mb-2 pb-3 border-b border-[#1A4570]">
 //                   {section.title}
 //                 </h3>
 
@@ -105,12 +105,12 @@ export default MegaMenu;
 //                         className="group flex items-start gap-3 p-3 -mx-3 rounded-xl hover:bg-[#143A63] transition-colors duration-200"
 //                         onClick={onClose}
 //                       >
-//                         <div className="mt-0.5 w-8 h-8 rounded-lg bg-[#143A63] text-[#FDB913] flex items-center justify-center group-hover:bg-[#FDB913] group-hover:text-[#0B1D33] transition-colors flex-shrink-0">
+//                         <div className="mt-0.5 w-8 h-8 rounded-lg bg-[#143A63] text-[#FFF] flex items-center justify-center group-hover:bg-[#FFF] group-hover:text-[#0B1D33] transition-colors flex-shrink-0">
 //                           <IconComponent iconName={item.icon} />
 //                         </div>
 
 //                         <div className="min-w-0">
-//                           <p className="font-semibold text-sm text-white group-hover:text-[#FDB913] transition-colors truncate">
+//                           <p className="font-semibold text-sm text-white group-hover:text-[#FFF] transition-colors truncate">
 //                             {item.name}
 //                           </p>
 //                           <p className="text-xs text-slate-400 mt-0.5 line-clamp-2 group-hover:text-slate-300">
