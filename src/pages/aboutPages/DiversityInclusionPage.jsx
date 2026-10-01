@@ -27,7 +27,7 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#12324f",
     light: "#FFD54F",
     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
   },
@@ -48,7 +48,7 @@ const commitmentsData = [
     title: "Inclusive Culture",
     description:
       "We foster a workplace where everyone feels welcome, heard, and empowered to bring their authentic selves to work every day.",
-    color: "#EC4899",
+    color: "#12324f",
     gradient: "linear-gradient(135deg, #EC4899 0%, #DB2777 100%)",
   },
   {
@@ -57,7 +57,7 @@ const commitmentsData = [
     title: "Equal Opportunity",
     description:
       "We promote fairness in hiring, growth, and leadership opportunities—ensuring merit and potential drive success.",
-    color: "#3B82F6",
+    color: "#12324f",
     gradient: "linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)",
   },
   {
@@ -66,7 +66,7 @@ const commitmentsData = [
     title: "Respect & Belonging",
     description:
       "We create an environment where individuality is celebrated, and every voice matters in shaping our collective future.",
-    color: "#F59E0B",
+    color: "#12324f",
     gradient: "linear-gradient(135deg, #F59E0B 0%, #D97706 100%)",
   },
   {
@@ -75,7 +75,7 @@ const commitmentsData = [
     title: "Collaboration Across Differences",
     description:
       "Diverse teams working together to solve complex challenges—because innovation thrives at the intersection of perspectives.",
-    color: "#10B981",
+    color: "#12324f",
     gradient: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
   },
 ];
@@ -334,10 +334,10 @@ const HeroSection = () => (
 
           {/* Description */}
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
-            At Innovise IT, we believe that diverse perspectives drive
-            innovation and better outcomes. We are committed to building an
-            inclusive workplace where every individual feels respected, valued,
-            and empowered to contribute.
+            At Innovise, we believe that diverse perspectives drive innovation
+            and better outcomes. We are committed to building an inclusive
+            workplace where every individual feels respected, valued, and
+            empowered to contribute.
           </p>
 
           {/* Key Points */}
@@ -496,17 +496,7 @@ const WhyMattersSection = () => (
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
-            Diversity Isn't Just About{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Representation
-            </span>
+            Diversity Isn't Just About Representation
           </h2>
 
           <p className="text-lg text-gray-300 leading-relaxed mb-8">
@@ -580,10 +570,7 @@ const WhyMattersSection = () => (
             />
 
             <div className="relative z-10">
-              <FaQuoteLeft
-                className="text-4xl mb-6 opacity-30"
-                style={{ color: BRAND.gold.primary }}
-              />
+              <FaQuoteLeft className="text-4xl mb-6 opacity-30 text-white" />
 
               <blockquote className="text-xl md:text-2xl font-bold text-white leading-relaxed mb-6">
                 "Innovation happens when people with different backgrounds,
@@ -597,7 +584,7 @@ const WhyMattersSection = () => (
                 <div
                   className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg"
                   style={{
-                    background: BRAND.gold.gradient,
+                    background: "#FFF",
                     color: BRAND.navy.dark,
                   }}
                 >
@@ -605,7 +592,7 @@ const WhyMattersSection = () => (
                 </div>
                 <div>
                   <div className="text-white font-semibold">
-                    Innovise IT Leadership
+                    Innovise Leadership
                   </div>
                   <div className="text-sm text-gray-400">
                     Core Value Statement
@@ -770,7 +757,7 @@ const ClosingSection = () => (
 
         {/* Closing Text */}
         <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-8">
-          At Innovise IT,{" "}
+          At Innovise,{" "}
           <span
             style={{
               backgroundImage: BRAND.gold.gradient,
@@ -850,7 +837,7 @@ const DiversityInclusionPage = () => {
       <div className="relative w-full h-[30vh] md:h-[70vh] lg:h-[90vh] bg-[#020B2D] overflow-hidden">
         <img
           src={banner}
-          alt="Innovise IT Banner"
+          alt="Innovise Banner"
           className="w-full h-full object-cover object-center"
         />
 

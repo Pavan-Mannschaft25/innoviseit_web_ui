@@ -854,7 +854,7 @@
 //           style={{ color: BRAND.navy.dark }}
 //         >
 //           The Minds Behind{" "}
-//           <span style={{ color: BRAND.gold.primary }}>Innovise IT</span>
+//           <span style={{ color: BRAND.gold.primary }}>Innovise</span>
 //         </h2>
 
 //         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
@@ -1233,7 +1233,7 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#0b2a4a",
     light: "#FFD54F",
     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
   },
@@ -1880,17 +1880,7 @@ const DifferentiatorCard = ({ item, index }) => (
   >
     <div className="p-6 lg:p-8 rounded-2xl h-full transition-all duration-300 hover:shadow-lg bg-primary-800">
       {/* Icon */}
-      <motion.div
-        className="w-14 h-14 rounded-xl flex items-center justify-center mb-5"
-        style={{
-          background:
-            index % 2 === 0
-              ? `${BRAND.gold.primary}10`
-              : `${BRAND.gold.primary}15`,
-          border: `2px solid ${index % 2 === 0 ? `${BRAND.gold.primary}25` : `${BRAND.gold.primary}30`}`,
-        }}
-        whileHover={{ rotate: [0, -10, 10, 0] }}
-      >
+      <motion.div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 bg-white">
         <item.icon className="text-xl" style={{ color: BRAND.gold.primary }} />
       </motion.div>
 
@@ -1955,7 +1945,7 @@ const TeamSection = () => (
           style={{ color: BRAND.navy.dark }}
         >
           The Minds Behind{" "}
-          <span style={{ color: BRAND.gold.primary }}>Innovise IT</span>
+          <span style={{ color: BRAND.gold.primary }}>Innovise</span>
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
@@ -2010,7 +2000,7 @@ const PhilosophySection = () => (
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
           className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-8"
           style={{
-            background: `${BRAND.gold.primary}15`,
+            background: `#FFF`,
             border: `2px solid ${BRAND.gold.primary}30`,
           }}
         >
@@ -2024,7 +2014,7 @@ const PhilosophySection = () => (
         <span
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
           style={{
-            background: "rgba(255,255,255,0.08)",
+            background: "#FFF",
             color: BRAND.gold.primary,
             border: "1px solid rgba(255,255,255,0.15)",
           }}
@@ -2034,30 +2024,9 @@ const PhilosophySection = () => (
 
         {/* Quote Text */}
         <blockquote className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug mb-8 max-w-4xl mx-auto">
-          Our leaders believe in a{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            collaborative
-          </span>{" "}
-          and{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            forward-thinking approach
-          </span>
-          —empowering teams, fostering innovation, and ensuring every solution
-          is aligned with client success.
+          Our leaders believe in a collaborative and forward-thinking approach
+          empowering teams, fostering innovation, and ensuring every solution is
+          aligned with client success.
         </blockquote>
 
         {/* Key Principles */}

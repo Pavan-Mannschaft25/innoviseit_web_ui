@@ -24,9 +24,9 @@
 //     lighter: "#1A4570",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#FFF",
 //     light: "#FFD54F",
-//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 //   },
 // };
 
@@ -121,7 +121,7 @@
 //     {/* Background Image */}
 //     <img
 //       src={bannerImg} // your uploaded image
-//       alt="Innovise IT Think"
+//       alt="Innovise Think"
 //       className="absolute inset-0 w-full h-full object-cover"
 //     />
 
@@ -268,7 +268,7 @@
 //       <div className="flex items-start gap-4">
 //         <div
 //           className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
-//           style={{ background: BRAND.gold.gradient }}
+//           style={{ background: "#FFF" }}
 //         >
 //           <FaHeadset
 //             className="text-2xl"
@@ -292,7 +292,7 @@
 //             href={`tel:${companyData.contact.phone.replace(/\s/g, "")}`}
 //             className="group/btn inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
 //             style={{
-//               background: BRAND.gold.gradient,
+//               background: "#FFF",
 //               color: BRAND.navy.dark,
 //               boxShadow: `0 4px 15px ${BRAND.gold.primary}35`,
 //               "--tw-ring-color": BRAND.gold.primary,
@@ -828,7 +828,7 @@
 //                     disabled={isSubmitting}
 //                     className="group relative w-full py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:transform-none focus:outline-none focus:ring-2 focus:ring-offset-2 mt-4"
 //                     style={{
-//                       background: BRAND.gold.gradient,
+//                       background: "#FFF",
 //                       color: BRAND.navy.dark,
 //                       boxShadow: `0 8px 30px ${BRAND.gold.primary}35`,
 //                       "--tw-ring-color": BRAND.gold.primary,
@@ -932,7 +932,7 @@
 //               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
 //               className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-6"
 //               style={{
-//                 background: BRAND.gold.gradient,
+//                 background: "#FFF",
 //                 boxShadow: `0 10px 40px ${BRAND.gold.primary}40`,
 //               }}
 //             >
@@ -1003,7 +1003,7 @@ import {
   FaDirections,
 } from "react-icons/fa";
 import toast from "react-hot-toast";
-import bannerImg from "../assets/banners/contact.png";
+import bannerImg from "../assets/banners/contact1.png";
 import emailjs from "@emailjs/browser";
 
 // ==================== BRAND COLORS (Aligned with Guidewire/AppSec) ====================
@@ -1015,9 +1015,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 
@@ -1104,7 +1104,7 @@ const HeroSection = memo(() => (
   <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
     <img
       src={bannerImg}
-      alt="Innovise IT Contact"
+      alt="Innovise Contact"
       className="absolute inset-0 w-full h-full object-cover"
     />
     <div
@@ -1150,18 +1150,7 @@ const HeroSection = memo(() => (
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-            Get in{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Touch
-            </span>
-            , We're Here to Help
+            Get in Touch, We're Here to Help
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
@@ -1198,11 +1187,11 @@ const ContactInfoCard = memo(({ info, index }) => (
       <div
         className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-500 group-hover:scale-110"
         style={{
-          background: "rgba(253,185,19,0.12)",
+          background: "#FFF",
           border: "1px solid rgba(253,185,19,0.25)",
         }}
       >
-        <info.icon className="text-lg" style={{ color: BRAND.gold.primary }} />
+        <info.icon className="text-lg" style={{ color: BRAND.navy.dark }} />
       </div>
 
       <div className="flex-grow min-w-0">
@@ -1230,7 +1219,7 @@ const ContactInfoCard = memo(({ info, index }) => (
 
     {/* Hover Glow */}
     <div
-      className="absolute top-0 right-0 w-24 h-24 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+      className="absolute top-0 right-0 w-24 h-24 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
       aria-hidden="true"
     />
   </motion.div>
@@ -1257,7 +1246,7 @@ const FormInput = memo(
       "w-full px-4 py-3.5 rounded-xl border transition-all duration-300 focus:outline-none focus:ring-2 text-sm";
     const stateClasses = error
       ? "border-red-400 focus:border-red-500 focus:ring-red-200 bg-red-50/30"
-      : "border-gray-200 focus:border-[#FDB913] bg-gray-50/50 focus:bg-white focus:ring-[#FDB913]/20";
+      : "border-gray-200 focus:border-[#FFF] bg-gray-50/50 focus:bg-white focus:ring-[#FFF]/20";
 
     const Component = textarea ? "textarea" : "input";
 
@@ -1573,17 +1562,7 @@ const ContactPage = () => {
 
                 <div className="relative z-10">
                   <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
-                    Contact{" "}
-                    <span
-                      style={{
-                        backgroundImage: BRAND.gold.gradient,
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundClip: "text",
-                      }}
-                    >
-                      Information
-                    </span>
+                    Contact Information
                   </h2>
                   <p className="text-sm text-white/60 mb-8">
                     Reach out through any channel, or fill out the form to get a
@@ -1600,14 +1579,14 @@ const ContactPage = () => {
                   <div
                     className="mt-8 p-5 rounded-2xl"
                     style={{
-                      background: "rgba(253,185,19,0.08)",
+                      background: "rgba(255,255,255,0.04)",
                       border: "1px solid rgba(253,185,19,0.2)",
                     }}
                   >
                     <div className="flex items-start gap-4">
                       <div
                         className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                        style={{ background: BRAND.gold.gradient }}
+                        style={{ background: "#FFF" }}
                       >
                         <FaHeadset
                           className="text-xl"
@@ -1739,7 +1718,7 @@ const ContactPage = () => {
                         onChange={handleChange}
                         onBlur={handleBlur}
                         required
-                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 text-sm text-gray-900 appearance-none cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:border-[#FDB913] focus:bg-white focus:ring-[#FDB913]/20"
+                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 text-sm text-gray-900 appearance-none cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:border-[#FFF] focus:bg-white focus:ring-[#FFF]/20"
                       >
                         {subjectOptions.map((option) => (
                           <option key={option.value} value={option.value}>
@@ -1775,18 +1754,13 @@ const ContactPage = () => {
                         onChange={handleChange}
                         required
                         className="mt-0.5 w-5 h-5 rounded cursor-pointer transition-all"
-                        style={{ accentColor: BRAND.gold.primary }}
                       />
                       <label
                         htmlFor="privacy"
                         className="text-xs cursor-pointer leading-relaxed text-gray-500"
                       >
                         I agree to the{" "}
-                        <a
-                          href="#"
-                          className="font-bold underline"
-                          style={{ color: BRAND.gold.primary }}
-                        >
+                        <a href="#" className="font-bold underline">
                           Privacy Policy
                         </a>{" "}
                         and consent to processing my data for contact purposes.
@@ -1803,9 +1777,9 @@ const ContactPage = () => {
                       disabled={isSubmitting}
                       className="group relative w-full py-4 rounded-xl font-bold text-base overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:transform-none focus:outline-none focus:ring-2 focus:ring-offset-2 mt-4"
                       style={{
-                        background: BRAND.gold.gradient,
-                        color: BRAND.navy.dark,
-                        boxShadow: `0 8px 30px ${BRAND.gold.primary}35`,
+                        background: BRAND.navy.dark,
+                        color: "#FFF",
+                        boxShadow: `#FFF`,
                       }}
                     >
                       <span className="relative z-10 flex items-center justify-center gap-3">
@@ -1862,7 +1836,7 @@ const ContactPage = () => {
       >
         {/* Real Embedded Google Map */}
         <iframe
-          title="Innovise IT Office Location"
+          title="Innovise Office Location"
           src={`https://www.google.com/maps?q=${mapQuery}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
           className="absolute inset-0 w-full h-full border-0 grayscale contrast-125"
           allowFullScreen=""
@@ -1897,7 +1871,7 @@ const ContactPage = () => {
                 }}
                 className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                 style={{
-                  background: BRAND.gold.gradient,
+                  background: "#FFF",
                   boxShadow: `0 10px 30px ${BRAND.gold.primary}30`,
                 }}
               >
@@ -1914,7 +1888,7 @@ const ContactPage = () => {
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-start gap-3">
-                  <FaBuilding className="text-[#FDB913] mt-1 flex-shrink-0" />
+                  <FaBuilding className="text-[#FFF] mt-1 flex-shrink-0" />
                   <p className="text-sm text-gray-300 leading-relaxed">
                     {/* {companyData.contact.address.street}
                     <br /> */}
@@ -1924,7 +1898,7 @@ const ContactPage = () => {
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <FaClock className="text-[#FDB913] flex-shrink-0" />
+                  <FaClock className="text-[#FFF] flex-shrink-0" />
                   <p className="text-sm text-gray-300">
                     {companyData.contact.hours}
                   </p>
@@ -1937,7 +1911,7 @@ const ContactPage = () => {
                 rel="noopener noreferrer"
                 className="group/dir inline-flex items-center gap-3 px-6 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-0.5"
                 style={{
-                  background: BRAND.gold.gradient,
+                  background: "#FFF",
                   color: BRAND.navy.dark,
                   boxShadow: `0 8px 25px ${BRAND.gold.primary}30`,
                 }}

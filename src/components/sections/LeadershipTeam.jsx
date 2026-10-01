@@ -543,9 +543,9 @@
 // //     light: "#132D4B",
 // //   },
 // //   gold: {
-// //     primary: "#FDB913",
+// //     primary: "#0B2A4A",
 // //     light: "#FFD54F",
-// //     gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+// //     gradient: "linear-gradient(135deg, #0B2A4A 0%, #FFD54F 100%)",
 // //   },
 // // };
 
@@ -690,7 +690,7 @@
 // //             <span className="bg-gradient-to-br from-[#12324f] via-[#12324f] to-[#132D4B] bg-clip-text text-transparent">
 // //               Leadership
 // //             </span>{" "}
-// //             <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+// //             <span className="bg-black bg-clip-text text-transparent">
 // //               Team
 // //             </span>
 // //           </h2>
@@ -786,7 +786,7 @@
 // //                   className="group relative h-full"
 // //                 >
 // //                   {/* Card Container */}
-// //                   <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
+// //                   <div className="relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-[#0B2A4A]/30">
 // //                     {/* Image Section */}
 // //                     <div className="relative aspect-square overflow-hidden">
 // //                       <img
@@ -806,7 +806,7 @@
 // //                             href={leader.social.linkedin}
 // //                             target="_blank"
 // //                             rel="noopener noreferrer"
-// //                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#12324f] hover:bg-[#FDB913] hover:text-[#12324f] hover:scale-110 transition-all duration-300 shadow-lg"
+// //                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#12324f] hover:bg-[#0B2A4A] hover:text-[#12324f] hover:scale-110 transition-all duration-300 shadow-lg"
 // //                             aria-label={`${leader.name} LinkedIn`}
 // //                           >
 // //                             <FaLinkedinIn className="text-sm" />
@@ -817,7 +817,7 @@
 // //                             href={leader.social.twitter}
 // //                             target="_blank"
 // //                             rel="noopener noreferrer"
-// //                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#12324f] hover:bg-[#FDB913] hover:text-[#12324f] hover:scale-110 transition-all duration-300 shadow-lg"
+// //                             className="w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center text-[#12324f] hover:bg-[#0B2A4A] hover:text-[#12324f] hover:scale-110 transition-all duration-300 shadow-lg"
 // //                             aria-label={`${leader.name} Twitter`}
 // //                           >
 // //                             <FaTwitter className="text-sm" />
@@ -826,7 +826,7 @@
 // //                       </div>
 
 // //                       {/* Quote Icon (appears on hover) */}
-// //                       <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#FDB913]/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-400">
+// //                       <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#0B2A4A]/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-400">
 // //                         <FaQuoteLeft className="text-[#12324f] text-sm" />
 // //                       </div>
 // //                     </div>
@@ -844,7 +844,7 @@
 // //                       </p>
 
 // //                       {/* Divider */}
-// //                       <div className="h-[1px] bg-gradient-to-r from-[#FDB913]/40 via-transparent to-transparent mb-3" />
+// //                       <div className="h-[1px] bg-gradient-to-r from-[#0B2A4A]/40 via-transparent to-transparent mb-3" />
 
 // //                       {/* Quote Text (subtle) */}
 // //                       <p className="text-xs text-gray-400 italic line-clamp-2 leading-relaxed">
@@ -855,14 +855,14 @@
 // //                       <div
 // //                         className={`absolute bottom-4 right-4 w-2 h-2 rounded-full transition-all duration-300 ${
 // //                           activeIndex === index % leaders.length
-// //                             ? "bg-[#FDB913] scale-125 shadow-md shadow-yellow-400/50"
+// //                             ? "bg-[#0B2A4A] scale-125 shadow-md shadow-yellow-400/50"
 // //                             : "bg-gray-200"
 // //                         }`}
 // //                       />
 // //                     </div>
 
 // //                     {/* Top Accent Line on Hover */}
-// //                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
+// //                     <div className="absolute top-0 left-0 right-0 h-1 bg-black transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
 // //                   </div>
 // //                 </motion.div>
 // //               </SwiperSlide>
@@ -885,7 +885,7 @@
 // //             <motion.button
 // //               whileHover={{ scale: 1.05, y: -2 }}
 // //               whileTap={{ scale: 0.98 }}
-// //               className="group relative inline-flex items-center gap-3 px-10 py-4.5 bg-gradient-to-r from-[#12324f] to-[#12324f] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30 focus:outline-none focus:ring-2 focus:ring-[#FDB913] focus:ring-offset-2"
+// //               className="group relative inline-flex items-center gap-3 px-10 py-4.5 bg-gradient-to-r from-[#12324f] to-[#12324f] text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-900/30 focus:outline-none focus:ring-2 focus:ring-[#0B2A4A] focus:ring-offset-2"
 // //             >
 // //               {/* Shine Effect */}
 // //               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out">
@@ -916,7 +916,7 @@
 // //       {/* Custom Styles for Swiper */}
 // //       <style>{`
 // //         .leadership-swiper .swiper-pagination-bullet-active {
-// //           background: linear-gradient(135deg, #FDB913, #FFD54F) !important;
+// //           background: linear-gradient(135deg, #0B2A4A, #FFD54F) !important;
 // //           width: 32px;
 // //           border-radius: 9999px;
 // //         }
@@ -978,9 +978,9 @@
 //     light: "#132D4B",
 //   },
 //   gold: {
-//     primary: "#FDB913",
+//     primary: "#0B2A4A",
 //     light: "#FFD54F",
-//     gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+//     gradient: "linear-gradient(135deg, #0B2A4A 0%, #FFD54F 100%)",
 //   },
 // };
 
@@ -1123,7 +1123,7 @@
 //             <span className="bg-gradient-to-br from-[#12324f] via-[#12324f] to-[#132D4B] bg-clip-text text-transparent">
 //               Leadership
 //             </span>{" "}
-//             <span className="bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] bg-clip-text text-transparent">
+//             <span className="bg-black bg-clip-text text-transparent">
 //               Team
 //             </span>
 //           </h2>
@@ -1194,7 +1194,7 @@
 //                   transition={{ duration: 0.4 }}
 //                   className="group relative h-full pb-2"
 //                 >
-//                   <div className="relative bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(11,29,51,0.18)] transition-all duration-500 border border-gray-100 hover:border-[#FDB913]/30">
+//                   <div className="relative bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(11,29,51,0.18)] transition-all duration-500 border border-gray-100 hover:border-[#0B2A4A]/30">
 //                     {/* Image */}
 //                     <div className="relative h-[460px] md:h-[420px] lg:h-[420px] overflow-hidden">
 //                       <img
@@ -1213,14 +1213,14 @@
 //                           href={leader.social.linkedin}
 //                           target="_blank"
 //                           rel="noopener noreferrer"
-//                           className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#12324f] hover:bg-[#FDB913] transition-all duration-300"
+//                           className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-[#12324f] hover:bg-[#0B2A4A] transition-all duration-300"
 //                         >
 //                           <FaLinkedinIn className="text-sm" />
 //                         </a>
 //                       </div>
 
 //                       {/* Quote Icon */}
-//                       <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#FDB913]/90 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
+//                       <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#0B2A4A]/90 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-500">
 //                         <FaQuoteLeft className="text-[#12324f] text-sm" />
 //                       </div>
 //                     </div>
@@ -1235,7 +1235,7 @@
 //                         {leader.role}
 //                       </p>
 
-//                       <div className="h-[1px] bg-gradient-to-r from-[#FDB913]/40 via-transparent to-transparent mb-3" />
+//                       <div className="h-[1px] bg-gradient-to-r from-[#0B2A4A]/40 via-transparent to-transparent mb-3" />
 
 //                       <p className="text-sm md:text-md text-gray-600 line-clamp-2 leading-relaxed">
 //                         "{leader.quote}"
@@ -1245,14 +1245,14 @@
 //                       <div
 //                         className={`absolute bottom-4 right-4 w-2 h-2 rounded-full transition-all duration-300 ${
 //                           activeIndex === index
-//                             ? "bg-[#FDB913] scale-125 shadow-md shadow-yellow-400/50"
+//                             ? "bg-[#0B2A4A] scale-125 shadow-md shadow-yellow-400/50"
 //                             : "bg-gray-200"
 //                         }`}
 //                       />
 //                     </div>
 
 //                     {/* Top Border */}
-//                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FDB913] via-[#FFD54F] to-[#FDB913] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
+//                     <div className="absolute top-0 left-0 right-0 h-1 bg-black transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
 //                   </div>
 //                 </motion.div>
 //               </SwiperSlide>
@@ -1349,9 +1349,9 @@ const BRAND = {
     light: "#132D4B",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#0B2A4A",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #0B2A4A 0%, #FFD54F 100%)",
   },
 };
 
@@ -1503,8 +1503,8 @@ const LeadershipTeam = () => {
           className="text-center mb-8 sm:mb-10 lg:mb-14"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-2 sm:mb-3 tracking-tight">
-            <span className="text-[#12324F]">Leadership</span>{" "}
-            <span className="text-[#FDB913]">Team</span>
+            <span className="text-[#0B2A4A]">Leadership</span>{" "}
+            <span className="text-[#0B2A4A]">Team</span>
           </h2>
 
           <p className="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed font-light px-4">
@@ -1581,7 +1581,7 @@ const LeadershipTeam = () => {
                 >
                   <div className="relative h-[200px] sm:h-[220px] md:h-[230px] lg:h-[250px] bg-white rounded-[16px] sm:rounded-[18px] border border-[rgba(18,50,79,0.06)] shadow-[0_2px_16px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(18,50,79,0.08)] transition-all duration-300 overflow-hidden">
                     {/* Top Gold Border */}
-                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#FDB913] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-400 z-10" />
+                    <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#0B2A4A] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-400 z-10" />
 
                     <div className="flex h-full">
                       {/* Portrait - Full Height Left Side */}
@@ -1603,11 +1603,11 @@ const LeadershipTeam = () => {
                             {leader.name}
                           </h3>
 
-                          <p className="text-[11px] sm:text-[12px] md:text-[12px] lg:text-[13px] font-medium text-[#FDB913] mt-0.5">
+                          <p className="text-[11px] sm:text-[12px] md:text-[12px] lg:text-[13px] font-medium text-[#0B2A4A] mt-0.5">
                             {leader.role}
                           </p>
 
-                          <div className="h-[1px] w-4 sm:w-5 md:w-6 bg-[#FDB913]/25 mt-1.5 sm:mt-2 mb-1.5 sm:mb-2" />
+                          <div className="h-[1px] w-4 sm:w-5 md:w-6 bg-[#0B2A4A]/25 mt-1.5 sm:mt-2 mb-1.5 sm:mb-2" />
 
                           <p className="text-[11px] sm:text-[12px] md:text-[12px] lg:text-[13px] text-[#64748B] leading-relaxed">
                             {leader.quote}
@@ -1620,7 +1620,7 @@ const LeadershipTeam = () => {
                             href={leader.social.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center w-6 h-6 sm:w-6.5 sm:h-6.5 md:w-7 md:h-7 rounded-lg bg-[#12324F] text-white hover:bg-[#FDB913] hover:text-[#12324F] transition-all duration-300 hover:scale-105"
+                            className="inline-flex items-center justify-center w-6 h-6 sm:w-6.5 sm:h-6.5 md:w-7 md:h-7 rounded-lg bg-[#12324F] text-white hover:bg-[#0B2A4A] hover:text-[#12324F] transition-all duration-300 hover:scale-105"
                           >
                             <FaLinkedinIn className="text-[10px] sm:text-[11px] md:text-xs" />
                           </a>
@@ -1632,7 +1632,7 @@ const LeadershipTeam = () => {
                     <div
                       className={`absolute bottom-2 right-2 sm:bottom-2.5 sm:right-2.5 md:bottom-3 md:right-3 w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                         activeIndex === index
-                          ? "bg-[#FDB913] shadow-[0_0_8px_rgba(253,185,19,0.4)]"
+                          ? "bg-[#0B2A4A] shadow-[0_0_8px_rgba(253,185,19,0.4)]"
                           : "bg-[#E2E8F0]"
                       }`}
                     />
@@ -1658,7 +1658,7 @@ const LeadershipTeam = () => {
               className="group inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 bg-[#12324F] text-white text-sm sm:text-base font-semibold rounded-xl hover:shadow-[0_8px_30px_rgba(18,50,79,0.2)] transition-all duration-300"
             >
               <span>View Full Leadership Team</span>
-              <FaArrowRight className="group-hover:translate-x-1 group-hover:text-[#FDB913] transition-all duration-300 text-sm sm:text-base" />
+              <FaArrowRight className="group-hover:translate-x-1 group-hover:text-[#ffffff] transition-all duration-300 text-sm sm:text-base" />
             </motion.button>
           </Link>
 

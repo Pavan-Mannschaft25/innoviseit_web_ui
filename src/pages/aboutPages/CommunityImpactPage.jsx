@@ -553,7 +553,7 @@ const HeroSection = () => (
           transition={{ delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12"
         >
-          At Innovise IT, we believe our responsibility goes beyond delivering
+          At Innovise, we believe our responsibility goes beyond delivering
           technology solutions. We are committed to making a positive impact in
           the communities we serve by contributing to social, educational, and
           environmental initiatives.
@@ -1278,7 +1278,7 @@ const CommunityImpactPage = () => {
       <div className="relative w-full h-[90vh] bg-[#020B2D] overflow-hidden">
         <img
           src={banner}
-          alt="Innovise IT Banner"
+          alt="Innovise Banner"
           className="w-full h-full object-cover object-center"
         />
 

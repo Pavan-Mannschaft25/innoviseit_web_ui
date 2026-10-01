@@ -37,9 +37,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 
@@ -63,7 +63,7 @@ const servicesData = [
       "Risk identification",
       "Timeline analysis",
     ],
-    color: "#FDB913",
+    color: "#FFF",
   },
   {
     id: 2,
@@ -178,7 +178,7 @@ const processSteps = [
     subtitle: "Evaluation Phase",
     description:
       "Evaluate current project health, identify critical issues, and document baseline metrics.",
-    color: "#FDB913",
+    color: "#FFF",
   },
   {
     step: 2,
@@ -266,7 +266,7 @@ const ServiceCard = ({ service, index }) => {
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
           style={{
-            background: "linear-gradient(90deg, #FDB913, transparent)",
+            background: "linear-gradient(90deg, #FFF, transparent)",
           }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
@@ -279,7 +279,7 @@ const ServiceCard = ({ service, index }) => {
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
             style={{
               background: "rgba(253,185,19,0.12)",
-              color: "#FDB913",
+              color: "#FFF",
               border: "1px solid rgba(253,185,19,0.25)",
             }}
           >
@@ -292,7 +292,7 @@ const ServiceCard = ({ service, index }) => {
                 duration: 2,
                 repeat: Infinity,
               }}
-              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FDB913]"
+              className="w-1.5 h-1.5 rounded-full inline-block bg-[#FFF]"
             />
 
             {service.status}
@@ -300,7 +300,7 @@ const ServiceCard = ({ service, index }) => {
         </div>
 
         {/* Glow Effect */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
         <div className="relative z-10 p-8 lg:p-10">
           {/* Icon */}
@@ -312,7 +312,7 @@ const ServiceCard = ({ service, index }) => {
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
-            <service.icon className="text-2xl" style={{ color: "#FDB913" }} />
+            <service.icon className="text-2xl" style={{ color: "#FFF" }} />
           </motion.div>
 
           {/* Title */}
@@ -332,7 +332,7 @@ const ServiceCard = ({ service, index }) => {
                 key={idx}
                 className="flex items-center gap-2 text-sm text-white/80"
               >
-                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FDB913]" />
+                <FaCheckCircle className="flex-shrink-0 text-xs text-[#FFF]" />
 
                 {feature}
               </li>
@@ -460,7 +460,7 @@ const BenefitCard = ({ benefit, index }) => (
       }}
     >
       {/* Gold Glow */}
-      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative z-10 flex items-start gap-4">
         {/* Icon */}
@@ -472,7 +472,7 @@ const BenefitCard = ({ benefit, index }) => (
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >
-          <benefit.icon className="text-xl" style={{ color: "#FDB913" }} />
+          <benefit.icon className="text-xl" style={{ color: "#FFF" }} />
         </motion.div>
 
         {/* Content */}
@@ -588,10 +588,10 @@ const BeforeAfterCard = ({ stat, index }) => (
       }}
     >
       {/* Gold Glow */}
-      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute top-0 right-0 w-28 h-28 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       {/* Label */}
-      <div className="relative z-10 text-xs font-semibold text-[#FDB913] uppercase tracking-[0.2em] mb-5">
+      <div className="relative z-10 text-xs font-semibold text-[#FFF] uppercase tracking-[0.2em] mb-5">
         {stat.label}
       </div>
 
@@ -612,12 +612,12 @@ const BeforeAfterCard = ({ stat, index }) => (
           transition={{ duration: 1.5, repeat: Infinity }}
           className="flex-shrink-0"
         >
-          <FaArrowRight className="text-xl text-[#FDB913]" />
+          <FaArrowRight className="text-xl text-[#FFF]" />
         </motion.div>
 
         {/* After */}
         <div className="flex-1 text-center">
-          <div className="text-2xl font-black text-[#FDB913]">{stat.after}</div>
+          <div className="text-2xl font-black text-[#FFF]">{stat.after}</div>
 
           <div className="text-[11px] text-white/50 uppercase tracking-wider mt-1">
             After
@@ -1412,7 +1412,7 @@ const BenefitsSection = () => (
 const ProcessSection = () => (
   <section className="py-6 lg:py-12 bg-primary-800  relative overflow-hidden">
     {/* Background Effects */}
-    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FDB913]/10 blur-3xl rounded-full"></div>
+    <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFF]/10 blur-3xl rounded-full"></div>
     <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] bg-[#102B4C] blur-3xl rounded-full"></div>
 
     <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
@@ -1427,7 +1427,7 @@ const ProcessSection = () => (
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
             background: "rgba(253,185,19,0.12)",
-            color: "#FDB913",
+            color: "#FFF",
             borderColor: "rgba(253,185,19,0.25)",
           }}
         >
@@ -1435,8 +1435,7 @@ const ProcessSection = () => (
         </span>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-          Proven{" "}
-          <span style={{ color: "#FDB913" }}>4-Step Recovery Process</span>
+          Proven <span style={{ color: "#FFF" }}>4-Step Recovery Process</span>
         </h2>
 
         <p className="text-lg leading-relaxed text-white/70">
@@ -1457,14 +1456,14 @@ const ProcessSection = () => (
               transition={{ delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FDB913]/30 hover:bg-white/[0.07]">
+              <div className="relative h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#FFF]/30 hover:bg-white/[0.07]">
                 {/* Step Number */}
                 <div className="absolute top-5 right-5 text-5xl font-black text-white/5">
                   {step.step}
                 </div>
 
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FDB913] shadow-lg shadow-[#FDB913]/20">
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#FFF] shadow-lg shadow-[#FFF]/20">
                   <step.icon className="text-2xl text-[#081C34]" />
                 </div>
 
@@ -1474,7 +1473,7 @@ const ProcessSection = () => (
                 </h4>
 
                 {/* Subtitle */}
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FDB913] mb-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#FFF] mb-3">
                   {step.subtitle}
                 </p>
 
@@ -1484,7 +1483,7 @@ const ProcessSection = () => (
                 </p>
 
                 {/* Glow Effect */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FDB913]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </motion.div>
           ))}
@@ -1504,12 +1503,12 @@ const ProcessSection = () => (
           >
             {/* Left Side */}
             <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-full bg-[#FDB913] flex items-center justify-center shadow-lg shadow-[#FDB913]/20">
+              <div className="w-14 h-14 rounded-full bg-[#FFF] flex items-center justify-center shadow-lg shadow-[#FFF]/20">
                 <step.icon className="text-lg text-[#081C34]" />
               </div>
 
               {index < processSteps.length - 1 && (
-                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FDB913] to-white/10"></div>
+                <div className="w-0.5 flex-1 mt-3 bg-gradient-to-b from-[#FFF] to-white/10"></div>
               )}
             </div>
 
@@ -1519,7 +1518,7 @@ const ProcessSection = () => (
                 {step.title}
               </h4>
 
-              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FDB913]">
+              <p className="text-xs font-semibold uppercase tracking-wider mb-2 text-[#FFF]">
                 {step.subtitle}
               </p>
 
