@@ -4,6 +4,7 @@ import oct7th from "../assets/eventsImages/oct7th.png";
 export const events = [
   {
     id: 1,
+    slug: "sap-connect-happy-hour-2026",
     title: "Happy Hour with Innovise at SAP Connect 2026",
     date: "October 5, 2026",
     location: "The Gatsby Bar, Las Vegas, NV",
@@ -16,6 +17,7 @@ export const events = [
   },
   {
     id: 2,
+    slug: "ASUG-SAP4U-2026-happy-hour",
     title: "Cocktails & Happy Hour with Innovise at SAP 4 U",
     date: "October 7, 2026",
     location: "Boudro’s Texas Bistro – San Antonio, TX",

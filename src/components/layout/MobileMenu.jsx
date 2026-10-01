@@ -239,7 +239,6 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
             <div className="flex-shrink-0 bg-gradient-to-r from-[#0a1628] to-[#152d52] px-6 py-5 flex items-center justify-between">
               <div className="font-bold text-xl">
                 <span className="text-white">Innovise</span>
-                <span className="text-[#FFD700]">IT</span>
               </div>
 
               <button
