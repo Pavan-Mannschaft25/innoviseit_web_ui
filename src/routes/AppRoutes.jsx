@@ -38,6 +38,9 @@ import EnergyUtilitiesChemicalsPage from "../pages/industryPages/EnergyUtilities
 import CodeQualitySecurityPage from "../pages/servicesPages/CodeQualitySecurityPage";
 import PrivacyPolicy from "../pages/Privacy";
 import ConsumerProductsRetailPage from "../pages/industryPages/ConsumerProductsPage";
+import InvitationPage from "../pages/InvitationPage";
+import EventsPage from "../pages/EventsPage";
+import EventDetailPage from "../pages/EventDetailPage";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -142,6 +145,10 @@ const AppRoutes = () => {
           />
           <Route path="/culture/community" element={<CommunityImpactPage />} />
           <Route path="/about/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/reserve-your-invitation" element={<InvitationPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          {/* <Route path="/events/:eventId" element={<EventDetailPage />} /> */}
+          <Route path="/events/:eventSlug" element={<EventDetailPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

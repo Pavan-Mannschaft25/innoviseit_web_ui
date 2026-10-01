@@ -249,11 +249,11 @@
 //   },
 // ];
 
-import img1 from "../assets/services/sr1.png";
-import img2 from "../assets/services/sr2.png";
-import img3 from "../assets/services/sr3.png";
-import img4 from "../assets/services/sr4.png";
-import img5 from "../assets/services/sr5.png";
+import img1 from "../assets/services/sap3.png";
+import img2 from "../assets/services/guid.png";
+import img3 from "../assets/services/ai2.png";
+import img4 from "../assets/services/app2.png";
+import img5 from "../assets/services/test2.png";
 import img6 from "../assets/services/sr6.png";
 
 export const servicesData = [
