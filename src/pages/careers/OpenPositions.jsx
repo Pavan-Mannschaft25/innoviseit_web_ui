@@ -57,11 +57,11 @@ const OpenPositions = memo(() => {
       <HeroSection />
       <LeaderQuoteSection />
 
-      <section id="positions" className="bg-[#FFFFFF] py-12">
+      <section id="positions" className="bg-[#FFFFFF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-Black mb-6">
-              Open <Gold>Positions</Gold>
+              Open Positions
             </h2>
             <p className="text-lg text-[#6B7280] max-w-2xl mx-auto">
               Explore roles across our teams. We're looking for passionate
@@ -139,11 +139,11 @@ const OpenPositions = memo(() => {
                       <h3 className="text-xl font-bold text-[#12324f]">
                         {dept}
                       </h3>
-                      <span className="text-sm font-medium text-[#854D0E] bg-[#FEF9C3] border border-[#EAB308] px-2.5 py-0.5 rounded-full">
+                      <span className="text-sm font-medium text-[#FFF] bg-[#12324f] px-2.5 py-0.5 rounded-full">
                         {jobsList.length}{" "}
                         {jobsList.length === 1 ? "Role" : "Roles"}
                       </span>
-                      <div className="flex-1 h-0.5 bg-gradient-to-r from-[#EAB308] to-[#E5E7EB] ml-4 rounded-full"></div>
+                      <div className="flex-1 h-0.5 bg-[#12324f] ml-4 rounded-full"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {jobsList.map((job) => (

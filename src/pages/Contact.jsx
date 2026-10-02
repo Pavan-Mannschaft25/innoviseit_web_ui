@@ -986,6 +986,7 @@
 // export default memo(ContactPage);
 
 import React, { useState, useCallback, useMemo, memo } from "react";
+import { Link } from "react-router-dom";
 import Container from "../components/ui/Container";
 import { motion } from "framer-motion";
 import {
@@ -1760,10 +1761,14 @@ const ContactPage = () => {
                         className="text-xs cursor-pointer leading-relaxed text-gray-500"
                       >
                         I agree to the{" "}
-                        <a href="#" className="font-bold underline">
+                        <Link
+                          to="/about/privacy-policy"
+                          className="font-semibold underline hover:text-primary-700 transition-colors"
+                        >
                           Privacy Policy
-                        </a>{" "}
-                        and consent to processing my data for contact purposes.
+                        </Link>{" "}
+                        and consent to the processing of my personal data for
+                        the purpose of responding to my enquiry.
                       </label>
                     </div>
                     {errors.agreedToTerms && (
