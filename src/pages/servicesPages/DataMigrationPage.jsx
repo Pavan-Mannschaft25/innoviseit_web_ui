@@ -251,7 +251,7 @@ const ServiceCard = ({ service, index }) => {
           <span
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
             style={{
-              background: "rgba(253,185,19,0.12)",
+              background: `${BRAND.navy.mid}08`,
               color: "#FFF",
               border: "1px solid rgba(253,185,19,0.25)",
             }}
@@ -280,7 +280,7 @@ const ServiceCard = ({ service, index }) => {
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
-              background: "rgba(253,185,19,0.12)",
+              background: `${BRAND.navy.mid}08`,
               border: "1px solid rgba(253,185,19,0.25)",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
@@ -339,7 +339,7 @@ const BenefitCard = ({ benefit, index }) => (
         <motion.div
           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
-            background: "rgba(253,185,19,0.12)",
+            background: `${BRAND.navy.mid}08`,
             border: "1px solid rgba(253,185,19,0.25)",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
@@ -804,28 +804,8 @@ const HeroSection = () => (
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-            Unlock the Power of{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Data
-            </span>{" "}
-            with Seamless{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Modernization
-            </span>
+            Unlock the Power of <span>Data</span> with Seamless{" "}
+            <span>Modernization</span>
           </h1>
 
           {/* Description */}
@@ -926,10 +906,7 @@ const ServicesSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          Comprehensive{" "}
-          <span style={{ color: BRAND.gold.primary }}>
-            Migration Capabilities
-          </span>
+          Comprehensive <span>Migration Capabilities</span>
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
@@ -968,8 +945,7 @@ const BenefitsSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           style={{ color: BRAND.navy.dark }}
         >
-          Transform Your Data Into{" "}
-          <span style={{ color: BRAND.gold.primary }}>Strategic Assets</span>
+          Transform Your Data Into <span>Strategic Assets</span>
         </h2>
 
         <p
@@ -1247,7 +1223,7 @@ const ProcessSection = () => (
         <span
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: "rgba(253,185,19,0.12)",
+            background: `${BRAND.navy.mid}08`,
             color: "#FFF",
             borderColor: "rgba(253,185,19,0.25)",
           }}

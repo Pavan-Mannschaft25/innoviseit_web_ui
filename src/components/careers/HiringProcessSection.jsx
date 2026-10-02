@@ -8,7 +8,7 @@ const ProcessStep = memo(({ step, isLast }) => (
     <div
       className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5 text-lg font-bold"
       style={{
-        background: "linear-gradient(135deg, #FFF, #FFD54F)",
+        background: "#FFF",
         color: BRAND.navy.dark,
       }}
     >
@@ -24,9 +24,7 @@ const HiringProcessSection = memo(() => (
     <div className="absolute inset-0 dot-pattern opacity-[0.025]" />
     <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
       <header className="text-center max-w-3xl mx-auto mb-16">
-        <SectionTitle light>
-          Our Hiring <Gold>Process</Gold>
-        </SectionTitle>
+        <SectionTitle light>Our Hiring Process</SectionTitle>
         <p className="reveal text-lg text-gray-400">
           A streamlined 5-step journey from application to onboarding.
         </p>

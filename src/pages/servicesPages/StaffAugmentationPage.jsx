@@ -253,7 +253,7 @@ const TalentCard = ({ category, index }) => {
         <motion.div
           className="absolute top-0 left-0 right-0 h-1 origin-left"
           style={{
-            background: "linear-gradient(90deg, #FFF, transparent)",
+            background: `${BRAND.navy.mid}08`,
           }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: isHovered ? 1 : 0 }}
@@ -270,9 +270,7 @@ const TalentCard = ({ category, index }) => {
             <motion.div
               className="w-16 h-16 rounded-2xl flex items-center justify-center"
               style={{
-                background: isHovered
-                  ? "rgba(253,185,19,0.15)"
-                  : "rgba(253,185,19,0.10)",
+                background: `${BRAND.navy.mid}08`,
 
                 border: "1px solid rgba(253,185,19,0.25)",
               }}
@@ -834,17 +832,7 @@ const HeroSection = () => (
 
           {/* Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-            Scale Your Team with{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              On-Demand Expert Talent
-            </span>
+            Scale Your Team with <span>On-Demand Expert Talent</span>
           </h1>
 
           {/* Description */}
@@ -945,8 +933,7 @@ const TalentSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          Expert{" "}
-          <span style={{ color: BRAND.gold.primary }}>Talent Categories</span>
+          Expert <span>Talent Categories</span>
         </h2>
 
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
@@ -985,10 +972,7 @@ const BenefitsSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           style={{ color: BRAND.navy.dark }}
         >
-          Get the Right Talent—{" "}
-          <span style={{ color: BRAND.gold.primary }}>
-            Right When You Need It
-          </span>
+          Get the Right Talent— <span>Right When You Need It</span>
         </h2>
 
         <p
@@ -1193,7 +1177,7 @@ const ProcessSection = () => (
         <span
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: "rgba(253,185,19,0.12)",
+            background: `${BRAND.navy.mid}08`,
             color: "#FFF",
             borderColor: "rgba(253,185,19,0.25)",
           }}

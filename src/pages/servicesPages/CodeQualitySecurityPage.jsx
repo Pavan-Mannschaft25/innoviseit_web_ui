@@ -298,7 +298,7 @@ const ServiceCard = ({ service, index }) => {
           <span
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
             style={{
-              background: "rgba(253,185,19,0.12)",
+              background: `${BRAND.navy.mid}08`,
               color: "#FFF",
               border: "1px solid rgba(253,185,19,0.25)",
             }}
@@ -334,7 +334,7 @@ const ServiceCard = ({ service, index }) => {
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
-              background: "rgba(253,185,19,0.12)",
+              background: `${BRAND.navy.mid}08`,
               border: "1px solid rgba(253,185,19,0.25)",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
@@ -426,7 +426,7 @@ const BenefitCard = ({ benefit, index }) => (
         <motion.div
           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
-            background: "rgba(253,185,19,0.12)",
+            background: `${BRAND.navy.mid}08`,
             border: "1px solid rgba(253,185,19,0.25)",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
@@ -538,18 +538,7 @@ const HeroSection = () => (
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-            Secure Code,{" "}
-            <span
-              style={{
-                backgroundImage: BRAND.gold.gradient,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Flawless Quality
-            </span>
-            , Absolute Compliance
+            Secure Code, <span>Flawless Quality</span>, Absolute Compliance
           </h1>
 
           <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-xl">
@@ -617,17 +606,7 @@ const ServicesSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           style={{ color: BRAND.navy.dark }}
         >
-          End-to-End{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            AppSec Solutions
-          </span>
+          End-to-End <span>AppSec Solutions</span>
         </h2>
         <p className="text-lg leading-relaxed" style={{ color: "#64748B" }}>
           From static code analysis to global compliance frameworks, we secure
@@ -671,17 +650,7 @@ const ToolsSection = () => (
           className="text-3xl md:text-4xl font-bold mb-4"
           style={{ color: BRAND.navy.dark }}
         >
-          Enterprise-Grade{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Security Tools
-          </span>
+          Enterprise-Grade <span>Security Tools</span>
         </h2>
         <p className="text-base leading-relaxed" style={{ color: "#64748B" }}>
           We leverage industry-leading SAST, DAST, and compliance automation
@@ -711,7 +680,7 @@ const ProcessSection = () => (
         <span
           className="inline-block px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 border"
           style={{
-            background: "rgba(253,185,19,0.12)",
+            background: `${BRAND.navy.mid}08`,
             color: "#FFF",
             borderColor: "rgba(253,185,19,0.25)",
           }}
@@ -719,17 +688,7 @@ const ProcessSection = () => (
           DevSecOps Approach
         </span>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white">
-          Security{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            Shift-Left Methodology
-          </span>
+          Security <span>Shift-Left Methodology</span>
         </h2>
         <p className="text-lg leading-relaxed text-white/70">
           Integrating security at every phase of the software development
@@ -825,18 +784,7 @@ const BenefitsSection = () => (
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
           style={{ color: BRAND.navy.dark }}
         >
-          Why Choose Our{" "}
-          <span
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            AppSec Solutions
-          </span>
-          ?
+          Why Choose Our <span>AppSec Solutions</span>?
         </h2>
         <p
           className="text-lg leading-relaxed mb-10"

@@ -16,8 +16,8 @@ export const COLORS = {
   border: "#E5E7EB",
   brand: "#0F172A",
   accent: "#12324f",
-  success: "#10B981",
-  warning: "#F59E0B",
+  success: "#111827",
+  warning: "#111827",
   danger: "#EF4444",
 };
 
