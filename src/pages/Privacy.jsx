@@ -9,12 +9,12 @@ export default function PrivacyPolicy() {
           </h1>
 
           <p className="mt-3 sm:mt-4 max-w-4xl text-base sm:text-lg text-white/90 leading-7 sm:leading-8">
-            Innovise IT LLC ('Innovise', 'we', 'our', or 'us') is an SAP
-            consulting and managed services firm headquartered in Snohomish,
-            Washington, United States, with operations in Mexico and India. We
-            are committed to protecting the privacy of individuals who interact
-            with us. This Privacy Notice explains what personal information we
-            collect, how we use it, and your rights in relation to it.
+            Innovise LLC ('Innovise', 'we', 'our', or 'us') is an SAP consulting
+            and managed services firm headquartered in Snohomish, Washington,
+            United States, with operations in Mexico and India. We are committed
+            to protecting the privacy of individuals who interact with us. This
+            Privacy Notice explains what personal information we collect, how we
+            use it, and your rights in relation to it.
           </p>
 
           <p className="mt-3 sm:mt-4 max-w-4xl text-base sm:text-lg text-white/90 leading-7 sm:leading-8">
@@ -180,7 +180,7 @@ export default function PrivacyPolicy() {
 
               <div className="bg-slate-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-slate-200">
                 <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-                  <Info label="Legal Name" value="Innovise IT LLC" />
+                  <Info label="Legal Name" value="Innovise LLC" />
                   <Info
                     label="Registered In"
                     value="United States of America"
@@ -1306,7 +1306,7 @@ export default function PrivacyPolicy() {
                           Mailing Address
                         </h4>
                         <p className="text-slate-300 text-xs sm:text-sm">
-                          Innovise IT LLC, 6216 152nd PL SE,
+                          Innovise LLC, 6216 152nd PL SE,
                           <br className="sm:hidden" /> Snohomish, WA 98296,
                           United States
                         </p>
