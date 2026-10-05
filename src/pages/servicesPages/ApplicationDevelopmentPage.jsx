@@ -135,7 +135,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-3 px-5 py-2 rounded-full mb-6"
               style={{
                 background: "rgba(253,185,19,0.12)",
-                border: "1px solid rgba(253,185,19,0.25)",
+                border: "2px solid #FFF",
               }}
             >
               <FaCode style={{ color: BRAND.gold.primary }} />
@@ -398,7 +398,7 @@ const ServicesSection = () => {
                 className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                 style={{
                   background: "rgba(253,185,19,0.12)",
-                  border: "1px solid rgba(253,185,19,0.25)",
+                  border: "2px solid #FFF",
                 }}
               >
                 <service.icon
@@ -543,7 +543,7 @@ const CTASection = () => {
             className="w-24 h-24 rounded-3xl mx-auto flex items-center justify-center mb-8"
             style={{
               background: "rgba(253,185,19,0.12)",
-              border: "1px solid rgba(253,185,19,0.25)",
+              border: "2px solid #FFF",
             }}
           >
             <FaRocket

@@ -460,7 +460,7 @@ const ServiceCard = ({ service, index }) => {
             ? "linear-gradient(135deg, #081C34 0%, #0D2747 50%, #163B66 100%)"
             : "linear-gradient(135deg, #0A1A2F 0%, #102B4C 50%, #163B66 100%)",
           border: isHovered
-            ? "1px solid rgba(253,185,19,0.25)"
+            ? "2px solid #FFF"
             : "1px solid rgba(255,255,255,0.06)",
           boxShadow: isHovered
             ? "0 30px 80px rgba(8,28,52,0.45)"

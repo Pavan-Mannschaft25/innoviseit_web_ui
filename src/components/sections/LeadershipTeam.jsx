@@ -1500,14 +1500,14 @@ const LeadershipTeam = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 sm:mb-10 lg:mb-14"
+          className="mb-8 sm:mb-10 lg:mb-14"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-2 sm:mb-3 tracking-tight">
             <span className="text-[#0B2A4A]">Leadership</span>{" "}
             <span className="text-[#0B2A4A]">Team</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-[#64748B] max-w-2xl mx-auto leading-relaxed font-light px-4">
+          <p className="text-sm sm:text-base text-[#64748B] max-w-8xl mx-auto leading-relaxed font-light">
             Experienced leaders driving innovation and excellence across every
             dimension of our organization.
           </p>
