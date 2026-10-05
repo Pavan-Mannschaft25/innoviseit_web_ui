@@ -254,7 +254,7 @@ const ServiceCard = ({ service, index }) => {
                 #163B66 100%)`,
 
           border: isHovered
-            ? "1px solid rgba(253,185,19,0.25)"
+            ? "2px solid #FFF"
             : "1px solid rgba(255,255,255,0.06)",
 
           boxShadow: isHovered
@@ -280,7 +280,7 @@ const ServiceCard = ({ service, index }) => {
             style={{
               background: "rgba(253,185,19,0.12)",
               color: "#FFF",
-              border: "1px solid rgba(253,185,19,0.25)",
+              border: "2px solid #FFF",
             }}
           >
             <motion.span
@@ -308,7 +308,7 @@ const ServiceCard = ({ service, index }) => {
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
               background: "rgba(253,185,19,0.12)",
-              border: "1px solid rgba(253,185,19,0.25)",
+              border: "2px solid #FFF",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
@@ -468,7 +468,7 @@ const BenefitCard = ({ benefit, index }) => (
           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
             background: "rgba(253,185,19,0.12)",
-            border: "1px solid rgba(253,185,19,0.25)",
+            border: "2px solid #FFF",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >

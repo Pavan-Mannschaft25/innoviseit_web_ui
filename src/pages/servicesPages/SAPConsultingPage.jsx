@@ -693,7 +693,7 @@
 //               className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
 //               style={{
 //                 background: `${BRAND.navy.mid}08`,
-//                 border: "1px solid rgba(253,185,19,0.25)",
+//                 border: "2px solid #FFF",
 //               }}
 //             >
 //               <Icon size={28} className="text-[#FFF]" />
@@ -1979,7 +1979,7 @@
 // //                       className="w-10 h-10 rounded-xl flex items-center justify-center mb-1 transition-all duration-400"
 // //                       style={{
 // //                         background: `${BRAND.navy.mid}08`,
-// //                         border: "1px solid rgba(253,185,19,0.25)",
+// //                         border: "2px solid #FFF",
 // //                         backdropFilter: "blur(8px)",
 // //                       }}
 // //                     >
@@ -2067,7 +2067,7 @@
 // //                       className="w-9 h-9 rounded-xl flex items-center justify-center mb-0.5"
 // //                       style={{
 // //                         background: `${BRAND.navy.mid}08`,
-// //                         border: "1px solid rgba(253,185,19,0.25)",
+// //                         border: "2px solid #FFF",
 // //                         backdropFilter: "blur(8px)",
 // //                       }}
 // //                     >
@@ -2490,7 +2490,7 @@ const ServiceCard = ({ service, index }) => {
               className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
               style={{
                 background: `${BRAND.navy.mid}08`,
-                border: "1px solid rgba(253,185,19,0.25)",
+                border: "2px solid #FFF",
               }}
             >
               <Icon size={28} className="text-[#FFF]" />
@@ -2559,7 +2559,7 @@ const BenefitCard = ({ benefit, index }) => (
           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
             background: `${BRAND.navy.mid}08`,
-            border: "1px solid rgba(253,185,19,0.25)",
+            border: "2px solid #FFF",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >

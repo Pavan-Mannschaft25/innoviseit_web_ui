@@ -272,7 +272,7 @@ const TalentCard = ({ category, index }) => {
               style={{
                 background: `${BRAND.navy.mid}08`,
 
-                border: "1px solid rgba(253,185,19,0.25)",
+                border: "2px solid #FFF",
               }}
               whileHover={{ rotate: [0, -5, 5, 0] }}
             >

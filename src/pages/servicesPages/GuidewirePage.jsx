@@ -298,7 +298,7 @@
 // //             ? `linear-gradient(135deg, #081C34 0%, #0D2747 50%, #163B66 100%)`
 // //             : `linear-gradient(135deg, #0A1A2F 0%, #102B4C 50%, #163B66 100%)`,
 // //           border: isHovered
-// //             ? `1px solid rgba(253,185,19,0.25)`
+// //             ? `1px solid #FFF`
 // //             : "1px solid rgba(255,255,255,0.06)",
 // //           boxShadow: isHovered
 // //             ? "0 30px 80px rgba(8,28,52,0.45)"
@@ -321,7 +321,7 @@
 // //             style={{
 // //               background: `${BRAND.navy.mid}08`,
 // //               color: "#FFF",
-// //               border: "1px solid rgba(253,185,19,0.25)",
+// //               border: "1px solid #FFF",
 // //             }}
 // //           >
 // //             <motion.span
@@ -356,7 +356,7 @@
 // //             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
 // //             style={{
 // //               background: `${BRAND.navy.mid}08`,
-// //               border: "1px solid rgba(253,185,19,0.25)",
+// //               border: "1px solid #FFF",
 // //             }}
 // //             whileHover={{ rotate: [0, -5, 5, 0] }}
 // //           >
@@ -419,7 +419,7 @@
 // //           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
 // //           style={{
 // //             background: `${BRAND.navy.mid}08`,
-// //             border: "1px solid rgba(253,185,19,0.25)",
+// //             border: "1px solid #FFF",
 // //           }}
 // //           whileHover={{ rotate: [0, -10, 10, 0] }}
 // //         >
@@ -1424,7 +1424,7 @@
 // //           style={{
 // //             background: `${BRAND.navy.mid}08`,
 // //             color: "#FFF",
-// //             borderColor: "rgba(253,185,19,0.25)",
+// //             borderColor: "#FFF",
 // //           }}
 // //         >
 // //            Implementation Methodology
@@ -2628,7 +2628,7 @@
 //                   className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-md"
 //                   style={{
 //                     background: BRAND.gold.gradient,
-//                     boxShadow: "0 8px 24px rgba(253,185,19,0.25)",
+//                     boxShadow: "0 8px 24px #FFF",
 //                   }}
 //                 >
 //                   <step.icon className="text-2xl text-[#0B1D33]" />
@@ -2669,7 +2669,7 @@
 //                 className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
 //                 style={{
 //                   background: BRAND.gold.gradient,
-//                   boxShadow: "0 8px 24px rgba(253,185,19,0.25)",
+//                   boxShadow: "0 8px 24px #FFF",
 //                 }}
 //               >
 //                 <step.icon className="text-lg text-[#0B1D33]" />
@@ -3460,7 +3460,7 @@ const ServiceCard = ({ service, index }) => {
             style={{
               background: `${BRAND.navy.mid}08`,
               color: "#FFF",
-              border: "1px solid rgba(253,185,19,0.25)",
+              border: "1px solid #FFF",
             }}
           >
             <motion.span
@@ -3477,9 +3477,9 @@ const ServiceCard = ({ service, index }) => {
           <span
             className="inline-flex items-center px-2.5 py-1 rounded-lg text-[9px] font-bold uppercase tracking-wider"
             style={{
-              background: `${service.color}15`,
-              color: service.color,
-              border: `1px solid ${service.color}30`,
+              background: `#12324f`,
+              color: "#FFF",
+              border: `1px solid #FFF`,
             }}
           >
             {service.category}
@@ -3495,7 +3495,7 @@ const ServiceCard = ({ service, index }) => {
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
               background: `${BRAND.navy.mid}08`,
-              border: "1px solid rgba(253,185,19,0.25)",
+              border: "2px solid #FFF",
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
@@ -3556,7 +3556,7 @@ const BenefitCard = ({ benefit, index }) => (
           className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
           style={{
             background: `${BRAND.navy.mid}08`,
-            border: "1px solid rgba(253,185,19,0.25)",
+            border: "2px solid #FFF",
           }}
           whileHover={{ rotate: [0, -10, 10, 0] }}
         >
@@ -4047,7 +4047,7 @@ const ProcessSection = () => (
           style={{
             background: `${BRAND.navy.mid}08`,
             color: "#FFF",
-            borderColor: "rgba(253,185,19,0.25)",
+            borderColor: "#FFF",
           }}
         >
           Implementation Methodology

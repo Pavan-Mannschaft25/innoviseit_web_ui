@@ -236,7 +236,7 @@ const Industries = () => {
             </h2>
           }
           subtitle={
-            <p className="text-lg md:text-xl text-black max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-black max-w-8xl mx-auto leading-relaxed font-light">
               Deep domain knowledge across industries delivering scalable
               digital solutions with innovation at the core of every
               transformation journey

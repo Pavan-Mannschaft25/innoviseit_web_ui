@@ -1498,7 +1498,7 @@
 //               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full"
 //               style={{
 //                 background: `${BRAND.navy.mid}08`,
-//                 border: "1px solid rgba(253,185,19,0.25)",
+//                 border: "2px solid #FFF",
 //               }}
 //             >
 //               <span
@@ -6593,7 +6593,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full"
               style={{
                 background: `${BRAND.navy.mid}08`,
-                border: "1px solid rgba(253,185,19,0.25)",
+                border: "2px solid #FFF",
               }}
             >
               <span
