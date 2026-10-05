@@ -515,7 +515,7 @@ const PartnerMarquee = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-14 lg:mb-18"
+          className="mb-14 lg:mb-18"
         >
           {/* Badge */}
           {/* <motion.div
@@ -532,7 +532,7 @@ const PartnerMarquee = () => {
           </motion.div> */}
 
           {/* Title */}
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-5 leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-2 leading-tight">
             <span className="text-[#0B2A4A]">Our </span>
             <span className="relative inline-block">
               <span className="bg-[#0B2A4A] bg-clip-text text-transparent">
@@ -550,7 +550,7 @@ const PartnerMarquee = () => {
           </h2>
 
           {/* Subtitle */}
-          <p className="text-gray-800 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-gray-800 text-base sm:text-lg max-w-8xl mx-auto leading-relaxed font-light">
             Collaborating with world-class organizations to deliver exceptional
             results and drive innovation across industries
           </p>
