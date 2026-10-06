@@ -248,7 +248,7 @@ const Industries = () => {
         {/* 🎴 TILE GRID CONTAINER           */}
         {/* ================================ */}
         <div className="mt-6 lg:mt-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-4">
             {industriesData.map((industry, index) => (
               <AnimatedSection key={industry?.id || index} delay={index * 0.12}>
                 <IndustryTileCard

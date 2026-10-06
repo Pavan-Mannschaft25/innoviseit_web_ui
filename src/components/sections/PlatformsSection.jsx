@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FiPackage,
   FiShield,
@@ -72,13 +73,13 @@ function PlatformsSection() {
             </ul>
 
             {/* Explore Link */}
-            <a
-              href="#"
+            <Link
+              to="/services/sap-consulting"
               className="inline-flex items-center gap-2 bg-primary-800 text-[#FFF] font-semibold group-hover:gap-3 transition-all duration-300 p-4 rounded-lg"
             >
               Explore SAP Services
               <FiArrowRight />
-            </a>
+            </Link>
           </div>
 
           {/* Guidewire Card */}
@@ -109,13 +110,13 @@ function PlatformsSection() {
             </ul>
 
             {/* Explore Link */}
-            <a
-              href="#"
+            <Link
+              to="/services/guidewire"
               className="inline-flex items-center gap-2 bg-primary-800 text-[#FFF] font-semibold group-hover:gap-3 transition-all duration-300 p-4 rounded-lg"
             >
               Explore Guidewire Services
               <FiArrowRight />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

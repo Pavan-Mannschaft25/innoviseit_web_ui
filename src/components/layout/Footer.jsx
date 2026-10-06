@@ -108,13 +108,13 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Services Column */}
-            <div>
+            {/* Company Column */}
+            <div className="w-full flex flex-col item-start lg:items-center">
               <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
-                Services
+                Quick Links
               </h4>
               <ul className="space-y-3">
-                {footerLinks.services.map((link, idx) => (
+                {footerLinks.company.map((link, idx) => (
                   <li key={idx}>
                     <Link
                       to={link.path}
@@ -129,13 +129,13 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Company Column */}
+            {/* Services Column */}
             <div>
               <h4 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">
-                Company
+                Services
               </h4>
               <ul className="space-y-3">
-                {footerLinks.company.map((link, idx) => (
+                {footerLinks.services.map((link, idx) => (
                   <li key={idx}>
                     <Link
                       to={link.path}
