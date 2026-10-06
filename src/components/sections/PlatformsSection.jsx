@@ -60,7 +60,7 @@ function PlatformsSection() {
             </div>
 
             {/* Services List */}
-            <ul className="grid grid-cols-1 sm:grid-cols-1 gap-y-4 gap-x-6 mb-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-6">
               {sapServices.map((service, index) => (
                 <li
                   key={index}
@@ -97,7 +97,7 @@ function PlatformsSection() {
             </div>
 
             {/* Services List */}
-            <ul className="grid grid-cols-1 sm:grid-cols-1 gap-y-4 gap-x-6 mb-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-6">
               {guidewireServices.map((service, index) => (
                 <li
                   key={index}
