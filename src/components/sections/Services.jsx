@@ -1758,7 +1758,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-[#f4f8fc] mb-4 leading-tight">
             Supporting Services for Greater Value
           </h2>
-          <p className="text-base md:text-lg text-[#9db9d5] max-w-3xl">
+          <p className="text-base md:text-lg text-[#FFF] max-w-3xl">
             Leverage advanced technologies and tailored services to extend the
             value of your SAP and Guidewire investments.
           </p>
@@ -1783,13 +1783,13 @@ const Services = () => {
                   </div>
 
                   {/* Title - Removed mb-3 since the parent div handles it now */}
-                  <h3 className="text-lg font-semibold text-[#f4f8fc] group-hover:text-white transition-colors">
+                  <h3 className="text-lg font-semibold text-[#FFF] group-hover:text-white transition-colors">
                     {item.title}
                   </h3>
                 </div>
 
                 {/* Description - Reduced mb-6 to mb-4 */}
-                <p className="text-[#c7d8ea] text-sm leading-relaxed flex-grow mb-4">
+                <p className="text-[#FFF] text-sm leading-relaxed flex-grow mb-4">
                   {item.description}
                 </p>
 

@@ -645,7 +645,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   >
                     <div className="flex items-center gap-3">
                       <FaIcons.FaCogs className="text-lg" />
-                      <span>What We Do</span>
+                      <span>Services We Deliver</span>
                     </div>
                     <FaIcons.FaChevronDown
                       className={`text-xs transition-transform duration-300 ${
@@ -716,7 +716,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                     >
                       <div className="flex items-center gap-3">
                         <FaIcons.FaIndustry className="text-lg" />
-                        <span>Industries</span>
+                        <span>Industries We Serve</span>
                       </div>
                       <FaIcons.FaChevronDown
                         className={`text-xs transition-transform duration-300 ${
