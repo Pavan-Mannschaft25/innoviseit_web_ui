@@ -45,7 +45,7 @@ function ServiceJourneySection() {
     <section className="relative py-10 md:py-12 overflow-hidden bg-gray-50">
       <div className="max-w-8xl mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Heading */}
-        <div className="max-w-8xl mx-auto mb-20">
+        <div className="max-w-8xl mx-auto mb-10">
           <h2 className="text-3xl md:text-5xl font-bold text-primary-800 leading-tight mb-4">
             A Connected Service Journey
           </h2>
@@ -58,21 +58,16 @@ function ServiceJourneySection() {
         {/* Journey Grid */}
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6">
           {/* Connecting Line (Visible only on large screens) */}
-          <div className="hidden lg:block absolute top-7 left-[10%] right-[10%] h-0.5 bg-gray-200"></div>
+          <div className="hidden lg:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gray-200"></div>
 
           {stages.map((stage, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center text-center lg:px-2"
+              className="relative flex flex-col items-center text-center"
             >
               {/* Icon Container with Number Badge */}
-              <div className="relative z-10 w-14 h-14 flex items-center justify-center bg-white text-primary-900 rounded-full shadow-md border border-gray-100 mb-6">
+              <div className="relative z-10 w-18 h-18 flex items-center justify-center bg-primary-900 text-[#FFF] rounded-full shadow-md border border-gray-100 mb-6">
                 {stage.icon}
-
-                {/* Step Number Badge */}
-                <span className="absolute -top-2 -right-2 w-6 h-6 flex items-center justify-center bg-primary-900 text-white text-xs font-bold rounded-full shadow-sm">
-                  {index + 1}
-                </span>
               </div>
 
               {/* Content */}
