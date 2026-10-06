@@ -1383,7 +1383,7 @@ const Navbar = () => {
                 <button
                   className={`flex items-center gap-1.5 ${navLinkClass()}`}
                 >
-                  What We Do
+                  Services We Deliver
                   <FaChevronDown
                     className={`text-xs transition-transform duration-300 ${
                       activeMenu === "what" ? "rotate-180" : ""
@@ -1432,7 +1432,7 @@ const Navbar = () => {
                   <button
                     className={`flex items-center gap-1.5 ${navLinkClass()}`}
                   >
-                    Industries
+                    Industries We Serve
                     <FaChevronDown
                       className={`text-xs transition-transform duration-300 ${
                         activeMenu === "industries" ? "rotate-180" : ""
