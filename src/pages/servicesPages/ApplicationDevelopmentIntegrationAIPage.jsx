@@ -6719,8 +6719,8 @@ const WhyInnoviseSection = () => {
         "Enterprise Platforms",
         "Cloud Native Solutions",
       ],
-      gradient: "linear-gradient(135deg, #3B82F6, #06B6D4)",
-      color: "#3B82F6",
+      gradient: "",
+      color: "#FFF",
     },
     {
       title: "Integration Services",
@@ -6731,8 +6731,8 @@ const WhyInnoviseSection = () => {
         "API Development",
         "Middleware Solutions",
       ],
-      gradient: "linear-gradient(135deg, #8B5CF6, #EC4899)",
-      color: "#8B5CF6",
+      gradient: "",
+      color: "#FFF",
     },
     {
       title: "Artificial Intelligence",
@@ -6743,8 +6743,8 @@ const WhyInnoviseSection = () => {
         "Predictive Analytics",
         "Machine Learning",
       ],
-      gradient: BRAND.gold.gradient,
-      color: BRAND.gold.primary,
+      gradient: "",
+      color: "#FFF",
     },
   ];
 
@@ -6797,19 +6797,20 @@ const WhyInnoviseSection = () => {
               <div className="h-full rounded-3xl p-8 overflow-hidden transition-all duration-500 bg-primary-800">
                 <div
                   className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                  style={{ background: `${card.color}20` }}
+                  style={{ background: BRAND.navy.dark }}
                 />
 
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
                   style={{
-                    background: `${card.color}20`,
+                    background: "#FFF",
+
                     border: `1px solid ${card.color}40`,
                   }}
                 >
                   <card.icon
                     className="text-2xl"
-                    style={{ color: card.color }}
+                    style={{ color: BRAND.navy.dark }}
                   />
                 </div>
                 <h3 className="text-2xl font-bold mb-5 text-white group-hover:text-[#FFF] transition-colors">
@@ -6847,42 +6848,42 @@ const ServicesSection = () => {
       title: "Custom Application Development",
       icon: FaLaptopCode,
       desc: "Tailored solutions built for your unique business needs",
-      color: "#06B6D4",
+      color: BRAND.navy.dark,
       status: "DEV",
     },
     {
       title: "Enterprise Integrations",
       icon: FaProjectDiagram,
       desc: "Seamless connectivity across your entire tech stack",
-      color: "#06B6D4",
+      color: BRAND.navy.dark,
       status: "CONNECT",
     },
     {
       title: "AI & Automation",
       icon: FaBrain,
       desc: "Intelligent automation to drive efficiency and innovation",
-      color: "#06B6D4",
+      color: BRAND.navy.dark,
       status: "AI",
     },
     {
       title: "Cloud Engineering",
       icon: FaCloud,
       desc: "Scalable cloud infrastructure and migration services",
-      color: "#06B6D4",
+      color: BRAND.navy.dark,
       status: "CLOUD",
     },
     {
       title: "Quality Assurance",
       icon: FaShieldAlt,
       desc: "Comprehensive testing for flawless performance",
-      color: "#06B6D4",
+      color: BRAND.navy.dark,
       status: "QA",
     },
     {
       title: "Managed Services",
       icon: FaCogs,
       desc: "24/7 monitoring and support for peace of mind",
-      color: "#06B6D4",
+      color: BRAND.navy.dark,
       status: "ACTIVE",
     },
   ];
@@ -6936,21 +6937,13 @@ const ServicesSection = () => {
                   boxShadow: "0 10px 35px rgba(0,0,0,0.2)",
                 }}
               >
-                {/* Top Accent */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-1 origin-left group-hover:scale-x-100 scale-x-0 transition-transform duration-400"
-                  style={{
-                    background: `linear-gradient(90deg, ${service.color}, transparent)`,
-                  }}
-                />
-
                 {/* Status Badge */}
                 <div className="absolute top-5 right-5 z-20">
                   <span
                     className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
                     style={{
                       background: `${service.color}15`,
-                      color: service.color,
+                      color: "#FFF",
                       border: `1px solid ${service.color}30`,
                     }}
                   >
@@ -6958,7 +6951,7 @@ const ServicesSection = () => {
                       animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
                       transition={{ duration: 2, repeat: Infinity }}
                       className="w-1.5 h-1.5 rounded-full inline-block"
-                      style={{ background: service.color }}
+                      style={{ background: "#FFF" }}
                     />
                     {service.status}
                   </span>
@@ -6980,7 +6973,7 @@ const ServicesSection = () => {
                   >
                     <service.icon
                       className="text-xl"
-                      style={{ color: service.color }}
+                      style={{ color: "#FFF" }}
                     />
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#FFF] transition-colors">
@@ -7217,10 +7210,10 @@ const TechnologyEcosystemSection = () => {
   };
 
   const categoryColors = {
-    Enterprise: "#3B82F6",
-    Development: "#10B981",
-    Cloud: "#06B6D4",
-    AI: BRAND.gold.primary,
+    Enterprise: "#FFF",
+    Development: "#FFF",
+    Cloud: "#FFF",
+    AI: "#FFF",
   };
 
   return (
@@ -7249,7 +7242,6 @@ const TechnologyEcosystemSection = () => {
             style={{
               background: `${BRAND.navy.mid}08`,
               color: "#FFF",
-              borderColor: "rgba(253,185,19,0.25)",
             }}
           >
             Technology Stack
@@ -7282,8 +7274,7 @@ const TechnologyEcosystemSection = () => {
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center"
                       style={{
-                        background: `${color}15`,
-                        border: `1px solid ${color}30`,
+                        background: BRAND.navy.mid,
                       }}
                     >
                       <Icon className="text-base" style={{ color }} />
@@ -7493,13 +7484,12 @@ const IndustriesSection = () => {
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
                   style={{
-                    background: `${industry.color}12`,
-                    border: `1px solid ${industry.color}25`,
+                    background: BRAND.navy.dark,
                   }}
                 >
                   <industry.icon
                     className="text-2xl"
-                    style={{ color: industry.color }}
+                    style={{ color: "#FFF" }}
                   />
                 </div>
                 <h3

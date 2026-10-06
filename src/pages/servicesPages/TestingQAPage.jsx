@@ -2093,16 +2093,15 @@ const ServiceCard = ({ service, index }) => {
           <span
             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
             style={{
-              background: `${service.color}15`,
-              color: service.color,
-              border: `1px solid ${service.color}30`,
+              background: BRAND.navy.dark,
+              color: "#FFF",
             }}
           >
             <motion.span
               animate={{ scale: [1, 1.3, 1], opacity: [1, 0.5, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="w-1.5 h-1.5 rounded-full inline-block"
-              style={{ background: service.color }}
+              style={{ background: "#FFF" }}
             />
             {service.status}
           </span>
@@ -2116,14 +2115,13 @@ const ServiceCard = ({ service, index }) => {
           <motion.div
             className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
             style={{
-              background: `${service.color}12`,
-              border: `1px solid ${service.color}25`,
+              background: `#FFF`,
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
           >
             <service.icon
               className="text-2xl"
-              style={{ color: service.color }}
+              style={{ color: BRAND.navy.dark }}
             />
           </motion.div>
 
@@ -2146,7 +2144,7 @@ const ServiceCard = ({ service, index }) => {
               >
                 <FaCheckCircle
                   className="flex-shrink-0 text-xs"
-                  style={{ color: service.color }}
+                  style={{ color: "#FFF" }}
                 />
                 {feature}
               </li>
@@ -2185,11 +2183,10 @@ const ToolCard = ({ tool, index }) => (
       <div
         className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 transition-colors duration-300"
         style={{
-          background: `${tool.color}10`,
-          border: `1px solid ${tool.color}20`,
+          background: BRAND.navy.dark,
         }}
       >
-        <tool.icon className="text-2xl" style={{ color: tool.color }} />
+        <tool.icon className="text-2xl" style={{ color: "#FFF" }} />
       </div>
       <h4
         className="font-bold text-base mb-1"

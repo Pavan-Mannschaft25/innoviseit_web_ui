@@ -774,7 +774,7 @@ const IndustryTileCard = ({
     <Link
       to={data.link}
       className={`group relative block overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ${
-        isFullImage ? "h-[420px]" : "h-[420px]"
+        isFullImage ? "h-[250px]" : "h-[250px]"
       } ${
         isDark
           ? "bg-gradient-to-br from-[#0d2240]/80 to-[#081629]/90 border border-yellow-500/10"
@@ -813,7 +813,7 @@ const IndustryTileCard = ({
       {/* 🖼️ IMAGE SECTION                 */}
       {/* ================================ */}
       <div
-        className={`relative overflow-hidden ${isFullImage ? "h-[280px]" : "h-[280px]"}`}
+        className={`relative overflow-hidden ${isFullImage ? "h-[120px]" : "h-[120px]"}`}
       >
         {/* Loading Skeleton */}
         {!imageLoaded && !imageError && (
@@ -890,7 +890,7 @@ const IndustryTileCard = ({
 
         {/* Title */}
         <h3
-          className={`text-xl font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
+          className={`text-sm font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
             isDark ? "text-white" : "text-[#12324f] group-hover:text-black"
           }`}
         >
@@ -899,7 +899,7 @@ const IndustryTileCard = ({
 
         {/* Description */}
         <p
-          className={`text-sm leading-relaxed mb-4 transition-all duration-300 line-clamp-3 ${
+          className={`text-xs leading-relaxed mb-4 transition-all duration-300 line-clamp-3 ${
             isDark
               ? "text-gray-400/80 group-hover:text-gray-300"
               : "text-[#12324f] group-hover:text-black"
