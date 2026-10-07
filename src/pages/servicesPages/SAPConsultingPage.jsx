@@ -3312,8 +3312,653 @@
 
 // export default SAPConsultingPage;
 
+// import React from "react";
+// import { motion } from "framer-motion";
+// import {
+//   FaArrowRight,
+//   FaLightbulb,
+//   FaCogs,
+//   FaProjectDiagram,
+//   FaCheckCircle,
+//   FaDesktop,
+//   FaHeadset,
+//   FaCoins,
+//   FaTruck,
+//   FaShoppingCart,
+//   FaUsers,
+//   FaChartPie,
+//   FaSearch,
+//   FaPencilRuler,
+//   FaCode,
+//   FaRocket,
+//   FaShieldAlt,
+//   FaSyncAlt,
+//   FaTools,
+//   FaDatabase,
+//   FaUserTie,
+// } from "react-icons/fa";
+// import { Link } from "react-router-dom";
+// import sapLogo from "../../assets/logos/sap.png";
+
+// /* Example images (Unsplash). Swap for your own files in /assets. */
+// const IMG = {
+//   building:
+//     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
+//   team: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
+// };
+
+// /* ============ DATA ============ */
+// const orbit = [
+//   { icon: FaLightbulb, label: "Consulting & Strategy" },
+//   { icon: FaCogs, label: "Implementation & Migration" },
+//   { icon: FaProjectDiagram, label: "Integration & Data Management" },
+//   { icon: FaShieldAlt, label: "Testing & Quality Assurance" },
+//   { icon: FaDesktop, label: "Application Management" },
+//   { icon: FaHeadset, label: "Support & Optimization" },
+// ];
+
+// const services = [
+//   {
+//     icon: FaLightbulb,
+//     title: "Consulting & Advisory",
+//     desc: "Define the right SAP strategy and roadmap for your industry.",
+//   },
+//   {
+//     icon: FaCogs,
+//     title: "Implementation & Migration",
+//     desc: "Implement and migrate to SAP with minimal disruption.",
+//   },
+//   {
+//     icon: FaProjectDiagram,
+//     title: "Integration & Data Management",
+//     desc: "Improve visibility and operations with connected data.",
+//   },
+//   {
+//     icon: FaShieldAlt,
+//     title: "Testing & Quality Assurance",
+//     desc: "Secure, tested and compliant SAP solutions.",
+//   },
+//   {
+//     icon: FaDesktop,
+//     title: "Application Management",
+//     desc: "24/7 support and continuous improvement of your SAP landscape.",
+//   },
+//   {
+//     icon: FaHeadset,
+//     title: "Support & Optimization",
+//     desc: "Drive higher efficiency with ongoing tuning and support.",
+//   },
+// ];
+
+// /* Each card's `path` is the page its "Learn More" opens */
+// const offerings = [
+//   {
+//     icon: FaTools,
+//     name: "Application Management Services",
+//     status: "24/7 Support",
+//     desc: "24/7 monitoring, support, and continuous improvement of enterprise SAP applications.",
+//     path: "/services/app-maintenance",
+//     features: [
+//       "Application Monitoring",
+//       "Incident Management",
+//       "Performance Optimization",
+//       "Release Management",
+//     ],
+//   },
+//   {
+//     icon: FaDatabase,
+//     name: "Data Migration & Transformation",
+//     status: "SAP HANA",
+//     desc: "Seamless migration from legacy systems to SAP HANA and S/4HANA environments.",
+//     path: "/services/data-migration",
+//     features: [
+//       "SAP HANA Migration",
+//       "Legacy Data Conversion",
+//       "Data Validation",
+//       "System Consolidation",
+//     ],
+//   },
+//   {
+//     icon: FaUserTie,
+//     name: "SAP Talent & Staff Augmentation",
+//     status: "On Demand",
+//     desc: "Access certified SAP consultants, architects, developers, and project managers.",
+//     path: "/services/staff-augmentation",
+//     features: [
+//       "SAP Functional Experts",
+//       "SAP Technical Consultants",
+//       "Project Managers",
+//       "Flexible Engagement",
+//     ],
+//   },
+//   {
+//     icon: FaShieldAlt,
+//     name: "Code Quality & Security",
+//     status: "Enterprise Grade",
+//     desc: "Secure, compliant, and high-quality SAP solutions with continuous validation.",
+//     path: "/services/code-quality-security",
+//     features: [
+//       "Code Reviews",
+//       "Security Assessments",
+//       "Compliance Validation",
+//       "Risk Management",
+//     ],
+//   },
+// ];
+
+// const s4 = [
+//   {
+//     icon: FaCoins,
+//     title: "Finance Transformation",
+//     desc: "Simplify and accelerate financial processes.",
+//   },
+//   {
+//     icon: FaTruck,
+//     title: "Supply Chain Optimization",
+//     desc: "Drive visibility and agility across the supply chain.",
+//   },
+//   {
+//     icon: FaShoppingCart,
+//     title: "Procurement Excellence",
+//     desc: "Drive smarter purchasing and better supplier value.",
+//   },
+//   {
+//     icon: FaUsers,
+//     title: "Human Capital Management",
+//     desc: "Empower your workforce with a modern HR platform.",
+//   },
+//   {
+//     icon: FaChartPie,
+//     title: "Business Analytics",
+//     desc: "Real-time insights for faster, better decisions.",
+//   },
+// ];
+
+// const delivery = [
+//   {
+//     title: "Consult & Strategize",
+//     desc: "Understand your business and define a clear transformation roadmap.",
+//   },
+//   {
+//     title: "Implement & Integrate",
+//     desc: "Seamless implementation and integration of SAP solutions.",
+//   },
+//   {
+//     title: "Test & Assure",
+//     desc: "Comprehensive testing for quality, security and performance.",
+//   },
+//   {
+//     title: "Manage Applications",
+//     desc: "Ongoing support and application management services.",
+//   },
+//   {
+//     title: "Optimize & Grow",
+//     desc: "Continuous improvement and innovation for long-term success.",
+//   },
+// ];
+
+// const method = [
+//   {
+//     icon: FaSearch,
+//     title: "Discover",
+//     desc: "Assess your current landscape and business goals.",
+//   },
+//   {
+//     icon: FaPencilRuler,
+//     title: "Design",
+//     desc: "Create the solution architecture and detailed roadmap.",
+//   },
+//   {
+//     icon: FaCode,
+//     title: "Build",
+//     desc: "Implement, configure and integrate SAP solutions.",
+//   },
+//   {
+//     icon: FaCheckCircle,
+//     title: "Validate",
+//     desc: "Conduct rigorous testing for business readiness.",
+//   },
+//   {
+//     icon: FaRocket,
+//     title: "Deploy",
+//     desc: "Drive a smooth go-live with minimal risk.",
+//   },
+//   {
+//     icon: FaHeadset,
+//     title: "Support",
+//     desc: "Provide ongoing support and optimization.",
+//   },
+// ];
+
+// const stats = [
+//   { value: "100+", label: "Successful SAP Projects" },
+//   { value: "15+", label: "Years of Experience" },
+//   { value: "50+", label: "Global Clients" },
+//   { value: "95%", label: "Client Satisfaction" },
+// ];
+
+// /* ============ SHARED UI ============ */
+// const fade = (i = 0) => ({
+//   initial: { opacity: 0, y: 20 },
+//   whileInView: { opacity: 1, y: 0 },
+//   viewport: { once: true },
+//   transition: { delay: i * 0.06, duration: 0.5 },
+// });
+
+// const Container = ({ children, className = "" }) => (
+//   <div className={`max-w-7xl mx-auto px-4 lg:px-8 ${className}`}>
+//     {children}
+//   </div>
+// );
+
+// const Button = ({ href = "#", variant = "solid", children }) => {
+//   const styles = {
+//     solid: "bg-primary-500 text-white hover:bg-primary-400",
+//     outline: "border border-white/40 text-white hover:bg-white/10",
+//     outlineDark:
+//       "border border-primary-300 text-primary-800 hover:bg-primary-50",
+//     light: "bg-white text-primary-800 hover:bg-primary-100",
+//   };
+//   const cls = `inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 ${styles[variant]}`;
+//   // "/path" -> client-side navigation, "#id" or full URL -> normal anchor
+//   return href.startsWith("/") ? (
+//     <Link to={href} className={cls}>
+//       {children}
+//     </Link>
+//   ) : (
+//     <a href={href} className={cls}>
+//       {children}
+//     </a>
+//   );
+// };
+
+// const SectionHead = ({ eyebrow, title, text, dark, action }) => (
+//   <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+//     <div className="max-w-2xl">
+//       <p
+//         className={`text-xs font-semibold uppercase tracking-widest mb-3 ${dark ? "text-primary-300" : "text-primary-500"}`}
+//       >
+//         {eyebrow}
+//       </p>
+//       <h2
+//         className={`text-3xl lg:text-4xl font-bold ${dark ? "text-white" : "text-primary-900"}`}
+//       >
+//         {title}
+//       </h2>
+//       {text && (
+//         <p className={`mt-3 ${dark ? "text-primary-200" : "text-primary-600"}`}>
+//           {text}
+//         </p>
+//       )}
+//     </div>
+//     {action}
+//   </div>
+// );
+
+// /* ============ HERO ============ */
+// const OrbitDiagram = () => (
+//   <div className="relative mx-auto w-full max-w-[460px] aspect-square">
+//     {/* Rings */}
+//     <div className="absolute inset-[14%] rounded-full border border-white/20" />
+
+//     <motion.div
+//       className="absolute inset-[4%] rounded-full border border-dashed border-primary-300/40"
+//       animate={{ rotate: 360 }}
+//       transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+//     />
+
+//     {/* Center Logo */}
+//     <div className="absolute inset-[30%] rounded-full bg-white flex items-center justify-center shadow-2xl ring-8 ring-white/10 z-10 p-6">
+//       <img src={sapLogo} alt="SAP" className="w-full h-full object-contain" />
+//     </div>
+
+//     {/* Orbiting Services */}
+//     {orbit.map((n, i) => {
+//       const a = ((-90 + i * 60) * Math.PI) / 180;
+
+//       return (
+//         <div
+//           key={n.label}
+//           className="absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-28 md:w-32 z-20"
+//           style={{
+//             left: `${50 + 38 * Math.cos(a)}%`,
+//             top: `${50 + 38 * Math.sin(a)}%`,
+//           }}
+//         >
+//           <div className="bg-primary-800/95 backdrop-blur-sm border border-primary-600 rounded-xl p-2 shadow-xl flex flex-col items-center gap-1.5 w-full">
+//             <span className="w-10 h-10 rounded-full bg-white text-primary-700 flex items-center justify-center shadow-md">
+//               <n.icon />
+//             </span>
+
+//             <span className="text-[9px] md:text-[11px] leading-tight font-bold text-white uppercase tracking-wider">
+//               {n.label}
+//             </span>
+//           </div>
+//         </div>
+//       );
+//     })}
+//   </div>
+// );
+
+// const Hero = () => (
+//   <section className="bg-gradient-to-br from-primary-900 to-primary-800 py-16 lg:py-24">
+//     <Container className="grid lg:grid-cols-2 gap-12 items-center">
+//       <motion.div
+//         initial={{ opacity: 0, x: -30 }}
+//         animate={{ opacity: 1, x: 0 }}
+//         transition={{ duration: 0.7 }}
+//       >
+//         <p className="text-xs font-semibold uppercase tracking-widest text-primary-300 mb-4">
+//           SAP Services
+//         </p>
+//         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+//           Transforming Enterprises with{" "}
+//           <span className="text-primary-300">Intelligent SAP Solutions</span>
+//         </h1>
+//         <p className="text-lg text-primary-100 max-w-xl mb-8">
+//           End-to-end SAP consulting, implementation and managed services to help
+//           organizations simplify operations, increase efficiency and achieve
+//           sustainable growth.
+//         </p>
+//         <div className="flex flex-col sm:flex-row gap-4">
+//           <Button href="/contact">
+//             Talk to Our SAP Experts <FaArrowRight size={12} />
+//           </Button>
+//           <Button href="#approach" variant="outline">
+//             Explore Our Approach
+//           </Button>
+//         </div>
+//       </motion.div>
+//       <motion.div
+//         initial={{ opacity: 0, scale: 0.8 }}
+//         animate={{ opacity: 1, scale: 1 }}
+//         transition={{ duration: 0.7, delay: 0.2 }}
+//       >
+//         <OrbitDiagram />
+//       </motion.div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ COMPREHENSIVE SERVICES ============ */
+// const Services = () => (
+//   <section id="services" className="bg-white py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         eyebrow="Our SAP Services"
+//         title="Comprehensive SAP Services"
+//         text="From strategy to ongoing support, we deliver tailored SAP solutions that align with your business goals and drive measurable outcomes."
+//         action={
+//           <a
+//             href="#offerings"
+//             className="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-800"
+//           >
+//             View All SAP Services <FaArrowRight size={12} />
+//           </a>
+//         }
+//       />
+//       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+//         {services.map((s, i) => (
+//           <motion.div key={s.title} {...fade(i)} className="text-center">
+//             <div className="w-14 h-14 mx-auto mb-4 rounded-full border border-primary-200 bg-primary-50 text-primary-600 flex items-center justify-center text-xl">
+//               <s.icon />
+//             </div>
+//             <h3 className="font-semibold text-primary-900 text-sm mb-2">
+//               {s.title}
+//             </h3>
+//             <p className="text-xs text-primary-600 leading-relaxed">{s.desc}</p>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ SERVICE OFFERINGS (Learn More -> page) ============ */
+// const OfferingCard = ({ item, index }) => (
+//   <motion.article
+//     {...fade(index)}
+//     className="group relative flex flex-col rounded-2xl bg-primary-800 p-8 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+//   >
+//     <span className="absolute top-6 right-6 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+//       {item.status}
+//     </span>
+//     <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-white text-xl text-primary-800">
+//       <item.icon />
+//     </span>
+//     <h3 className="mb-3 pr-24 text-xl font-bold text-white">{item.name}</h3>
+//     <p className="mb-5 text-sm leading-relaxed text-primary-200">{item.desc}</p>
+//     <ul className="mb-8 space-y-2.5">
+//       {item.features.map((f) => (
+//         <li
+//           key={f}
+//           className="flex items-center gap-3 text-sm text-primary-100"
+//         >
+//           <FaCheckCircle className="shrink-0 text-primary-300" />
+//           {f}
+//         </li>
+//       ))}
+//     </ul>
+//     <Link
+//       to={item.path}
+//       aria-label={`Learn more about ${item.name}`}
+//       className="mt-auto w-40 bg-primary-400 p-4 rounded-lg inline-flex items-center gap-2 text-sm font-semibold text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 "
+//     >
+//       Learn More
+//       <FaArrowRight
+//         size={12}
+//         className="transition-transform group-hover:translate-x-1"
+//       />
+//     </Link>
+//   </motion.article>
+// );
+
+// const Offerings = () => (
+//   <section id="offerings" className="bg-primary-50 py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         eyebrow="What We Deliver"
+//         title="Explore Our SAP Service Offerings"
+//         text="End-to-end solutions designed to maximize your SAP investment and accelerate digital transformation."
+//       />
+//       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+//         {offerings.map((o, i) => (
+//           <OfferingCard key={o.path} item={o} index={i} />
+//         ))}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ S/4HANA ============ */
+// const S4Section = () => (
+//   <section className="bg-white py-10 lg:py-12">
+//     <Container className="grid lg:grid-cols-12 gap-10 items-center">
+//       <div className="lg:col-span-4">
+//         <p className="text-xs font-semibold uppercase tracking-widest text-primary-500 mb-3">
+//           Our Core Solution
+//         </p>
+//         <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-2">
+//           SAP S/4HANA
+//         </h2>
+//         <p className="text-lg font-medium text-primary-600 mb-4">
+//           A smarter ERP for a more agile enterprise
+//         </p>
+//         <p className="text-primary-600 mb-6">
+//           We help organizations implement and optimize S/4HANA to streamline
+//           operations, gain real-time insights and build a future-ready business.
+//         </p>
+//       </div>
+
+//       <ul className="lg:col-span-4 space-y-3">
+//         {s4.map((s, i) => (
+//           <motion.li
+//             key={s.title}
+//             {...fade(i)}
+//             className="flex gap-4 items-start bg-primary-50 rounded-xl border border-primary-100 p-4"
+//           >
+//             <span className="w-10 h-10 shrink-0 rounded-lg bg-primary-100 text-primary-700 flex items-center justify-center">
+//               <s.icon />
+//             </span>
+//             <div>
+//               <h3 className="font-semibold text-primary-900 text-sm">
+//                 {s.title}
+//               </h3>
+//               <p className="text-xs text-primary-600">{s.desc}</p>
+//             </div>
+//           </motion.li>
+//         ))}
+//       </ul>
+//       <motion.div {...fade()} className="lg:col-span-4">
+//         <img
+//           src={IMG.building}
+//           alt="Modern enterprise office building"
+//           loading="lazy"
+//           className="w-full h-72 lg:h-100 object-cover rounded-lg shadow-xl"
+//         />
+//       </motion.div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ END-TO-END DELIVERY ============ */
+// const Delivery = () => (
+//   <section className="bg-primary-50 py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         eyebrow="Our Approach"
+//         title="End-to-End Delivery Capabilities"
+//         text="A seamless and connected journey from strategy to ongoing support."
+//         // action={
+//         //   <Button href="/approach" variant="outlineDark">
+//         //     Learn More
+//         //   </Button>
+//         // }
+//       />
+//       <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
+//         {delivery.map((d, i) => (
+//           <motion.div key={d.title} {...fade(i)} className="relative">
+//             {i < delivery.length - 1 && (
+//               <div className="hidden lg:block absolute top-6 left-14 right-[-2rem] h-px bg-primary-200" />
+//             )}
+//             <div className="relative w-12 h-12 rounded-full bg-primary-800 text-white flex items-center justify-center text-sm font-bold mb-4">
+//               {String(i + 1).padStart(2, "0")}
+//             </div>
+//             <h3 className="font-semibold text-primary-900 mb-2">{d.title}</h3>
+//             <p className="text-sm text-primary-600">{d.desc}</p>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ METHODOLOGY ============ */
+// const Methodology = () => (
+//   <section id="approach" className="bg-primary-900 py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         dark
+//         eyebrow="Our Methodology"
+//         title="Proven Implementation Methodology"
+//         text="A structured and agile approach to ensure successful SAP transformations."
+//       />
+//       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+//         {method.map((m, i) => (
+//           <motion.div
+//             key={m.title}
+//             {...fade(i)}
+//             className="rounded-xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition-colors"
+//           >
+//             <span className="w-10 h-10 rounded-lg bg-white text-primary-800 flex items-center justify-center mb-4">
+//               <m.icon />
+//             </span>
+//             <h3 className="text-white font-semibold mb-2">{m.title}</h3>
+//             <p className="text-xs text-primary-200 leading-relaxed">{m.desc}</p>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ WHY INNOVISE ============ */
+// const WhyUs = () => (
+//   <section className="bg-white py-10 lg:py-12">
+//     <Container className="grid lg:grid-cols-2 gap-12 items-center">
+//       <div>
+//         <p className="text-xs font-semibold uppercase tracking-widest text-primary-500 mb-3">
+//           Why Choose Innovise
+//         </p>
+//         <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">
+//           A Trusted Partner for Your SAP Journey
+//         </h2>
+//         <p className="text-primary-600 mb-6 max-w-lg">
+//           We combine deep SAP expertise, proven methodologies and a
+//           customer-centric approach to help you achieve lasting business
+//           outcomes.
+//         </p>
+
+//         <Button href="/contact">
+//           Get in Touch <FaArrowRight size={12} />
+//         </Button>
+//       </div>
+//       <div className="grid grid-cols-1 gap-4">
+//         <img
+//           src={IMG.team}
+//           alt="Innovise team collaborating"
+//           loading="lazy"
+//           className="hidden lg:block w-full max-w-lg h-60 object-cover rounded-xl mb-6"
+//         />
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ CTA ============ */
+// const CTA = () => (
+//   <section className="bg-primary-50 py-12">
+//     <Container>
+//       <div className="rounded-2xl bg-primary-800 px-6 py-10 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+//         <div>
+//           <p className="text-xs font-semibold uppercase tracking-widest text-primary-300 mb-2">
+//             Let's Build What's Next
+//           </p>
+//           <h2 className="text-2xl lg:text-3xl font-bold text-white">
+//             Ready to Transform with SAP?
+//           </h2>
+//           <p className="text-primary-200 mt-2">
+//             Partner with Innovise for innovative, reliable and future-ready SAP
+//             solutions.
+//           </p>
+//         </div>
+//         <Button href="/contact" variant="light">
+//           Talk to Our Experts <FaArrowRight size={12} />
+//         </Button>
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ PAGE ============ */
+// const SAPConsultingPage = () => (
+//   <main role="main">
+//     <Hero />
+//     <Services />
+//     <Offerings />
+//     <S4Section />
+//     <Delivery />
+//     <Methodology />
+//     <WhyUs />
+//     <CTA />
+//   </main>
+// );
+
+// export default SAPConsultingPage;
+
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   FaArrowRight,
   FaLightbulb,
@@ -3332,12 +3977,10 @@ import {
   FaCode,
   FaRocket,
   FaShieldAlt,
-  FaSyncAlt,
   FaTools,
   FaDatabase,
   FaUserTie,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import sapLogo from "../../assets/logos/sap.png";
 
 /* Example images (Unsplash). Swap for your own files in /assets. */
@@ -3530,13 +4173,6 @@ const method = [
   },
 ];
 
-const stats = [
-  { value: "100+", label: "Successful SAP Projects" },
-  { value: "15+", label: "Years of Experience" },
-  { value: "50+", label: "Global Clients" },
-  { value: "95%", label: "Client Satisfaction" },
-];
-
 /* ============ SHARED UI ============ */
 const fade = (i = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -3555,11 +4191,9 @@ const Button = ({ href = "#", variant = "solid", children }) => {
   const styles = {
     solid: "bg-primary-500 text-white hover:bg-primary-400",
     outline: "border border-white/40 text-white hover:bg-white/10",
-    outlineDark:
-      "border border-primary-300 text-primary-800 hover:bg-primary-50",
     light: "bg-white text-primary-800 hover:bg-primary-100",
   };
-  const cls = `inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 ${styles[variant]}`;
+  const cls = `inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-base font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 ${styles[variant]}`;
   // "/path" -> client-side navigation, "#id" or full URL -> normal anchor
   return href.startsWith("/") ? (
     <Link to={href} className={cls}>
@@ -3573,20 +4207,22 @@ const Button = ({ href = "#", variant = "solid", children }) => {
 };
 
 const SectionHead = ({ eyebrow, title, text, dark, action }) => (
-  <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+  <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
     <div className="max-w-2xl">
       <p
-        className={`text-xs font-semibold uppercase tracking-widest mb-3 ${dark ? "text-primary-300" : "text-primary-500"}`}
+        className={`mb-3 text-sm font-semibold uppercase tracking-widest ${dark ? "text-primary-300" : "text-primary-500"}`}
       >
         {eyebrow}
       </p>
       <h2
-        className={`text-3xl lg:text-4xl font-bold ${dark ? "text-white" : "text-primary-900"}`}
+        className={`text-3xl font-bold lg:text-4xl ${dark ? "text-white" : "text-primary-900"}`}
       >
         {title}
       </h2>
       {text && (
-        <p className={`mt-3 ${dark ? "text-primary-200" : "text-primary-600"}`}>
+        <p
+          className={`mt-3 text-lg ${dark ? "text-primary-200" : "text-primary-600"}`}
+        >
           {text}
         </p>
       )}
@@ -3595,42 +4231,49 @@ const SectionHead = ({ eyebrow, title, text, dark, action }) => (
   </div>
 );
 
+/* Icon on the left, title on the right */
+const IconTitle = ({ icon: Icon, title, className = "" }) => (
+  <div className={`mb-5 flex items-center gap-4 ${className}`}>
+    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-xl text-primary-800">
+      <Icon />
+    </span>
+    <h3 className="text-xl font-bold leading-snug text-white">{title}</h3>
+  </div>
+);
+
 /* ============ HERO ============ */
 const OrbitDiagram = () => (
-  <div className="relative mx-auto w-full max-w-[460px] aspect-square">
+  <div className="relative mx-auto aspect-square w-full max-w-[480px]">
     {/* Rings */}
     <div className="absolute inset-[14%] rounded-full border border-white/20" />
-
     <motion.div
       className="absolute inset-[4%] rounded-full border border-dashed border-primary-300/40"
       animate={{ rotate: 360 }}
       transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
     />
 
-    {/* Center Logo */}
-    <div className="absolute inset-[30%] rounded-full bg-white flex items-center justify-center shadow-2xl ring-8 ring-white/10 z-10 p-6">
-      <img src={sapLogo} alt="SAP" className="w-full h-full object-contain" />
+    {/* Center logo */}
+    <div className="absolute inset-[30%] z-10 flex items-center justify-center rounded-full bg-white p-6 shadow-2xl ring-8 ring-white/10">
+      <img src={sapLogo} alt="SAP" className="h-full w-full object-contain" />
     </div>
 
-    {/* Orbiting Services */}
+    {/* Orbiting services */}
     {orbit.map((n, i) => {
       const a = ((-90 + i * 60) * Math.PI) / 180;
-
       return (
         <div
           key={n.label}
-          className="absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center text-center w-28 md:w-32 z-20"
+          className="absolute z-20 flex w-32 -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center md:w-36"
           style={{
             left: `${50 + 38 * Math.cos(a)}%`,
             top: `${50 + 38 * Math.sin(a)}%`,
           }}
         >
-          <div className="bg-primary-800/95 backdrop-blur-sm border border-primary-600 rounded-xl p-2 shadow-xl flex flex-col items-center gap-1.5 w-full">
-            <span className="w-10 h-10 rounded-full bg-white text-primary-700 flex items-center justify-center shadow-md">
+          <div className="flex w-full flex-col items-center gap-1.5 rounded-xl border border-primary-600 bg-primary-800/95 p-2 shadow-xl backdrop-blur-sm">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-primary-700 shadow-md">
               <n.icon />
             </span>
-
-            <span className="text-[9px] md:text-[11px] leading-tight font-bold text-white uppercase tracking-wider">
+            <span className="text-[11px] font-bold uppercase leading-tight tracking-wider text-white md:text-xs">
               {n.label}
             </span>
           </div>
@@ -3642,25 +4285,25 @@ const OrbitDiagram = () => (
 
 const Hero = () => (
   <section className="bg-gradient-to-br from-primary-900 to-primary-800 py-16 lg:py-24">
-    <Container className="grid lg:grid-cols-2 gap-12 items-center">
+    <Container className="grid items-center gap-12 lg:grid-cols-2">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary-300 mb-4">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-300">
           SAP Services
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+        <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
           Transforming Enterprises with{" "}
           <span className="text-primary-300">Intelligent SAP Solutions</span>
         </h1>
-        <p className="text-lg text-primary-100 max-w-xl mb-8">
+        <p className="mb-8 max-w-xl text-lg text-primary-100 lg:text-xl">
           End-to-end SAP consulting, implementation and managed services to help
           organizations simplify operations, increase efficiency and achieve
           sustainable growth.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col gap-4 sm:flex-row">
           <Button href="/contact">
             Talk to Our SAP Experts <FaArrowRight size={12} />
           </Button>
@@ -3682,7 +4325,7 @@ const Hero = () => (
 
 /* ============ COMPREHENSIVE SERVICES ============ */
 const Services = () => (
-  <section id="services" className="bg-white py-16 lg:py-20">
+  <section id="services" className="bg-white py-10 lg:py-12">
     <Container>
       <SectionHead
         eyebrow="Our SAP Services"
@@ -3691,22 +4334,22 @@ const Services = () => (
         action={
           <a
             href="#offerings"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-800"
+            className="inline-flex items-center gap-2 text-base font-semibold text-primary-600 hover:text-primary-800"
           >
             View All SAP Services <FaArrowRight size={12} />
           </a>
         }
       />
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+      <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
         {services.map((s, i) => (
           <motion.div key={s.title} {...fade(i)} className="text-center">
-            <div className="w-14 h-14 mx-auto mb-4 rounded-full border border-primary-200 bg-primary-50 text-primary-600 flex items-center justify-center text-xl">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-primary-200 bg-primary-50 text-xl text-primary-600">
               <s.icon />
             </div>
-            <h3 className="font-semibold text-primary-900 text-sm mb-2">
+            <h3 className="mb-2 text-base font-semibold text-primary-900">
               {s.title}
             </h3>
-            <p className="text-xs text-primary-600 leading-relaxed">{s.desc}</p>
+            <p className="text-sm leading-relaxed text-primary-600">{s.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -3720,19 +4363,22 @@ const OfferingCard = ({ item, index }) => (
     {...fade(index)}
     className="group relative flex flex-col rounded-2xl bg-primary-800 p-8 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
   >
-    <span className="absolute top-6 right-6 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+    <span className="absolute right-6 top-6 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
       {item.status}
     </span>
-    <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-white text-xl text-primary-800">
-      <item.icon />
-    </span>
-    <h3 className="mb-3 pr-24 text-xl font-bold text-white">{item.name}</h3>
-    <p className="mb-5 text-sm leading-relaxed text-primary-200">{item.desc}</p>
+    <IconTitle
+      icon={item.icon}
+      title={item.name}
+      className="mt-8 sm:mt-0 sm:pr-32"
+    />
+    <p className="mb-5 text-base leading-relaxed text-primary-200">
+      {item.desc}
+    </p>
     <ul className="mb-8 space-y-2.5">
       {item.features.map((f) => (
         <li
           key={f}
-          className="flex items-center gap-3 text-sm text-primary-100"
+          className="flex items-center gap-3 text-base text-primary-100"
         >
           <FaCheckCircle className="shrink-0 text-primary-300" />
           {f}
@@ -3742,7 +4388,7 @@ const OfferingCard = ({ item, index }) => (
     <Link
       to={item.path}
       aria-label={`Learn more about ${item.name}`}
-      className="mt-auto w-40 bg-primary-400 p-4 rounded-lg inline-flex items-center gap-2 text-sm font-semibold text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 "
+      className="mt-auto inline-flex w-44 items-center justify-center gap-2 rounded-lg bg-primary-400 p-4 text-base font-semibold text-white transition-colors hover:bg-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300"
     >
       Learn More
       <FaArrowRight
@@ -3754,7 +4400,7 @@ const OfferingCard = ({ item, index }) => (
 );
 
 const Offerings = () => (
-  <section id="offerings" className="bg-primary-50 py-16 lg:py-20">
+  <section id="offerings" className="bg-primary-50 py-10 lg:py-12">
     <Container>
       <SectionHead
         eyebrow="What We Deliver"
@@ -3773,48 +4419,49 @@ const Offerings = () => (
 /* ============ S/4HANA ============ */
 const S4Section = () => (
   <section className="bg-white py-10 lg:py-12">
-    <Container className="grid lg:grid-cols-12 gap-10 items-center">
+    <Container className="grid items-center gap-10 lg:grid-cols-12">
       <div className="lg:col-span-4">
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary-500 mb-3">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
           Our Core Solution
         </p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-2">
+        <h2 className="mb-2 text-3xl font-bold text-primary-900 lg:text-4xl">
           SAP S/4HANA
         </h2>
-        <p className="text-lg font-medium text-primary-600 mb-4">
+        <p className="mb-4 text-xl font-medium text-primary-600">
           A smarter ERP for a more agile enterprise
         </p>
-        <p className="text-primary-600 mb-6">
+        <p className="text-lg text-primary-600">
           We help organizations implement and optimize S/4HANA to streamline
           operations, gain real-time insights and build a future-ready business.
         </p>
       </div>
 
-      <ul className="lg:col-span-4 space-y-3">
+      <ul className="space-y-3 lg:col-span-4">
         {s4.map((s, i) => (
           <motion.li
             key={s.title}
             {...fade(i)}
-            className="flex gap-4 items-start bg-primary-50 rounded-xl border border-primary-100 p-4"
+            className="flex items-start gap-4 rounded-xl border border-primary-100 bg-primary-50 p-4"
           >
-            <span className="w-10 h-10 shrink-0 rounded-lg bg-primary-100 text-primary-700 flex items-center justify-center">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary-100 text-primary-700">
               <s.icon />
             </span>
             <div>
-              <h3 className="font-semibold text-primary-900 text-sm">
+              <h3 className="text-base font-semibold text-primary-900">
                 {s.title}
               </h3>
-              <p className="text-xs text-primary-600">{s.desc}</p>
+              <p className="text-sm text-primary-600">{s.desc}</p>
             </div>
           </motion.li>
         ))}
       </ul>
+
       <motion.div {...fade()} className="lg:col-span-4">
         <img
           src={IMG.building}
           alt="Modern enterprise office building"
           loading="lazy"
-          className="w-full h-72 lg:h-100 object-cover rounded-lg shadow-xl"
+          className="h-72 w-full rounded-lg object-cover shadow-xl lg:h-100"
         />
       </motion.div>
     </Container>
@@ -3823,29 +4470,26 @@ const S4Section = () => (
 
 /* ============ END-TO-END DELIVERY ============ */
 const Delivery = () => (
-  <section className="bg-primary-50 py-16 lg:py-20">
+  <section className="bg-primary-50 py-10 lg:py-12">
     <Container>
       <SectionHead
         eyebrow="Our Approach"
         title="End-to-End Delivery Capabilities"
         text="A seamless and connected journey from strategy to ongoing support."
-        // action={
-        //   <Button href="/approach" variant="outlineDark">
-        //     Learn More
-        //   </Button>
-        // }
       />
-      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
         {delivery.map((d, i) => (
           <motion.div key={d.title} {...fade(i)} className="relative">
             {i < delivery.length - 1 && (
-              <div className="hidden lg:block absolute top-6 left-14 right-[-2rem] h-px bg-primary-200" />
+              <div className="absolute left-14 right-[-2rem] top-6 hidden h-px bg-primary-200 lg:block" />
             )}
-            <div className="relative w-12 h-12 rounded-full bg-primary-800 text-white flex items-center justify-center text-sm font-bold mb-4">
+            <div className="relative mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-800 text-base font-bold text-white">
               {String(i + 1).padStart(2, "0")}
             </div>
-            <h3 className="font-semibold text-primary-900 mb-2">{d.title}</h3>
-            <p className="text-sm text-primary-600">{d.desc}</p>
+            <h3 className="mb-2 text-lg font-semibold text-primary-900">
+              {d.title}
+            </h3>
+            <p className="text-base text-primary-600">{d.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -3855,7 +4499,7 @@ const Delivery = () => (
 
 /* ============ METHODOLOGY ============ */
 const Methodology = () => (
-  <section id="approach" className="bg-primary-900 py-16 lg:py-20">
+  <section id="approach" className="bg-primary-900 py-10 lg:py-12">
     <Container>
       <SectionHead
         dark
@@ -3863,18 +4507,18 @@ const Methodology = () => (
         title="Proven Implementation Methodology"
         text="A structured and agile approach to ensure successful SAP transformations."
       />
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
         {method.map((m, i) => (
           <motion.div
             key={m.title}
             {...fade(i)}
-            className="rounded-xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition-colors"
+            className="rounded-xl border border-white/10 bg-white/5 p-5 transition-colors hover:bg-white/10"
           >
-            <span className="w-10 h-10 rounded-lg bg-white text-primary-800 flex items-center justify-center mb-4">
+            <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-white text-primary-800">
               <m.icon />
             </span>
-            <h3 className="text-white font-semibold mb-2">{m.title}</h3>
-            <p className="text-xs text-primary-200 leading-relaxed">{m.desc}</p>
+            <h3 className="mb-2 text-lg font-semibold text-white">{m.title}</h3>
+            <p className="text-sm leading-relaxed text-primary-200">{m.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -3884,33 +4528,30 @@ const Methodology = () => (
 
 /* ============ WHY INNOVISE ============ */
 const WhyUs = () => (
-  <section className="bg-white py-16 lg:py-20">
-    <Container className="grid lg:grid-cols-2 gap-12 items-center">
+  <section className="bg-white py-10 lg:py-12">
+    <Container className="grid items-center gap-12 lg:grid-cols-2">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-widest text-primary-500 mb-3">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary-500">
           Why Choose Innovise
         </p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">
+        <h2 className="mb-4 text-3xl font-bold text-primary-900 lg:text-4xl">
           A Trusted Partner for Your SAP Journey
         </h2>
-        <p className="text-primary-600 mb-6 max-w-lg">
+        <p className="mb-6 max-w-lg text-lg text-primary-600">
           We combine deep SAP expertise, proven methodologies and a
           customer-centric approach to help you achieve lasting business
           outcomes.
         </p>
-
         <Button href="/contact">
           Get in Touch <FaArrowRight size={12} />
         </Button>
       </div>
-      <div className="grid grid-cols-1 gap-4">
-        <img
-          src={IMG.team}
-          alt="Innovise team collaborating"
-          loading="lazy"
-          className="hidden lg:block w-full max-w-lg h-60 object-cover rounded-xl mb-6"
-        />
-      </div>
+      <img
+        src={IMG.team}
+        alt="Innovise team collaborating"
+        loading="lazy"
+        className="hidden h-60 w-full max-w-lg rounded-xl object-cover shadow-lg lg:block"
+      />
     </Container>
   </section>
 );
@@ -3919,15 +4560,15 @@ const WhyUs = () => (
 const CTA = () => (
   <section className="bg-primary-50 py-12">
     <Container>
-      <div className="rounded-2xl bg-primary-800 px-6 py-10 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+      <div className="flex flex-col items-center justify-between gap-6 rounded-2xl bg-primary-800 px-6 py-10 text-center lg:flex-row lg:px-12 lg:text-left">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary-300 mb-2">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary-300">
             Let's Build What's Next
           </p>
-          <h2 className="text-2xl lg:text-3xl font-bold text-white">
+          <h2 className="text-2xl font-bold text-white lg:text-3xl">
             Ready to Transform with SAP?
           </h2>
-          <p className="text-primary-200 mt-2">
+          <p className="mt-2 text-lg text-primary-200">
             Partner with Innovise for innovative, reliable and future-ready SAP
             solutions.
           </p>

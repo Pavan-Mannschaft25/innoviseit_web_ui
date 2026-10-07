@@ -159,7 +159,7 @@ export default function PrivacyPolicy() {
       </div>
 
       {/* Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-10 lg:py-12">
         {/* ✅ Add lg:items-start to make sticky work */}
         <div className="grid gap-12">
           {/* Main Content */}
