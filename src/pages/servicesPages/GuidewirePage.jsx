@@ -4395,6 +4395,7 @@ import {
   FaCogs,
   FaRocket,
 } from "react-icons/fa";
+import guidewireLogo from "../../assets/logos/guidewire.png";
 
 /* ============ DATA ============ */
 /* Each service's `path` is the page its "Learn More" opens. Change to your real routes. */
@@ -4617,14 +4618,15 @@ const HeroVisual = () => (
     <div className="absolute inset-[10%] rounded-full bg-primary-500/20 blur-3xl" />
     {/* isometric layered platform */}
     <div
-      className="absolute inset-0 flex items-center justify-center"
+      className="absolute inset-0 flex items-center justify-center [perspective:1000px]"
       aria-hidden="true"
     >
+      {/* 3D Stacked Shapes */}
       <div className="relative h-56 w-56 [transform:rotateX(60deg)_rotateZ(45deg)] [transform-style:preserve-3d]">
         {[0, 1, 2].map((i) => (
           <div
             key={i}
-            className="absolute inset-0 rounded-2xl border border-primary-300/30 bg-primary-700/60"
+            className="absolute inset-0 rounded-2xl border border-primary-400/30 bg-primary-800/50 backdrop-blur-sm"
             style={{
               transform: `translateZ(${-i * 22}px)`,
               opacity: 1 - i * 0.2,
@@ -4632,8 +4634,14 @@ const HeroVisual = () => (
           />
         ))}
       </div>
-      <div className="absolute flex h-20 w-20 items-center justify-center rounded-2xl bg-white text-4xl font-black text-primary-800 shadow-2xl">
-        G
+
+      {/* Floating Logo Card */}
+      <div className="absolute z-10 flex h-14 w-44 items-center justify-center rounded-lg bg-white shadow-2xl ring-1 ring-black/5">
+        <img
+          src={guidewireLogo}
+          alt="Guidewire Logo"
+          className="h-full w-full rounded-xl object-contain"
+        />
       </div>
     </div>
     {heroNodes.map((n, i) => (
@@ -4668,7 +4676,7 @@ const Hero = () => (
         <p className="inline-block rounded-full border border-primary-700 bg-primary-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-200 mb-5">
           Guidewire Solutions
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
           Enterprise <span className="text-primary-300">Guidewire</span>{" "}
           Solutions for Modern Insurers
         </h1>
@@ -4693,7 +4701,7 @@ const Hero = () => (
 
 /* ============ SERVICES ============ */
 const Services = () => (
-  <section id="services" className="bg-white py-16 lg:py-20">
+  <section id="services" className="bg-white py-10 lg:py-12">
     <Container>
       <SectionHead
         eyebrow="What We Deliver"
@@ -4704,15 +4712,18 @@ const Services = () => (
         {services.map((s, i) => (
           <motion.article
             key={s.path}
+            // Note: if fade(i) isn't providing initial/animate, you might want to add them
             {...fade(i)}
             className="group flex flex-col rounded-2xl border border-primary-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl"
           >
-            <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-xl text-primary-600 transition-colors group-hover:bg-primary-800 group-hover:text-white">
-              <s.icon />
-            </span>
-            <h3 className="mb-2 text-lg font-bold text-primary-900">
-              {s.title}
-            </h3>
+            {/* Wrapper for Icon and Title */}
+            <div className="mb-5 flex items-center gap-4">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-xl text-primary-600 transition-colors group-hover:bg-primary-800 group-hover:text-white">
+                <s.icon />
+              </span>
+              <h3 className="text-lg font-bold text-primary-900">{s.title}</h3>
+            </div>
+
             <p className="mb-5 text-sm text-primary-600">{s.desc}</p>
             <ul className="mb-6 space-y-2">
               {s.features.map((f) => (
@@ -4725,17 +4736,6 @@ const Services = () => (
                 </li>
               ))}
             </ul>
-            <Link
-              to={s.path}
-              aria-label={`Learn more about ${s.title}`}
-              className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-800"
-            >
-              Learn More{" "}
-              <FaArrowRight
-                size={11}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </Link>
           </motion.article>
         ))}
       </div>
@@ -4745,7 +4745,7 @@ const Services = () => (
 
 /* ============ INDUSTRIES ============ */
 const Industries = () => (
-  <section className="bg-primary-50 py-16 lg:py-20">
+  <section className="bg-primary-50 py-10 lg:py-12">
     <Container>
       <SectionHead
         eyebrow="Industries We Serve"
@@ -4772,7 +4772,7 @@ const Industries = () => (
 
 /* ============ DELIVERY FRAMEWORK ============ */
 const Framework = () => (
-  <section className="bg-primary-900 py-16 lg:py-20">
+  <section className="bg-primary-900 py-10 lg:py-12">
     <Container>
       <SectionHead
         dark
@@ -4840,7 +4840,7 @@ const Dashboard = () => (
           ].map(([k, v]) => (
             <div key={k} className="rounded-lg bg-white/5 p-2.5">
               <p className="text-[10px] text-primary-300">{k}</p>
-              <p className="text-base font-bold text-white">{v}</p>
+              {/* <p className="text-base font-bold text-white">{v}</p> */}
             </div>
           ))}
         </div>
@@ -4861,17 +4861,13 @@ const Dashboard = () => (
             strokeWidth="1.5"
           />
         </svg>
-        <div className="mt-3 flex items-center justify-between rounded-lg bg-white/5 px-3 py-2 text-xs">
-          <span className="text-primary-200">System Health</span>
-          <span className="font-semibold text-white">99.9%</span>
-        </div>
       </div>
     </div>
   </div>
 );
 
 const Benefits = () => (
-  <section className="bg-white py-16 lg:py-20">
+  <section className="bg-white py-10 lg:py-12">
     <Container>
       <SectionHead
         eyebrow="Key Benefits"
