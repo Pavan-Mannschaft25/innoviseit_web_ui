@@ -4368,6 +4368,551 @@
 
 // export default GuidewirePage;
 
+// import React from "react";
+// import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
+// import {
+//   FaArrowRight,
+//   FaCheckCircle,
+//   FaFileContract,
+//   FaShieldAlt,
+//   FaMoneyCheckAlt,
+//   FaSyncAlt,
+//   FaExchangeAlt,
+//   FaHeadset,
+//   FaChartLine,
+//   FaUsers,
+//   FaCloud,
+//   FaCoins,
+//   FaCar,
+//   FaHome,
+//   FaBuilding,
+//   FaHardHat,
+//   FaHeartbeat,
+//   FaPlane,
+//   FaSearch,
+//   FaClipboardList,
+//   FaCogs,
+//   FaRocket,
+// } from "react-icons/fa";
+// import guidewireLogo from "../../assets/logos/guidewire.png";
+
+// /* ============ DATA ============ */
+// /* Each service's `path` is the page its "Learn More" opens. Change to your real routes. */
+// const services = [
+//   {
+//     icon: FaFileContract,
+//     title: "PolicyCenter Implementation",
+//     desc: "Streamline policy administration with configurable, scalable solutions.",
+//     features: [
+//       "Product Configuration",
+//       "Policy Lifecycle Management",
+//       "Regulatory Compliance",
+//     ],
+//     path: "/services/guidewire/policycenter",
+//   },
+//   {
+//     icon: FaShieldAlt,
+//     title: "ClaimCenter Implementation",
+//     desc: "Improve claims efficiency and customer satisfaction.",
+//     features: [
+//       "Claims Process Automation",
+//       "Fraud Detection Rules",
+//       "Claims Analytics",
+//     ],
+//     path: "/services/guidewire/claimcenter",
+//   },
+//   {
+//     icon: FaMoneyCheckAlt,
+//     title: "BillingCenter Implementation",
+//     desc: "Simplify billing operations and enable flexible payment models.",
+//     features: [
+//       "Billing Configuration",
+//       "Payment Gateway Integration",
+//       "Reconciliation & Reporting",
+//     ],
+//     path: "/services/guidewire/billingcenter",
+//   },
+//   {
+//     icon: FaSyncAlt,
+//     title: "Upgrade & Modernization",
+//     desc: "Upgrade to the latest Guidewire releases with minimal disruption.",
+//     features: [
+//       "Version Upgrades",
+//       "System Modernization",
+//       "Performance Improvement",
+//     ],
+//     path: "/services/guidewire/upgrade-modernization",
+//   },
+//   {
+//     icon: FaExchangeAlt,
+//     title: "Integration & Data Migration",
+//     desc: "Seamlessly integrate with third-party systems and migrate data securely.",
+//     features: [
+//       "Legacy System Migration",
+//       "API Integrations",
+//       "Data Validation & Reconciliation",
+//     ],
+//     path: "/services/guidewire/integration-migration",
+//   },
+//   {
+//     icon: FaHeadset,
+//     title: "Managed Services & Support",
+//     desc: "Ensure continuous performance with expert support.",
+//     features: [
+//       "Application Maintenance",
+//       "Issue Resolution",
+//       "Performance Monitoring",
+//     ],
+//     path: "/services/guidewire/managed-services",
+//   },
+// ];
+
+// const heroNodes = [
+//   {
+//     icon: FaFileContract,
+//     label: "Policy Administration",
+//     pos: { top: "2%", left: "36%" },
+//   },
+//   {
+//     icon: FaChartLine,
+//     label: "Rating & Underwriting",
+//     pos: { top: "16%", right: "0%" },
+//   },
+//   {
+//     icon: FaShieldAlt,
+//     label: "Claims Management",
+//     pos: { top: "34%", left: "0%" },
+//   },
+//   {
+//     icon: FaUsers,
+//     label: "Digital Engagement",
+//     pos: { top: "50%", right: "0%" },
+//   },
+//   {
+//     icon: FaMoneyCheckAlt,
+//     label: "Billing & Payments",
+//     pos: { bottom: "10%", left: "8%" },
+//   },
+//   {
+//     icon: FaExchangeAlt,
+//     label: "Integration & Migration",
+//     pos: { bottom: "0%", right: "10%" },
+//   },
+// ];
+
+// const industries = [
+//   { icon: FaCar, name: "Personal Auto" },
+//   { icon: FaHome, name: "Property & Home" },
+//   { icon: FaBuilding, name: "Commercial Lines" },
+//   { icon: FaHardHat, name: "Workers' Compensation" },
+//   { icon: FaHeartbeat, name: "Health & Life" },
+//   { icon: FaPlane, name: "Specialty Lines" },
+// ];
+
+// const steps = [
+//   {
+//     icon: FaSearch,
+//     title: "Discover",
+//     desc: "Understand your business goals and current landscape.",
+//   },
+//   {
+//     icon: FaClipboardList,
+//     title: "Plan",
+//     desc: "Define solution strategy, roadmap and architecture.",
+//   },
+//   {
+//     icon: FaCogs,
+//     title: "Implement",
+//     desc: "Configure, develop, integrate and migrate with best practices.",
+//   },
+//   {
+//     icon: FaCheckCircle,
+//     title: "Validate",
+//     desc: "Ensure quality, security and performance through rigorous testing.",
+//   },
+//   {
+//     icon: FaRocket,
+//     title: "Optimize",
+//     desc: "Provide ongoing support and continuous improvement.",
+//   },
+// ];
+
+// const benefits = [
+//   {
+//     icon: FaChartLine,
+//     title: "Operational Efficiency",
+//     desc: "Automate and simplify core insurance workflows.",
+//   },
+//   {
+//     icon: FaUsers,
+//     title: "Enhanced Customer Experience",
+//     desc: "Deliver faster, more personalized digital service.",
+//   },
+//   {
+//     icon: FaCloud,
+//     title: "Scalable & Future-Ready",
+//     desc: "Adapt to change with a flexible platform.",
+//   },
+//   {
+//     icon: FaCoins,
+//     title: "Lower Total Cost of Ownership",
+//     desc: "Optimize infrastructure and application management.",
+//   },
+// ];
+
+// /* ============ SHARED UI ============ */
+// const fade = (i = 0) => ({
+//   initial: { opacity: 0, y: 20 },
+//   whileInView: { opacity: 1, y: 0 },
+//   viewport: { once: true },
+//   transition: { delay: i * 0.06, duration: 0.5 },
+// });
+
+// const Container = ({ children, className = "" }) => (
+//   <div className={`max-w-7xl mx-auto px-4 lg:px-8 ${className}`}>
+//     {children}
+//   </div>
+// );
+
+// const Button = ({ href = "#", variant = "solid", children }) => {
+//   const styles = {
+//     solid: "bg-primary-500 text-white hover:bg-primary-400",
+//     outline: "border border-white/40 text-white hover:bg-white/10",
+//   };
+//   const cls = `inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 ${styles[variant]}`;
+//   return href.startsWith("/") ? (
+//     <Link to={href} className={cls}>
+//       {children}
+//     </Link>
+//   ) : (
+//     <a href={href} className={cls}>
+//       {children}
+//     </a>
+//   );
+// };
+
+// const SectionHead = ({ eyebrow, title, text, dark }) => (
+//   <motion.header {...fade()} className="text-center max-w-3xl mx-auto mb-14">
+//     <p
+//       className={`text-xs font-semibold uppercase tracking-widest mb-3 ${dark ? "text-primary-300" : "text-primary-500"}`}
+//     >
+//       {eyebrow}
+//     </p>
+//     <h2
+//       className={`text-3xl lg:text-4xl font-bold ${dark ? "text-white" : "text-primary-900"}`}
+//     >
+//       {title}
+//     </h2>
+//     {text && (
+//       <p className={`mt-4 ${dark ? "text-primary-200" : "text-primary-600"}`}>
+//         {text}
+//       </p>
+//     )}
+//   </motion.header>
+// );
+
+// /* ============ HERO ============ */
+// const HeroVisual = () => (
+//   <div className="relative mx-auto w-full max-w-[480px] aspect-square">
+//     <div className="absolute inset-[10%] rounded-full bg-primary-500/20 blur-3xl" />
+//     {/* isometric layered platform */}
+//     <div
+//       className="absolute inset-0 flex items-center justify-center [perspective:1000px]"
+//       aria-hidden="true"
+//     >
+//       {/* 3D Stacked Shapes */}
+//       <div className="relative h-56 w-56 [transform:rotateX(60deg)_rotateZ(45deg)] [transform-style:preserve-3d]">
+//         {[0, 1, 2].map((i) => (
+//           <div
+//             key={i}
+//             className="absolute inset-0 rounded-2xl border border-primary-400/30 bg-primary-800/50 backdrop-blur-sm"
+//             style={{
+//               transform: `translateZ(${-i * 22}px)`,
+//               opacity: 1 - i * 0.2,
+//             }}
+//           />
+//         ))}
+//       </div>
+
+//       {/* Floating Logo Card */}
+//       <div className="absolute z-10 flex h-14 w-44 items-center justify-center rounded-lg bg-white shadow-2xl ring-1 ring-black/5">
+//         <img
+//           src={guidewireLogo}
+//           alt="Guidewire Logo"
+//           className="h-full w-full rounded-xl object-contain"
+//         />
+//       </div>
+//     </div>
+//     {heroNodes.map((n, i) => (
+//       <motion.div
+//         key={n.label}
+//         className="absolute flex w-28 flex-col items-center rounded-xl bg-white p-2.5 text-center shadow-lg"
+//         style={n.pos}
+//         animate={{ y: [0, -6, 0] }}
+//         transition={{
+//           duration: 4 + i * 0.4,
+//           repeat: Infinity,
+//           ease: "easeInOut",
+//         }}
+//       >
+//         <n.icon className="mb-1 text-primary-600" />
+//         <span className="text-[10px] font-semibold leading-tight text-primary-900">
+//           {n.label}
+//         </span>
+//       </motion.div>
+//     ))}
+//   </div>
+// );
+
+// const Hero = () => (
+//   <section className="bg-gradient-to-br from-primary-900 to-primary-800 py-16 lg:py-24 overflow-hidden">
+//     <Container className="grid lg:grid-cols-2 gap-12 items-center">
+//       <motion.div
+//         initial={{ opacity: 0, x: -30 }}
+//         animate={{ opacity: 1, x: 0 }}
+//         transition={{ duration: 0.7 }}
+//       >
+//         <p className="inline-block rounded-full border border-primary-700 bg-primary-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-200 mb-5">
+//           Guidewire Solutions
+//         </p>
+//         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+//           Enterprise <span className="text-primary-300">Guidewire</span>{" "}
+//           Solutions for Modern Insurers
+//         </h1>
+//         <p className="text-lg text-primary-100 max-w-xl mb-8">
+//           Leverage our deep Guidewire expertise to modernize core insurance
+//           systems, enhance customer experiences, and deliver measurable business
+//           value.
+//         </p>
+//         <div className="flex flex-col sm:flex-row gap-4">
+//           <Button href="#services">
+//             Explore Guidewire Services <FaArrowRight size={12} />
+//           </Button>
+//           <Button href="/contact" variant="outline">
+//             Talk to Our Experts <FaArrowRight size={12} />
+//           </Button>
+//         </div>
+//       </motion.div>
+//       <HeroVisual />
+//     </Container>
+//   </section>
+// );
+
+// /* ============ SERVICES ============ */
+// const Services = () => (
+//   <section id="services" className="bg-white py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         eyebrow="What We Deliver"
+//         title="End-to-End Guidewire Expertise"
+//         text="From strategy and implementation to ongoing support, we deliver complete Guidewire solutions tailored to your business needs."
+//       />
+//       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+//         {services.map((s, i) => (
+//           <motion.article
+//             key={s.path}
+//             // Note: if fade(i) isn't providing initial/animate, you might want to add them
+//             {...fade(i)}
+//             className="group flex flex-col rounded-2xl border border-primary-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl"
+//           >
+//             {/* Wrapper for Icon and Title */}
+//             <div className="mb-5 flex items-center gap-4">
+//               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-xl text-primary-600 transition-colors group-hover:bg-primary-800 group-hover:text-white">
+//                 <s.icon />
+//               </span>
+//               <h3 className="text-lg font-bold text-primary-900">{s.title}</h3>
+//             </div>
+
+//             <p className="mb-5 text-sm text-primary-600">{s.desc}</p>
+//             <ul className="mb-6 space-y-2">
+//               {s.features.map((f) => (
+//                 <li
+//                   key={f}
+//                   className="flex items-center gap-2.5 text-sm text-primary-700"
+//                 >
+//                   <FaCheckCircle className="shrink-0 text-xs text-primary-500" />
+//                   {f}
+//                 </li>
+//               ))}
+//             </ul>
+//           </motion.article>
+//         ))}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ INDUSTRIES ============ */
+// const Industries = () => (
+//   <section className="bg-primary-50 py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         eyebrow="Industries We Serve"
+//         title="Built for the Insurance Ecosystem"
+//         text="We deliver Guidewire solutions for insurers across multiple lines of business."
+//       />
+//       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+//         {industries.map((d, i) => (
+//           <motion.div
+//             key={d.name}
+//             {...fade(i)}
+//             className="group rounded-xl border border-primary-100 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-primary-300 hover:shadow-md"
+//           >
+//             <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 text-xl text-primary-600 transition-colors group-hover:bg-primary-800 group-hover:text-white">
+//               <d.icon />
+//             </span>
+//             <h3 className="text-sm font-semibold text-primary-900">{d.name}</h3>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ DELIVERY FRAMEWORK ============ */
+// const Framework = () => (
+//   <section className="bg-primary-900 py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         dark
+//         eyebrow="Our Approach"
+//         title="Proven Delivery Framework"
+//         text="A structured approach to ensure successful Guidewire implementations that deliver real business value."
+//       />
+//       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+//         {steps.map((s, i) => (
+//           <motion.div
+//             key={s.title}
+//             {...fade(i)}
+//             className="relative text-center"
+//           >
+//             {i < steps.length - 1 && (
+//               <div className="absolute left-1/2 top-8 hidden h-px w-full bg-gradient-to-r from-primary-400/60 to-primary-400/10 lg:block" />
+//             )}
+//             <div className="relative mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-primary-400/50 bg-primary-800 text-xl text-white">
+//               <s.icon />
+//               <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[11px] font-bold text-primary-800">
+//                 {i + 1}
+//               </span>
+//             </div>
+//             <h3 className="mb-2 font-semibold text-white">{s.title}</h3>
+//             <p className="mx-auto max-w-[200px] text-sm text-primary-200">
+//               {s.desc}
+//             </p>
+//           </motion.div>
+//         ))}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ BENEFITS + DASHBOARD ============ */
+// const Dashboard = () => (
+//   <div className="rounded-2xl border border-primary-800 bg-primary-900 p-4 shadow-2xl">
+//     <div className="mb-3 flex items-center justify-between">
+//       <span className="text-sm font-semibold text-white">
+//         Guidewire Overview
+//       </span>
+//       <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-primary-200">
+//         Sample data
+//       </span>
+//     </div>
+//     <div className="grid grid-cols-[110px_1fr] gap-4">
+//       <ul className="space-y-1.5 text-xs">
+//         {["PolicyCenter", "ClaimCenter", "BillingCenter", "Reports"].map(
+//           (n, i) => (
+//             <li
+//               key={n}
+//               className={`rounded-md px-3 py-2 ${i === 0 ? "bg-primary-600 text-white" : "text-primary-200"}`}
+//             >
+//               {n}
+//             </li>
+//           ),
+//         )}
+//       </ul>
+//       <div>
+//         <div className="mb-3 grid grid-cols-3 gap-2">
+//           {[
+//             ["Policies", "125K"],
+//             ["Claims", "18K"],
+//             ["Premium", "$320M"],
+//           ].map(([k, v]) => (
+//             <div key={k} className="rounded-lg bg-white/5 p-2.5">
+//               <p className="text-[10px] text-primary-300">{k}</p>
+//               {/* <p className="text-base font-bold text-white">{v}</p> */}
+//             </div>
+//           ))}
+//         </div>
+//         <svg
+//           viewBox="0 0 200 60"
+//           className="h-24 w-full rounded-lg bg-white/5"
+//           preserveAspectRatio="none"
+//           aria-hidden="true"
+//         >
+//           <polygon
+//             points="0,60 0,50 25,42 50,46 75,30 100,34 125,20 150,24 175,10 200,14 200,60"
+//             fill="rgba(157,185,213,0.15)"
+//           />
+//           <polyline
+//             points="0,50 25,42 50,46 75,30 100,34 125,20 150,24 175,10 200,14"
+//             fill="none"
+//             stroke="#9db9d5"
+//             strokeWidth="1.5"
+//           />
+//         </svg>
+//       </div>
+//     </div>
+//   </div>
+// );
+
+// const Benefits = () => (
+//   <section className="bg-white py-10 lg:py-12">
+//     <Container>
+//       <SectionHead
+//         eyebrow="Key Benefits"
+//         title="The Strategic Advantage of Guidewire with Innovise"
+//         text="Our Guidewire solutions help insurers modernize core operations, improve operational efficiency, and deliver exceptional customer experiences."
+//       />
+//       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+//         <motion.div {...fade()}>
+//           <Dashboard />
+//         </motion.div>
+//         <div className="space-y-4">
+//           {benefits.map((b, i) => (
+//             <motion.div
+//               key={b.title}
+//               {...fade(i)}
+//               className="group flex items-start gap-4 rounded-xl border border-primary-100 bg-primary-50 p-5 transition-colors hover:border-primary-300 hover:bg-white"
+//             >
+//               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary-100 text-primary-700 transition-colors group-hover:bg-primary-800 group-hover:text-white">
+//                 <b.icon />
+//               </span>
+//               <div>
+//                 <h3 className="font-semibold text-primary-900">{b.title}</h3>
+//                 <p className="text-sm text-primary-600">{b.desc}</p>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+// /* ============ PAGE ============ */
+// const GuidewirePage = () => (
+//   <main role="main">
+//     <Hero />
+//     <Services />
+//     <Industries />
+//     <Framework />
+//     <Benefits />
+//   </main>
+// );
+
+// export default GuidewirePage;
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -4398,7 +4943,7 @@ import {
 import guidewireLogo from "../../assets/logos/guidewire.png";
 
 /* ============ DATA ============ */
-/* Each service's `path` is the page its "Learn More" opens. Change to your real routes. */
+/* `path` is each service's page. Add a Learn More link in the card when those pages exist. */
 const services = [
   {
     icon: FaFileContract,
@@ -4472,7 +5017,7 @@ const heroNodes = [
   {
     icon: FaFileContract,
     label: "Policy Administration",
-    pos: { top: "2%", left: "36%" },
+    pos: { top: "2%", left: "34%" },
   },
   {
     icon: FaChartLine,
@@ -4492,12 +5037,12 @@ const heroNodes = [
   {
     icon: FaMoneyCheckAlt,
     label: "Billing & Payments",
-    pos: { bottom: "10%", left: "8%" },
+    pos: { bottom: "10%", left: "6%" },
   },
   {
     icon: FaExchangeAlt,
     label: "Integration & Migration",
-    pos: { bottom: "0%", right: "10%" },
+    pos: { bottom: "0%", right: "8%" },
   },
 ];
 
@@ -4580,7 +5125,7 @@ const Button = ({ href = "#", variant = "solid", children }) => {
     solid: "bg-primary-500 text-white hover:bg-primary-400",
     outline: "border border-white/40 text-white hover:bg-white/10",
   };
-  const cls = `inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 ${styles[variant]}`;
+  const cls = `inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-base font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-300 ${styles[variant]}`;
   return href.startsWith("/") ? (
     <Link to={href} className={cls}>
       {children}
@@ -4593,35 +5138,46 @@ const Button = ({ href = "#", variant = "solid", children }) => {
 };
 
 const SectionHead = ({ eyebrow, title, text, dark }) => (
-  <motion.header {...fade()} className="text-center max-w-3xl mx-auto mb-14">
+  <motion.header {...fade()} className="mx-auto mb-14 max-w-3xl text-center">
     <p
-      className={`text-xs font-semibold uppercase tracking-widest mb-3 ${dark ? "text-primary-300" : "text-primary-500"}`}
+      className={`mb-3 text-sm font-semibold uppercase tracking-widest ${dark ? "text-primary-300" : "text-primary-500"}`}
     >
       {eyebrow}
     </p>
     <h2
-      className={`text-3xl lg:text-4xl font-bold ${dark ? "text-white" : "text-primary-900"}`}
+      className={`text-3xl font-bold lg:text-4xl ${dark ? "text-white" : "text-primary-900"}`}
     >
       {title}
     </h2>
     {text && (
-      <p className={`mt-4 ${dark ? "text-primary-200" : "text-primary-600"}`}>
+      <p
+        className={`mt-4 text-lg ${dark ? "text-primary-200" : "text-primary-600"}`}
+      >
         {text}
       </p>
     )}
   </motion.header>
 );
 
+/* Icon on the left, title on the right */
+const IconTitle = ({ icon: Icon, title }) => (
+  <div className="mb-4 flex items-center gap-4">
+    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-xl text-primary-600 transition-colors group-hover:bg-primary-800 group-hover:text-white">
+      <Icon />
+    </span>
+    <h3 className="text-lg font-bold leading-snug text-primary-900">{title}</h3>
+  </div>
+);
+
 /* ============ HERO ============ */
 const HeroVisual = () => (
-  <div className="relative mx-auto w-full max-w-[480px] aspect-square">
+  <div className="relative mx-auto aspect-square w-full max-w-[480px]">
     <div className="absolute inset-[10%] rounded-full bg-primary-500/20 blur-3xl" />
     {/* isometric layered platform */}
     <div
       className="absolute inset-0 flex items-center justify-center [perspective:1000px]"
       aria-hidden="true"
     >
-      {/* 3D Stacked Shapes */}
       <div className="relative h-56 w-56 [transform:rotateX(60deg)_rotateZ(45deg)] [transform-style:preserve-3d]">
         {[0, 1, 2].map((i) => (
           <div
@@ -4634,12 +5190,11 @@ const HeroVisual = () => (
           />
         ))}
       </div>
-
-      {/* Floating Logo Card */}
+      {/* Logo card */}
       <div className="absolute z-10 flex h-14 w-44 items-center justify-center rounded-lg bg-white shadow-2xl ring-1 ring-black/5">
         <img
           src={guidewireLogo}
-          alt="Guidewire Logo"
+          alt="Guidewire"
           className="h-full w-full rounded-xl object-contain"
         />
       </div>
@@ -4647,7 +5202,7 @@ const HeroVisual = () => (
     {heroNodes.map((n, i) => (
       <motion.div
         key={n.label}
-        className="absolute flex w-28 flex-col items-center rounded-xl bg-white p-2.5 text-center shadow-lg"
+        className="absolute flex w-32 flex-col items-center rounded-xl bg-white p-2.5 text-center shadow-lg"
         style={n.pos}
         animate={{ y: [0, -6, 0] }}
         transition={{
@@ -4657,7 +5212,7 @@ const HeroVisual = () => (
         }}
       >
         <n.icon className="mb-1 text-primary-600" />
-        <span className="text-[10px] font-semibold leading-tight text-primary-900">
+        <span className="text-xs font-semibold leading-tight text-primary-900">
           {n.label}
         </span>
       </motion.div>
@@ -4666,26 +5221,26 @@ const HeroVisual = () => (
 );
 
 const Hero = () => (
-  <section className="bg-gradient-to-br from-primary-900 to-primary-800 py-16 lg:py-24 overflow-hidden">
-    <Container className="grid lg:grid-cols-2 gap-12 items-center">
+  <section className="overflow-hidden bg-gradient-to-br from-primary-900 to-primary-800 py-16 lg:py-24">
+    <Container className="grid items-center gap-12 lg:grid-cols-2">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <p className="inline-block rounded-full border border-primary-700 bg-primary-800 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-200 mb-5">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary-300">
           Guidewire Solutions
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
+        <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
           Enterprise <span className="text-primary-300">Guidewire</span>{" "}
           Solutions for Modern Insurers
         </h1>
-        <p className="text-lg text-primary-100 max-w-xl mb-8">
+        <p className="mb-8 max-w-xl text-lg text-primary-100 lg:text-xl">
           Leverage our deep Guidewire expertise to modernize core insurance
           systems, enhance customer experiences, and deliver measurable business
           value.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col gap-4 sm:flex-row">
           <Button href="#services">
             Explore Guidewire Services <FaArrowRight size={12} />
           </Button>
@@ -4712,26 +5267,18 @@ const Services = () => (
         {services.map((s, i) => (
           <motion.article
             key={s.path}
-            // Note: if fade(i) isn't providing initial/animate, you might want to add them
             {...fade(i)}
             className="group flex flex-col rounded-2xl border border-primary-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-xl"
           >
-            {/* Wrapper for Icon and Title */}
-            <div className="mb-5 flex items-center gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-xl text-primary-600 transition-colors group-hover:bg-primary-800 group-hover:text-white">
-                <s.icon />
-              </span>
-              <h3 className="text-lg font-bold text-primary-900">{s.title}</h3>
-            </div>
-
-            <p className="mb-5 text-sm text-primary-600">{s.desc}</p>
-            <ul className="mb-6 space-y-2">
+            <IconTitle icon={s.icon} title={s.title} />
+            <p className="mb-5 text-base text-primary-600">{s.desc}</p>
+            <ul className="space-y-2.5">
               {s.features.map((f) => (
                 <li
                   key={f}
-                  className="flex items-center gap-2.5 text-sm text-primary-700"
+                  className="flex items-center gap-2.5 text-base text-primary-700"
                 >
-                  <FaCheckCircle className="shrink-0 text-xs text-primary-500" />
+                  <FaCheckCircle className="shrink-0 text-sm text-primary-500" />
                   {f}
                 </li>
               ))}
@@ -4762,7 +5309,9 @@ const Industries = () => (
             <span className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 text-xl text-primary-600 transition-colors group-hover:bg-primary-800 group-hover:text-white">
               <d.icon />
             </span>
-            <h3 className="text-sm font-semibold text-primary-900">{d.name}</h3>
+            <h3 className="text-base font-semibold text-primary-900">
+              {d.name}
+            </h3>
           </motion.div>
         ))}
       </div>
@@ -4792,12 +5341,12 @@ const Framework = () => (
             )}
             <div className="relative mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-primary-400/50 bg-primary-800 text-xl text-white">
               <s.icon />
-              <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[11px] font-bold text-primary-800">
+              <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-white text-xs font-bold text-primary-800">
                 {i + 1}
               </span>
             </div>
-            <h3 className="mb-2 font-semibold text-white">{s.title}</h3>
-            <p className="mx-auto max-w-[200px] text-sm text-primary-200">
+            <h3 className="mb-2 text-lg font-semibold text-white">{s.title}</h3>
+            <p className="mx-auto max-w-[220px] text-base text-primary-200">
               {s.desc}
             </p>
           </motion.div>
@@ -4811,15 +5360,15 @@ const Framework = () => (
 const Dashboard = () => (
   <div className="rounded-2xl border border-primary-800 bg-primary-900 p-4 shadow-2xl">
     <div className="mb-3 flex items-center justify-between">
-      <span className="text-sm font-semibold text-white">
+      <span className="text-base font-semibold text-white">
         Guidewire Overview
       </span>
-      <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] text-primary-200">
-        Sample data
+      <span className="rounded-full bg-white/10 px-2.5 py-0.5 text-xs text-primary-200">
+        Sample view
       </span>
     </div>
-    <div className="grid grid-cols-[110px_1fr] gap-4">
-      <ul className="space-y-1.5 text-xs">
+    <div className="grid grid-cols-[130px_1fr] gap-4">
+      <ul className="space-y-1.5 text-sm">
         {["PolicyCenter", "ClaimCenter", "BillingCenter", "Reports"].map(
           (n, i) => (
             <li
@@ -4832,15 +5381,21 @@ const Dashboard = () => (
         )}
       </ul>
       <div>
-        <div className="mb-3 grid grid-cols-3 gap-2">
+        {/* decorative activity bars, no figures */}
+        <div className="mb-3 grid grid-cols-3 gap-2" aria-hidden="true">
           {[
-            ["Policies", "125K"],
-            ["Claims", "18K"],
-            ["Premium", "$320M"],
-          ].map(([k, v]) => (
+            ["Policies", "70%"],
+            ["Claims", "45%"],
+            ["Billing", "85%"],
+          ].map(([k, w]) => (
             <div key={k} className="rounded-lg bg-white/5 p-2.5">
-              <p className="text-[10px] text-primary-300">{k}</p>
-              {/* <p className="text-base font-bold text-white">{v}</p> */}
+              <p className="mb-2 text-sm text-primary-300">{k}</p>
+              <div className="h-1.5 rounded-full bg-white/10">
+                <div
+                  className="h-full rounded-full bg-primary-300"
+                  style={{ width: w }}
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -4889,8 +5444,10 @@ const Benefits = () => (
                 <b.icon />
               </span>
               <div>
-                <h3 className="font-semibold text-primary-900">{b.title}</h3>
-                <p className="text-sm text-primary-600">{b.desc}</p>
+                <h3 className="text-lg font-semibold text-primary-900">
+                  {b.title}
+                </h3>
+                <p className="text-base text-primary-600">{b.desc}</p>
               </div>
             </motion.div>
           ))}
