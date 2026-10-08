@@ -4935,6 +4935,9 @@ import {
   FaHardHat,
   FaHeartbeat,
   FaPlane,
+  FaUserShield,
+  FaIndustry,
+  FaStar,
   FaSearch,
   FaClipboardList,
   FaCogs,
@@ -5046,13 +5049,19 @@ const heroNodes = [
   },
 ];
 
+// const industries = [
+//   { icon: FaCar, name: "Personal Lines" },
+//   // { icon: FaHome, name: "Property & Home" },
+//   { icon: FaBuilding, name: "Commercial Lines" },
+//   { icon: FaHardHat, name: "Workers' Compensation" },
+//   // { icon: FaHeartbeat, name: "Health & Life" },
+//   { icon: FaPlane, name: "Specialty Lines" },
+// ];
 const industries = [
-  { icon: FaCar, name: "Personal Auto" },
-  { icon: FaHome, name: "Property & Home" },
-  { icon: FaBuilding, name: "Commercial Lines" },
-  { icon: FaHardHat, name: "Workers' Compensation" },
-  { icon: FaHeartbeat, name: "Health & Life" },
-  { icon: FaPlane, name: "Specialty Lines" },
+  { name: "Personal Lines", icon: FaUserShield },
+  { name: "Commercial Lines", icon: FaIndustry },
+  { name: "Workers' Compensation", icon: FaHardHat },
+  { name: "Specialty Lines", icon: FaStar },
 ];
 
 const steps = [
@@ -5295,11 +5304,11 @@ const Industries = () => (
   <section className="bg-primary-50 py-10 lg:py-12">
     <Container>
       <SectionHead
-        eyebrow="Industries We Serve"
+        eyebrow="Industry Coverage"
         title="Built for the Insurance Ecosystem"
         text="We deliver Guidewire solutions for insurers across multiple lines of business."
       />
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {industries.map((d, i) => (
           <motion.div
             key={d.name}

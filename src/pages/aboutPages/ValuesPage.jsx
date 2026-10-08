@@ -298,8 +298,8 @@ const ValueCard = ({ value, index, isActive, onSelect }) => {
           <motion.div
             className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 relative"
             style={{
-              background: isActive ? `${value.color}20` : `${value.color}10`,
-              border: `2px solid ${isActive ? value.color : `${value.color}30`}`,
+              background: isActive ? `#FFF` : `${value.color}10`,
+              border: `2px solid ${isActive ? "#FFF" : `${value.color}30`}`,
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
             transition={{ duration: 0.5 }}
@@ -367,7 +367,7 @@ const ValueCard = ({ value, index, isActive, onSelect }) => {
                     >
                       <FaCheckCircle
                         className="flex-shrink-0 text-base"
-                        style={{ color: value.color }}
+                        style={{ color: "#FFF" }}
                         aria-hidden="true"
                       />
                       {detail}
