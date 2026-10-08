@@ -3982,12 +3982,13 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 import sapLogo from "../../assets/logos/sap.png";
+import sapBuilding from "../../assets/services/sap/sap_building.png";
+import sapTogether from "../../assets/services/sap/sap_together.png";
 
 /* Example images (Unsplash). Swap for your own files in /assets. */
 const IMG = {
-  building:
-    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
-  team: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80",
+  building: sapBuilding,
+  team: sapTogether,
 };
 
 /* ============ DATA ============ */
@@ -4461,7 +4462,7 @@ const S4Section = () => (
           src={IMG.building}
           alt="Modern enterprise office building"
           loading="lazy"
-          className="h-72 w-full rounded-lg object-cover shadow-xl lg:h-100"
+          className="h-72 w-full rounded-lg object-cover shadow-xl lg:h-120"
         />
       </motion.div>
     </Container>
@@ -4550,7 +4551,7 @@ const WhyUs = () => (
         src={IMG.team}
         alt="Innovise team collaborating"
         loading="lazy"
-        className="hidden h-60 w-full max-w-lg rounded-xl object-cover shadow-lg lg:block"
+        className="hidden h-80 w-full max-w-lg rounded-xl object-cover shadow-lg lg:block"
       />
     </Container>
   </section>
