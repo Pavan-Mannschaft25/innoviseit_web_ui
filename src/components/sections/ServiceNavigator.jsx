@@ -101,7 +101,7 @@ const ServiceNavigator = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] py-16 lg:py-20 overflow-hidden">
+    <section className="relative min-h-[90vh] py-10 lg:py-12 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         {/* Testing/Tech Background Image */}
