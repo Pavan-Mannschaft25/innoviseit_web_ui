@@ -1,25 +1,8 @@
-// {
-//   "rewrites": [
-//     {
-//       "source": "/(.*)",
-//       "destination": "/index.html"
-//     }
-//   ]
-// }
-
 {
-  "redirects": [
-    {
-      "source": "/services/testing-qa",
-      "destination": "/services/testing-quality-assurance",
-      "permanent": true
-    }
-  ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "headers": [
+  "rewrites": [
     {
       "source": "/(.*)",
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "destination": "/index.html"
     }
   ]
 }
