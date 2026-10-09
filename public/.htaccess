@@ -6,30 +6,3 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
 </IfModule>
-
-
-<!-- <IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-
-# 1) Force https and non-www (canonical is https://innovise-it.com)
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^ https://innovise-it.com%{REQUEST_URI} [L,R=301]
-
-# 2) Renamed URL
-RewriteRule ^services/testing-qa/?$ /services/testing-quality-assurance [R=301,L]
-
-# 3) Serve the prerendered page for each route (keeps per-page title/canonical)
-RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-RewriteRule ^(.+?)/?$ /$1/index.html [L]
-
-# 4) SPA fallback for everything else (React Router, 404 page)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
-</IfModule>
-
-<IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
-</IfModule> -->
