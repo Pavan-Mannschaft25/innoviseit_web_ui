@@ -1024,70 +1024,58 @@ const SectionHead = ({ eyebrow, title, text, dark, align = "center" }) => (
 
 /* ============ HERO (image stays put, text scrolls) ============ */
 const Hero = () => (
-  <section className="relative flex min-h-[90svh] flex-col bg-primary-900 [clip-path:inset(0)]">
+  <section className="relative flex min-h-svh flex-col bg-black [clip-path:inset(0)]">
+    {/* Fixed background: stays in place while the page scrolls, slowly zooms */}
     <motion.img
       src={img1}
       alt=""
       aria-hidden="true"
       className="fixed inset-0 h-screen w-full object-cover"
-      initial={{ scale: 1 }}
-      animate={{ scale: 1.06 }}
+      initial={{ scale: 1.15 }}
+      animate={{ scale: 1 }}
       transition={{
-        duration: 24,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "linear",
+        duration: 10,
+        ease: "easeOut",
       }}
     />
-    <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/70 to-primary-900/30" />
-    <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 via-transparent to-primary-900/40" />
 
-    <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-4 pb-10 pt-6 lg:px-8 lg:pb-12">
+    {/* Even, light overlay so the image stays clear and the text stays readable */}
+    <div className="absolute inset-0 bg-black/40" />
+    <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+
+    <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-start px-4 py-24 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-4xl"
+        className="text-white"
       >
-        <div className="mb-6 flex items-center gap-4">
-          <span className="h-px w-12 shrink-0 bg-primary-300" />
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary-200">
-            Industrial Manufacturing · High Tech
-          </p>
-        </div>
-        <h1 className="mb-6 text-4xl font-light leading-[1.1] text-white md:text-6xl lg:text-7xl">
-          Engineering Smarter Manufacturing with{" "}
-          <span className="font-semibold text-primary-200">Industry 4.0</span>
+        {/* Breadcrumb with thin line underneath */}
+        <p className="border-b border-white/30 pb-4 text-sm font-semibold uppercase tracking-[0.12em] text-white">
+          Industries / Industrial Manufacturing &amp; High Tech
+        </p>
+
+        {/* Headline */}
+        <h1 className="mt-10 max-w-5xl text-4xl font-light leading-[1.1] text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.3)] md:text-6xl lg:text-7xl">
+          Engineering smarter manufacturing with Industry 4.0
         </h1>
-        <p className="mb-4 max-w-4xl text-xl font-light leading-relaxed text-primary-100 md:text-2xl">
-          Manufacturers and high-tech companies are under pressure to produce
-          faster, with higher quality and lower cost, while legacy systems and
-          unplanned downtime hold them back. We connect machines, data and
-          people to enable smart factories, predictive maintenance and digital
-          operations built for lasting operational excellence.
+
+        {/* Short subtext */}
+        <p className="mt-8 max-w-xl text-xl font-light leading-snug text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.3)] md:text-2xl">
+          We connect machines, data and people to enable smart factories and
+          predictive maintenance that keep production moving.
         </p>
-        <p className="mb-8 max-w-xl text-base text-primary-200">
-          From the shop floor to the enterprise, technology that keeps
-          production moving.
-        </p>
-        <div className="mb-8 flex flex-col gap-4 sm:flex-row">
-          <Button href="/contact">
-            Talk to Our Manufacturing Experts <FaArrowRight size={12} />
-          </Button>
-          <Button href="#solutions" variant="outline">
-            Explore Solutions
-          </Button>
-        </div>
-        <ul className="flex flex-wrap gap-3">
-          {focusAreas.map((f) => (
-            <li
-              key={f.label}
-              className="flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-primary-100 backdrop-blur-sm"
-            >
-              <f.icon className="text-primary-300" /> {f.label}
-            </li>
-          ))}
-        </ul>
+
+        {/* CTA: text + white circle arrow */}
+        <a
+          href="/contact"
+          className="group mt-10 inline-flex items-center gap-4 text-base font-medium text-white"
+        >
+          Let&apos;s talk
+          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-black transition-transform duration-300 group-hover:translate-x-1">
+            <FaArrowRight size={16} />
+          </span>
+        </a>
       </motion.div>
     </div>
   </section>

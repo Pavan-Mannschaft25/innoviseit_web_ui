@@ -630,24 +630,48 @@
 
 // export default Hero;
 
+// import React from "react";
+// import bannerVideo from "../../assets/videos/hero_banner7.mp4";
+
+// function Hero() {
+//   return (
+//     <section className="relative bg-[#020B2D] overflow-hidden">
+//       <div
+//         className="
+//           w-full
+//           max-h-screen
+//         "
+//       >
+//         <video
+//           className="w-full h-full object-cover"
+//           autoPlay
+//           muted
+//           loop
+//           playsInline
+//         >
+//           <source src={bannerVideo} type="video/mp4" />
+//         </video>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Hero;
+
 import React from "react";
 import bannerVideo from "../../assets/videos/hero_banner7.mp4";
 
 function Hero() {
   return (
     <section className="relative bg-[#020B2D] overflow-hidden">
-      <div
-        className="
-          w-full
-          max-h-screen
-        "
-      >
+      <div className="w-full max-h-screen">
         <video
           className="w-full h-full object-cover"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
         >
           <source src={bannerVideo} type="video/mp4" />
         </video>
