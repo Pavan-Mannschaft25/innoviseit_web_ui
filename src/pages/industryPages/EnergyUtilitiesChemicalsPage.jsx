@@ -750,7 +750,7 @@ import {
   FaWarehouse,
 } from "react-icons/fa";
 import img1 from "../../assets/industry/au2.png";
-import img2 from "../../assets/industry/og2.png";
+import img2 from "../../assets/industry/industry_intro.png";
 
 /* ============ DATA ============ */
 const focusAreas = [

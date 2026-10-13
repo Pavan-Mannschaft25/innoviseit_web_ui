@@ -771,7 +771,7 @@ import {
   FaRocket,
 } from "react-icons/fa";
 import img1 from "../../assets/industry/ae1.png";
-import img2 from "../../assets/industry/au1.png";
+import img2 from "../../assets/industry/atomotive_intro.png";
 
 /* ============ DATA ============ */
 const focusAreas = [
