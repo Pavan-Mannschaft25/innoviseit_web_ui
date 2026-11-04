@@ -1,12 +1,6 @@
-@import "tailwindcss";
-
-/* ============================================
-   TAILWIND CSS V4 CONFIGURATION
-   Using @theme directive instead of tailwind.config.js
-   ============================================ */
+/* @import "tailwindcss";
 
 @theme {
-  /* Primary Colors (Blue) */
   --color-primary-50: #f4f8fc;
   --color-primary-100: #e6eef7;
   --color-primary-200: #c7d8ea;
@@ -18,7 +12,6 @@
   --color-primary-800: #12324f;
   --color-primary-900: #0b2a4a;
 
-  /* Accent Colors (Amber/Gold) */
   --color-accent-50: #fffbeb;
   --color-accent-100: #fef3c7;
   --color-accent-200: #fde68a;
@@ -28,25 +21,17 @@
   --color-accent-600: #d97706;
   --color-accent-700: #b45309;
 
-  /* Font Family */
   --font-sans: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
 
-  /* Custom Shadows */
   --shadow-card:
     0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-card-hover:
     0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 
-  /* Border Radius */
   --radius-xl: 1rem;
 
-  /* Animation timing */
   --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-/* ============================================
-   BASE STYLES
-   ============================================ */
 
 @layer base {
   html {
@@ -58,7 +43,6 @@
     @apply text-gray-900 antialiased;
   }
 
-  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -76,10 +60,6 @@
     @apply bg-gray-500;
   }
 }
-
-/* ============================================
-   CUSTOM UTILITY CLASSES
-   ============================================ */
 
 @layer components {
   .text-gradient {
@@ -236,8 +216,272 @@
   will-change: transform, opacity;
 }
 
-/* Smooth animations for all elements */
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+@import "tailwindcss";
+
+/* ==========================================================
+   INNOVISE BRAND THEME
+   Built only from the four logo colors:
+     Navy  #0b1849   Blue  #013dfb   Aqua  #0cf0d1   White #ffffff
+   Every step in the scales below is a mix of these four
+   (a color blended with white for light tints, or with navy
+   for deep shades), so nothing outside the brand appears.
+   Surfaces use solid fills only: no gradients, no glows.
+   ========================================================== */
+
+@theme {
+  /* Core brand colors (use as bg-navy, text-blue, border-aqua …) */
+  --color-navy: #0b1849;
+  --color-blue: #013dfb;
+  --color-aqua: #0cf0d1;
+  --color-white: #ffffff;
+
+  /* Primary: white → brand blue → brand navy */
+  --color-primary-50: #f5f7ff; /* blue 4% on white  */
+  --color-primary-100: #ebf0ff; /* blue 8% on white  */
+  --color-primary-200: #d6e0fe; /* blue 16% on white */
+  --color-primary-300: #99b1fd; /* blue 40% on white */
+  --color-primary-400: #4d77fc; /* blue 70% on white */
+  --color-primary-500: #013dfb; /* BRAND BLUE        */
+  --color-primary-600: #0432c6; /* blue + 30% navy   */
+  --color-primary-700: #072792; /* blue + 60% navy   */
+  --color-primary-800: #0a1e64; /* navy + 15% blue   */
+  --color-primary-900: #0b1849; /* BRAND NAVY        */
+
+  /* Accent: white → brand aqua → deep aqua (aqua + navy) */
+  --color-accent-50: #ecfffd;
+  --color-accent-100: #d8fdf8;
+  --color-accent-200: #aaf9ee;
+  --color-accent-300: #5df5e0;
+  --color-accent-400: #0cf0d1; /* BRAND AQUA */
+  --color-accent-500: #0cf0d1;
+  --color-accent-600: #0cbaa8; /* aqua + 25% navy */
+  --color-accent-700: #0b848d; /* aqua + 50% navy */
+
+  --font-sans: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+
+  /* Shadows tinted with brand navy instead of black */
+  --shadow-card:
+    0 4px 6px -1px rgb(11 24 73 / 0.08), 0 2px 4px -2px rgb(11 24 73 / 0.06);
+  --shadow-card-hover:
+    0 20px 25px -5px rgb(11 24 73 / 0.14), 0 8px 10px -6px rgb(11 24 73 / 0.1);
+
+  --radius-xl: 1rem;
+
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    @apply text-primary-900 antialiased;
+  }
+
+  ::selection {
+    background: var(--color-aqua);
+    color: var(--color-navy);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-primary-50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary-300 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-500;
+  }
+}
+
+@layer components {
+  /* Solid brand colors only — no gradients.
+     These two class names are kept so older markup still works. */
+  .text-gradient {
+    color: var(--color-blue);
+  }
+
+  .bg-brand-gradient {
+    background-color: var(--color-navy);
+  }
+
+  .glass-effect {
+    @apply bg-white/10 border border-white/20;
+  }
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: var(--op);
+  }
+  33% {
+    transform: translateY(-18px) translateX(8px);
+    opacity: calc(var(--op) * 1.6);
+  }
+  66% {
+    transform: translateY(-8px) translateX(-6px);
+    opacity: calc(var(--op) * 0.7);
+  }
+}
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+@keyframes nodePulse {
+  0% {
+    r: 24;
+    opacity: 0.5;
+  }
+  100% {
+    r: 36;
+    opacity: 0;
+  }
+}
+
+.spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
+.spin-slow-reverse {
+  animation: spinSlow 55s linear infinite reverse;
+}
+.particle {
+  animation: float var(--dur) ease-in-out infinite;
+  animation-delay: var(--del);
+}
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.arc-path {
+  transition:
+    stroke-dashoffset 1s cubic-bezier(0.22, 1, 0.36, 1),
+    stroke 0.4s ease,
+    stroke-width 0.4s ease,
+    filter 0.4s ease;
+}
+.node-circle {
+  transition:
+    fill 0.4s ease,
+    stroke 0.4s ease,
+    r 0.3s ease;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(180deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes ringPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes nodePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.particle {
+  will-change: transform, opacity;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin-slow,
+  .spin-slow-reverse,
+  .particle,
+  .pulse-glow {
+    animation: none;
+  }
 }

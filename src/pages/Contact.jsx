@@ -1,4 +1,992 @@
+// // import React, { useState, useCallback, useMemo, memo } from "react";
+// // import Container from "../components/ui/Container";
+// // import { motion } from "framer-motion";
+// // import {
+// //   FaMapMarkerAlt,
+// //   FaEnvelope,
+// //   FaPhone,
+// //   FaClock,
+// //   FaPaperPlane,
+// //   FaHeadset,
+// //   FaArrowRight,
+// //   FaCheck,
+// //   FaExclamationCircle,
+// // } from "react-icons/fa";
+// // import toast from "react-hot-toast";
+// // import bannerImg from "../assets/banners/contact.png";
+
+// // // ==================== BRAND COLORS (Same as Careers) ====================
+// // const BRAND = {
+// //   navy: {
+// //     dark: "#12324f",
+// //     mid: "#12324f",
+// //     light: "#143A63",
+// //     lighter: "#1A4570",
+// //   },
+// //   gold: {
+// //     primary: "#FFF",
+// //     light: "#FFD54F",
+// //     gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
+// //   },
+// // };
+
+// // // ==================== ANIMATION CONFIG ====================
+// // const ANIMATION_CONFIG = {
+// //   stagger: 0.15,
+// //   duration: 0.6,
+// // };
+
+// // // ==================== DATA ====================
+// // const companyData = {
+// //   contact: {
+// //     address: {
+// //       street: "123 Innovation Drive, Suite 500",
+// //       city: "Redmond",
+// //       state: "WA",
+// //       zip: "USA",
+// //       country: "United States",
+// //     },
+// //     email: "contact@innoviseit.com",
+// //     phone: "+1 (555) 234-5678",
+// //     hours: "Mon - Fri: 9:00 AM - 6:00 PM PST",
+// //   },
+// // };
+
+// // // ==================== CUSTOM HOOKS ====================
+// // const useFormState = (initialState) => {
+// //   const [formData, setFormData] = useState(initialState);
+// //   const [errors, setErrors] = useState({});
+// //   const [touched, setTouched] = useState({});
+
+// //   const handleChange = useCallback(
+// //     (e) => {
+// //       const { name, value } = e.target;
+// //       setFormData((prev) => ({ ...prev, [name]: value }));
+// //       // Clear error on change
+// //       if (errors[name]) {
+// //         setErrors((prev) => ({ ...prev, [name]: "" }));
+// //       }
+// //     },
+// //     [errors],
+// //   );
+
+// //   const handleBlur = useCallback((e) => {
+// //     const { name, value } = e.target;
+// //     setTouched((prev) => ({ ...prev, [name]: true }));
+
+// //     // Validate on blur
+// //     let error = "";
+// //     if (
+// //       name === "email" &&
+// //       value &&
+// //       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+// //     ) {
+// //       error = "Please enter a valid email address";
+// //     }
+// //     if (
+// //       (name === "firstName" || name === "lastName") &&
+// //       value &&
+// //       value.length < 2
+// //     ) {
+// //       error = "Must be at least 2 characters";
+// //     }
+
+// //     if (error) {
+// //       setErrors((prev) => ({ ...prev, [name]: error }));
+// //     }
+// //   }, []);
+
+// //   const resetForm = useCallback(() => {
+// //     setFormData(initialState);
+// //     setErrors({});
+// //     setTouched({});
+// //   }, [initialState]);
+
+// //   return {
+// //     formData,
+// //     errors,
+// //     touched,
+// //     handleChange,
+// //     handleBlur,
+// //     resetForm,
+// //     setFormData,
+// //   };
+// // };
+
+// // // ==================== MEMOIZED COMPONENTS ====================
+
+// // // Hero Section
+// // const HeroSection = memo(() => (
+// //   <section className="relative h-[70vh] overflow-hidden">
+// //     {/* Background Image */}
+// //     <img
+// //       src={bannerImg} // your uploaded image
+// //       alt="Innovise Think"
+// //       className="absolute inset-0 w-full h-full object-cover"
+// //     />
+
+// //     {/* Optional Dark Overlay (for better text visibility) */}
+// //     <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F2C]/90 via-[#0A0F2C]/60 to-transparent" />
+
+// //     {/* LEFT SIDE TEXT */}
+// //     <div className="relative z-10 h-full flex items-center">
+// //       <div className="max-w-2xl px-6 md:px-12 lg:px-20">
+// //         {/* Small Label */}
+// //         <p className="text-sm uppercase tracking-widest text-yellow-400 mb-4">
+// //           Let's Connect
+// //         </p>
+
+// //         {/* Main Heading */}
+// //         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+// //           Get in Touch
+// //         </h1>
+
+// //         {/* Subtitle */}
+// //         <p className="text-lg md:text-xl text-white/70 leading-relaxed">
+// //           Ready to start your transformation journey? Our team of experts is
+// //           here to help you find the perfect solution for your business needs.
+// //         </p>
+// //       </div>
+// //     </div>
+// //   </section>
+// // ));
+
+// // HeroSection.displayName = "HeroSection";
+
+// // // Contact Info Card Component
+// // const ContactInfoCard = memo(({ info, index }) => (
+// //   <motion.div
+// //     initial={{ opacity: 0, y: 30 }}
+// //     whileInView={{ opacity: 1, y: 0 }}
+// //     viewport={{ once: true }}
+// //     transition={{
+// //       delay: index * ANIMATION_CONFIG.stagger,
+// //       duration: ANIMATION_CONFIG.duration,
+// //     }}
+// //     whileHover={{ y: -5, scale: 1.02 }}
+// //     className="group relative rounded-2xl overflow-hidden transition-all duration-500 cursor-default focus-within:ring-2 focus-within:ring-offset-2"
+// //     style={{
+// //       background: "white",
+// //       border: "1px solid rgba(0,0,0,0.06)",
+// //       boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
+// //       "--tw-ring-color": BRAND.gold.primary,
+// //     }}
+// //     onMouseEnter={(e) => {
+// //       e.currentTarget.style.borderColor = `${BRAND.gold.primary}40`;
+// //       e.currentTarget.style.boxShadow = `0 20px 40px ${BRAND.gold.primary}15`;
+// //     }}
+// //     onMouseLeave={(e) => {
+// //       e.currentTarget.style.borderColor = "rgba(0,0,0,0.06)";
+// //       e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.04)";
+// //     }}
+// //     tabIndex={0}
+// //     role="article"
+// //     aria-labelledby={`contact-title-${index}`}
+// //   >
+// //     <div className="p-6 lg:p-8">
+// //       <div className="flex items-start gap-4">
+// //         {/* Icon Container */}
+// //         <div
+// //           className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+// //           style={{
+// //             background: `${BRAND.gold.primary}10`,
+// //             border: `1px solid ${BRAND.gold.primary}25`,
+// //           }}
+// //         >
+// //           <info.icon
+// //             className="text-xl transition-colors duration-300"
+// //             style={{ color: BRAND.gold.primary }}
+// //             aria-hidden="true"
+// //           />
+// //         </div>
+
+// //         {/* Content */}
+// //         <div className="flex-grow min-w-0">
+// //           <h4
+// //             id={`contact-title-${index}`}
+// //             className="font-bold text-lg mb-3 transition-colors"
+// //             style={{ color: BRAND.navy.dark }}
+// //           >
+// //             {info.title}
+// //           </h4>
+
+// //           <div className="space-y-1">
+// //             {info.details.map((detail, idx) => (
+// //               <p
+// //                 key={idx}
+// //                 className="text-sm leading-relaxed"
+// //                 style={{ color: "#64748B" }}
+// //               >
+// //                 {detail}
+// //               </p>
+// //             ))}
+// //           </div>
+
+// //           {info.action && (
+// //             <a
+// //               href={info.action.href}
+// //               className="inline-flex items-center gap-2 mt-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 group/link hover:gap-3"
+// //               style={{ color: BRAND.gold.primary }}
+// //               aria-label={info.action.label}
+// //             >
+// //               {info.action.label}
+// //               <FaArrowRight
+// //                 className="text-xs transition-transform duration-300 group-hover/link:translate-x-1"
+// //                 aria-hidden="true"
+// //               />
+// //             </a>
+// //           )}
+// //         </div>
+// //       </div>
+// //     </div>
+
+// //     {/* Corner Glow Effect */}
+// //     <div
+// //       className="absolute bottom-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+// //       style={{ background: BRAND.gold.primary }}
+// //       aria-hidden="true"
+// //     />
+// //   </motion.div>
+// // ));
+
+// // ContactInfoCard.displayName = "ContactInfoCard";
+
+// // // Support Card Component
+// // const SupportCard = memo(() => (
+// //   <motion.div
+// //     initial={{ opacity: 0, y: 30 }}
+// //     whileInView={{ opacity: 1, y: 0 }}
+// //     viewport={{ once: true }}
+// //     transition={{ delay: 0.5, duration: ANIMATION_CONFIG.duration }}
+// //     className="relative rounded-2xl overflow-hidden"
+// //     style={{
+// //       background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.lighter})`,
+// //       border: `1px solid ${BRAND.gold.primary}20`,
+// //     }}
+// //   >
+// //     <div className="p-6 lg:p-8 relative z-10">
+// //       <div className="flex items-start gap-4">
+// //         <div
+// //           className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+// //           style={{ background: "#FFF" }}
+// //         >
+// //           <FaHeadset
+// //             className="text-2xl"
+// //             style={{ color: BRAND.navy.dark }}
+// //             aria-hidden="true"
+// //           />
+// //         </div>
+
+// //         <div className="flex-grow">
+// //           <h4 className="font-bold text-lg mb-2 text-white">
+// //             Need Immediate Assistance?
+// //           </h4>
+// //           <p
+// //             className="text-sm mb-4"
+// //             style={{ color: "rgba(255,255,255,0.7)" }}
+// //           >
+// //             Our support team is available 24/7 for existing clients.
+// //           </p>
+
+// //           <a
+// //             href={`tel:${companyData.contact.phone.replace(/\s/g, "")}`}
+// //             className="group/btn inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
+// //             style={{
+// //               background: "#FFF",
+// //               color: BRAND.navy.dark,
+// //               boxShadow: `0 4px 15px ${BRAND.gold.primary}35`,
+// //               "--tw-ring-color": BRAND.gold.primary,
+// //               "--tw-ring-offset-color": BRAND.navy.dark,
+// //             }}
+// //           >
+// //             <FaPhone className="text-xs" aria-hidden="true" />
+// //             Emergency Support Line
+// //             <FaArrowRight
+// //               className="text-xs group-hover/btn:translate-x-1 transition-transform"
+// //               aria-hidden="true"
+// //             />
+// //           </a>
+// //         </div>
+// //       </div>
+// //     </div>
+
+// //     {/* Background Pattern */}
+// //     <div
+// //       className="absolute inset-0 opacity-[0.03]"
+// //       style={{
+// //         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+// //         backgroundSize: "30px 30px",
+// //       }}
+// //       aria-hidden="true"
+// //     />
+// //   </motion.div>
+// // ));
+
+// // SupportCard.displayName = "SupportCard";
+
+// // // Input Field Component
+// // const FormInput = memo(
+// //   ({
+// //     label,
+// //     name,
+// //     type = "text",
+// //     value,
+// //     onChange,
+// //     onBlur,
+// //     placeholder,
+// //     required,
+// //     error,
+// //     icon: Icon,
+// //     textarea = false,
+// //   }) => {
+// //     const baseClasses =
+// //       "w-full px-4 py-3.5 rounded-xl border transition-all duration-300 focus:outline-none focus:ring-2";
+// //     const stateClasses = error
+// //       ? "border-red-400 focus:border-red-500 focus:ring-red-200 bg-red-50/30"
+// //       : "border-gray-200 focus:border-yellow-400 bg-gray-50 focus:bg-white focus:ring-yellow-200";
+
+// //     const Component = textarea ? "textarea" : "input";
+
+// //     return (
+// //       <div className="space-y-2">
+// //         <label
+// //           htmlFor={name}
+// //           className="block text-sm font-semibold transition-colors"
+// //           style={{ color: BRAND.navy.dark }}
+// //         >
+// //           {label} {required && <span className="text-red-500">*</span>}
+// //         </label>
+
+// //         <div className="relative">
+// //           {Icon && (
+// //             <Icon
+// //               className="absolute left-4 top-1/2 -translate-y-1/2 text-sm transition-colors pointer-events-none"
+// //               style={{ color: error ? "#EF4444" : "#94A3B8" }}
+// //               aria-hidden="true"
+// //             />
+// //           )}
+
+// //           <Component
+// //             id={name}
+// //             name={name}
+// //             type={type}
+// //             value={value}
+// //             onChange={onChange}
+// //             onBlur={onBlur}
+// //             placeholder={placeholder}
+// //             required={required}
+// //             aria-invalid={!!error}
+// //             aria-describedby={error ? `${name}-error` : undefined}
+// //             className={`${baseClasses} ${stateClasses} ${Icon ? "pl-11" : ""} ${
+// //               textarea ? "resize-none" : ""
+// //             }`}
+// //             rows={textarea ? 5 : undefined}
+// //           />
+// //         </div>
+
+// //         {error && (
+// //           <p
+// //             id={`${name}-error`}
+// //             className="flex items-center gap-1.5 text-sm text-red-500"
+// //             role="alert"
+// //           >
+// //             <FaExclamationCircle className="flex-shrink-0" aria-hidden="true" />
+// //             {error}
+// //           </p>
+// //         )}
+// //       </div>
+// //     );
+// //   },
+// // );
+
+// // FormInput.displayName = "FormInput";
+
+// // // Main Contact Page Component
+// // const ContactPage = () => {
+// //   // Form State
+// //   const initialFormData = useMemo(
+// //     () => ({
+// //       firstName: "",
+// //       lastName: "",
+// //       email: "",
+// //       company: "",
+// //       phone: "",
+// //       subject: "",
+// //       message: "",
+// //       agreedToTerms: false,
+// //     }),
+// //     [],
+// //   );
+
+// //   const { formData, errors, touched, handleChange, handleBlur, resetForm } =
+// //     useFormState(initialFormData);
+// //   const [isSubmitting, setIsSubmitting] = useState(false);
+
+// //   // Contact Info Data
+// //   const contactInfo = useMemo(
+// //     () => [
+// //       {
+// //         icon: FaMapMarkerAlt,
+// //         title: "Visit Our Office",
+// //         details: [
+// //           companyData.contact.address.street,
+// //           `${companyData.contact.address.city}, ${companyData.contact.address.state} ${companyData.contact.address.zip}`,
+// //           companyData.contact.address.country,
+// //         ],
+// //         action: null,
+// //       },
+// //       {
+// //         icon: FaEnvelope,
+// //         title: "Email Us",
+// //         details: [companyData.contact.email],
+// //         action: {
+// //           label: "Send Email",
+// //           href: `mailto:${companyData.contact.email}`,
+// //         },
+// //       },
+// //       {
+// //         icon: FaPhone,
+// //         title: "Call Us",
+// //         details: [companyData.contact.phone],
+// //         action: {
+// //           label: "Call Now",
+// //           href: `tel:${companyData.contact.phone.replace(/\s/g, "")}`,
+// //         },
+// //       },
+// //       {
+// //         icon: FaClock,
+// //         title: "Business Hours",
+// //         details: [companyData.contact.hours],
+// //         action: null,
+// //       },
+// //     ],
+// //     [],
+// //   );
+
+// //   // Subject Options
+// //   const subjectOptions = useMemo(
+// //     () => [
+// //       { value: "", label: "Select a topic..." },
+
+// //       { value: "sap-consulting", label: "SAP Consulting & Implementation" },
+
+// //       { value: "guidewire-services", label: "Guidewire Services" },
+
+// //       { value: "ai-engineering", label: "AI & Engineering Services" },
+
+// //       {
+// //         value: "cloud-transformation",
+// //         label: "Cloud & Digital Transformation",
+// //       },
+
+// //       {
+// //         value: "integration-services",
+// //         label: "Enterprise Integration Services",
+// //       },
+
+// //       {
+// //         value: "application-management",
+// //         label: "Application Management Services",
+// //       },
+
+// //       { value: "data-migration", label: "Data Migration & Transformation" },
+
+// //       { value: "staff-augmentation", label: "Staff Augmentation" },
+
+// //       { value: "partnership", label: "Partnership Inquiry" },
+
+// //       { value: "support", label: "Technical Support" },
+
+// //       { value: "other", label: "Other" },
+// //     ],
+// //     [],
+// //   );
+
+// //   // Form Submission Handler
+// //   const handleSubmit = async (e) => {
+// //     e.preventDefault();
+
+// //     // Validate required fields
+// //     const newErrors = {};
+// //     if (!formData.firstName?.trim())
+// //       newErrors.firstName = "First name is required";
+// //     if (!formData.lastName?.trim())
+// //       newErrors.lastName = "Last name is required";
+// //     if (!formData.email?.trim()) newErrors.email = "Email is required";
+// //     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+// //       newErrors.email = "Invalid email format";
+// //     if (!formData.subject) newErrors.subject = "Please select a subject";
+// //     if (!formData.message?.trim()) newErrors.message = "Message is required";
+// //     if (!formData.agreedToTerms)
+// //       newErrors.agreedToTerms = "You must agree to the privacy policy";
+
+// //     if (Object.keys(newErrors).length > 0) {
+// //       toast.error("Please fix the errors in the form");
+// //       return;
+// //     }
+
+// //     setIsSubmitting(true);
+
+// //     try {
+// //       // Simulate API call
+// //       await new Promise((resolve) => setTimeout(resolve, 1500));
+
+// //       toast.success(
+// //         "Message sent successfully! We'll respond within 24 hours.",
+// //         {
+// //           icon: "",
+// //           duration: 5000,
+// //           style: {
+// //             background: BRAND.navy.dark,
+// //             color: "#fff",
+// //             border: `1px solid ${BRAND.gold.primary}`,
+// //           },
+// //           iconTheme: {
+// //             primary: BRAND.gold.primary,
+// //             secondary: BRAND.navy.dark,
+// //           },
+// //         },
+// //       );
+
+// //       resetForm();
+// //     } catch (error) {
+// //       toast.error("Something went wrong. Please try again.");
+// //     } finally {
+// //       setIsSubmitting(false);
+// //     }
+// //   };
+
+// //   return (
+// //     <main role="main">
+// //       {/* Hero Section */}
+// //       <HeroSection />
+
+// //       {/* Main Contact Content */}
+// //       <section
+// //         className="py-24 bg-white relative overflow-hidden"
+// //         aria-label="Contact information and form"
+// //       >
+// //         {/* Background Decoration */}
+// //         <div
+// //           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-[0.04] -translate-y-1/2 translate-x-1/2"
+// //           style={{ background: BRAND.navy.lighter }}
+// //           aria-hidden="true"
+// //         />
+
+// //         <Container>
+// //           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
+// //             {/* Left Column - Contact Information */}
+// //             <div className="lg:col-span-2 space-y-6">
+// //               <motion.div
+// //                 initial={{ opacity: 0, y: 20 }}
+// //                 whileInView={{ opacity: 1, y: 0 }}
+// //                 viewport={{ once: true }}
+// //               >
+// //                 <span
+// //                   className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-4"
+// //                   style={{
+// //                     background: `${BRAND.navy.mid}08`,
+// //                     color: BRAND.navy.dark,
+// //                     border: `1px solid ${BRAND.navy.mid}15`,
+// //                   }}
+// //                 >
+// //                   Contact Info
+// //                 </span>
+
+// //                 <h2
+// //                   className="text-3xl md:text-4xl font-bold mb-4"
+// //                   style={{ color: BRAND.navy.dark }}
+// //                 >
+// //                   Get in{" "}
+// //                   <span style={{ color: BRAND.gold.primary }}>Touch</span>
+// //                 </h2>
+
+// //                 <p
+// //                   className="text-base leading-relaxed mb-8"
+// //                   style={{ color: "#64748B" }}
+// //                 >
+// //                   Whether you have a question about our services, need technical
+// //                   support, or want to explore partnership opportunities—we're
+// //                   here to help.
+// //                 </p>
+// //               </motion.div>
+
+// //               {/* Contact Cards */}
+// //               <div
+// //                 className="space-y-5"
+// //                 role="list"
+// //                 aria-label="Contact methods"
+// //               >
+// //                 {contactInfo.map((info, index) => (
+// //                   <ContactInfoCard key={index} info={info} index={index} />
+// //                 ))}
+// //               </div>
+
+// //               {/* Support CTA Card */}
+// //               <SupportCard />
+// //             </div>
+
+// //             {/* Right Column - Contact Form */}
+// //             <div className="lg:col-span-3">
+// //               <motion.div
+// //                 initial={{ opacity: 0, y: 30 }}
+// //                 whileInView={{ opacity: 1, y: 0 }}
+// //                 viewport={{ once: true }}
+// //                 transition={{ delay: 0.2 }}
+// //                 className="rounded-3xl overflow-hidden shadow-2xl relative"
+// //                 style={{
+// //                   border: `1px solid rgba(0,0,0,0.06)`,
+// //                   background: "white",
+// //                 }}
+// //               >
+// //                 {/* Form Header */}
+// //                 <div className="relative p-8 lg:p-10 pb-0">
+// //                   <div className="mb-8">
+// //                     <h3
+// //                       className="text-2xl lg:text-3xl font-bold mb-3"
+// //                       style={{ color: BRAND.navy.dark }}
+// //                     >
+// //                       Send us a{" "}
+// //                       <span style={{ color: BRAND.gold.primary }}>Message</span>
+// //                     </h3>
+// //                     <p className="text-base" style={{ color: "#64748B" }}>
+// //                       Fill out the form below and we'll get back to you within
+// //                       24 hours.
+// //                     </p>
+// //                   </div>
+// //                 </div>
+
+// //                 {/* Form Body */}
+// //                 <form
+// //                   onSubmit={handleSubmit}
+// //                   className="p-8 lg:p-10 pt-0 space-y-6"
+// //                   noValidate
+// //                 >
+// //                   {/* Name Fields */}
+// //                   <div className="grid md:grid-cols-2 gap-6">
+// //                     <FormInput
+// //                       label="First Name"
+// //                       name="firstName"
+// //                       value={formData.firstName}
+// //                       onChange={handleChange}
+// //                       onBlur={handleBlur}
+// //                       placeholder="John"
+// //                       required
+// //                       error={touched.firstName ? errors.firstName : ""}
+// //                     />
+// //                     <FormInput
+// //                       label="Last Name"
+// //                       name="lastName"
+// //                       value={formData.lastName}
+// //                       onChange={handleChange}
+// //                       onBlur={handleBlur}
+// //                       placeholder="Doe"
+// //                       required
+// //                       error={touched.lastName ? errors.lastName : ""}
+// //                     />
+// //                   </div>
+
+// //                   {/* Email & Phone */}
+// //                   <div className="grid md:grid-cols-2 gap-6">
+// //                     <FormInput
+// //                       label="Email Address"
+// //                       name="email"
+// //                       type="email"
+// //                       value={formData.email}
+// //                       onChange={handleChange}
+// //                       onBlur={handleBlur}
+// //                       placeholder="john@company.com"
+// //                       required
+// //                       icon={FaEnvelope}
+// //                       error={touched.email ? errors.email : ""}
+// //                     />
+// //                     <FormInput
+// //                       label="Phone Number"
+// //                       name="phone"
+// //                       type="tel"
+// //                       value={formData.phone}
+// //                       onChange={handleChange}
+// //                       onBlur={handleBlur}
+// //                       placeholder="+1 (555) 000-0000"
+// //                       icon={FaPhone}
+// //                     />
+// //                   </div>
+
+// //                   {/* Company */}
+// //                   <FormInput
+// //                     label="Company Name"
+// //                     name="company"
+// //                     value={formData.company}
+// //                     onChange={handleChange}
+// //                     onBlur={handleBlur}
+// //                     placeholder="Your Company"
+// //                   />
+
+// //                   {/* Subject Select */}
+// //                   <div className="space-y-2">
+// //                     <label
+// //                       htmlFor="subject"
+// //                       className="block text-sm font-semibold"
+// //                       style={{ color: BRAND.navy.dark }}
+// //                     >
+// //                       Subject <span className="text-red-500">*</span>
+// //                     </label>
+
+// //                     <select
+// //                       id="subject"
+// //                       name="subject"
+// //                       value={formData.subject}
+// //                       onChange={handleChange}
+// //                       onBlur={handleBlur}
+// //                       required
+// //                       aria-invalid={!!errors.subject}
+// //                       className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 appearance-none cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:border-yellow-400 focus:bg-white focus:ring-yellow-200"
+// //                       style={{
+// //                         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L2 4l4-4 4 4z' fill='%2394A3B8'/%3E%3C/svg%3E")`,
+// //                         backgroundRepeat: "no-repeat",
+// //                         backgroundPosition: "right 16px center",
+// //                       }}
+// //                     >
+// //                       {subjectOptions.map((option) => (
+// //                         <option key={option.value} value={option.value}>
+// //                           {option.label}
+// //                         </option>
+// //                       ))}
+// //                     </select>
+
+// //                     {errors.subject && touched.subject && (
+// //                       <p
+// //                         className="flex items-center gap-1.5 text-sm text-red-500"
+// //                         role="alert"
+// //                       >
+// //                         <FaExclamationCircle aria-hidden="true" />
+// //                         {errors.subject}
+// //                       </p>
+// //                     )}
+// //                   </div>
+
+// //                   {/* Message Textarea */}
+// //                   <FormInput
+// //                     label="Message"
+// //                     name="message"
+// //                     value={formData.message}
+// //                     onChange={handleChange}
+// //                     onBlur={handleBlur}
+// //                     placeholder="Tell us about your project or inquiry..."
+// //                     required
+// //                     textarea
+// //                     error={touched.message ? errors.message : ""}
+// //                   />
+
+// //                   {/* Privacy Checkbox */}
+// //                   <div className="flex items-start gap-3 pt-2">
+// //                     <input
+// //                       type="checkbox"
+// //                       id="privacy"
+// //                       name="agreedToTerms"
+// //                       checked={formData.agreedToTerms}
+// //                       onChange={handleChange}
+// //                       required
+// //                       className="mt-1 w-5 h-5 rounded cursor-pointer transition-all"
+// //                       style={{ accentColor: BRAND.gold.primary }}
+// //                       aria-describedby={
+// //                         errors.agreedToTerms ? "privacy-error" : undefined
+// //                       }
+// //                     />
+// //                     <label
+// //                       htmlFor="privacy"
+// //                       className="text-sm cursor-pointer leading-relaxed"
+// //                       style={{ color: "#64748B" }}
+// //                     >
+// //                       I agree to the{" "}
+// //                       <a
+// //                         href="#"
+// //                         className="font-semibold underline transition-colors hover:opacity-80"
+// //                         style={{ color: BRAND.gold.primary }}
+// //                       >
+// //                         Privacy Policy
+// //                       </a>{" "}
+// //                       and consent to processing my personal data for contact
+// //                       purposes.
+// //                     </label>
+// //                   </div>
+
+// //                   {errors.agreedToTerms && (
+// //                     <p
+// //                       id="privacy-error"
+// //                       className="flex items-center gap-1.5 text-sm text-red-500"
+// //                       role="alert"
+// //                     >
+// //                       <FaExclamationCircle aria-hidden="true" />
+// //                       {errors.agreedToTerms}
+// //                     </p>
+// //                   )}
+
+// //                   {/* Submit Button */}
+// //                   <button
+// //                     type="submit"
+// //                     disabled={isSubmitting}
+// //                     className="group relative w-full py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:transform-none focus:outline-none focus:ring-2 focus:ring-offset-2 mt-4"
+// //                     style={{
+// //                       background: "#FFF",
+// //                       color: BRAND.navy.dark,
+// //                       boxShadow: `0 8px 30px ${BRAND.gold.primary}35`,
+// //                       "--tw-ring-color": BRAND.gold.primary,
+// //                     }}
+// //                     aria-label={
+// //                       isSubmitting ? "Sending message..." : "Send message"
+// //                     }
+// //                   >
+// //                     <span className="relative z-10 flex items-center justify-center gap-3">
+// //                       {isSubmitting ? (
+// //                         <>
+// //                           <svg
+// //                             className="animate-spin h-5 w-5"
+// //                             xmlns="http://www.w3.org/2000/svg"
+// //                             fill="none"
+// //                             viewBox="0 0 24 24"
+// //                             aria-hidden="true"
+// //                           >
+// //                             <circle
+// //                               className="opacity-25"
+// //                               cx="12"
+// //                               cy="12"
+// //                               r="10"
+// //                               stroke="currentColor"
+// //                               strokeWidth="4"
+// //                             ></circle>
+// //                             <path
+// //                               className="opacity-75"
+// //                               fill="currentColor"
+// //                               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+// //                             ></path>
+// //                           </svg>
+// //                           Sending...
+// //                         </>
+// //                       ) : (
+// //                         <>
+// //                           <FaPaperPlane aria-hidden="true" />
+// //                           Send Message
+// //                           <FaArrowRight
+// //                             className="text-sm group-hover:translate-x-1 transition-transform"
+// //                             aria-hidden="true"
+// //                           />
+// //                         </>
+// //                       )}
+// //                     </span>
+
+// //                     {/* Shine Effect */}
+// //                     {!isSubmitting && (
+// //                       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
+// //                         <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
+// //                       </div>
+// //                     )}
+// //                   </button>
+// //                 </form>
+// //               </motion.div>
+// //             </div>
+// //           </div>
+// //         </Container>
+// //       </section>
+
+// //       {/* Map Section */}
+// //       <section
+// //         className="relative h-96 lg:h-[500px] overflow-hidden"
+// //         aria-label="Office location map"
+// //       >
+// //         <div
+// //           className="absolute inset-0"
+// //           style={{
+// //             background: `linear-gradient(135deg, ${BRAND.navy.lighter} 0%, ${BRAND.navy.mid} 50%, ${BRAND.navy.dark} 100%)`,
+// //           }}
+// //         >
+// //           {/* Map Placeholder Pattern */}
+// //           <div
+// //             className="absolute inset-0 opacity-[0.05]"
+// //             style={{
+// //               backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+// //               backgroundSize: "30px 30px",
+// //             }}
+// //             aria-hidden="true"
+// //           />
+
+// //           {/* Decorative Elements */}
+// //           <motion.div
+// //             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
+// //             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+// //             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-3xl"
+// //             style={{ background: BRAND.gold.primary }}
+// //             aria-hidden="true"
+// //           />
+// //         </div>
+
+// //         <Container className="relative z-10 h-full flex items-center justify-center">
+// //           <motion.div
+// //             initial={{ opacity: 0, y: 20 }}
+// //             whileInView={{ opacity: 1, y: 0 }}
+// //             viewport={{ once: true }}
+// //             className="text-center"
+// //           >
+// //             <motion.div
+// //               animate={{ y: [0, -10, 0] }}
+// //               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+// //               className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-6"
+// //               style={{
+// //                 background: "#FFF",
+// //                 boxShadow: `0 10px 40px ${BRAND.gold.primary}40`,
+// //               }}
+// //             >
+// //               <FaMapMarkerAlt
+// //                 className="text-3xl"
+// //                 style={{ color: BRAND.navy.dark }}
+// //                 aria-hidden="true"
+// //               />
+// //             </motion.div>
+
+// //             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
+// //               Visit Our{" "}
+// //               <span style={{ color: BRAND.gold.primary }}>Office</span>
+// //             </h3>
+
+// //             <p className="text-lg text-gray-300 mb-2">
+// //               {companyData.contact.address.street}
+// //             </p>
+// //             <p className="text-base" style={{ color: "rgba(255,255,255,0.6)" }}>
+// //               {companyData.contact.address.city},{" "}
+// //               {companyData.contact.address.state}{" "}
+// //               {companyData.contact.address.zip}
+// //             </p>
+
+// //             <a
+// //               href={`https://maps.google.com/?q=${encodeURIComponent(
+// //                 `${companyData.contact.address.street}, ${companyData.contact.address.city}, ${companyData.contact.address.state}`,
+// //               )}`}
+// //               target="_blank"
+// //               rel="noopener noreferrer"
+// //               className="inline-flex items-center gap-2 mt-6 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2"
+// //               style={{
+// //                 background: "rgba(255,255,255,0.1)",
+// //                 color: "white",
+// //                 border: "1px solid rgba(255,255,255,0.2)",
+// //                 backdropFilter: "blur(10px)",
+// //                 "--tw-ring-color": BRAND.gold.primary,
+// //               }}
+// //             >
+// //               <FaMapMarkerAlt className="text-sm" aria-hidden="true" />
+// //               Open in Google Maps
+// //               <FaArrowRight className="text-xs" aria-hidden="true" />
+// //             </a>
+// //           </motion.div>
+// //         </Container>
+// //       </section>
+// //     </main>
+// //   );
+// // };
+
+// // export default memo(ContactPage);
+
 // import React, { useState, useCallback, useMemo, memo } from "react";
+// import { Link } from "react-router-dom";
 // import Container from "../components/ui/Container";
 // import { motion } from "framer-motion";
 // import {
@@ -11,15 +999,19 @@
 //   FaArrowRight,
 //   FaCheck,
 //   FaExclamationCircle,
+//   FaBuilding,
+//   FaGlobe,
+//   FaDirections,
 // } from "react-icons/fa";
 // import toast from "react-hot-toast";
-// import bannerImg from "../assets/banners/contact.png";
+// import bannerImg from "../assets/banners/contact1.png";
+// import emailjs from "@emailjs/browser";
 
-// // ==================== BRAND COLORS (Same as Careers) ====================
+// // ==================== BRAND COLORS (Aligned with Guidewire/AppSec) ====================
 // const BRAND = {
 //   navy: {
-//     dark: "#12324f",
-//     mid: "#12324f",
+//     dark: "#0B1D33",
+//     mid: "#0D2847",
 //     light: "#143A63",
 //     lighter: "#1A4570",
 //   },
@@ -32,23 +1024,24 @@
 
 // // ==================== ANIMATION CONFIG ====================
 // const ANIMATION_CONFIG = {
-//   stagger: 0.15,
+//   stagger: 0.12,
 //   duration: 0.6,
+//   spring: { type: "spring", stiffness: 300, damping: 25 },
 // };
 
 // // ==================== DATA ====================
 // const companyData = {
 //   contact: {
 //     address: {
-//       street: "123 Innovation Drive, Suite 500",
+//       // street: "123 Innovation Drive, Suite 500",
 //       city: "Redmond",
-//       state: "WA",
+//       state: "Washington",
 //       zip: "USA",
 //       country: "United States",
 //     },
-//     email: "contact@innoviseit.com",
-//     phone: "+1 (555) 234-5678",
-//     hours: "Mon - Fri: 9:00 AM - 6:00 PM PST",
+//     email: "contact@innovise-it.com",
+//     phone: "+1 (425) 518-5442",
+//     hours: "Monday – Friday | 9:00 AM – 5:00 PM PST",
 //   },
 // };
 
@@ -60,9 +1053,11 @@
 
 //   const handleChange = useCallback(
 //     (e) => {
-//       const { name, value } = e.target;
-//       setFormData((prev) => ({ ...prev, [name]: value }));
-//       // Clear error on change
+//       const { name, value, type, checked } = e.target;
+//       setFormData((prev) => ({
+//         ...prev,
+//         [name]: type === "checkbox" ? checked : value,
+//       }));
 //       if (errors[name]) {
 //         setErrors((prev) => ({ ...prev, [name]: "" }));
 //       }
@@ -74,7 +1069,6 @@
 //     const { name, value } = e.target;
 //     setTouched((prev) => ({ ...prev, [name]: true }));
 
-//     // Validate on blur
 //     let error = "";
 //     if (
 //       name === "email" &&
@@ -90,7 +1084,6 @@
 //     ) {
 //       error = "Must be at least 2 characters";
 //     }
-
 //     if (error) {
 //       setErrors((prev) => ({ ...prev, [name]: error }));
 //     }
@@ -102,50 +1095,70 @@
 //     setTouched({});
 //   }, [initialState]);
 
-//   return {
-//     formData,
-//     errors,
-//     touched,
-//     handleChange,
-//     handleBlur,
-//     resetForm,
-//     setFormData,
-//   };
+//   return { formData, errors, touched, handleChange, handleBlur, resetForm };
 // };
 
 // // ==================== MEMOIZED COMPONENTS ====================
 
 // // Hero Section
 // const HeroSection = memo(() => (
-//   <section className="relative h-[70vh] overflow-hidden">
-//     {/* Background Image */}
+//   <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
 //     <img
-//       src={bannerImg} // your uploaded image
-//       alt="Innovise Think"
+//       src={bannerImg}
+//       alt="Innovise Contact"
 //       className="absolute inset-0 w-full h-full object-cover"
 //     />
+//     <div
+//       className="absolute inset-0"
+//       style={{
+//         background: `linear-gradient(90deg, ${BRAND.navy.dark}E6 0%, ${BRAND.navy.mid}B3 50%, ${BRAND.navy.mid}66 100%)`,
+//       }}
+//     />
+//     <div
+//       className="absolute inset-0 opacity-[0.04]"
+//       style={{
+//         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+//         backgroundSize: "32px 32px",
+//       }}
+//     />
 
-//     {/* Optional Dark Overlay (for better text visibility) */}
-//     <div className="absolute inset-0 bg-gradient-to-r from-[#0A0F2C]/90 via-[#0A0F2C]/60 to-transparent" />
-
-//     {/* LEFT SIDE TEXT */}
 //     <div className="relative z-10 h-full flex items-center">
-//       <div className="max-w-2xl px-6 md:px-12 lg:px-20">
-//         {/* Small Label */}
-//         <p className="text-sm uppercase tracking-widest text-yellow-400 mb-4">
-//           Let's Connect
-//         </p>
+//       <div className="max-w-3xl px-6 md:px-12 lg:px-20">
+//         <motion.div
+//           initial={{ opacity: 0, y: 30 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.8 }}
+//         >
+//           <div className="inline-flex items-center gap-3 mb-6">
+//             <div
+//               className="w-10 h-10 rounded-lg flex items-center justify-center"
+//               style={{
+//                 background: `${BRAND.gold.primary}15`,
+//                 border: `1px solid ${BRAND.gold.primary}30`,
+//               }}
+//             >
+//               <FaHeadset
+//                 className="text-lg"
+//                 style={{ color: BRAND.gold.primary }}
+//               />
+//             </div>
+//             <span
+//               className="text-sm font-bold uppercase tracking-[0.2em]"
+//               style={{ color: BRAND.gold.primary }}
+//             >
+//               Let's Connect
+//             </span>
+//           </div>
 
-//         {/* Main Heading */}
-//         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-//           Get in Touch
-//         </h1>
+//           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
+//             Get in Touch, We're Here to Help
+//           </h1>
 
-//         {/* Subtitle */}
-//         <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-//           Ready to start your transformation journey? Our team of experts is
-//           here to help you find the perfect solution for your business needs.
-//         </p>
+//           <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
+//             Ready to start your transformation journey? Our team of experts is
+//             here to help you find the perfect solution for your business needs.
+//           </p>
+//         </motion.div>
 //       </div>
 //     </div>
 //   </section>
@@ -153,176 +1166,67 @@
 
 // HeroSection.displayName = "HeroSection";
 
-// // Contact Info Card Component
+// // Contact Info Card Component (Premium Glassmorphism)
 // const ContactInfoCard = memo(({ info, index }) => (
 //   <motion.div
-//     initial={{ opacity: 0, y: 30 }}
-//     whileInView={{ opacity: 1, y: 0 }}
+//     initial={{ opacity: 0, x: -30 }}
+//     whileInView={{ opacity: 1, x: 0 }}
 //     viewport={{ once: true }}
 //     transition={{
 //       delay: index * ANIMATION_CONFIG.stagger,
 //       duration: ANIMATION_CONFIG.duration,
+//       ...ANIMATION_CONFIG.spring,
 //     }}
-//     whileHover={{ y: -5, scale: 1.02 }}
-//     className="group relative rounded-2xl overflow-hidden transition-all duration-500 cursor-default focus-within:ring-2 focus-within:ring-offset-2"
+//     whileHover={{ x: 5 }}
+//     className="group relative rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
 //     style={{
-//       background: "white",
-//       border: "1px solid rgba(0,0,0,0.06)",
-//       boxShadow: "0 4px 20px rgba(0,0,0,0.04)",
-//       "--tw-ring-color": BRAND.gold.primary,
+//       background: "rgba(255,255,255,0.04)",
+//       border: "1px solid rgba(255,255,255,0.08)",
 //     }}
-//     onMouseEnter={(e) => {
-//       e.currentTarget.style.borderColor = `${BRAND.gold.primary}40`;
-//       e.currentTarget.style.boxShadow = `0 20px 40px ${BRAND.gold.primary}15`;
-//     }}
-//     onMouseLeave={(e) => {
-//       e.currentTarget.style.borderColor = "rgba(0,0,0,0.06)";
-//       e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.04)";
-//     }}
-//     tabIndex={0}
-//     role="article"
-//     aria-labelledby={`contact-title-${index}`}
 //   >
-//     <div className="p-6 lg:p-8">
-//       <div className="flex items-start gap-4">
-//         {/* Icon Container */}
-//         <div
-//           className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
-//           style={{
-//             background: `${BRAND.gold.primary}10`,
-//             border: `1px solid ${BRAND.gold.primary}25`,
-//           }}
-//         >
-//           <info.icon
-//             className="text-xl transition-colors duration-300"
+//     <div className="p-5 flex items-start gap-4">
+//       <div
+//         className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-500 group-hover:scale-110"
+//         style={{
+//           background: "#FFF",
+//           border: "1px solid rgba(253,185,19,0.25)",
+//         }}
+//       >
+//         <info.icon className="text-lg" style={{ color: BRAND.navy.dark }} />
+//       </div>
+
+//       <div className="flex-grow min-w-0">
+//         <h4 className="font-bold text-base mb-1 text-white">{info.title}</h4>
+//         <div className="space-y-0.5">
+//           {info.details.map((detail, idx) => (
+//             <p key={idx} className="text-sm leading-relaxed text-white/60">
+//               {detail}
+//             </p>
+//           ))}
+//         </div>
+
+//         {info.action && (
+//           <a
+//             href={info.action.href}
+//             className="inline-flex items-center gap-2 mt-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 group/link hover:gap-3"
 //             style={{ color: BRAND.gold.primary }}
-//             aria-hidden="true"
-//           />
-//         </div>
-
-//         {/* Content */}
-//         <div className="flex-grow min-w-0">
-//           <h4
-//             id={`contact-title-${index}`}
-//             className="font-bold text-lg mb-3 transition-colors"
-//             style={{ color: BRAND.navy.dark }}
 //           >
-//             {info.title}
-//           </h4>
-
-//           <div className="space-y-1">
-//             {info.details.map((detail, idx) => (
-//               <p
-//                 key={idx}
-//                 className="text-sm leading-relaxed"
-//                 style={{ color: "#64748B" }}
-//               >
-//                 {detail}
-//               </p>
-//             ))}
-//           </div>
-
-//           {info.action && (
-//             <a
-//               href={info.action.href}
-//               className="inline-flex items-center gap-2 mt-4 text-sm font-bold uppercase tracking-wider transition-all duration-300 group/link hover:gap-3"
-//               style={{ color: BRAND.gold.primary }}
-//               aria-label={info.action.label}
-//             >
-//               {info.action.label}
-//               <FaArrowRight
-//                 className="text-xs transition-transform duration-300 group-hover/link:translate-x-1"
-//                 aria-hidden="true"
-//               />
-//             </a>
-//           )}
-//         </div>
+//             {info.action.label}
+//             <FaArrowRight className="text-[10px] transition-transform duration-300 group-hover/link:translate-x-1" />
+//           </a>
+//         )}
 //       </div>
 //     </div>
 
-//     {/* Corner Glow Effect */}
+//     {/* Hover Glow */}
 //     <div
-//       className="absolute bottom-0 right-0 w-24 h-24 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-//       style={{ background: BRAND.gold.primary }}
+//       className="absolute top-0 right-0 w-24 h-24 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
 //       aria-hidden="true"
 //     />
 //   </motion.div>
 // ));
 
 // ContactInfoCard.displayName = "ContactInfoCard";
-
-// // Support Card Component
-// const SupportCard = memo(() => (
-//   <motion.div
-//     initial={{ opacity: 0, y: 30 }}
-//     whileInView={{ opacity: 1, y: 0 }}
-//     viewport={{ once: true }}
-//     transition={{ delay: 0.5, duration: ANIMATION_CONFIG.duration }}
-//     className="relative rounded-2xl overflow-hidden"
-//     style={{
-//       background: `linear-gradient(135deg, ${BRAND.navy.dark}, ${BRAND.navy.lighter})`,
-//       border: `1px solid ${BRAND.gold.primary}20`,
-//     }}
-//   >
-//     <div className="p-6 lg:p-8 relative z-10">
-//       <div className="flex items-start gap-4">
-//         <div
-//           className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
-//           style={{ background: "#FFF" }}
-//         >
-//           <FaHeadset
-//             className="text-2xl"
-//             style={{ color: BRAND.navy.dark }}
-//             aria-hidden="true"
-//           />
-//         </div>
-
-//         <div className="flex-grow">
-//           <h4 className="font-bold text-lg mb-2 text-white">
-//             Need Immediate Assistance?
-//           </h4>
-//           <p
-//             className="text-sm mb-4"
-//             style={{ color: "rgba(255,255,255,0.7)" }}
-//           >
-//             Our support team is available 24/7 for existing clients.
-//           </p>
-
-//           <a
-//             href={`tel:${companyData.contact.phone.replace(/\s/g, "")}`}
-//             className="group/btn inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2"
-//             style={{
-//               background: "#FFF",
-//               color: BRAND.navy.dark,
-//               boxShadow: `0 4px 15px ${BRAND.gold.primary}35`,
-//               "--tw-ring-color": BRAND.gold.primary,
-//               "--tw-ring-offset-color": BRAND.navy.dark,
-//             }}
-//           >
-//             <FaPhone className="text-xs" aria-hidden="true" />
-//             Emergency Support Line
-//             <FaArrowRight
-//               className="text-xs group-hover/btn:translate-x-1 transition-transform"
-//               aria-hidden="true"
-//             />
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-
-//     {/* Background Pattern */}
-//     <div
-//       className="absolute inset-0 opacity-[0.03]"
-//       style={{
-//         backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-//         backgroundSize: "30px 30px",
-//       }}
-//       aria-hidden="true"
-//     />
-//   </motion.div>
-// ));
-
-// SupportCard.displayName = "SupportCard";
 
 // // Input Field Component
 // const FormInput = memo(
@@ -340,18 +1244,18 @@
 //     textarea = false,
 //   }) => {
 //     const baseClasses =
-//       "w-full px-4 py-3.5 rounded-xl border transition-all duration-300 focus:outline-none focus:ring-2";
+//       "w-full px-4 py-3.5 rounded-xl border transition-all duration-300 focus:outline-none focus:ring-2 text-sm";
 //     const stateClasses = error
 //       ? "border-red-400 focus:border-red-500 focus:ring-red-200 bg-red-50/30"
-//       : "border-gray-200 focus:border-yellow-400 bg-gray-50 focus:bg-white focus:ring-yellow-200";
+//       : "border-gray-200 focus:border-[#FFF] bg-gray-50/50 focus:bg-white focus:ring-[#FFF]/20";
 
 //     const Component = textarea ? "textarea" : "input";
 
 //     return (
-//       <div className="space-y-2">
+//       <div className="space-y-1.5">
 //         <label
 //           htmlFor={name}
-//           className="block text-sm font-semibold transition-colors"
+//           className="block text-xs font-bold uppercase tracking-wider"
 //           style={{ color: BRAND.navy.dark }}
 //         >
 //           {label} {required && <span className="text-red-500">*</span>}
@@ -362,7 +1266,6 @@
 //             <Icon
 //               className="absolute left-4 top-1/2 -translate-y-1/2 text-sm transition-colors pointer-events-none"
 //               style={{ color: error ? "#EF4444" : "#94A3B8" }}
-//               aria-hidden="true"
 //             />
 //           )}
 
@@ -375,8 +1278,6 @@
 //             onBlur={onBlur}
 //             placeholder={placeholder}
 //             required={required}
-//             aria-invalid={!!error}
-//             aria-describedby={error ? `${name}-error` : undefined}
 //             className={`${baseClasses} ${stateClasses} ${Icon ? "pl-11" : ""} ${
 //               textarea ? "resize-none" : ""
 //             }`}
@@ -385,12 +1286,8 @@
 //         </div>
 
 //         {error && (
-//           <p
-//             id={`${name}-error`}
-//             className="flex items-center gap-1.5 text-sm text-red-500"
-//             role="alert"
-//           >
-//             <FaExclamationCircle className="flex-shrink-0" aria-hidden="true" />
+//           <p className="flex items-center gap-1.5 text-xs text-red-500 mt-1">
+//             <FaExclamationCircle className="flex-shrink-0" />
 //             {error}
 //           </p>
 //         )}
@@ -403,7 +1300,6 @@
 
 // // Main Contact Page Component
 // const ContactPage = () => {
-//   // Form State
 //   const initialFormData = useMemo(
 //     () => ({
 //       firstName: "",
@@ -422,7 +1318,6 @@
 //     useFormState(initialFormData);
 //   const [isSubmitting, setIsSubmitting] = useState(false);
 
-//   // Contact Info Data
 //   const contactInfo = useMemo(
 //     () => [
 //       {
@@ -430,8 +1325,7 @@
 //         title: "Visit Our Office",
 //         details: [
 //           companyData.contact.address.street,
-//           `${companyData.contact.address.city}, ${companyData.contact.address.state} ${companyData.contact.address.zip}`,
-//           companyData.contact.address.country,
+//           `${companyData.contact.address.city}, ${companyData.contact.address.state}, ${companyData.contact.address.zip}`,
 //         ],
 //         action: null,
 //       },
@@ -463,167 +1357,263 @@
 //     [],
 //   );
 
-//   // Subject Options
 //   const subjectOptions = useMemo(
 //     () => [
 //       { value: "", label: "Select a topic..." },
-
-//       { value: "sap-consulting", label: "SAP Consulting & Implementation" },
-
-//       { value: "guidewire-services", label: "Guidewire Services" },
-
-//       { value: "ai-engineering", label: "AI & Engineering Services" },
-
-//       {
-//         value: "cloud-transformation",
-//         label: "Cloud & Digital Transformation",
-//       },
-
-//       {
-//         value: "integration-services",
-//         label: "Enterprise Integration Services",
-//       },
-
-//       {
-//         value: "application-management",
-//         label: "Application Management Services",
-//       },
-
-//       { value: "data-migration", label: "Data Migration & Transformation" },
-
-//       { value: "staff-augmentation", label: "Staff Augmentation" },
-
+//       { value: "sap", label: "SAP Consulting & Implementation" },
+//       { value: "guidewire", label: "Guidewire Services" },
+//       { value: "ai", label: "AI & Engineering Services" },
+//       { value: "cloud", label: "Cloud & Digital Transformation" },
+//       { value: "integration", label: "Enterprise Integration Services" },
+//       { value: "ams", label: "Application Management Services" },
 //       { value: "partnership", label: "Partnership Inquiry" },
-
 //       { value: "support", label: "Technical Support" },
-
 //       { value: "other", label: "Other" },
 //     ],
 //     [],
 //   );
 
-//   // Form Submission Handler
+//   //   const handleSubmit = async (e) => {
+//   //     e.preventDefault();
+
+//   //     const newErrors = {};
+//   //     if (!formData.firstName?.trim())
+//   //       newErrors.firstName = "First name is required";
+//   //     if (!formData.lastName?.trim())
+//   //       newErrors.lastName = "Last name is required";
+//   //     if (!formData.email?.trim()) newErrors.email = "Email is required";
+//   //     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+//   //       newErrors.email = "Invalid email format";
+//   //     if (!formData.subject) newErrors.subject = "Please select a subject";
+//   //     if (!formData.message?.trim()) newErrors.message = "Message is required";
+//   //     if (!formData.agreedToTerms)
+//   //       newErrors.agreedToTerms = "You must agree to the privacy policy";
+
+//   //     if (Object.keys(newErrors).length > 0) {
+//   //       toast.error("Please fix the errors in the form");
+//   //       return;
+//   //     }
+
+//   //     setIsSubmitting(true);
+
+//   //     try {
+//   //   const templateParams = {
+//   //     first_name: formData.firstName,
+//   //     last_name: formData.lastName,
+//   //     email: formData.email,
+//   //     phone: formData.phone,
+//   //     company: formData.company,
+//   //     subject: formData.subject,
+//   //     message: formData.message,
+//   //   };
+
+//   //   await emailjs.send(
+//   //     import.meta.env.VITE_EMAILJS_SERVICE_ID,
+//   //     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+//   //     templateParams,
+//   //     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+//   //   );
+
+//   //   toast.success(
+//   //     "Message sent successfully! We'll respond within 24 hours.",
+//   //     {
+//   //       duration: 5000,
+//   //       style: {
+//   //         background: BRAND.navy.dark,
+//   //         color: "#fff",
+//   //         border: `1px solid ${BRAND.gold.primary}`,
+//   //       },
+//   //       iconTheme: {
+//   //         primary: BRAND.gold.primary,
+//   //         secondary: BRAND.navy.dark,
+//   //       },
+//   //     }
+//   //   );
+
+//   //   resetForm();
+//   // } catch (error) {
+//   //   console.error("EmailJS Error:", error);
+
+//   //   toast.error(
+//   //     "Failed to send message. Please try again."
+//   //   );
+//   //     } finally {
+//   //       setIsSubmitting(false);
+//   //     }
+//   //   };
+
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 
-//     // Validate required fields
 //     const newErrors = {};
-//     if (!formData.firstName?.trim())
-//       newErrors.firstName = "First name is required";
-//     if (!formData.lastName?.trim())
-//       newErrors.lastName = "Last name is required";
-//     if (!formData.email?.trim()) newErrors.email = "Email is required";
-//     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
-//       newErrors.email = "Invalid email format";
-//     if (!formData.subject) newErrors.subject = "Please select a subject";
-//     if (!formData.message?.trim()) newErrors.message = "Message is required";
-//     if (!formData.agreedToTerms)
-//       newErrors.agreedToTerms = "You must agree to the privacy policy";
+
+//     if (!formData.firstName?.trim()) {
+//       newErrors.firstName = "First Name is required";
+//     }
+
+//     if (!formData.lastName?.trim()) {
+//       newErrors.lastName = "Last Name is required";
+//     }
+
+//     if (!formData.email?.trim()) {
+//       newErrors.email = "Email Address is required";
+//     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+//       newErrors.email = "Please enter a valid email address";
+//     }
+
+//     if (!formData.subject) {
+//       newErrors.subject = "Please select a subject";
+//     }
+
+//     if (!formData.message?.trim()) {
+//       newErrors.message = "Message is required";
+//     }
+
+//     if (!formData.agreedToTerms) {
+//       newErrors.agreedToTerms = "Please accept the privacy policy";
+//     }
 
 //     if (Object.keys(newErrors).length > 0) {
-//       toast.error("Please fix the errors in the form");
+//       toast.error("Please fill all required fields");
 //       return;
 //     }
 
 //     setIsSubmitting(true);
 
 //     try {
-//       // Simulate API call
-//       await new Promise((resolve) => setTimeout(resolve, 1500));
+//       // 1. Find the readable label of the selected subject (e.g., "SAP Consulting" instead of "sap")
+//       const selectedOption = subjectOptions.find(
+//         (opt) => opt.value === formData.subject,
+//       );
+//       const subjectLabel = selectedOption
+//         ? selectedOption.label
+//         : formData.subject;
+
+//       // 2. Combine First and Last name for the {{name}} variable
+//       const fullName = `${formData.firstName} ${formData.lastName}`;
+
+//       const templateParams = {
+//         name: fullName, // Matches {{name}} in From Name
+//         first_name: formData.firstName,
+//         last_name: formData.lastName,
+//         email: formData.email,
+//         phone: formData.phone,
+//         company: formData.company || "N/A", // Fallback if they leave company blank
+//         subject: subjectLabel, // Sends the readable label to the {{subject}} variable
+//         message: formData.message,
+//       };
+
+//       await emailjs.send(
+//         import.meta.env.VITE_EMAILJS_SERVICE_ID,
+//         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+//         templateParams,
+//         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+//       );
 
 //       toast.success(
 //         "Message sent successfully! We'll respond within 24 hours.",
-//         {
-//           icon: "",
-//           duration: 5000,
-//           style: {
-//             background: BRAND.navy.dark,
-//             color: "#fff",
-//             border: `1px solid ${BRAND.gold.primary}`,
-//           },
-//           iconTheme: {
-//             primary: BRAND.gold.primary,
-//             secondary: BRAND.navy.dark,
-//           },
-//         },
 //       );
 
 //       resetForm();
 //     } catch (error) {
-//       toast.error("Something went wrong. Please try again.");
+//       console.error("EmailJS Error:", error);
+//       toast.error("Failed to send message. Please try again.");
 //     } finally {
 //       setIsSubmitting(false);
 //     }
 //   };
 
+//   // Construct map address query
+//   const mapQuery = encodeURIComponent(
+//     `${companyData.contact.address.street}, ${companyData.contact.address.city}, ${companyData.contact.address.state} ${companyData.contact.address.zip}`,
+//   );
+
 //   return (
 //     <main role="main">
-//       {/* Hero Section */}
 //       <HeroSection />
 
 //       {/* Main Contact Content */}
 //       <section
-//         className="py-24 bg-white relative overflow-hidden"
-//         aria-label="Contact information and form"
+//         className="py-6 lg:py-12 bg-white relative overflow-hidden"
+//         aria-label="Contact form"
 //       >
-//         {/* Background Decoration */}
 //         <div
-//           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl opacity-[0.04] -translate-y-1/2 translate-x-1/2"
+//           className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full blur-3xl opacity-[0.03] -translate-y-1/3 translate-x-1/3"
 //           style={{ background: BRAND.navy.lighter }}
-//           aria-hidden="true"
 //         />
 
 //         <Container>
-//           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-//             {/* Left Column - Contact Information */}
-//             <div className="lg:col-span-2 space-y-6">
+//           <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+//             {/* Left Column - Contact Information (Premium Navy Card) */}
+//             <div className="lg:col-span-2">
 //               <motion.div
-//                 initial={{ opacity: 0, y: 20 }}
+//                 initial={{ opacity: 0, y: 30 }}
 //                 whileInView={{ opacity: 1, y: 0 }}
 //                 viewport={{ once: true }}
+//                 className="relative rounded-3xl overflow-hidden p-8 lg:p-10 bg-primary-800"
 //               >
-//                 <span
-//                   className="inline-block px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-4"
+//                 {/* Grid Pattern Overlay */}
+//                 {/* <div
+//                   className="absolute inset-0 opacity-[0.04]"
 //                   style={{
-//                     background: `${BRAND.navy.mid}08`,
-//                     color: BRAND.navy.dark,
-//                     border: `1px solid ${BRAND.navy.mid}15`,
+//                     backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+//                     backgroundSize: "24px 24px",
 //                   }}
-//                 >
-//                   Contact Info
-//                 </span>
+//                 /> */}
 
-//                 <h2
-//                   className="text-3xl md:text-4xl font-bold mb-4"
-//                   style={{ color: BRAND.navy.dark }}
-//                 >
-//                   Get in{" "}
-//                   <span style={{ color: BRAND.gold.primary }}>Touch</span>
-//                 </h2>
+//                 <div className="relative z-10">
+//                   <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
+//                     Contact Information
+//                   </h2>
+//                   <p className="text-sm text-white/60 mb-8">
+//                     Reach out through any channel, or fill out the form to get a
+//                     prompt response.
+//                   </p>
 
-//                 <p
-//                   className="text-base leading-relaxed mb-8"
-//                   style={{ color: "#64748B" }}
-//                 >
-//                   Whether you have a question about our services, need technical
-//                   support, or want to explore partnership opportunities—we're
-//                   here to help.
-//                 </p>
+//                   <div className="space-y-4">
+//                     {contactInfo.map((info, index) => (
+//                       <ContactInfoCard key={index} info={info} index={index} />
+//                     ))}
+//                   </div>
+
+//                   {/* Support CTA */}
+//                   <div
+//                     className="mt-8 p-5 rounded-2xl"
+//                     style={{
+//                       background: "rgba(255,255,255,0.04)",
+//                       border: "1px solid rgba(253,185,19,0.2)",
+//                     }}
+//                   >
+//                     <div className="flex items-start gap-4">
+//                       <div
+//                         className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+//                         style={{ background: "#FFF" }}
+//                       >
+//                         <FaHeadset
+//                           className="text-xl"
+//                           style={{ color: BRAND.navy.dark }}
+//                         />
+//                       </div>
+//                       <div>
+//                         <h4 className="font-bold text-base mb-1 text-white">
+//                           Emergency Support
+//                         </h4>
+//                         <p className="text-xs text-white/50 mb-3">
+//                           Existing clients requiring immediate technical
+//                           assistance.
+//                         </p>
+//                         <a
+//                           href={`tel:${companyData.contact.phone.replace(/\s/g, "")}`}
+//                           className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider"
+//                           style={{ color: BRAND.gold.primary }}
+//                         >
+//                           Priority Line <FaArrowRight className="text-[9px]" />
+//                         </a>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
 //               </motion.div>
-
-//               {/* Contact Cards */}
-//               <div
-//                 className="space-y-5"
-//                 role="list"
-//                 aria-label="Contact methods"
-//               >
-//                 {contactInfo.map((info, index) => (
-//                   <ContactInfoCard key={index} info={info} index={index} />
-//                 ))}
-//               </div>
-
-//               {/* Support CTA Card */}
-//               <SupportCard />
 //             </div>
 
 //             {/* Right Column - Contact Form */}
@@ -633,349 +1623,308 @@
 //                 whileInView={{ opacity: 1, y: 0 }}
 //                 viewport={{ once: true }}
 //                 transition={{ delay: 0.2 }}
-//                 className="rounded-3xl overflow-hidden shadow-2xl relative"
-//                 style={{
-//                   border: `1px solid rgba(0,0,0,0.06)`,
-//                   background: "white",
-//                 }}
+//                 className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100"
 //               >
-//                 {/* Form Header */}
-//                 <div className="relative p-8 lg:p-10 pb-0">
+//                 <div className="p-8 lg:p-10">
 //                   <div className="mb-8">
 //                     <h3
-//                       className="text-2xl lg:text-3xl font-bold mb-3"
+//                       className="text-2xl lg:text-3xl font-bold mb-2"
 //                       style={{ color: BRAND.navy.dark }}
 //                     >
 //                       Send us a{" "}
 //                       <span style={{ color: BRAND.gold.primary }}>Message</span>
 //                     </h3>
-//                     <p className="text-base" style={{ color: "#64748B" }}>
-//                       Fill out the form below and we'll get back to you within
-//                       24 hours.
+//                     <p className="text-sm text-gray-500">
+//                       Fill out the form below and our team will get back to you
+//                       within 24 business hours.
 //                     </p>
 //                   </div>
-//                 </div>
 
-//                 {/* Form Body */}
-//                 <form
-//                   onSubmit={handleSubmit}
-//                   className="p-8 lg:p-10 pt-0 space-y-6"
-//                   noValidate
-//                 >
-//                   {/* Name Fields */}
-//                   <div className="grid md:grid-cols-2 gap-6">
+//                   <form
+//                     onSubmit={handleSubmit}
+//                     className="space-y-6"
+//                     noValidate
+//                   >
+//                     <div className="grid md:grid-cols-2 gap-5">
+//                       <FormInput
+//                         label="First Name"
+//                         name="firstName"
+//                         value={formData.firstName}
+//                         onChange={handleChange}
+//                         onBlur={handleBlur}
+//                         placeholder="Enter Your First Name"
+//                         required
+//                         error={touched.firstName ? errors.firstName : ""}
+//                       />
+//                       <FormInput
+//                         label="Last Name"
+//                         name="lastName"
+//                         value={formData.lastName}
+//                         onChange={handleChange}
+//                         onBlur={handleBlur}
+//                         placeholder="Enter Your Last Name"
+//                         required
+//                         error={touched.lastName ? errors.lastName : ""}
+//                       />
+//                     </div>
+
+//                     <div className="grid md:grid-cols-2 gap-5">
+//                       <FormInput
+//                         label="Email Address"
+//                         name="email"
+//                         type="email"
+//                         value={formData.email}
+//                         onChange={handleChange}
+//                         onBlur={handleBlur}
+//                         placeholder="Enter Your Email Address"
+//                         required
+//                         icon={FaEnvelope}
+//                         error={touched.email ? errors.email : ""}
+//                       />
+//                       <FormInput
+//                         label="Phone Number"
+//                         name="phone"
+//                         type="tel"
+//                         value={formData.phone}
+//                         onChange={handleChange}
+//                         onBlur={handleBlur}
+//                         placeholder="Enter Your Phone Number"
+//                         icon={FaPhone}
+//                       />
+//                     </div>
+
 //                     <FormInput
-//                       label="First Name"
-//                       name="firstName"
-//                       value={formData.firstName}
+//                       label="Company Name"
+//                       name="company"
+//                       value={formData.company}
 //                       onChange={handleChange}
 //                       onBlur={handleBlur}
-//                       placeholder="John"
-//                       required
-//                       error={touched.firstName ? errors.firstName : ""}
+//                       placeholder="Your Organization"
+//                       icon={FaBuilding}
 //                     />
-//                     <FormInput
-//                       label="Last Name"
-//                       name="lastName"
-//                       value={formData.lastName}
-//                       onChange={handleChange}
-//                       onBlur={handleBlur}
-//                       placeholder="Doe"
-//                       required
-//                       error={touched.lastName ? errors.lastName : ""}
-//                     />
-//                   </div>
 
-//                   {/* Email & Phone */}
-//                   <div className="grid md:grid-cols-2 gap-6">
-//                     <FormInput
-//                       label="Email Address"
-//                       name="email"
-//                       type="email"
-//                       value={formData.email}
-//                       onChange={handleChange}
-//                       onBlur={handleBlur}
-//                       placeholder="john@company.com"
-//                       required
-//                       icon={FaEnvelope}
-//                       error={touched.email ? errors.email : ""}
-//                     />
-//                     <FormInput
-//                       label="Phone Number"
-//                       name="phone"
-//                       type="tel"
-//                       value={formData.phone}
-//                       onChange={handleChange}
-//                       onBlur={handleBlur}
-//                       placeholder="+1 (555) 000-0000"
-//                       icon={FaPhone}
-//                     />
-//                   </div>
-
-//                   {/* Company */}
-//                   <FormInput
-//                     label="Company Name"
-//                     name="company"
-//                     value={formData.company}
-//                     onChange={handleChange}
-//                     onBlur={handleBlur}
-//                     placeholder="Your Company"
-//                   />
-
-//                   {/* Subject Select */}
-//                   <div className="space-y-2">
-//                     <label
-//                       htmlFor="subject"
-//                       className="block text-sm font-semibold"
-//                       style={{ color: BRAND.navy.dark }}
-//                     >
-//                       Subject <span className="text-red-500">*</span>
-//                     </label>
-
-//                     <select
-//                       id="subject"
-//                       name="subject"
-//                       value={formData.subject}
-//                       onChange={handleChange}
-//                       onBlur={handleBlur}
-//                       required
-//                       aria-invalid={!!errors.subject}
-//                       className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 appearance-none cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:border-yellow-400 focus:bg-white focus:ring-yellow-200"
-//                       style={{
-//                         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L2 4l4-4 4 4z' fill='%2394A3B8'/%3E%3C/svg%3E")`,
-//                         backgroundRepeat: "no-repeat",
-//                         backgroundPosition: "right 16px center",
-//                       }}
-//                     >
-//                       {subjectOptions.map((option) => (
-//                         <option key={option.value} value={option.value}>
-//                           {option.label}
-//                         </option>
-//                       ))}
-//                     </select>
-
-//                     {errors.subject && touched.subject && (
-//                       <p
-//                         className="flex items-center gap-1.5 text-sm text-red-500"
-//                         role="alert"
+//                     {/* Subject Select */}
+//                     <div className="space-y-1.5">
+//                       <label
+//                         htmlFor="subject"
+//                         className="block text-xs font-bold uppercase tracking-wider"
+//                         style={{ color: BRAND.navy.dark }}
 //                       >
-//                         <FaExclamationCircle aria-hidden="true" />
-//                         {errors.subject}
+//                         Subject <span className="text-red-500">*</span>
+//                       </label>
+//                       <select
+//                         id="subject"
+//                         name="subject"
+//                         value={formData.subject}
+//                         onChange={handleChange}
+//                         onBlur={handleBlur}
+//                         required
+//                         className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 text-sm text-gray-900 appearance-none cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:border-[#FFF] focus:bg-white focus:ring-[#FFF]/20"
+//                       >
+//                         {subjectOptions.map((option) => (
+//                           <option key={option.value} value={option.value}>
+//                             {option.label}
+//                           </option>
+//                         ))}
+//                       </select>
+//                       {errors.subject && touched.subject && (
+//                         <p className="flex items-center gap-1.5 text-xs text-red-500 mt-1">
+//                           <FaExclamationCircle /> {errors.subject}
+//                         </p>
+//                       )}
+//                     </div>
+
+//                     <FormInput
+//                       label="Message"
+//                       name="message"
+//                       value={formData.message}
+//                       onChange={handleChange}
+//                       onBlur={handleBlur}
+//                       placeholder="Tell us about your project or inquiry..."
+//                       required
+//                       textarea
+//                       error={touched.message ? errors.message : ""}
+//                     />
+
+//                     <div className="flex items-start gap-3 pt-2">
+//                       <input
+//                         type="checkbox"
+//                         id="privacy"
+//                         name="agreedToTerms"
+//                         checked={formData.agreedToTerms}
+//                         onChange={handleChange}
+//                         required
+//                         className="mt-0.5 w-5 h-5 rounded cursor-pointer transition-all"
+//                       />
+//                       <label
+//                         htmlFor="privacy"
+//                         className="text-xs cursor-pointer leading-relaxed text-gray-500"
+//                       >
+//                         I agree to the{" "}
+//                         <Link
+//                           to="/about/privacy-policy"
+//                           className="font-semibold underline hover:text-primary-700 transition-colors"
+//                         >
+//                           Privacy Policy
+//                         </Link>{" "}
+//                         and consent to the processing of my personal data for
+//                         the purpose of responding to my enquiry.
+//                       </label>
+//                     </div>
+//                     {errors.agreedToTerms && (
+//                       <p className="flex items-center gap-1.5 text-xs text-red-500 -mt-2">
+//                         <FaExclamationCircle /> {errors.agreedToTerms}
 //                       </p>
 //                     )}
-//                   </div>
 
-//                   {/* Message Textarea */}
-//                   <FormInput
-//                     label="Message"
-//                     name="message"
-//                     value={formData.message}
-//                     onChange={handleChange}
-//                     onBlur={handleBlur}
-//                     placeholder="Tell us about your project or inquiry..."
-//                     required
-//                     textarea
-//                     error={touched.message ? errors.message : ""}
-//                   />
-
-//                   {/* Privacy Checkbox */}
-//                   <div className="flex items-start gap-3 pt-2">
-//                     <input
-//                       type="checkbox"
-//                       id="privacy"
-//                       name="agreedToTerms"
-//                       checked={formData.agreedToTerms}
-//                       onChange={handleChange}
-//                       required
-//                       className="mt-1 w-5 h-5 rounded cursor-pointer transition-all"
-//                       style={{ accentColor: BRAND.gold.primary }}
-//                       aria-describedby={
-//                         errors.agreedToTerms ? "privacy-error" : undefined
-//                       }
-//                     />
-//                     <label
-//                       htmlFor="privacy"
-//                       className="text-sm cursor-pointer leading-relaxed"
-//                       style={{ color: "#64748B" }}
+//                     <button
+//                       type="submit"
+//                       disabled={isSubmitting}
+//                       className="group relative w-full bg-primary-800 py-4 rounded-xl font-bold text-base overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:transform-none focus:outline-none focus:ring-2 focus:ring-offset-2 mt-4"
+//                       style={{
+//                         color: "#FFF",
+//                         boxShadow: `#FFF`,
+//                       }}
 //                     >
-//                       I agree to the{" "}
-//                       <a
-//                         href="#"
-//                         className="font-semibold underline transition-colors hover:opacity-80"
-//                         style={{ color: BRAND.gold.primary }}
-//                       >
-//                         Privacy Policy
-//                       </a>{" "}
-//                       and consent to processing my personal data for contact
-//                       purposes.
-//                     </label>
-//                   </div>
-
-//                   {errors.agreedToTerms && (
-//                     <p
-//                       id="privacy-error"
-//                       className="flex items-center gap-1.5 text-sm text-red-500"
-//                       role="alert"
-//                     >
-//                       <FaExclamationCircle aria-hidden="true" />
-//                       {errors.agreedToTerms}
-//                     </p>
-//                   )}
-
-//                   {/* Submit Button */}
-//                   <button
-//                     type="submit"
-//                     disabled={isSubmitting}
-//                     className="group relative w-full py-5 rounded-xl font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:transform-none focus:outline-none focus:ring-2 focus:ring-offset-2 mt-4"
-//                     style={{
-//                       background: "#FFF",
-//                       color: BRAND.navy.dark,
-//                       boxShadow: `0 8px 30px ${BRAND.gold.primary}35`,
-//                       "--tw-ring-color": BRAND.gold.primary,
-//                     }}
-//                     aria-label={
-//                       isSubmitting ? "Sending message..." : "Send message"
-//                     }
-//                   >
-//                     <span className="relative z-10 flex items-center justify-center gap-3">
-//                       {isSubmitting ? (
-//                         <>
-//                           <svg
-//                             className="animate-spin h-5 w-5"
-//                             xmlns="http://www.w3.org/2000/svg"
-//                             fill="none"
-//                             viewBox="0 0 24 24"
-//                             aria-hidden="true"
-//                           >
-//                             <circle
-//                               className="opacity-25"
-//                               cx="12"
-//                               cy="12"
-//                               r="10"
-//                               stroke="currentColor"
-//                               strokeWidth="4"
-//                             ></circle>
-//                             <path
-//                               className="opacity-75"
-//                               fill="currentColor"
-//                               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-//                             ></path>
-//                           </svg>
-//                           Sending...
-//                         </>
-//                       ) : (
-//                         <>
-//                           <FaPaperPlane aria-hidden="true" />
-//                           Send Message
-//                           <FaArrowRight
-//                             className="text-sm group-hover:translate-x-1 transition-transform"
-//                             aria-hidden="true"
-//                           />
-//                         </>
+//                       <span className="relative z-10 flex items-center justify-center gap-3">
+//                         {isSubmitting ? (
+//                           <>
+//                             <svg
+//                               className="animate-spin h-5 w-5"
+//                               xmlns="http://www.w3.org/2000/svg"
+//                               fill="none"
+//                               viewBox="0 0 24 24"
+//                             >
+//                               <circle
+//                                 className="opacity-25"
+//                                 cx="12"
+//                                 cy="12"
+//                                 r="10"
+//                                 stroke="currentColor"
+//                                 strokeWidth="4"
+//                               ></circle>
+//                               <path
+//                                 className="opacity-75"
+//                                 fill="currentColor"
+//                                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+//                               ></path>
+//                             </svg>
+//                             Processing...
+//                           </>
+//                         ) : (
+//                           <>
+//                             <FaPaperPlane />
+//                             Send Message
+//                             <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+//                           </>
+//                         )}
+//                       </span>
+//                       {!isSubmitting && (
+//                         <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
+//                           <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
+//                         </div>
 //                       )}
-//                     </span>
-
-//                     {/* Shine Effect */}
-//                     {!isSubmitting && (
-//                       <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
-//                         <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
-//                       </div>
-//                     )}
-//                   </button>
-//                 </form>
+//                     </button>
+//                   </form>
+//                 </div>
 //               </motion.div>
 //             </div>
 //           </div>
 //         </Container>
 //       </section>
 
-//       {/* Map Section */}
+//       {/* Real Map Section */}
 //       <section
-//         className="relative h-96 lg:h-[500px] overflow-hidden"
+//         className="relative h-[500px] lg:h-[600px] overflow-hidden"
 //         aria-label="Office location map"
 //       >
-//         <div
-//           className="absolute inset-0"
+//         {/* Real Embedded Google Map */}
+//         <iframe
+//           title="Innovise Office Location"
+//           src={`https://www.google.com/maps?q=${mapQuery}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+//           className="absolute inset-0 w-full h-full border-0 grayscale contrast-125"
+//           allowFullScreen=""
+//           loading="lazy"
+//           referrerPolicy="no-referrer-when-downgrade"
+//         />
+
+//         {/* Dark Overlay to match brand theme and ensure text readability */}
+//         {/* <div
+//           className="absolute inset-0 pointer-events-none"
 //           style={{
-//             background: `linear-gradient(135deg, ${BRAND.navy.lighter} 0%, ${BRAND.navy.mid} 50%, ${BRAND.navy.dark} 100%)`,
+//             background: `linear-gradient(90deg, ${BRAND.navy.dark}E6 0%, ${BRAND.navy.dark}B3 40%, transparent 100%)`,
 //           }}
-//         >
-//           {/* Map Placeholder Pattern */}
-//           <div
-//             className="absolute inset-0 opacity-[0.05]"
-//             style={{
-//               backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-//               backgroundSize: "30px 30px",
-//             }}
-//             aria-hidden="true"
-//           />
+//         /> */}
 
-//           {/* Decorative Elements */}
+//         {/* Floating Contact Card over Map */}
+//         <Container className="relative z-10 h-full flex items-center">
 //           <motion.div
-//             animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-//             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-//             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full blur-3xl"
-//             style={{ background: BRAND.gold.primary }}
-//             aria-hidden="true"
-//           />
-//         </div>
-
-//         <Container className="relative z-10 h-full flex items-center justify-center">
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
+//             initial={{ opacity: 0, x: -40 }}
+//             whileInView={{ opacity: 1, x: 0 }}
 //             viewport={{ once: true }}
-//             className="text-center"
+//             transition={{ duration: 0.8 }}
+//             className="max-w-md"
 //           >
-//             <motion.div
-//               animate={{ y: [0, -10, 0] }}
-//               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-//               className="inline-flex items-center justify-center w-20 h-20 rounded-2xl mb-6"
-//               style={{
-//                 background: "#FFF",
-//                 boxShadow: `0 10px 40px ${BRAND.gold.primary}40`,
-//               }}
-//             >
-//               <FaMapMarkerAlt
-//                 className="text-3xl"
-//                 style={{ color: BRAND.navy.dark }}
-//                 aria-hidden="true"
-//               />
-//             </motion.div>
+//             <div className="rounded-3xl p-8 lg:p-10 backdrop-blur-xl bg-primary-800">
+//               <motion.div
+//                 animate={{ y: [0, -8, 0] }}
+//                 transition={{
+//                   duration: 3,
+//                   repeat: Infinity,
+//                   ease: "easeInOut",
+//                 }}
+//                 className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+//                 style={{
+//                   background: "#FFF",
+//                   boxShadow: `0 10px 30px ${BRAND.gold.primary}30`,
+//                 }}
+//               >
+//                 <FaMapMarkerAlt
+//                   className="text-2xl"
+//                   style={{ color: BRAND.navy.dark }}
+//                 />
+//               </motion.div>
 
-//             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
-//               Visit Our{" "}
-//               <span style={{ color: BRAND.gold.primary }}>Office</span>
-//             </h3>
+//               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+//                 Visit Our{" "}
+//                 <span style={{ color: BRAND.gold.primary }}>Headquarters</span>
+//               </h3>
 
-//             <p className="text-lg text-gray-300 mb-2">
-//               {companyData.contact.address.street}
-//             </p>
-//             <p className="text-base" style={{ color: "rgba(255,255,255,0.6)" }}>
-//               {companyData.contact.address.city},{" "}
-//               {companyData.contact.address.state}{" "}
-//               {companyData.contact.address.zip}
-//             </p>
+//               <div className="space-y-3 mb-8">
+//                 <div className="flex items-start gap-3">
+//                   <FaBuilding className="text-[#FFF] mt-1 flex-shrink-0" />
+//                   <p className="text-sm text-gray-300 leading-relaxed">
+//                     {/* {companyData.contact.address.street}
+//                     <br /> */}
+//                     {companyData.contact.address.city},{" "}
+//                     {companyData.contact.address.state},{" "}
+//                     {companyData.contact.address.zip}
+//                   </p>
+//                 </div>
+//                 <div className="flex items-center gap-3">
+//                   <FaClock className="text-[#FFF] flex-shrink-0" />
+//                   <p className="text-sm text-gray-300">
+//                     {companyData.contact.hours}
+//                   </p>
+//                 </div>
+//               </div>
 
-//             <a
-//               href={`https://maps.google.com/?q=${encodeURIComponent(
-//                 `${companyData.contact.address.street}, ${companyData.contact.address.city}, ${companyData.contact.address.state}`,
-//               )}`}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="inline-flex items-center gap-2 mt-6 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2"
-//               style={{
-//                 background: "rgba(255,255,255,0.1)",
-//                 color: "white",
-//                 border: "1px solid rgba(255,255,255,0.2)",
-//                 backdropFilter: "blur(10px)",
-//                 "--tw-ring-color": BRAND.gold.primary,
-//               }}
-//             >
-//               <FaMapMarkerAlt className="text-sm" aria-hidden="true" />
-//               Open in Google Maps
-//               <FaArrowRight className="text-xs" aria-hidden="true" />
-//             </a>
+//               <a
+//                 href={`https://www.google.com/maps/dir/?api=1&destination=${mapQuery}`}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="group/dir inline-flex items-center gap-3 px-6 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-0.5"
+//                 style={{
+//                   background: "#FFF",
+//                   color: BRAND.navy.dark,
+//                   boxShadow: `0 8px 25px ${BRAND.gold.primary}30`,
+//                 }}
+//               >
+//                 <FaDirections />
+//                 Get Directions
+//                 <FaArrowRight className="text-xs group-hover/dir:translate-x-1 transition-transform" />
+//               </a>
+//             </div>
 //           </motion.div>
 //         </Container>
 //       </section>
@@ -987,7 +1936,6 @@
 
 import React, { useState, useCallback, useMemo, memo } from "react";
 import { Link } from "react-router-dom";
-import Container from "../components/ui/Container";
 import { motion } from "framer-motion";
 import {
   FaMapMarkerAlt,
@@ -997,47 +1945,33 @@ import {
   FaPaperPlane,
   FaHeadset,
   FaArrowRight,
-  FaCheck,
   FaExclamationCircle,
   FaBuilding,
-  FaGlobe,
   FaDirections,
+  FaChevronDown,
 } from "react-icons/fa";
 import toast from "react-hot-toast";
-import bannerImg from "../assets/banners/contact1.png";
 import emailjs from "@emailjs/browser";
+import Container from "../components/ui/Container";
+import bannerImg from "../assets/banners/contact1.png";
 
-// ==================== BRAND COLORS (Aligned with Guidewire/AppSec) ====================
-const BRAND = {
-  navy: {
-    dark: "#0B1D33",
-    mid: "#0D2847",
-    light: "#143A63",
-    lighter: "#1A4570",
-  },
-  gold: {
-    primary: "#FFF",
-    light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
-  },
-};
+/*
+  Brand palette (from the Innovise logo) — see index.css
+  navy    #0b1849  -> primary-900  (dark panels, headings)
+  blue    #013dfb  -> primary-500  (buttons, links, focus)
+  aqua    #0cf0d1  -> accent-400   (highlights on navy only)
+  white   #ffffff
+  Solid colors only. Red is kept for form errors so they stay recognizable.
+*/
 
-// ==================== ANIMATION CONFIG ====================
-const ANIMATION_CONFIG = {
-  stagger: 0.12,
-  duration: 0.6,
-  spring: { type: "spring", stiffness: 300, damping: 25 },
-};
-
-// ==================== DATA ====================
+/* ============ DATA ============ */
 const companyData = {
   contact: {
     address: {
-      // street: "123 Innovation Drive, Suite 500",
+      street: "",
       city: "Redmond",
       state: "Washington",
-      zip: "USA",
-      country: "United States",
+      country: "USA",
     },
     email: "contact@innovise-it.com",
     phone: "+1 (425) 518-5442",
@@ -1045,190 +1979,194 @@ const companyData = {
   },
 };
 
-// ==================== CUSTOM HOOKS ====================
+const { address } = companyData.contact;
+/* One readable line, skipping any part that is empty */
+const addressLine = [address.city, address.state, address.country]
+  .filter(Boolean)
+  .join(", ");
+const mapQuery = encodeURIComponent(
+  [address.street, addressLine].filter(Boolean).join(", "),
+);
+const phoneHref = `tel:${companyData.contact.phone.replace(/[^\d+]/g, "")}`;
+
+const contactInfo = [
+  {
+    icon: FaMapMarkerAlt,
+    title: "Visit Our Office",
+    details: [address.street, addressLine].filter(Boolean),
+  },
+  {
+    icon: FaEnvelope,
+    title: "Email Us",
+    details: [companyData.contact.email],
+    action: {
+      label: "Send email",
+      href: `mailto:${companyData.contact.email}`,
+    },
+  },
+  {
+    icon: FaPhone,
+    title: "Call Us",
+    details: [companyData.contact.phone],
+    action: { label: "Call now", href: phoneHref },
+  },
+  {
+    icon: FaClock,
+    title: "Business Hours",
+    details: [companyData.contact.hours],
+  },
+];
+
+const subjectOptions = [
+  { value: "", label: "Select a topic" },
+  { value: "sap", label: "SAP Consulting & Implementation" },
+  { value: "guidewire", label: "Guidewire Services" },
+  { value: "ai", label: "AI & Engineering Services" },
+  { value: "cloud", label: "Cloud & Digital Transformation" },
+  { value: "integration", label: "Enterprise Integration Services" },
+  { value: "ams", label: "Application Management Services" },
+  { value: "partnership", label: "Partnership Inquiry" },
+  { value: "support", label: "Technical Support" },
+  { value: "other", label: "Other" },
+];
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+/* Validate every required field; returns { fieldName: message } */
+const validate = (data) => {
+  const e = {};
+  if (!data.firstName.trim()) e.firstName = "Enter your first name";
+  else if (data.firstName.trim().length < 2)
+    e.firstName = "First name must be at least 2 characters";
+  if (!data.lastName.trim()) e.lastName = "Enter your last name";
+  else if (data.lastName.trim().length < 2)
+    e.lastName = "Last name must be at least 2 characters";
+  if (!data.email.trim()) e.email = "Enter your email address";
+  else if (!EMAIL_RE.test(data.email))
+    e.email = "Enter a valid email address, like name@company.com";
+  if (!data.subject) e.subject = "Choose a topic";
+  if (!data.message.trim()) e.message = "Tell us how we can help";
+  if (!data.agreedToTerms)
+    e.agreedToTerms = "Accept the Privacy Policy to send your message";
+  return e;
+};
+
+/* ============ FORM STATE ============ */
 const useFormState = (initialState) => {
   const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
-  const [touched, setTouched] = useState({});
 
-  const handleChange = useCallback(
-    (e) => {
-      const { name, value, type, checked } = e.target;
-      setFormData((prev) => ({
-        ...prev,
-        [name]: type === "checkbox" ? checked : value,
-      }));
-      if (errors[name]) {
-        setErrors((prev) => ({ ...prev, [name]: "" }));
-      }
-    },
-    [errors],
-  );
-
-  const handleBlur = useCallback((e) => {
-    const { name, value } = e.target;
-    setTouched((prev) => ({ ...prev, [name]: true }));
-
-    let error = "";
-    if (
-      name === "email" &&
-      value &&
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
-    ) {
-      error = "Please enter a valid email address";
-    }
-    if (
-      (name === "firstName" || name === "lastName") &&
-      value &&
-      value.length < 2
-    ) {
-      error = "Must be at least 2 characters";
-    }
-    if (error) {
-      setErrors((prev) => ({ ...prev, [name]: error }));
-    }
+  const handleChange = useCallback((e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+    // clear a field's error as soon as the visitor fixes it
+    setErrors((prev) => (prev[name] ? { ...prev, [name]: "" } : prev));
   }, []);
+
+  /* Check one field when the visitor leaves it, but only if it has a value */
+  const handleBlur = useCallback(
+    (e) => {
+      const { name, value } = e.target;
+      if (!value) return;
+      const fieldError = validate({ ...formData, [name]: value })[name];
+      if (fieldError) setErrors((prev) => ({ ...prev, [name]: fieldError }));
+    },
+    [formData],
+  );
 
   const resetForm = useCallback(() => {
     setFormData(initialState);
     setErrors({});
-    setTouched({});
   }, [initialState]);
 
-  return { formData, errors, touched, handleChange, handleBlur, resetForm };
+  return { formData, errors, setErrors, handleChange, handleBlur, resetForm };
 };
 
-// ==================== MEMOIZED COMPONENTS ====================
-
-// Hero Section
+/* ============ HERO ============ */
 const HeroSection = memo(() => (
-  <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+  <section className="relative h-[70vh] min-h-[500px] overflow-hidden bg-primary-900">
     <img
       src={bannerImg}
-      alt="Innovise Contact"
-      className="absolute inset-0 w-full h-full object-cover"
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 h-full w-full object-cover"
     />
-    <div
-      className="absolute inset-0"
-      style={{
-        background: `linear-gradient(90deg, ${BRAND.navy.dark}E6 0%, ${BRAND.navy.mid}B3 50%, ${BRAND.navy.mid}66 100%)`,
-      }}
-    />
-    <div
-      className="absolute inset-0 opacity-[0.04]"
-      style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-        backgroundSize: "32px 32px",
-      }}
-    />
+    {/* One even navy overlay keeps the photo visible and the text readable */}
+    <div className="absolute inset-0 bg-primary-900/70" />
 
-    <div className="relative z-10 h-full flex items-center">
-      <div className="max-w-3xl px-6 md:px-12 lg:px-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center"
-              style={{
-                background: `${BRAND.gold.primary}15`,
-                border: `1px solid ${BRAND.gold.primary}30`,
-              }}
-            >
-              <FaHeadset
-                className="text-lg"
-                style={{ color: BRAND.gold.primary }}
-              />
-            </div>
-            <span
-              className="text-sm font-bold uppercase tracking-[0.2em]"
-              style={{ color: BRAND.gold.primary }}
-            >
-              Let's Connect
-            </span>
-          </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] mb-6">
-            Get in Touch, We're Here to Help
-          </h1>
-
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
-            Ready to start your transformation journey? Our team of experts is
-            here to help you find the perfect solution for your business needs.
-          </p>
-        </motion.div>
-      </div>
-    </div>
+    <Container className="relative z-10 flex h-full items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl"
+      >
+        <p className="mb-4 flex items-center gap-3 text-sm font-semibold uppercase tracking-widest text-accent-400">
+          <FaHeadset />
+          Let's Connect
+        </p>
+        <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
+          Get in Touch, We're Here to Help
+        </h1>
+        <p className="max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
+          Ready to start your transformation journey? Our team of experts is
+          here to help you find the right solution for your business.
+        </p>
+      </motion.div>
+    </Container>
   </section>
 ));
-
 HeroSection.displayName = "HeroSection";
 
-// Contact Info Card Component (Premium Glassmorphism)
-const ContactInfoCard = memo(({ info, index }) => (
-  <motion.div
-    initial={{ opacity: 0, x: -30 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    transition={{
-      delay: index * ANIMATION_CONFIG.stagger,
-      duration: ANIMATION_CONFIG.duration,
-      ...ANIMATION_CONFIG.spring,
-    }}
-    whileHover={{ x: 5 }}
-    className="group relative rounded-2xl overflow-hidden backdrop-blur-xl transition-all duration-500"
-    style={{
-      background: "rgba(255,255,255,0.04)",
-      border: "1px solid rgba(255,255,255,0.08)",
-    }}
-  >
-    <div className="p-5 flex items-start gap-4">
-      <div
-        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-500 group-hover:scale-110"
-        style={{
-          background: "#FFF",
-          border: "1px solid rgba(253,185,19,0.25)",
-        }}
-      >
-        <info.icon className="text-lg" style={{ color: BRAND.navy.dark }} />
-      </div>
-
-      <div className="flex-grow min-w-0">
-        <h4 className="font-bold text-base mb-1 text-white">{info.title}</h4>
-        <div className="space-y-0.5">
-          {info.details.map((detail, idx) => (
-            <p key={idx} className="text-sm leading-relaxed text-white/60">
-              {detail}
-            </p>
-          ))}
-        </div>
-
-        {info.action && (
-          <a
-            href={info.action.href}
-            className="inline-flex items-center gap-2 mt-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 group/link hover:gap-3"
-            style={{ color: BRAND.gold.primary }}
-          >
-            {info.action.label}
-            <FaArrowRight className="text-[10px] transition-transform duration-300 group-hover/link:translate-x-1" />
-          </a>
-        )}
-      </div>
+/* ============ CONTACT INFO ============ */
+const ContactInfoCard = memo(({ info }) => (
+  <li className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/5 p-5">
+    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent-400 text-lg text-primary-900">
+      <info.icon />
+    </span>
+    <div className="min-w-0">
+      <h3 className="mb-1 text-base font-bold text-white">{info.title}</h3>
+      {info.details.map((d) => (
+        <p key={d} className="text-base leading-relaxed text-white/75">
+          {d}
+        </p>
+      ))}
+      {info.action && (
+        <a
+          href={info.action.href}
+          className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-accent-400 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+        >
+          {info.action.label}
+          <FaArrowRight size={10} />
+        </a>
+      )}
     </div>
-
-    {/* Hover Glow */}
-    <div
-      className="absolute top-0 right-0 w-24 h-24 bg-[#FFF]/10 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-      aria-hidden="true"
-    />
-  </motion.div>
+  </li>
 ));
-
 ContactInfoCard.displayName = "ContactInfoCard";
 
-// Input Field Component
+/* ============ FORM FIELDS ============ */
+const fieldBase =
+  "w-full rounded-lg border bg-white px-4 py-3 text-base text-primary-900 placeholder:text-primary-900/40 transition-colors focus:outline-none focus:ring-2";
+const fieldState = (error) =>
+  error
+    ? "border-red-500 focus:border-red-500 focus:ring-red-200"
+    : "border-primary-200 hover:border-primary-300 focus:border-primary-500 focus:ring-primary-500/20";
+
+const FieldError = ({ id, message }) =>
+  message ? (
+    <p
+      id={id}
+      className="mt-1.5 flex items-center gap-1.5 text-sm text-red-600"
+    >
+      <FaExclamationCircle className="shrink-0" />
+      {message}
+    </p>
+  ) : null;
+
 const FormInput = memo(
   ({
     label,
@@ -1242,63 +2180,57 @@ const FormInput = memo(
     error,
     icon: Icon,
     textarea = false,
+    autoComplete,
   }) => {
-    const baseClasses =
-      "w-full px-4 py-3.5 rounded-xl border transition-all duration-300 focus:outline-none focus:ring-2 text-sm";
-    const stateClasses = error
-      ? "border-red-400 focus:border-red-500 focus:ring-red-200 bg-red-50/30"
-      : "border-gray-200 focus:border-[#FFF] bg-gray-50/50 focus:bg-white focus:ring-[#FFF]/20";
-
     const Component = textarea ? "textarea" : "input";
-
+    const errorId = `${name}-error`;
     return (
-      <div className="space-y-1.5">
+      <div>
         <label
           htmlFor={name}
-          className="block text-xs font-bold uppercase tracking-wider"
-          style={{ color: BRAND.navy.dark }}
+          className="mb-1.5 block text-sm font-semibold text-primary-900"
         >
-          {label} {required && <span className="text-red-500">*</span>}
+          {label}
+          {required ? (
+            <span className="text-red-600" aria-hidden="true">
+              {" "}
+              *
+            </span>
+          ) : (
+            <span className="font-normal text-primary-900/60"> (optional)</span>
+          )}
         </label>
-
         <div className="relative">
           {Icon && (
             <Icon
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-sm transition-colors pointer-events-none"
-              style={{ color: error ? "#EF4444" : "#94A3B8" }}
+              className={`pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-sm ${error ? "text-red-500" : "text-primary-900/40"}`}
+              aria-hidden="true"
             />
           )}
-
           <Component
             id={name}
             name={name}
-            type={type}
+            type={textarea ? undefined : type}
             value={value}
             onChange={onChange}
             onBlur={onBlur}
             placeholder={placeholder}
             required={required}
-            className={`${baseClasses} ${stateClasses} ${Icon ? "pl-11" : ""} ${
-              textarea ? "resize-none" : ""
-            }`}
+            autoComplete={autoComplete}
+            aria-invalid={Boolean(error)}
+            aria-describedby={error ? errorId : undefined}
             rows={textarea ? 5 : undefined}
+            className={`${fieldBase} ${fieldState(error)} ${Icon ? "pl-11" : ""} ${textarea ? "resize-none" : ""}`}
           />
         </div>
-
-        {error && (
-          <p className="flex items-center gap-1.5 text-xs text-red-500 mt-1">
-            <FaExclamationCircle className="flex-shrink-0" />
-            {error}
-          </p>
-        )}
+        <FieldError id={errorId} message={error} />
       </div>
     );
   },
 );
-
 FormInput.displayName = "FormInput";
 
-// Main Contact Page Component
+/* ============ PAGE ============ */
 const ContactPage = () => {
   const initialFormData = useMemo(
     () => ({
@@ -1314,617 +2246,373 @@ const ContactPage = () => {
     [],
   );
 
-  const { formData, errors, touched, handleChange, handleBlur, resetForm } =
+  const { formData, errors, setErrors, handleChange, handleBlur, resetForm } =
     useFormState(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const contactInfo = useMemo(
-    () => [
-      {
-        icon: FaMapMarkerAlt,
-        title: "Visit Our Office",
-        details: [
-          companyData.contact.address.street,
-          `${companyData.contact.address.city}, ${companyData.contact.address.state}, ${companyData.contact.address.zip}`,
-        ],
-        action: null,
-      },
-      {
-        icon: FaEnvelope,
-        title: "Email Us",
-        details: [companyData.contact.email],
-        action: {
-          label: "Send Email",
-          href: `mailto:${companyData.contact.email}`,
-        },
-      },
-      {
-        icon: FaPhone,
-        title: "Call Us",
-        details: [companyData.contact.phone],
-        action: {
-          label: "Call Now",
-          href: `tel:${companyData.contact.phone.replace(/\s/g, "")}`,
-        },
-      },
-      {
-        icon: FaClock,
-        title: "Business Hours",
-        details: [companyData.contact.hours],
-        action: null,
-      },
-    ],
-    [],
-  );
-
-  const subjectOptions = useMemo(
-    () => [
-      { value: "", label: "Select a topic..." },
-      { value: "sap", label: "SAP Consulting & Implementation" },
-      { value: "guidewire", label: "Guidewire Services" },
-      { value: "ai", label: "AI & Engineering Services" },
-      { value: "cloud", label: "Cloud & Digital Transformation" },
-      { value: "integration", label: "Enterprise Integration Services" },
-      { value: "ams", label: "Application Management Services" },
-      { value: "partnership", label: "Partnership Inquiry" },
-      { value: "support", label: "Technical Support" },
-      { value: "other", label: "Other" },
-    ],
-    [],
-  );
-
-  //   const handleSubmit = async (e) => {
-  //     e.preventDefault();
-
-  //     const newErrors = {};
-  //     if (!formData.firstName?.trim())
-  //       newErrors.firstName = "First name is required";
-  //     if (!formData.lastName?.trim())
-  //       newErrors.lastName = "Last name is required";
-  //     if (!formData.email?.trim()) newErrors.email = "Email is required";
-  //     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
-  //       newErrors.email = "Invalid email format";
-  //     if (!formData.subject) newErrors.subject = "Please select a subject";
-  //     if (!formData.message?.trim()) newErrors.message = "Message is required";
-  //     if (!formData.agreedToTerms)
-  //       newErrors.agreedToTerms = "You must agree to the privacy policy";
-
-  //     if (Object.keys(newErrors).length > 0) {
-  //       toast.error("Please fix the errors in the form");
-  //       return;
-  //     }
-
-  //     setIsSubmitting(true);
-
-  //     try {
-  //   const templateParams = {
-  //     first_name: formData.firstName,
-  //     last_name: formData.lastName,
-  //     email: formData.email,
-  //     phone: formData.phone,
-  //     company: formData.company,
-  //     subject: formData.subject,
-  //     message: formData.message,
-  //   };
-
-  //   await emailjs.send(
-  //     import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  //     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  //     templateParams,
-  //     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-  //   );
-
-  //   toast.success(
-  //     "Message sent successfully! We'll respond within 24 hours.",
-  //     {
-  //       duration: 5000,
-  //       style: {
-  //         background: BRAND.navy.dark,
-  //         color: "#fff",
-  //         border: `1px solid ${BRAND.gold.primary}`,
-  //       },
-  //       iconTheme: {
-  //         primary: BRAND.gold.primary,
-  //         secondary: BRAND.navy.dark,
-  //       },
-  //     }
-  //   );
-
-  //   resetForm();
-  // } catch (error) {
-  //   console.error("EmailJS Error:", error);
-
-  //   toast.error(
-  //     "Failed to send message. Please try again."
-  //   );
-  //     } finally {
-  //       setIsSubmitting(false);
-  //     }
-  //   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const newErrors = {};
-
-    if (!formData.firstName?.trim()) {
-      newErrors.firstName = "First Name is required";
-    }
-
-    if (!formData.lastName?.trim()) {
-      newErrors.lastName = "Last Name is required";
-    }
-
-    if (!formData.email?.trim()) {
-      newErrors.email = "Email Address is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-
-    if (!formData.subject) {
-      newErrors.subject = "Please select a subject";
-    }
-
-    if (!formData.message?.trim()) {
-      newErrors.message = "Message is required";
-    }
-
-    if (!formData.agreedToTerms) {
-      newErrors.agreedToTerms = "Please accept the privacy policy";
-    }
-
+    const newErrors = validate(formData);
     if (Object.keys(newErrors).length > 0) {
-      toast.error("Please fill all required fields");
+      setErrors(newErrors);
+      toast.error("Some fields need your attention");
+      // move keyboard focus to the first field with a problem
+      const first = Object.keys(newErrors)[0];
+      document
+        .getElementById(first === "agreedToTerms" ? "privacy" : first)
+        ?.focus();
       return;
     }
 
     setIsSubmitting(true);
-
     try {
-      // 1. Find the readable label of the selected subject (e.g., "SAP Consulting" instead of "sap")
-      const selectedOption = subjectOptions.find(
-        (opt) => opt.value === formData.subject,
-      );
-      const subjectLabel = selectedOption
-        ? selectedOption.label
-        : formData.subject;
-
-      // 2. Combine First and Last name for the {{name}} variable
-      const fullName = `${formData.firstName} ${formData.lastName}`;
-
-      const templateParams = {
-        name: fullName, // Matches {{name}} in From Name
-        first_name: formData.firstName,
-        last_name: formData.lastName,
-        email: formData.email,
-        phone: formData.phone,
-        company: formData.company || "N/A", // Fallback if they leave company blank
-        subject: subjectLabel, // Sends the readable label to the {{subject}} variable
-        message: formData.message,
-      };
+      const subjectLabel =
+        subjectOptions.find((o) => o.value === formData.subject)?.label ||
+        formData.subject;
 
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        templateParams,
+        {
+          name: `${formData.firstName} ${formData.lastName}`,
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company || "N/A",
+          subject: subjectLabel,
+          message: formData.message,
+        },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       );
 
-      toast.success(
-        "Message sent successfully! We'll respond within 24 hours.",
-      );
-
+      toast.success("Message sent. We'll reply within one business day.");
       resetForm();
     } catch (error) {
       console.error("EmailJS Error:", error);
-      toast.error("Failed to send message. Please try again.");
+      toast.error(
+        "Your message couldn't be sent. Try again, or email us directly.",
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // Construct map address query
-  const mapQuery = encodeURIComponent(
-    `${companyData.contact.address.street}, ${companyData.contact.address.city}, ${companyData.contact.address.state} ${companyData.contact.address.zip}`,
-  );
-
   return (
     <main role="main">
       <HeroSection />
 
-      {/* Main Contact Content */}
-      <section
-        className="py-6 lg:py-12 bg-white relative overflow-hidden"
-        aria-label="Contact form"
-      >
-        <div
-          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full blur-3xl opacity-[0.03] -translate-y-1/3 translate-x-1/3"
-          style={{ background: BRAND.navy.lighter }}
-        />
-
+      {/* ============ CONTACT + FORM ============ */}
+      <section className="bg-primary-50 py-10 lg:py-12" aria-label="Contact us">
         <Container>
-          <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start">
-            {/* Left Column - Contact Information (Premium Navy Card) */}
-            <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="relative rounded-3xl overflow-hidden p-8 lg:p-10 bg-primary-800"
-              >
-                {/* Grid Pattern Overlay */}
-                {/* <div
-                  className="absolute inset-0 opacity-[0.04]"
-                  style={{
-                    backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-                    backgroundSize: "24px 24px",
-                  }}
-                /> */}
+          <div className="grid items-start gap-10 lg:grid-cols-5 lg:gap-12">
+            {/* Contact information */}
+            <motion.aside
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="rounded-2xl bg-primary-900 p-8 lg:col-span-2 lg:p-10"
+            >
+              <h2 className="mb-2 text-2xl font-bold text-white lg:text-3xl">
+                Contact Information
+              </h2>
+              <p className="mb-8 text-base text-white/75">
+                Reach out through any channel, or fill out the form and we'll
+                get back to you.
+              </p>
+              <ul className="space-y-4">
+                {contactInfo.map((info) => (
+                  <ContactInfoCard key={info.title} info={info} />
+                ))}
+              </ul>
 
-                <div className="relative z-10">
-                  <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2">
-                    Contact Information
-                  </h2>
-                  <p className="text-sm text-white/60 mb-8">
-                    Reach out through any channel, or fill out the form to get a
-                    prompt response.
-                  </p>
-
-                  <div className="space-y-4">
-                    {contactInfo.map((info, index) => (
-                      <ContactInfoCard key={index} info={info} index={index} />
-                    ))}
-                  </div>
-
-                  {/* Support CTA */}
-                  <div
-                    className="mt-8 p-5 rounded-2xl"
-                    style={{
-                      background: "rgba(255,255,255,0.04)",
-                      border: "1px solid rgba(253,185,19,0.2)",
-                    }}
-                  >
-                    <div className="flex items-start gap-4">
-                      <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                        style={{ background: "#FFF" }}
-                      >
-                        <FaHeadset
-                          className="text-xl"
-                          style={{ color: BRAND.navy.dark }}
-                        />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-base mb-1 text-white">
-                          Emergency Support
-                        </h4>
-                        <p className="text-xs text-white/50 mb-3">
-                          Existing clients requiring immediate technical
-                          assistance.
-                        </p>
-                        <a
-                          href={`tel:${companyData.contact.phone.replace(/\s/g, "")}`}
-                          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider"
-                          style={{ color: BRAND.gold.primary }}
-                        >
-                          Priority Line <FaArrowRight className="text-[9px]" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Right Column - Contact Form */}
-            <div className="lg:col-span-3">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100"
-              >
-                <div className="p-8 lg:p-10">
-                  <div className="mb-8">
-                    <h3
-                      className="text-2xl lg:text-3xl font-bold mb-2"
-                      style={{ color: BRAND.navy.dark }}
-                    >
-                      Send us a{" "}
-                      <span style={{ color: BRAND.gold.primary }}>Message</span>
+              <div className="mt-8 border-t border-white/10 pt-8">
+                <div className="flex items-start gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-white text-lg text-primary-900">
+                    <FaHeadset />
+                  </span>
+                  <div>
+                    <h3 className="mb-1 text-base font-bold text-white">
+                      Emergency Support
                     </h3>
-                    <p className="text-sm text-gray-500">
-                      Fill out the form below and our team will get back to you
-                      within 24 business hours.
+                    <p className="mb-2 text-sm text-white/70">
+                      For existing clients who need immediate technical help.
                     </p>
-                  </div>
-
-                  <form
-                    onSubmit={handleSubmit}
-                    className="space-y-6"
-                    noValidate
-                  >
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <FormInput
-                        label="First Name"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        placeholder="Enter Your First Name"
-                        required
-                        error={touched.firstName ? errors.firstName : ""}
-                      />
-                      <FormInput
-                        label="Last Name"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        placeholder="Enter Your Last Name"
-                        required
-                        error={touched.lastName ? errors.lastName : ""}
-                      />
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-5">
-                      <FormInput
-                        label="Email Address"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        placeholder="Enter Your Email Address"
-                        required
-                        icon={FaEnvelope}
-                        error={touched.email ? errors.email : ""}
-                      />
-                      <FormInput
-                        label="Phone Number"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        placeholder="Enter Your Phone Number"
-                        icon={FaPhone}
-                      />
-                    </div>
-
-                    <FormInput
-                      label="Company Name"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="Your Organization"
-                      icon={FaBuilding}
-                    />
-
-                    {/* Subject Select */}
-                    <div className="space-y-1.5">
-                      <label
-                        htmlFor="subject"
-                        className="block text-xs font-bold uppercase tracking-wider"
-                        style={{ color: BRAND.navy.dark }}
-                      >
-                        Subject <span className="text-red-500">*</span>
-                      </label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        required
-                        className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50/50 text-sm text-gray-900 appearance-none cursor-pointer transition-all duration-300 focus:outline-none focus:ring-2 focus:border-[#FFF] focus:bg-white focus:ring-[#FFF]/20"
-                      >
-                        {subjectOptions.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
-                      {errors.subject && touched.subject && (
-                        <p className="flex items-center gap-1.5 text-xs text-red-500 mt-1">
-                          <FaExclamationCircle /> {errors.subject}
-                        </p>
-                      )}
-                    </div>
-
-                    <FormInput
-                      label="Message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="Tell us about your project or inquiry..."
-                      required
-                      textarea
-                      error={touched.message ? errors.message : ""}
-                    />
-
-                    <div className="flex items-start gap-3 pt-2">
-                      <input
-                        type="checkbox"
-                        id="privacy"
-                        name="agreedToTerms"
-                        checked={formData.agreedToTerms}
-                        onChange={handleChange}
-                        required
-                        className="mt-0.5 w-5 h-5 rounded cursor-pointer transition-all"
-                      />
-                      <label
-                        htmlFor="privacy"
-                        className="text-xs cursor-pointer leading-relaxed text-gray-500"
-                      >
-                        I agree to the{" "}
-                        <Link
-                          to="/about/privacy-policy"
-                          className="font-semibold underline hover:text-primary-700 transition-colors"
-                        >
-                          Privacy Policy
-                        </Link>{" "}
-                        and consent to the processing of my personal data for
-                        the purpose of responding to my enquiry.
-                      </label>
-                    </div>
-                    {errors.agreedToTerms && (
-                      <p className="flex items-center gap-1.5 text-xs text-red-500 -mt-2">
-                        <FaExclamationCircle /> {errors.agreedToTerms}
-                      </p>
-                    )}
-
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="group relative w-full bg-primary-800 py-4 rounded-xl font-bold text-base overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:transform-none focus:outline-none focus:ring-2 focus:ring-offset-2 mt-4"
-                      style={{
-                        color: "#FFF",
-                        boxShadow: `#FFF`,
-                      }}
+                    <a
+                      href={phoneHref}
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-accent-400 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
                     >
-                      <span className="relative z-10 flex items-center justify-center gap-3">
-                        {isSubmitting ? (
-                          <>
-                            <svg
-                              className="animate-spin h-5 w-5"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                            >
-                              <circle
-                                className="opacity-25"
-                                cx="12"
-                                cy="12"
-                                r="10"
-                                stroke="currentColor"
-                                strokeWidth="4"
-                              ></circle>
-                              <path
-                                className="opacity-75"
-                                fill="currentColor"
-                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                              ></path>
-                            </svg>
-                            Processing...
-                          </>
-                        ) : (
-                          <>
-                            <FaPaperPlane />
-                            Send Message
-                            <FaArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
-                          </>
-                        )}
-                      </span>
-                      {!isSubmitting && (
-                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
-                          <div className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
-                        </div>
-                      )}
-                    </button>
-                  </form>
+                      Call the priority line <FaArrowRight size={10} />
+                    </a>
+                  </div>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.aside>
+
+            {/* Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="rounded-2xl border border-primary-100 bg-white p-8 shadow-sm shadow-primary-900/5 lg:col-span-3 lg:p-10"
+            >
+              <h2 className="mb-2 text-2xl font-bold text-primary-900 lg:text-3xl">
+                Send Us a Message
+              </h2>
+              <p className="mb-8 text-base text-primary-900/70">
+                Fill out the form and our team will reply within one business
+                day.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+                <div className="grid gap-5 md:grid-cols-2">
+                  <FormInput
+                    label="First name"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="Enter First Name"
+                    autoComplete="given-name"
+                    required
+                    error={errors.firstName}
+                  />
+                  <FormInput
+                    label="Last name"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="Enter Last Name"
+                    autoComplete="family-name"
+                    required
+                    error={errors.lastName}
+                  />
+                </div>
+
+                <div className="grid gap-5 md:grid-cols-2">
+                  <FormInput
+                    label="Email address"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="Enter Email Address"
+                    autoComplete="email"
+                    required
+                    icon={FaEnvelope}
+                    error={errors.email}
+                  />
+                  <FormInput
+                    label="Phone number"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    placeholder="+1 555 123 4567"
+                    autoComplete="tel"
+                    icon={FaPhone}
+                  />
+                </div>
+
+                <FormInput
+                  label="Company name"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder="Your organization"
+                  autoComplete="organization"
+                  icon={FaBuilding}
+                />
+
+                {/* Topic */}
+                <div>
+                  <label
+                    htmlFor="subject"
+                    className="mb-1.5 block text-sm font-semibold text-primary-900"
+                  >
+                    Topic
+                    <span className="text-red-600" aria-hidden="true">
+                      {" "}
+                      *
+                    </span>
+                  </label>
+                  <div className="relative">
+                    <select
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                      aria-invalid={Boolean(errors.subject)}
+                      aria-describedby={
+                        errors.subject ? "subject-error" : undefined
+                      }
+                      className={`${fieldBase} ${fieldState(errors.subject)} cursor-pointer appearance-none pr-10 ${formData.subject ? "" : "text-primary-900/50"}`}
+                    >
+                      {subjectOptions.map((o) => (
+                        <option
+                          key={o.value}
+                          value={o.value}
+                          disabled={!o.value}
+                          className="text-primary-900"
+                        >
+                          {o.label}
+                        </option>
+                      ))}
+                    </select>
+                    <FaChevronDown
+                      className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xs text-primary-900/50"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <FieldError id="subject-error" message={errors.subject} />
+                </div>
+
+                <FormInput
+                  label="Message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder="Tell us about your project or question"
+                  required
+                  textarea
+                  error={errors.message}
+                />
+
+                {/* Consent */}
+                <div>
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="checkbox"
+                      id="privacy"
+                      name="agreedToTerms"
+                      checked={formData.agreedToTerms}
+                      onChange={handleChange}
+                      required
+                      aria-invalid={Boolean(errors.agreedToTerms)}
+                      aria-describedby={
+                        errors.agreedToTerms ? "privacy-error" : undefined
+                      }
+                      className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer rounded accent-primary-500"
+                    />
+                    <label
+                      htmlFor="privacy"
+                      className="cursor-pointer text-sm leading-relaxed text-primary-900/70"
+                    >
+                      I agree to the{" "}
+                      <Link
+                        to="/about/privacy-policy"
+                        className="font-semibold text-primary-500 underline hover:text-primary-900"
+                      >
+                        Privacy Policy
+                      </Link>{" "}
+                      and consent to the processing of my personal data to
+                      respond to my enquiry.
+                    </label>
+                  </div>
+                  <FieldError
+                    id="privacy-error"
+                    message={errors.agreedToTerms}
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="flex w-full items-center justify-center gap-3 rounded-lg bg-primary-500 py-4 text-base font-semibold text-white transition-colors hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg
+                        className="h-5 w-5 animate-spin"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
+                      </svg>
+                      Sending…
+                    </>
+                  ) : (
+                    <>
+                      <FaPaperPlane />
+                      Send Message
+                    </>
+                  )}
+                </button>
+              </form>
+            </motion.div>
           </div>
         </Container>
       </section>
 
-      {/* Real Map Section */}
+      {/* ============ MAP ============ */}
       <section
-        className="relative h-[500px] lg:h-[600px] overflow-hidden"
+        className="relative h-[500px] overflow-hidden lg:h-[600px]"
         aria-label="Office location map"
       >
-        {/* Real Embedded Google Map */}
         <iframe
-          title="Innovise Office Location"
-          src={`https://www.google.com/maps?q=${mapQuery}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
-          className="absolute inset-0 w-full h-full border-0 grayscale contrast-125"
-          allowFullScreen=""
+          title="Innovise office location"
+          src={`https://www.google.com/maps?q=${mapQuery}&z=12&output=embed`}
+          className="absolute inset-0 h-full w-full border-0 grayscale"
+          allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-
-        {/* Dark Overlay to match brand theme and ensure text readability */}
-        {/* <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: `linear-gradient(90deg, ${BRAND.navy.dark}E6 0%, ${BRAND.navy.dark}B3 40%, transparent 100%)`,
-          }}
-        /> */}
-
-        {/* Floating Contact Card over Map */}
-        <Container className="relative z-10 h-full flex items-center">
+        <Container className="pointer-events-none relative z-10 flex h-full items-center">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-md"
+            transition={{ duration: 0.6 }}
+            className="pointer-events-auto max-w-md rounded-2xl bg-primary-900 p-8 shadow-xl shadow-primary-900/30 lg:p-10"
           >
-            <div className="rounded-3xl p-8 lg:p-10 backdrop-blur-xl bg-primary-800">
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
-                style={{
-                  background: "#FFF",
-                  boxShadow: `0 10px 30px ${BRAND.gold.primary}30`,
-                }}
-              >
-                <FaMapMarkerAlt
-                  className="text-2xl"
-                  style={{ color: BRAND.navy.dark }}
-                />
-              </motion.div>
-
-              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-                Visit Our{" "}
-                <span style={{ color: BRAND.gold.primary }}>Headquarters</span>
-              </h3>
-
-              <div className="space-y-3 mb-8">
-                <div className="flex items-start gap-3">
-                  <FaBuilding className="text-[#FFF] mt-1 flex-shrink-0" />
-                  <p className="text-sm text-gray-300 leading-relaxed">
-                    {/* {companyData.contact.address.street}
-                    <br /> */}
-                    {companyData.contact.address.city},{" "}
-                    {companyData.contact.address.state},{" "}
-                    {companyData.contact.address.zip}
-                  </p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <FaClock className="text-[#FFF] flex-shrink-0" />
-                  <p className="text-sm text-gray-300">
-                    {companyData.contact.hours}
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${mapQuery}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/dir inline-flex items-center gap-3 px-6 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 hover:-translate-y-0.5"
-                style={{
-                  background: "#FFF",
-                  color: BRAND.navy.dark,
-                  boxShadow: `0 8px 25px ${BRAND.gold.primary}30`,
-                }}
-              >
-                <FaDirections />
-                Get Directions
-                <FaArrowRight className="text-xs group-hover/dir:translate-x-1 transition-transform" />
-              </a>
-            </div>
+            <span className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-accent-400 text-2xl text-primary-900">
+              <FaMapMarkerAlt />
+            </span>
+            <h2 className="mb-5 text-2xl font-bold text-white lg:text-3xl">
+              Visit Our Headquarters
+            </h2>
+            <ul className="mb-8 space-y-3">
+              <li className="flex items-start gap-3 text-base text-white/80">
+                <FaBuilding className="mt-1 shrink-0 text-accent-400" />
+                {[address.street, addressLine].filter(Boolean).join(", ")}
+              </li>
+              <li className="flex items-start gap-3 text-base text-white/80">
+                <FaClock className="mt-1 shrink-0 text-accent-400" />
+                {companyData.contact.hours}
+              </li>
+            </ul>
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${mapQuery}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 rounded-lg bg-white px-6 py-3 text-base font-semibold text-primary-900 transition-colors hover:bg-accent-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+            >
+              <FaDirections />
+              Get Directions
+            </a>
           </motion.div>
         </Container>
       </section>

@@ -12,7 +12,7 @@ import React from "react";
 
 const Container = ({ children, className = "", ...props }) => (
   <div
-    className={`max-w-8xl mx-auto px-6 sm:px-8 lg:px-10 ${className}`}
+    className={`max-w-8xl mx-auto px-6 sm:px-8 lg:px-12 ${className}`}
     {...props}
   >
     {children}
