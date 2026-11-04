@@ -434,7 +434,7 @@ import {
   FaChessKnight,
 } from "react-icons/fa";
 
-// 🎨 BRAND COLORS (From Innovise IT Logo)
+// 🎨 BRAND COLORS (From Innovise Logo)
 const BRAND = {
   navy: {
     dark: "#12324f", // Darkest navy
@@ -443,10 +443,10 @@ const BRAND = {
     lighter: "#1A4570", // Lightest navy
   },
   gold: {
-    primary: "#FDB913", // Main gold/yellow (from "IT" in logo)
+    primary: "#FFF", // Main gold/yellow (from "IT" in logo)
     light: "#FFD54F", // Light gold
     dark: "#F59E0B", // Dark gold/amber
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 

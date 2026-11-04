@@ -12,9 +12,9 @@
 // //     mid: "#12324f",
 // //   },
 // //   gold: {
-// //     primary: "#FDB913",
+// //     primary: "#FFF",
 // //     light: "#FFD54F",
-// //     gradient: "linear-gradient(135deg, #FDB913, #FFD54F)",
+// //     gradient: "linear-gradient(135deg, #FFF, #FFD54F)",
 // //   },
 // // };
 
@@ -490,7 +490,7 @@
 
 //             {/* Description */}
 //             <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
-//               Innovise IT delivers SAP consulting, Guidewire solutions, cloud
+//               Innovise delivers SAP consulting, Guidewire solutions, cloud
 //               transformation, testing, and enterprise modernization services for
 //               scalable growth.
 //             </p>
@@ -616,7 +616,7 @@
 //       >
 //         <img
 //           src={banner}
-//           alt="Innovise IT Banner"
+//           alt="Innovise Banner"
 //           className="
 //         w-full
 //         h-full
@@ -630,24 +630,48 @@
 
 // export default Hero;
 
+// import React from "react";
+// import bannerVideo from "../../assets/videos/hero_banner7.mp4";
+
+// function Hero() {
+//   return (
+//     <section className="relative bg-[#020B2D] overflow-hidden">
+//       <div
+//         className="
+//           w-full
+//           max-h-screen
+//         "
+//       >
+//         <video
+//           className="w-full h-full object-cover"
+//           autoPlay
+//           muted
+//           loop
+//           playsInline
+//         >
+//           <source src={bannerVideo} type="video/mp4" />
+//         </video>
+//       </div>
+//     </section>
+//   );
+// }
+
+// export default Hero;
+
 import React from "react";
-import bannerVideo from "../../assets/videos/hero_banner4.mp4";
+import bannerVideo from "../../assets/videos/hero_banner7.mp4";
 
 function Hero() {
   return (
     <section className="relative bg-[#020B2D] overflow-hidden">
-      <div
-        className="
-          w-full
-          max-h-screen
-        "
-      >
+      <div className="w-full max-h-screen">
         <video
           className="w-full h-full object-cover"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
         >
           <source src={bannerVideo} type="video/mp4" />
         </video>

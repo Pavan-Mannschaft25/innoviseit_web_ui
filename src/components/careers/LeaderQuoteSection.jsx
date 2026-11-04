@@ -34,7 +34,7 @@
 //               style={{ letterSpacing: "-0.01em" }}
 //             >
 //               "Technology is meaningful only when it creates lasting value for
-//               people and businesses. At Innovise IT, we combine innovation,
+//               people and businesses. At Innovise, we combine innovation,
 //               artificial intelligence, and strategic thinking to deliver
 //               solutions that empower organizations to grow, transform, and lead
 //               confidently in the digital era. Our mission is not just to build
@@ -126,11 +126,11 @@ const LeaderQuoteSection = memo(() => (
   "
               style={{ letterSpacing: "-0.01em" }}
             >
-              "At Innovise IT, we believe technology should create meaningful
-              and lasting value. By combining innovation, artificial
-              intelligence, and strategic thinking, we help organizations
-              transform their ideas into solutions that drive growth, create
-              impact, and build a stronger digital future."
+              "At Innovise, we believe technology should create meaningful and
+              lasting value. By combining innovation, artificial intelligence,
+              and strategic thinking, we help organizations transform their
+              ideas into solutions that drive growth, create impact, and build a
+              stronger digital future."
             </p>
 
             {/* Divider */}

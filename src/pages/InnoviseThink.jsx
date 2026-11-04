@@ -33,9 +33,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 
@@ -192,7 +192,7 @@ const InnoviseThinkPage = () => {
         {/* Background Image */}
         <img
           src={bannerImg} // your uploaded image
-          alt="Innovise IT Think"
+          alt="Innovise Think"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
@@ -209,7 +209,7 @@ const InnoviseThinkPage = () => {
 
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              What Innovise IT Think
+              What Innovise Think
             </h1>
 
             {/* Subtitle */}

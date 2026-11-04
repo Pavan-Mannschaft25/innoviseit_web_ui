@@ -10,6 +10,8 @@ import LeadershipTeam from "../components/sections/LeadershipTeam";
 import MixedMediaText from "../components/sections/MixedMediaText";
 import TestimonialsSection from "../components/sections/TestimonialsSection";
 import IntroSection from "../components/sections/IntroSection";
+import PlatformsSection from "../components/sections/PlatformsSection";
+import ServiceJourneySection from "../components/sections/ServiceJourneySection";
 // import ServiceNavigator from "../components/sections/ServiceNavigator";
 
 const HomePage = () => {
@@ -17,9 +19,12 @@ const HomePage = () => {
     <main>
       <Hero />
       <IntroSection />
+      <PlatformsSection />
+      <ServiceJourneySection />
       <Services />
       {/* <ServiceNavigator /> */}
       <Industries />
+
       {/* <CaseStudies /> */}
       {/* <PartnerSuccessMetrics /> */}
       <LeadershipTeam />

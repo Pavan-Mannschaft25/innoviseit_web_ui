@@ -77,10 +77,10 @@ const JobDetailsPage = memo(() => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-6">
         {/* Header Section */}
         <div className="mb-12 border-b border-[#E5E7EB] pb-8">
-          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#FEF9C3] text-[#854D0E] border border-[#EAB308] mb-4">
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#FFF] text-[#12324f] border border-[#12324f] mb-4">
             {job.department}
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-[#12324f] tracking-tight mb-4">
@@ -88,24 +88,24 @@ const JobDetailsPage = memo(() => {
           </h1>
           <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#6B7280]">
             <span className="inline-flex items-center gap-2">
-              <FaMapMarkerAlt className="text-[#EAB308]" /> {job.location}
+              <FaMapMarkerAlt className="text-[#12324f]" /> {job.location}
             </span>
             {job.employmentType && (
               <span className="inline-flex items-center gap-2">
-                <FaBriefcase className="text-[#EAB308]" /> {job.employmentType}
+                <FaBriefcase className="text-[#12324f]" /> {job.employmentType}
               </span>
             )}
             {job.workModel && (
               <span className="inline-flex items-center gap-2">
-                <FaClock className="text-[#EAB308]" /> {job.workModel}
+                <FaClock className="text-[#12324f]" /> {job.workModel}
               </span>
             )}
             <span className="inline-flex items-center gap-2">
-              <FaUsers className="text-[#EAB308]" /> {job.team} Team
+              <FaUsers className="text-[#12324f]" /> {job.team} Team
             </span>
             {job.postedDate && (
               <span className="inline-flex items-center gap-2">
-                <FaCalendarAlt className="text-[#EAB308]" /> Posted{" "}
+                <FaCalendarAlt className="text-[#12324f]" /> Posted{" "}
                 {job.postedDate}
               </span>
             )}
@@ -116,7 +116,7 @@ const JobDetailsPage = memo(() => {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-6">
-              <div className="bg-[#F9FAFB] border border-[#E5E7EB] border-t-4 border-t-[#EAB308] rounded-2xl p-6 shadow-sm">
+              <div className="bg-[#F9FAFB] border border-[#E5E7EB] border-t-4 border-t-[#12324f] rounded-2xl p-6 shadow-sm">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#6B7280] mb-4">
                   Job Details
                 </h4>
@@ -164,11 +164,11 @@ const JobDetailsPage = memo(() => {
                       <FaShieldAlt /> Status
                     </span>
                     {job.hiringStatus === "Actively Hiring" ? (
-                      <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-700 border border-green-200">
+                      <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-900 border border-primary-200">
                         Actively Hiring
                       </span>
                     ) : (
-                      <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700 border border-yellow-200">
+                      <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-900 border border-primary-200">
                         Reviewing
                       </span>
                     )}
@@ -225,7 +225,7 @@ const JobDetailsPage = memo(() => {
                 <ul className="space-y-3">
                   {job.qualifications.map((item, i) => (
                     <li key={i} className="flex gap-3">
-                      <FaCheckCircle className="text-[#EAB308] mt-1 flex-shrink-0" />{" "}
+                      <FaCheckCircle className="text-[#12324f] mt-1 flex-shrink-0" />{" "}
                       <span>{item}</span>
                     </li>
                   ))}
@@ -241,7 +241,7 @@ const JobDetailsPage = memo(() => {
                   {job.benefits.map((b) => (
                     <span
                       key={b}
-                      className="px-4 py-2 bg-[#F0FDF4] border border-[#BBF7D0] rounded-lg text-sm font-medium text-[#166534]"
+                      className="px-4 py-2 bg-[#FFF] border border-primary-500 rounded-lg text-sm font-medium text-primary-900"
                     >
                       {b}
                     </span>

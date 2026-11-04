@@ -9,7 +9,7 @@ const CTASection = memo(() => (
     <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
       <div className="reveal max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
-          Build the Future <Gold>With Us</Gold>
+          Build the Future With Us
         </h2>
         <p className="text-lg text-gray-600 mb-10 max-w-5xl mx-auto leading-relaxed">
           Great careers aren't always about finding the perfect opening today.
@@ -21,7 +21,7 @@ const CTASection = memo(() => (
         <div className="flex justify-center">
           <Link
             to="/culture/values"
-            className="inline-flex items-center gap-2 px-10 py-5 rounded-xl bg-[#FFC107] text-black font-semibold hover:bg-[#E6AE00] transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-10 py-5 rounded-xl bg-primary-800 text-[#FFF] font-semibold hover:bg-primary-600 transition-all duration-300 hover:scale-105"
           >
             Explore Our Culture <FaArrowRight className="text-sm" />
           </Link>

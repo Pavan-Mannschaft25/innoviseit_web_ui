@@ -51,7 +51,7 @@
 // // // //     light: "#143A63",
 // // // //     lighter: "#1A4570",
 // // // //   },
-// // // //   gold: { primary: "#FDB913", light: "#FFD54F" },
+// // // //   gold: { primary: "#FFF", light: "#FFD54F" },
 // // // // };
 
 // // // // const MAX_FILE_SIZE = 5 * 1024 * 1024;
@@ -543,7 +543,7 @@
 // // // //     className={`group relative overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${className}`}
 // // // //     style={{
 // // // //       background:
-// // // //         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// // // //         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // // // //       color: BRAND.navy.dark,
 // // // //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 // // // //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -564,7 +564,7 @@
 // // // //     className={`group relative inline-flex items-center overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
 // // // //     style={{
 // // // //       background:
-// // // //         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// // // //         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // // // //       color: BRAND.navy.dark,
 // // // //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 // // // //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -951,7 +951,7 @@
 // // // //       "w-full rounded-xl transition-all duration-200 outline-none text-sm";
 // // // //     const stateCls = hasError
 // // // //       ? "border-red-400 bg-red-50/50 focus:border-red-400 focus:ring-red-100"
-// // // //       : "border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FDB913] focus:ring-[rgba(253,185,19,0.15)]";
+// // // //       : "border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FFF] focus:ring-[rgba(253,185,19,0.15)]";
 // // // //     const iconColor = hasError ? "#EF4444" : "#94A3B8";
 
 // // // //     return (
@@ -1132,10 +1132,10 @@
 // // // //     const borderStyle = hasError
 // // // //       ? "border-2 border-dashed border-red-400 bg-red-50/30"
 // // // //       : isDragging
-// // // //         ? "border-2 border-dashed border-[#FDB913] bg-[#FDB913]/5"
+// // // //         ? "border-2 border-dashed border-[#FFF] bg-[#FFF]/5"
 // // // //         : file
-// // // //           ? "border-2 border-solid border-[#FDB913]/30 bg-[#FDB913]/5"
-// // // //           : "border-2 border-dashed border-[#CBD5E1] bg-[#F8FAFC] hover:border-[#FDB913]/50 hover:bg-[#FDB913]/5";
+// // // //           ? "border-2 border-solid border-[#FFF]/30 bg-[#FFF]/5"
+// // // //           : "border-2 border-dashed border-[#CBD5E1] bg-[#F8FAFC] hover:border-[#FFF]/50 hover:bg-[#FFF]/5";
 
 // // // //     return (
 // // // //       <div>
@@ -1397,7 +1397,7 @@
 // // // //                         className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4"
 // // // //                         style={{
 // // // //                           background:
-// // // //                             "linear-gradient(135deg, #FDB913, #FFD54F)",
+// // // //                             "linear-gradient(135deg, #FFF, #FFD54F)",
 // // // //                         }}
 // // // //                       >
 // // // //                         <FaPaperPlane
@@ -1573,7 +1573,7 @@
 // // // //     <div
 // // // //       className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5 text-lg font-bold"
 // // // //       style={{
-// // // //         background: "linear-gradient(135deg, #FDB913, #FFD54F)",
+// // // //         background: "linear-gradient(135deg, #FFF, #FFD54F)",
 // // // //         color: BRAND.navy.dark,
 // // // //       }}
 // // // //     >
@@ -1650,7 +1650,7 @@
 // // // //               style={{ letterSpacing: "-0.01em" }}
 // // // //             >
 // // // //               "Technology is meaningful only when it creates lasting value for
-// // // //               people and businesses. At Innovise IT, we combine innovation,
+// // // //               people and businesses. At Innovise, we combine innovation,
 // // // //               artificial intelligence, and strategic thinking to deliver
 // // // //               solutions that empower organizations to grow, transform, and lead
 // // // //               confidently in the digital era. Our mission is not just to build
@@ -1754,7 +1754,7 @@
 // // // //         .benefit-icon { transition: all 0.45s ease; }
 // // // //         .benefit-glow { opacity: 0; transition: opacity 0.5s ease; }
 // // // //         .form-input { border: 1px solid #E2E8F0; background: #F8FAFC; transition: border-color 0.25s, box-shadow 0.25s; }
-// // // //         .form-input:focus { outline: none; border-color: #FDB913; box-shadow: 0 0 0 3px rgba(253,185,19,0.15); }
+// // // //         .form-input:focus { outline: none; border-color: #FFF; box-shadow: 0 0 0 3px rgba(253,185,19,0.15); }
 // // // //         .step-connector { position: absolute; top: 28px; left: calc(50% + 36px); width: calc(100% - 72px); height: 2px; background: linear-gradient(90deg, rgba(253,185,19,0.4), rgba(253,185,19,0.08)); }
 // // // //         .dot-pattern { background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,1) 1px, transparent 0); background-size: 40px 40px; }
 // // // //         .select-arrow { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%2394A3B8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
@@ -2176,7 +2176,7 @@
 // //     className={`group relative overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${className}`}
 // //     style={{
 // //       background:
-// //         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// //         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // //       color: BRAND.navy.dark,
 // //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 // //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -2197,7 +2197,7 @@
 // //     className={`group relative inline-flex items-center overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
 // //     style={{
 // //       background:
-// //         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// //         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // //       color: BRAND.navy.dark,
 // //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 // //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -2266,8 +2266,8 @@
 // //       onClick={() => onClick(position)}
 // //       className={`group cursor-pointer transition-all duration-300 rounded-lg p-4 ${
 // //         isActive
-// //           ? "bg-[#FDB913] border-2 border-[#FDB913] shadow-lg shadow-[#FDB913]/20"
-// //           : "bg-white border border-[#E8EDF2] hover:border-[#FDB913] hover:shadow-md hover:shadow-[#FDB913]/10"
+// //           ? "bg-[#FFF] border-2 border-[#FFF] shadow-lg shadow-[#FFF]/20"
+// //           : "bg-white border border-[#E8EDF2] hover:border-[#FFF] hover:shadow-md hover:shadow-[#FFF]/10"
 // //       }`}
 // //     >
 // //       <div className="flex items-start gap-3">
@@ -2357,7 +2357,7 @@
 // //       {/* Hover effect overlay - subtle */}
 // //       {!isActive && (
 // //         <div className="absolute inset-0 rounded-xl pointer-events-none overflow-hidden">
-// //           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#FDB913]/5 to-transparent" />
+// //           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-[#FFF]/5 to-transparent" />
 // //         </div>
 // //       )}
 // //     </div>
@@ -2396,7 +2396,7 @@
 // //       "w-full rounded-xl transition-all duration-200 outline-none text-sm";
 // //     const stateCls = hasError
 // //       ? "border-red-400 bg-red-50/50 focus:border-red-400 focus:ring-red-100"
-// //       : "border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FDB913] focus:ring-[rgba(253,185,19,0.15)]";
+// //       : "border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FFF] focus:ring-[rgba(253,185,19,0.15)]";
 // //     const iconColor = hasError ? "#EF4444" : "#94A3B8";
 
 // //     return (
@@ -2577,10 +2577,10 @@
 // //     const borderStyle = hasError
 // //       ? "border-2 border-dashed border-red-400 bg-red-50/30"
 // //       : isDragging
-// //         ? "border-2 border-dashed border-[#FDB913] bg-[#FDB913]/5"
+// //         ? "border-2 border-dashed border-[#FFF] bg-[#FFF]/5"
 // //         : file
-// //           ? "border-2 border-solid border-[#FDB913]/30 bg-[#FDB913]/5"
-// //           : "border-2 border-dashed border-[#CBD5E1] bg-[#F8FAFC] hover:border-[#FDB913]/50 hover:bg-[#FDB913]/5";
+// //           ? "border-2 border-solid border-[#FFF]/30 bg-[#FFF]/5"
+// //           : "border-2 border-dashed border-[#CBD5E1] bg-[#F8FAFC] hover:border-[#FFF]/50 hover:bg-[#FFF]/5";
 
 // //     return (
 // //       <div>
@@ -2977,7 +2977,7 @@
 // //                 <div
 // //                   className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-2"
 // //                   style={{
-// //                     background: "linear-gradient(135deg, #FDB913, #FFD54F)",
+// //                     background: "linear-gradient(135deg, #FFF, #FFD54F)",
 // //                   }}
 // //                 >
 // //                   <FaPaperPlane
@@ -3097,7 +3097,7 @@
 // //                       onBlur={handleBlur}
 // //                       rows={2}
 // //                       placeholder="Tell us about yourself and why you'd be a great fit..."
-// //                       className="w-full px-4 py-3 rounded-xl resize-none text-sm border border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FDB913] focus:outline-none transition-all"
+// //                       className="w-full px-4 py-3 rounded-xl resize-none text-sm border border-[#E2E8F0] bg-[#F8FAFC] focus:border-[#FFF] focus:outline-none transition-all"
 // //                     />
 // //                   </div>
 
@@ -3291,7 +3291,7 @@
 // //     light: "#143A63",
 // //     lighter: "#1A4570",
 // //   },
-// //   gold: { primary: "#FDB913", light: "#FFD54F" },
+// //   gold: { primary: "#FFF", light: "#FFD54F" },
 // // };
 // // // ==========================================
 // // // 1. DESIGN SYSTEM & CONSTANTS
@@ -3692,7 +3692,7 @@
 // // //     className={`group relative overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${className}`}
 // // //     style={{
 // // //       background:
-// // //         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// // //         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // // //       color: BRAND.navy.dark,
 // // //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 // // //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -3713,7 +3713,7 @@
 // //     className={`group relative inline-flex items-center overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
 // //     style={{
 // //       background:
-// //         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// //         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // //       color: BRAND.navy.dark,
 // //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 // //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -3767,7 +3767,7 @@
 // //     className={`group relative overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${className}`}
 // //     style={{
 // //       background:
-// //         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+// //         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 // //       color: BRAND.navy.dark,
 // //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 // //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -3926,7 +3926,7 @@
 // //               style={{ letterSpacing: "-0.01em" }}
 // //             >
 // //               "Technology is meaningful only when it creates lasting value for
-// //               people and businesses. At Innovise IT, we combine innovation,
+// //               people and businesses. At Innovise, we combine innovation,
 // //               artificial intelligence, and strategic thinking to deliver
 // //               solutions that empower organizations to grow, transform, and lead
 // //               confidently in the digital era. Our mission is not just to build
@@ -3975,7 +3975,7 @@
 // //     <div
 // //       className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5 text-lg font-bold"
 // //       style={{
-// //         background: "linear-gradient(135deg, #FDB913, #FFD54F)",
+// //         background: "linear-gradient(135deg, #FFF, #FFD54F)",
 // //         color: BRAND.navy.dark,
 // //       }}
 // //     >
@@ -4900,7 +4900,7 @@
 //     light: "#143A63",
 //     lighter: "#1A4570",
 //   },
-//   gold: { primary: "#FDB913", light: "#FFD54F" },
+//   gold: { primary: "#FFF", light: "#FFD54F" },
 // };
 // // ==========================================
 // // 1. DESIGN SYSTEM & CONSTANTS
@@ -5147,7 +5147,7 @@
 //     className={`group relative inline-flex items-center overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 ${className}`}
 //     style={{
 //       background:
-//         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+//         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 //       color: BRAND.navy.dark,
 //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -5201,7 +5201,7 @@
 //     className={`group relative overflow-hidden rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${className}`}
 //     style={{
 //       background:
-//         "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+//         "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
 //       color: BRAND.navy.dark,
 //       boxShadow: "0 8px 30px rgba(253,185,19,0.3)",
 //       ["--tw-ring-color"]: BRAND.gold.primary,
@@ -5458,7 +5458,7 @@
 //               style={{ letterSpacing: "-0.01em" }}
 //             >
 //               "Technology is meaningful only when it creates lasting value for
-//               people and businesses. At Innovise IT, we combine innovation,
+//               people and businesses. At Innovise, we combine innovation,
 //               artificial intelligence, and strategic thinking to deliver
 //               solutions that empower organizations to grow, transform, and lead
 //               confidently in the digital era. Our mission is not just to build
@@ -5507,7 +5507,7 @@
 //     <div
 //       className="inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-5 text-lg font-bold"
 //       style={{
-//         background: "linear-gradient(135deg, #FDB913, #FFD54F)",
+//         background: "linear-gradient(135deg, #FFF, #FFD54F)",
 //         color: BRAND.navy.dark,
 //       }}
 //     >

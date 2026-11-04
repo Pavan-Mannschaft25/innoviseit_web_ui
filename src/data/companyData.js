@@ -1,5 +1,5 @@
 export const companyData = {
-  name: "Innovise IT",
+  name: "Innovise",
   tagline: "Enterprise Technology Partner",
   founded: 2009,
   headquarters: "Redmond, Washington, USA",

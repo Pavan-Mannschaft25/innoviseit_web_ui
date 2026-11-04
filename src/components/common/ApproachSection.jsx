@@ -114,7 +114,7 @@
 //   dur: Math.random() * 14 + 10,
 //   del: Math.random() * 8,
 //   op: Math.random() * 0.25 + 0.08,
-//   color: i % 4 === 0 ? "#FDB913" : i % 4 === 1 ? "#1E5090" : "#ffffff",
+//   color: i % 4 === 0 ? "#FFF" : i % 4 === 1 ? "#1E5090" : "#ffffff",
 // }));
 
 // /* ═══════════════════════════════════════════════════
@@ -171,9 +171,9 @@
 //           </feMerge>
 //         </filter>
 //         <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-//           <stop offset="0%" stopColor="#FDB913" stopOpacity="0.5" />
+//           <stop offset="0%" stopColor="#FFF" stopOpacity="0.5" />
 //           <stop offset="50%" stopColor="#1E5090" stopOpacity="0.35" />
-//           <stop offset="100%" stopColor="#FDB913" stopOpacity="0.5" />
+//           <stop offset="100%" stopColor="#FFF" stopOpacity="0.5" />
 //         </linearGradient>
 //         <radialGradient id="centerBg" cx="50%" cy="50%" r="50%">
 //           <stop offset="0%" stopColor="#0d1f3c" stopOpacity="0.95" />
@@ -181,8 +181,8 @@
 //           <stop offset="100%" stopColor="#081221" stopOpacity="0" />
 //         </radialGradient>
 //         <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-//           <stop offset="0%" stopColor="#FDB913" stopOpacity="0.06" />
-//           <stop offset="100%" stopColor="#FDB913" stopOpacity="0" />
+//           <stop offset="0%" stopColor="#FFF" stopOpacity="0.06" />
+//           <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
 //         </radialGradient>
 //       </defs>
 
@@ -238,7 +238,7 @@
 //             key={i}
 //             d={arcPath(i)}
 //             fill="none"
-//             stroke={isActive ? "#FDB913" : "rgba(253,185,19,0.18)"}
+//             stroke={isActive ? "#FFF" : "rgba(253,185,19,0.18)"}
 //             strokeWidth={isActive ? 2.5 : 1.5}
 //             strokeLinecap="round"
 //             strokeDasharray={ARC_LEN}
@@ -318,7 +318,7 @@
 //         x={CX}
 //         y={CY + 4}
 //         textAnchor="middle"
-//         fill="#FDB913"
+//         fill="#FFF"
 //         fontSize="11.5"
 //         fontWeight="700"
 //         letterSpacing="0.08em"
@@ -334,7 +334,7 @@
 //         y1={CY + 16}
 //         x2={CX + 22}
 //         y2={CY + 16}
-//         stroke="#FDB913"
+//         stroke="#FFF"
 //         strokeWidth="1.2"
 //         strokeLinecap="round"
 //         strokeDasharray={44}
@@ -372,7 +372,7 @@
 //                 cy={pos.y}
 //                 r={NR}
 //                 fill="none"
-//                 stroke="#FDB913"
+//                 stroke="#FFF"
 //                 strokeWidth="1.5"
 //                 opacity="0"
 //                 style={{
@@ -387,7 +387,7 @@
 //               r={NR}
 //               className="node-circle"
 //               fill={isActive ? "rgba(253,185,19,0.12)" : "rgba(8,18,33,0.95)"}
-//               stroke={isActive ? "#FDB913" : "rgba(253,185,19,0.25)"}
+//               stroke={isActive ? "#FFF" : "rgba(253,185,19,0.25)"}
 //               strokeWidth={isActive ? 2 : 1.5}
 //               filter={isActive ? "url(#glowStrong)" : undefined}
 //               style={{
@@ -401,7 +401,7 @@
 //               y={pos.y + 1}
 //               textAnchor="middle"
 //               dominantBaseline="central"
-//               fill={isActive ? "#FDB913" : "rgba(255,255,255,0.65)"}
+//               fill={isActive ? "#FFF" : "rgba(255,255,255,0.65)"}
 //               fontSize="12"
 //               fontWeight="800"
 //               style={{
@@ -469,7 +469,7 @@
 //           transition: "all 0.4s ease",
 //         }}
 //       >
-//         <Icon className="text-base" style={{ color: "#FDB913" }} />
+//         <Icon className="text-base" style={{ color: "#FFF" }} />
 //       </div>
 
 //       {/* Title */}
@@ -480,7 +480,7 @@
 //       {/* Subtitle */}
 //       <p
 //         className="text-[10px] font-bold uppercase tracking-[0.18em] mb-3.5"
-//         style={{ color: "#FDB913" }}
+//         style={{ color: "#FFF" }}
 //       >
 //         {data.subtitle}
 //       </p>
@@ -625,7 +625,7 @@
 //                     border: "1px solid rgba(253,185,19,0.15)",
 //                   }}
 //                 >
-//                   <Icon className="text-sm" style={{ color: "#FDB913" }} />
+//                   <Icon className="text-sm" style={{ color: "#FFF" }} />
 //                 </div>
 //                 <div>
 //                   <h4 className="text-white font-bold text-[15px] leading-tight">
@@ -633,7 +633,7 @@
 //                   </h4>
 //                   <p
 //                     className="text-[9px] font-bold uppercase tracking-[0.18em]"
-//                     style={{ color: "#FDB913" }}
+//                     style={{ color: "#FFF" }}
 //                   >
 //                     {step.subtitle}
 //                   </p>
@@ -740,7 +740,7 @@
 //             className="inline-block px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.22em] mb-6 border"
 //             style={{
 //               background: "rgba(253,185,19,0.07)",
-//               color: "#FDB913",
+//               color: "#FFF",
 //               borderColor: "rgba(253,185,19,0.15)",
 //             }}
 //           >
@@ -749,7 +749,7 @@
 
 //           <h2 className="text-3xl md:text-4xl lg:text-[44px] font-extrabold mb-5 text-white leading-[1.1] tracking-tight">
 //             Proven{" "}
-//             <span style={{ color: "#FDB913" }}>Implementation Methodology</span>
+//             <span style={{ color: "#FFF" }}>Implementation Methodology</span>
 //           </h2>
 
 //           <p
@@ -997,7 +997,7 @@ const particles = Array.from({ length: 35 }, (_, i) => ({
   dur: Math.random() * 16 + 12,
   del: Math.random() * 10,
   op: Math.random() * 0.3 + 0.05,
-  color: i % 5 === 0 ? "#FDB913" : i % 5 === 1 ? "#1E5090" : "#ffffff",
+  color: i % 5 === 0 ? "#FFF" : i % 5 === 1 ? "#1E5090" : "#ffffff",
 }));
 
 /* ═══════════════════════════════════════════════════
@@ -1069,10 +1069,10 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
           </feMerge>
         </filter>
         <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FDB913" stopOpacity="0.6" />
+          <stop offset="0%" stopColor="#FFF" stopOpacity="0.6" />
           <stop offset="30%" stopColor="#1E5090" stopOpacity="0.4" />
           <stop offset="70%" stopColor="#1E5090" stopOpacity="0.4" />
-          <stop offset="100%" stopColor="#FDB913" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0.6" />
         </linearGradient>
         <radialGradient id="centerBg" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stopColor="#0d1f3c" stopOpacity="0.95" />
@@ -1080,13 +1080,13 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
           <stop offset="100%" stopColor="#081221" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#FDB913" stopOpacity="0.08" />
-          <stop offset="60%" stopColor="#FDB913" stopOpacity="0.02" />
-          <stop offset="100%" stopColor="#FDB913" stopOpacity="0" />
+          <stop offset="0%" stopColor="#FFF" stopOpacity="0.08" />
+          <stop offset="60%" stopColor="#FFF" stopOpacity="0.02" />
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
         </radialGradient>
         <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#FDB913" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="#FDB913" stopOpacity="0" />
+          <stop offset="0%" stopColor="#FFF" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
         </radialGradient>
       </defs>
 
@@ -1176,7 +1176,7 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
             key={i}
             d={arcPath(i)}
             fill="none"
-            stroke={isActive ? "#FDB913" : "rgba(253,185,19,0.2)"}
+            stroke={isActive ? "#FFF" : "rgba(253,185,19,0.2)"}
             strokeWidth={isActive ? 2.5 : 1.5}
             strokeLinecap="round"
             strokeDasharray={ARC_LEN}
@@ -1275,7 +1275,7 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
         x={CX}
         y={CY + 2}
         textAnchor="middle"
-        fill="#FDB913"
+        fill="#FFF"
         fontSize="11.5"
         fontWeight="700"
         letterSpacing="0.08em"
@@ -1293,7 +1293,7 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
         y1={CY + 16}
         x2={CX + 25}
         y2={CY + 16}
-        stroke="#FDB913"
+        stroke="#FFF"
         strokeWidth="1.2"
         strokeLinecap="round"
         strokeDasharray={50}
@@ -1336,7 +1336,7 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
                 cy={pos.y}
                 r={NR + 4}
                 fill="none"
-                stroke="#FDB913"
+                stroke="#FFF"
                 strokeWidth="0.8"
                 opacity="0"
                 style={{
@@ -1370,7 +1370,7 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
               className="node-circle"
               fill={isActive ? "rgba(253,185,19,0.15)" : "rgba(8,18,33,0.95)"}
               stroke={
-                isActive ? "#FDB913" : `rgba(253,185,19,${0.2 + 0.1 * pulse})`
+                isActive ? "#FFF" : `rgba(253,185,19,${0.2 + 0.1 * pulse})`
               }
               strokeWidth={isActive ? 2.5 : 1.5}
               filter={isActive ? "url(#glowStrong)" : undefined}
@@ -1388,7 +1388,7 @@ const CircleDiagram = ({ activeStep, isVisible }) => {
               textAnchor="middle"
               dominantBaseline="central"
               fill={
-                isActive ? "#FDB913" : `rgba(255,255,255,${0.5 + 0.2 * pulse})`
+                isActive ? "#FFF" : `rgba(255,255,255,${0.5 + 0.2 * pulse})`
               }
               fontSize="12"
               fontWeight="800"
@@ -1481,7 +1481,7 @@ const ApproachCard = ({ data, activeStep, setActiveStep, direction }) => {
           transition: "all 0.4s ease",
         }}
       >
-        <Icon className="text-base" style={{ color: "#FDB913" }} />
+        <Icon className="text-base" style={{ color: "#FFF" }} />
       </div>
 
       {/* Title */}
@@ -1492,7 +1492,7 @@ const ApproachCard = ({ data, activeStep, setActiveStep, direction }) => {
       {/* Subtitle */}
       <p
         className="text-[10px] font-bold uppercase tracking-[0.18em] mb-3.5"
-        style={{ color: "#FDB913" }}
+        style={{ color: "#FFF" }}
       >
         {data.subtitle}
       </p>
@@ -1586,7 +1586,7 @@ const MobileTimeline = ({ inView }) => (
       <div
         className="absolute left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full"
         style={{
-          background: "#FDB913",
+          background: "#FFF",
           animation: "float 2s ease-in-out infinite",
           opacity: 0.3,
         }}
@@ -1646,7 +1646,7 @@ const MobileTimeline = ({ inView }) => (
                     border: "1px solid rgba(253,185,19,0.15)",
                   }}
                 >
-                  <Icon className="text-sm" style={{ color: "#FDB913" }} />
+                  <Icon className="text-sm" style={{ color: "#FFF" }} />
                 </div>
                 <div>
                   <h4 className="text-white font-bold text-[15px] leading-tight">
@@ -1654,7 +1654,7 @@ const MobileTimeline = ({ inView }) => (
                   </h4>
                   <p
                     className="text-[9px] font-bold uppercase tracking-[0.18em]"
-                    style={{ color: "#FDB913" }}
+                    style={{ color: "#FFF" }}
                   >
                     {step.subtitle}
                   </p>
@@ -1761,7 +1761,7 @@ const ApproachSection = () => {
             className="inline-block px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.22em] mb-6 border"
             style={{
               background: "rgba(253,185,19,0.07)",
-              color: "#FDB913",
+              color: "#FFF",
               borderColor: "rgba(253,185,19,0.15)",
             }}
           >

@@ -5,7 +5,7 @@ export const BRAND = {
     light: "#143A63",
     lighter: "#1A4570",
   },
-  gold: { primary: "#FDB913", light: "#FFD54F" },
+  gold: { primary: "#FFF", light: "#FFD54F" },
 };
 
 export const COLORS = {
@@ -16,8 +16,8 @@ export const COLORS = {
   border: "#E5E7EB",
   brand: "#0F172A",
   accent: "#12324f",
-  success: "#10B981",
-  warning: "#F59E0B",
+  success: "#111827",
+  warning: "#111827",
   danger: "#EF4444",
 };
 

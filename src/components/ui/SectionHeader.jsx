@@ -54,7 +54,7 @@ const SectionHeader = ({
   className = "",
 }) => {
   return (
-    <div className={`text-center mb-12 lg:mb-16 ${className}`}>
+    <div className={`mb-8 lg:mb-10 ${className}`}>
       {badge && <div className="mb-6 inline-block">{badge}</div>}
       {title && <div className="mb-5">{title}</div>}
       {subtitle && <div className="mb-6">{subtitle}</div>}

@@ -33,7 +33,7 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#12324f",
     light: "#FFD54F",
     gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
   },
@@ -72,7 +72,7 @@ const valuesData = [
       "Tailored solutions for maximum impact",
       "Long-term partnership approach",
     ],
-    color: "#3B82F6",
+    color: "#12324f",
   },
   {
     id: 2,
@@ -87,7 +87,7 @@ const valuesData = [
       "Open communication always",
       "Accountability in all actions",
     ],
-    color: "#10B981",
+    color: "#12324f",
   },
   {
     id: 3,
@@ -102,7 +102,7 @@ const valuesData = [
       "Creative problem-solving culture",
       "Future-focused thinking",
     ],
-    color: "#F59E0B",
+    color: "#12324f",
   },
   {
     id: 4,
@@ -117,7 +117,7 @@ const valuesData = [
       "On-time delivery commitment",
       "Exceeding expectations always",
     ],
-    color: "#EF4444",
+    color: "#12324f",
   },
   {
     id: 5,
@@ -132,7 +132,7 @@ const valuesData = [
       "Inclusive decision-making",
       "Collective success mindset",
     ],
-    color: "#8B5CF6",
+    color: "#12324f",
   },
   {
     id: 6,
@@ -147,7 +147,7 @@ const valuesData = [
       "Agile adaptation methods",
       "Measurable progress tracking",
     ],
-    color: "#EC4899",
+    color: "#12324f",
   },
 ];
 
@@ -298,8 +298,8 @@ const ValueCard = ({ value, index, isActive, onSelect }) => {
           <motion.div
             className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 relative"
             style={{
-              background: isActive ? `${value.color}20` : `${value.color}10`,
-              border: `2px solid ${isActive ? value.color : `${value.color}30`}`,
+              background: isActive ? `#FFF` : `${value.color}10`,
+              border: `2px solid ${isActive ? "#FFF" : `${value.color}30`}`,
             }}
             whileHover={{ rotate: [0, -5, 5, 0] }}
             transition={{ duration: 0.5 }}
@@ -367,7 +367,7 @@ const ValueCard = ({ value, index, isActive, onSelect }) => {
                     >
                       <FaCheckCircle
                         className="flex-shrink-0 text-base"
-                        style={{ color: value.color }}
+                        style={{ color: "#FFF" }}
                         aria-hidden="true"
                       />
                       {detail}
@@ -533,7 +533,7 @@ const HeroSection = () => (
           transition={{ delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12"
         >
-          At Innovise IT, our values define how we think, act, and deliver. They
+          At Innovise, our values define how we think, act, and deliver. They
           are the foundation of every solution we build and every partnership we
           create.
         </motion.p>
@@ -745,7 +745,7 @@ const ValuesPage = () => {
       <div className="relative w-full h-[30vh] md:h-[70vh] lg:h-[90vh] bg-[#020B2D] overflow-hidden">
         <img
           src={banner}
-          alt="Innovise IT Banner"
+          alt="Innovise Banner"
           className="w-full h-full object-cover object-center"
         />
 
@@ -808,7 +808,7 @@ const ValuesPage = () => {
                           key={idx}
                           className="flex items-center gap-2 text-white text-sm"
                         >
-                          <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                          <span className="w-2 h-2 rounded-full bg-[#12324f]" />
                           {item}
                         </li>
                       ))}

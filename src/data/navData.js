@@ -29,7 +29,7 @@ export const navData = {
         //     "Custom application development, SAP and Guidewire integrations, AI-enabled automation, and enterprise solutions that streamline operations and drive digital transformation.",
         //   image: img3,
         //   readTime: "Integration & AI",
-        //   date: "Innovise IT",
+        //   date: "Innovise",
         //   featured: true,
         //   link: "/services/application-development-integration-ai",
         // },

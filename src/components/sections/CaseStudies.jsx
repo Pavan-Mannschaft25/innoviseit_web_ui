@@ -490,7 +490,7 @@ import {
 } from "react-icons/fa";
 import { caseStudiesData } from "../../data/caseStudiesData";
 
-// 🎨 INNOVISE IT BRAND COLORS
+// 🎨 Innovise BRAND COLORS
 const BRAND = {
   navy: {
     dark: "#12324f",
@@ -499,10 +499,10 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
+    primary: "#FFF",
     light: "#FFD54F",
     dark: "#F59E0B",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    gradient: "linear-gradient(135deg, #FFF 0%, #FFC107 50%, #FFD54F 100%)",
   },
 };
 

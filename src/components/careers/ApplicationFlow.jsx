@@ -6065,7 +6065,7 @@ const ApplicationFlow = memo(({ selectedJob, onClose }) => {
             <div className="flex justify-end items-center p-6 bg-white border-t border-[#E5E7EB] gap-4 sticky bottom-0">
               <Button
                 type="button"
-                variant="ghost"
+                variant="primary"
                 onClick={onClose}
                 disabled={isSubmitting}
               >

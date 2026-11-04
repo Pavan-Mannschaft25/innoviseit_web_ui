@@ -17,9 +17,9 @@ const BRAND = {
     lighter: "#1A4570",
   },
   gold: {
-    primary: "#FDB913",
-    light: "#FFD54F",
-    gradient: "linear-gradient(135deg, #FDB913 0%, #FFC107 50%, #FFD54F 100%)",
+    primary: "#FFF",
+    light: "#FFF",
+    gradient: "#FFF",
   },
 };
 
@@ -83,14 +83,14 @@ const NotFound = () => {
           className="mb-8"
         >
           <h1
-            className="text-[100px] md:text-[150px] lg:text-[200px] font-black leading-none select-none"
-            style={{
-              backgroundImage: BRAND.gold.gradient,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              filter: "drop-shadow(0 20px 40px rgba(253,185,19,0.25))",
-            }}
+            className="text-[100px] md:text-[150px] lg:text-[200px] font-black leading-none select-none text-white"
+            // style={{
+            //   backgroundImage: BRAND.gold.gradient,
+            //   WebkitBackgroundClip: "text",
+            //   WebkitTextFillColor: "transparent",
+            //   backgroundClip: "text",
+            //   filter: "drop-shadow(0 20px 40px rgba(253,185,19,0.25))",
+            // }}
           >
             404
           </h1>
@@ -158,13 +158,6 @@ const NotFound = () => {
             style={{
               background: BRAND.gold.gradient,
               color: BRAND.navy.dark,
-              boxShadow: `0 8px 30px rgba(253,185,19,0.35)`,
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow = `0 12px 40px rgba(253,185,19,0.5)`;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = `0 8px 30px rgba(253,185,19,0.35)`;
             }}
           >
             <FaHome className="relative z-10 text-lg group-hover:animate-bounce" />
