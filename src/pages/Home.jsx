@@ -1,39 +1,70 @@
+// import React from "react";
+// import Hero from "../components/sections/Hero";
+// import Services from "../components/sections/Services";
+// import Industries from "../components/sections/Industries";
+// import CaseStudies from "../components/sections/CaseStudies";
+// import Clients from "../components/sections/Clients";
+// import CTA from "../components/sections/CTA";
+// import LeadershipTeam from "../components/sections/LeadershipTeam";
+// // import PartnerSuccessMetrics from "../components/sections/PartnerSuccessMetrics";
+// import MixedMediaText from "../components/sections/MixedMediaText";
+// import TestimonialsSection from "../components/sections/TestimonialsSection";
+// import IntroSection from "../components/sections/IntroSection";
+// import PlatformsSection from "../components/sections/PlatformsSection";
+// import ServiceJourneySection from "../components/sections/ServiceJourneySection";
+// // import ServiceNavigator from "../components/sections/ServiceNavigator";
+
+// const HomePage = () => {
+//   return (
+//     <main>
+//       <Hero />
+//       <IntroSection />
+//       <PlatformsSection />
+//       <ServiceJourneySection />
+//       <Services />
+//       {/* <ServiceNavigator /> */}
+//       <Industries />
+
+//       {/* <CaseStudies /> */}
+//       {/* <PartnerSuccessMetrics /> */}
+//       <LeadershipTeam />
+//       <Clients />
+//       {/* <MixedMediaText /> */}
+//       {/* <TestimonialsSection /> */}
+//       {/* <CTA /> */}
+//     </main>
+//   );
+// };
+
+// export default HomePage;
+
 import React from "react";
 import Hero from "../components/sections/Hero";
-import Services from "../components/sections/Services";
-import Industries from "../components/sections/Industries";
-import CaseStudies from "../components/sections/CaseStudies";
-import Clients from "../components/sections/Clients";
-import CTA from "../components/sections/CTA";
-import LeadershipTeam from "../components/sections/LeadershipTeam";
-// import PartnerSuccessMetrics from "../components/sections/PartnerSuccessMetrics";
-import MixedMediaText from "../components/sections/MixedMediaText";
-import TestimonialsSection from "../components/sections/TestimonialsSection";
 import IntroSection from "../components/sections/IntroSection";
 import PlatformsSection from "../components/sections/PlatformsSection";
 import ServiceJourneySection from "../components/sections/ServiceJourneySection";
-// import ServiceNavigator from "../components/sections/ServiceNavigator";
+import Services from "../components/sections/Services";
+import Industries from "../components/sections/Industries";
+import LeadershipTeam from "../components/sections/LeadershipTeam";
+import Clients from "../components/sections/Clients";
 
-const HomePage = () => {
-  return (
-    <main>
-      <Hero />
-      <IntroSection />
-      <PlatformsSection />
-      <ServiceJourneySection />
-      <Services />
-      {/* <ServiceNavigator /> */}
-      <Industries />
-
-      {/* <CaseStudies /> */}
-      {/* <PartnerSuccessMetrics /> */}
-      <LeadershipTeam />
-      <Clients />
-      {/* <MixedMediaText /> */}
-      {/* <TestimonialsSection /> */}
-      {/* <CTA /> */}
-    </main>
-  );
-};
+/*
+  Section rhythm (backgrounds alternate so each block reads separately):
+  Hero → Intro (white) → Platforms (light blue) → Journey (white)
+  → Services (navy) → Industries (white) → Leadership (light blue)
+  → Partners (white)
+*/
+const HomePage = () => (
+  <main role="main">
+    <Hero />
+    <IntroSection />
+    <PlatformsSection />
+    <ServiceJourneySection />
+    <Services />
+    <Industries />
+    <LeadershipTeam />
+    <Clients />
+  </main>
+);
 
 export default HomePage;
