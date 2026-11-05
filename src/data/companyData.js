@@ -10,7 +10,7 @@ export const companyData = {
     address: {
       // street: "123 Innovation Drive",
       city: "Redmond",
-      state: "Washington,",
+      state: "Washington",
       zip: "USA",
       country: "USA",
     },
