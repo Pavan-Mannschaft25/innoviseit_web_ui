@@ -1862,7 +1862,7 @@ const LeaderCard = ({ leader }) => (
       <p className="mt-1 text-xs font-semibold text-primary-500">
         {leader.role}
       </p>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-primary-900/70">
+      <p className="mt-2 flex-1 text-xs md:text-sm leading-relaxed text-primary-900/70">
         {leader.quote}
       </p>
       <a
