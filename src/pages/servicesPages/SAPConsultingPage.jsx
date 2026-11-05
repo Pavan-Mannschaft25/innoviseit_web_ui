@@ -5863,12 +5863,9 @@ const WhyUs = () => (
           Get in Touch <FaArrowRight size={12} />
         </Button>
       </div>
-      <div className="relative hidden lg:block">
+      <div className="relative">
         {/* Offset blue frame behind the photo */}
-        <div
-          className="absolute -bottom-4 -right-4 h-80 w-full max-w-lg rounded-xl bg-primary-500"
-          aria-hidden="true"
-        />
+
         <img
           src={IMG.team}
           alt="Innovise team collaborating"
