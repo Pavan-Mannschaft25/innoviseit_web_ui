@@ -698,262 +698,357 @@
 
 // export default IndustryTileCard;
 
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+// import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
+
+// /**
+//  * IndustryTileCard - Premium Navy & Gold Theme
+//  * Optimized for dark navy backgrounds
+//  */
+
+// const IndustryTileCard = ({
+//   industry,
+//   variant = "perspective",
+//   imageType = "full",
+// }) => {
+//   // ======================================
+//   //  STATE MANAGEMENT
+//   // ======================================
+//   const [imageLoaded, setImageLoaded] = useState(false);
+//   const [imageError, setImageError] = useState(false);
+
+//   // ======================================
+//   //  NULL SAFETY CHECK
+//   // ======================================
+//   if (!industry || typeof industry !== "object") {
+//     return (
+//       <div className="flex flex-col items-center justify-center h-[380px] bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-2xl border-2 border-dashed border-red-500/30 p-8 backdrop-blur-sm">
+//         <i className="fas fa-exclamation-circle text-5xl text-red-400/60 mb-4" />
+//         <p className="text-red-300/80 font-bold text-lg">No Data Available</p>
+//         <p className="text-red-400/50 text-sm mt-2 text-center">
+//           Industry object is undefined
+//         </p>
+//       </div>
+//     );
+//   }
+
+//   // ======================================
+//   // 🔧 SAFE DATA EXTRACTION WITH DEFAULTS
+//   // ======================================
+//   const data = {
+//     id:
+//       industry.id ||
+//       `item-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+//     slug: String(
+//       industry.slug ||
+//         industry.title?.toLowerCase().replace(/[^a-z0-9]+/g, "-") ||
+//         "unknown",
+//     ).replace(/^-|-$/g, ""),
+//     title: String(industry.title || industry.name || "Untitled Industry"),
+//     description: String(
+//       industry.description ||
+//         industry.shortDesc ||
+//         industry.desc ||
+//         "No description available.",
+//     ),
+//     image:
+//       industry.image ||
+//       industry.img ||
+//       industry.imageUrl ||
+//       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
+//     icon: industry.icon,
+//     tags: Array.isArray(industry.tags)
+//       ? industry.tags.filter((t) => t != null).map(String)
+//       : [],
+//     ...industry,
+//   };
+
+//   // ======================================
+//   // 🎨 VARIANT CONFIGURATION
+//   // ======================================
+//   const isDark = variant === "research-dark";
+//   const isFullImage = imageType === "full";
+
+//   return (
+//     <Link
+//       to={data.link}
+//       className={`group relative block overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ${
+//         isFullImage ? "h-[250px]" : "h-[250px]"
+//       } ${
+//         isDark
+//           ? "bg-gradient-to-br from-[#0d2240]/80 to-[#081629]/90 border border-yellow-500/10"
+//           : "bg-gradient-to-br from-white/[0.07] to-white/[0.03] border border-white/10"
+//       } hover:-translate-y-3 hover:scale-[1.02] hover:shadow-2xl backdrop-blur-md`}
+//       style={{
+//         boxShadow: isDark
+//           ? "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(253, 185, 19, 0.05)"
+//           : "0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
+//       }}
+//       aria-label={`Learn more about ${data.title}`}
+//     >
+//       {/*  Hover Glow Effect */}
+//       <div
+//         className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 ${
+//           isDark
+//             ? "bg-gradient-to-br from-yellow-500/10 via-transparent to-yellow-500/5"
+//             : "bg-gradient-to-br from-white/10 via-transparent to-white/5"
+//         }`}
+//         aria-hidden="true"
+//       />
+
+//       {/* 🔷 Corner Accent */}
+//       {/* <div
+//         className={`absolute w-24 h-24 opacity-0 group-hover:opacity-60 transition-all duration-500 z-10 pointer-events-none ${
+//           isDark ? "bottom-0 right-0" : "top-0 left-0"
+//         }`}
+//         style={{
+//           background: `linear-gradient(${isDark ? "45deg" : "-135deg"}, transparent 50%, ${isDark ? "#FFF" : "rgba(255,255,255,0.3)"} 50%)`,
+//           borderRadius: isDark ? "0 0 20px 0" : "0 20px 0 0",
+//         }}
+//         aria-hidden="true"
+//       /> */}
+
+//       {/* ================================ */}
+//       {/* 🖼️ IMAGE SECTION                 */}
+//       {/* ================================ */}
+//       <div
+//         className={`relative overflow-hidden ${isFullImage ? "h-[140px]" : "h-[120px]"}`}
+//       >
+//         {/* Loading Skeleton */}
+//         {!imageLoaded && !imageError && (
+//           <div
+//             className="absolute inset-0 bg-gradient-to-r from-gray-700/50 via-gray-600/30 to-gray-700/50 animate-pulse"
+//             aria-hidden="true"
+//           />
+//         )}
+
+//         {/* Error State */}
+//         {imageError && (
+//           <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+//             <div className="text-center p-4">
+//               <i className="fas fa-image text-4xl text-gray-600 mb-2" />
+//               <p className="text-xs text-gray-600">Image unavailable</p>
+//             </div>
+//           </div>
+//         )}
+
+//         {/* Image Element */}
+//         <img
+//           src={data.image}
+//           alt={`${data.title} visualization`}
+//           className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${
+//             imageLoaded ? "opacity-100" : "opacity-0"
+//           } ${imageError ? "hidden" : ""}`}
+//           loading="lazy"
+//           onLoad={() => setImageLoaded(true)}
+//           onError={(e) => {
+//             setImageError(true);
+//             e.target.style.display = "none";
+//           }}
+//         />
+
+//         {/* Gradient Overlay */}
+//         {/* <div
+//           className={`absolute inset-0 transition-all duration-500 ${
+//             isDark
+//               ? "bg-gradient-to-b from-transparent via-black/40 to-[#12324f]"
+//               : "bg-gradient-to-b from-transparent via-black/30 to-black/70"
+//           }`}
+//           aria-hidden="true"
+//         /> */}
+
+//         {/* Hover Icon Overlay */}
+//         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
+//           <div
+//             className={`w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-500 ${
+//               isDark
+//                 ? "bg-white/95 text-[#12324f]"
+//                 : "bg-white/95 text-[#12324f]"
+//             }`}
+//           >
+//             <FaExternalLinkAlt className="text-xl" />
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* ================================ */}
+//       {/* 📝 CONTENT SECTION               */}
+//       {/* ================================ */}
+//       <div className={`relative p-4`}>
+//         {/* Icon Badge */}
+//         {/* <div
+//           className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-all duration-500 relative z-10 ${
+//             isDark
+//               ? "bg-linear-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FFF]/40 shadow-lg shadow-yellow-500/10"
+//               : "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-400/20"
+//           } group-hover:rotate-y-360 group-hover:scale-110 group-hover:shadow-xl`}
+//           style={{ transformStyle: "preserve-3d" }}
+//         >
+//           <i className={data.icon} />
+//         </div> */}
+
+//         {/* Title */}
+//         <h3
+//           className={`text-sm font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
+//             isDark ? "text-white" : "text-[#12324f] group-hover:text-black"
+//           }`}
+//         >
+//           {data.title}
+//         </h3>
+
+//         {/* Description */}
+//         <p
+//           className={`text-xs leading-relaxed mb-4 transition-all duration-300 line-clamp-3 ${
+//             isDark
+//               ? "text-gray-400/80 group-hover:text-gray-300"
+//               : "text-[#12324f] group-hover:text-black"
+//           }`}
+//         >
+//           {data.description}
+//         </p>
+
+//         {/* Tags */}
+//         {data.tags.length > 0 && (
+//           <div className="flex flex-wrap gap-2 mb-3">
+//             {data.tags.slice(0, 3).map((tag, idx) => (
+//               <span
+//                 key={`${data.id}-tag-${idx}-${String(tag).toLowerCase()}`}
+//                 className={`px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 cursor-default ${
+//                   isDark
+//                     ? "bg-yellow-500/15 text-[#FFD54F] border border-yellow-500/25 hover:bg-yellow-500/25 hover:border-yellow-500/40"
+//                     : "bg-white/10 text-gray-200 border border-white/10 hover:bg-white/15"
+//                 } group-hover:bg-gradient-to-r group-hover:from-[#FFF] group-hover:to-[#FFD54F] group-hover:text-[#12324f] group-hover:border-transparent group-hover:shadow-md`}
+//               >
+//                 {String(tag)}
+//               </span>
+//             ))}
+
+//             {data.tags.length > 3 && (
+//               <span className="self-center px-2 py-1.5 text-xs font-medium text-gray-500/60">
+//                 +{data.tags.length - 3} more
+//               </span>
+//             )}
+//           </div>
+//         )}
+
+//         {/* ➡️ Arrow Button */}
+//         {/* <div
+//           className={`absolute bottom-6 right-6 w-11 h-11 rounded-full flex items-center justify-center opacity-0 -translate-x-3 transition-all duration-400 z-20 ${
+//             isDark
+//               ? "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/25"
+//               : "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-black border border-white/20"
+//           } group-hover:opacity-100 group-hover:translate-x-0 hover:scale-115 hover:rotate-45`}
+//           aria-hidden="true"
+//         >
+//           <FaArrowRight className="text-base" />
+//         </div> */}
+
+//         {/* Bottom Border Accent */}
+//         {/* <div
+//           className={`absolute bottom-0 left-6 right-6 h-[2px] transform scale-x-0 origin-left transition-transform duration-500 ${
+//             isDark
+//               ? "bg-gradient-to-r from-white/40 to-white/10"
+//               : "bg-gradient-to-r from-white/40 to-white/10"
+//           } group-hover:scale-x-100`}
+//           aria-hidden="true"
+//         /> */}
+//       </div>
+//     </Link>
+//   );
+// };
+
+// export default IndustryTileCard;
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
+import { FaArrowRight, FaIndustry } from "react-icons/fa";
 
-/**
- * IndustryTileCard - Premium Navy & Gold Theme
- * Optimized for dark navy backgrounds
- */
+/*
+  IndustryTileCard: corporate image card used in the "Industries We Serve"
+  grid on the home page.
 
-const IndustryTileCard = ({
-  industry,
-  variant = "perspective",
-  imageType = "full",
-}) => {
-  // ======================================
-  //  STATE MANAGEMENT
-  // ======================================
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
+  ┌─────────────────────┐
+  │       image         │  zooms slightly on hover
+  ├─────────────────────┤
+  │ Title               │  turns blue on hover
+  │ Two-line summary    │
+  │ Explore  →          │
+  └─────────────────────┘  blue bar slides in along the bottom
 
-  // ======================================
-  //  NULL SAFETY CHECK
-  // ======================================
-  if (!industry || typeof industry !== "object") {
-    return (
-      <div className="flex flex-col items-center justify-center h-[380px] bg-gradient-to-br from-red-900/20 to-orange-900/20 rounded-2xl border-2 border-dashed border-red-500/30 p-8 backdrop-blur-sm">
-        <i className="fas fa-exclamation-circle text-5xl text-red-400/60 mb-4" />
-        <p className="text-red-300/80 font-bold text-lg">No Data Available</p>
-        <p className="text-red-400/50 text-sm mt-2 text-center">
-          Industry object is undefined
-        </p>
-      </div>
-    );
-  }
+  `variant` and `imageType` are still accepted so existing code keeps
+  working, but every card now uses the same clean style.
+*/
 
-  // ======================================
-  // 🔧 SAFE DATA EXTRACTION WITH DEFAULTS
-  // ======================================
-  const data = {
-    id:
-      industry.id ||
-      `item-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-    slug: String(
-      industry.slug ||
-        industry.title?.toLowerCase().replace(/[^a-z0-9]+/g, "-") ||
-        "unknown",
-    ).replace(/^-|-$/g, ""),
-    title: String(industry.title || industry.name || "Untitled Industry"),
-    description: String(
-      industry.description ||
-        industry.shortDesc ||
-        industry.desc ||
-        "No description available.",
-    ),
-    image:
-      industry.image ||
-      industry.img ||
-      industry.imageUrl ||
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
-    icon: industry.icon,
-    tags: Array.isArray(industry.tags)
-      ? industry.tags.filter((t) => t != null).map(String)
-      : [],
-    ...industry,
-  };
+const IndustryTileCard = ({ industry }) => {
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  // ======================================
-  // 🎨 VARIANT CONFIGURATION
-  // ======================================
-  const isDark = variant === "research-dark";
-  const isFullImage = imageType === "full";
+  if (!industry || typeof industry !== "object") return null;
+
+  const title = String(industry.title || industry.name || "Industry");
+  const description =
+    industry.description || industry.shortDesc || industry.desc || "";
+  const image = industry.image || industry.img || industry.imageUrl;
+  const link = industry.link || industry.path || "#";
 
   return (
     <Link
-      to={data.link}
-      className={`group relative block overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 ${
-        isFullImage ? "h-[250px]" : "h-[250px]"
-      } ${
-        isDark
-          ? "bg-gradient-to-br from-[#0d2240]/80 to-[#081629]/90 border border-yellow-500/10"
-          : "bg-gradient-to-br from-white/[0.07] to-white/[0.03] border border-white/10"
-      } hover:-translate-y-3 hover:scale-[1.02] hover:shadow-2xl backdrop-blur-md`}
-      style={{
-        boxShadow: isDark
-          ? "0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(253, 185, 19, 0.05)"
-          : "0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)",
-      }}
-      aria-label={`Learn more about ${data.title}`}
+      to={link}
+      aria-label={`Explore ${title}`}
+      className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-primary-100 bg-white shadow-sm shadow-primary-900/5 transition-all duration-300 hover:-translate-y-1 hover:border-primary-200 hover:shadow-lg hover:shadow-primary-900/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
     >
-      {/*  Hover Glow Effect */}
-      <div
-        className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 ${
-          isDark
-            ? "bg-gradient-to-br from-yellow-500/10 via-transparent to-yellow-500/5"
-            : "bg-gradient-to-br from-white/10 via-transparent to-white/5"
-        }`}
-        aria-hidden="true"
-      />
-
-      {/* 🔷 Corner Accent */}
-      {/* <div
-        className={`absolute w-24 h-24 opacity-0 group-hover:opacity-60 transition-all duration-500 z-10 pointer-events-none ${
-          isDark ? "bottom-0 right-0" : "top-0 left-0"
-        }`}
-        style={{
-          background: `linear-gradient(${isDark ? "45deg" : "-135deg"}, transparent 50%, ${isDark ? "#FFF" : "rgba(255,255,255,0.3)"} 50%)`,
-          borderRadius: isDark ? "0 0 20px 0" : "0 20px 0 0",
-        }}
-        aria-hidden="true"
-      /> */}
-
-      {/* ================================ */}
-      {/* 🖼️ IMAGE SECTION                 */}
-      {/* ================================ */}
-      <div
-        className={`relative overflow-hidden ${isFullImage ? "h-[120px]" : "h-[120px]"}`}
-      >
-        {/* Loading Skeleton */}
-        {!imageLoaded && !imageError && (
+      {/* Image */}
+      <div className="relative aspect-[4/3] overflow-hidden bg-primary-50">
+        {!loaded && !failed && image && (
           <div
-            className="absolute inset-0 bg-gradient-to-r from-gray-700/50 via-gray-600/30 to-gray-700/50 animate-pulse"
+            className="absolute inset-0 animate-pulse bg-primary-100"
             aria-hidden="true"
           />
         )}
 
-        {/* Error State */}
-        {imageError && (
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-            <div className="text-center p-4">
-              <i className="fas fa-image text-4xl text-gray-600 mb-2" />
-              <p className="text-xs text-gray-600">Image unavailable</p>
-            </div>
-          </div>
-        )}
-
-        {/* Image Element */}
-        <img
-          src={data.image}
-          alt={`${data.title} visualization`}
-          className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${
-            imageLoaded ? "opacity-100" : "opacity-0"
-          } ${imageError ? "hidden" : ""}`}
-          loading="lazy"
-          onLoad={() => setImageLoaded(true)}
-          onError={(e) => {
-            setImageError(true);
-            e.target.style.display = "none";
-          }}
-        />
-
-        {/* Gradient Overlay */}
-        {/* <div
-          className={`absolute inset-0 transition-all duration-500 ${
-            isDark
-              ? "bg-gradient-to-b from-transparent via-black/40 to-[#12324f]"
-              : "bg-gradient-to-b from-transparent via-black/30 to-black/70"
-          }`}
-          aria-hidden="true"
-        /> */}
-
-        {/* Hover Icon Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10 pointer-events-none">
-          <div
-            className={`w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-500 ${
-              isDark
-                ? "bg-white/95 text-[#12324f]"
-                : "bg-white/95 text-[#12324f]"
+        {image && !failed ? (
+          <img
+            src={image}
+            alt=""
+            loading="lazy"
+            onLoad={() => setLoaded(true)}
+            onError={() => setFailed(true)}
+            className={`h-full w-full object-cover transition duration-700 group-hover:scale-105 ${
+              loaded ? "opacity-100" : "opacity-0"
             }`}
-          >
-            <FaExternalLinkAlt className="text-xl" />
-          </div>
-        </div>
-      </div>
-
-      {/* ================================ */}
-      {/* 📝 CONTENT SECTION               */}
-      {/* ================================ */}
-      <div className={`relative p-4`}>
-        {/* Icon Badge */}
-        {/* <div
-          className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 transition-all duration-500 relative z-10 ${
-            isDark
-              ? "bg-linear-to-br from-yellow-500/25 to-yellow-600/10 text-[#FFD54F] border-2 border-[#FFF]/40 shadow-lg shadow-yellow-500/10"
-              : "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-400/20"
-          } group-hover:rotate-y-360 group-hover:scale-110 group-hover:shadow-xl`}
-          style={{ transformStyle: "preserve-3d" }}
-        >
-          <i className={data.icon} />
-        </div> */}
-
-        {/* Title */}
-        <h3
-          className={`text-sm font-bold mb-2.5 leading-tight transition-all duration-300 line-clamp-2 ${
-            isDark ? "text-white" : "text-[#12324f] group-hover:text-black"
-          }`}
-        >
-          {data.title}
-        </h3>
-
-        {/* Description */}
-        <p
-          className={`text-xs leading-relaxed mb-4 transition-all duration-300 line-clamp-3 ${
-            isDark
-              ? "text-gray-400/80 group-hover:text-gray-300"
-              : "text-[#12324f] group-hover:text-black"
-          }`}
-        >
-          {data.description}
-        </p>
-
-        {/* Tags */}
-        {data.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-3">
-            {data.tags.slice(0, 3).map((tag, idx) => (
-              <span
-                key={`${data.id}-tag-${idx}-${String(tag).toLowerCase()}`}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-300 cursor-default ${
-                  isDark
-                    ? "bg-yellow-500/15 text-[#FFD54F] border border-yellow-500/25 hover:bg-yellow-500/25 hover:border-yellow-500/40"
-                    : "bg-white/10 text-gray-200 border border-white/10 hover:bg-white/15"
-                } group-hover:bg-gradient-to-r group-hover:from-[#FFF] group-hover:to-[#FFD54F] group-hover:text-[#12324f] group-hover:border-transparent group-hover:shadow-md`}
-              >
-                {String(tag)}
-              </span>
-            ))}
-
-            {data.tags.length > 3 && (
-              <span className="self-center px-2 py-1.5 text-xs font-medium text-gray-500/60">
-                +{data.tags.length - 3} more
-              </span>
-            )}
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-4xl text-primary-300">
+            <FaIndustry aria-hidden="true" />
           </div>
         )}
-
-        {/* ➡️ Arrow Button */}
-        {/* <div
-          className={`absolute bottom-6 right-6 w-11 h-11 rounded-full flex items-center justify-center opacity-0 -translate-x-3 transition-all duration-400 z-20 ${
-            isDark
-              ? "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-[#12324f] shadow-lg shadow-yellow-500/25"
-              : "bg-gradient-to-br from-[#FFF] to-[#FFD54F] text-black border border-white/20"
-          } group-hover:opacity-100 group-hover:translate-x-0 hover:scale-115 hover:rotate-45`}
-          aria-hidden="true"
-        >
-          <FaArrowRight className="text-base" />
-        </div> */}
-
-        {/* Bottom Border Accent */}
-        {/* <div
-          className={`absolute bottom-0 left-6 right-6 h-[2px] transform scale-x-0 origin-left transition-transform duration-500 ${
-            isDark
-              ? "bg-gradient-to-r from-white/40 to-white/10"
-              : "bg-gradient-to-r from-white/40 to-white/10"
-          } group-hover:scale-x-100`}
-          aria-hidden="true"
-        /> */}
       </div>
+
+      {/* Text */}
+      <div className="flex flex-1 flex-col p-4">
+        <h3 className="mb-1.5 line-clamp-2 text-base font-bold leading-snug text-primary-900 transition-colors group-hover:text-primary-500">
+          {title}
+        </h3>
+        {description && (
+          <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-primary-900/70">
+            {description}
+          </p>
+        )}
+        <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary-500">
+          Explore
+          <FaArrowRight
+            className="text-xs transition-transform duration-300 group-hover:translate-x-1"
+            aria-hidden="true"
+          />
+        </span>
+      </div>
+
+      {/* Bottom accent bar */}
+      <span
+        className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-primary-500 transition-transform duration-300 group-hover:scale-x-100"
+        aria-hidden="true"
+      />
     </Link>
   );
 };
