@@ -659,7 +659,7 @@
 // export default Hero;
 
 import React from "react";
-import bannerVideo from "../../assets/videos/hero_banner7.mp4";
+import bannerVideo from "../../assets/videos/hero_banner_new_30fps.mp4";
 
 function Hero() {
   return (

@@ -1,227 +1,83 @@
-/* @import "tailwindcss";
-
-@theme {
-  --color-primary-50: #f4f8fc;
-  --color-primary-100: #e6eef7;
-  --color-primary-200: #c7d8ea;
-  --color-primary-300: #9db9d5;
-  --color-primary-400: #6f96bc;
-  --color-primary-500: #46739f;
-  --color-primary-600: #2f5c86;
-  --color-primary-700: #1d4568;
-  --color-primary-800: #12324f;
-  --color-primary-900: #0b2a4a;
-
-  --color-accent-50: #fffbeb;
-  --color-accent-100: #fef3c7;
-  --color-accent-200: #fde68a;
-  --color-accent-300: #ffc10c;
-  --color-accent-400: #fbbf24;
-  --color-accent-500: #f59e0b;
-  --color-accent-600: #d97706;
-  --color-accent-700: #b45309;
-
-  --font-sans: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-
-  --shadow-card:
-    0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-card-hover:
-    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-
-  --radius-xl: 1rem;
-
-  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: var(--font-sans);
-    @apply text-gray-900 antialiased;
-  }
-
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gray-400 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-500;
-  }
-}
-
-@layer components {
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
-  }
-
-  .glass-effect {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
-  }
-}
-
-.perspective {
-  perspective: 1000px;
-}
-
-.transform-style {
-  transform-style: preserve-3d;
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-@keyframes spinSlow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-    opacity: var(--op);
-  }
-  33% {
-    transform: translateY(-18px) translateX(8px);
-    opacity: calc(var(--op) * 1.6);
-  }
-  66% {
-    transform: translateY(-8px) translateX(-6px);
-    opacity: calc(var(--op) * 0.7);
-  }
-}
-@keyframes pulseGlow {
-  0%,
-  100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
-  }
-}
-@keyframes nodePulse {
-  0% {
-    r: 24;
-    opacity: 0.5;
-  }
-  100% {
-    r: 36;
-    opacity: 0;
-  }
-}
-
-.spin-slow {
-  animation: spinSlow 40s linear infinite;
-}
-.spin-slow-reverse {
-  animation: spinSlow 55s linear infinite reverse;
-}
-.particle {
-  animation: float var(--dur) ease-in-out infinite;
-  animation-delay: var(--del);
-}
-.pulse-glow {
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
-.arc-path {
-  transition:
-    stroke-dashoffset 1s cubic-bezier(0.22, 1, 0.36, 1),
-    stroke 0.4s ease,
-    stroke-width 0.4s ease,
-    filter 0.4s ease;
-}
-.node-circle {
-  transition:
-    fill 0.4s ease,
-    stroke 0.4s ease,
-    r 0.3s ease;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(180deg);
-  }
-}
-
-@keyframes pulseGlow {
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.05);
-  }
-}
-
-@keyframes ringPulse {
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.02);
-  }
-}
-
-@keyframes nodePulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(1.8);
-    opacity: 0;
-  }
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.025);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.particle {
-  will-change: transform, opacity;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
+/* Free fonts from Google Fonts (no files, no index.html changes):
+     Montserrat 400–800 ... brand body and sub headline font
+     Outfit 600–800 ....... backup for headings if Pogonia is missing
+   This @import must stay ABOVE @import "tailwindcss". */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap");
 
 @import "tailwindcss";
+
+/* ==========================================================
+   BRAND FONTS
+     Headings (h1–h6) .... Pogonia Bold
+     Headline ............ Montserrat Medium   (500)  .type-headline
+     Sub headline ........ Montserrat SemiBold (600)  .type-subheadline
+     Body ................ Montserrat Regular  (400)
+     Secondary ........... Montserrat (Gotham when licensed)
+
+   Pogonia files in public/fonts/ (all four weights are available):
+     PogoniaLight.woff2    300   font-light
+     PogoniaRegular.woff2  400   font-normal
+     PogoniaMedium.woff2   500   font-medium
+     PogoniaBold.woff2     700   font-bold
+   ========================================================== */
+
+@font-face {
+  font-family: "Pogonia";
+  src: url("/fonts/PogoniaLight.woff2") format("woff2");
+  font-weight: 300; /* Light */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pogonia";
+  src: url("/fonts/PogoniaRegular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pogonia";
+  src: url("/fonts/PogoniaMedium.woff2") format("woff2");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pogonia";
+  src: url("/fonts/PogoniaBold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gotham: remove the comment markers when the files are in public/fonts/
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*/
 
 /* ==========================================================
    INNOVISE BRAND THEME
@@ -262,7 +118,12 @@
   --color-accent-600: #0cbaa8; /* aqua + 25% navy */
   --color-accent-700: #0b848d; /* aqua + 50% navy */
 
-  --font-sans: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  /* Fonts (use as font-sans, font-display, font-secondary) */
+  --font-sans: "Montserrat", Helvetica, Arial, sans-serif;
+  --font-display:
+    "Pogonia", "Outfit", "Montserrat", Helvetica, Arial, sans-serif;
+  --font-secondary: "Montserrat", Helvetica, Arial, sans-serif;
+  /* WITH LICENSED FONTS: "Gotham", "Montserrat", Helvetica, Arial, sans-serif */
 
   /* Shadows tinted with brand navy instead of black */
   --shadow-card:
@@ -280,9 +141,30 @@
     scroll-behavior: smooth;
   }
 
+  /* Body: Montserrat Regular */
   body {
     font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.6;
     @apply text-primary-900 antialiased;
+  }
+
+  /* Headings default to Pogonia Bold; a font-* class can change it */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+
+  /* Form controls don't inherit the page font by default */
+  button,
+  input,
+  select,
+  textarea {
+    font-family: inherit;
   }
 
   ::selection {
@@ -313,6 +195,47 @@
   }
 }
 
+/* ==========================================================
+   BRAND TYPOGRAPHY
+   These rules are deliberately OUTSIDE any @layer. In CSS, unlayered
+   rules win over Tailwind's utility layer, so the brand fonts below
+   apply on every page even where a heading has font-bold / font-light.
+
+   Brand guide                         Website
+   Headline | Pogonia Bold        ->   h1 – h6   Pogonia (Bold by default)
+   Headline | Montserrat Medium   ->   .type-headline     Montserrat 500
+   Sub head | Montserrat SemiBold ->   .type-subheadline  Montserrat 600
+   Body     | Montserrat Regular  ->   p, li, etc.        Montserrat 400
+
+   ========================================================== */
+
+/* Font family is forced here; the weight is set in @layer base below,
+   so classes like font-light or font-medium on a heading still work. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  letter-spacing: -0.02em;
+}
+
+body,
+p,
+li,
+dd,
+td,
+input,
+select,
+textarea {
+  font-family: var(--font-sans);
+}
+
 @layer components {
   /* Solid brand colors only — no gradients.
      These two class names are kept so older markup still works. */
@@ -322,6 +245,49 @@
 
   .bg-brand-gradient {
     background-color: var(--color-navy);
+  }
+
+  /* ---- Brand type styles (from the brand guide) ----
+     <p class="type-headline">We Build. Implement. Test. Manage.</p>
+     <h1 class="type-display">Deliver Excellence.</h1>
+     <h2 class="type-subheadline">Two Leading Platforms. ...</h2>
+     <p class="type-body">We specialize in ...</p>                 */
+
+  /* Headline: Montserrat Medium */
+  .type-headline {
+    font-family: var(--font-sans) !important;
+    font-weight: 500 !important;
+    font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+    line-height: 1.2;
+    color: var(--color-blue);
+  }
+
+  /* Display headline: Pogonia Bold */
+  .type-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--color-blue);
+  }
+
+  /* Sub headline: Montserrat SemiBold */
+  .type-subheadline {
+    font-family: var(--font-sans) !important;
+    font-weight: 600 !important;
+    font-size: clamp(1.125rem, 1rem + 0.6vw, 1.5rem);
+    line-height: 1.3;
+    color: var(--color-navy);
+  }
+
+  /* Body: Montserrat Regular */
+  .type-body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--color-navy);
   }
 
   .glass-effect {
