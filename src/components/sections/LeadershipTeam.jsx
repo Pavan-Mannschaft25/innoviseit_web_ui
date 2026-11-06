@@ -1855,7 +1855,7 @@ const LeaderCard = ({ leader }) => (
         className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
       />
     </div>
-    <div className="flex min-w-0 flex-1 flex-col border-l-4 border-primary-500 p-5">
+    <div className="flex min-w-0 flex-1 flex-col border-l-4 border-primary-500 p-3">
       <h3 className="text-lg font-bold leading-tight text-primary-900">
         {leader.name}
       </h3>
@@ -1870,7 +1870,7 @@ const LeaderCard = ({ leader }) => (
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`${leader.name} on LinkedIn`}
-        className="mt-4 flex h-9 w-9 items-center justify-center rounded-lg bg-primary-900 text-white transition-colors hover:bg-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+        className="mt-2 flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-lg bg-primary-900 text-white transition-colors hover:bg-primary-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
       >
         <FaLinkedinIn className="text-sm" />
       </a>
