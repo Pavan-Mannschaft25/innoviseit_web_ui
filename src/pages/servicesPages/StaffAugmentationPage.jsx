@@ -2183,7 +2183,9 @@ const Hero = () => (
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
           Scale Your Team with{" "}
-          <span className="text-accent-400">On-Demand Expert Talent</span>
+          <span className="text-accent-400 md:text-5xl">
+            On-Demand Expert Talent
+          </span>
         </h1>
         <p className="mb-4 max-w-xl text-lg text-white/85 lg:text-xl">
           Flexible staff augmentation services that give you instant access to

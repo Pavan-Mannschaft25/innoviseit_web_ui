@@ -2010,8 +2010,9 @@ const Hero = () => (
           </p>
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
-          Secure Code, <span className="text-accent-400">Flawless Quality</span>
-          , Absolute Compliance
+          Secure Code,{" "}
+          <span className="text-accent-400 md:text-5xl">Flawless Quality</span>,
+          Absolute Compliance
         </h1>
         <p className="mb-8 max-w-xl text-lg text-white/80 lg:text-xl">
           Comprehensive code reviews, secure coding practices, vulnerability

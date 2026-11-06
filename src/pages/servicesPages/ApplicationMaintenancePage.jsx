@@ -2448,7 +2448,7 @@ const Hero = () => (
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
           Ensuring{" "}
-          <span className="text-accent-400">
+          <span className="text-accent-400 md:text-5xl">
             Stability, Performance &amp; Innovation
           </span>
         </h1>

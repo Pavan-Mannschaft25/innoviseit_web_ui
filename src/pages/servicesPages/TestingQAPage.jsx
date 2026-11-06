@@ -3793,7 +3793,8 @@ const Hero = () => (
           </p>
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
-          End-to-End <span className="text-accent-400">Test Automation</span>{" "}
+          End-to-End{" "}
+          <span className="text-accent-400 md:text-5xl">Test Automation</span>{" "}
           &amp; Quality Assurance
         </h1>
         <p className="mb-8 max-w-xl text-lg text-white/80 lg:text-xl">
