@@ -2263,7 +2263,9 @@ const Hero = () => (
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
           Unlock the Power of Data with{" "}
-          <span className="text-accent-400">Seamless Modernization</span>
+          <span className="text-accent-400 md:text-5xl">
+            Seamless Modernization
+          </span>
         </h1>
         <p className="mb-4 max-w-xl text-lg text-white/85 lg:text-xl">
           We help organizations securely migrate, transform, and modernize their

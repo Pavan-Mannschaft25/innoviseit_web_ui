@@ -1027,14 +1027,14 @@ const IndustryTileCard = ({ industry }) => {
 
       {/* Text */}
       <div className="flex flex-1 flex-col p-4">
-        <h3 className="mb-1.5 line-clamp-2 text-base font-bold leading-snug text-primary-900 transition-colors group-hover:text-primary-500">
+        <h3 className="mb-1.5 line-clamp-3 text-lg md:text-sm font-bold leading-snug text-primary-900 transition-colors">
           {title}
         </h3>
-        {description && (
+        {/* {description && (
           <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-primary-900/70">
             {description}
           </p>
-        )}
+        )} */}
         <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary-500">
           Explore
           <FaArrowRight
