@@ -5811,7 +5811,8 @@ const Hero = () => (
           </p>
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
-          Enterprise <span className="text-accent-400">Guidewire</span>{" "}
+          Enterprise{" "}
+          <span className="text-accent-400 md:text-5xl">Guidewire</span>{" "}
           Solutions for Modern Insurers
         </h1>
         <p className="mb-8 max-w-xl text-lg text-white/80 lg:text-xl">

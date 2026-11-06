@@ -5626,7 +5626,9 @@ const Hero = () => (
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
           Transforming Enterprises with{" "}
-          <span className="text-accent-400">Intelligent SAP Solutions</span>
+          <span className="text-accent-400 md:text-5xl">
+            Intelligent SAP Solutions
+          </span>
         </h1>
         <p className="mb-8 max-w-xl text-lg text-white/80 lg:text-xl">
           End-to-end SAP consulting, implementation and managed services to help

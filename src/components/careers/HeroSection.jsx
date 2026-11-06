@@ -24,7 +24,7 @@
 // export default HeroSection;
 
 import React, { memo } from "react";
-import banner from "../../assets/banners/careers_banner.png";
+import banner from "../../assets/banners/careers-banner1.png";
 
 /* Full-width careers banner. The navy background shows while it loads. */
 const HeroSection = memo(() => (

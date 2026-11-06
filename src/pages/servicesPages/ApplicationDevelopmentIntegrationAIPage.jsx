@@ -2876,7 +2876,7 @@ const Hero = () => (
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl">
           Transforming Enterprises Through{" "}
-          <span className="text-accent-400">
+          <span className="text-accent-400 md:text-5xl">
             Intelligent Applications, Seamless Integrations &amp; AI-Powered
             Innovation
           </span>

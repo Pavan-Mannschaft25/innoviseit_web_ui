@@ -2144,7 +2144,7 @@ const Hero = () => (
         </div>
         <h1 className="mb-6 text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
           Next-Generation{" "}
-          <span className="bg-gradient-to-r from-white to-accent-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-white to-accent-400 bg-clip-text text-transparent md:text-5xl">
             Engineering &amp; AI Solutions
           </span>
         </h1>
