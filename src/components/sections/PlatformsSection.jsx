@@ -354,7 +354,7 @@ function PlatformsSection() {
           <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary-500">
             Core Platforms
           </p>
-          <h2 className="text-3xl font-bold leading-tight text-primary-900 lg:text-4xl">
+          <h2 className="text-3xl font-semibold leading-tight text-primary-900 lg:text-4xl">
             Two Leading Platforms. One Connected Ecosystem.
           </h2>
           <p className="mt-3 text-lg text-primary-900/70">
