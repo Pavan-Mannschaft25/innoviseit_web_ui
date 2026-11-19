@@ -5,7 +5,7 @@
 // // // // import MobileMenu from "./MobileMenu";
 // // // // import { navData } from "../../data/navData";
 // // // // import Container from "../ui/Container";
-// // // // import logo from "../../assets/images/innovise_it_logo.png";
+// // // // import logo from "../../assets/images/innovise_it_logo.webp";
 
 // // // // const Navbar = () => {
 // // // //   const [activeMenu, setActiveMenu] = useState(null);
@@ -142,7 +142,7 @@
 // // // // import MobileMenu from "./MobileMenu";
 // // // // import { navData } from "../../data/navData";
 // // // // import Container from "../ui/Container";
-// // // // import logo from "../../assets/images/innovise_it_logo.png";
+// // // // import logo from "../../assets/images/innovise_it_logo.webp";
 
 // // // // const Navbar = () => {
 // // // //   const [activeMenu, setActiveMenu] = useState(null);
@@ -341,7 +341,7 @@
 // // // // import MobileMenu from "./MobileMenu";
 // // // // import { navData } from "../../data/navData";
 // // // // import Container from "../ui/Container";
-// // // // import logo from "../../assets/images/innovise_it_logo.png";
+// // // // import logo from "../../assets/images/innovise_it_logo.webp";
 
 // // // // const Navbar = () => {
 // // // //   const [activeMenu, setActiveMenu] = useState(null);
@@ -667,7 +667,7 @@
 // // // import MobileMenu from "./MobileMenu";
 // // // import { navData } from "../../data/navData";
 // // // import Container from "../ui/Container";
-// // // import logo from "../../assets/images/innovise_it_logo.png";
+// // // import logo from "../../assets/images/innovise_it_logo.webp";
 
 // // // const Navbar = () => {
 // // //   const [activeMenu, setActiveMenu] = useState(null);
@@ -994,7 +994,7 @@
 // // import MobileMenu from "./MobileMenu";
 // // import { navData } from "../../data/navData";
 // // import Container from "../ui/Container";
-// // import logo from "../../assets/images/innovise_it_logo.png";
+// // import logo from "../../assets/images/innovise_it_logo.webp";
 
 // // const Navbar = () => {
 // //   const [activeMenu, setActiveMenu] = useState(null);
@@ -1272,7 +1272,7 @@
 // import MobileMenu from "./MobileMenu";
 // import { navData } from "../../data/navData";
 // import Container from "../ui/Container";
-// import logo from "../../assets/images/innovise_it_logo.png";
+// import logo from "../../assets/images/innovise_it_logo.webp";
 
 // const Navbar = () => {
 //   const [activeMenu, setActiveMenu] = useState(null);
@@ -1580,7 +1580,7 @@ import MegaMenu from "./MegaMenu";
 import MobileMenu from "./MobileMenu";
 import { navData } from "../../data/navData";
 import Container from "../ui/Container";
-import logo from "../../assets/images/innovise_it_logo.png";
+import logo from "../../assets/images/innovise_it_logo.webp";
 
 /*
   Brand palette: navy text, blue for active/hover, aqua only on navy.
@@ -1752,6 +1752,9 @@ const Navbar = () => {
               <img
                 src={logo}
                 alt="Innovise home"
+                width="720"
+                height="163"
+                fetchPriority="high"
                 className="h-8 w-auto object-contain md:h-10"
               />
             </Link>

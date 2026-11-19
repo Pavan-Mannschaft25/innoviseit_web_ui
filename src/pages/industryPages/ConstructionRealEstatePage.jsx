@@ -19,7 +19,7 @@ import {
   FaUsers,
   FaArrowDown,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/cr1.png";
+import img1 from "../../assets/industry/cr1-alt.webp";
 import img2 from "../../assets/industry/cr2.png";
 
 // ============================================

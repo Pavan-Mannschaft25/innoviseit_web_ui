@@ -1,0 +1,19 @@
+# Innovise
+
+> Innovise is an IT services company delivering SAP and Guidewire consulting, implementation, testing and quality engineering, application management, data migration and AI-driven engineering for enterprise clients.
+
+## Main pages
+
+- [Home](https://innovise-it.com/)
+- [About](https://innovise-it.com/about)
+- [Leadership](https://innovise-it.com/about/leadership)
+- [SAP Consulting](https://innovise-it.com/services/sap-consulting)
+- [Guidewire Services](https://innovise-it.com/services/guidewire)
+- [Testing & Quality Assurance](https://innovise-it.com/services/testing-quality-assurance)
+- [Events](https://innovise-it.com/events)
+- [Careers](https://innovise-it.com/careers)
+- [Contact](https://innovise-it.com/contact)
+
+## Sitemap
+
+- [sitemap.xml](https://innovise-it.com/sitemap.xml)

@@ -28,9 +28,9 @@
 //   FaPercent,
 //   FaLayerGroup,
 // } from "react-icons/fa";
-// import cpImg1 from "../../assets/industry/cp1.png";
+// import cpImg1 from "../../assets/industry/cp1.webp";
 // import cpImg2 from "../../assets/industry/cp2.png";
-// import reImg1 from "../../assets/industry/re1.png";
+// import reImg1 from "../../assets/industry/re1.webp";
 // import reImg2 from "../../assets/industry/re2.png";
 
 // // ============================================
@@ -970,7 +970,7 @@ import {
   FaPercent,
   FaLayerGroup,
 } from "react-icons/fa";
-import cpImg1 from "../../assets/industry/cam1.png";
+import cpImg1 from "../../assets/industry/cam1.webp";
 import cpImg2 from "../../assets/industry/cp2.png";
 import reImg1 from "../../assets/industry/re2.png";
 import reImg2 from "../../assets/industry/re.png";

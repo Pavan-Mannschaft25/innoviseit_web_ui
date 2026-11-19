@@ -3338,7 +3338,7 @@
 // // //   FaUserTie,
 // // // } from "react-icons/fa";
 // // // import { Link } from "react-router-dom";
-// // // import sapLogo from "../../assets/logos/sap.png";
+// // // import sapLogo from "../../assets/logos/sap.webp";
 
 // // // /* Example images (Unsplash). Swap for your own files in /assets. */
 // // // const IMG = {
@@ -3981,7 +3981,7 @@
 // //   FaDatabase,
 // //   FaUserTie,
 // // } from "react-icons/fa";
-// // import sapLogo from "../../assets/logos/sap.png";
+// // import sapLogo from "../../assets/logos/sap.webp";
 // // import sapBuilding from "../../assets/services/sap/sap_building.png";
 // // import sapTogether from "../../assets/services/sap/sap_together.png";
 
@@ -4623,7 +4623,7 @@
 //   FaDatabase,
 //   FaUserTie,
 // } from "react-icons/fa";
-// import sapLogo from "../../assets/logos/sap.png";
+// import sapLogo from "../../assets/logos/sap.webp";
 // import sapBuilding from "../../assets/services/sap/sap_building.png";
 // import sapTogether from "../../assets/services/sap/sap_together.png";
 
@@ -5291,7 +5291,7 @@ import {
   FaUserTie,
   FaUsers,
 } from "react-icons/fa";
-import sapLogo from "../../assets/logos/sap.png";
+import sapLogo from "../../assets/logos/sap.webp";
 import sapBuilding from "../../assets/services/sap/sap_building.png";
 import sapTogether from "../../assets/services/sap/sap_together.png";
 

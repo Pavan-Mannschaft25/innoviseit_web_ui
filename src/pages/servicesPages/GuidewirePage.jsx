@@ -4395,7 +4395,7 @@
 //   FaCogs,
 //   FaRocket,
 // } from "react-icons/fa";
-// import guidewireLogo from "../../assets/logos/guidewire.png";
+// import guidewireLogo from "../../assets/logos/guidewire.webp";
 
 // /* ============ DATA ============ */
 // /* Each service's `path` is the page its "Learn More" opens. Change to your real routes. */
@@ -4943,7 +4943,7 @@
 //   FaCogs,
 //   FaRocket,
 // } from "react-icons/fa";
-// import guidewireLogo from "../../assets/logos/guidewire.png";
+// import guidewireLogo from "../../assets/logos/guidewire.webp";
 
 // /* ============ DATA ============ */
 // /* `path` is each service's page. Add a Learn More link in the card when those pages exist. */
@@ -5504,7 +5504,7 @@ import {
   FaCogs,
   FaRocket,
 } from "react-icons/fa";
-import guidewireLogo from "../../assets/logos/guidewire.png";
+import guidewireLogo from "../../assets/logos/guidewire.webp";
 
 /*
   Brand palette (from the Innovise logo) — see index.css

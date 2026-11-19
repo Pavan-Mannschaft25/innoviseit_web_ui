@@ -1167,7 +1167,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import * as FaIcons from "react-icons/fa";
+import { FaArrowRight, FaBriefcase, FaBuilding, FaCheck, FaChevronDown, FaCogs, FaEnvelope, FaHome, FaIndustry, FaPhone, FaTimes } from "react-icons/fa";
+import { navIcons, FallbackIcon } from "../../data/navIcons";
 import { navData } from "../../data/navData";
 import { companyData } from "../../data/companyData";
 
@@ -1177,7 +1178,7 @@ import { companyData } from "../../data/companyData";
 */
 
 const ItemIcon = ({ name }) => {
-  const Icon = FaIcons[name] || FaIcons.FaCircle;
+  const Icon = navIcons[name] || FallbackIcon;
   return <Icon className="text-base" aria-hidden="true" />;
 };
 
@@ -1262,7 +1263,7 @@ const Accordion = ({
           <Icon className="text-lg" aria-hidden="true" />
           {label}
         </span>
-        <FaIcons.FaChevronDown
+        <FaChevronDown
           className={`text-xs transition-transform duration-300 ${open ? "rotate-180" : ""}`}
           aria-hidden="true"
         />
@@ -1312,7 +1313,7 @@ const Accordion = ({
                             </span>
                             <span>{item.name}</span>
                             {active && (
-                              <FaIcons.FaCheck
+                              <FaCheck
                                 className="ml-auto text-xs text-primary-500"
                                 aria-hidden="true"
                               />
@@ -1397,7 +1398,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                 aria-label="Close menu"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
               >
-                <FaIcons.FaTimes className="text-lg" />
+                <FaTimes className="text-lg" />
               </button>
             </div>
 
@@ -1406,21 +1407,21 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
               <nav aria-label="Mobile" className="space-y-1 p-5">
                 <TopLink
                   to="/"
-                  icon={FaIcons.FaHome}
+                  icon={FaHome}
                   label="Home"
                   currentPage={currentPage}
                   onClose={onClose}
                 />
                 <Accordion
                   id="about"
-                  icon={FaIcons.FaBuilding}
+                  icon={FaBuilding}
                   label="About Innovise"
                   sections={navData.whoWeAre || []}
                   {...shared}
                 />
                 <Accordion
                   id="services"
-                  icon={FaIcons.FaCogs}
+                  icon={FaCogs}
                   label="Services We Deliver"
                   sections={servicesData}
                   {...shared}
@@ -1428,7 +1429,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                 {industriesData.length > 0 && (
                   <Accordion
                     id="industries"
-                    icon={FaIcons.FaIndustry}
+                    icon={FaIndustry}
                     label="Industries We Serve"
                     sections={industriesData}
                     {...shared}
@@ -1436,7 +1437,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                 )}
                 <TopLink
                   to="/careers"
-                  icon={FaIcons.FaBriefcase}
+                  icon={FaBriefcase}
                   label="Careers"
                   currentPage={currentPage}
                   onClose={onClose}
@@ -1444,7 +1445,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                 />
                 <TopLink
                   to="/contact"
-                  icon={FaIcons.FaEnvelope}
+                  icon={FaEnvelope}
                   label="Contact Us"
                   currentPage={currentPage}
                   onClose={onClose}
@@ -1458,7 +1459,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-semibold text-white transition-colors hover:bg-primary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2"
                 >
                   Talk to Our Experts
-                  <FaIcons.FaArrowRight
+                  <FaArrowRight
                     className="text-sm"
                     aria-hidden="true"
                   />
@@ -1469,7 +1470,7 @@ const MobileMenu = ({ isOpen, onClose, currentPage }) => {
             {/* Footer */}
             <div className="shrink-0 border-t border-primary-100 bg-primary-50 p-5">
               <p className="flex items-center justify-center gap-2 text-sm text-primary-900/70">
-                <FaIcons.FaPhone
+                <FaPhone
                   className="text-xs text-primary-500"
                   aria-hidden="true"
                 />
