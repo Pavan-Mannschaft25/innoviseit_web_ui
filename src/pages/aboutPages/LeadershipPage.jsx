@@ -2459,9 +2459,11 @@ import img4 from "../../assets/leaders/OliverBetz.webp";
 import img5 from "../../assets/leaders/SilvioBessa.webp";
 import img6 from "../../assets/leaders/TimothyWirtjes.webp";
 import img7 from "../../assets/leaders/JasbirSingh.webp";
-import img8 from "../../assets/leaders/RodrigoRecio.webp";
-import img9 from "../../assets/leaders/sriram_in.png";
-import img10 from "../../assets/leaders/StevenClemens.png";
+/* Studio versions: background replaced with the same grey backdrop as the
+   other leader photos, at the same 828x1001 size. Originals are kept. */
+import img8 from "../../assets/leaders/RodrigoRecio_studio.webp";
+import img9 from "../../assets/leaders/sriram_studio.webp";
+import img10 from "../../assets/leaders/StevenClemens_studio.webp";
 
 /*
   Brand palette (from the Innovise logo) — see index.css
@@ -2668,7 +2670,7 @@ const LeaderCard = ({ leader, index }) => (
         src={leader.image}
         alt={`${leader.name}, ${leader.role}`}
         loading="lazy"
-        className="absolute inset-0 h-full w-full object-contain object-bottom transition-transform duration-700 scale-110"
+        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 scale-110"
       />
       <span
         className="absolute inset-x-0 bottom-0 h-1 bg-primary-500"
