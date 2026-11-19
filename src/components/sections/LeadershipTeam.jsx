@@ -1746,7 +1746,7 @@ import img4 from "../../assets/leaders/OliverBetz.webp";
 import img5 from "../../assets/leaders/SilvioBessa.webp";
 import img6 from "../../assets/leaders/TimothyWirtjes.webp";
 import img7 from "../../assets/leaders/JasbirSingh.webp";
-import img8 from "../../assets/leaders/RodrigoRecio.webp";
+import img8 from "../../assets/leaders/RodrigoRecio_studio.webp";
 import img9 from "../../assets/leaders/sriram_in.png";
 import img10 from "../../assets/leaders/StevenClemens.png";
 
