@@ -14,7 +14,7 @@
 // //   FaCheckCircle,
 // //   FaIndustry,
 // // } from "react-icons/fa";
-// // import img1 from "../../assets/industry/re1.png";
+// // import img1 from "../../assets/industry/re1.webp";
 // // import img2 from "../../assets/industry/ae2.png";
 
 // // // ============================================
@@ -704,7 +704,7 @@
 //   FaCheckCircle,
 //   FaIndustry,
 // } from "react-icons/fa";
-// import img1 from "../../assets/industry/re1.png";
+// import img1 from "../../assets/industry/re1.webp";
 // import img2 from "../../assets/industry/aerospace-intro.png";
 
 // /* ============ DATA ============ */
@@ -1191,7 +1191,7 @@ import {
   FaRocket,
   FaShieldAlt,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/re1.png";
+import img1 from "../../assets/industry/re1.webp";
 import img2 from "../../assets/industry/aerospace-intro.png";
 
 /* ============ DATA ============ */

@@ -25,7 +25,7 @@
 // //   FaClipboardCheck,
 // //   FaWarehouse,
 // // } from "react-icons/fa";
-// // import img1 from "../../assets/industry/au2.png";
+// // import img1 from "../../assets/industry/au2.webp";
 // // import img2 from "../../assets/industry/og2.png";
 
 // // // ============================================
@@ -749,7 +749,7 @@
 //   FaTachometerAlt,
 //   FaWarehouse,
 // } from "react-icons/fa";
-// import img1 from "../../assets/industry/au2.png";
+// import img1 from "../../assets/industry/au2.webp";
 // import img2 from "../../assets/industry/industry_intro.png";
 
 // /* ============ DATA ============ */
@@ -1258,7 +1258,7 @@ import {
   FaTachometerAlt,
   FaWarehouse,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/au2.png";
+import img1 from "../../assets/industry/au2.webp";
 import img2 from "../../assets/industry/industry_intro.png";
 
 /* ============ DATA ============ */

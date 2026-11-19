@@ -13,7 +13,7 @@
 // // } from "react-icons/fa";
 // // import Container from "../ui/Container";
 // // import { companyData } from "../../data/companyData";
-// // import logo from "../../assets/images/innovise_it_logo.png";
+// // import logo from "../../assets/images/innovise_it_logo.webp";
 
 // // const Footer = () => {
 // //   const currentYear = new Date().getFullYear();
@@ -438,7 +438,7 @@ import {
 } from "react-icons/fa";
 import Container from "../ui/Container";
 import { companyData } from "../../data/companyData";
-import whiteLogo from "../../assets/images/innovise-white-logo.png";
+import whiteLogo from "../../assets/images/innovise-white-logo.webp";
 
 /*
   Brand palette: navy background, white text, aqua for hover and icons.
@@ -524,6 +524,9 @@ const Footer = () => {
               >
                 <img
                   src={whiteLogo}
+                  width="479"
+                  height="108"
+                  loading="lazy"
                   alt="Innovise"
                   className="h-10 w-auto object-contain"
                 />

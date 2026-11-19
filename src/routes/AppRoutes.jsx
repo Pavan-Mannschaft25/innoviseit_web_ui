@@ -160,48 +160,48 @@
 
 // export default AppRoutes;
 
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import RouteSEO from "../components/SEO/RouteSEO";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import HomePage from "../pages/Home";
-import InnoviseThinkPage from "../pages/InnoviseThink";
-import CareersPage from "../pages/Careers";
-import ContactPage from "../pages/Contact";
 import NotFound from "../components/common/NotFound";
-import ValuesPage from "../pages/aboutPages/ValuesPage";
-import DiversityInclusionPage from "../pages/aboutPages/DiversityInclusionPage";
-import CommunityImpactPage from "../pages/aboutPages/CommunityImpactPage";
-import AboutPage from "../pages/aboutPages/AboutPage";
-import LeadershipPage from "../pages/aboutPages/LeadershipPage";
-import SAPConsultingPage from "../pages/servicesPages/SAPConsultingPage";
-import ApplicationMaintenancePage from "../pages/servicesPages/ApplicationMaintenancePage";
-import DataMigrationPage from "../pages/servicesPages/DataMigrationPage";
-import TestingQAPage from "../pages/servicesPages/TestingQAPage";
-import ProjectRemediationPage from "../pages/servicesPages/ProjectRemediationPage";
-import StaffAugmentationPage from "../pages/servicesPages/StaffAugmentationPage";
-import AerospaceDefensePage from "../pages/industryPages/AerospaceDefensePage";
-import AutomotivePage from "../pages/industryPages/AutomotivePage";
-import ChemicalsPage from "../pages/industryPages/ChemicalsPage";
-import ConstructionRealEstatePage from "../pages/industryPages/ConstructionRealEstatePage";
-import ConsumerProductsPage from "../pages/industryPages/ConsumerProductsPage";
-import IndustrialPage from "../pages/industryPages/IndustrialPage";
-import RetailPage from "../pages/industryPages/RetailPage";
-import PublicSectorPage from "../pages/industryPages/PublicSectorPage";
-import GuidewirePage from "../pages/servicesPages/GuidewirePage";
-import ApplicationDevelopmentPage from "../pages/servicesPages/ApplicationDevelopmentPage";
-import IntegrationServicesPage from "../pages/servicesPages/IntegrationServicesPage";
-import EngineeringAIPage from "../pages/servicesPages/EngineeringAIPage";
-import ProjectSupportRemediationPage from "../pages/servicesPages/ProjectSupportRemediationPage";
-import ApplicationDevelopmentIntegrationAIPage from "../pages/servicesPages/ApplicationDevelopmentIntegrationAIPage";
-import EnergyUtilitiesChemicalsPage from "../pages/industryPages/EnergyUtilitiesChemicalsPage";
-import CodeQualitySecurityPage from "../pages/servicesPages/CodeQualitySecurityPage";
-import PrivacyPolicy from "../pages/Privacy";
-import InvitationPage from "../pages/InvitationPage";
-import EventsPage from "../pages/EventsPage";
-import EventDetailPage from "../pages/EventDetailPage";
+const InnoviseThinkPage = lazy(() => import("../pages/InnoviseThink"));
+const CareersPage = lazy(() => import("../pages/Careers"));
+const ContactPage = lazy(() => import("../pages/Contact"));
+const ValuesPage = lazy(() => import("../pages/aboutPages/ValuesPage"));
+const DiversityInclusionPage = lazy(() => import("../pages/aboutPages/DiversityInclusionPage"));
+const CommunityImpactPage = lazy(() => import("../pages/aboutPages/CommunityImpactPage"));
+const AboutPage = lazy(() => import("../pages/aboutPages/AboutPage"));
+const LeadershipPage = lazy(() => import("../pages/aboutPages/LeadershipPage"));
+const SAPConsultingPage = lazy(() => import("../pages/servicesPages/SAPConsultingPage"));
+const ApplicationMaintenancePage = lazy(() => import("../pages/servicesPages/ApplicationMaintenancePage"));
+const DataMigrationPage = lazy(() => import("../pages/servicesPages/DataMigrationPage"));
+const TestingQAPage = lazy(() => import("../pages/servicesPages/TestingQAPage"));
+const ProjectRemediationPage = lazy(() => import("../pages/servicesPages/ProjectRemediationPage"));
+const StaffAugmentationPage = lazy(() => import("../pages/servicesPages/StaffAugmentationPage"));
+const AerospaceDefensePage = lazy(() => import("../pages/industryPages/AerospaceDefensePage"));
+const AutomotivePage = lazy(() => import("../pages/industryPages/AutomotivePage"));
+const ChemicalsPage = lazy(() => import("../pages/industryPages/ChemicalsPage"));
+const ConstructionRealEstatePage = lazy(() => import("../pages/industryPages/ConstructionRealEstatePage"));
+const ConsumerProductsPage = lazy(() => import("../pages/industryPages/ConsumerProductsPage"));
+const IndustrialPage = lazy(() => import("../pages/industryPages/IndustrialPage"));
+const RetailPage = lazy(() => import("../pages/industryPages/RetailPage"));
+const PublicSectorPage = lazy(() => import("../pages/industryPages/PublicSectorPage"));
+const GuidewirePage = lazy(() => import("../pages/servicesPages/GuidewirePage"));
+const ApplicationDevelopmentPage = lazy(() => import("../pages/servicesPages/ApplicationDevelopmentPage"));
+const IntegrationServicesPage = lazy(() => import("../pages/servicesPages/IntegrationServicesPage"));
+const EngineeringAIPage = lazy(() => import("../pages/servicesPages/EngineeringAIPage"));
+const ProjectSupportRemediationPage = lazy(() => import("../pages/servicesPages/ProjectSupportRemediationPage"));
+const ApplicationDevelopmentIntegrationAIPage = lazy(() => import("../pages/servicesPages/ApplicationDevelopmentIntegrationAIPage"));
+const EnergyUtilitiesChemicalsPage = lazy(() => import("../pages/industryPages/EnergyUtilitiesChemicalsPage"));
+const CodeQualitySecurityPage = lazy(() => import("../pages/servicesPages/CodeQualitySecurityPage"));
+const PrivacyPolicy = lazy(() => import("../pages/Privacy"));
+const InvitationPage = lazy(() => import("../pages/InvitationPage"));
+const EventsPage = lazy(() => import("../pages/EventsPage"));
+const EventDetailPage = lazy(() => import("../pages/EventDetailPage"));
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -211,6 +211,7 @@ const AppRoutes = () => {
       <RouteSEO />
       <Navbar />
 
+      <Suspense fallback={<div className="min-h-screen" aria-busy="true" />}>
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
@@ -325,6 +326,7 @@ const AppRoutes = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
+      </Suspense>
 
       <Footer />
     </>

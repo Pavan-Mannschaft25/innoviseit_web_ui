@@ -24,7 +24,7 @@
 // //   FaAtom,
 // //   FaArrowDown,
 // // } from "react-icons/fa";
-// // import img1 from "../../assets/industry/cr1.jpeg";
+// // import img1 from "../../assets/industry/cr1.webp";
 // // import img2 from "../../assets/industry/im2.png";
 
 // // // ============================================
@@ -832,7 +832,7 @@
 //   FaHardHat,
 //   FaTools,
 // } from "react-icons/fa";
-// import img1 from "../../assets/industry/cr1.jpeg";
+// import img1 from "../../assets/industry/cr1.webp";
 // import img2 from "../../assets/industry/im2.png";
 
 // /* ============ DATA ============ */
@@ -1338,7 +1338,7 @@ import {
   FaTools,
   FaWrench,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/cr1.jpeg";
+import img1 from "../../assets/industry/cr1.webp";
 import img2 from "../../assets/industry/im2.png";
 
 /* ============ DATA ============ */

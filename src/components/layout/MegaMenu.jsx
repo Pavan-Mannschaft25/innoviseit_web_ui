@@ -293,7 +293,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import * as FaIcons from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+import { navIcons } from "../../data/navIcons";
 
 /*
   Full-width dropdown used by the desktop Navbar (Services, About, Industries).
@@ -312,7 +313,7 @@ import * as FaIcons from "react-icons/fa";
 */
 
 const ItemIcon = ({ name }) => {
-  const Icon = FaIcons[name];
+  const Icon = navIcons[name];
   return Icon ? <Icon aria-hidden="true" /> : null;
 };
 
@@ -331,7 +332,7 @@ const MenuLink = ({ item, onClose }) => (
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-2 text-base font-semibold text-primary-900 group-hover:text-primary-500">
           {item.name}
-          <FaIcons.FaArrowRight
+          <FaArrowRight
             className="-translate-x-1 text-xs opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100"
             aria-hidden="true"
           />
@@ -383,7 +384,7 @@ const MegaMenu = ({ id, title, intro, data = [], isOpen, onClose }) => {
                 className="group inline-flex items-center gap-2 text-base font-semibold text-primary-500 hover:text-primary-900 focus:outline-none focus-visible:underline"
               >
                 Talk to our experts
-                <FaIcons.FaArrowRight
+                <FaArrowRight
                   className="text-xs transition-transform duration-200 group-hover:translate-x-1"
                   aria-hidden="true"
                 />

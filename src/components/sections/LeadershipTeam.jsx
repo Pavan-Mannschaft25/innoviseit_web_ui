@@ -1783,14 +1783,14 @@ const leaders = [
       "Providing strategic guidance for sustainable innovation and enterprise excellence.",
     linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
   },
-  {
-    name: "Silvio Bessa",
-    role: "Board Advisor",
-    image: img5,
-    quote:
-      "Building trusted partnerships that empower business growth and transformation.",
-    linkedin: "https://www.linkedin.com/in/silviobessa/",
-  },
+  // {
+  //   name: "Silvio Bessa",
+  //   role: "Board Advisor",
+  //   image: img5,
+  //   quote:
+  //     "Building trusted partnerships that empower business growth and transformation.",
+  //   linkedin: "https://www.linkedin.com/in/silviobessa/",
+  // },
   {
     name: "Timothy Wirtjes",
     role: "Practice Leader",

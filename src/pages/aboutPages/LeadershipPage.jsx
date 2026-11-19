@@ -2571,14 +2571,14 @@ const leadershipData = [
     bio: "Provides strategic guidance, governance, and leadership insights that support innovation, business transformation, informed decision-making, and sustainable organizational growth across evolving technology landscapes.",
     linkedin: "https://www.linkedin.com/in/oliver-betz-4443292/",
   },
-  {
-    id: 5,
-    name: "Silvio Bessa",
-    role: "Board Advisor",
-    image: img5,
-    bio: "Advises business strategy, digital transformation, and partnership initiatives while supporting organizational growth, innovation, collaboration, and long-term value creation through strategic leadership.",
-    linkedin: "https://www.linkedin.com/in/silviobessa/",
-  },
+  // {
+  //   id: 5,
+  //   name: "Silvio Bessa",
+  //   role: "Board Advisor",
+  //   image: img5,
+  //   bio: "Advises business strategy, digital transformation, and partnership initiatives while supporting organizational growth, innovation, collaboration, and long-term value creation through strategic leadership.",
+  //   linkedin: "https://www.linkedin.com/in/silviobessa/",
+  // },
   {
     id: 6,
     name: "Timothy Wirtjes",
@@ -2663,12 +2663,12 @@ const LeaderCard = ({ leader, index }) => (
     {...fade(index % 4)}
     className="group flex h-full flex-col overflow-hidden rounded-2xl border border-primary-100 bg-white shadow-sm shadow-primary-900/5 transition-shadow duration-300 hover:shadow-xl hover:shadow-primary-900/10"
   >
-    <div className="relative h-[420px] overflow-hidden bg-primary-50">
+    <div className="relative aspect-828/1001 w-full overflow-hidden bg-primary-50">
       <img
         src={leader.image}
         alt={`${leader.name}, ${leader.role}`}
         loading="lazy"
-        className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0 h-full w-full object-contain object-bottom transition-transform duration-700 scale-110"
       />
       <span
         className="absolute inset-x-0 bottom-0 h-1 bg-primary-500"
@@ -2708,7 +2708,7 @@ const Team = () => (
         title="The Minds Behind Innovise"
         text="Meet the experienced professionals who drive our vision and deliver exceptional results for clients worldwide."
       />
-      <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {leadershipData.map((leader, i) => (
           <LeaderCard key={leader.id} leader={leader} index={i} />
         ))}

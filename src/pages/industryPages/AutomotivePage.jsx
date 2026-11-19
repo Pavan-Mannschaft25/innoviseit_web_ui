@@ -14,7 +14,7 @@
 // //   FaArrowDown,
 // //   FaStar,
 // // } from "react-icons/fa";
-// // import img1 from "../../assets/industry/ae1.png";
+// // import img1 from "../../assets/industry/ae1.webp";
 // // import img2 from "../../assets/industry/au1.png";
 
 // // // ============================================
@@ -770,7 +770,7 @@
 //   FaShieldAlt,
 //   FaRocket,
 // } from "react-icons/fa";
-// import img1 from "../../assets/industry/ae1.png";
+// import img1 from "../../assets/industry/ae1.webp";
 // import img2 from "../../assets/industry/atomotive_intro.png";
 
 // /* ============ DATA ============ */
@@ -1262,7 +1262,7 @@ import {
   FaRocket,
   FaShieldAlt,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/ae1.png";
+import img1 from "../../assets/industry/ae1.webp";
 import img2 from "../../assets/industry/atomotive_intro.png";
 
 /* ============ DATA ============ */
