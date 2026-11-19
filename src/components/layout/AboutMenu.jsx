@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import * as FaIcons from "react-icons/fa";
+import { navIcons, FallbackIcon } from "../../data/navIcons";
 
 const MegaMenu = ({ data, isOpen, onClose }) => {
   if (!isOpen) return null;
 
   // Dynamic icon resolver
   const IconComponent = ({ iconName }) => {
-    const Icon = FaIcons[iconName] || FaIcons.FaCircle;
+    const Icon = navIcons[iconName] || FallbackIcon;
     return <Icon className="text-lg" />;
   };
 

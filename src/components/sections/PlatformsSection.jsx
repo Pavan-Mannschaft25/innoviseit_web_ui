@@ -7,8 +7,8 @@
 // //   FiArrowRight,
 // // } from "react-icons/fi";
 
-// // import sapImage from "../../assets/logos/sap.png";
-// // import guidwireImage from "../../assets/logos/guidewire.png";
+// // import sapImage from "../../assets/logos/sap.webp";
+// // import guidwireImage from "../../assets/logos/guidewire.webp";
 
 // // function PlatformsSection() {
 // //   const sapServices = [
@@ -129,8 +129,8 @@
 // import React from "react";
 // import { Link } from "react-router-dom";
 // import { motion } from "framer-motion";
-// import sapImage from "../../assets/logos/sap.png";
-// import guidewireImage from "../../assets/logos/guidewire.png";
+// import sapImage from "../../assets/logos/sap.webp";
+// import guidewireImage from "../../assets/logos/guidewire.webp";
 
 // /*
 //   Brand palette (from the Innovise logo) — see index.css
@@ -308,14 +308,16 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FiCheckCircle, FiArrowRight } from "react-icons/fi";
 import Container from "../ui/Container";
-import sapImage from "../../assets/logos/sap.png";
-import guidewireImage from "../../assets/logos/guidewire.png";
+import sapImage from "../../assets/logos/sap.webp";
+import guidewireImage from "../../assets/logos/guidewire.webp";
 
 const platforms = [
   {
     logo: sapImage,
     logoAlt: "SAP",
     logoClass: "h-14 w-auto",
+    logoW: 439,
+    logoH: 219,
     title: "SAP Consulting & Implementation",
     services: [
       "SAP S/4HANA",
@@ -332,6 +334,8 @@ const platforms = [
     logo: guidewireImage,
     logoAlt: "Guidewire",
     logoClass: "h-12 w-auto",
+    logoW: 800,
+    logoH: 202,
     title: "Guidewire Services",
     services: [
       "Guidewire InsuranceSuite",
@@ -379,6 +383,9 @@ function PlatformsSection() {
                   <img
                     src={p.logo}
                     alt={p.logoAlt}
+                    width={p.logoW}
+                    height={p.logoH}
+                    loading="lazy"
                     className={`${p.logoClass} object-contain`}
                   />
                 </div>

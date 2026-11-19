@@ -24,7 +24,7 @@
 // //   FaCogs,
 // //   FaArrowDown,
 // // } from "react-icons/fa";
-// // import img1 from "../../assets/industry/cp1.png";
+// // import img1 from "../../assets/industry/cp1.webp";
 // // import img2 from "../../assets/industry/ps2.png";
 
 // // // ============================================
@@ -842,7 +842,7 @@
 //   FaMoneyBillWave,
 //   FaCogs,
 // } from "react-icons/fa";
-// import img1 from "../../assets/industry/cp1.png";
+// import img1 from "../../assets/industry/cp1.webp";
 // import img2 from "../../assets/industry/ps2.png";
 
 // /* ============ DATA ============ */
@@ -1347,7 +1347,7 @@ import {
   FaShieldAlt,
   FaUsers,
 } from "react-icons/fa";
-import img1 from "../../assets/industry/cp1.png";
+import img1 from "../../assets/industry/cp1.webp";
 import img2 from "../../assets/industry/ps2.png";
 
 /* ============ DATA ============ */

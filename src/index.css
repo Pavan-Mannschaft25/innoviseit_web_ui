@@ -1,8 +1,8 @@
-/* Free fonts from Google Fonts (no files, no index.html changes):
+/* Free fonts from Google Fonts:
      Montserrat 400–800 ... brand body and sub headline font
      Outfit 600–800 ....... backup for headings if Pogonia is missing
-   This @import must stay ABOVE @import "tailwindcss". */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap");
+   They are loaded with <link> tags in index.html (with preconnect).
+   Do not move them back into a CSS @import: that blocks rendering. */
 
 @import "tailwindcss";
 

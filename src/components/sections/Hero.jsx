@@ -659,19 +659,26 @@
 // export default Hero;
 
 import React from "react";
-import bannerVideo from "../../assets/videos/hero_banner_new_30fps.mp4";
+/* Web copy of hero_banner_new_30fps.mp4: 1920px wide, no audio, faststart
+   (~0.9 MB instead of ~10 MB). The poster is its first frame. */
+import bannerVideo from "../../assets/videos/hero_banner_web.mp4";
+import bannerPoster from "../../assets/videos/hero_poster.webp";
 
 function Hero() {
   return (
     <section className="relative bg-[#020B2D] overflow-hidden">
-      <div className="w-full max-h-screen">
+      {/* Fixed 7:3 box (the video's shape) so nothing below shifts while it loads */}
+      <div className="w-full max-h-screen aspect-[7/3]">
         <video
           className="w-full h-full object-cover"
+          width="1920"
+          height="822"
+          poster={bannerPoster}
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
         >
           <source src={bannerVideo} type="video/mp4" />
         </video>

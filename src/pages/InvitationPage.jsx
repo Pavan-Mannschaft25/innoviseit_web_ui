@@ -5,7 +5,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import Logo from "../assets/images/innovise_it_logo.png";
+import Logo from "../assets/images/innovise_it_logo.webp";
 import EventPoster from "../assets/images/sap_event.jpeg";
 import emailjs from "@emailjs/browser";
 
